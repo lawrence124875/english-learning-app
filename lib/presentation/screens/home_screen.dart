@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../widgets/settings_panel.dart';
+import 'voice_test_screen.dart';
+import 'about_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,7 +30,27 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('智慧聽覺巡航')),
+      appBar: AppBar(
+        title: const Text('智慧聽覺巡航'),
+        actions: [
+          IconButton(
+            tooltip: '語音測試/預覽',
+            icon: const Icon(Icons.record_voice_over),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const VoiceTestScreen()),
+            ),
+          ),
+          IconButton(
+            tooltip: '關於本 App / 版權聲明',
+            icon: const Icon(Icons.info_outline),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const AboutScreen()),
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),

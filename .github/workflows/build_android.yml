@@ -1,0 +1,40 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      # 這個專案目前只包含 lib/ 和 pubspec.yaml（跨平台的部分）。
+      # android/ 平台資料夾是在這裡自動產生，避免手動維護容易出錯的原生設定檔。
+      - name: Ensure Android platform scaffold exists
+        run: |
+          if [ ! -d "android" ]; then
+            flutter create --platforms=android --project-name=english_learning_app --org tw.bcc .
+          fi
+
+      - name: Patch AndroidManifest for background audio playback
+        run: bash scripts/patch_android_manifest.sh
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build APK (release)
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: english-learning-app-release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk

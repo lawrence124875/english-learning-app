@@ -12,9 +12,7 @@ dependencies:
   provider: ^6.1.2
   shared_preferences: ^2.2.3
   flutter_tts: ^4.0.2
-  # 背景播放（第二階段接上 audio_service）
-  # audio_service: ^0.18.15
-  # just_audio: ^0.9.40
+  audio_service: ^0.18.15
   # 訂閱付費（第二階段接上）
   # purchases_flutter: ^7.0.0
   # Firebase（第二階段接上）

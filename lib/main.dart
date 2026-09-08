@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:audio_service/audio_service.dart';
 import 'data/repositories/word_repository.dart';
 import 'data/repositories/progress_repository.dart';
 import 'data/sources/tts_service.dart';
+import 'data/sources/tts_audio_handler.dart';
 import 'presentation/providers/app_state.dart';
 import 'presentation/screens/home_screen.dart';
 
-void main() {
+late TtsAudioHandler _audioHandler;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // 初始化背景播放服務：讓 App 在鎖屏/切到背景時仍可繼續朗讀，
+  // 並在鎖屏/通知列顯示目前單字＋中文意思（類似音樂播放器）。
+  _audioHandler = await AudioService.init(
+    builder: () => TtsAudioHandler(),
+    config: const AudioServiceConfig(
+      androidNotificationChannelId: 'tw.bcc.englishapp.audio',
+      androidNotificationChannelName: '英語學習朗讀',
+      androidNotificationOngoing: true,
+      androidStopForegroundOnPause: false,
+    ),
+  );
   runApp(const EnglishLearningApp());
 }
 
@@ -15,12 +31,19 @@ class EnglishLearningApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => AppState(
-        wordRepository: LocalAssetWordRepository(),
-        progressRepository: ProgressRepository(),
-        ttsService: SystemTtsService(),
-      ),
+    final ttsService = SystemTtsService();
+    return MultiProvider(
+      providers: [
+        Provider<TtsService>.value(value: ttsService),
+        ChangeNotifierProvider(
+          create: (_) => AppState(
+            wordRepository: LocalAssetWordRepository(),
+            progressRepository: ProgressRepository(),
+            ttsService: ttsService,
+            audioHandler: _audioHandler,
+          ),
+        ),
+      ],
       child: MaterialApp(
         title: '智慧聽覺巡航',
         debugShowCheckedModeBanner: false,

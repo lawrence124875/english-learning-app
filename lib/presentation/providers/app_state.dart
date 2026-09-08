@@ -6,20 +6,31 @@ import '../../domain/services/playlist_builder.dart';
 import '../../data/repositories/word_repository.dart';
 import '../../data/repositories/progress_repository.dart';
 import '../../data/sources/tts_service.dart';
+import '../../data/sources/tts_audio_handler.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
   final WordRepository _wordRepository;
   final ProgressRepository _progressRepository;
   final TtsService _ttsService;
+  final TtsAudioHandler? _audioHandler;
 
   AppState({
     required WordRepository wordRepository,
     required ProgressRepository progressRepository,
     required TtsService ttsService,
+    TtsAudioHandler? audioHandler,
   })  : _wordRepository = wordRepository,
         _progressRepository = progressRepository,
-        _ttsService = ttsService;
+        _ttsService = ttsService,
+        _audioHandler = audioHandler {
+    _audioHandler?.bindCallbacks(
+      onPlay: startCruise,
+      onPause: () async => stopCruise(),
+      onSkipNext: () => next(),
+      onSkipPrevious: () => previous(),
+    );
+  }
 
   List<WordDataset> datasets = [];
   int currentDatasetIndex = 0;
@@ -69,6 +80,7 @@ class AppState extends ChangeNotifier {
     }
 
     isLoading = false;
+    _updateNowPlaying();
     notifyListeners();
   }
 
@@ -128,6 +140,20 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
+  void _updateNowPlaying() {
+    final word = currentWord;
+    if (word == null || _audioHandler == null) return;
+    final state = currentPlaybackState;
+    _audioHandler.updateNowPlaying(
+      word: word.word,
+      meaning: settings.showTranslation ? word.meaningFor('zh-TW') : '',
+      playing: isPlaying,
+      currentIndex: state.playlist.isEmpty ? 0 : state.currentStep + 1,
+      totalCount: state.playlist.length,
+    );
+  }
+
   Future<void> _persistCurrentProgress() async {
     final dataset = currentDataset;
     await _progressRepository.saveProgress(
@@ -151,6 +177,7 @@ class AppState extends ChangeNotifier {
     }
     _playbackStates[dataset.id] = state;
     await _persistCurrentProgress();
+    _updateNowPlaying();
     notifyListeners();
     if (speak) await _speakCurrent();
   }
@@ -163,6 +190,7 @@ class AppState extends ChangeNotifier {
         (state.currentStep - 1 + state.playlist.length) % state.playlist.length;
     _playbackStates[dataset.id] = state.copyWith(currentStep: prevStep);
     await _persistCurrentProgress();
+    _updateNowPlaying();
     notifyListeners();
     if (speak) await _speakCurrent();
   }
@@ -176,6 +204,7 @@ class AppState extends ChangeNotifier {
     final step = posInPlaylist >= 0 ? posInPlaylist : 0;
     _playbackStates[dataset.id] = state.copyWith(currentStep: step);
     await _persistCurrentProgress();
+    _updateNowPlaying();
     notifyListeners();
     await _speakCurrent();
   }
@@ -204,6 +233,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> startCruise() async {
     isPlaying = true;
+    _updateNowPlaying();
     notifyListeners();
     await _cruiseLoop();
   }
@@ -212,6 +242,7 @@ class AppState extends ChangeNotifier {
     isPlaying = false;
     _cruiseTimer?.cancel();
     _ttsService.stop();
+    _updateNowPlaying();
     notifyListeners();
   }
 
