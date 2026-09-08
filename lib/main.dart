@@ -20,7 +20,6 @@ Future<void> main() async {
       androidNotificationChannelId: 'tw.bcc.englishapp.audio',
       androidNotificationChannelName: '英語學習朗讀',
       androidNotificationOngoing: true,
-      androidStopForegroundOnPause: false,
     ),
   );
   runApp(const EnglishLearningApp());

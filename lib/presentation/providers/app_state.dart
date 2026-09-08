@@ -145,7 +145,7 @@ class AppState extends ChangeNotifier {
     final word = currentWord;
     if (word == null || _audioHandler == null) return;
     final state = currentPlaybackState;
-    _audioHandler.updateNowPlaying(
+    _audioHandler?.updateNowPlaying(
       word: word.word,
       meaning: settings.showTranslation ? word.meaningFor('zh-TW') : '',
       playing: isPlaying,
