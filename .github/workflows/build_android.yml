@@ -13,8 +13,8 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
           channel: 'stable'
+          cache: true
 
       # 這個專案目前只包含 lib/ 和 pubspec.yaml（跨平台的部分）。
       # android/ 平台資料夾是在這裡自動產生，避免手動維護容易出錯的原生設定檔。
@@ -26,6 +26,9 @@ jobs:
 
       - name: Patch AndroidManifest for background audio playback
         run: bash scripts/patch_android_manifest.sh
+
+      - name: Patch compileSdk for plugin compatibility
+        run: bash scripts/patch_compile_sdk.sh
 
       - name: Install dependencies
         run: flutter pub get
