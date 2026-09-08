@@ -1,0 +1,174 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/app_state.dart';
+import '../widgets/settings_panel.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<AppState>().initialize();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final appState = context.watch<AppState>();
+
+    if (appState.isLoading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('智慧聽覺巡航')),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _DatasetTabs(appState: appState),
+              const SizedBox(height: 16),
+              _PlaybackCard(appState: appState),
+              const SizedBox(height: 12),
+              _NavigationButtons(appState: appState),
+              const SizedBox(height: 16),
+              const SettingsPanel(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _DatasetTabs extends StatelessWidget {
+  final AppState appState;
+  const _DatasetTabs({required this.appState});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      children: List.generate(appState.datasets.length, (i) {
+        final dataset = appState.datasets[i];
+        final selected = i == appState.currentDatasetIndex;
+        return ChoiceChip(
+          label: Text(dataset.shortName),
+          selected: selected,
+          onSelected: (_) => appState.switchDataset(i),
+        );
+      }),
+    );
+  }
+}
+
+class _PlaybackCard extends StatelessWidget {
+  final AppState appState;
+  const _PlaybackCard({required this.appState});
+
+  @override
+  Widget build(BuildContext context) {
+    final word = appState.currentWord;
+    final settings = appState.settings;
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            LinearProgressIndicator(value: appState.progressRatio),
+            const SizedBox(height: 16),
+            GestureDetector(
+              onTap: appState.replay,
+              child: Column(
+                children: [
+                  Text(
+                    word?.word ?? '—',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineMedium
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  if (settings.showTranslation && word != null) ...[
+                    const SizedBox(height: 8),
+                    Text(word.meaningFor('zh-TW'),
+                        style: Theme.of(context).textTheme.titleMedium),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            FilledButton.icon(
+              onPressed: appState.togglePlay,
+              icon: Icon(appState.isPlaying ? Icons.pause : Icons.play_arrow),
+              label: Text(appState.isPlaying ? '暫停巡航朗讀' : '開始巡航朗讀'),
+            ),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: appState.toggleStarCurrent,
+              icon: Icon(
+                appState.currentPlaybackState.playlist.isNotEmpty &&
+                        appState.currentStarred.contains(
+                            appState.currentPlaybackState.playlist[
+                                appState.currentPlaybackState.currentStep %
+                                    appState
+                                        .currentPlaybackState.playlist.length])
+                    ? Icons.star
+                    : Icons.star_border,
+                color: Colors.amber,
+              ),
+              label: const Text('加入不熟悉單字庫'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _NavigationButtons extends StatelessWidget {
+  final AppState appState;
+  const _NavigationButtons({required this.appState});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: OutlinedButton.icon(
+            onPressed: () => appState.previous(
+                speak: appState.settings.speakOnManualNavigate),
+            icon: const Icon(Icons.skip_previous),
+            label: const Text('上一個'),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: OutlinedButton.icon(
+            onPressed: appState.replay,
+            icon: const Icon(Icons.replay),
+            label: const Text('再讀一次'),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: OutlinedButton.icon(
+            onPressed: () => appState.next(
+                speak: appState.settings.speakOnManualNavigate),
+            icon: const Icon(Icons.skip_next),
+            label: const Text('下一個'),
+          ),
+        ),
+      ],
+    );
+  }
+}

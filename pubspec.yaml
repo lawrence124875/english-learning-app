@@ -1,0 +1,37 @@
+name: english_learning_app
+description: "智慧聽覺巡航 - 四合一英語核心學習神器"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
+  flutter_tts: ^4.0.2
+  # 背景播放（第二階段接上 audio_service）
+  # audio_service: ^0.18.15
+  # just_audio: ^0.9.40
+  # 訂閱付費（第二階段接上）
+  # purchases_flutter: ^7.0.0
+  # Firebase（第二階段接上）
+  # firebase_core: ^3.0.0
+  # cloud_firestore: ^5.0.0
+  # firebase_crashlytics: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/manifest.json
+    - assets/data/ngsl_2809.json
+    - assets/data/ngsl_spoken_720.json
+    - assets/data/phrase_list_506.json
+    - assets/data/phave_list_150.json

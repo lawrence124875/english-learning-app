@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "datasets": {
+    "ngsl_2809": {
+      "name": "NGSL 2809 核心單字",
+      "short": "NGSL 2809字",
+      "count": 2809,
+      "file": "ngsl_2809.json"
+    },
+    "ngsl_spoken_720": {
+      "name": "NGSL 口語 720 字",
+      "short": "口語 720字",
+      "count": 720,
+      "file": "ngsl_spoken_720.json"
+    },
+    "phrase_list_506": {
+      "name": "PHRASE List 高頻語塊 (506)",
+      "short": "高頻語塊 506",
+      "count": 506,
+      "file": "phrase_list_506.json"
+    },
+    "phave_list_150": {
+      "name": "PhaVE List 片語動詞 (150)",
+      "short": "片語動詞 150",
+      "count": 150,
+      "file": "phave_list_150.json"
+    }
+  }
+}
