@@ -30,6 +30,11 @@ jobs:
       - name: Patch compileSdk for plugin compatibility
         run: bash scripts/patch_compile_sdk.sh
 
+      - name: Configure Firebase
+        env:
+          FIREBASE_GOOGLE_SERVICES_JSON: ${{ secrets.FIREBASE_GOOGLE_SERVICES_JSON }}
+        run: bash scripts/patch_firebase.sh
+
       - name: Install dependencies
         run: flutter pub get
 

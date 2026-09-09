@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:audio_service/audio_service.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'data/repositories/word_repository.dart';
 import 'data/repositories/progress_repository.dart';
 import 'data/sources/tts_service.dart';
@@ -12,6 +15,19 @@ late TtsAudioHandler _audioHandler;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Android 上 google-services.json 已由 Gradle 外掛處理，
+  // 這裡不需要額外傳入 FirebaseOptions。
+  await Firebase.initializeApp();
+
+  // 把 Flutter 框架層級的錯誤、以及非同步例外，都送去 Crashlytics，
+  // 這樣測試者遇到當機時，我們不用等對方主動回報就能看到錯誤內容。
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+
   // 初始化背景播放服務：讓 App 在鎖屏/切到背景時仍可繼續朗讀，
   // 並在鎖屏/通知列顯示目前單字＋中文意思（類似音樂播放器）。
   _audioHandler = await AudioService.init(
