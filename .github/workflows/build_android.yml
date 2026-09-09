@@ -38,6 +38,9 @@ jobs:
           FIREBASE_GOOGLE_SERVICES_JSON: ${{ secrets.FIREBASE_GOOGLE_SERVICES_JSON }}
         run: bash scripts/patch_firebase.sh
 
+      - name: Patch ProGuard rules for Firebase (R8 compatibility)
+        run: bash scripts/patch_firebase_proguard.sh
+
       - name: Install dependencies
         run: flutter pub get
 
