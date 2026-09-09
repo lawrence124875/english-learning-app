@@ -29,7 +29,9 @@
 
 ## 如何拿到第一個可安裝的 APK
 
-1. 這次的程式碼推送後，GitHub 會自動觸發雲端編譯（Actions 分頁可以看到進度，通常 5-10 分鐘）。
+**已驗證可成功建置**（2026-09-09，commit c2398d7）：24.4MB release APK。
+
+1. 每次推送到 `main` 分支，GitHub 會自動觸發雲端編譯（Actions 分頁可以看到進度，通常 5-10 分鐘）。
 2. 編譯完成後，進到該次 workflow run 的頁面，最下面「Artifacts」區塊會有 `english-learning-app-release-apk` 可以下載。
 3. 下載後解壓縮，把裡面的 `.apk` 檔傳到你的 Android 手機安裝（需要先在手機設定裡允許「安裝不明來源應用程式」）。
 
