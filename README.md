@@ -36,7 +36,7 @@
 
 ## 如何拿到第一個可安裝的 APK
 
-**已驗證可成功建置**（2026-09-09，commit b59af0b，含 Firebase Crashlytics + MainActivity 修正）：已在 Appetize.io 抓出並修正白畫面閃退問題（MainActivity 需繼承 AudioServiceActivity）。
+**已驗證可成功建置**（2026-09-09，commit e482e86，含 Firebase Crashlytics R8 相容性修正）：已在 Appetize.io 抓出並修正白畫面閃退（MainActivity）與 Firebase R8 壓縮誤刪元件（ProGuard keep 規則）兩個問題。
 
 1. 每次推送到 `main` 分支，GitHub 會自動觸發雲端編譯（Actions 分頁可以看到進度，通常 5-10 分鐘）。
 2. 編譯完成後，進到該次 workflow run 的頁面，最下面「Artifacts」區塊會有 `english-learning-app-release-apk` 可以下載。
