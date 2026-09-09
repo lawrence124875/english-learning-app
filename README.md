@@ -18,18 +18,25 @@
 - [x] 語音測試/預覽畫面（含高音質語音優先排序）
 - [x] 版權/關於頁面（四份教材正式引用文字）
 - [x] GitHub Actions 雲端編譯工作流程（自動產生 android/ 專案骨架 + 修補背景播放所需權限 + 建置 APK）
-- [ ] Firebase 整合：內容雲端化（Remote Config/Firestore）、回饋收集、Crashlytics、Analytics — **需要你先建立 Firebase 專案，詳見 SETUP.md**
+**第三階段（Firebase 整合）**
+- [x] Firebase Crashlytics：全域錯誤攔截，測試者當機時自動回報，不用等對方主動反應
+- [x] 套件名稱正式定為 `tw.bcc.englishapp`，已在 Firebase 專案登記對應
+- [ ] Firebase Analytics：待設計好要追蹤哪些事件後再接
+- [ ] 內容雲端化（Remote Config/Firestore）：讓修正翻譯錯字、加新語言不用重新上架
+- [ ] 使用者回饋收集表單
+
+**待辦（第四階段）**
 - [ ] RevenueCat 訂閱付費（`purchases_flutter`）：免費版（廣告）＋ Premium 訂閱 — **需要你先申請 RevenueCat/Google Play Console 帳號，詳見 SETUP.md**
 - [ ] 廣告 SDK（Google AdMob）：Rewarded Ads 加速器設計 — **需要你先申請 AdMob 帳號，詳見 SETUP.md**
 - [ ] 免費版額度／廣告版位細節定案
-- [ ] 本地通知（`flutter_local_notifications`，未來複習提醒用，列入第三階段）
+- [ ] 本地通知（`flutter_local_notifications`，未來複習提醒用）
 - [ ] Google Play 上架準備：隱私權政策頁、封閉測試（12人/14天）
 
 **重要說明**：這個專案目前沒有 `android/` 資料夾（原生 Android 專案骨架），因為本機沒有安裝 Flutter SDK 無法產生。這個資料夾會在 GitHub Actions 雲端編譯時**自動產生**（見 `.github/workflows/build_android.yml`），不需要手動處理。
 
 ## 如何拿到第一個可安裝的 APK
 
-**已驗證可成功建置**（2026-09-09，commit c2398d7）：24.4MB release APK。
+**已驗證可成功建置**（2026-09-09，commit 2cc5cc9，含 Firebase Crashlytics）：24.6MB release APK。
 
 1. 每次推送到 `main` 分支，GitHub 會自動觸發雲端編譯（Actions 分頁可以看到進度，通常 5-10 分鐘）。
 2. 編譯完成後，進到該次 workflow run 的頁面，最下面「Artifacts」區塊會有 `english-learning-app-release-apk` 可以下載。
