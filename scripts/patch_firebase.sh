@@ -14,6 +14,27 @@ echo "已寫入 android/app/google-services.json"
 python3 << 'PYEOF'
 import re
 
+# 強制把 applicationId 對齊 Firebase 已登記的套件名稱 tw.bcc.englishapp，
+# 避免 `flutter create` 產生的預設值（依專案名稱而定）跟 Firebase 對不起來。
+for path in ["android/app/build.gradle.kts", "android/app/build.gradle"]:
+    try:
+        with open(path, encoding="utf-8") as f:
+            content = f.read()
+    except FileNotFoundError:
+        continue
+    content = re.sub(
+        r'applicationId\s*=?\s*"[^"]+"',
+        'applicationId = "tw.bcc.englishapp"',
+        content,
+    )
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"已將 {path} 的 applicationId 對齊 tw.bcc.englishapp")
+PYEOF
+
+python3 << 'PYEOF'
+import re
+
 # 1. 在 settings.gradle.kts 的 plugins {} 區塊加上 google-services 外掛版本宣告
 settings_path = "android/settings.gradle.kts"
 with open(settings_path, encoding="utf-8") as f:
