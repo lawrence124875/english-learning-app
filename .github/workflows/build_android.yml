@@ -27,6 +27,9 @@ jobs:
       - name: Patch AndroidManifest for background audio playback
         run: bash scripts/patch_android_manifest.sh
 
+      - name: Patch MainActivity for audio_service compatibility
+        run: bash scripts/patch_main_activity.sh
+
       - name: Patch compileSdk for plugin compatibility
         run: bash scripts/patch_compile_sdk.sh
 
