@@ -35,7 +35,7 @@ PYEOF
 python3 << 'PYEOF'
 import re
 
-# 1. 在 settings.gradle.kts 的 plugins {} 區塊加上 google-services 外掛版本宣告
+# 1. 在 settings.gradle.kts 的 plugins {} 區塊加上 google-services 與 crashlytics 外掛版本宣告
 settings_path = "android/settings.gradle.kts"
 with open(settings_path, encoding="utf-8") as f:
     content = f.read()
@@ -47,11 +47,18 @@ if "com.google.gms.google-services" not in content:
         content,
         count=1,
     )
-    with open(settings_path, "w", encoding="utf-8") as f:
-        f.write(content)
-    print("已修補 settings.gradle.kts")
+if "com.google.firebase.crashlytics" not in content:
+    content = re.sub(
+        r'(plugins\s*\{)',
+        r'\1\n    id("com.google.firebase.crashlytics") version "3.0.2" apply false',
+        content,
+        count=1,
+    )
+with open(settings_path, "w", encoding="utf-8") as f:
+    f.write(content)
+print("已修補 settings.gradle.kts")
 
-# 2. 在 app/build.gradle.kts 的 plugins {} 區塊套用 google-services 外掛
+# 2. 在 app/build.gradle.kts 的 plugins {} 區塊套用 google-services 與 crashlytics 外掛
 app_gradle_path = "android/app/build.gradle.kts"
 with open(app_gradle_path, encoding="utf-8") as f:
     content = f.read()
@@ -63,7 +70,14 @@ if 'id("com.google.gms.google-services")' not in content:
         content,
         count=1,
     )
-    with open(app_gradle_path, "w", encoding="utf-8") as f:
-        f.write(content)
-    print("已修補 app/build.gradle.kts")
+if 'id("com.google.firebase.crashlytics")' not in content:
+    content = re.sub(
+        r'(plugins\s*\{)',
+        r'\1\n    id("com.google.firebase.crashlytics")',
+        content,
+        count=1,
+    )
+with open(app_gradle_path, "w", encoding="utf-8") as f:
+    f.write(content)
+print("已修補 app/build.gradle.kts")
 PYEOF
