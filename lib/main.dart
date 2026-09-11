@@ -8,6 +8,8 @@ import 'data/repositories/word_repository.dart';
 import 'data/repositories/progress_repository.dart';
 import 'data/sources/tts_service.dart';
 import 'data/sources/tts_audio_handler.dart';
+import 'data/sources/subscription_service.dart';
+import 'data/sources/ads_service.dart';
 import 'presentation/providers/app_state.dart';
 import 'presentation/screens/home_screen.dart';
 
@@ -27,6 +29,14 @@ Future<void> main() async {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
     return true;
   };
+
+  // RevenueCat 訂閱付費：金鑰在編譯時期由 --dart-define 注入，
+  // 不寫死在原始碼裡。
+  await SubscriptionService.initialize(
+    const String.fromEnvironment('REVENUECAT_API_KEY'),
+  );
+
+  await AdsService.initialize();
 
   // 初始化背景播放服務：讓 App 在鎖屏/切到背景時仍可繼續朗讀，
   // 並在鎖屏/通知列顯示目前單字＋中文意思（類似音樂播放器）。

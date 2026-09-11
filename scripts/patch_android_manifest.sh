@@ -29,6 +29,8 @@ permissions = """
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 """
 
 # 在 <manifest ...> 開頭標籤後插入權限宣告。
@@ -38,6 +40,17 @@ content = re.sub(
     content,
     count=1,
 )
+
+import os
+admob_app_id = os.environ.get("ADMOB_APP_ID", "")
+if admob_app_id:
+    admob_meta = (
+        f'        <meta-data\n'
+        f'            android:name="com.google.android.gms.ads.APPLICATION_ID"\n'
+        f'            android:value="{admob_app_id}"/>\n'
+    )
+    content = content.replace("</application>", admob_meta + "    </application>")
+    print("已加入 AdMob App ID meta-data")
 
 service_block = """
         <service

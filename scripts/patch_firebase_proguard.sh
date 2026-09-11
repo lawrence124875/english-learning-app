@@ -25,6 +25,16 @@ cat >> "$PROGUARD_FILE" << 'EOF'
 -keep interface com.google.firebase.** { *; }
 -keep class * implements com.google.firebase.components.ComponentRegistrar { <init>(); }
 -dontwarn com.google.firebase.**
+
+# --- RevenueCat / Google Play Billing ---
+-keep class com.android.billingclient.api.** { *; }
+-dontwarn com.android.billingclient.api.**
+-keep class com.revenuecat.purchases.** { *; }
+-dontwarn com.revenuecat.purchases.**
+
+# --- Google Mobile Ads (AdMob) ---
+-keep class com.google.android.gms.ads.** { *; }
+-dontwarn com.google.android.gms.ads.**
 EOF
 
 echo "已加入 Firebase 的 ProGuard keep 規則到 $PROGUARD_FILE"
