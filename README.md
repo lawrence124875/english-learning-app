@@ -28,17 +28,25 @@
 **待辦（第四階段）**
 - [x] RevenueCat 訂閱付費（`purchases_flutter`）SDK 整合：SubscriptionService 包裝 entitlement 判斷、購買、恢復購買
 - [x] Google AdMob（`google_mobile_ads`）SDK 整合：AdsService 提供 Rewarded Ad 載入邏輯
-- [ ] 免費版額度／廣告版位細節定案
-- [ ] 本地通知（`flutter_local_notifications`，未來複習提醒用）
-- [ ] Google Play 上架準備：隱私權政策頁、封閉測試（12人/14天）
+- [x] 免費版額度／廣告版位細節定案並串進 UI：每份教材開放前 1/3，看獎勵廣告額外解鎖20個（本次使用階段有效），底部橫幅廣告常駐＋每輪播完插頁廣告，訂閱後全解鎖＋去廣告
+- [x] 本地通知（`flutter_local_notifications`）：可自訂時間的每日複習提醒
+- [x] 學習統計畫面：今日已學習、累計已學習、NGSL 2809 進度與官方涵蓋率參考數據
+
+**待辦（第五階段）**
+- [ ] Google Play 上架準備：封閉測試（12人/14天）
+- [ ] Firebase Analytics：待設計好要追蹤哪些事件後再接
+- [ ] 內容雲端化（Remote Config/Firestore）：讓修正翻譯錯字、加新語言不用重新上架
+- [ ] 使用者回饋收集表單
 
 **重要說明**：這個專案目前沒有 `android/` 資料夾（原生 Android 專案骨架），因為本機沒有安裝 Flutter SDK 無法產生。這個資料夾會在 GitHub Actions 雲端編譯時**自動產生**（見 `.github/workflows/build_android.yml`），不需要手動處理。
 
 ## 如何拿到第一個可安裝的 APK
 
-**已驗證可成功建置**（2026-09-10，commit edddd1e，含 RevenueCat + AdMob）：已完成 RevenueCat 訂閱付費與 Google AdMob 廣告 SDK 整合並通過雲端編譯（修正 google_mobile_ads 舊版與新版 Gradle 工具鏈不相容問題）。
+**已驗證可成功建置**（2026-09-14，commit eb02f5b，含免費版額度/廣告邏輯 + 本地通知 + 學習統計）：已完成商業模式邏輯（1/3免費解鎖、獎勵廣告、插頁/橫幅廣告、訂閱全解鎖去廣告）、每日複習提醒通知、學習統計畫面，並通過雲端編譯。
 
-**⚠️ 待你確認**：Firebase 專案 `learning-english-5ea8b` 的 API 金鑰在手機測試時出現「已被 Google 停權」的錯誤（`Consumer has been suspended`），需要去 Google Cloud Console 確認原因並排除，否則 Crashlytics/未來的內容雲端化都無法正常運作。
+隱私權政策頁面：https://fastidious-froyo-0caac6.netlify.app/
+
+Firebase API 金鑰先前因新帳號被 Google 誤判停權，已申訴成功恢復正常。
 
 1. 每次推送到 `main` 分支，GitHub 會自動觸發雲端編譯（Actions 分頁可以看到進度，通常 5-10 分鐘）。
 2. 編譯完成後，進到該次 workflow run 的頁面，最下面「Artifacts」區塊會有 `english-learning-app-release-apk` 可以下載。
