@@ -35,6 +35,18 @@ cat >> "$PROGUARD_FILE" << 'EOF'
 # --- Google Mobile Ads (AdMob) ---
 -keep class com.google.android.gms.ads.** { *; }
 -dontwarn com.google.android.gms.ads.**
+
+# --- WorkManager / Room：避免 R8 改掉資料庫實作類別名稱，
+# 導致執行期反射查找失敗（"Failed to create an instance of
+# androidx.work.impl.WorkDatabase.canonicalName"）---
+-keep class * extends androidx.room.RoomDatabase { *; }
+-keep @androidx.room.Database class * { *; }
+-keep class androidx.work.impl.WorkDatabase { *; }
+-keep class androidx.work.impl.WorkDatabase_Impl { *; }
+-keep class androidx.work.impl.** { *; }
+-keepclassmembers class * extends androidx.room.RoomDatabase { <init>(); }
+-dontwarn androidx.room.**
+-dontwarn androidx.work.**
 EOF
 
 echo "已加入 Firebase 的 ProGuard keep 規則到 $PROGUARD_FILE"
