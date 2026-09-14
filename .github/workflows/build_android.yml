@@ -49,7 +49,15 @@ jobs:
       - name: Build APK (release)
         env:
           REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_ANDROID_API_KEY }}
-        run: flutter build apk --release --dart-define=REVENUECAT_API_KEY=$REVENUECAT_API_KEY
+          ADMOB_REWARDED_AD_UNIT_ID: ${{ secrets.ADMOB_REWARDED_AD_UNIT_ID }}
+          ADMOB_INTERSTITIAL_AD_UNIT_ID: ${{ secrets.ADMOB_INTERSTITIAL_AD_UNIT_ID }}
+          ADMOB_BANNER_AD_UNIT_ID: ${{ secrets.ADMOB_BANNER_AD_UNIT_ID }}
+        run: |
+          flutter build apk --release \
+            --dart-define=REVENUECAT_API_KEY=$REVENUECAT_API_KEY \
+            --dart-define=ADMOB_REWARDED_AD_UNIT_ID=$ADMOB_REWARDED_AD_UNIT_ID \
+            --dart-define=ADMOB_INTERSTITIAL_AD_UNIT_ID=$ADMOB_INTERSTITIAL_AD_UNIT_ID \
+            --dart-define=ADMOB_BANNER_AD_UNIT_ID=$ADMOB_BANNER_AD_UNIT_ID
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4

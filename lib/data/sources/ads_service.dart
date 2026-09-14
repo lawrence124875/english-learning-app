@@ -5,17 +5,26 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 /// - Interstitial Ad：免費版每輪播完自動顯示一次。
 /// - Banner Ad：免費版主畫面底部常駐顯示。
 ///
-/// 目前先用 Google 官方測試版位 ID，正式上架前記得去 AdMob 後台
-/// 為每個版位建立正式的廣告單元 ID 換掉這裡對應的常數。
+/// 正式廣告單元 ID 透過 --dart-define 在編譯時期注入（見 CI），
+/// 沒有注入時會退回 Google 官方測試版位 ID，方便本機開發測試。
 class AdsService {
   static Future<void> initialize() async {
     await MobileAds.instance.initialize();
     _preloadInterstitial();
   }
 
-  static const _testRewardedAdUnitId = 'ca-app-pub-3940256099942544/5224354917';
-  static const _testInterstitialAdUnitId = 'ca-app-pub-3940256099942544/1033173712';
-  static const testBannerAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
+  static const _rewardedAdUnitId = String.fromEnvironment(
+    'ADMOB_REWARDED_AD_UNIT_ID',
+    defaultValue: 'ca-app-pub-3940256099942544/5224354917',
+  );
+  static const _interstitialAdUnitId = String.fromEnvironment(
+    'ADMOB_INTERSTITIAL_AD_UNIT_ID',
+    defaultValue: 'ca-app-pub-3940256099942544/1033173712',
+  );
+  static const bannerAdUnitId = String.fromEnvironment(
+    'ADMOB_BANNER_AD_UNIT_ID',
+    defaultValue: 'ca-app-pub-3940256099942544/6300978111',
+  );
 
   static RewardedAd? _rewardedAd;
   static InterstitialAd? _interstitialAd;
@@ -25,7 +34,7 @@ class AdsService {
     required void Function() onFailed,
   }) async {
     await RewardedAd.load(
-      adUnitId: _testRewardedAdUnitId,
+      adUnitId: _rewardedAdUnitId,
       request: const AdRequest(),
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (ad) {
@@ -55,7 +64,7 @@ class AdsService {
 
   static void _preloadInterstitial() {
     InterstitialAd.load(
-      adUnitId: _testInterstitialAdUnitId,
+      adUnitId: _interstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
