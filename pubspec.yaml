@@ -17,6 +17,8 @@ dependencies:
   firebase_crashlytics: ^4.1.3
   purchases_flutter: ^8.4.0
   google_mobile_ads: ^9.0.0
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
   # 未來階段
   # purchases_flutter: ^7.0.0
   # Firebase（第二階段接上）

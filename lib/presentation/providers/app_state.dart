@@ -9,6 +9,8 @@ import '../../data/sources/tts_service.dart';
 import '../../data/sources/tts_audio_handler.dart';
 import '../../data/sources/subscription_service.dart';
 import '../../data/sources/ads_service.dart';
+import '../../data/repositories/stats_repository.dart';
+import '../../data/sources/notification_service.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
@@ -16,6 +18,12 @@ class AppState extends ChangeNotifier {
   final ProgressRepository _progressRepository;
   final TtsService _ttsService;
   final TtsAudioHandler? _audioHandler;
+  final StatsRepository _statsRepository = StatsRepository();
+
+  LearningStats stats = const LearningStats();
+  bool reminderEnabled = false;
+  int reminderHour = 20;
+  int reminderMinute = 0;
 
   AppState({
     required WordRepository wordRepository,
@@ -92,6 +100,16 @@ class AppState extends ChangeNotifier {
     notifyListeners();
 
     isPremium = await SubscriptionService.isPremium();
+    stats = await _statsRepository.loadStats();
+    reminderEnabled = await _progressRepository.loadReminderEnabled();
+    final reminderTime = await _progressRepository.loadReminderTime();
+    reminderHour = reminderTime.$1;
+    reminderMinute = reminderTime.$2;
+    if (reminderEnabled) {
+      // 重新排程一次，確保裝置重開機等情況下提醒仍然有效。
+      await NotificationService.scheduleDailyReminder(
+          hour: reminderHour, minute: reminderMinute);
+    }
     datasets = await _wordRepository.loadAllDatasets();
     settings = await _progressRepository.loadSettings();
 
@@ -155,6 +173,30 @@ class AppState extends ChangeNotifier {
       notifyListeners();
     }
     return restored;
+  }
+
+  /// 設定/更新每日複習提醒。enabled=false 時會取消排程。
+  Future<void> setReminder({
+    required bool enabled,
+    required int hour,
+    required int minute,
+  }) async {
+    reminderEnabled = enabled;
+    reminderHour = hour;
+    reminderMinute = minute;
+    await _progressRepository.saveReminderSettings(
+        enabled: enabled, hour: hour, minute: minute);
+
+    if (enabled) {
+      final granted = await NotificationService.requestPermission();
+      if (granted) {
+        await NotificationService.scheduleDailyReminder(
+            hour: hour, minute: minute);
+      }
+    } else {
+      await NotificationService.cancelReminder();
+    }
+    notifyListeners();
   }
 
   void switchDataset(int index) {
@@ -290,6 +332,12 @@ class AppState extends ChangeNotifier {
     if (settings.readMode == ReadMode.bilingual) {
       await _ttsService.speak(word.meaningFor('zh-TW'),
           languageCode: 'zh-TW');
+    }
+    final state = currentPlaybackState;
+    if (state.playlist.isNotEmpty) {
+      final idx = state.playlist[state.currentStep % state.playlist.length];
+      stats = await _statsRepository.markLearned(currentDataset.id, idx);
+      notifyListeners();
     }
   }
 

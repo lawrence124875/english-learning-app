@@ -53,4 +53,32 @@ class ProgressRepository {
       starred.map((e) => e.toString()).toList(),
     );
   }
+
+  // --- 複習提醒設定 ---
+  static const _reminderEnabledKey = 'reminder_enabled_v1';
+  static const _reminderHourKey = 'reminder_hour_v1';
+  static const _reminderMinuteKey = 'reminder_minute_v1';
+
+  Future<bool> loadReminderEnabled() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_reminderEnabledKey) ?? false;
+  }
+
+  Future<(int, int)> loadReminderTime() async {
+    final prefs = await SharedPreferences.getInstance();
+    final hour = prefs.getInt(_reminderHourKey) ?? 20;
+    final minute = prefs.getInt(_reminderMinuteKey) ?? 0;
+    return (hour, minute);
+  }
+
+  Future<void> saveReminderSettings({
+    required bool enabled,
+    required int hour,
+    required int minute,
+  }) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_reminderEnabledKey, enabled);
+    await prefs.setInt(_reminderHourKey, hour);
+    await prefs.setInt(_reminderMinuteKey, minute);
+  }
 }

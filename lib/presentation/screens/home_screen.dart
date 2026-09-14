@@ -7,6 +7,7 @@ import '../widgets/banner_ad_widget.dart';
 import 'voice_test_screen.dart';
 import 'about_screen.dart';
 import 'paywall_screen.dart';
+import 'stats_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,6 +37,14 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('智慧聽覺巡航'),
         actions: [
+          IconButton(
+            tooltip: '學習統計',
+            icon: const Icon(Icons.bar_chart),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const StatsScreen()),
+            ),
+          ),
           if (!appState.isPremium)
             IconButton(
               tooltip: '升級 Premium',
