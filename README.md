@@ -21,9 +21,6 @@
 **第三階段（Firebase 整合）**
 - [x] Firebase Crashlytics：全域錯誤攔截，測試者當機時自動回報，不用等對方主動反應
 - [x] 套件名稱正式定為 `tw.bcc.englishapp`，已在 Firebase 專案登記對應
-- [ ] Firebase Analytics：待設計好要追蹤哪些事件後再接
-- [ ] 內容雲端化（Remote Config/Firestore）：讓修正翻譯錯字、加新語言不用重新上架
-- [ ] 使用者回饋收集表單
 
 **待辦（第四階段）**
 - [x] RevenueCat 訂閱付費（`purchases_flutter`）SDK 整合：SubscriptionService 包裝 entitlement 判斷、購買、恢復購買
@@ -32,11 +29,14 @@
 - [x] 本地通知（`flutter_local_notifications`）：可自訂時間的每日複習提醒
 - [x] 學習統計畫面：今日已學習、累計已學習、NGSL 2809 進度與官方涵蓋率參考數據
 
-**待辦（第五階段）**
-- [ ] Google Play 上架準備：封閉測試（12人/14天）
+**第五階段（上架準備 + 進階功能）**
+- [x] Google Play 上架素材：App 圖示、4張截圖、功能圖片、商店文案（20/80法則定位）
+- [x] AdMob 正式廣告單元 ID（獎勵/插頁/橫幅）已接上，取代測試 ID
+- [x] 內容雲端化（Firebase Storage + 本機快取 + bundled assets 三層備援）：程式碼已完成，**但需要升級 Firebase 到 Blaze 付費方案才能啟用**（Storage 2026年2月起強制要求，即使在免費額度內也要綁信用卡）。目前使用者暫緩升級，App 會自動退回本機內建資料，不影響任何功能。
+- [x] 使用者回饋收集功能：App 內建「意見回饋」表單，寫入 Cloud Firestore（不受 Blaze 限制，免費方案即可用）。**上線前需要在 Firebase 後台啟用 Firestore 並設定安全規則，見 `FIRESTORE_RULES.md`**
 - [ ] Firebase Analytics：待設計好要追蹤哪些事件後再接
-- [ ] 內容雲端化（Remote Config/Firestore）：讓修正翻譯錯字、加新語言不用重新上架
-- [ ] 使用者回饋收集表單
+- [ ] Google Play 帳戶驗證（卡在「驗證 Android 行動裝置」需要借用實體手機完成，這也連帶擋住：建立 App 草稿、封閉測試、RevenueCat 商品設定）
+- [ ] Google Play 封閉測試（12人/14天，計畫使用 TestersCommunity 付費測試）
 
 **重要說明**：這個專案目前沒有 `android/` 資料夾（原生 Android 專案骨架），因為本機沒有安裝 Flutter SDK 無法產生。這個資料夾會在 GitHub Actions 雲端編譯時**自動產生**（見 `.github/workflows/build_android.yml`），不需要手動處理。
 
