@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'data/repositories/word_repository.dart';
+import 'data/repositories/remote_word_repository.dart';
 import 'data/repositories/progress_repository.dart';
 import 'data/sources/tts_service.dart';
 import 'data/sources/tts_audio_handler.dart';
@@ -64,7 +64,7 @@ class EnglishLearningApp extends StatelessWidget {
         Provider<TtsService>.value(value: ttsService),
         ChangeNotifierProvider(
           create: (_) => AppState(
-            wordRepository: LocalAssetWordRepository(),
+            wordRepository: RemoteWordRepository(),
             progressRepository: ProgressRepository(),
             ttsService: ttsService,
             audioHandler: _audioHandler,
