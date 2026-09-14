@@ -42,6 +42,27 @@ if "coreLibraryDesugaring(" not in content and "coreLibraryDesugaring " not in c
         desugar_dep = "\ndependencies {\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'\n}\n"
     content = content.rstrip() + "\n" + desugar_dep
 
+# 多個套件（Firebase/AdMob/RevenueCat/flutter_local_notifications）各自帶入
+# 不同版本的 androidx.work（WorkManager），版本衝突會導致 WorkDatabase 在
+# App 啟動時初始化失敗而直接崩潰。強制統一成單一版本解決衝突。
+if "resolutionStrategy" not in content:
+    force_block = (
+        '\nconfigurations.all {\n'
+        '    resolutionStrategy {\n'
+        '        force("androidx.work:work-runtime:2.9.1")\n'
+        '        force("androidx.work:work-runtime-ktx:2.9.1")\n'
+        '    }\n'
+        '}\n'
+    ) if is_kts else (
+        "\nconfigurations.all {\n"
+        "    resolutionStrategy {\n"
+        "        force 'androidx.work:work-runtime:2.9.1'\n"
+        "        force 'androidx.work:work-runtime-ktx:2.9.1'\n"
+        "    }\n"
+        "}\n"
+    )
+    content = content.rstrip() + "\n" + force_block
+
 with open(path, "w", encoding="utf-8") as fh:
     fh.write(content)
 PYEOF
