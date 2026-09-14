@@ -7,6 +7,8 @@ import '../../data/repositories/word_repository.dart';
 import '../../data/repositories/progress_repository.dart';
 import '../../data/sources/tts_service.dart';
 import '../../data/sources/tts_audio_handler.dart';
+import '../../data/sources/subscription_service.dart';
+import '../../data/sources/ads_service.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
@@ -43,6 +45,28 @@ class AppState extends ChangeNotifier {
   bool isLoading = true;
   Timer? _cruiseTimer;
 
+  // --- 免費版 / 訂閱相關 ---
+  bool isPremium = false;
+
+  /// 每個教材各自的「本次使用階段額外解鎖」數量（看獎勵廣告換來的），
+  /// 只存在記憶體裡，重開 App 就會重置，符合「加速器」而非永久解鎖的設計。
+  final Map<String, int> _sessionExtraUnlocked = {};
+
+  static const _freeUnlockFraction = 1 / 3;
+  static const _rewardedAdUnlockAmount = 20;
+
+  /// 免費版使用者目前可以存取的項目數（超過這個範圍的單字不會出現在播放清單裡）。
+  /// Premium 使用者永遠回傳整份教材的長度。
+  int unlockedCount(WordDataset dataset) {
+    if (isPremium) return dataset.items.length;
+    final base = (dataset.items.length * _freeUnlockFraction).floor();
+    final extra = _sessionExtraUnlocked[dataset.id] ?? 0;
+    return (base + extra).clamp(0, dataset.items.length);
+  }
+
+  bool get currentDatasetFullyUnlocked =>
+      isPremium || unlockedCount(currentDataset) >= currentDataset.items.length;
+
   WordDataset get currentDataset => datasets[currentDatasetIndex];
 
   DatasetPlaybackState get currentPlaybackState =>
@@ -67,6 +91,7 @@ class AppState extends ChangeNotifier {
     isLoading = true;
     notifyListeners();
 
+    isPremium = await SubscriptionService.isPremium();
     datasets = await _wordRepository.loadAllDatasets();
     settings = await _progressRepository.loadSettings();
 
@@ -90,8 +115,46 @@ class AppState extends ChangeNotifier {
       totalCount: dataset.items.length,
       starredIndices: starred,
       scopeMode: settings.scopeMode,
+      allowedCount: unlockedCount(dataset),
     );
     return DatasetPlaybackState(playlist: playlist, currentStep: 0);
+  }
+
+  /// 看完一次獎勵廣告後呼叫：幫目前教材多解鎖 20 個項目（僅限本次使用階段）。
+  Future<void> unlockMoreViaRewardedAd() async {
+    final dataset = currentDataset;
+    _sessionExtraUnlocked[dataset.id] =
+        (_sessionExtraUnlocked[dataset.id] ?? 0) + _rewardedAdUnlockAmount;
+    _playbackStates[dataset.id] = _rebuildPlaylist(dataset, currentStarred);
+    await _persistCurrentProgress();
+    notifyListeners();
+  }
+
+  Future<bool> purchasePremiumPackage(dynamic package) async {
+    final success = await SubscriptionService.purchase(package);
+    if (success) {
+      isPremium = true;
+      // 訂閱成功後，所有教材的播放清單都要重新建構成完整版（不再受限）。
+      for (final dataset in datasets) {
+        _playbackStates[dataset.id] =
+            _rebuildPlaylist(dataset, _starredSets[dataset.id] ?? {});
+      }
+      notifyListeners();
+    }
+    return success;
+  }
+
+  Future<bool> restorePremium() async {
+    final restored = await SubscriptionService.restorePurchases();
+    if (restored) {
+      isPremium = true;
+      for (final dataset in datasets) {
+        _playbackStates[dataset.id] =
+            _rebuildPlaylist(dataset, _starredSets[dataset.id] ?? {});
+      }
+      notifyListeners();
+    }
+    return restored;
   }
 
   void switchDataset(int index) {
@@ -166,9 +229,11 @@ class AppState extends ChangeNotifier {
     if (state.playlist.isEmpty) return;
     var nextStep = state.currentStep + 1;
     var cycleCount = state.cycleCount;
+    var cycleCompleted = false;
     if (nextStep >= state.playlist.length) {
       nextStep = 0;
       cycleCount += 1;
+      cycleCompleted = true;
       // 每輪播完重新洗牌（若是隨機模式）。
       final reshuffled = _rebuildPlaylist(dataset, currentStarred);
       state = reshuffled.copyWith(currentStep: 0, cycleCount: cycleCount);
@@ -179,6 +244,10 @@ class AppState extends ChangeNotifier {
     await _persistCurrentProgress();
     _updateNowPlaying();
     notifyListeners();
+    if (cycleCompleted && !isPremium) {
+      // 免費版：每輪播完顯示一次插頁廣告。失敗也不影響正常播放。
+      AdsService.showInterstitialAd();
+    }
     if (speak) await _speakCurrent();
   }
 
@@ -199,7 +268,8 @@ class AppState extends ChangeNotifier {
     final dataset = currentDataset;
     final state = currentPlaybackState;
     final targetIndex = oneBasedNumber - 1;
-    if (targetIndex < 0 || targetIndex >= dataset.items.length) return;
+    final maxAllowed = unlockedCount(dataset);
+    if (targetIndex < 0 || targetIndex >= maxAllowed) return;
     final posInPlaylist = state.playlist.indexOf(targetIndex);
     final step = posInPlaylist >= 0 ? posInPlaylist : 0;
     _playbackStates[dataset.id] = state.copyWith(currentStep: step);

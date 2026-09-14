@@ -21,20 +21,25 @@ class PlaylistBuilder {
   /// 依照範圍模式（全部/僅不熟悉 × 隨機/依序）建構播放清單。
   /// [totalCount] 是該教材的總項目數。
   /// [starredIndices] 是該教材目前被標記「不熟悉」的 index 集合。
+  /// [allowedCount] 免費版解鎖範圍限制：只會從 index < allowedCount 的項目裡選取；
+  /// Premium 使用者傳入 totalCount 即代表不限制。
   static List<int> build({
     required int totalCount,
     required Set<int> starredIndices,
     required ScopeMode scopeMode,
+    int? allowedCount,
   }) {
+    final limit = allowedCount ?? totalCount;
     List<int> base;
     switch (scopeMode) {
       case ScopeMode.allRandom:
       case ScopeMode.allSequential:
-        base = List<int>.generate(totalCount, (i) => i);
+        base = List<int>.generate(
+            limit.clamp(0, totalCount), (i) => i);
         break;
       case ScopeMode.starredRandom:
       case ScopeMode.starredSequential:
-        base = starredIndices.toList()..sort();
+        base = starredIndices.where((i) => i < limit).toList()..sort();
         break;
     }
 

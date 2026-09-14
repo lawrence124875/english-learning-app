@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../widgets/settings_panel.dart';
+import '../widgets/unlock_banner.dart';
+import '../widgets/banner_ad_widget.dart';
 import 'voice_test_screen.dart';
 import 'about_screen.dart';
+import 'paywall_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -33,6 +36,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('智慧聽覺巡航'),
         actions: [
+          if (!appState.isPremium)
+            IconButton(
+              tooltip: '升級 Premium',
+              icon: const Icon(Icons.workspace_premium),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const PaywallScreen()),
+              ),
+            ),
           IconButton(
             tooltip: '語音測試/預覽',
             icon: const Icon(Icons.record_voice_over),
@@ -52,20 +64,33 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _DatasetTabs(appState: appState),
-              const SizedBox(height: 16),
-              _PlaybackCard(appState: appState),
-              const SizedBox(height: 12),
-              _NavigationButtons(appState: appState),
-              const SizedBox(height: 16),
-              const SettingsPanel(),
-            ],
-          ),
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _DatasetTabs(appState: appState),
+                    const SizedBox(height: 16),
+                    _PlaybackCard(appState: appState),
+                    const SizedBox(height: 12),
+                    const UnlockBanner(),
+                    const SizedBox(height: 12),
+                    _NavigationButtons(appState: appState),
+                    const SizedBox(height: 16),
+                    const SettingsPanel(),
+                  ],
+                ),
+              ),
+            ),
+            if (!appState.isPremium)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 4),
+                child: BannerAdWidget(),
+              ),
+          ],
         ),
       ),
     );

@@ -1,18 +1,24 @@
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-/// AdMob 廣告服務。目前先提供 SDK 初始化與「獎勵廣告」載入邏輯，
-/// 實際要在哪些畫面/情境顯示廣告（免費版額度用完後的加速器機制），
-/// 待商業模式細節定案後再串進 UI。
+/// AdMob 廣告服務。
+/// - Rewarded Ad：使用者主動觀看以換取額外解鎖額度。
+/// - Interstitial Ad：免費版每輪播完自動顯示一次。
+/// - Banner Ad：免費版主畫面底部常駐顯示。
+///
+/// 目前先用 Google 官方測試版位 ID，正式上架前記得去 AdMob 後台
+/// 為每個版位建立正式的廣告單元 ID 換掉這裡對應的常數。
 class AdsService {
   static Future<void> initialize() async {
     await MobileAds.instance.initialize();
+    _preloadInterstitial();
   }
 
-  /// 目前先用 Google 官方測試版位 ID，等正式要上線廣告時，
-  /// 記得去 AdMob 後台為「獎勵廣告」建立正式的廣告單元 ID 換掉這裡。
   static const _testRewardedAdUnitId = 'ca-app-pub-3940256099942544/5224354917';
+  static const _testInterstitialAdUnitId = 'ca-app-pub-3940256099942544/1033173712';
+  static const testBannerAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
 
   static RewardedAd? _rewardedAd;
+  static InterstitialAd? _interstitialAd;
 
   static Future<void> loadRewardedAd({
     required void Function() onLoaded,
@@ -46,4 +52,39 @@ class AdsService {
     _rewardedAd = null;
     return earnedReward;
   }
+
+  static void _preloadInterstitial() {
+    InterstitialAd.load(
+      adUnitId: _testInterstitialAdUnitId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          _interstitialAd = ad;
+          ad.fullScreenContentCallback = FullScreenContentCallback(
+            onAdDismissedFullScreenContent: (ad) {
+              ad.dispose();
+              _interstitialAd = null;
+              _preloadInterstitial(); // 提前準備好下一次要顯示的插頁廣告。
+            },
+            onAdFailedToShowFullScreenContent: (ad, error) {
+              ad.dispose();
+              _interstitialAd = null;
+              _preloadInterstitial();
+            },
+          );
+        },
+        onAdFailedToLoad: (error) {
+          _interstitialAd = null;
+        },
+      ),
+    );
+  }
+
+  /// 顯示插頁廣告；如果還沒載入完成就靜默略過（不強迫等待，避免打斷使用體驗）。
+  static void showInterstitialAd() {
+    final ad = _interstitialAd;
+    if (ad == null) return;
+    ad.show();
+  }
 }
+
