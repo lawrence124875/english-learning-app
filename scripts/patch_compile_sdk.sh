@@ -17,6 +17,11 @@ with open(path, encoding="utf-8") as fh:
 content = re.sub(r'compileSdk\s*=\s*flutter\.compileSdkVersion', 'compileSdk = 36', content)
 content = re.sub(r'compileSdkVersion\s+flutter\.compileSdkVersion', 'compileSdkVersion 36', content)
 
+# 明確寫死最低支援版本為 Android 5.0（API 21），對應我們定案的支援範圍，
+# 不再讓它跟著 Flutter SDK 版本的預設值漂移。
+content = re.sub(r'minSdk\s*=\s*flutter\.minSdkVersion', 'minSdk = 21', content)
+content = re.sub(r'minSdkVersion\s+flutter\.minSdkVersion', 'minSdkVersion 21', content)
+
 # flutter_local_notifications 需要開啟核心函式庫去糖化（core library desugaring）。
 is_kts = path.endswith(".kts")
 if "CoreLibraryDesugaringEnabled" not in content and "coreLibraryDesugaringEnabled" not in content:
