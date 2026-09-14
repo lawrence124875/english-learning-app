@@ -17,6 +17,31 @@ with open(path, encoding="utf-8") as fh:
 content = re.sub(r'compileSdk\s*=\s*flutter\.compileSdkVersion', 'compileSdk = 36', content)
 content = re.sub(r'compileSdkVersion\s+flutter\.compileSdkVersion', 'compileSdkVersion 36', content)
 
+# flutter_local_notifications 需要開啟核心函式庫去糖化（core library desugaring）。
+is_kts = path.endswith(".kts")
+if "CoreLibraryDesugaringEnabled" not in content and "coreLibraryDesugaringEnabled" not in content:
+    if is_kts:
+        content = re.sub(
+            r'(compileOptions\s*\{)',
+            r'\1\n        isCoreLibraryDesugaringEnabled = true',
+            content,
+            count=1,
+        )
+    else:
+        content = re.sub(
+            r'(compileOptions\s*\{)',
+            r'\1\n        coreLibraryDesugaringEnabled true',
+            content,
+            count=1,
+        )
+
+if "coreLibraryDesugaring(" not in content and "coreLibraryDesugaring " not in content:
+    if is_kts:
+        desugar_dep = '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")\n}\n'
+    else:
+        desugar_dep = "\ndependencies {\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'\n}\n"
+    content = content.rstrip() + "\n" + desugar_dep
+
 with open(path, "w", encoding="utf-8") as fh:
     fh.write(content)
 PYEOF
