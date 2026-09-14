@@ -42,7 +42,7 @@
 
 ## 如何拿到第一個可安裝的 APK
 
-**已驗證可成功建置**（2026-09-14，commit 2b53cc0，含 WorkManager 版本衝突修正）：修正手機測試時發現的 App 啟動即崩潰問題（多個套件版本衝突造成 WorkDatabase 初始化失敗），強制統一 androidx.work 版本後解決。
+**已驗證可成功建置**（2026-09-14，commit 25e6403，含 WorkManager/Room R8 修正）：修正了 App 開啟即崩潰的問題，真正原因是 R8 誤改了 WorkManager 內部 Room 資料庫的類別名稱（不是版本衝突），加上正確的 ProGuard keep 規則解決。
 
 隱私權政策頁面：https://fastidious-froyo-0caac6.netlify.app/
 
