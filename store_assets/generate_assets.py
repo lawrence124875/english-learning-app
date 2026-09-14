@@ -350,3 +350,96 @@ def make_feature_graphic():
     print("feature_graphic.png done")
 
 make_feature_graphic()
+
+def make_screenshot_paywall():
+    img, draw = new_screen(WHITE)
+    status_bar(draw)
+
+    # 簡易 AppBar（返回箭頭 + 標題）
+    draw.rectangle([0, 84, W, 220], fill=WHITE)
+    draw.polygon([(80, 132), (56, 152), (80, 172)], fill=INK)
+    draw.text((110, 152), "升級 Premium", font=font("bold", 44), fill=INK, anchor="lm")
+    draw.line([0, 220, W, 220], fill=CARD_BORDER, width=2)
+
+    y = 300
+    draw.text((48, y), "解鎖完整學習內容", font=font("black", 52), fill=INK, anchor="lm")
+    y += 100
+
+    benefits = ["四份教材 100% 完整開放", "完全移除廣告", "背景播放、鎖屏顯示"]
+    for b in benefits:
+        cx0, cy0 = 60, y + 20
+        draw.ellipse([cx0 - 22, cy0 - 22, cx0 + 22, cy0 + 22], fill=(224, 246, 242))
+        draw.line([cx0 - 10, cy0, cx0 - 2, cy0 + 10], fill=TEAL, width=6)
+        draw.line([cx0 - 2, cy0 + 10, cx0 + 12, cy0 - 10], fill=TEAL, width=6)
+        draw.text((100, y + 20), b, font=font("regular", 36), fill=INK, anchor="lm")
+        y += 76
+
+    y += 40
+    # 方案卡片
+    plans = [("年繳方案", "NT$999 / 年", True), ("月繳方案", "NT$149 / 月", False)]
+    for name, price, featured in plans:
+        box = [48, y, W - 48, y + 150]
+        if featured:
+            card(draw, box, radius=28, fill=TEAL, outline=TEAL)
+            fg1, fg2 = WHITE, (220, 245, 242)
+            tag_box = [box[2] - 190, box[1] - 18, box[2] - 30, box[1] + 34]
+            rr(draw, tag_box, radius=20, fill=AMBER)
+            draw.text(((tag_box[0]+tag_box[2])//2, (tag_box[1]+tag_box[3])//2), "最划算",
+                       font=font("bold", 26), fill=WHITE, anchor="mm")
+        else:
+            card(draw, box, radius=28)
+            fg1, fg2 = INK, GREY
+        draw.text((box[0] + 44, box[1] + 50), name, font=font("bold", 36), fill=fg1, anchor="lm")
+        draw.text((box[0] + 44, box[1] + 100), price, font=font("regular", 30), fill=fg2, anchor="lm")
+        y += 178
+
+    y += 20
+    draw.text((W // 2, y + 20), "恢復先前購買", font=font("medium", 32), fill=TEAL, anchor="mm")
+
+    gy = y + 90
+    draw.rounded_rectangle([W // 2 - 68, gy, W // 2 + 68, gy + 8], radius=4, fill=GREY_LIGHT)
+    img = img.crop((0, 0, W, gy + 40))
+    img.save("/home/claude/store_assets/screenshot_paywall.png", "PNG")
+    print("screenshot_paywall.png done")
+
+make_screenshot_paywall()
+
+def make_screenshot_voice():
+    img, draw = new_screen(WHITE)
+    status_bar(draw)
+    draw.rectangle([0, 84, W, 220], fill=WHITE)
+    draw.text((48, 152), "語音測試/預覽", font=font("bold", 44), fill=INK, anchor="lm")
+    draw.line([0, 220, W, 220], fill=CARD_BORDER, width=2)
+
+    voices = [
+        ("Samantha (Enhanced)", "en-US", True),
+        ("Ava (Natural)", "en-US", False),
+        ("Daniel (Enhanced)", "en-GB", False),
+        ("Karen", "en-AU", False),
+        ("Moira", "en-IE", False),
+    ]
+    y = 250
+    row_h = 150
+    for name, locale, selected in voices:
+        row = [24, y, W - 24, y + row_h - 16]
+        if selected:
+            card(draw, row, radius=24, fill=TEAL_BG, outline=TEAL)
+        draw.text((64, y + 46), name, font=font("medium", 36), fill=INK, anchor="lm")
+        draw.text((64, y + 92), locale, font=font("regular", 28), fill=GREY, anchor="lm")
+        # 播放圖示圓鈕
+        bx, by = W - 100, y + (row_h - 16) // 2
+        draw.ellipse([bx - 40, by - 40, bx + 40, by + 40], outline=TEAL, width=4)
+        draw.polygon([(bx - 12, by - 18), (bx - 12, by + 18), (bx + 18, by)], fill=TEAL)
+        y += row_h
+
+    # 底部套用按鈕
+    btn_top = y + 30
+    button(draw, [48, btn_top, W - 48, btn_top + 110], "套用這個語音", filled=True)
+
+    gy = btn_top + 180
+    draw.rounded_rectangle([W // 2 - 68, gy, W // 2 + 68, gy + 8], radius=4, fill=GREY_LIGHT)
+    img = img.crop((0, 0, W, gy + 40))
+    img.save("/home/claude/store_assets/screenshot_voice.png", "PNG")
+    print("screenshot_voice.png done")
+
+make_screenshot_voice()
