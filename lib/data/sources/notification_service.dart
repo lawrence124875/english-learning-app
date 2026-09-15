@@ -1,28 +1,25 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
-import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 /// 複習提醒的本地通知服務。
 /// 使用者可以設定一個每天固定的提醒時間，App 會在那個時間跳出通知，
 /// 提醒回來複習今天標記的不熟悉單字。
+///
+/// 時區處理刻意不依賴任何原生外掛（flutter_timezone 等）：
+/// 這類套件一路上引發了好幾次跟其他套件版本衝突的編譯錯誤。改用
+/// Dart 內建、跨平台原生支援的 DateTime.timeZoneOffset 直接算出裝置
+/// 目前的 UTC 偏移量，再手動換算成 TZDateTime，完全不需要額外套件、
+/// 也不會再有版本衝突的問題。
 class NotificationService {
   static final _plugin = FlutterLocalNotificationsPlugin();
   static const _reminderId = 1001;
+  static const _channelId = 'tw.bcc.englishapp.reminder';
+  static const _channelName = '複習提醒';
 
   static Future<void> initialize() async {
     tz_data.initializeTimeZones();
-
-    // 關鍵：tz.local 預設是 UTC，一定要明確設成裝置實際時區，
-    // 否則排程時間會整個對不起來（例如設定晚上8點，實際排到隔天凌晨）。
-    try {
-      final deviceTimezone = await FlutterTimezone.getLocalTimezone();
-      tz.setLocalLocation(tz.getLocation(deviceTimezone));
-    } catch (_) {
-      // 抓不到裝置時區時的保底，至少不要整個初始化失敗。
-      tz.setLocalLocation(tz.getLocation('Asia/Taipei'));
-    }
 
     const androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -30,8 +27,8 @@ class NotificationService {
     await _plugin.initialize(settings);
 
     const channel = AndroidNotificationChannel(
-      'tw.bcc.englishapp.reminder',
-      '複習提醒',
+      _channelId,
+      _channelName,
       description: '每日英文複習提醒通知',
       importance: Importance.defaultImportance,
     );
@@ -49,17 +46,32 @@ class NotificationService {
     return granted ?? false;
   }
 
-  /// 排程每天固定時間的複習提醒（[hour]/[minute] 為 24 小時制）。
+  /// 把「裝置本地時間的某個時間點」換算成 TZDateTime，
+  /// 不透過任何原生外掛查詢時區名稱，直接用 Dart 內建的
+  /// DateTime.timeZoneOffset（跨平台原生支援，永遠準確反映裝置目前的
+  /// UTC 偏移量，包含日光節約時間）手動計算。
+  static tz.TZDateTime _nextInstanceOfLocalTime(int hour, int minute) {
+    final nowLocal = DateTime.now();
+    final offset = nowLocal.timeZoneOffset;
+
+    var targetLocal =
+        DateTime(nowLocal.year, nowLocal.month, nowLocal.day, hour, minute);
+    if (targetLocal.isBefore(nowLocal)) {
+      targetLocal = targetLocal.add(const Duration(days: 1));
+    }
+
+    // 把「裝置本地時間」轉成對應的 UTC 時間點，再包成 TZDateTime(UTC)——
+    // 這樣得到的是正確的絕對時間點，不需要知道裝置的 IANA 時區名稱。
+    final targetUtc = targetLocal.subtract(offset);
+    return tz.TZDateTime.from(targetUtc, tz.UTC);
+  }
+
+  /// 排程每天固定時間的複習提醒（[hour]/[minute] 為 24 小時制，裝置本地時間）。
   static Future<void> scheduleDailyReminder({
     required int hour,
     required int minute,
   }) async {
-    final now = tz.TZDateTime.now(tz.local);
-    var scheduled =
-        tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
-    if (scheduled.isBefore(now)) {
-      scheduled = scheduled.add(const Duration(days: 1));
-    }
+    final scheduled = _nextInstanceOfLocalTime(hour, minute);
 
     await _plugin.zonedSchedule(
       _reminderId,
@@ -68,15 +80,18 @@ class NotificationService {
       scheduled,
       const NotificationDetails(
         android: AndroidNotificationDetails(
-          'tw.bcc.englishapp.reminder',
-          '複習提醒',
+          _channelId,
+          _channelName,
           importance: Importance.defaultImportance,
         ),
       ),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
-      matchDateTimeComponents: DateTimeComponents.time, // 每天同一時間重複。
+      // 因為排的是 UTC 時間點，這裡比對的「時分」也是 UTC 時分——
+      // 只要裝置的 UTC 偏移量不變（台灣沒有日光節約時間，固定 UTC+8），
+      // 這樣比對出來的每日重複時間點依然正確對應裝置本地時間。
+      matchDateTimeComponents: DateTimeComponents.time,
     );
   }
 

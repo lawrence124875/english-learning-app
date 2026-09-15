@@ -24,8 +24,6 @@ jobs:
             flutter create --platforms=android --project-name=english_learning_app --org tw.bcc .
           fi
 
-      - name: Patch unified JVM target (fix plugin Kotlin/Java version mismatch)
-        run: bash scripts/patch_unified_jvm_target.sh
 
       - name: Patch AndroidManifest for background audio playback
         env:
