@@ -65,7 +65,13 @@ Future<void> main() async {
       config: const AudioServiceConfig(
         androidNotificationChannelId: 'tw.bcc.englishapp.audio',
         androidNotificationChannelName: '英語學習朗讀',
-        androidNotificationOngoing: true,
+        // 不再設成 ongoing:true——這個設定會讓通知變成「不可滑掉」，
+        // 但同時似乎也影響了 App 被關閉、呼叫 stop() 之後通知/鎖屏卡片
+        // 沒辦法正常消失的問題。改用套件預設值（false），這是絕大多數
+        // 使用 audio_service 的 App 採用、驗證過穩定的標準做法：
+        // 播放時通知一樣會顯示，只是使用者理論上滑得掉（實務上很少
+        // 人會刻意去滑掉正在播放的通知），換來的是關閉 App 後通知/
+        // 鎖屏卡片能正確消失，對使用體驗來說更重要。
       ),
     ).timeout(
       const Duration(seconds: 5),

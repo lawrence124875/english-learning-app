@@ -193,13 +193,36 @@ class _ReminderSectionState extends State<_ReminderSection> {
                         hour: picked.hour,
                         minute: picked.minute,
                       );
+                      if (!context.mounted) return;
+                      // 排完之後實際去查一次系統裡有沒有真的排到，
+                      // 讓使用者（跟我們）都能確認排程有沒有真的成功，
+                      // 而不是猜測「應該有生效」。
+                      final pending =
+                          await NotificationService.getPendingReminders();
+                      final scheduled = pending.any((n) => n.id == 1001);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(scheduled
+                              ? '已排定 ${picked.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')} 提醒'
+                              : '排程失敗，請確認電池優化設定或重新開啟提醒開關'),
+                        ),
+                      );
                     }
                   },
                 ),
               ),
               const SizedBox(height: 4),
               OutlinedButton.icon(
-                onPressed: () => NotificationService.requestIgnoreBatteryOptimizations(),
+                onPressed: () async {
+                  await NotificationService.requestIgnoreBatteryOptimizations();
+                  if (!context.mounted) return;
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('已開啟設定頁，請找「電池」選項並選擇「不受限制」'),
+                      duration: Duration(seconds: 4),
+                    ),
+                  );
+                },
                 icon: const Icon(Icons.battery_charging_full, size: 18),
                 label: const Text('提醒沒準時跳出？點此排除電池優化限制'),
               ),

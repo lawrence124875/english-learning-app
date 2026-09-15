@@ -99,6 +99,11 @@ class NotificationService {
     await _plugin.cancel(_reminderId);
   }
 
+  /// 取得目前實際已排程的通知清單，用來確認「排程有沒有真的成功」。
+  static Future<List<PendingNotificationRequest>> getPendingReminders() {
+    return _plugin.pendingNotificationRequests();
+  }
+
   // --- 久未使用提醒（不提供使用者關閉選項）---
   // 每次 App 啟動時都會呼叫，把這個一次性通知重新排到「3 天後」，
   // 同時取消前一次排的舊排程。只要使用者持續正常使用（3天內都有
