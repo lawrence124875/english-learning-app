@@ -142,7 +142,16 @@ class _PlaybackCard extends StatelessWidget {
         child: Column(
           children: [
             LinearProgressIndicator(value: appState.progressRatio),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
+            if (appState.currentWordNumber != null)
+              Text(
+                '${appState.currentWordNumber} / ${appState.currentDataset.items.length}',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: Colors.grey),
+              ),
+            const SizedBox(height: 8),
             GestureDetector(
               onTap: appState.replay,
               child: Column(

@@ -89,6 +89,14 @@ class AppState extends ChangeNotifier {
     return currentDataset.items[idx];
   }
 
+  /// 目前單字在整份教材裡的編號（從 1 開始），用於畫面顯示「128 / 2809」。
+  int? get currentWordNumber {
+    final state = currentPlaybackState;
+    if (state.playlist.isEmpty) return null;
+    final idx = state.playlist[state.currentStep % state.playlist.length];
+    return idx + 1;
+  }
+
   double get progressRatio {
     final state = currentPlaybackState;
     if (state.playlist.isEmpty) return 0;
