@@ -162,6 +162,10 @@ class AppState extends ChangeNotifier {
     return success;
   }
 
+  /// 取得指定教材「已學習」（曾被朗讀過）的項目數，供學習統計畫面使用。
+  Future<int> learnedCountForDataset(String datasetId) =>
+      _statsRepository.learnedCountForDataset(datasetId);
+
   Future<bool> restorePremium() async {
     final restored = await SubscriptionService.restorePurchases();
     if (restored) {
@@ -184,19 +188,20 @@ class AppState extends ChangeNotifier {
     reminderEnabled = enabled;
     reminderHour = hour;
     reminderMinute = minute;
+    notifyListeners(); // 先更新畫面，避免使用者覺得沒反應；儲存/排程在背景繼續處理。
+
     await _progressRepository.saveReminderSettings(
         enabled: enabled, hour: hour, minute: minute);
 
     if (enabled) {
-      final granted = await NotificationService.requestPermission();
-      if (granted) {
-        await NotificationService.scheduleDailyReminder(
-            hour: hour, minute: minute);
-      }
+      // Android 13 以下沒有「通知權限」這個概念，requestPermission() 可能回傳
+      // null/false，但這不代表不能排程通知——不能用這個結果來擋排程動作，
+      // 否則舊版 Android 上提醒永遠不會生效。
+      await NotificationService.requestPermission();
+      await NotificationService.scheduleDailyReminder(hour: hour, minute: minute);
     } else {
       await NotificationService.cancelReminder();
     }
-    notifyListeners();
   }
 
   void switchDataset(int index) {

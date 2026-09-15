@@ -29,6 +29,14 @@ class StatsRepository {
     return LearningStats(learnedToday: todayCount, totalLearned: all.length);
   }
 
+  /// 取得單一教材已學習（曾被朗讀過）的項目數，用於各教材各自的進度顯示。
+  Future<int> learnedCountForDataset(String datasetId) async {
+    final prefs = await SharedPreferences.getInstance();
+    final all = prefs.getStringList(_allLearnedKey) ?? [];
+    final prefix = '$datasetId:';
+    return all.where((k) => k.startsWith(prefix)).length;
+  }
+
   /// 標記某個單字被學習過（曾經被朗讀）。回傳更新後的統計。
   /// 如果這個字之前就學過了，總數不會重複累加，但如果是「今天第一次遇到」，
   /// 今日計數還是會加一（鼓勵當天複習到之前學過的字也算進度）。

@@ -24,8 +24,15 @@ class SettingsPanel extends StatelessWidget {
         },
         children: [
           _ScopeModeDropdown(settings: settings),
-          Text('已標記 ${appState.currentStarred.length} 個項目',
-              style: const TextStyle(color: Colors.redAccent)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text('已標記 ${appState.currentStarred.length} 個項目',
+                  style: const TextStyle(color: Colors.redAccent)),
+            ),
+          ),
+          const SizedBox(height: 8),
           _ReadModeDropdown(settings: settings),
           _RepeatCountDropdown(settings: settings),
           SwitchListTile(
@@ -40,29 +47,64 @@ class SettingsPanel extends StatelessWidget {
             onChanged: (v) => appState
                 .updateSettings(settings.copyWith(showTranslation: v)),
           ),
-          ListTile(
-            title: Text('單字間隔停頓：${settings.intervalSeconds.toStringAsFixed(1)} 秒'),
-            subtitle: Slider(
-              value: settings.intervalSeconds,
-              min: 0.5,
-              max: 5.0,
-              divisions: 45,
-              onChanged: (v) => appState
-                  .updateSettings(settings.copyWith(intervalSeconds: v)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('單字間隔停頓：${settings.intervalSeconds.toStringAsFixed(1)} 秒'),
+                Slider(
+                  value: settings.intervalSeconds,
+                  min: 0.5,
+                  max: 5.0,
+                  divisions: 45,
+                  onChanged: (v) => appState
+                      .updateSettings(settings.copyWith(intervalSeconds: v)),
+                ),
+              ],
             ),
           ),
-          ListTile(
-            title: Text('朗讀語速：${settings.speechRate.toStringAsFixed(1)}x'),
-            subtitle: Slider(
-              value: settings.speechRate,
-              min: 0.3,
-              max: 1.5,
-              divisions: 24,
-              onChanged: (v) =>
-                  appState.updateSettings(settings.copyWith(speechRate: v)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('朗讀語速：${settings.speechRate.toStringAsFixed(1)}x'),
+                Slider(
+                  value: settings.speechRate,
+                  min: 0.3,
+                  max: 1.5,
+                  divisions: 24,
+                  onChanged: (v) =>
+                      appState.updateSettings(settings.copyWith(speechRate: v)),
+                ),
+              ],
             ),
           ),
-          const _JumpToRow(),
+          const SizedBox(height: 12),
+        ],
+      ),
+    );
+  }
+}
+
+/// 直排版設定列：標題在上，控制項在下並佔滿寬度，
+/// 避免直屏時標題文字跟下拉選單擠在同一行造成重疊。
+class _StackedSettingRow extends StatelessWidget {
+  final String title;
+  final Widget control;
+  const _StackedSettingRow({required this.title, required this.control});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(title, style: const TextStyle(fontSize: 15)),
+          const SizedBox(height: 6),
+          SizedBox(width: double.infinity, child: control),
         ],
       ),
     );
@@ -83,13 +125,17 @@ class _ScopeModeDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
-    return ListTile(
-      title: const Text('播放範圍 / 模式'),
-      trailing: DropdownButton<ScopeMode>(
-        value: settings.scopeMode,
+    return _StackedSettingRow(
+      title: '播放範圍 / 模式',
+      control: DropdownButtonFormField<ScopeMode>(
+        initialValue: settings.scopeMode,
+        isExpanded: true,
+        decoration: const InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          border: OutlineInputBorder(),
+        ),
         items: _labels.entries
-            .map((e) =>
-                DropdownMenuItem(value: e.key, child: Text(e.value)))
+            .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
             .toList(),
         onChanged: (v) {
           if (v != null) {
@@ -108,15 +154,19 @@ class _ReadModeDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
-    return ListTile(
-      title: const Text('朗讀內容模式'),
-      trailing: DropdownButton<ReadMode>(
-        value: settings.readMode,
+    return _StackedSettingRow(
+      title: '朗讀內容模式',
+      control: DropdownButtonFormField<ReadMode>(
+        initialValue: settings.readMode,
+        isExpanded: true,
+        decoration: const InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          border: OutlineInputBorder(),
+        ),
         items: const [
           DropdownMenuItem(
               value: ReadMode.bilingual, child: Text('英雙讀（先英文，再中文）')),
-          DropdownMenuItem(
-              value: ReadMode.englishOnly, child: Text('純英文')),
+          DropdownMenuItem(value: ReadMode.englishOnly, child: Text('純英文')),
         ],
         onChanged: (v) {
           if (v != null) {
@@ -135,10 +185,15 @@ class _RepeatCountDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
-    return ListTile(
-      title: const Text('英文重複朗讀次數'),
-      trailing: DropdownButton<int>(
-        value: settings.repeatCount,
+    return _StackedSettingRow(
+      title: '英文重複朗讀次數',
+      control: DropdownButtonFormField<int>(
+        initialValue: settings.repeatCount,
+        isExpanded: true,
+        decoration: const InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          border: OutlineInputBorder(),
+        ),
         items: const [
           DropdownMenuItem(value: 1, child: Text('讀 1 次')),
           DropdownMenuItem(value: 2, child: Text('讀 2 次（推薦）')),
@@ -149,45 +204,6 @@ class _RepeatCountDropdown extends StatelessWidget {
             appState.updateSettings(settings.copyWith(repeatCount: v));
           }
         },
-      ),
-    );
-  }
-}
-
-class _JumpToRow extends StatefulWidget {
-  const _JumpToRow();
-
-  @override
-  State<_JumpToRow> createState() => _JumpToRowState();
-}
-
-class _JumpToRowState extends State<_JumpToRow> {
-  final _controller = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    final appState = context.read<AppState>();
-    return ListTile(
-      title: const Text('跳轉至指定編號（並朗讀）'),
-      trailing: SizedBox(
-        width: 160,
-        child: Row(
-          children: [
-            Expanded(
-              child: TextField(
-                controller: _controller,
-                keyboardType: TextInputType.number,
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                final n = int.tryParse(_controller.text);
-                if (n != null) appState.jumpTo(n);
-              },
-              child: const Text('跳轉'),
-            ),
-          ],
-        ),
       ),
     );
   }
