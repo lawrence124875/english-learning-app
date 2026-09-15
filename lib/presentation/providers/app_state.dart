@@ -121,6 +121,7 @@ class AppState extends ChangeNotifier {
     datasets = await _wordRepository.loadAllDatasets();
     settings = await _progressRepository.loadSettings();
     await _applyVoiceIfNeeded();
+    await _ttsService.setRate(settings.speechRate);
 
     for (final dataset in datasets) {
       _starredSets[dataset.id] =
@@ -242,10 +243,14 @@ class AppState extends ChangeNotifier {
   Future<void> updateSettings(PlaybackSettings newSettings) async {
     final scopeChanged = newSettings.scopeMode != settings.scopeMode;
     final voiceChanged = newSettings.voiceId != settings.voiceId;
+    final rateChanged = newSettings.speechRate != settings.speechRate;
     settings = newSettings;
     await _progressRepository.saveSettings(settings);
     if (voiceChanged) {
       await _applyVoiceIfNeeded();
+    }
+    if (rateChanged) {
+      await _ttsService.setRate(settings.speechRate);
     }
     if (scopeChanged) {
       // 範圍模式改變時，該教材要重新建構播放清單。
