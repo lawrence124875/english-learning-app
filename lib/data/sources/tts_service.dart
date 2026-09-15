@@ -14,13 +14,23 @@ abstract class TtsService {
 class SystemTtsService implements TtsService {
   final FlutterTts _tts = FlutterTts();
 
+  /// 使用者選定的特定語音（如果有的話）。一旦選定了，播放英文內容時
+  /// 就不能再呼叫 setLanguage()——部分裝置的 TTS 引擎在呼叫
+  /// setLanguage() 時會把語音重設回該語言的預設值，導致選好的語音
+  /// 實際上不會生效（表現起來就像「選哪個聲音都沒差、永遠同一個」）。
+  Map<String, String>? _pinnedVoice;
+
   SystemTtsService() {
     _tts.awaitSpeakCompletion(true);
   }
 
   @override
   Future<void> speak(String text, {required String languageCode}) async {
-    await _tts.setLanguage(languageCode);
+    final hasPinnedEnglishVoice =
+        _pinnedVoice != null && languageCode.toLowerCase().startsWith('en');
+    if (!hasPinnedEnglishVoice) {
+      await _tts.setLanguage(languageCode);
+    }
     await _tts.speak(text);
   }
 
@@ -42,7 +52,10 @@ class SystemTtsService implements TtsService {
   }
 
   @override
-  Future<void> setVoice(Map<String, String> voice) => _tts.setVoice(voice);
+  Future<void> setVoice(Map<String, String> voice) async {
+    _pinnedVoice = voice;
+    await _tts.setVoice(voice);
+  }
 
   @override
   Stream<void> get onComplete {

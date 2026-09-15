@@ -120,6 +120,7 @@ class AppState extends ChangeNotifier {
     }
     datasets = await _wordRepository.loadAllDatasets();
     settings = await _progressRepository.loadSettings();
+    await _applyVoiceIfNeeded();
 
     for (final dataset in datasets) {
       _starredSets[dataset.id] =
@@ -133,6 +134,26 @@ class AppState extends ChangeNotifier {
     isLoading = false;
     _updateNowPlaying();
     notifyListeners();
+  }
+
+  /// 依照 settings.voiceId 重新把先前選定的語音套用到 TTS 引擎，
+  /// 確保「語音測試/預覽」頁選好的語音，在 App 重開之後還是有效
+  /// （不然選好的語音只會在當次執行期間生效）。
+  Future<void> _applyVoiceIfNeeded() async {
+    final voiceId = settings.voiceId;
+    if (voiceId == null) return;
+    try {
+      final voices = await _ttsService.getVoices();
+      final match = voices.firstWhere(
+        (v) => v['name'] == voiceId,
+        orElse: () => <String, String>{},
+      );
+      if (match.isNotEmpty) {
+        await _ttsService.setVoice(match);
+      }
+    } catch (_) {
+      // 找不到裝置上對應的語音（例如換了手機）就略過，改用系統預設語音。
+    }
   }
 
   DatasetPlaybackState _rebuildPlaylist(
@@ -220,8 +241,12 @@ class AppState extends ChangeNotifier {
 
   Future<void> updateSettings(PlaybackSettings newSettings) async {
     final scopeChanged = newSettings.scopeMode != settings.scopeMode;
+    final voiceChanged = newSettings.voiceId != settings.voiceId;
     settings = newSettings;
     await _progressRepository.saveSettings(settings);
+    if (voiceChanged) {
+      await _applyVoiceIfNeeded();
+    }
     if (scopeChanged) {
       // 範圍模式改變時，該教材要重新建構播放清單。
       final dataset = currentDataset;
