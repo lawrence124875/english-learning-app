@@ -54,12 +54,35 @@ class _VoiceTestScreenState extends State<VoiceTestScreen> {
     await tts.speak(_sampleText, languageCode: 'en-US');
   }
 
+  Future<void> _restoreDefault() async {
+    final tts = context.read<TtsService>();
+    final appState = context.read<AppState>();
+    tts.clearPinnedVoice();
+    await appState.updateSettings(
+        appState.settings.copyWith(clearVoiceId: true));
+    setState(() => _selectedVoice = null);
+    await tts.speak(_sampleText, languageCode: 'en-US');
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('已還原成系統預設語音')),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('語音測試/預覽')),
+      appBar: AppBar(
+        title: const Text('語音測試/預覽'),
+        actions: [
+          TextButton(
+            onPressed: _restoreDefault,
+            child: const Text('還原預設', style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : _voices.isEmpty

@@ -46,6 +46,7 @@ class PlaybackSettings {
     double? intervalSeconds,
     double? speechRate,
     String? voiceId,
+    bool clearVoiceId = false,
     bool? settingsPanelExpanded,
   }) {
     return PlaybackSettings(
@@ -57,7 +58,7 @@ class PlaybackSettings {
       showTranslation: showTranslation ?? this.showTranslation,
       intervalSeconds: intervalSeconds ?? this.intervalSeconds,
       speechRate: speechRate ?? this.speechRate,
-      voiceId: voiceId ?? this.voiceId,
+      voiceId: clearVoiceId ? null : (voiceId ?? this.voiceId),
       settingsPanelExpanded:
           settingsPanelExpanded ?? this.settingsPanelExpanded,
     );

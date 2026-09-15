@@ -8,6 +8,8 @@ abstract class TtsService {
   Future<void> setRate(double rate);
   Future<List<Map<String, String>>> getVoices();
   Future<void> setVoice(Map<String, String> voice);
+  /// 清除使用者手動選定的語音，還原成系統依語言自動挑選的預設語音。
+  void clearPinnedVoice();
   Stream<void> get onComplete;
 }
 
@@ -66,6 +68,14 @@ class SystemTtsService implements TtsService {
     // 部分裝置的 TTS 引擎套用新語音是非同步的，緊接著呼叫 speak()
     // 可能會用到還沒切換完成的舊語音，加一個小延遲讓它先套用好。
     await Future.delayed(const Duration(milliseconds: 200));
+  }
+
+  @override
+  void clearPinnedVoice() {
+    _pinnedVoice = null;
+    // 不用另外呼叫 setLanguage()——下一次 speak() 偵測到沒有
+    // pinnedVoice，會自然照原本的流程呼叫 setLanguage()，
+    // 讓系統依語言重新選擇該語言的預設語音。
   }
 
   @override

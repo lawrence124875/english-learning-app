@@ -86,10 +86,29 @@ class _DatasetProgressCard extends StatelessWidget {
   final WordDataset dataset;
   const _DatasetProgressCard({required this.dataset});
 
+  static const _descriptions = {
+    'ngsl_2809':
+        '英語核心單字表，取自公開頻率研究，完整學會這 2,809 個字，'
+        '可達到一般日常英文文本約 92% 的理解涵蓋率'
+        '（資料來源：New General Service List Project）。',
+    'ngsl_spoken_720':
+        '從日常口語對話中挑出的 720 個高頻詞彙，專門加強「聽」與「說」'
+        '情境的反應速度，跟 NGSL 核心單字表互補，涵蓋口語裡常用、'
+        '但書面文字裡較少出現的用詞。',
+    'phrase_list_506':
+        '506 個英語母語人士真正常用的固定搭配與語塊（例如 "in order to"、'
+        '"as well as"），不是單字而是「一整組一起記」的片語，能幫助'
+        '說出更自然道地的英文。',
+    'phave_list_150':
+        '收錄 150 個最常用的片語動詞（例如 "look after"、"give up"），'
+        '這類「動詞+介詞」組合是英語學習者公認最難掌握的一塊，'
+        '集中複習這 150 個能涵蓋大部分日常會遇到的片語動詞。',
+  };
+
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
-    final isNgsl = dataset.id == 'ngsl_2809';
+    final description = _descriptions[dataset.id];
 
     return Card(
       child: Padding(
@@ -109,13 +128,11 @@ class _DatasetProgressCard extends StatelessWidget {
                 LinearProgressIndicator(value: ratio),
                 const SizedBox(height: 8),
                 Text('$learned / $total 個項目'),
-                if (isNgsl) ...[
+                if (description != null) ...[
                   const SizedBox(height: 12),
-                  const Text(
-                    '根據 NGSL 官方研究，完整學會這 2,809 個核心單字，'
-                    '可達到一般日常英文文本約 92% 的理解涵蓋率'
-                    '（資料來源：New General Service List Project）。',
-                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                  Text(
+                    description,
+                    style: const TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                 ],
               ],
