@@ -278,7 +278,13 @@ class AppState extends ChangeNotifier {
         dataset.id, _playbackStates[dataset.id]!);
   }
 
-  Future<void> next({bool speak = true}) async {
+  /// [fromCruise] 只給巡航自動播放迴圈內部呼叫使用。使用者手動按「下一個」
+  /// 時會先暫停巡航（避免跟自動播放的計時器同時搶著推進進度，
+  /// 導致偶爾跳兩個單字、或巡航按鈕狀態跟實際播放狀況對不起來）。
+  Future<void> next({bool speak = true, bool fromCruise = false}) async {
+    if (!fromCruise && isPlaying) {
+      stopCruise();
+    }
     final dataset = currentDataset;
     var state = currentPlaybackState;
     if (state.playlist.isEmpty) return;
@@ -307,6 +313,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> previous({bool speak = true}) async {
+    if (isPlaying) {
+      stopCruise();
+    }
     final dataset = currentDataset;
     final state = currentPlaybackState;
     if (state.playlist.isEmpty) return;
@@ -320,6 +329,7 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> jumpTo(int oneBasedNumber) async {
+    if (isPlaying) stopCruise();
     final dataset = currentDataset;
     final state = currentPlaybackState;
     final targetIndex = oneBasedNumber - 1;
@@ -334,7 +344,10 @@ class AppState extends ChangeNotifier {
     await _speakCurrent();
   }
 
-  Future<void> replay() => _speakCurrent();
+  Future<void> replay() async {
+    if (isPlaying) stopCruise();
+    await _speakCurrent();
+  }
 
   Future<void> _speakCurrent() async {
     final word = currentWord;
@@ -384,7 +397,7 @@ class AppState extends ChangeNotifier {
       await Future.delayed(
           Duration(milliseconds: (settings.intervalSeconds * 1000).round()));
       if (!isPlaying) break;
-      await next(speak: false);
+      await next(speak: false, fromCruise: true);
     }
   }
 
