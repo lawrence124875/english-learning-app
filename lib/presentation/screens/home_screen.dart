@@ -35,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        titleSpacing: 12,
         title: const Text('智慧聽覺巡航'),
         actions: [
           IconButton(
@@ -45,30 +46,44 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialPageRoute(builder: (_) => const StatsScreen()),
             ),
           ),
-          if (!appState.isPremium)
-            IconButton(
-              tooltip: '升級 Premium',
-              icon: const Icon(Icons.workspace_premium),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const PaywallScreen()),
+          PopupMenuButton<String>(
+            tooltip: '更多',
+            onSelected: (value) {
+              if (value == 'premium') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const PaywallScreen()));
+              } else if (value == 'voice') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const VoiceTestScreen()));
+              } else if (value == 'about') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const AboutScreen()));
+              }
+            },
+            itemBuilder: (context) => [
+              if (!appState.isPremium)
+                const PopupMenuItem(
+                  value: 'premium',
+                  child: ListTile(
+                    leading: Icon(Icons.workspace_premium),
+                    title: Text('升級 Premium'),
+                  ),
+                ),
+              const PopupMenuItem(
+                value: 'voice',
+                child: ListTile(
+                  leading: Icon(Icons.record_voice_over),
+                  title: Text('語音測試/預覽'),
+                ),
               ),
-            ),
-          IconButton(
-            tooltip: '語音測試/預覽',
-            icon: const Icon(Icons.record_voice_over),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const VoiceTestScreen()),
-            ),
-          ),
-          IconButton(
-            tooltip: '關於本 App / 版權聲明',
-            icon: const Icon(Icons.info_outline),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const AboutScreen()),
-            ),
+              const PopupMenuItem(
+                value: 'about',
+                child: ListTile(
+                  leading: Icon(Icons.info_outline),
+                  title: Text('關於本 App / 版權聲明'),
+                ),
+              ),
+            ],
           ),
         ],
       ),

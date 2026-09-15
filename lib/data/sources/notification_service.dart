@@ -104,10 +104,19 @@ class NotificationService {
   /// 不觸發，這是解決「提醒時間到卻沒跳出來」最有效的做法。
   /// 依 Google Play 政策，這個權限只能透過使用者主動點擊觸發，
   /// 不能在 App 啟動時自動跳出來要求。
+  ///
+  /// 注意：這個特殊權限的系統對話框通常只會在「第一次」請求時正常
+  /// 跳出來，使用者做出選擇後，Android 不一定會在同一個 App 執行期間
+  /// 讓你再跳第二次對話框（就算使用者上次選了拒絕）。第二次之後改成
+  /// 直接開啟這個 App 的系統設定頁，讓使用者自己手動找到電池選項調整，
+  /// 這樣每次按都保證有反應。
   static Future<void> requestIgnoreBatteryOptimizations() async {
     final status = await Permission.ignoreBatteryOptimizations.status;
-    if (!status.isGranted) {
-      await Permission.ignoreBatteryOptimizations.request();
+    if (status.isGranted) return;
+
+    final result = await Permission.ignoreBatteryOptimizations.request();
+    if (!result.isGranted) {
+      await openAppSettings();
     }
   }
 }

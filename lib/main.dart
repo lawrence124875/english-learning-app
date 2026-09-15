@@ -108,8 +108,32 @@ class EnglishLearningApp extends StatelessWidget {
         title: '智慧聽覺巡航',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorSchemeSeed: Colors.teal,
           useMaterial3: true,
+          colorScheme: const ColorScheme.light(
+            // 柔和鼠尾草綠/藍綠色：研究顯示冷色調有助於放鬆專注、
+            // 利於長期記憶保存，且對眼睛負擔較小，適合長時間閱讀學習。
+            primary: Color(0xFF5B8A72),
+            onPrimary: Colors.white,
+            primaryContainer: Color(0xFFDCEEE1),
+            onPrimaryContainer: Color(0xFF1E3A2A),
+            secondary: Color(0xFF6B8CAE),
+            onSecondary: Colors.white,
+            // 暖色只用在需要吸引注意力的重點（例如標記不熟悉單字的
+            // 星號），依色彩心理學研究應少量點綴、避免過度刺激。
+            tertiary: Color(0xFFE0A458),
+            onTertiary: Colors.white,
+            surface: Color(0xFFFAFAF7),
+            onSurface: Color(0xFF2C2C28),
+            surfaceContainerHighest: Color(0xFFF0F0EA),
+            error: Color(0xFFC5705D),
+            onError: Colors.white,
+          ),
+          scaffoldBackgroundColor: const Color(0xFFFAFAF7),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color(0xFFFAFAF7),
+            foregroundColor: Color(0xFF2C2C28),
+            elevation: 0,
+          ),
         ),
         home: const HomeScreen(),
       ),

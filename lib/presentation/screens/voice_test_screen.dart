@@ -79,7 +79,7 @@ class _VoiceTestScreenState extends State<VoiceTestScreen> {
         actions: [
           TextButton(
             onPressed: _restoreDefault,
-            child: const Text('還原預設', style: TextStyle(color: Colors.white)),
+            child: const Text('還原預設'),
           ),
         ],
       ),
