@@ -74,6 +74,19 @@ service_block = """
 # 在 </application> 前插入 service/receiver 宣告。
 content = content.replace("</application>", service_block + "    </application>")
 
+# Android 11+（API 30+）有套件可見性限制，url_launcher 要能正常開啟
+# https 連結（點擊授權條款/原作品連結用），需要在 <queries> 宣告
+# 允許查詢處理 VIEW 動作的瀏覽器，否則 canLaunchUrl 會回傳 false。
+queries_block = """    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+"""
+if "<queries>" not in content:
+    content = re.sub(r'(</manifest>)', queries_block + r'\1', content, count=1)
+
 with open(path, "w", encoding="utf-8") as f:
     f.write(content)
 
