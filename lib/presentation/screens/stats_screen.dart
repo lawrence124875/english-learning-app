@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../../domain/models/word_item.dart';
+import '../../data/sources/notification_service.dart';
 
 /// 學習統計畫面：今日學習數、總計學習數、每日複習提醒設定，
 /// 以及四份教材各自的學習進度（NGSL 2809 額外附上官方公開的
@@ -155,7 +156,7 @@ class _ReminderSectionState extends State<_ReminderSection> {
                 minute: appState.reminderMinute,
               ),
             ),
-            if (appState.reminderEnabled)
+            if (appState.reminderEnabled) ...[
               ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: const Text('提醒時間'),
@@ -179,6 +180,13 @@ class _ReminderSectionState extends State<_ReminderSection> {
                   },
                 ),
               ),
+              const SizedBox(height: 4),
+              OutlinedButton.icon(
+                onPressed: () => NotificationService.requestIgnoreBatteryOptimizations(),
+                icon: const Icon(Icons.battery_charging_full, size: 18),
+                label: const Text('提醒沒準時跳出？點此排除電池優化限制'),
+              ),
+            ],
           ],
         ),
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
+import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 /// 複習提醒的本地通知服務。
 /// 使用者可以設定一個每天固定的提醒時間，App 會在那個時間跳出通知，
@@ -11,6 +13,17 @@ class NotificationService {
 
   static Future<void> initialize() async {
     tz_data.initializeTimeZones();
+
+    // 關鍵：tz.local 預設是 UTC，一定要明確設成裝置實際時區，
+    // 否則排程時間會整個對不起來（例如設定晚上8點，實際排到隔天凌晨）。
+    try {
+      final deviceTimezone = await FlutterTimezone.getLocalTimezone();
+      tz.setLocalLocation(tz.getLocation(deviceTimezone));
+    } catch (_) {
+      // 抓不到裝置時區時的保底，至少不要整個初始化失敗。
+      tz.setLocalLocation(tz.getLocation('Asia/Taipei'));
+    }
+
     const androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
     const settings = InitializationSettings(android: androidSettings);
@@ -69,5 +82,17 @@ class NotificationService {
 
   static Future<void> cancelReminder() async {
     await _plugin.cancel(_reminderId);
+  }
+
+  /// 跳出系統對話框，請使用者把這個 App 排除在電池優化限制之外。
+  /// 很多廠牌（小米/OPPO/Vivo等）的省電機制會讓排程好的通知延遲或完全
+  /// 不觸發，這是解決「提醒時間到卻沒跳出來」最有效的做法。
+  /// 依 Google Play 政策，這個權限只能透過使用者主動點擊觸發，
+  /// 不能在 App 啟動時自動跳出來要求。
+  static Future<void> requestIgnoreBatteryOptimizations() async {
+    final status = await Permission.ignoreBatteryOptimizations.status;
+    if (!status.isGranted) {
+      await Permission.ignoreBatteryOptimizations.request();
+    }
   }
 }

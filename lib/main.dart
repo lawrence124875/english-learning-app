@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
@@ -66,13 +67,20 @@ Future<void> main() async {
         androidNotificationChannelName: '英語學習朗讀',
         androidNotificationOngoing: true,
       ),
+    ).timeout(
+      const Duration(seconds: 5),
+      onTimeout: () {
+        throw TimeoutException('AudioService.init() 逾時，可能是前一個背景'
+            '播放行程還沒釋放，改用不含背景播放控制器的模式啟動。');
+      },
     );
   } catch (e, st) {
     debugPrint('背景播放服務初始化失敗，改用純前景播放模式：$e\n$st');
-    // 失敗時不指派 _audioHandler，AppState 會以「沒有背景播放控制器」的
-    // 模式運作：App 仍可正常使用、正常朗讀，只是這次啟動不會有鎖屏/
-    // 通知列控制卡片（通常只會發生在背景服務還沒真正結束的邊緣情況，
-    // 使用者之後把 App 完全滑掉、重新整個開啟一次就會恢復正常）。
+    // 失敗或逾時都不指派 _audioHandler，讓 App 至少能正常開啟、正常使用；
+    // 只是這次啟動不會有鎖屏/通知列控制卡片（通常發生在使用者上次把 App
+    // 整個滑掉、但背景播放的前景服務行程還沒真正結束的邊緣情況）。
+    // 這裡用逾時而不是單純的例外捕捉，是因為這種情況有時候是「卡住等待」
+    // 而不是「立刻丟出錯誤」，單純 try-catch 攔不住卡住的狀況。
   }
 
   runApp(const EnglishLearningApp());
