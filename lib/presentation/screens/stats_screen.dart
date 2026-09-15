@@ -218,13 +218,29 @@ class _ReminderSectionState extends State<_ReminderSection> {
                   if (!context.mounted) return;
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('已開啟設定頁，請找「電池」選項並選擇「不受限制」'),
+                      content: Text('請確認「省電策略」選擇「無限制」'),
                       duration: Duration(seconds: 4),
                     ),
                   );
                 },
                 icon: const Icon(Icons.battery_charging_full, size: 18),
                 label: const Text('提醒沒準時跳出？點此排除電池優化限制'),
+              ),
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
+                onPressed: () async {
+                  await NotificationService.openMiuiAutostartSettings();
+                  if (!context.mounted) return;
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('小米手機請在清單裡找到本App並開啟自啟動'
+                          '（其他廠牌手機可忽略這個按鈕）'),
+                      duration: Duration(seconds: 4),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.rocket_launch, size: 18),
+                label: const Text('小米/Redmi 手機請另外開啟「自啟動」'),
               ),
             ],
           ],

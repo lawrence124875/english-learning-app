@@ -2,6 +2,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:permission_handler/permission_handler.dart';
+import 'package:android_intent_plus/android_intent.dart';
 
 /// 複習提醒的本地通知服務。
 /// 使用者可以設定一個每天固定的提醒時間，App 會在那個時間跳出通知，
@@ -145,18 +146,55 @@ class NotificationService {
   /// 依 Google Play 政策，這個權限只能透過使用者主動點擊觸發，
   /// 不能在 App 啟動時自動跳出來要求。
   ///
-  /// 注意：這個特殊權限的系統對話框通常只會在「第一次」請求時正常
-  /// 跳出來，使用者做出選擇後，Android 不一定會在同一個 App 執行期間
-  /// 讓你再跳第二次對話框（就算使用者上次選了拒絕）。第二次之後改成
-  /// 直接開啟這個 App 的系統設定頁，讓使用者自己手動找到電池選項調整，
-  /// 這樣每次按都保證有反應。
+  /// 小米 MIUI 系統在標準 Android 電池優化之外，另外疊加了一層自己
+  /// 專屬的「省電策略」與「自啟動管理」，標準 Android API 打不開，
+  /// 這裡優先嘗試跳轉到 MIUI 專屬設定頁；如果失敗（例如不是小米手機、
+  /// 或該頁面在這個 MIUI 版本上不存在），才退回標準 Android 設定頁。
   static Future<void> requestIgnoreBatteryOptimizations() async {
+    final openedMiui = await _tryOpenMiuiPowerSettings();
+    if (openedMiui) return;
+
     final status = await Permission.ignoreBatteryOptimizations.status;
     if (status.isGranted) return;
 
     final result = await Permission.ignoreBatteryOptimizations.request();
     if (!result.isGranted) {
       await openAppSettings();
+    }
+  }
+
+  static Future<bool> _tryOpenMiuiPowerSettings() async {
+    try {
+      final intent = AndroidIntent(
+        action: 'action_view',
+        package: 'com.miui.powerkeeper',
+        componentName: 'com.miui.powerkeeper.ui.HiddenAppsConfigActivity',
+        arguments: <String, dynamic>{
+          'package_name': 'tw.bcc.englishapp',
+          'package_label': '智慧聽覺巡航',
+        },
+      );
+      await intent.launch();
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// 跳轉到小米 MIUI 的「自啟動管理」列表頁（沒辦法直接跳到單一 App，
+  /// 需要使用者自己在列表裡找到本 App 開啟）。同樣只在小米裝置上
+  /// 有作用，其他廠牌會靜默失敗。
+  static Future<void> openMiuiAutostartSettings() async {
+    try {
+      final intent = AndroidIntent(
+        action: 'action_view',
+        package: 'com.miui.securitycenter',
+        componentName:
+            'com.miui.permcenter.autostart.AutoStartManagementActivity',
+      );
+      await intent.launch();
+    } catch (_) {
+      // 非小米裝置或找不到這個頁面，靜默略過即可。
     }
   }
 }
