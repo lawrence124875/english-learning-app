@@ -61,7 +61,9 @@ class ProgressRepository {
 
   Future<bool> loadReminderEnabled() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_reminderEnabledKey) ?? false;
+    // 預設開啟：目的是提醒使用者持續使用養成習慣，使用者可以自行
+    // 在 App 裡關閉或調整時間。
+    return prefs.getBool(_reminderEnabledKey) ?? true;
   }
 
   Future<(int, int)> loadReminderTime() async {

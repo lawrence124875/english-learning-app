@@ -32,7 +32,7 @@ class PlaybackSettings {
     this.speakOnManualNavigate = true,
     this.showTranslation = true,
     this.intervalSeconds = 1.5,
-    this.speechRate = 0.9,
+    this.speechRate = 0.5,
     this.voiceId,
     this.settingsPanelExpanded = false,
   });

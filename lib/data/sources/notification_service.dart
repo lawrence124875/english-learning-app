@@ -99,6 +99,41 @@ class NotificationService {
     await _plugin.cancel(_reminderId);
   }
 
+  // --- 久未使用提醒（不提供使用者關閉選項）---
+  // 每次 App 啟動時都會呼叫，把這個一次性通知重新排到「3 天後」，
+  // 同時取消前一次排的舊排程。只要使用者持續正常使用（3天內都有
+  // 打開過），這個通知就永遠不會真的被觸發；只有真的超過3天沒打開，
+  // 上一次排的通知才會準時跳出來。
+  static const _inactivityReminderId = 1002;
+
+  static Future<void> rescheduleInactivityReminder() async {
+    await _plugin.cancel(_inactivityReminderId);
+
+    final now = DateTime.now();
+    final target = now.add(const Duration(days: 3));
+    final scheduled = tz.TZDateTime.from(
+      target.subtract(now.timeZoneOffset),
+      tz.UTC,
+    );
+
+    await _plugin.zonedSchedule(
+      _inactivityReminderId,
+      '好久不見 👋',
+      '已經好幾天沒複習了，回來聽幾個單字，別讓記憶生疏了',
+      scheduled,
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          _channelId,
+          _channelName,
+          importance: Importance.defaultImportance,
+        ),
+      ),
+      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+    );
+  }
+
   /// 跳出系統對話框，請使用者把這個 App 排除在電池優化限制之外。
   /// 很多廠牌（小米/OPPO/Vivo等）的省電機制會讓排程好的通知延遲或完全
   /// 不觸發，這是解決「提醒時間到卻沒跳出來」最有效的做法。

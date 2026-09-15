@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 value: 'voice',
                 child: ListTile(
                   leading: Icon(Icons.record_voice_over),
-                  title: Text('語音測試/預覽'),
+                  title: Text('語音預覽'),
                 ),
               ),
               const PopupMenuItem(

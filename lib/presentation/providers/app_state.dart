@@ -115,9 +115,13 @@ class AppState extends ChangeNotifier {
     reminderMinute = reminderTime.$2;
     if (reminderEnabled) {
       // 重新排程一次，確保裝置重開機等情況下提醒仍然有效。
+      await NotificationService.requestPermission();
       await NotificationService.scheduleDailyReminder(
           hour: reminderHour, minute: reminderMinute);
     }
+    // 久未使用提醒：不受使用者是否關閉每日提醒影響，每次啟動都重新
+    // 排到 3 天後，只要持續正常使用就永遠不會真的跳出來。
+    await NotificationService.rescheduleInactivityReminder();
     datasets = await _wordRepository.loadAllDatasets();
     settings = await _progressRepository.loadSettings();
     await _applyVoiceIfNeeded();

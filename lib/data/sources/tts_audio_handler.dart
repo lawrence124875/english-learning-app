@@ -76,4 +76,14 @@ class TtsAudioHandler extends BaseAudioHandler {
       processingState: AudioProcessingState.idle,
     ));
   }
+
+  /// 使用者把 App 從「最近使用列表」整個滑掉時，Android 會呼叫這個
+  /// 方法。之前沒有覆寫這個方法，導致背景播放的前景服務、鎖屏/通知列
+  /// 的媒體控制卡片，在使用者關閉 App 後仍然會殘留在畫面上不會消失。
+  /// 呼叫 stop() 讓處理狀態變成 idle，系統才會正確停止前景服務、
+  /// 收掉通知與鎖屏卡片。
+  @override
+  Future<void> onTaskRemoved() async {
+    await stop();
+  }
 }
