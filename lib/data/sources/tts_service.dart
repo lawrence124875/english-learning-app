@@ -53,8 +53,19 @@ class SystemTtsService implements TtsService {
 
   @override
   Future<void> setVoice(Map<String, String> voice) async {
-    _pinnedVoice = voice;
-    await _tts.setVoice(voice);
+    // flutter_tts 的 setVoice 只認得 name/locale 這兩個欄位，
+    // getVoices() 回傳的原始資料還帶著 quality/latency/features
+    // 等額外欄位，直接整包傳進去在部分裝置上會讓引擎沒辦法正確比對
+    // 到對應的語音、表現起來像是「選哪個都沒差」。這裡只取必要欄位。
+    final cleaned = {
+      'name': voice['name'] ?? '',
+      'locale': voice['locale'] ?? '',
+    };
+    _pinnedVoice = cleaned;
+    await _tts.setVoice(cleaned);
+    // 部分裝置的 TTS 引擎套用新語音是非同步的，緊接著呼叫 speak()
+    // 可能會用到還沒切換完成的舊語音，加一個小延遲讓它先套用好。
+    await Future.delayed(const Duration(milliseconds: 200));
   }
 
   @override
