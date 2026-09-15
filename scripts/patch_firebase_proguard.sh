@@ -47,6 +47,19 @@ cat >> "$PROGUARD_FILE" << 'EOF'
 -keepclassmembers class * extends androidx.room.RoomDatabase { <init>(); }
 -dontwarn androidx.room.**
 -dontwarn androidx.work.**
+
+# --- flutter_local_notifications：內部用 Gson 的 TypeToken 把已排程的
+# 通知序列化存起來，R8 若把泛型型別資訊砍掉會在啟動時直接崩潰
+# （"TypeToken must be created with a type argument"）---
+-keep class com.dexterous.flutterlocalnotifications.** { *; }
+-dontwarn com.dexterous.flutterlocalnotifications.**
+-keep class com.google.gson.** { *; }
+-keep class * extends com.google.gson.reflect.TypeToken
+-keep,allowobfuscation,allowshrinking class com.google.gson.reflect.TypeToken
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+-dontwarn com.google.gson.**
 EOF
 
 echo "已加入 Firebase 的 ProGuard keep 規則到 $PROGUARD_FILE"
