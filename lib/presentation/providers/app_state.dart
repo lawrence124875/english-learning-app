@@ -103,6 +103,16 @@ class AppState extends ChangeNotifier {
     return (state.currentStep + 1) / state.playlist.length;
   }
 
+  /// 目前是第幾輪學習（每播完一整輪、重新洗牌後會 +1）。
+  int get currentCycleNumber => currentPlaybackState.cycleCount;
+
+  /// 本輪已經播到第幾個（從1開始）。
+  int get roundHeardCount => currentPlaybackState.currentStep + 1;
+
+  /// 本輪總共有幾個項目（依目前播放範圍/模式決定，例如僅不熟悉時
+  /// 會比全部清單少）。
+  int get roundTotalCount => currentPlaybackState.playlist.length;
+
   Future<void> initialize() async {
     isLoading = true;
     notifyListeners();

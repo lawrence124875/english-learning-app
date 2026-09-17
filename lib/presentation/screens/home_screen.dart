@@ -156,11 +156,34 @@ class _PlaybackCard extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Chip(
+                  label: Text(
+                    appState.currentWordNumber != null
+                        ? 'No. ${appState.currentWordNumber} / ${appState.currentDataset.items.length}'
+                        : appState.currentDataset.shortName,
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                  visualDensity: VisualDensity.compact,
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+                Chip(
+                  label: Text('第 ${appState.currentCycleNumber} 輪學習',
+                      style: const TextStyle(fontSize: 12)),
+                  visualDensity: VisualDensity.compact,
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
             LinearProgressIndicator(value: appState.progressRatio),
-            const SizedBox(height: 8),
-            if (appState.currentWordNumber != null)
+            const SizedBox(height: 6),
+            if (appState.roundTotalCount > 0)
               Text(
-                '${appState.currentWordNumber} / ${appState.currentDataset.items.length}',
+                '本輪已聽過進度：${appState.roundHeardCount} / ${appState.roundTotalCount}'
+                ' (${(appState.progressRatio * 100).round()}%)',
                 style: Theme.of(context)
                     .textTheme
                     .bodySmall
