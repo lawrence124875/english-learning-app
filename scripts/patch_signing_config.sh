@@ -27,15 +27,21 @@ with open(path, encoding="utf-8") as f:
     content = f.read()
 
 if "englishapp_release_signing" not in content:
+    # Kotlin 腳本的 import 一定要放在檔案最上方（所有其他程式碼之前），
+    # 不能像一般程式碼那樣直接用完整路徑 java.util.Properties()
+    # 寫在檔案中間，否則會編譯失敗（Unresolved reference）。
+    imports = "import java.util.Properties\nimport java.io.FileInputStream\n\n"
+    content = imports + content
+
     # 在 android { ... } 區塊最前面插入讀取 key.properties 的邏輯，
     # 以及 signingConfigs.release 設定，並把 buildTypes.release 的
     # signingConfig 改指向它（原本預設指向 debug 金鑰）。
     inject = '''
 // englishapp_release_signing
 val keystorePropertiesFile = rootProject.file("key.properties")
-val keystoreProperties = java.util.Properties()
+val keystoreProperties = Properties()
 if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 '''
     content = content.replace("android {", inject + "\nandroid {", 1)
