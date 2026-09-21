@@ -12,6 +12,24 @@ path = sys.argv[1]
 with open(path, encoding="utf-8") as fh:
     content = fh.read()
 
+# 新版 flutter create 的 build.gradle.kts 範本裡，keystore.properties
+# 讀取邏輯用了 java.util.Properties()、java.io.FileInputStream() 這種
+# 完整路徑寫法，但範本本身漏掉對應的 import 語句，導致 Kotlin 編譯器
+# 找不到 java 這個頂層套件參照（"Unresolved reference 'util'/'io'"）。
+# 這是 Flutter 範本本身的瑕疵，不是我們自己的程式碼問題，在這裡補上
+# 缺少的 import 語句即可修正。
+if path.endswith(".kts"):
+    needs_util = "java.util.Properties" in content and "import java.util.Properties" not in content
+    needs_io = "java.io.FileInputStream" in content and "import java.io.FileInputStream" not in content
+    if needs_util or needs_io:
+        imports_to_add = ""
+        if needs_util:
+            imports_to_add += "import java.util.Properties\n"
+        if needs_io:
+            imports_to_add += "import java.io.FileInputStream\n"
+        # 插入在第一個 plugins { ... } 區塊之前（檔案最前面）。
+        content = imports_to_add + content
+
 # Kotlin DSL: compileSdk = flutter.compileSdkVersion  →  compileSdk = 36
 # Groovy: compileSdkVersion flutter.compileSdkVersion  →  compileSdkVersion 36
 content = re.sub(r'compileSdk\s*=\s*flutter\.compileSdkVersion', 'compileSdk = 36', content)
