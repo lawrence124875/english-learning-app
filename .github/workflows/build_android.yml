@@ -47,6 +47,14 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Configure release signing key
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: bash scripts/patch_signing_config.sh
+
       - name: Build APK (release)
         env:
           REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_ANDROID_API_KEY }}
