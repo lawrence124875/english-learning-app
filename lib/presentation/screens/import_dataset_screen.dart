@@ -63,7 +63,14 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     setState(() => _importing = true);
     try {
       final file = File(result.files.single.path!);
-      final content = await file.readAsString();
+      String content;
+      try {
+        content = await file.readAsString();
+      } on FormatException {
+        throw CsvImportException(
+            '檔案編碼不是 UTF-8，無法讀取。請用 Excel「另存新檔」時選擇'
+            '「CSV UTF-8（逗號分隔）」格式，或用純文字編輯器另存成 UTF-8 編碼。');
+      }
       final parsed = CsvImportService.parse(content, _translationLocale);
 
       final dataset = WordDataset(
