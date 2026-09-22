@@ -11,6 +11,7 @@ import '../../data/sources/subscription_service.dart';
 import '../../data/sources/ads_service.dart';
 import '../../data/repositories/stats_repository.dart';
 import '../../data/sources/notification_service.dart';
+import '../../data/repositories/custom_dataset_repository.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
@@ -19,6 +20,8 @@ class AppState extends ChangeNotifier {
   final TtsService _ttsService;
   final TtsAudioHandler? _audioHandler;
   final StatsRepository _statsRepository = StatsRepository();
+  final CustomDatasetRepository _customDatasetRepository =
+      CustomDatasetRepository();
 
   LearningStats stats = const LearningStats();
   bool reminderEnabled = false;
@@ -133,6 +136,7 @@ class AppState extends ChangeNotifier {
     // 排到 3 天後，只要持續正常使用就永遠不會真的跳出來。
     await NotificationService.rescheduleInactivityReminder();
     datasets = await _wordRepository.loadAllDatasets();
+    datasets.addAll(await _customDatasetRepository.loadAll());
     settings = await _progressRepository.loadSettings();
     await _applyVoiceIfNeeded();
     await _ttsService.setRate(settings.speechRate);
@@ -209,6 +213,32 @@ class AppState extends ChangeNotifier {
   /// 取得指定教材「已學習」（曾被朗讀過）的項目數，供學習統計畫面使用。
   Future<int> learnedCountForDataset(String datasetId) =>
       _statsRepository.learnedCountForDataset(datasetId);
+
+  /// 匯入一份新的自訂教材：存檔、加進目前的教材清單，並幫它初始化
+  /// 播放狀態（跟 initialize() 裡對內建教材做的事一樣）。
+  Future<void> addCustomDataset(WordDataset dataset) async {
+    await _customDatasetRepository.save(dataset);
+    datasets.add(dataset);
+    _starredSets[dataset.id] = <int>{};
+    _playbackStates[dataset.id] = _rebuildPlaylist(dataset, <int>{});
+    notifyListeners();
+  }
+
+  /// 刪除一份自訂教材。如果使用者當下正切在這份教材上，會自動切回
+  /// 第一份教材，避免畫面停留在一份已經不存在的教材上。
+  Future<void> removeCustomDataset(String datasetId) async {
+    await _customDatasetRepository.delete(datasetId);
+    final removingCurrent = currentDataset.id == datasetId;
+    datasets.removeWhere((d) => d.id == datasetId);
+    _starredSets.remove(datasetId);
+    _playbackStates.remove(datasetId);
+    if (removingCurrent) {
+      currentDatasetIndex = 0;
+    } else if (currentDatasetIndex >= datasets.length) {
+      currentDatasetIndex = datasets.length - 1;
+    }
+    notifyListeners();
+  }
 
   Future<bool> restorePremium() async {
     final restored = await SubscriptionService.restorePurchases();

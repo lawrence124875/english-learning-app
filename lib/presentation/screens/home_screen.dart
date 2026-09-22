@@ -8,6 +8,7 @@ import 'voice_test_screen.dart';
 import 'about_screen.dart';
 import 'paywall_screen.dart';
 import 'stats_screen.dart';
+import 'import_dataset_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -58,6 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
               } else if (value == 'about') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const AboutScreen()));
+              } else if (value == 'import') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
               }
             },
             itemBuilder: (context) => [
@@ -74,6 +78,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                   leading: Icon(Icons.record_voice_over),
                   title: Text('語音預覽'),
+                ),
+              ),
+              const PopupMenuItem(
+                value: 'import',
+                child: ListTile(
+                  leading: Icon(Icons.upload_file),
+                  title: Text('匯入自訂教材'),
                 ),
               ),
               const PopupMenuItem(
