@@ -1,0 +1,75 @@
+name: Build Personal Unlocked APK (manual only)
+
+# 這是給開發者本人（Lawrence）自己使用的特殊版本：強制解鎖全部
+# Premium 內容、不顯示廣告，只給自己安裝、私人學習用。
+# 刻意只用 workflow_dispatch（手動觸發），不會像正式版那樣每次
+# push 到 main 就自動建置，避免跟上架用的正式版搞混。
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Ensure Android platform scaffold exists
+        run: |
+          if [ ! -d "android" ]; then
+            flutter create --platforms=android --project-name=english_learning_app --org tw.bcc .
+          fi
+
+      - name: Patch AndroidManifest for background audio playback
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+        run: bash scripts/patch_android_manifest.sh
+
+      - name: Patch MainActivity for audio_service compatibility
+        run: bash scripts/patch_main_activity.sh
+
+      - name: Patch compileSdk for plugin compatibility
+        run: bash scripts/patch_compile_sdk.sh
+
+      - name: Configure Firebase
+        env:
+          FIREBASE_GOOGLE_SERVICES_JSON: ${{ secrets.FIREBASE_GOOGLE_SERVICES_JSON }}
+        run: bash scripts/patch_firebase.sh
+
+      - name: Patch ProGuard rules for Firebase (R8 compatibility)
+        run: bash scripts/patch_firebase_proguard.sh
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Configure release signing key
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: bash scripts/patch_signing_config.sh
+
+      - name: Build APK (personal, all-unlocked)
+        env:
+          REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_ANDROID_API_KEY }}
+          ADMOB_REWARDED_AD_UNIT_ID: ${{ secrets.ADMOB_REWARDED_AD_UNIT_ID }}
+          ADMOB_INTERSTITIAL_AD_UNIT_ID: ${{ secrets.ADMOB_INTERSTITIAL_AD_UNIT_ID }}
+          ADMOB_BANNER_AD_UNIT_ID: ${{ secrets.ADMOB_BANNER_AD_UNIT_ID }}
+        run: |
+          flutter build apk --release \
+            --dart-define=REVENUECAT_API_KEY=$REVENUECAT_API_KEY \
+            --dart-define=ADMOB_REWARDED_AD_UNIT_ID=$ADMOB_REWARDED_AD_UNIT_ID \
+            --dart-define=ADMOB_INTERSTITIAL_AD_UNIT_ID=$ADMOB_INTERSTITIAL_AD_UNIT_ID \
+            --dart-define=ADMOB_BANNER_AD_UNIT_ID=$ADMOB_BANNER_AD_UNIT_ID \
+            --dart-define=FORCE_PREMIUM=true
+
+      - name: Upload personal APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: english-learning-app-personal-unlocked-apk
+          path: build/app/outputs/flutter-apk/app-release.apk

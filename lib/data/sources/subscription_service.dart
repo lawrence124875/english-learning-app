@@ -14,8 +14,15 @@ class SubscriptionService {
     await Purchases.configure(PurchasesConfiguration(apiKey));
   }
 
+  /// 個人專屬編譯開關：只有透過另外那支「個人版建置」workflow 手動
+  /// 觸發、明確傳入 FORCE_PREMIUM=true 時才會生效，一般正式上架用的
+  /// 編譯流程完全不會用到這個旗標，預設是 false。
+  static const _forcePremium =
+      bool.fromEnvironment('FORCE_PREMIUM', defaultValue: false);
+
   /// 目前使用者是否為 Premium 訂閱戶。
   static Future<bool> isPremium() async {
+    if (_forcePremium) return true;
     try {
       final info = await Purchases.getCustomerInfo();
       return info.entitlements.active.containsKey(_entitlementId);
