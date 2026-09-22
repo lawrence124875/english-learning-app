@@ -35,7 +35,7 @@ class SubscriptionService {
   static Future<bool> purchase(Package package) async {
     try {
       final result = await Purchases.purchasePackage(package);
-      return result.entitlements.active.containsKey(_entitlementId);
+      return result.customerInfo.entitlements.active.containsKey(_entitlementId);
     } catch (_) {
       return false;
     }
