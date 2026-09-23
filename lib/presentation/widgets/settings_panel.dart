@@ -18,7 +18,13 @@ class SettingsPanel extends StatelessWidget {
     return Card(
       child: ExpansionTile(
         title: Text('⚙️ ${l.settingsTitle}'),
-        subtitle: Text(settings.summaryLine),
+        subtitle: Text(l.settingsSummaryLine(
+          settings.readMode == ReadMode.bilingual
+              ? l.summaryReadBilingual
+              : l.summaryReadEnglishOnly,
+          settings.repeatCount,
+          settings.speechRate.toString(),
+        )),
         initiallyExpanded: settings.settingsPanelExpanded,
         onExpansionChanged: (expanded) {
           appState.updateSettings(

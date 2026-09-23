@@ -10,22 +10,34 @@
   "wordNumberLabel": "No. {current} / {total}",
   "@wordNumberLabel": {
     "placeholders": {
-      "current": {"type": "int"},
-      "total": {"type": "int"}
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "cycleLabel": "第 {n} 輪學習",
   "@cycleLabel": {
     "placeholders": {
-      "n": {"type": "int"}
+      "n": {
+        "type": "int"
+      }
     }
   },
   "roundProgressLabel": "本輪已聽過進度：{heard} / {total} ({percent}%)",
   "@roundProgressLabel": {
     "placeholders": {
-      "heard": {"type": "int"},
-      "total": {"type": "int"},
-      "percent": {"type": "int"}
+      "heard": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "percent": {
+        "type": "int"
+      }
     }
   },
   "playButtonStart": "開始巡航朗讀",
@@ -42,8 +54,12 @@
   "itemsCountLabel": "{learned} / {total} 個項目",
   "@itemsCountLabel": {
     "placeholders": {
-      "learned": {"type": "int"},
-      "total": {"type": "int"}
+      "learned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "dailyReminderHeader": "每日複習提醒",
@@ -52,7 +68,9 @@
   "reminderScheduledMessage": "已排定 {time} 提醒",
   "@reminderScheduledMessage": {
     "placeholders": {
-      "time": {"type": "String"}
+      "time": {
+        "type": "String"
+      }
     }
   },
   "reminderFailedMessage": "排程失敗，請確認電池優化設定或重新開啟提醒開關",
@@ -64,7 +82,9 @@
   "starredCountLabel": "已標記 {n} 個項目",
   "@starredCountLabel": {
     "placeholders": {
-      "n": {"type": "int"}
+      "n": {
+        "type": "int"
+      }
     }
   },
   "speakOnManualNavigateLabel": "手動切換單字時發音",
@@ -72,13 +92,17 @@
   "intervalSecondsLabel": "單字間隔停頓：{seconds} 秒",
   "@intervalSecondsLabel": {
     "placeholders": {
-      "seconds": {"type": "String"}
+      "seconds": {
+        "type": "String"
+      }
     }
   },
   "speechRateLabel": "朗讀語速：{rate}x",
   "@speechRateLabel": {
     "placeholders": {
-      "rate": {"type": "String"}
+      "rate": {
+        "type": "String"
+      }
     }
   },
   "scopeModeLabel": "播放範圍 / 模式",
@@ -92,5 +116,181 @@
   "repeatCountLabel": "英文重複朗讀次數",
   "repeatOnce": "讀 1 次",
   "repeatTwice": "讀 2 次（推薦）",
-  "repeatThrice": "讀 3 次"
+  "repeatThrice": "讀 3 次",
+  "commonCancel": "取消",
+  "commonDelete": "刪除",
+  "voicePreviewIntro": "這裡列出手機裡可用的英文語音，點播放圖示即可試聽。正式朗讀時 App 會統一使用系統預設語音（依語言自動選擇），這裡純粹讓你先聽聽看手機裡有哪些語音。",
+  "voicePreviewNoVoices": "找不到可用的語音，請確認手機已安裝英文語音包。",
+  "voicePreviewUnknownVoice": "未知語音",
+  "paywallPurchaseSuccess": "訂閱成功！已解鎖完整內容並移除廣告。",
+  "paywallPurchaseFailed": "購買未完成，請稍後再試一次。",
+  "paywallRestoreSuccess": "已恢復 Premium 訂閱！",
+  "paywallRestoreNotFound": "找不到可恢復的購買紀錄。",
+  "paywallAlreadyPremium": "您已經是 Premium 訂閱戶 🎉",
+  "paywallHeadline": "解鎖完整學習內容",
+  "paywallBenefitAllContent": "四份教材 100% 完整開放",
+  "paywallBenefitNoAds": "完全移除廣告",
+  "paywallBenefitBackground": "背景播放、鎖屏顯示",
+  "paywallRestoreButton": "恢復先前購買",
+  "paywallNoPackages": "目前沒有可用的訂閱方案，請稍後再試。",
+  "paywallPlanMonthly": "月繳方案",
+  "paywallPlanAnnual": "年繳方案",
+  "paywallTermsNote": "訂閱會自動續訂，可隨時在 Google Play「付款和訂閱」中取消。取消後，Premium 功能可繼續使用到本期結束，之後自動改回免費版。",
+  "paywallManageSubscription": "管理 / 取消訂閱",
+  "unlockRewardSnackbar": "已多解鎖 20 個項目！",
+  "unlockFreeProgress": "免費版已解鎖 {unlocked} / {total} 個項目",
+  "@unlockFreeProgress": {
+    "placeholders": {
+      "unlocked": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "unlockAdLoading": "廣告準備中…",
+  "unlockWatchAd": "看廣告 +20",
+  "importIntro": "可以匯入自己準備的單字、片語或常用例句（例如自己書上的內容），匯入後會跟內建教材一樣可以切換朗讀。",
+  "importFormatTitle": "匯入格式（CSV，含表頭）",
+  "importSampleApple": "蘋果",
+  "importSampleGiveUp": "放棄",
+  "importSampleHowAreYou": "你今天過得怎麼樣？",
+  "importFormatHint": "第一欄放英文（單字、片語、整句例句都可以），第二欄放對應翻譯，存成 CSV 檔即可匯入。",
+  "importGetTemplate": "取得範本檔案",
+  "importTemplateSaved": "範本已存到暫存資料夾：{path}",
+  "@importTemplateSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "importNameLabel": "這份教材的名稱",
+  "importNameHint": "例如：多益核心例句",
+  "importNameRequired": "請先幫這份教材取個名字",
+  "importTranslationLangLabel": "翻譯欄位是什麼語言？",
+  "importLangZh": "中文",
+  "importLangJa": "日文",
+  "importLangKo": "韓文",
+  "importLangVi": "越南文",
+  "importLangEn": "英文（例如額外附註/同義說明）",
+  "importButton": "選擇 CSV 檔並匯入",
+  "importingInProgress": "匯入中…",
+  "importDone": "匯入完成！共 {count} 筆",
+  "@importDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importDoneWithSkipped": "匯入完成！共 {count} 筆（略過 {skipped} 筆空白列）",
+  "@importDoneWithSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "skipped": {
+        "type": "int"
+      }
+    }
+  },
+  "importFailedWithReason": "匯入失敗：{reason}",
+  "@importFailedWithReason": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "importFailedGeneric": "匯入失敗，請確認檔案格式是否正確",
+  "importErrorEncoding": "檔案編碼不是 UTF-8，無法讀取。請用 Excel「另存新檔」時選擇「CSV UTF-8（逗號分隔）」格式，或用純文字編輯器另存成 UTF-8 編碼。",
+  "importErrorParse": "CSV 格式解析失敗，請確認是否為標準逗號分隔格式。",
+  "importErrorEmpty": "檔案是空的，請確認內容格式正確。",
+  "importErrorNoRows": "沒有解析到任何有效的資料列，請確認格式是否正確。",
+  "importDeleteTitle": "刪除自訂教材",
+  "importDeleteConfirm": "確定要刪除「{name}」嗎？這個動作無法復原。",
+  "@importDeleteConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importedListHeader": "已匯入的自訂教材",
+  "importItemCount": "{n} 個項目",
+  "@importItemCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "aboutFeedbackButton": "意見回饋 / 回報問題",
+  "aboutAttributionIntro": "本 App 之單字/語塊資料取自以下公開學術研究成果，特此致謝並標明出處：",
+  "aboutNgslTitle": "NGSL 2809（核心單字）",
+  "aboutSpokenTitle": "NGSL-Spoken 720（口語常用字）",
+  "aboutPhaveTitle": "PhaVE List（片語動詞）",
+  "aboutPhraseTitle": "PHRASE List（高頻語塊）",
+  "aboutLicenseCcBySa": "採用創用CC「姓名標示-相同方式分享 4.0 國際授權條款」（CC BY-SA 4.0）。",
+  "aboutLicenseCcBy": "採用創用CC「姓名標示 4.0 國際授權條款」（CC BY 4.0）。",
+  "aboutPhraseRights": "版權歸原作者所有，本 App 依授權範圍使用於教學用途。",
+  "aboutSourceLabel": "原作品：{name}",
+  "@aboutSourceLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutLicenseLabel": "授權條款：{name}",
+  "@aboutLicenseLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutTtsNote": "朗讀語音由裝置系統內建文字轉語音引擎提供。",
+  "feedbackTitle": "意見回饋",
+  "feedbackCategoryLabel": "類型",
+  "feedbackCategoryBug": "回報問題",
+  "feedbackCategorySuggestion": "功能建議",
+  "feedbackCategoryOther": "其他",
+  "feedbackMessageLabel": "內容",
+  "feedbackMessageHint": "告訴我們你遇到的問題，或希望增加什麼功能…",
+  "feedbackEmailLabel": "聯絡信箱（選填）",
+  "feedbackEmailHint": "想收到回覆的話可以留信箱",
+  "feedbackSubmit": "送出回饋",
+  "feedbackEmpty": "請先填寫內容再送出",
+  "feedbackThanks": "感謝你的回饋，我們會盡快查看！",
+  "feedbackFailed": "送出失敗，請確認網路連線後再試一次",
+  "statsDescNgsl": "英語核心單字表，取自公開頻率研究，完整學會這 2,809 個字，可達到一般日常英文文本約 92% 的理解涵蓋率（資料來源：New General Service List Project）。",
+  "statsDescSpoken": "從日常口語對話中挑出的 720 個高頻詞彙，專門加強「聽」與「說」情境的反應速度，跟 NGSL 核心單字表互補，涵蓋口語裡常用、但書面文字裡較少出現的用詞。",
+  "statsDescPhrase": "506 個英語母語人士真正常用的固定搭配與語塊（例如 \"in order to\"、\"as well as\"），不是單字而是「一整組一起記」的片語，能幫助說出更自然道地的英文。",
+  "statsDescPhave": "收錄 150 個最常用的片語動詞（例如 \"look after\"、\"give up\"），這類「動詞+介詞」組合是英語學習者公認最難掌握的一塊，集中複習這 150 個能涵蓋大部分日常會遇到的片語動詞。",
+  "summaryReadBilingual": "英雙讀",
+  "summaryReadEnglishOnly": "純英文",
+  "settingsSummaryLine": "{mode}・讀{count}次・{rate}x",
+  "@settingsSummaryLine": {
+    "placeholders": {
+      "mode": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      },
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "notifChannelName": "複習提醒",
+  "notifChannelDesc": "每日英文複習提醒通知",
+  "notifDailyTitle": "該複習英文囉！",
+  "notifDailyBody": "回來聽幾個單字，鞏固今天學到的內容吧",
+  "notifInactivityTitle": "好久不見 👋",
+  "notifInactivityBody": "已經好幾天沒複習了，回來聽幾個單字，別讓記憶生疏了",
+  "audioChannelName": "英語學習朗讀"
 }

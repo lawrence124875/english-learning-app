@@ -12,6 +12,7 @@ import 'data/sources/tts_audio_handler.dart';
 import 'data/sources/subscription_service.dart';
 import 'data/sources/ads_service.dart';
 import 'data/sources/notification_service.dart';
+import 'data/sources/background_l10n.dart';
 import 'presentation/providers/app_state.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/app_localizations.dart';
@@ -64,9 +65,10 @@ Future<void> main() async {
   try {
     _audioHandler = await AudioService.init(
       builder: () => TtsAudioHandler(),
-      config: const AudioServiceConfig(
+      config: AudioServiceConfig(
         androidNotificationChannelId: 'tw.bcc.englishapp.audio',
-        androidNotificationChannelName: '英語學習朗讀',
+        androidNotificationChannelName:
+            BackgroundL10n.current().audioChannelName,
         // 不再設成 ongoing:true——這個設定會讓通知變成「不可滑掉」，
         // 但同時似乎也影響了 App 被關閉、呼叫 stop() 之後通知/鎖屏卡片
         // 沒辦法正常消失的問題。改用套件預設值（false），這是絕大多數
@@ -113,7 +115,8 @@ class EnglishLearningApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: '智慧聽覺巡航',
+        // 工作管理員（最近使用的 App 清單）顯示的名稱，跟著手機語言走
+        onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         debugShowCheckedModeBanner: false,
         // 不手動指定 locale，Flutter 預設就會依照裝置系統語言自動選擇
         // 最接近的一種；找不到對應語言時，會自動退回 supportedLocales

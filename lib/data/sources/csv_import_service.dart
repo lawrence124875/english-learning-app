@@ -12,11 +12,15 @@ import '../../domain/models/word_item.dart';
 /// 每一列可以是單字、片語，或一整句常用例句——App 內部把這三種
 /// 一視同仁處理（都只是「一段要朗讀＋顯示翻譯的英文文字」），
 /// 不需要另外分類欄位，格式維持越簡單越好。
+/// 匯入失敗的原因代碼。錯誤訊息文字由畫面層依介面語言翻譯，
+/// 資料層只負責回報「是哪一種錯誤」。
+enum CsvImportError { encoding, parseFailed, empty, noValidRows }
+
 class CsvImportException implements Exception {
-  final String message;
-  CsvImportException(this.message);
+  final CsvImportError error;
+  CsvImportException(this.error);
   @override
-  String toString() => message;
+  String toString() => 'CsvImportException($error)';
 }
 
 class CsvImportResult {
@@ -44,11 +48,11 @@ class CsvImportService {
       rows = const CsvToListConverter(eol: '\n', shouldParseNumbers: false)
           .convert(content, fieldDelimiter: ',');
     } catch (e) {
-      throw CsvImportException('CSV 格式解析失敗，請確認是否為標準逗號分隔格式。');
+      throw CsvImportException(CsvImportError.parseFailed);
     }
 
     if (rows.isEmpty) {
-      throw CsvImportException('檔案是空的，請確認內容格式正確。');
+      throw CsvImportException(CsvImportError.empty);
     }
 
     // 備援處理：有些工具匯出 CSV 時，會把整行都包進同一組引號裡
@@ -67,7 +71,8 @@ class CsvImportService {
     // 判斷第一列是不是表頭（english/translation 之類的文字），是的話跳過。
     var startIndex = 0;
     final firstCell = rows[0].isNotEmpty ? rows[0][0].toString().trim().toLowerCase() : '';
-    if (firstCell == 'english' || firstCell == 'word' || firstCell == '英文') {
+    const headerWords = {'english', 'word', '英文', '英語', '영어', 'tiếng anh'};
+    if (headerWords.contains(firstCell)) {
       startIndex = 1;
     }
 
@@ -90,19 +95,24 @@ class CsvImportService {
     }
 
     if (items.isEmpty) {
-      throw CsvImportException('沒有解析到任何有效的資料列，請確認格式是否正確。');
+      throw CsvImportException(CsvImportError.noValidRows);
     }
 
     return CsvImportResult(items: items, skippedRows: skipped);
   }
 
-  /// 提供下載用的 CSV 範本內容。
-  static String templateCsv() {
-    const rows = [
+  /// 提供下載用的 CSV 範本內容。範例翻譯由畫面層依介面語言傳入，
+  /// 讓日/韓/越南使用者拿到的範本也是自己的語言。
+  static String templateCsv({
+    required String apple,
+    required String giveUp,
+    required String howAreYou,
+  }) {
+    final rows = [
       ['english', 'translation'],
-      ['apple', '蘋果'],
-      ['give up', '放棄'],
-      ['How are you doing today?', '你今天過得怎麼樣？'],
+      ['apple', apple],
+      ['give up', giveUp],
+      ['How are you doing today?', howAreYou],
     ];
     return const ListToCsvConverter().convert(rows);
   }

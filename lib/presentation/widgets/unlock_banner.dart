@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../../data/sources/ads_service.dart';
 import '../screens/paywall_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 免費版顯示：目前教材已解鎖數量 / 總數，
 /// 提供「看廣告多解鎖20個」與「升級 Premium」兩個入口。
@@ -47,7 +48,9 @@ class _UnlockBannerState extends State<UnlockBanner> {
       await appState.unlockMoreViaRewardedAd();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('已多解鎖 20 個項目！')),
+          SnackBar(
+              content:
+                  Text(AppLocalizations.of(context)!.unlockRewardSnackbar)),
         );
       }
     }
@@ -58,6 +61,7 @@ class _UnlockBannerState extends State<UnlockBanner> {
   @override
   Widget build(BuildContext context) {
     final appState = context.watch<AppState>();
+    final l = AppLocalizations.of(context)!;
     if (appState.isPremium || appState.currentDatasetFullyUnlocked) {
       return const SizedBox.shrink();
     }
@@ -72,7 +76,7 @@ class _UnlockBannerState extends State<UnlockBanner> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('免費版已解鎖 $unlocked / $total 個項目',
+            Text(l.unlockFreeProgress(unlocked, total),
                 style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
             Row(
@@ -83,7 +87,7 @@ class _UnlockBannerState extends State<UnlockBanner> {
                         ? () => _watchRewarded(appState)
                         : null,
                     icon: const Icon(Icons.play_circle_outline),
-                    label: Text(_loadingRewarded ? '廣告準備中…' : '看廣告 +20'),
+                    label: Text(_loadingRewarded ? l.unlockAdLoading : l.unlockWatchAd),
                   ),
                 ),
                 const SizedBox(width: 8),
@@ -95,7 +99,7 @@ class _UnlockBannerState extends State<UnlockBanner> {
                           builder: (_) => const PaywallScreen()),
                     ),
                     icon: const Icon(Icons.workspace_premium),
-                    label: const Text('升級 Premium'),
+                    label: Text(l.menuPremium),
                   ),
                 ),
               ],

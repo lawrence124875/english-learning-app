@@ -64,13 +64,6 @@ class PlaybackSettings {
     );
   }
 
-  /// 收合時顯示的一行設定摘要，例如「英雙讀・讀2次・0.9x」
-  String get summaryLine {
-    final readModeLabel =
-        readMode == ReadMode.bilingual ? '英雙讀' : '純英文';
-    return '$readModeLabel・讀$repeatCount次・${speechRate}x';
-  }
-
   Map<String, dynamic> toJson() => {
         'scopeMode': scopeMode.index,
         'readMode': readMode.index,

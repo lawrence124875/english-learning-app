@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../data/sources/feedback_service.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 意見回饋畫面：讓使用者回報問題或提出功能建議，送進 Firestore。
 class FeedbackScreen extends StatefulWidget {
@@ -22,11 +23,24 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
     super.dispose();
   }
 
+  String _categoryLabel(FeedbackCategory c, AppLocalizations l) {
+    switch (c) {
+      case FeedbackCategory.bug:
+        return l.feedbackCategoryBug;
+      case FeedbackCategory.suggestion:
+        return l.feedbackCategorySuggestion;
+      case FeedbackCategory.other:
+        return l.feedbackCategoryOther;
+    }
+  }
+
   Future<void> _submit() async {
+    final l = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context).toLanguageTag();
     final message = _messageController.text.trim();
     if (message.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('請先填寫內容再送出')),
+        SnackBar(content: Text(l.feedbackEmpty)),
       );
       return;
     }
@@ -37,16 +51,17 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
         category: _category,
         contactEmail:
             _emailController.text.trim().isEmpty ? null : _emailController.text.trim(),
+        locale: locale,
       );
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('感謝你的回饋，我們會盡快查看！')),
+        SnackBar(content: Text(l.feedbackThanks)),
       );
       Navigator.pop(context);
     } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('送出失敗，請確認網路連線後再試一次')),
+        SnackBar(content: Text(l.feedbackFailed)),
       );
     } finally {
       if (mounted) setState(() => _submitting = false);
@@ -55,45 +70,46 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text('意見回饋')),
+      appBar: AppBar(title: Text(l.feedbackTitle)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text('類型', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(l.feedbackCategoryLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             Wrap(
               spacing: 12,
               children: FeedbackCategory.values.map((c) {
                 return ChoiceChip(
-                  label: Text(c.label),
+                  label: Text(_categoryLabel(c, l)),
                   selected: _category == c,
                   onSelected: (_) => setState(() => _category = c),
                 );
               }).toList(),
             ),
             const SizedBox(height: 24),
-            const Text('內容', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(l.feedbackMessageLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             TextField(
               controller: _messageController,
               maxLines: 6,
-              decoration: const InputDecoration(
-                hintText: '告訴我們你遇到的問題，或希望增加什麼功能…',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                hintText: l.feedbackMessageHint,
+                border: const OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 24),
-            const Text('聯絡信箱（選填）', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(l.feedbackEmailLabel, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             TextField(
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                hintText: '想收到回覆的話可以留信箱',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                hintText: l.feedbackEmailHint,
+                border: const OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 32),
@@ -106,7 +122,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         height: 20, width: 20,
                         child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                       )
-                    : const Text('送出回饋'),
+                    : Text(l.feedbackSubmit),
               ),
             ),
           ],

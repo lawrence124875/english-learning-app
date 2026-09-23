@@ -3,6 +3,7 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:android_intent_plus/android_intent.dart';
+import 'background_l10n.dart';
 
 /// 複習提醒的本地通知服務。
 /// 使用者可以設定一個每天固定的提醒時間，App 會在那個時間跳出通知，
@@ -17,7 +18,21 @@ class NotificationService {
   static final _plugin = FlutterLocalNotificationsPlugin();
   static const _reminderId = 1001;
   static const _channelId = 'tw.bcc.englishapp.reminder';
-  static const _channelName = '複習提醒';
+
+  /// 通知內容依「排程當下」的手機語言產生。每日提醒與久未使用提醒
+  /// 在每次開啟 App 時都會重新排程，所以使用者切換手機語言後，
+  /// 只要再開一次 App，之後跳出的提醒就會是新語言。
+  static NotificationDetails _details() {
+    final l = BackgroundL10n.current();
+    return NotificationDetails(
+      android: AndroidNotificationDetails(
+        _channelId,
+        l.notifChannelName,
+        channelDescription: l.notifChannelDesc,
+        importance: Importance.defaultImportance,
+      ),
+    );
+  }
 
   static Future<void> initialize() async {
     tz_data.initializeTimeZones();
@@ -27,10 +42,11 @@ class NotificationService {
     const settings = InitializationSettings(android: androidSettings);
     await _plugin.initialize(settings);
 
-    const channel = AndroidNotificationChannel(
+    final l = BackgroundL10n.current();
+    final channel = AndroidNotificationChannel(
       _channelId,
-      _channelName,
-      description: '每日英文複習提醒通知',
+      l.notifChannelName,
+      description: l.notifChannelDesc,
       importance: Importance.defaultImportance,
     );
     await _plugin
@@ -73,19 +89,14 @@ class NotificationService {
     required int minute,
   }) async {
     final scheduled = _nextInstanceOfLocalTime(hour, minute);
+    final l = BackgroundL10n.current();
 
     await _plugin.zonedSchedule(
       _reminderId,
-      '該複習英文囉！',
-      '回來聽幾個單字，鞏固今天學到的內容吧',
+      l.notifDailyTitle,
+      l.notifDailyBody,
       scheduled,
-      const NotificationDetails(
-        android: AndroidNotificationDetails(
-          _channelId,
-          _channelName,
-          importance: Importance.defaultImportance,
-        ),
-      ),
+      _details(),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
@@ -122,18 +133,13 @@ class NotificationService {
       tz.UTC,
     );
 
+    final l = BackgroundL10n.current();
     await _plugin.zonedSchedule(
       _inactivityReminderId,
-      '好久不見 👋',
-      '已經好幾天沒複習了，回來聽幾個單字，別讓記憶生疏了',
+      l.notifInactivityTitle,
+      l.notifInactivityBody,
       scheduled,
-      const NotificationDetails(
-        android: AndroidNotificationDetails(
-          _channelId,
-          _channelName,
-          importance: Importance.defaultImportance,
-        ),
-      ),
+      _details(),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,

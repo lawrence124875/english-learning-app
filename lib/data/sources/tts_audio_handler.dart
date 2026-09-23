@@ -1,4 +1,5 @@
 import 'package:audio_service/audio_service.dart';
+import 'background_l10n.dart';
 
 /// 背景播放/鎖屏控制的 Handler。
 /// 實際的播放邏輯（洗牌、播放清單、TTS）仍在 AppState 裡，
@@ -37,7 +38,7 @@ class TtsAudioHandler extends BaseAudioHandler {
       id: word,
       title: word,
       artist: meaning,
-      album: '智慧聽覺巡航（$currentIndex / $totalCount）',
+      album: '${BackgroundL10n.current().appTitle} ($currentIndex / $totalCount)',
     ));
     playbackState.add(playbackState.value.copyWith(
       controls: [

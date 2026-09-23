@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../data/sources/tts_service.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 語音預覽畫面：單純讓使用者聽聽看手機裡有哪些英文語音可以選。
 ///
@@ -60,30 +61,29 @@ class _VoiceTestScreenState extends State<VoiceTestScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text('語音預覽')),
+      appBar: AppBar(title: Text(l.menuVoicePreview)),
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16),
+          Padding(
+            padding: const EdgeInsets.all(16),
             child: Text(
-              '這裡列出手機裡可用的英文語音，點播放圖示試聽即可。'
-              '正式朗讀時 App 會統一使用系統預設語音（依語言自動選擇），'
-              '這裡純粹讓你先聽聽看手機裡有哪些語音可以選。',
-              style: TextStyle(color: Colors.grey, fontSize: 13),
+              l.voicePreviewIntro,
+              style: const TextStyle(color: Colors.grey, fontSize: 13),
             ),
           ),
           Expanded(
             child: _loading
                 ? const Center(child: CircularProgressIndicator())
                 : _voices.isEmpty
-                    ? const Center(child: Text('找不到可用的語音，請確認手機已安裝英文語音包。'))
+                    ? Center(child: Text(l.voicePreviewNoVoices))
                     : ListView.builder(
                         itemCount: _voices.length,
                         itemBuilder: (context, i) {
                           final voice = _voices[i];
                           return ListTile(
-                            title: Text(voice['name'] ?? '未知語音'),
+                            title: Text(voice['name'] ?? l.voicePreviewUnknownVoice),
                             subtitle: Text(voice['locale'] ?? ''),
                             trailing: IconButton(
                               icon: const Icon(Icons.volume_up),

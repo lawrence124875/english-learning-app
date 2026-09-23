@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '../../data/sources/csv_import_service.dart';
 import '../../domain/models/word_item.dart';
 import '../providers/app_state.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 匯入自訂教材畫面：讓使用者上傳自己準備的 CSV 檔（單字、片語，
 /// 或常用例句都可以），選擇翻譯欄位對應的語言，加進 App 裡跟
@@ -20,15 +21,42 @@ class ImportDatasetScreen extends StatefulWidget {
 class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   final _nameController = TextEditingController();
   String _translationLocale = 'zh-TW';
+  bool _translationLocaleInitialized = false;
   bool _importing = false;
 
-  static const _localeOptions = {
-    'zh-TW': '中文',
-    'ja': '日文',
-    'ko': '韓文',
-    'vi': '越南文',
-    'en': '英文（例如額外附註/同義說明）',
-  };
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // 翻譯語言預設跟著 App 介面語言走（日文介面預設「日文」…），
+    // 使用者仍可手動改選。只在第一次進入畫面時設定一次。
+    if (!_translationLocaleInitialized) {
+      final lang = Localizations.localeOf(context).languageCode;
+      _translationLocale =
+          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi'}[lang] ?? 'zh-TW';
+      _translationLocaleInitialized = true;
+    }
+  }
+
+  Map<String, String> _localeOptions(AppLocalizations l) => {
+        'zh-TW': l.importLangZh,
+        'ja': l.importLangJa,
+        'ko': l.importLangKo,
+        'vi': l.importLangVi,
+        'en': l.importLangEn,
+      };
+
+  String _errorMessage(CsvImportError e, AppLocalizations l) {
+    switch (e) {
+      case CsvImportError.encoding:
+        return l.importErrorEncoding;
+      case CsvImportError.parseFailed:
+        return l.importErrorParse;
+      case CsvImportError.empty:
+        return l.importErrorEmpty;
+      case CsvImportError.noValidRows:
+        return l.importErrorNoRows;
+    }
+  }
 
   @override
   void dispose() {
@@ -37,20 +65,26 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   }
 
   Future<void> _shareTemplate() async {
+    final l = AppLocalizations.of(context)!;
     final dir = await getTemporaryDirectory();
-    final file = File('${dir.path}/匯入範本.csv');
-    await file.writeAsString(CsvImportService.templateCsv());
+    final file = File('${dir.path}/import_template.csv');
+    await file.writeAsString(CsvImportService.templateCsv(
+      apple: l.importSampleApple,
+      giveUp: l.importSampleGiveUp,
+      howAreYou: l.importSampleHowAreYou,
+    ));
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('範本已存到暫存資料夾：${file.path}')),
+      SnackBar(content: Text(l.importTemplateSaved(file.path))),
     );
   }
 
   Future<void> _pickAndImport() async {
+    final l = AppLocalizations.of(context)!;
     final name = _nameController.text.trim();
     if (name.isEmpty) {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('請先幫這份教材取個名字')));
+          .showSnackBar(SnackBar(content: Text(l.importNameRequired)));
       return;
     }
 
@@ -67,9 +101,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       try {
         content = await file.readAsString();
       } on FormatException {
-        throw CsvImportException(
-            '檔案編碼不是 UTF-8，無法讀取。請用 Excel「另存新檔」時選擇'
-            '「CSV UTF-8（逗號分隔）」格式，或用純文字編輯器另存成 UTF-8 編碼。');
+        throw CsvImportException(CsvImportError.encoding);
       }
       final parsed = CsvImportService.parse(content, _translationLocale);
 
@@ -88,35 +120,39 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(parsed.skippedRows > 0
-              ? '匯入完成！共 ${parsed.items.length} 筆（略過 ${parsed.skippedRows} 筆空白列）'
-              : '匯入完成！共 ${parsed.items.length} 筆'),
+              ? l.importDoneWithSkipped(
+                  parsed.items.length, parsed.skippedRows)
+              : l.importDone(parsed.items.length)),
         ),
       );
       Navigator.pop(context);
     } on CsvImportException catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('匯入失敗：${e.message}')));
+          .showSnackBar(SnackBar(
+              content: Text(
+                  l.importFailedWithReason(_errorMessage(e.error, l)))));
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('匯入失敗，請確認檔案格式是否正確')));
+          .showSnackBar(SnackBar(content: Text(l.importFailedGeneric)));
     } finally {
       if (mounted) setState(() => _importing = false);
     }
   }
 
   Future<void> _confirmDelete(BuildContext context, String id, String name) async {
+    final l = AppLocalizations.of(context)!;
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('刪除自訂教材'),
-        content: Text('確定要刪除「$name」嗎？這個動作無法復原。'),
+        title: Text(l.importDeleteTitle),
+        content: Text(l.importDeleteConfirm(name)),
         actions: [
           TextButton(
-              onPressed: () => Navigator.pop(context, false), child: const Text('取消')),
+              onPressed: () => Navigator.pop(context, false), child: Text(l.commonCancel)),
           TextButton(
-              onPressed: () => Navigator.pop(context, true), child: const Text('刪除')),
+              onPressed: () => Navigator.pop(context, true), child: Text(l.commonDelete)),
         ],
       ),
     );
@@ -128,18 +164,18 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   @override
   Widget build(BuildContext context) {
     final appState = context.watch<AppState>();
+    final l = AppLocalizations.of(context)!;
     final customDatasets =
         appState.datasets.where((d) => d.id.startsWith('custom_')).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('匯入自訂教材')),
+      appBar: AppBar(title: Text(l.menuImport)),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-          const Text(
-            '可以匯入自己準備的單字、片語，或常用例句（例如自己書上的內容），'
-            '匯入後會跟內建教材一樣可以切換朗讀。',
-            style: TextStyle(color: Colors.grey),
+          Text(
+            l.importIntro,
+            style: const TextStyle(color: Colors.grey),
           ),
           const SizedBox(height: 20),
           Card(
@@ -148,27 +184,26 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('匯入格式（CSV，含表頭）',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text(l.importFormatTitle,
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  const Text(
+                  Text(
                     'english,translation\n'
-                    'apple,蘋果\n'
-                    'give up,放棄\n'
-                    'How are you doing today?,你今天過得怎麼樣？',
-                    style: TextStyle(fontFamily: 'monospace', fontSize: 13),
+                    'apple,${l.importSampleApple}\n'
+                    'give up,${l.importSampleGiveUp}\n'
+                    'How are you doing today?,${l.importSampleHowAreYou}',
+                    style: const TextStyle(fontFamily: 'monospace', fontSize: 13),
                   ),
                   const SizedBox(height: 4),
-                  const Text(
-                    '第一欄放英文（單字/片語/整句例句都可以），第二欄放對應翻譯，'
-                    '存成 CSV 檔即可匯入。',
-                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                  Text(
+                    l.importFormatHint,
+                    style: const TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                   const SizedBox(height: 12),
                   OutlinedButton.icon(
                     onPressed: _shareTemplate,
                     icon: const Icon(Icons.download, size: 18),
-                    label: const Text('取得範本檔案'),
+                    label: Text(l.importGetTemplate),
                   ),
                 ],
               ),
@@ -177,20 +212,20 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
           const SizedBox(height: 20),
           TextField(
             controller: _nameController,
-            decoration: const InputDecoration(
-              labelText: '這份教材的名稱',
-              hintText: '例如：多益核心例句',
-              border: OutlineInputBorder(),
+            decoration: InputDecoration(
+              labelText: l.importNameLabel,
+              hintText: l.importNameHint,
+              border: const OutlineInputBorder(),
             ),
           ),
           const SizedBox(height: 16),
           DropdownButtonFormField<String>(
             initialValue: _translationLocale,
-            decoration: const InputDecoration(
-              labelText: '翻譯欄位是什麼語言？',
-              border: OutlineInputBorder(),
+            decoration: InputDecoration(
+              labelText: l.importTranslationLangLabel,
+              border: const OutlineInputBorder(),
             ),
-            items: _localeOptions.entries
+            items: _localeOptions(l).entries
                 .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
                 .toList(),
             onChanged: (v) {
@@ -207,17 +242,17 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
                     child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                   )
                 : const Icon(Icons.upload_file),
-            label: Text(_importing ? '匯入中…' : '選擇 CSV 檔並匯入'),
+            label: Text(_importing ? l.importingInProgress : l.importButton),
           ),
           if (customDatasets.isNotEmpty) ...[
             const SizedBox(height: 32),
-            const Text('已匯入的自訂教材', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(l.importedListHeader, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             for (final d in customDatasets)
               Card(
                 child: ListTile(
                   title: Text(d.name),
-                  subtitle: Text('${d.items.length} 個項目'),
+                  subtitle: Text(l.importItemCount(d.items.length)),
                   trailing: IconButton(
                     icon: const Icon(Icons.delete_outline),
                     onPressed: () => _confirmDelete(context, d.id, d.name),
