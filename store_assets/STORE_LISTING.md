@@ -146,11 +146,11 @@
 
 **Tên ứng dụng**
 ```
-Hành Trình Nghe Tiếng Anh Thông Minh
+Nghe Tiếng Anh Thông Minh
 ```
 **Mô tả ngắn**
 ```
-Học tiếng Anh theo quy tắc 20/80: Từ vựng cốt lõi bao phủ 92% văn bản tiếng Anh hàng ngày, nghe thụ động không lãng phí thời gian
+Quy tắc 20/80: từ vựng cốt lõi phủ 92% văn bản Anh, nghe mọi lúc mọi nơi
 ```
 **Mô tả chi tiết**
 ```
@@ -186,11 +186,11 @@ Giọng đọc sử dụng công cụ chuyển văn bản thành giọng nói c�
 
 **Nama aplikasi**
 ```
-Perjalanan Mendengar Bahasa Inggris Cerdas
+Perjalanan Bahasa Inggris
 ```
 **Deskripsi singkat**
 ```
-Belajar Bahasa Inggris dengan aturan 20/80: Kosakata inti mencakup 92% teks Inggris sehari-hari, dengarkan sambil beraktivitas
+Aturan 20/80: kosakata inti cakup 92% teks Inggris, dengarkan kapan saja
 ```
 **Deskripsi lengkap**
 ```
@@ -226,11 +226,11 @@ Pembacaan suara menggunakan mesin text-to-speech bawaan perangkat.
 
 **ชื่อแอป**
 ```
-การเดินทางฟังภาษาอังกฤษอัจฉริยะ
+ฟังภาษาอังกฤษอัจฉริยะ
 ```
 **คำอธิบายสั้น**
 ```
-เรียนภาษาอังกฤษด้วยกฎ 20/80: คำศัพท์หลักครอบคลุม 92% ของข้อความอังกฤษทั่วไป ฟังระหว่างทำกิจกรรมได้
+กฎ 20/80: คำศัพท์หลักครอบคลุม 92% ของข้อความอังกฤษ ฟังได้ทุกที่
 ```
 **คำอธิบายแบบเต็ม**
 ```
