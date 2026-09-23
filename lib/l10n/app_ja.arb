@@ -1,0 +1,19 @@
+{
+  "@@locale": "ja",
+  "appTitle": "スマートリスニング・クルーズ",
+  "statsTooltip": "学習統計",
+  "moreTooltip": "その他",
+  "menuPremium": "Premiumにアップグレード",
+  "menuVoicePreview": "音声プレビュー",
+  "menuImport": "カスタム教材をインポート",
+  "menuAbout": "このアプリについて / 著作権表示",
+  "wordNumberLabel": "No. {current} / {total}",
+  "cycleLabel": "{n}周目の学習",
+  "roundProgressLabel": "今回の進捗：{heard} / {total}（{percent}%）",
+  "playButtonStart": "巡航読み上げ開始",
+  "playButtonPause": "巡航読み上げ一時停止",
+  "starButton": "苦手な単語に追加",
+  "navPrevious": "前へ",
+  "navReplay": "もう一度",
+  "navNext": "次へ"
+}

@@ -1,0 +1,19 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Hành Trình Nghe Tiếng Anh Thông Minh",
+  "statsTooltip": "Thống kê học tập",
+  "moreTooltip": "Thêm",
+  "menuPremium": "Nâng cấp Premium",
+  "menuVoicePreview": "Xem trước giọng đọc",
+  "menuImport": "Nhập tài liệu tùy chỉnh",
+  "menuAbout": "Giới thiệu về App / Bản quyền",
+  "wordNumberLabel": "No. {current} / {total}",
+  "cycleLabel": "Vòng học thứ {n}",
+  "roundProgressLabel": "Tiến độ vòng này: {heard} / {total} ({percent}%)",
+  "playButtonStart": "Bắt đầu đọc",
+  "playButtonPause": "Tạm dừng đọc",
+  "starButton": "Thêm vào từ chưa thuộc",
+  "navPrevious": "Trước",
+  "navReplay": "Đọc lại",
+  "navNext": "Tiếp"
+}

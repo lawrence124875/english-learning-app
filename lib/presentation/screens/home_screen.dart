@@ -9,6 +9,7 @@ import 'about_screen.dart';
 import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,10 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 12,
-        title: const Text('智慧聽覺巡航'),
+        title: Text(AppLocalizations.of(context)!.appTitle),
         actions: [
           IconButton(
-            tooltip: '學習統計',
+            tooltip: AppLocalizations.of(context)!.statsTooltip,
             icon: const Icon(Icons.bar_chart),
             onPressed: () => Navigator.push(
               context,
@@ -48,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           PopupMenuButton<String>(
-            tooltip: '更多',
+            tooltip: AppLocalizations.of(context)!.moreTooltip,
             onSelected: (value) {
               if (value == 'premium') {
                 Navigator.push(context,
@@ -66,32 +67,32 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             itemBuilder: (context) => [
               if (!appState.isPremium)
-                const PopupMenuItem(
+                PopupMenuItem(
                   value: 'premium',
                   child: ListTile(
-                    leading: Icon(Icons.workspace_premium),
-                    title: Text('升級 Premium'),
+                    leading: const Icon(Icons.workspace_premium),
+                    title: Text(AppLocalizations.of(context)!.menuPremium),
                   ),
                 ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: 'voice',
                 child: ListTile(
-                  leading: Icon(Icons.record_voice_over),
-                  title: Text('語音預覽'),
+                  leading: const Icon(Icons.record_voice_over),
+                  title: Text(AppLocalizations.of(context)!.menuVoicePreview),
                 ),
               ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: 'import',
                 child: ListTile(
-                  leading: Icon(Icons.upload_file),
-                  title: Text('匯入自訂教材'),
+                  leading: const Icon(Icons.upload_file),
+                  title: Text(AppLocalizations.of(context)!.menuImport),
                 ),
               ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: 'about',
                 child: ListTile(
-                  leading: Icon(Icons.info_outline),
-                  title: Text('關於本 App / 版權聲明'),
+                  leading: const Icon(Icons.info_outline),
+                  title: Text(AppLocalizations.of(context)!.menuAbout),
                 ),
               ),
             ],
@@ -173,7 +174,9 @@ class _PlaybackCard extends StatelessWidget {
                 Chip(
                   label: Text(
                     appState.currentWordNumber != null
-                        ? 'No. ${appState.currentWordNumber} / ${appState.currentDataset.items.length}'
+                        ? AppLocalizations.of(context)!.wordNumberLabel(
+                            appState.currentWordNumber!,
+                            appState.currentDataset.items.length)
                         : appState.currentDataset.shortName,
                     style: const TextStyle(fontSize: 12),
                   ),
@@ -181,7 +184,9 @@ class _PlaybackCard extends StatelessWidget {
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
                 Chip(
-                  label: Text('第 ${appState.currentCycleNumber} 輪學習',
+                  label: Text(
+                      AppLocalizations.of(context)!
+                          .cycleLabel(appState.currentCycleNumber),
                       style: const TextStyle(fontSize: 12)),
                   visualDensity: VisualDensity.compact,
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -193,8 +198,10 @@ class _PlaybackCard extends StatelessWidget {
             const SizedBox(height: 6),
             if (appState.roundTotalCount > 0)
               Text(
-                '本輪已聽過進度：${appState.roundHeardCount} / ${appState.roundTotalCount}'
-                ' (${(appState.progressRatio * 100).round()}%)',
+                AppLocalizations.of(context)!.roundProgressLabel(
+                    appState.roundHeardCount,
+                    appState.roundTotalCount,
+                    (appState.progressRatio * 100).round()),
                 style: Theme.of(context)
                     .textTheme
                     .bodySmall
@@ -224,7 +231,9 @@ class _PlaybackCard extends StatelessWidget {
             FilledButton.icon(
               onPressed: appState.togglePlay,
               icon: Icon(appState.isPlaying ? Icons.pause : Icons.play_arrow),
-              label: Text(appState.isPlaying ? '暫停巡航朗讀' : '開始巡航朗讀'),
+              label: Text(appState.isPlaying
+                  ? AppLocalizations.of(context)!.playButtonPause
+                  : AppLocalizations.of(context)!.playButtonStart),
             ),
             const SizedBox(height: 8),
             OutlinedButton.icon(
@@ -240,7 +249,7 @@ class _PlaybackCard extends StatelessWidget {
                     : Icons.star_border,
                 color: Colors.amber,
               ),
-              label: const Text('加入不熟悉單字庫'),
+              label: Text(AppLocalizations.of(context)!.starButton),
             ),
           ],
         ),
@@ -262,7 +271,7 @@ class _NavigationButtons extends StatelessWidget {
             onPressed: () => appState.previous(
                 speak: appState.settings.speakOnManualNavigate),
             icon: const Icon(Icons.skip_previous),
-            label: const Text('上一個'),
+            label: Text(AppLocalizations.of(context)!.navPrevious),
           ),
         ),
         const SizedBox(width: 8),
@@ -270,7 +279,7 @@ class _NavigationButtons extends StatelessWidget {
           child: OutlinedButton.icon(
             onPressed: appState.replay,
             icon: const Icon(Icons.replay),
-            label: const Text('再讀一次'),
+            label: Text(AppLocalizations.of(context)!.navReplay),
           ),
         ),
         const SizedBox(width: 8),
@@ -279,7 +288,7 @@ class _NavigationButtons extends StatelessWidget {
             onPressed: () => appState.next(
                 speak: appState.settings.speakOnManualNavigate),
             icon: const Icon(Icons.skip_next),
-            label: const Text('下一個'),
+            label: Text(AppLocalizations.of(context)!.navNext),
           ),
         ),
       ],

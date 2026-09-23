@@ -1,0 +1,37 @@
+{
+  "@@locale": "zh",
+  "appTitle": "智慧聽覺巡航",
+  "statsTooltip": "學習統計",
+  "moreTooltip": "更多",
+  "menuPremium": "升級 Premium",
+  "menuVoicePreview": "語音預覽",
+  "menuImport": "匯入自訂教材",
+  "menuAbout": "關於本 App / 版權聲明",
+  "wordNumberLabel": "No. {current} / {total}",
+  "@wordNumberLabel": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "cycleLabel": "第 {n} 輪學習",
+  "@cycleLabel": {
+    "placeholders": {
+      "n": {"type": "int"}
+    }
+  },
+  "roundProgressLabel": "本輪已聽過進度：{heard} / {total} ({percent}%)",
+  "@roundProgressLabel": {
+    "placeholders": {
+      "heard": {"type": "int"},
+      "total": {"type": "int"},
+      "percent": {"type": "int"}
+    }
+  },
+  "playButtonStart": "開始巡航朗讀",
+  "playButtonPause": "暫停巡航朗讀",
+  "starButton": "加入不熟悉單字庫",
+  "navPrevious": "上一個",
+  "navReplay": "再讀一次",
+  "navNext": "下一個"
+}

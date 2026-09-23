@@ -1,0 +1,19 @@
+{
+  "@@locale": "ko",
+  "appTitle": "스마트 리스닝 크루즈",
+  "statsTooltip": "학습 통계",
+  "moreTooltip": "더보기",
+  "menuPremium": "Premium 업그레이드",
+  "menuVoicePreview": "음성 미리듣기",
+  "menuImport": "사용자 지정 교재 가져오기",
+  "menuAbout": "앱 정보 / 저작권 안내",
+  "wordNumberLabel": "No. {current} / {total}",
+  "cycleLabel": "{n}회차 학습",
+  "roundProgressLabel": "이번 회차 진행률: {heard} / {total} ({percent}%)",
+  "playButtonStart": "순항 낭독 시작",
+  "playButtonPause": "순항 낭독 일시정지",
+  "starButton": "모르는 단어에 추가",
+  "navPrevious": "이전",
+  "navReplay": "다시 듣기",
+  "navNext": "다음"
+}

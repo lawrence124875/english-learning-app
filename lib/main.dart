@@ -13,6 +13,8 @@ import 'data/sources/subscription_service.dart';
 import 'data/sources/ads_service.dart';
 import 'data/sources/notification_service.dart';
 import 'presentation/providers/app_state.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/app_localizations.dart';
 import 'presentation/screens/home_screen.dart';
 
 /// 背景播放服務的控制器。可能為 null——見下方說明。
@@ -113,6 +115,21 @@ class EnglishLearningApp extends StatelessWidget {
       child: MaterialApp(
         title: '智慧聽覺巡航',
         debugShowCheckedModeBanner: false,
+        // 不手動指定 locale，Flutter 預設就會依照裝置系統語言自動選擇
+        // 最接近的一種；找不到對應語言時，會自動退回 supportedLocales
+        // 的第一個（這裡是中文）。
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('zh'),
+          Locale('ja'),
+          Locale('ko'),
+          Locale('vi'),
+        ],
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: const ColorScheme.light(
