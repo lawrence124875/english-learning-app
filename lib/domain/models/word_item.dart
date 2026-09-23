@@ -40,11 +40,18 @@ class WordDataset {
   final String shortName;
   final List<WordItem> items;
 
+  /// 這份教材主要使用的翻譯語言代碼（例如 "zh-TW"、"ja"）。
+  /// 內建四份教材固定是 "zh-TW"；使用者自訂匯入的教材，
+  /// 會依照匯入時選擇的語言設定這個欄位，畫面顯示跟朗讀翻譯時
+  /// 都要照這個欄位選對應語言，不能整個 App 都寫死中文。
+  final String primaryLocale;
+
   const WordDataset({
     required this.id,
     required this.name,
     required this.shortName,
     required this.items,
+    this.primaryLocale = 'zh-TW',
   });
 
   factory WordDataset.fromJson(Map<String, dynamic> json) {
@@ -56,6 +63,7 @@ class WordDataset {
       items: itemsJson
           .map((e) => WordItem.fromJson(e as Map<String, dynamic>))
           .toList(),
+      primaryLocale: json['primaryLocale'] as String? ?? 'zh-TW',
     );
   }
 }

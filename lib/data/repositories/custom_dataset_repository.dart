@@ -56,6 +56,7 @@ class CustomDatasetRepository {
       'id': dataset.id,
       'name': dataset.name,
       'short': dataset.shortName,
+      'primaryLocale': dataset.primaryLocale,
       'items': dataset.items
           .map((w) => {'id': w.id, 'w': w.word, 'm': w.translations})
           .toList(),

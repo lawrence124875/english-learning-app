@@ -214,7 +214,7 @@ class _PlaybackCard extends StatelessWidget {
                   ),
                   if (settings.showTranslation && word != null) ...[
                     const SizedBox(height: 8),
-                    Text(word.meaningFor('zh-TW'),
+                    Text(word.meaningFor(appState.currentDataset.primaryLocale),
                         style: Theme.of(context).textTheme.titleMedium),
                   ],
                 ],

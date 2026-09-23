@@ -339,7 +339,7 @@ class AppState extends ChangeNotifier {
     final state = currentPlaybackState;
     _audioHandler?.updateNowPlaying(
       word: word.word,
-      meaning: settings.showTranslation ? word.meaningFor('zh-TW') : '',
+      meaning: settings.showTranslation ? word.meaningFor(currentDataset.primaryLocale) : '',
       playing: isPlaying,
       currentIndex: state.playlist.isEmpty ? 0 : state.currentStep + 1,
       totalCount: state.playlist.length,
@@ -430,8 +430,8 @@ class AppState extends ChangeNotifier {
       await _ttsService.speak(word.word, languageCode: 'en-US');
     }
     if (settings.readMode == ReadMode.bilingual) {
-      await _ttsService.speak(word.meaningFor('zh-TW'),
-          languageCode: 'zh-TW');
+      final locale = currentDataset.primaryLocale;
+      await _ttsService.speak(word.meaningFor(locale), languageCode: locale);
     }
     final state = currentPlaybackState;
     if (state.playlist.isNotEmpty) {

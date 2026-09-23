@@ -78,6 +78,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
         name: name,
         shortName: name.length > 6 ? name.substring(0, 6) : name,
         items: parsed.items,
+        primaryLocale: _translationLocale,
       );
 
       if (!mounted) return;
