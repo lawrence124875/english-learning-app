@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../../domain/models/word_item.dart';
 import '../../data/sources/notification_service.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 學習統計畫面：今日學習數、總計學習數、每日複習提醒設定，
 /// 以及四份教材各自的學習進度（NGSL 2809 額外附上官方公開的
@@ -15,7 +16,7 @@ class StatsScreen extends StatelessWidget {
     final appState = context.watch<AppState>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('學習統計')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.statsTitle)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -23,17 +24,17 @@ class StatsScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: _StatCard(
-                  label: '今日已學習',
+                  label: AppLocalizations.of(context)!.todayLearnedLabel,
                   value: '${appState.stats.learnedToday}',
-                  unit: '個',
+                  unit: AppLocalizations.of(context)!.unitCount,
                 ),
               ),
               const SizedBox(width: 12),
               Expanded(
                 child: _StatCard(
-                  label: '累計已學習',
+                  label: AppLocalizations.of(context)!.totalLearnedLabel,
                   value: '${appState.stats.totalLearned}',
-                  unit: '個',
+                  unit: AppLocalizations.of(context)!.unitCount,
                 ),
               ),
             ],
@@ -41,8 +42,8 @@ class StatsScreen extends StatelessWidget {
           const SizedBox(height: 20),
           const _ReminderSection(),
           const SizedBox(height: 20),
-          const Text('各教材學習進度',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          Text(AppLocalizations.of(context)!.datasetProgressHeader,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           const SizedBox(height: 12),
           for (final dataset in appState.datasets) ...[
             _DatasetProgressCard(dataset: dataset),
@@ -127,7 +128,7 @@ class _DatasetProgressCard extends StatelessWidget {
                 const SizedBox(height: 8),
                 LinearProgressIndicator(value: ratio),
                 const SizedBox(height: 8),
-                Text('$learned / $total 個項目'),
+                Text(AppLocalizations.of(context)!.itemsCountLabel(learned, total)),
                 if (description != null) ...[
                   const SizedBox(height: 12),
                   Text(
@@ -162,10 +163,11 @@ class _ReminderSectionState extends State<_ReminderSection> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('每日複習提醒', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(AppLocalizations.of(context)!.dailyReminderHeader,
+                style: const TextStyle(fontWeight: FontWeight.bold)),
             SwitchListTile(
               contentPadding: EdgeInsets.zero,
-              title: const Text('開啟每日提醒'),
+              title: Text(AppLocalizations.of(context)!.enableDailyReminder),
               value: appState.reminderEnabled,
               onChanged: (v) => appState.setReminder(
                 enabled: v,
@@ -176,7 +178,7 @@ class _ReminderSectionState extends State<_ReminderSection> {
             if (appState.reminderEnabled) ...[
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                title: const Text('提醒時間'),
+                title: Text(AppLocalizations.of(context)!.reminderTimeLabel),
                 trailing: TextButton(
                   child: Text(
                       '${appState.reminderHour.toString().padLeft(2, '0')}:${appState.reminderMinute.toString().padLeft(2, '0')}'),
@@ -200,11 +202,15 @@ class _ReminderSectionState extends State<_ReminderSection> {
                       final pending =
                           await NotificationService.getPendingReminders();
                       final scheduled = pending.any((n) => n.id == 1001);
+                      final timeStr =
+                          '${picked.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')}';
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(scheduled
-                              ? '已排定 ${picked.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')} 提醒'
-                              : '排程失敗，請確認電池優化設定或重新開啟提醒開關'),
+                              ? AppLocalizations.of(context)!
+                                  .reminderScheduledMessage(timeStr)
+                              : AppLocalizations.of(context)!
+                                  .reminderFailedMessage),
                         ),
                       );
                     }
@@ -217,14 +223,15 @@ class _ReminderSectionState extends State<_ReminderSection> {
                   await NotificationService.requestIgnoreBatteryOptimizations();
                   if (!context.mounted) return;
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('請確認「省電策略」選擇「無限制」'),
-                      duration: Duration(seconds: 4),
+                    SnackBar(
+                      content:
+                          Text(AppLocalizations.of(context)!.batteryOptSnackbar),
+                      duration: const Duration(seconds: 4),
                     ),
                   );
                 },
                 icon: const Icon(Icons.battery_charging_full, size: 18),
-                label: const Text('提醒沒準時跳出？點此排除電池優化限制'),
+                label: Text(AppLocalizations.of(context)!.batteryOptButtonLabel),
               ),
               const SizedBox(height: 8),
               OutlinedButton.icon(
@@ -232,15 +239,16 @@ class _ReminderSectionState extends State<_ReminderSection> {
                   await NotificationService.openMiuiAutostartSettings();
                   if (!context.mounted) return;
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('小米手機請在清單裡找到本App並開啟自啟動'
-                          '（其他廠牌手機可忽略這個按鈕）'),
-                      duration: Duration(seconds: 4),
+                    SnackBar(
+                      content: Text(
+                          AppLocalizations.of(context)!.miuiAutostartSnackbar),
+                      duration: const Duration(seconds: 4),
                     ),
                   );
                 },
                 icon: const Icon(Icons.rocket_launch, size: 18),
-                label: const Text('小米/Redmi 手機請另外開啟「自啟動」'),
+                label:
+                    Text(AppLocalizations.of(context)!.miuiAutostartButtonLabel),
               ),
             ],
           ],

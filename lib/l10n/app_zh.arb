@@ -33,5 +33,64 @@
   "starButton": "加入不熟悉單字庫",
   "navPrevious": "上一個",
   "navReplay": "再讀一次",
-  "navNext": "下一個"
+  "navNext": "下一個",
+  "statsTitle": "學習統計",
+  "todayLearnedLabel": "今日已學習",
+  "totalLearnedLabel": "累計已學習",
+  "unitCount": "個",
+  "datasetProgressHeader": "各教材學習進度",
+  "itemsCountLabel": "{learned} / {total} 個項目",
+  "@itemsCountLabel": {
+    "placeholders": {
+      "learned": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "dailyReminderHeader": "每日複習提醒",
+  "enableDailyReminder": "開啟每日提醒",
+  "reminderTimeLabel": "提醒時間",
+  "reminderScheduledMessage": "已排定 {time} 提醒",
+  "@reminderScheduledMessage": {
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "reminderFailedMessage": "排程失敗，請確認電池優化設定或重新開啟提醒開關",
+  "batteryOptButtonLabel": "提醒沒準時跳出？點此排除電池優化限制",
+  "batteryOptSnackbar": "請確認「省電策略」選擇「無限制」",
+  "miuiAutostartButtonLabel": "小米/Redmi 手機請另外開啟「自啟動」",
+  "miuiAutostartSnackbar": "小米手機請在清單裡找到本App並開啟自啟動（其他廠牌手機可忽略這個按鈕）",
+  "settingsTitle": "播放設定",
+  "starredCountLabel": "已標記 {n} 個項目",
+  "@starredCountLabel": {
+    "placeholders": {
+      "n": {"type": "int"}
+    }
+  },
+  "speakOnManualNavigateLabel": "手動切換單字時發音",
+  "showTranslationLabel": "顯示翻譯",
+  "intervalSecondsLabel": "單字間隔停頓：{seconds} 秒",
+  "@intervalSecondsLabel": {
+    "placeholders": {
+      "seconds": {"type": "String"}
+    }
+  },
+  "speechRateLabel": "朗讀語速：{rate}x",
+  "@speechRateLabel": {
+    "placeholders": {
+      "rate": {"type": "String"}
+    }
+  },
+  "scopeModeLabel": "播放範圍 / 模式",
+  "scopeAllRandom": "全部清單（隨機播放）",
+  "scopeAllSequential": "全部清單（依序播放）",
+  "scopeStarredRandom": "僅不熟悉（隨機播放）",
+  "scopeStarredSequential": "僅不熟悉（依序播放）",
+  "readModeLabel": "朗讀內容模式",
+  "readModeBilingual": "雙語朗讀（英文＋翻譯）",
+  "readModeEnglishOnly": "純英文",
+  "repeatCountLabel": "英文重複朗讀次數",
+  "repeatOnce": "讀 1 次",
+  "repeatTwice": "讀 2 次（推薦）",
+  "repeatThrice": "讀 3 次"
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../domain/models/playback_settings.dart';
 import '../providers/app_state.dart';
+import '../../l10n/app_localizations.dart';
 
 /// 可收合的播放設定面板。
 /// 預設收合、記住上次展開狀態、收合時顯示目前設定摘要。
@@ -12,10 +13,11 @@ class SettingsPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final appState = context.watch<AppState>();
     final settings = appState.settings;
+    final l = AppLocalizations.of(context)!;
 
     return Card(
       child: ExpansionTile(
-        title: const Text('⚙️ 播放設定'),
+        title: Text('⚙️ ${l.settingsTitle}'),
         subtitle: Text(settings.summaryLine),
         initiallyExpanded: settings.settingsPanelExpanded,
         onExpansionChanged: (expanded) {
@@ -28,7 +30,7 @@ class SettingsPanel extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: Text('已標記 ${appState.currentStarred.length} 個項目',
+              child: Text(l.starredCountLabel(appState.currentStarred.length),
                   style: const TextStyle(color: Colors.redAccent)),
             ),
           ),
@@ -36,13 +38,13 @@ class SettingsPanel extends StatelessWidget {
           _ReadModeDropdown(settings: settings),
           _RepeatCountDropdown(settings: settings),
           SwitchListTile(
-            title: const Text('手動切換單字時發音'),
+            title: Text(l.speakOnManualNavigateLabel),
             value: settings.speakOnManualNavigate,
             onChanged: (v) => appState.updateSettings(
                 settings.copyWith(speakOnManualNavigate: v)),
           ),
           SwitchListTile(
-            title: const Text('顯示中文翻譯'),
+            title: Text(l.showTranslationLabel),
             value: settings.showTranslation,
             onChanged: (v) => appState
                 .updateSettings(settings.copyWith(showTranslation: v)),
@@ -52,7 +54,8 @@ class SettingsPanel extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('單字間隔停頓：${settings.intervalSeconds.toStringAsFixed(1)} 秒'),
+                Text(l.intervalSecondsLabel(
+                    settings.intervalSeconds.toStringAsFixed(1))),
                 Slider(
                   value: settings.intervalSeconds,
                   min: 0.5,
@@ -69,7 +72,7 @@ class SettingsPanel extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('朗讀語速：${settings.speechRate.toStringAsFixed(1)}x'),
+                Text(l.speechRateLabel(settings.speechRate.toStringAsFixed(1))),
                 Slider(
                   value: settings.speechRate,
                   min: 0.3,
@@ -115,18 +118,18 @@ class _ScopeModeDropdown extends StatelessWidget {
   final PlaybackSettings settings;
   const _ScopeModeDropdown({required this.settings});
 
-  static const _labels = {
-    ScopeMode.allRandom: '全部清單（隨機播放）',
-    ScopeMode.allSequential: '全部清單（依序播放）',
-    ScopeMode.starredRandom: '僅不熟悉（隨機播放）',
-    ScopeMode.starredSequential: '僅不熟悉（依序播放）',
-  };
-
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
+    final l = AppLocalizations.of(context)!;
+    final labels = {
+      ScopeMode.allRandom: l.scopeAllRandom,
+      ScopeMode.allSequential: l.scopeAllSequential,
+      ScopeMode.starredRandom: l.scopeStarredRandom,
+      ScopeMode.starredSequential: l.scopeStarredSequential,
+    };
     return _StackedSettingRow(
-      title: '播放範圍 / 模式',
+      title: l.scopeModeLabel,
       control: DropdownButtonFormField<ScopeMode>(
         initialValue: settings.scopeMode,
         isExpanded: true,
@@ -134,7 +137,7 @@ class _ScopeModeDropdown extends StatelessWidget {
           contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           border: OutlineInputBorder(),
         ),
-        items: _labels.entries
+        items: labels.entries
             .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
             .toList(),
         onChanged: (v) {
@@ -154,8 +157,9 @@ class _ReadModeDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
+    final l = AppLocalizations.of(context)!;
     return _StackedSettingRow(
-      title: '朗讀內容模式',
+      title: l.readModeLabel,
       control: DropdownButtonFormField<ReadMode>(
         initialValue: settings.readMode,
         isExpanded: true,
@@ -163,10 +167,11 @@ class _ReadModeDropdown extends StatelessWidget {
           contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           border: OutlineInputBorder(),
         ),
-        items: const [
+        items: [
           DropdownMenuItem(
-              value: ReadMode.bilingual, child: Text('英雙讀（先英文，再中文）')),
-          DropdownMenuItem(value: ReadMode.englishOnly, child: Text('純英文')),
+              value: ReadMode.bilingual, child: Text(l.readModeBilingual)),
+          DropdownMenuItem(
+              value: ReadMode.englishOnly, child: Text(l.readModeEnglishOnly)),
         ],
         onChanged: (v) {
           if (v != null) {
@@ -185,8 +190,9 @@ class _RepeatCountDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = context.read<AppState>();
+    final l = AppLocalizations.of(context)!;
     return _StackedSettingRow(
-      title: '英文重複朗讀次數',
+      title: l.repeatCountLabel,
       control: DropdownButtonFormField<int>(
         initialValue: settings.repeatCount,
         isExpanded: true,
@@ -194,10 +200,10 @@ class _RepeatCountDropdown extends StatelessWidget {
           contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           border: OutlineInputBorder(),
         ),
-        items: const [
-          DropdownMenuItem(value: 1, child: Text('讀 1 次')),
-          DropdownMenuItem(value: 2, child: Text('讀 2 次（推薦）')),
-          DropdownMenuItem(value: 3, child: Text('讀 3 次')),
+        items: [
+          DropdownMenuItem(value: 1, child: Text(l.repeatOnce)),
+          DropdownMenuItem(value: 2, child: Text(l.repeatTwice)),
+          DropdownMenuItem(value: 3, child: Text(l.repeatThrice)),
         ],
         onChanged: (v) {
           if (v != null) {
