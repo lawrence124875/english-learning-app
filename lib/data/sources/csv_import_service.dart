@@ -71,7 +71,7 @@ class CsvImportService {
     // 判斷第一列是不是表頭（english/translation 之類的文字），是的話跳過。
     var startIndex = 0;
     final firstCell = rows[0].isNotEmpty ? rows[0][0].toString().trim().toLowerCase() : '';
-    const headerWords = {'english', 'word', '英文', '英語', '영어', 'tiếng anh'};
+    const headerWords = {'english', 'word', '英文', '英語', '영어', 'tiếng anh', 'inggris', 'bahasa inggris'};
     if (headerWords.contains(firstCell)) {
       startIndex = 1;
     }

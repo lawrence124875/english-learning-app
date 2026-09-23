@@ -142,5 +142,6 @@
   "notifDailyBody": "단어 몇 개를 들으며 오늘 배운 내용을 다져 보세요",
   "notifInactivityTitle": "오랜만이에요 👋",
   "notifInactivityBody": "며칠 동안 복습하지 않았어요. 단어 몇 개를 들으며 기억을 되살려 보세요",
-  "audioChannelName": "영어 학습 낭독"
+  "audioChannelName": "영어 학습 낭독",
+  "importLangId": "인도네시아어"
 }

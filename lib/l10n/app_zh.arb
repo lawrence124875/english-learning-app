@@ -292,5 +292,6 @@
   "notifDailyBody": "回來聽幾個單字，鞏固今天學到的內容吧",
   "notifInactivityTitle": "好久不見 👋",
   "notifInactivityBody": "已經好幾天沒複習了，回來聽幾個單字，別讓記憶生疏了",
-  "audioChannelName": "英語學習朗讀"
+  "audioChannelName": "英語學習朗讀",
+  "importLangId": "印尼文"
 }

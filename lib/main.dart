@@ -132,6 +132,7 @@ class EnglishLearningApp extends StatelessWidget {
           Locale('ja'),
           Locale('ko'),
           Locale('vi'),
+          Locale('id'),
         ],
         theme: ThemeData(
           useMaterial3: true,

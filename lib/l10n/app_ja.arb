@@ -142,5 +142,6 @@
   "notifDailyBody": "単語をいくつか聞いて、今日の学習内容を定着させましょう",
   "notifInactivityTitle": "お久しぶりです 👋",
   "notifInactivityBody": "数日間復習していません。単語を少し聞いて、記憶を呼び戻しましょう",
-  "audioChannelName": "英語学習の読み上げ"
+  "audioChannelName": "英語学習の読み上げ",
+  "importLangId": "インドネシア語"
 }
