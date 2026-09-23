@@ -1,7 +1,7 @@
 name: english_learning_app
 description: "智慧聽覺巡航 - 四合一英語核心學習神器"
 publish_to: 'none'
-version: 0.1.0+3
+version: 0.1.1+4
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
