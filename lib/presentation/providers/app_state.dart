@@ -443,7 +443,13 @@ class AppState extends ChangeNotifier {
     }
     if (settings.readMode == ReadMode.bilingual) {
       final locale = meaningLocaleFor(word);
-      await _ttsService.speak(word.meaningFor(locale), languageCode: locale);
+      // 「〜」「~」「…」是釋義裡的占位符號，部分 TTS 引擎會把它念成
+      // 「から」「물결」之類的字，朗讀前先拿掉（畫面顯示不受影響）。
+      final spoken = word
+          .meaningFor(locale)
+          .replaceAll(RegExp(r'[〜～~…]'), ' ')
+          .trim();
+      await _ttsService.speak(spoken, languageCode: locale);
     }
     final state = currentPlaybackState;
     if (state.playlist.isNotEmpty) {
