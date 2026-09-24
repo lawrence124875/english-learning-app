@@ -11,6 +11,7 @@ import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
+import '../../data/sources/update_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,6 +25,25 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     context.read<AppState>().initialize();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _checkForUpdate());
+  }
+
+  /// 開啟 App 時檢查 Google Play 是否有新版本；一般更新下載完成後，
+  /// 跳出提示讓使用者選擇何時重新啟動套用。
+  Future<void> _checkForUpdate() async {
+    final downloaded = await UpdateService.checkForUpdate();
+    if (!downloaded || !mounted) return;
+    final l = AppLocalizations.of(context)!;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(l.updateDownloadedMessage),
+        duration: const Duration(days: 1),
+        action: SnackBarAction(
+          label: l.updateRestartButton,
+          onPressed: UpdateService.completeFlexibleUpdate,
+        ),
+      ),
+    );
   }
 
   @override

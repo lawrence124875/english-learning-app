@@ -151,5 +151,7 @@
   "datasetNamePhrase": "PHRASE List cụm từ thông dụng (506)",
   "datasetShortPhrase": "Cụm từ 506",
   "datasetNamePhave": "PhaVE List cụm động từ (150)",
-  "datasetShortPhave": "Cụm động từ 150"
+  "datasetShortPhave": "Cụm động từ 150",
+  "updateDownloadedMessage": "Đã tải xong phiên bản mới",
+  "updateRestartButton": "Khởi động lại"
 }

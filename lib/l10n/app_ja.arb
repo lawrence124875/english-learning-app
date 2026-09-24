@@ -151,5 +151,7 @@
   "datasetNamePhrase": "PHRASE List 高頻度フレーズ (506)",
   "datasetShortPhrase": "フレーズ 506",
   "datasetNamePhave": "PhaVE List 句動詞 (150)",
-  "datasetShortPhave": "句動詞 150"
+  "datasetShortPhave": "句動詞 150",
+  "updateDownloadedMessage": "新しいバージョンのダウンロードが完了しました",
+  "updateRestartButton": "再起動"
 }

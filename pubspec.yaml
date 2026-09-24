@@ -28,6 +28,7 @@ dependencies:
   url_launcher: ^6.3.1
   csv: ^6.0.0
   file_picker: ^8.1.4
+  in_app_update: ^4.2.3
   flutter_localizations:
     sdk: flutter
   intl: any

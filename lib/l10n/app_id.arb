@@ -151,5 +151,7 @@
   "datasetNamePhrase": "PHRASE List frasa umum (506)",
   "datasetShortPhrase": "Frasa 506",
   "datasetNamePhave": "PhaVE List kata kerja frasal (150)",
-  "datasetShortPhave": "Frasal 150"
+  "datasetShortPhave": "Frasal 150",
+  "updateDownloadedMessage": "Versi baru selesai diunduh",
+  "updateRestartButton": "Mulai ulang"
 }

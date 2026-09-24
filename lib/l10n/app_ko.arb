@@ -151,5 +151,7 @@
   "datasetNamePhrase": "PHRASE List 고빈도 청크 (506)",
   "datasetShortPhrase": "청크 506",
   "datasetNamePhave": "PhaVE List 구동사 (150)",
-  "datasetShortPhave": "구동사 150"
+  "datasetShortPhave": "구동사 150",
+  "updateDownloadedMessage": "새 버전 다운로드가 완료되었습니다",
+  "updateRestartButton": "다시 시작"
 }
