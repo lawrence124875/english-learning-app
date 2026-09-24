@@ -22,7 +22,7 @@ class _PaywallScreenState extends State<PaywallScreen> {
   /// 一定得在這裡操作（App 本身無法替使用者取消），
   /// Google Play 政策也要求 App 內提供明確的取消入口。
   static const _manageSubscriptionUrl =
-      'https://play.google.com/store/account/subscriptions?package=tw.bcc.english_learning_app';
+      'https://play.google.com/store/account/subscriptions?package=tw.bcc.englishapp';
 
   @override
   void initState() {

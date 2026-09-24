@@ -11,7 +11,7 @@
 1. 前往 https://console.firebase.google.com ，用你的 Google 帳號登入
 2. 「新增專案」→ 專案名稱可取 `english-learning-app` → 照精靈完成建立
 3. 專案建立後，左側選單「專案設定」→「一般」→ 拉到最下面「你的應用程式」→ 點 Android 圖示新增應用程式
-4. 套件名稱要填：`tw.bcc.english_learning_app`（雲端建置用 `flutter create --org tw.bcc --project-name english_learning_app` 產生，實際套件名稱就是這個）
+4. 套件名稱要填：`tw.bcc.englishapp`（雲端建置時由 scripts/patch_firebase.sh 強制設定 applicationId，跟 Firebase 登記的一致）
 5. 下載產生的 `google-services.json` 檔案，傳給我（或直接上傳到 GitHub repo 的 `android/app/` 資料夾底下，我再讀取整合）
 
 ## 2. Google Play 開發者帳號
