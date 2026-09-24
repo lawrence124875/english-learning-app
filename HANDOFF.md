@@ -11,6 +11,7 @@
 ## 0. 新對話開始時的標準流程
 
 1. 向 Lawrence 要 GitHub 權杖（fine-grained token，只授權這個 repo；權限 Contents 讀寫、Workflows 讀寫）。權杖**不存進記憶、不寫進任何檔案**，每次對話由他貼上。
+   要權杖時主動附上網址：建立新權杖 https://github.com/settings/personal-access-tokens/new ；管理現有權杖 https://github.com/settings/personal-access-tokens 。未到期的舊權杖可沿用。
 2. Clone repo：`git clone https://github.com/lawrence124875/english-learning-app.git`（公開 repo，clone 不需權杖）。
 3. 先讀本文件，再依需求讀程式碼。
 4. Commit 時用 `git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit ...`（容器沒有 git 身分設定）。
