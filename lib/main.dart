@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:audio_service/audio_service.dart';
@@ -23,6 +24,10 @@ TtsAudioHandler? _audioHandler;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // 無邊框畫面（edge-to-edge）：Android 15 以上目標 SDK 35 的 App 預設就是
+  // 無邊框，這裡讓舊版 Android 也採用相同顯示方式，畫面延伸到狀態列與
+  // 導覽列底下；內容避開系統列的處理在 MaterialApp 的 builder 裡。
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
   // 每一個初始化步驟都個別包一層 try-catch：任何一個服務初始化失敗，
   // 都不該讓整個 App 開不起來。特別是 AudioService.init()——如果使用者
@@ -115,6 +120,13 @@ class EnglishLearningApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        // 所有畫面統一避開底部導覽列與左右瀏海（上方狀態列由各頁 AppBar
+        // 自動處理），避免無邊框模式下清單最後一項或按鈕被手勢列蓋住；
+        // 讓出的區域塗上背景色，看起來跟畫面連成一片。
+        builder: (context, child) => ColoredBox(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          child: SafeArea(top: false, child: child ?? const SizedBox.shrink()),
+        ),
         // 工作管理員（最近使用的 App 清單）顯示的名稱，跟著手機語言走
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         debugShowCheckedModeBanner: false,
