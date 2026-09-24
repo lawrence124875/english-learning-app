@@ -10,6 +10,7 @@ import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import '../../l10n/app_localizations.dart';
+import '../dataset_labels.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -145,7 +146,7 @@ class _DatasetTabs extends StatelessWidget {
         final dataset = appState.datasets[i];
         final selected = i == appState.currentDatasetIndex;
         return ChoiceChip(
-          label: Text(dataset.shortName),
+          label: Text(datasetShortName(dataset, AppLocalizations.of(context)!)),
           selected: selected,
           onSelected: (_) => appState.switchDataset(i),
         );
@@ -177,7 +178,7 @@ class _PlaybackCard extends StatelessWidget {
                         ? AppLocalizations.of(context)!.wordNumberLabel(
                             appState.currentWordNumber!,
                             appState.currentDataset.items.length)
-                        : appState.currentDataset.shortName,
+                        : datasetShortName(appState.currentDataset, AppLocalizations.of(context)!),
                     style: const TextStyle(fontSize: 12),
                   ),
                   visualDensity: VisualDensity.compact,
@@ -221,7 +222,7 @@ class _PlaybackCard extends StatelessWidget {
                   ),
                   if (settings.showTranslation && word != null) ...[
                     const SizedBox(height: 8),
-                    Text(word.meaningFor(appState.currentDataset.primaryLocale),
+                    Text(appState.meaningOf(word),
                         style: Theme.of(context).textTheme.titleMedium),
                   ],
                 ],

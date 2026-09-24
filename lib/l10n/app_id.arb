@@ -143,5 +143,13 @@
   "notifInactivityTitle": "Lama tak jumpa 👋",
   "notifInactivityBody": "Sudah beberapa hari Anda tidak belajar. Dengarkan beberapa kata agar ingatan tetap segar",
   "audioChannelName": "Pembacaan belajar bahasa Inggris",
-  "importLangId": "Bahasa Indonesia"
+  "importLangId": "Bahasa Indonesia",
+  "datasetNameNgsl": "NGSL 2809 kosakata inti",
+  "datasetShortNgsl": "NGSL 2809 kata",
+  "datasetNameSpoken": "NGSL 720 kata lisan",
+  "datasetShortSpoken": "Lisan 720",
+  "datasetNamePhrase": "PHRASE List frasa umum (506)",
+  "datasetShortPhrase": "Frasa 506",
+  "datasetNamePhave": "PhaVE List kata kerja frasal (150)",
+  "datasetShortPhave": "Frasal 150"
 }

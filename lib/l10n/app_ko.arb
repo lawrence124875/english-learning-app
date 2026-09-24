@@ -143,5 +143,13 @@
   "notifInactivityTitle": "오랜만이에요 👋",
   "notifInactivityBody": "며칠 동안 복습하지 않았어요. 단어 몇 개를 들으며 기억을 되살려 보세요",
   "audioChannelName": "영어 학습 낭독",
-  "importLangId": "인도네시아어"
+  "importLangId": "인도네시아어",
+  "datasetNameNgsl": "NGSL 2809 핵심 단어",
+  "datasetShortNgsl": "NGSL 2809단어",
+  "datasetNameSpoken": "NGSL 구어 720단어",
+  "datasetShortSpoken": "구어 720",
+  "datasetNamePhrase": "PHRASE List 고빈도 청크 (506)",
+  "datasetShortPhrase": "청크 506",
+  "datasetNamePhave": "PhaVE List 구동사 (150)",
+  "datasetShortPhave": "구동사 150"
 }

@@ -4,6 +4,7 @@ import '../providers/app_state.dart';
 import '../../domain/models/word_item.dart';
 import '../../data/sources/notification_service.dart';
 import '../../l10n/app_localizations.dart';
+import '../dataset_labels.dart';
 
 /// 學習統計畫面：今日學習數、總計學習數、每日複習提醒設定，
 /// 以及四份教材各自的學習進度（NGSL 2809 額外附上官方公開的
@@ -120,7 +121,7 @@ class _DatasetProgressCard extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(dataset.name,
+                Text(datasetName(dataset, AppLocalizations.of(context)!),
                     style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 LinearProgressIndicator(value: ratio),

@@ -17,4 +17,14 @@ class BackgroundL10n {
     }
     return lookupAppLocalizations(const Locale('zh'));
   }
+
+  /// 內建教材翻譯要用的語言代碼（對應教材 JSON 裡 "m" 的 key）。
+  static String translationKey() {
+    for (final deviceLocale in PlatformDispatcher.instance.locales) {
+      final lang = deviceLocale.languageCode;
+      if (lang == 'zh') return 'zh-TW';
+      if (const {'ja', 'ko', 'vi', 'id'}.contains(lang)) return lang;
+    }
+    return 'zh-TW';
+  }
 }

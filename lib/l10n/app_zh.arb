@@ -293,5 +293,13 @@
   "notifInactivityTitle": "好久不見 👋",
   "notifInactivityBody": "已經好幾天沒複習了，回來聽幾個單字，別讓記憶生疏了",
   "audioChannelName": "英語學習朗讀",
-  "importLangId": "印尼文"
+  "importLangId": "印尼文",
+  "datasetNameNgsl": "NGSL 2809 核心單字",
+  "datasetShortNgsl": "NGSL 2809字",
+  "datasetNameSpoken": "NGSL 口語 720 字",
+  "datasetShortSpoken": "口語 720字",
+  "datasetNamePhrase": "PHRASE List 高頻語塊 (506)",
+  "datasetShortPhrase": "高頻語塊 506",
+  "datasetNamePhave": "PhaVE List 片語動詞 (150)",
+  "datasetShortPhave": "片語動詞 150"
 }

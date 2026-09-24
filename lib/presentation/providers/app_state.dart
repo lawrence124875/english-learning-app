@@ -11,6 +11,7 @@ import '../../data/sources/subscription_service.dart';
 import '../../data/sources/ads_service.dart';
 import '../../data/repositories/stats_repository.dart';
 import '../../data/sources/notification_service.dart';
+import '../../data/sources/background_l10n.dart';
 import '../../data/repositories/custom_dataset_repository.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
@@ -332,6 +333,17 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// 這個項目實際要顯示/朗讀的翻譯語言。內建教材跟著介面語言，
+  /// 自訂教材用匯入時選的語言；該語言還沒翻譯時退回中文。
+  String meaningLocaleFor(WordItem word) {
+    final preferred = currentDataset.builtIn
+        ? BackgroundL10n.translationKey()
+        : currentDataset.primaryLocale;
+    return word.resolveLocale(preferred);
+  }
+
+  String meaningOf(WordItem word) => word.meaningFor(meaningLocaleFor(word));
+
   /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
   void _updateNowPlaying() {
     final word = currentWord;
@@ -339,7 +351,7 @@ class AppState extends ChangeNotifier {
     final state = currentPlaybackState;
     _audioHandler?.updateNowPlaying(
       word: word.word,
-      meaning: settings.showTranslation ? word.meaningFor(currentDataset.primaryLocale) : '',
+      meaning: settings.showTranslation ? meaningOf(word) : '',
       playing: isPlaying,
       currentIndex: state.playlist.isEmpty ? 0 : state.currentStep + 1,
       totalCount: state.playlist.length,
@@ -430,7 +442,7 @@ class AppState extends ChangeNotifier {
       await _ttsService.speak(word.word, languageCode: 'en-US');
     }
     if (settings.readMode == ReadMode.bilingual) {
-      final locale = currentDataset.primaryLocale;
+      final locale = meaningLocaleFor(word);
       await _ttsService.speak(word.meaningFor(locale), languageCode: locale);
     }
     final state = currentPlaybackState;

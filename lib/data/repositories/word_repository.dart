@@ -24,6 +24,7 @@ class LocalAssetWordRepository implements WordRepository {
     for (final path in _files) {
       final raw = await rootBundle.loadString(path);
       final json = jsonDecode(raw) as Map<String, dynamic>;
+      json['builtIn'] = true;
       results.add(WordDataset.fromJson(json));
     }
     return results;

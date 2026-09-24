@@ -1,6 +1,6 @@
 /// 單一教材項目（單字或片語）。
 /// [translations] 是多語言 map，例如 {"zh-TW": "蘋果", "ja": "りんご"}。
-/// 目前只會有 zh-TW，之後加日/韓/越語只需擴充這個 map，不需要改資料結構。
+/// 內建教材逐步補上 ja / ko / vi / id；還沒翻譯到的項目會退回 zh-TW。
 class WordItem {
   final String id;
   final String word;
@@ -14,7 +14,16 @@ class WordItem {
 
   /// 依照使用者目前的語言設定取得對應翻譯；找不到則 fallback 回中文。
   String meaningFor(String localeCode) {
-    return translations[localeCode] ?? translations['zh-TW'] ?? '';
+    return translations[resolveLocale(localeCode)] ?? '';
+  }
+
+  /// 實際會用到的翻譯語言：優先用 [preferred]，沒有就退回 zh-TW。
+  /// 朗讀翻譯時要用這個結果決定 TTS 語言，才不會發生
+  /// 「顯示的是中文翻譯，卻用日文語音去念」的情況。
+  String resolveLocale(String preferred) {
+    if (translations.containsKey(preferred)) return preferred;
+    if (translations.containsKey('zh-TW')) return 'zh-TW';
+    return translations.isEmpty ? preferred : translations.keys.first;
   }
 
   factory WordItem.fromJson(Map<String, dynamic> json) {
@@ -46,12 +55,17 @@ class WordDataset {
   /// 都要照這個欄位選對應語言，不能整個 App 都寫死中文。
   final String primaryLocale;
 
+  /// 是否為 App 內建教材。內建教材的翻譯語言跟著介面語言走；
+  /// 自訂教材則固定使用匯入時選的 [primaryLocale]。
+  final bool builtIn;
+
   const WordDataset({
     required this.id,
     required this.name,
     required this.shortName,
     required this.items,
     this.primaryLocale = 'zh-TW',
+    this.builtIn = false,
   });
 
   factory WordDataset.fromJson(Map<String, dynamic> json) {
@@ -64,6 +78,7 @@ class WordDataset {
           .map((e) => WordItem.fromJson(e as Map<String, dynamic>))
           .toList(),
       primaryLocale: json['primaryLocale'] as String? ?? 'zh-TW',
+      builtIn: json['builtIn'] as bool? ?? false,
     );
   }
 }

@@ -143,5 +143,13 @@
   "notifInactivityTitle": "Lâu rồi không gặp 👋",
   "notifInactivityBody": "Đã vài ngày bạn chưa ôn tập, quay lại nghe vài từ để không quên nhé",
   "audioChannelName": "Đọc học tiếng Anh",
-  "importLangId": "Tiếng Indonesia"
+  "importLangId": "Tiếng Indonesia",
+  "datasetNameNgsl": "NGSL 2809 từ cốt lõi",
+  "datasetShortNgsl": "NGSL 2809 từ",
+  "datasetNameSpoken": "NGSL 720 từ văn nói",
+  "datasetShortSpoken": "Văn nói 720",
+  "datasetNamePhrase": "PHRASE List cụm từ thông dụng (506)",
+  "datasetShortPhrase": "Cụm từ 506",
+  "datasetNamePhave": "PhaVE List cụm động từ (150)",
+  "datasetShortPhave": "Cụm động từ 150"
 }
