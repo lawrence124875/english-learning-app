@@ -77,7 +77,9 @@ class RemoteWordRepository implements WordRepository {
       final file = File('${dir.path}/content_$datasetId.json');
       if (!await file.exists()) return null;
       final raw = await file.readAsString();
-      return WordDataset.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+      final json = jsonDecode(raw) as Map<String, dynamic>;
+      json['builtIn'] = true;
+      return WordDataset.fromJson(json);
     } catch (_) {
       return null;
     }
@@ -86,16 +88,37 @@ class RemoteWordRepository implements WordRepository {
   Future<WordDataset> _loadFromBundledAssets(
       String datasetId, String assetPath) async {
     final raw = await rootBundle.loadString(assetPath);
-    return WordDataset.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    final json = jsonDecode(raw) as Map<String, dynamic>;
+    // 內建教材的翻譯跟著介面語言走（見 AppState.meaningLocaleFor）。
+    json['builtIn'] = true;
+    return WordDataset.fromJson(json);
+  }
+
+  /// App 內建教材的內容版本（assets/data/manifest.json 的 version）。
+  Future<int> _bundledVersion() async {
+    try {
+      final raw = await rootBundle.loadString('assets/data/manifest.json');
+      return (jsonDecode(raw) as Map<String, dynamic>)['version'] as int? ?? 0;
+    } catch (_) {
+      return 0;
+    }
   }
 
   @override
   Future<List<WordDataset>> loadAllDatasets() async {
     await _trySyncFromCloud();
 
+    // 只有雲端下載的內容版本「比 App 內建的更新」時才使用雲端快取。
+    // 否則 App 更新後內建了新翻譯，卻被手機裡較舊的雲端快取蓋掉。
+    // 之後要透過 Firebase Storage 更新內容，manifest 的 version
+    // 必須大於 assets/data/manifest.json 的 version。
+    final prefs = await SharedPreferences.getInstance();
+    final cachedVersion = prefs.getInt(_cachedVersionKey) ?? 0;
+    final useCache = cachedVersion > await _bundledVersion();
+
     final results = <WordDataset>[];
     for (final entry in _bundledFiles.entries) {
-      final cached = await _loadFromLocalCache(entry.key);
+      final cached = useCache ? await _loadFromLocalCache(entry.key) : null;
       results.add(cached ?? await _loadFromBundledAssets(entry.key, entry.value));
     }
     return results;
