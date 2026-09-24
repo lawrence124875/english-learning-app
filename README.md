@@ -1,3 +1,5 @@
+> **開發接續請先讀 [HANDOFF.md](HANDOFF.md)**（完整開發交接紀錄、架構、版本狀態、待辦）。
+
 # 智慧聽覺巡航 - Flutter 版
 
 英文學習四合一朗讀 App（NGSL 2809 / NGSL-Spoken 720 / PHRASE List 506 / PhaVE List 150）。
