@@ -39,7 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 12,
-        title: Text(AppLocalizations.of(context)!.appTitle),
+        // 標題在直屏時可能比可用寬度長（例如越南文、印尼文），
+        // 用 FittedBox 自動縮小字級，確保整個 App 名稱都看得到；
+        // 寬度足夠時（橫屏、中文）維持原本大小，不會被放大。
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(AppLocalizations.of(context)!.appTitle),
+        ),
         actions: [
           IconButton(
             tooltip: AppLocalizations.of(context)!.statsTooltip,
