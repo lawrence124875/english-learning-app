@@ -1,30 +1,40 @@
 import 'dart:ui';
 import '../../l10n/app_localizations.dart';
 
-/// 讓「沒有畫面（BuildContext）」的地方也能取得多語言文字。
+/// 語言判斷的單一來源：App 介面（MaterialApp）、通知、鎖屏、
+/// 內建教材翻譯都用這裡的規則，確保各處顯示的語言一致。
 ///
-/// 通知排程、鎖屏播放卡片、背景播放通知頻道名稱……這些都是在
-/// Widget 樹之外執行的程式碼，沒辦法用 AppLocalizations.of(context)。
-/// 這裡改成直接讀取裝置的系統語言清單，挑第一個 App 有支援的語言；
-/// 都不支援時退回中文（跟 MaterialApp 的自動選擇邏輯一致）。
+/// 中文分成繁體與簡體：手機設定明確標示簡體（Hans），或地區是
+/// 中國、新加坡、馬來西亞時用簡體；其餘（台灣、香港、澳門）用繁體。
+/// App 不支援的語言一律退回繁體中文。
 class BackgroundL10n {
-  static AppLocalizations current() {
-    for (final deviceLocale in PlatformDispatcher.instance.locales) {
-      final locale = Locale(deviceLocale.languageCode);
-      if (AppLocalizations.delegate.isSupported(locale)) {
-        return lookupAppLocalizations(locale);
+  static const _hans = Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans');
+  static const _supported = {'ja', 'ko', 'vi', 'id', 'es', 'pt'};
+
+  static Locale resolve(Iterable<Locale> deviceLocales) {
+    for (final l in deviceLocales) {
+      if (l.languageCode == 'zh') {
+        final isHans = l.scriptCode == 'Hans' ||
+            (l.scriptCode == null &&
+                const {'CN', 'SG', 'MY'}.contains(l.countryCode));
+        return isHans ? _hans : const Locale('zh');
       }
+      if (_supported.contains(l.languageCode)) return Locale(l.languageCode);
     }
-    return lookupAppLocalizations(const Locale('zh'));
+    return const Locale('zh');
   }
 
-  /// 內建教材翻譯要用的語言代碼（對應教材 JSON 裡 "m" 的 key）。
+  static Locale get deviceLocale =>
+      resolve(PlatformDispatcher.instance.locales);
+
+  static AppLocalizations current() => lookupAppLocalizations(deviceLocale);
+
+  /// 內建教材翻譯要用的語言代碼（對應教材 JSON 裡 "m" 的 key），
+  /// 同時也是朗讀翻譯時交給 TTS 的語言代碼。
   static String translationKey() {
-    for (final deviceLocale in PlatformDispatcher.instance.locales) {
-      final lang = deviceLocale.languageCode;
-      if (lang == 'zh') return 'zh-TW';
-      if (const {'ja', 'ko', 'vi', 'id'}.contains(lang)) return lang;
-    }
-    return 'zh-TW';
+    final l = deviceLocale;
+    if (l.languageCode == 'zh') return l.scriptCode == 'Hans' ? 'zh-CN' : 'zh-TW';
+    if (l.languageCode == 'pt') return 'pt-BR';
+    return l.languageCode;
   }
 }

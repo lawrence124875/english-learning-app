@@ -303,5 +303,7 @@
   "datasetNamePhave": "PhaVE List 片語動詞 (150)",
   "datasetShortPhave": "片語動詞 150",
   "updateDownloadedMessage": "新版本已下載完成",
-  "updateRestartButton": "重新啟動"
+  "updateRestartButton": "重新啟動",
+  "importLangEs": "西班牙文",
+  "importLangPt": "葡萄牙文"
 }

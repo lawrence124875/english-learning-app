@@ -32,7 +32,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     if (!_translationLocaleInitialized) {
       final lang = Localizations.localeOf(context).languageCode;
       _translationLocale =
-          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id'}[lang] ?? 'zh-TW';
+          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR'}[lang] ?? 'zh-TW';
       _translationLocaleInitialized = true;
     }
   }
@@ -43,6 +43,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
         'ko': l.importLangKo,
         'vi': l.importLangVi,
         'id': l.importLangId,
+        'es': l.importLangEs,
+        'pt-BR': l.importLangPt,
         'en': l.importLangEn,
       };
 

@@ -153,5 +153,7 @@
   "datasetNamePhave": "PhaVE List kata kerja frasal (150)",
   "datasetShortPhave": "Frasal 150",
   "updateDownloadedMessage": "Versi baru selesai diunduh",
-  "updateRestartButton": "Mulai ulang"
+  "updateRestartButton": "Mulai ulang",
+  "importLangEs": "Bahasa Spanyol",
+  "importLangPt": "Bahasa Portugis"
 }

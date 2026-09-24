@@ -130,9 +130,11 @@ class EnglishLearningApp extends StatelessWidget {
         // 工作管理員（最近使用的 App 清單）顯示的名稱，跟著手機語言走
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         debugShowCheckedModeBanner: false,
-        // 不手動指定 locale，Flutter 預設就會依照裝置系統語言自動選擇
-        // 最接近的一種；找不到對應語言時，會自動退回 supportedLocales
-        // 的第一個（這裡是中文）。
+        // 依手機語言自動選擇介面語言；中文會再分辨繁體/簡體，
+        // 不支援的語言退回繁體中文。規則集中在 BackgroundL10n.resolve，
+        // 讓介面、通知、教材翻譯的語言判斷完全一致。
+        localeListResolutionCallback: (locales, supported) =>
+            BackgroundL10n.resolve(locales ?? const []),
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
@@ -145,6 +147,9 @@ class EnglishLearningApp extends StatelessWidget {
           Locale('ko'),
           Locale('vi'),
           Locale('id'),
+          Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+          Locale('es'),
+          Locale('pt'),
         ],
         theme: ThemeData(
           useMaterial3: true,

@@ -153,5 +153,7 @@
   "datasetNamePhave": "PhaVE List 句動詞 (150)",
   "datasetShortPhave": "句動詞 150",
   "updateDownloadedMessage": "新しいバージョンのダウンロードが完了しました",
-  "updateRestartButton": "再起動"
+  "updateRestartButton": "再起動",
+  "importLangEs": "スペイン語",
+  "importLangPt": "ポルトガル語"
 }

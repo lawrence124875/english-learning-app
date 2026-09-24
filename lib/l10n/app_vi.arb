@@ -153,5 +153,7 @@
   "datasetNamePhave": "PhaVE List cụm động từ (150)",
   "datasetShortPhave": "Cụm động từ 150",
   "updateDownloadedMessage": "Đã tải xong phiên bản mới",
-  "updateRestartButton": "Khởi động lại"
+  "updateRestartButton": "Khởi động lại",
+  "importLangEs": "Tiếng Tây Ban Nha",
+  "importLangPt": "Tiếng Bồ Đào Nha"
 }
