@@ -207,7 +207,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - [x] AdMob「開啟應用程式」廣告單元（名稱「開啟時」）已建立，ID 已存 GitHub Secret `ADMOB_APP_OPEN_AD_UNIT_ID`（2026-09-26）。第九版請用設定 Secret 之後的建置產物（Actions #108 之後那次）
 - [x] 隱私權政策（docs/index.html）已新增 Firebase Analytics 匿名使用統計說明（2026-09-26）
 - [x] Play Console「資料安全性」已補上 Analytics（App 互動＋裝置 ID 用途加「分析」），刪除資料網址填 `https://lawrence124875.github.io/english-learning-app/#data-deletion`（2026-09-26）
-- [ ] Play Console「前景服務權限」聲明：類型選「媒體播放」，需附示範影片（YouTube 不公開），不聲明無法發布更新（Lawrence 操作）
+- [x] Play Console「前景服務權限」聲明已提交：類型「媒體播放」，附示範影片（2026-09-26）。之後若新增其他前景服務類型或權限（例如忽略電池最佳化）需另行聲明
 - [ ] 決定是否要加「切換教材」插頁廣告版位（目前沒有）
 
 - [x] 第 8 版已上傳送審（2026-09-24）
