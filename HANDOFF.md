@@ -177,7 +177,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 1. **插頁廣告改在前景顯示（AdMob 政策，必修）**
    現況：`app_state.dart` 在每輪播完時直接呼叫 `AdsService.showInterstitialAd()`，沒有檢查 App 是否在前景；使用者多半鎖屏/背景收聽，可能在背景跳廣告 → 無效流量，可能被停權。
    改法：一輪播完時若不在前景（`WidgetsBinding.instance.lifecycleState != resumed`），設一個「待顯示」旗標；App 回到前景（`didChangeAppLifecycleState` resumed）時再顯示。前景時才直接顯示。
-2. **新增「開啟應用程式廣告」(App Open Ad)**：從背景切回 App 時顯示，頻率上限每 4 小時最多一次；冷啟動第一次不顯示（避免一打開就廣告）；Premium 不顯示；與待顯示的插頁廣告不要同時出現。需在 AdMob 建立 App Open 廣告單元（Lawrence 操作），程式先用 Google 測試 ID。
+2. **新增「開啟應用程式廣告」(App Open Ad)**：從背景切回 App 時顯示，頻率上限**每 1 小時最多一次**（Lawrence 2026-09-26 由 4 小時改為 1 小時）；且需離開 App 超過 30 秒才顯示（避免短暫切出去回訊息就跳廣告）；冷啟動第一次不顯示（避免一打開就廣告）；Premium 不顯示；與待顯示的插頁廣告不要同時出現。需在 AdMob 建立 App Open 廣告單元（Lawrence 操作），程式先用 Google 測試 ID。
 3. **切換教材時的插頁廣告**：加頻率上限（例如距上次任何全螢幕廣告至少 3 分鐘）。
    原則：主要收入是訂閱，廣告頻率保守，避免低評價。AdMob 要正式上架後才能連結，目前沒有廣告收入。
 4. **Firebase Analytics 事件**：加 `firebase_analytics`。建議事件：`play_start`、`round_complete`、`dataset_switch`（dataset_id）、`star_word`、`paywall_view`、`purchase_start`、`purchase_success`、`rewarded_ad_watch`、`import_csv`（筆數）、`ui_language`（使用者屬性）。目的：比較各國留存與付費轉換，決定第三階段語言。隱私權政策與 Play「資料安全性」表單要同步更新（Lawrence 操作）。
