@@ -190,8 +190,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 - [x] 第 8 版已上傳送審（2026-09-24）
 - [x] 簡中、西、葡商店資訊已新增（2026-09-24）
-- [ ] 各國訂閱價格調整：建議表見 `store_assets/launch_prep.md`
+- [x] 各國訂閱價格：Lawrence 決定（2026-09-26）只用台幣定價、由 Google 自動換算，不個別調降；日後改台幣價格時選「套用到所有國家」同步。等有各國付費數據再考慮個別調整（launch_prep.md 的建議表保留作參考）
 - [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
-- [ ] 各語言商店截圖：清單見 `store_assets/launch_prep.md`
+- [ ] 各語言商店截圖：目前先全部沿用繁中截圖（Lawrence 決定）；正式上架前後優先補日、西、葡。清單見 `store_assets/launch_prep.md`
 - [ ] 收集 TestersCommunity 回報並修正
 - [ ] 之後：第三階段語言、iOS 評估
