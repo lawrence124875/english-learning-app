@@ -1,5 +1,5 @@
 """
-產生繁中以外各語言的 Google Play 截圖與主題圖（feature graphic）。
+產生各語言（含繁中）的 Google Play 截圖與主題圖（feature graphic）。
 文字直接讀取 lib/l10n/app_<lang>.arb，確保與 App 內用語一致。
 輸出：store_assets/localized/<lang>/
   1_home.png、2_intro.png、3_stats.png、4_paywall.png、feature_graphic.png
@@ -13,11 +13,13 @@ OUT = os.path.join(ROOT, "store_assets", "localized")
 FONT_DIR = "/usr/share/fonts/opentype/noto/"
 
 # Noto Sans CJK 的 face index：0=日 1=韓 2=簡中 3=繁中。拉丁語系用日文 face（含越南文字母）。
-FACE = {"ja": 0, "ko": 1, "zh_Hans": 2, "vi": 0, "id": 0, "es": 0, "pt": 0}
-CJK = {"ja", "zh_Hans"}  # 逐字換行；韓文有空格，照單字換行
+FACE = {"zh": 3, "ja": 0, "ko": 1, "zh_Hans": 2, "vi": 0, "id": 0, "es": 0, "pt": 0}
+CJK = {"zh", "ja", "zh_Hans"}  # 逐字換行；韓文有空格，照單字換行
 
 # ARB 沒有的少量文字
 EXTRA = {
+    "zh": dict(word="帳單", best="最划算",
+               fg1="NGSL・口語・語塊・片語動詞", fg2="背景朗讀學英語，通勤運動不間斷"),
     "zh_Hans": dict(word="账单", best="最划算",
                     fg1="NGSL・口语・语块・短语动词", fg2="后台朗读学英语，通勤运动不间断"),
     "ja": dict(word="請求書", best="いちばんお得",
@@ -261,7 +263,7 @@ def feature_graphic(L, E, path):
     for ln in l2: d.text((x, y), ln, font=f2, fill=(220, 245, 242), anchor="lm"); y += 44
     img.convert("RGB").save(path, "PNG")
 
-for lang in ["ja", "ko", "vi", "id", "zh_Hans", "es", "pt"]:
+for lang in ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt"]:
     LANG = lang
     L = json.load(open(os.path.join(ROOT, "lib", "l10n", f"app_{lang}.arb"), encoding="utf-8"))
     E = EXTRA[lang]
