@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'feedback_screen.dart';
+import '../../data/sources/ads_service.dart';
 import '../../l10n/app_localizations.dart';
 
 /// 版權/關於頁面。列出四份教材的正式來源引用，
@@ -12,6 +13,7 @@ class AboutScreen extends StatelessWidget {
   static Future<void> _open(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
+      AdsService.skipNextAppOpenAd();
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }

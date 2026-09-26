@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-24（第八版 0.1.5+8）
+最後更新：2026-09-26（第九版 0.1.6+9）
 
 ---
 
@@ -55,7 +55,8 @@ lib/
     update_service.dart        Google Play 應用程式內更新（in_app_update）
     csv_import_service.dart    CSV 匯入（錯誤用 CsvImportError enum 回報，畫面層翻譯）
     feedback_service.dart      意見回饋寫入 Firestore（含 locale 欄位）
-    ads_service.dart           AdMob
+    ads_service.dart           AdMob（插頁/開啟應用程式/獎勵/橫幅廣告＋全螢幕廣告頻率控制與生命週期監聽）
+    analytics_service.dart     Firebase Analytics 事件（第 9 版新增）
   domain/models/word_item.dart  WordItem / WordDataset（translations map、resolveLocale、builtIn 旗標）
   presentation/
     providers/app_state.dart   核心狀態；meaningLocaleFor() 決定翻譯語言
@@ -109,6 +110,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - `.github/workflows/build_android.yml`：push 到 main 自動觸發。流程：flutter create 產生 android 資料夾 → 一連串 `scripts/patch_*.sh`（manifest 背景播放權限、MainActivity 改 AudioServiceActivity、compileSdk、Firebase 設定與 applicationId、ProGuard、file_picker、簽署）→ 產出 APK 與 AAB 兩個 artifact。
 - `build_personal.yml`：手動觸發，`FORCE_PREMIUM=true` 建置全解鎖無廣告的個人版 APK。
 - 簽署金鑰存在 GitHub Secrets：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`(=englishapp)、`ANDROID_KEY_PASSWORD`。Lawrence 本機也有備份。**金鑰遺失＝App 永遠無法更新。**
+- AdMob 廣告單元 Secrets：`ADMOB_APP_ID`、`ADMOB_REWARDED_AD_UNIT_ID`、`ADMOB_INTERSTITIAL_AD_UNIT_ID`、`ADMOB_BANNER_AD_UNIT_ID`、`ADMOB_APP_OPEN_AD_UNIT_ID`（第 9 版新增；未設定時程式退回 Google 測試 ID）。
 - minSdk 固定 21（Android 5.0+）。`purchases_flutter` 鎖在 `">=9.0.0 <10.8.0"`（9.0+ 符合 Billing Library 8；10.8+ 會把 minSdk 提到 23）。
 - 版本號在 `pubspec.yaml`（`version: x.y.z+N`，N 是 Play 的版本代碼，每次上傳都要比之前任何上傳過的大；可以跳號，上傳過的號碼不能重用）。
 
@@ -124,6 +126,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 6 | 0.1.3 | edge-to-edge 無邊框畫面 | **未上傳（跳過）** |
 | 7 | 0.1.4 | 簡中、西、葡介面與教材翻譯 | **未上傳（跳過，有翻譯不跟隨語言的 bug）** |
 | 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | 已上傳送審（2026-09-24，Actions #102） |
+| 9 | 0.1.6 | 插頁廣告只在前景顯示（背景播完一輪改為待顯示）、開啟應用程式廣告（每小時上限、離開≥30秒、冷啟動不顯示）、全螢幕廣告間隔≥3分鐘、Firebase Analytics 事件、越南文/印尼文 App 內標題與商店一致 | 待實機測試後上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
 
@@ -166,11 +169,13 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - Play Console 上傳當機後，版本代碼可能已被用掉 → 用「從檔案庫新增」選已上傳的 bundle。
 - `DropdownButtonFormField` 使用 `initialValue`（新版 Flutter API）。
 - 容器無法編譯 Flutter，所有改動靠 CI 驗證；建置失敗時用 Actions API 查 jobs/steps。
+- `--dart-define=X=$SECRET` 在 Secret 不存在時傳入**空字串**，`String.fromEnvironment` 的 defaultValue 不會生效。新增的 dart-define 要在程式裡自己判斷空字串再退回預設（見 AdsService 的 App Open ID）。
+- 全螢幕廣告本身會觸發 App 生命週期 paused/resumed，任何「回到前景」邏輯都要排除廣告造成的切換。
 - Play Console 的 edge-to-edge 提醒在修正後可能仍顯示一段時間（Flutter 框架本身也會被偵測）。
 
 ---
 
-## 11. 下一版（第 9 版，0.1.6+9）要一起完成的程式修改 ★
+## 11. 第 9 版（0.1.6+9）程式修改 —— 2026-09-26 已完成實作（紀錄保留供參考）
 
 Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會說「開始做第九版」。
 
@@ -184,9 +189,24 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 5. **越南文、印尼文 App 內標題改成與商店名稱一致**：`app_vi.arb` appTitle → `Nghe Tiếng Anh Thông Minh`；`app_id.arb` appTitle → `Belajar Inggris Sambil Dengar`。
 6. 版本號改 `0.1.6+9`，等 CI 成功，更新本文件第 6 節版本紀錄。
 
+### 第 9 版實作說明（給之後維護的人）
+- 廣告邏輯全部集中在 `AdsService`：
+  - `adsEnabled`：預設 false，`AppState.initialize()` 查完 RevenueCat 才設為 `!isPremium`；購買/恢復成功時設 false。
+  - `onRoundComplete()`：前景 → 立即嘗試插頁；背景 → `_pendingInterstitial = true`，回前景時顯示。
+  - `_AdLifecycleObserver`（WidgetsBindingObserver）：paused 記錄離開時間；resumed 時**最多顯示一則**：先處理待顯示插頁，否則判斷開啟應用程式廣告（離開≥30 秒、距上次 App Open ≥1 小時、距上次任何全螢幕廣告 ≥3 分鐘）。冷啟動沒有離開紀錄，不會顯示。
+  - 全螢幕廣告（含獎勵廣告）顯示期間 `_fullScreenAdShowing = true`：廣告 Activity 蓋住 App 造成的 paused/resumed 不算使用者離開，否則看完 30 秒以上的獎勵影片回來會被誤判而跳 App Open。
+  - `skipNextAppOpenAd()`：主動離開 App 的流程（Play 付款/恢復購買、管理訂閱網址、關於頁外部連結、選 CSV 檔、App 內更新、通知/電池/小米設定頁）呼叫，回來不跳 App Open。新增類似流程時記得加。
+- **切換教材原本就沒有插頁廣告**（第 11 節第 3 項的前提有誤）。第 9 版只加了全域 3 分鐘間隔，沒有新增切換教材廣告版位；是否要加由 Lawrence 決定。
+- Analytics：`AnalyticsService`，事件 `play_start`、`round_complete`（dataset_id, cycle）、`dataset_switch`、`star_word`（只記加星號）、`paywall_view`、`purchase_start`/`purchase_success`（package_id）、`rewarded_ad_watch`、`import_csv`（item_count）；使用者屬性 `ui_language`、`is_premium`。自訂教材 id 一律記成 `custom`，不記任何教材名稱或單字內容。
+
 ---
 
 ## 12. 待辦（非程式）
+
+- [ ] 第 9 版實機測試（小米）→ 上傳封閉測試軌道
+- [ ] AdMob 建立「開啟應用程式」廣告單元 → 單元 ID 存 GitHub Secret `ADMOB_APP_OPEN_AD_UNIT_ID`（Lawrence 操作；未設定前用測試 ID，正式版前 AdMob 本來就無法連結）
+- [ ] Firebase Analytics 上線：更新隱私權政策（docs/，說明收集匿名使用統計）＋ Play Console「資料安全性」表單勾選「App 互動」「裝置或其他 ID」（Lawrence 操作；Claude 可代擬隱私權政策文字）
+- [ ] 決定是否要加「切換教材」插頁廣告版位（目前沒有）
 
 - [x] 第 8 版已上傳送審（2026-09-24）
 - [x] 簡中、西、葡商店資訊已新增（2026-09-24）

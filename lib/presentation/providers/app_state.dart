@@ -9,6 +9,7 @@ import '../../data/sources/tts_service.dart';
 import '../../data/sources/tts_audio_handler.dart';
 import '../../data/sources/subscription_service.dart';
 import '../../data/sources/ads_service.dart';
+import '../../data/sources/analytics_service.dart';
 import '../../data/repositories/stats_repository.dart';
 import '../../data/sources/notification_service.dart';
 import '../../data/sources/background_l10n.dart';
@@ -122,6 +123,8 @@ class AppState extends ChangeNotifier {
     notifyListeners();
 
     isPremium = await SubscriptionService.isPremium();
+    AdsService.adsEnabled = !isPremium;
+    AnalyticsService.setUserProperties(isPremium: isPremium);
     stats = await _statsRepository.loadStats();
     reminderEnabled = await _progressRepository.loadReminderEnabled();
     final reminderTime = await _progressRepository.loadReminderTime();
@@ -198,9 +201,16 @@ class AppState extends ChangeNotifier {
   }
 
   Future<bool> purchasePremiumPackage(dynamic package) async {
+    final packageId = _packageIdOf(package);
+    AnalyticsService.purchaseStart(packageId);
+    // Google Play 付款畫面會暫時離開 App，回來時不要跳開啟應用程式廣告。
+    AdsService.skipNextAppOpenAd();
     final success = await SubscriptionService.purchase(package);
     if (success) {
       isPremium = true;
+      AdsService.adsEnabled = false;
+      AnalyticsService.purchaseSuccess(packageId);
+      AnalyticsService.setUserProperties(isPremium: true);
       // 訂閱成功後，所有教材的播放清單都要重新建構成完整版（不再受限）。
       for (final dataset in datasets) {
         _playbackStates[dataset.id] =
@@ -211,6 +221,14 @@ class AppState extends ChangeNotifier {
     return success;
   }
 
+  static String _packageIdOf(dynamic package) {
+    try {
+      return package.identifier as String;
+    } catch (_) {
+      return 'unknown';
+    }
+  }
+
   /// 取得指定教材「已學習」（曾被朗讀過）的項目數，供學習統計畫面使用。
   Future<int> learnedCountForDataset(String datasetId) =>
       _statsRepository.learnedCountForDataset(datasetId);
@@ -219,6 +237,7 @@ class AppState extends ChangeNotifier {
   /// 播放狀態（跟 initialize() 裡對內建教材做的事一樣）。
   Future<void> addCustomDataset(WordDataset dataset) async {
     await _customDatasetRepository.save(dataset);
+    AnalyticsService.importCsv(dataset.items.length);
     datasets.add(dataset);
     _starredSets[dataset.id] = <int>{};
     _playbackStates[dataset.id] = _rebuildPlaylist(dataset, <int>{});
@@ -242,9 +261,12 @@ class AppState extends ChangeNotifier {
   }
 
   Future<bool> restorePremium() async {
+    AdsService.skipNextAppOpenAd();
     final restored = await SubscriptionService.restorePurchases();
     if (restored) {
       isPremium = true;
+      AdsService.adsEnabled = false;
+      AnalyticsService.setUserProperties(isPremium: true);
       for (final dataset in datasets) {
         _playbackStates[dataset.id] =
             _rebuildPlaylist(dataset, _starredSets[dataset.id] ?? {});
@@ -282,6 +304,7 @@ class AppState extends ChangeNotifier {
   void switchDataset(int index) {
     stopCruise();
     currentDatasetIndex = index;
+    AnalyticsService.datasetSwitch(currentDataset.id);
     notifyListeners();
   }
 
@@ -319,6 +342,7 @@ class AppState extends ChangeNotifier {
       starred.remove(idx);
     } else {
       starred.add(idx);
+      AnalyticsService.starWord(dataset.id);
     }
     _starredSets[dataset.id] = starred;
     await _progressRepository.saveStarred(dataset.id, starred);
@@ -391,9 +415,13 @@ class AppState extends ChangeNotifier {
     await _persistCurrentProgress();
     _updateNowPlaying();
     notifyListeners();
-    if (cycleCompleted && !isPremium) {
-      // 免費版：每輪播完顯示一次插頁廣告。失敗也不影響正常播放。
-      AdsService.showInterstitialAd();
+    if (cycleCompleted) {
+      AnalyticsService.roundComplete(dataset.id, cycleCount);
+      if (!isPremium) {
+        // 免費版：每輪播完一次插頁廣告。App 在前景才會立刻顯示；
+        // 鎖屏/背景收聽時先記下，等使用者回到 App 再顯示（AdMob 政策）。
+        AdsService.onRoundComplete();
+      }
     }
     if (speak) await _speakCurrent();
   }
@@ -468,7 +496,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> startCruise() async {
+    if (isPlaying) return;
     isPlaying = true;
+    AnalyticsService.playStart(currentDataset.id);
     _updateNowPlaying();
     notifyListeners();
     await _cruiseLoop();

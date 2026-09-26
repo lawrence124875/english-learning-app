@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../providers/app_state.dart';
+import '../../data/sources/ads_service.dart';
+import '../../data/sources/analytics_service.dart';
 import '../../l10n/app_localizations.dart';
 
 /// 訂閱付費頁面：顯示方案、目前訂閱狀態、恢復購買按鈕。
@@ -27,6 +29,7 @@ class _PaywallScreenState extends State<PaywallScreen> {
   @override
   void initState() {
     super.initState();
+    AnalyticsService.paywallView();
     _loadOfferings();
   }
 
@@ -74,6 +77,7 @@ class _PaywallScreenState extends State<PaywallScreen> {
 
   Future<void> _openManageSubscription() async {
     final uri = Uri.parse(_manageSubscriptionUrl);
+    AdsService.skipNextAppOpenAd();
     await launchUrl(uri, mode: LaunchMode.externalApplication);
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'ads_service.dart';
 import 'package:in_app_update/in_app_update.dart';
 
 /// Google Play「應用程式內更新」。
@@ -25,6 +26,8 @@ class UpdateService {
       if (info.updateAvailability != UpdateAvailability.updateAvailable) {
         return false;
       }
+      // 更新畫面會暫時蓋住 App，回來時不要跳開啟應用程式廣告。
+      AdsService.skipNextAppOpenAd();
       if (info.updatePriority >= _forceUpdatePriority &&
           info.immediateUpdateAllowed) {
         await InAppUpdate.performImmediateUpdate();

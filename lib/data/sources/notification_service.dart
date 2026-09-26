@@ -1,4 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'ads_service.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:permission_handler/permission_handler.dart';
@@ -165,6 +166,7 @@ class NotificationService {
 
     final result = await Permission.ignoreBatteryOptimizations.request();
     if (!result.isGranted) {
+      AdsService.skipNextAppOpenAd();
       await openAppSettings();
     }
   }
@@ -180,6 +182,7 @@ class NotificationService {
           'package_label': '智慧聽覺巡航',
         },
       );
+      AdsService.skipNextAppOpenAd();
       await intent.launch();
       return true;
     } catch (_) {
@@ -198,6 +201,7 @@ class NotificationService {
         componentName:
             'com.miui.permcenter.autostart.AutoStartManagementActivity',
       );
+      AdsService.skipNextAppOpenAd();
       await intent.launch();
     } catch (_) {
       // 非小米裝置或找不到這個頁面，靜默略過即可。

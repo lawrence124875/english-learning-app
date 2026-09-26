@@ -1,4 +1,5 @@
 import 'dart:io';
+import '../../data/sources/ads_service.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
@@ -91,6 +92,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       return;
     }
 
+    // 選檔案會暫時離開 App，回來時不要跳開啟應用程式廣告。
+    AdsService.skipNextAppOpenAd();
     final result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['csv'],
