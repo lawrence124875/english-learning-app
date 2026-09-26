@@ -205,7 +205,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 - [ ] 第 9 版實機測試（小米）→ 上傳封閉測試軌道
 - [x] AdMob「開啟應用程式」廣告單元（名稱「開啟時」）已建立，ID 已存 GitHub Secret `ADMOB_APP_OPEN_AD_UNIT_ID`（2026-09-26）。第九版請用設定 Secret 之後的建置產物（Actions #108 之後那次）
-- [ ] Firebase Analytics 上線：更新隱私權政策（docs/，說明收集匿名使用統計）＋ Play Console「資料安全性」表單勾選「App 互動」「裝置或其他 ID」（Lawrence 操作；Claude 可代擬隱私權政策文字）
+- [x] 隱私權政策（docs/index.html）已新增 Firebase Analytics 匿名使用統計說明（2026-09-26）
+- [ ] Play Console「資料安全性」表單補上 Analytics：「App 活動→App 互動」「裝置或其他 ID」（Lawrence 操作）
 - [ ] 決定是否要加「切換教材」插頁廣告版位（目前沒有）
 
 - [x] 第 8 版已上傳送審（2026-09-24）
