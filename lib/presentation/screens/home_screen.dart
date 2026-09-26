@@ -9,6 +9,7 @@ import 'about_screen.dart';
 import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
+import 'onboarding_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
@@ -25,7 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     context.read<AppState>().initialize();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _checkForUpdate());
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // 第一次開啟 App 時顯示特色介紹（看過就不再自動出現）。
+      OnboardingScreen.showIfFirstTime(context);
+      _checkForUpdate();
+    });
   }
 
   /// 開啟 App 時檢查 Google Play 是否有新版本；一般更新下載完成後，
@@ -88,6 +93,12 @@ class _HomeScreenState extends State<HomeScreen> {
               } else if (value == 'about') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const AboutScreen()));
+              } else if (value == 'intro') {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        fullscreenDialog: true,
+                        builder: (_) => const OnboardingScreen()));
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -102,6 +113,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     title: Text(AppLocalizations.of(context)!.menuPremium),
                   ),
                 ),
+              PopupMenuItem(
+                value: 'intro',
+                child: ListTile(
+                  leading: const Icon(Icons.lightbulb_outline),
+                  title: Text(AppLocalizations.of(context)!.menuIntro),
+                ),
+              ),
               PopupMenuItem(
                 value: 'voice',
                 child: ListTile(

@@ -155,5 +155,21 @@
   "updateDownloadedMessage": "Versi baru selesai diunduh",
   "updateRestartButton": "Mulai ulang",
   "importLangEs": "Bahasa Spanyol",
-  "importLangPt": "Bahasa Portugis"
+  "importLangPt": "Bahasa Portugis",
+  "menuIntro": "Pengenalan fitur",
+  "introSkip": "Lewati",
+  "introNext": "Lanjut",
+  "introStart": "Mulai belajar",
+  "introTitle1": "Belajar bahasa Inggris dengan prinsip 20/80",
+  "introBody1": "Kuasai 2.809 kata inti NGSL dan kamu bisa memahami sekitar 92% teks bahasa Inggris sehari-hari. Tidak perlu menghafal kata langka, fokuskan waktumu pada kata yang benar-benar dipakai.",
+  "introTitle2": "Dibuat khusus untukmu",
+  "introBody2": "Sudah berkali-kali belajar bahasa Inggris tapi selalu berhenti di tengah jalan, daya ingat tidak seperti dulu, atau tidak punya lingkungan berbahasa Inggris? Metode ini dirancang untukmu, agar kamu kembali percaya diri belajar bahasa Inggris.",
+  "introTitle3": "Dengarkan di latar belakang, manfaatkan waktu luang",
+  "introBody3": "Dengarkan saat perjalanan, jalan santai, mengerjakan pekerjaan rumah, atau berolahraga. Saat layar dikunci atau pindah ke aplikasi lain, pembacaan tetap berlanjut tanpa harus melihat layar.",
+  "introTitle4": "Pembacaan dua bahasa + daftar kata belum hafal",
+  "introBody4": "Bahasa Inggris dibacakan lebih dulu, lalu artinya dalam bahasa Indonesia, jadi kamu paham tanpa melihat layar. Tandai kata yang belum hafal dengan bintang, lalu gunakan mode \"Hanya yang belum hafal\" untuk mendengarkannya berulang kali sampai benar-benar ingat.",
+  "introTitle5": "Impor materi yang ingin kamu pelajari",
+  "introBody5": "Kosakata buku pelajaran, ungkapan kerja, materi ujian, dan lainnya bisa disimpan sebagai file CSV (kolom 1 bahasa Inggris, kolom 2 terjemahan) lalu diimpor, dan tetap bisa diputar di latar belakang serta ditandai.",
+  "introTitle6": "4 materi akademis, mulai gratis",
+  "introBody6": "Kata inti NGSL 2809, kata lisan 720, frasa umum 506, dan phrasal verb 150, semuanya dari riset akademis terbuka. Setiap materi punya konten gratis, jadi coba dulu sebelum memutuskan."
 }

@@ -155,5 +155,21 @@
   "updateDownloadedMessage": "Đã tải xong phiên bản mới",
   "updateRestartButton": "Khởi động lại",
   "importLangEs": "Tiếng Tây Ban Nha",
-  "importLangPt": "Tiếng Bồ Đào Nha"
+  "importLangPt": "Tiếng Bồ Đào Nha",
+  "menuIntro": "Giới thiệu tính năng",
+  "introSkip": "Bỏ qua",
+  "introNext": "Tiếp",
+  "introStart": "Bắt đầu học",
+  "introTitle1": "Học tiếng Anh theo quy tắc 20/80",
+  "introBody1": "Nắm vững 2.809 từ cốt lõi NGSL là bạn hiểu được khoảng 92% nội dung tiếng Anh thường ngày. Không học từ hiếm, dồn thời gian vào những từ thật sự dùng đến.",
+  "introTitle2": "Dành riêng cho bạn",
+  "introBody2": "Bạn đã học tiếng Anh nhiều lần nhưng đều bỏ dở, trí nhớ không còn như trước, hay không có môi trường tiếng Anh xung quanh? Phương pháp này được thiết kế cho bạn, giúp bạn lấy lại tự tin khi học tiếng Anh.",
+  "introTitle3": "Nghe nền, biến thời gian rảnh thành giờ học",
+  "introBody3": "Nghe khi đi làm, đi dạo, làm việc nhà hay tập thể dục. Khóa màn hình hoặc chuyển sang ứng dụng khác, phần đọc vẫn tiếp tục, không cần nhìn màn hình.",
+  "introTitle4": "Đọc song ngữ + kho từ chưa thuộc",
+  "introBody4": "Đọc tiếng Anh trước, rồi đọc nghĩa tiếng Việt, không nhìn màn hình vẫn hiểu. Đánh dấu sao những từ chưa thuộc và dùng chế độ \"Chỉ từ chưa thuộc\" để nghe lại nhiều lần cho đến khi nhớ hẳn.",
+  "introTitle5": "Nhập nội dung bạn muốn học",
+  "introBody5": "Từ vựng trong sách, cụm từ hay dùng trong công việc, phạm vi ôn thi… lưu thành file CSV (cột 1 tiếng Anh, cột 2 bản dịch) là nhập được, cũng nghe nền và đánh dấu từ chưa thuộc như bình thường.",
+  "introTitle6": "4 bộ tài liệu học thuật, bắt đầu miễn phí",
+  "introBody6": "Từ cốt lõi NGSL 2809, từ khẩu ngữ 720, cụm từ thông dụng 506, cụm động từ 150, đều từ các nghiên cứu học thuật công khai. Mỗi bộ đều có phần miễn phí để bạn trải nghiệm trước."
 }

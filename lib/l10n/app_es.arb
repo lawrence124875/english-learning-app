@@ -155,5 +155,21 @@
   "updateDownloadedMessage": "Nueva versión descargada",
   "updateRestartButton": "Reiniciar",
   "importLangEs": "Español",
-  "importLangPt": "Portugués"
+  "importLangPt": "Portugués",
+  "menuIntro": "Funciones de la app",
+  "introSkip": "Omitir",
+  "introNext": "Siguiente",
+  "introStart": "Empezar a aprender",
+  "introTitle1": "Aprende inglés con la regla 20/80",
+  "introBody1": "Con las 2.809 palabras básicas de la NGSL entiendes cerca del 92% del inglés cotidiano. Nada de palabras raras: tu tiempo se concentra en lo que de verdad vas a usar.",
+  "introTitle2": "Pensada para ti",
+  "introBody2": "¿Has empezado inglés muchas veces y siempre lo has dejado, sientes que tu memoria ya no es la de antes o no tienes inglés a tu alrededor? Este método está diseñado para ti, para que recuperes la confianza al aprender inglés.",
+  "introTitle3": "Escucha en segundo plano y aprovecha los ratos libres",
+  "introBody3": "Escucha mientras viajas, paseas, haces tareas del hogar o ejercicio. Aunque bloquees la pantalla o cambies de app, la lectura continúa, sin necesidad de mirar la pantalla.",
+  "introTitle4": "Lectura bilingüe + lista de palabras difíciles",
+  "introBody4": "Primero se lee el inglés y luego el significado en español, así lo entiendes sin mirar la pantalla. Marca con una estrella las palabras que aún no dominas y usa el modo \"Solo difíciles\" para repetirlas hasta memorizarlas.",
+  "introTitle5": "Importa lo que quieras aprender",
+  "introBody5": "Vocabulario del libro de texto, expresiones del trabajo o temas de examen: guárdalos como CSV (columna 1 en inglés, columna 2 la traducción) e impórtalos. También se escuchan en segundo plano y puedes marcar las difíciles.",
+  "introTitle6": "4 listas académicas, empieza gratis",
+  "introBody6": "Palabras básicas NGSL 2809, palabras del inglés hablado 720, expresiones frecuentes 506 y phrasal verbs 150, todas de investigaciones académicas públicas. Cada lista tiene contenido gratis para que la pruebes primero."
 }
