@@ -209,12 +209,12 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - [x] 隱私權政策（docs/index.html）已新增 Firebase Analytics 匿名使用統計說明（2026-09-26）
 - [x] Play Console「資料安全性」已補上 Analytics（App 互動＋裝置 ID 用途加「分析」），刪除資料網址填 `https://lawrence124875.github.io/english-learning-app/#data-deletion`（2026-09-26）
 - [x] Play Console「前景服務權限」聲明已提交：類型「媒體播放」，附示範影片（2026-09-26）。之後若新增其他前景服務類型或權限（例如忽略電池最佳化）需另行聲明
-- [ ] 決定是否要加「切換教材」插頁廣告版位（目前沒有）
+- [x] 「切換教材」插頁廣告：Lawrence 2026-09-27 確認**不加**（主要收入是訂閱，廣告頻率保守）
 
 - [x] 第 8 版已上傳送審（2026-09-24）
 - [x] 簡中、西、葡商店資訊已新增（2026-09-24）
 - [x] 各國訂閱價格：Lawrence 決定（2026-09-26）只用台幣定價、由 Google 自動換算，不個別調降；日後改台幣價格時選「套用到所有國家」同步。等有各國付費數據再考慮個別調整（launch_prep.md 的建議表保留作參考）
 - [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
-- [ ] 各語言商店截圖：目前先全部沿用繁中截圖（Lawrence 決定）；正式上架前後優先補日、西、葡。清單見 `store_assets/launch_prep.md`
+- [ ] 各語言商店截圖＋主題圖：2026-09-27 已產生繁中以外 7 語（`store_assets/localized/<lang>/`，每語 4 張截圖＋feature_graphic；腳本 `store_assets/generate_localized_assets.py`，文字讀 ARB，改文案後重跑即可）。待 Lawrence 上傳到 Play Console 各語言商店資訊（上傳後把這項打勾）。注意：繁中舊截圖 `screenshot_voice.png` 有「套用這個語音」按鈕，實際 App 沒有此功能，建議換掉
 - [ ] 收集 TestersCommunity 回報並修正
 - [ ] 之後：第三階段語言、iOS 評估
