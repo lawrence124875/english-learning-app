@@ -123,7 +123,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 5 | 0.1.2 | 印尼文、教材四語翻譯、標題自動縮小、App 內更新 | 已上傳 |
 | 6 | 0.1.3 | edge-to-edge 無邊框畫面 | **未上傳（跳過）** |
 | 7 | 0.1.4 | 簡中、西、葡介面與教材翻譯 | **未上傳（跳過，有翻譯不跟隨語言的 bug）** |
-| 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | **待上傳**（GitHub Actions #102） |
+| 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | 已上傳送審（2026-09-24，Actions #102） |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
 
@@ -135,7 +135,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - 測試期滿 → Play Console 申請正式版存取權（Google 問卷會問測試回饋與修正，版本更新紀錄可當素材）。
 - 正式版前 AdMob 無法連結（平台限制），廣告不會顯示。
 - 訂閱：`premium_monthly`（NT$149）、年繳（NT$999）。年繳設定：帳單週期每年、寬限期用 Google 建議值、帳戶保留自動計算、方案變更「下個結帳日收費」（建議）、重新訂閱允許。取消訂閱後自動於期末回到免費版，不需後台操作。RevenueCat Offering 的 Package 需設為 Monthly / Annual 類型，訂閱頁才會顯示「月繳/年繳方案」。
-- 商店資訊：繁中 + 日韓越印尼已送審；**泰文已移除**（App 沒有泰文）。簡中（zh-CN）、西（es-419，可另加 es-ES）、葡（pt-BR）文案在 `store_assets/store_listing_zhcn_es_pt.md`，待上傳。簡短說明採「忠於中文原句（20/80、92%、找回信心）」的版本。
+- 商店資訊：繁中 + 日韓越印尼 + 簡中/西/葡 皆已送審；**泰文已移除**（App 沒有泰文）。簡中（zh-CN）、西（es-419，可另加 es-ES）、葡（pt-BR）文案在 `store_assets/store_listing_zhcn_es_pt.md`，待上傳。簡短說明採「忠於中文原句（20/80、92%、找回信心）」的版本。
 - AI 素材聲明：選「不為素材加上標籤」（截圖為實機畫面、圖示由 generate_assets.py 程式繪製）。
 - 隱私權政策、app-ads.txt：GitHub Pages `https://lawrence124875.github.io/english-learning-app/`。
 
@@ -170,13 +170,28 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 
 ---
 
-## 11. 待辦
+## 11. 下一版（第 9 版，0.1.6+9）要一起完成的程式修改 ★
 
-- [ ] Lawrence 用 #102 APK 實機驗證日文等語言的教材翻譯與朗讀，然後上傳第 8 版 AAB 到同一封閉測試軌道
-- [ ] Play Console 新增簡中、西、葡商店資訊並送審
-- [ ] 各語言商店截圖（切換手機語言截 4 張）
-- [ ] 各國訂閱價格檢查（JPY、KRW、VND、IDR、MXN、BRL…）
+Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會說「開始做第九版」。
+
+1. **插頁廣告改在前景顯示（AdMob 政策，必修）**
+   現況：`app_state.dart` 在每輪播完時直接呼叫 `AdsService.showInterstitialAd()`，沒有檢查 App 是否在前景；使用者多半鎖屏/背景收聽，可能在背景跳廣告 → 無效流量，可能被停權。
+   改法：一輪播完時若不在前景（`WidgetsBinding.instance.lifecycleState != resumed`），設一個「待顯示」旗標；App 回到前景（`didChangeAppLifecycleState` resumed）時再顯示。前景時才直接顯示。
+2. **新增「開啟應用程式廣告」(App Open Ad)**：從背景切回 App 時顯示，頻率上限每 4 小時最多一次；冷啟動第一次不顯示（避免一打開就廣告）；Premium 不顯示；與待顯示的插頁廣告不要同時出現。需在 AdMob 建立 App Open 廣告單元（Lawrence 操作），程式先用 Google 測試 ID。
+3. **切換教材時的插頁廣告**：加頻率上限（例如距上次任何全螢幕廣告至少 3 分鐘）。
+   原則：主要收入是訂閱，廣告頻率保守，避免低評價。AdMob 要正式上架後才能連結，目前沒有廣告收入。
+4. **Firebase Analytics 事件**：加 `firebase_analytics`。建議事件：`play_start`、`round_complete`、`dataset_switch`（dataset_id）、`star_word`、`paywall_view`、`purchase_start`、`purchase_success`、`rewarded_ad_watch`、`import_csv`（筆數）、`ui_language`（使用者屬性）。目的：比較各國留存與付費轉換，決定第三階段語言。隱私權政策與 Play「資料安全性」表單要同步更新（Lawrence 操作）。
+5. **越南文、印尼文 App 內標題改成與商店名稱一致**：`app_vi.arb` appTitle → `Nghe Tiếng Anh Thông Minh`；`app_id.arb` appTitle → `Belajar Inggris Sambil Dengar`。
+6. 版本號改 `0.1.6+9`，等 CI 成功，更新本文件第 6 節版本紀錄。
+
+---
+
+## 12. 待辦（非程式）
+
+- [x] 第 8 版已上傳送審（2026-09-24）
+- [x] 簡中、西、葡商店資訊已新增（2026-09-24）
+- [ ] 各國訂閱價格調整：建議表見 `store_assets/launch_prep.md`
+- [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
+- [ ] 各語言商店截圖：清單見 `store_assets/launch_prep.md`
 - [ ] 收集 TestersCommunity 回報並修正
-- [ ] 16 天測試期滿 → 申請正式版存取權
-- [ ] 下一版：越南文、印尼文 App 內標題改成與商店名稱一致
-- [ ] 之後：Firebase Analytics 事件規劃、第三階段語言、iOS 評估
+- [ ] 之後：第三階段語言、iOS 評估
