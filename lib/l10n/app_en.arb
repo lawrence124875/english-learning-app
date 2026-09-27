@@ -89,7 +89,7 @@
   "importLangJa": "Japanese",
   "importLangKo": "Korean",
   "importLangVi": "Vietnamese",
-  "importLangEn": "English (e.g. notes or definitions)",
+  "importLangEn": "English",
   "importButton": "Choose a CSV file and import",
   "importingInProgress": "Importing…",
   "importDone": "Imported {count} items!",

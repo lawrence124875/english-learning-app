@@ -89,7 +89,7 @@
   "importLangJa": "日本語",
   "importLangKo": "韓国語",
   "importLangVi": "ベトナム語",
-  "importLangEn": "英語（補足・類義語の説明など）",
+  "importLangEn": "英語",
   "importButton": "CSVファイルを選んでインポート",
   "importingInProgress": "インポート中…",
   "importDone": "インポート完了！全{count}件",

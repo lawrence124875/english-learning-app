@@ -89,7 +89,7 @@
   "importLangJa": "Bahasa Jepang",
   "importLangKo": "Bahasa Korea",
   "importLangVi": "Bahasa Vietnam",
-  "importLangEn": "Bahasa Inggris (catatan tambahan / penjelasan sinonim)",
+  "importLangEn": "Bahasa Inggris",
   "importButton": "Pilih file CSV dan impor",
   "importingInProgress": "Mengimpor…",
   "importDone": "Impor selesai! Total {count} item",

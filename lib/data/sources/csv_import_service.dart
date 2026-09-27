@@ -30,6 +30,27 @@ class CsvImportResult {
 }
 
 class CsvImportService {
+  /// 表頭偵測字（一律小寫比對）：欄位名稱＋各語言名稱（英文寫法、
+  /// 各語言自己的寫法，以及 App 各介面語言對「英文/翻譯/意思」的說法）。
+  static const _headerWords = {
+    // 欄位名稱
+    'word', 'words', 'text', 'phrase', 'source', 'term', 'front', 'back',
+    'translation', 'meaning', 'definition', 'target', 'native',
+    '翻譯', '翻译', '意思', '中文意思', '單字', '单词', '訳', '意味', '単語',
+    '번역', '뜻', '단어', 'nghĩa', 'bản dịch', 'từ', 'terjemahan', 'arti', 'kata',
+    'traducción', 'traduccion', 'significado', 'palabra', 'tradução', 'traducao', 'palavra',
+    // 語言名稱（英文寫法）
+    'english', 'chinese', 'japanese', 'korean', 'vietnamese', 'indonesian',
+    'spanish', 'portuguese', 'french', 'german', 'italian', 'thai',
+    // 語言名稱（各語言寫法／App 介面語言的說法）
+    '英文', '英語', '英语', '中文', '日文', '日語', '日语', '日本語', '韓文', '韓語', '韩语',
+    '한국어', '영어', '일본어', '중국어', 'tiếng anh', 'tiếng việt', 'tiếng nhật',
+    'inggris', 'bahasa inggris', 'bahasa indonesia', 'jepang', 'bahasa jepang',
+    'inglés', 'ingles', 'español', 'espanol', 'japonés', 'japones',
+    'inglês', 'português', 'portugues', 'japonês',
+    'français', 'francais', 'deutsch', 'italiano', 'ไทย', 'อังกฤษ', 'ภาษาอังกฤษ',
+  };
+
   /// [translationLocale] 例如 "zh-TW"、"ja"、"ko"、"vi"、"en" 等，
   /// 由使用者在匯入畫面上選擇，決定這個檔案的「翻譯」欄位要存進
   /// 哪個語言代碼底下。
@@ -68,11 +89,14 @@ class CsvImportService {
       return row;
     }).toList();
 
-    // 判斷第一列是不是表頭（english/translation 之類的文字），是的話跳過。
+    // 判斷第一列是不是表頭，是的話跳過。第一欄或第二欄任一格是
+    // 常見表頭字（english/word/translation…）或語言名稱（japanese、
+    // 日本語、español…）就當表頭——學其他語言的人常把表頭寫成
+    // 「japanese,english」，只看第一欄會把表頭當成一筆資料匯入。
     var startIndex = 0;
-    final firstCell = rows[0].isNotEmpty ? rows[0][0].toString().trim().toLowerCase() : '';
-    const headerWords = {'english', 'word', '英文', '英語', '영어', 'tiếng anh', 'inggris', 'bahasa inggris', 'inglés', 'ingles', 'inglês', '英语', 'text', 'phrase', 'source'};
-    if (headerWords.contains(firstCell)) {
+    String cell(int c) =>
+        rows[0].length > c ? rows[0][c].toString().trim().toLowerCase() : '';
+    if (_headerWords.contains(cell(0)) || _headerWords.contains(cell(1))) {
       startIndex = 1;
     }
 

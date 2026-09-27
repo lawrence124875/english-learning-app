@@ -89,7 +89,7 @@
   "importLangJa": "Japonés",
   "importLangKo": "Coreano",
   "importLangVi": "Vietnamita",
-  "importLangEn": "Inglés (notas adicionales / sinónimos)",
+  "importLangEn": "Inglés",
   "importButton": "Elegir archivo CSV e importar",
   "importingInProgress": "Importando…",
   "importDone": "¡Importación completa! {count} elementos",

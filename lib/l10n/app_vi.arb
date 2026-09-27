@@ -89,7 +89,7 @@
   "importLangJa": "Tiếng Nhật",
   "importLangKo": "Tiếng Hàn",
   "importLangVi": "Tiếng Việt",
-  "importLangEn": "Tiếng Anh (ghi chú thêm / giải thích đồng nghĩa)",
+  "importLangEn": "Tiếng Anh",
   "importButton": "Chọn file CSV để nhập",
   "importingInProgress": "Đang nhập…",
   "importDone": "Nhập xong! Tổng cộng {count} mục",

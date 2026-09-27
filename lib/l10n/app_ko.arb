@@ -89,7 +89,7 @@
   "importLangJa": "일본어",
   "importLangKo": "한국어",
   "importLangVi": "베트남어",
-  "importLangEn": "영어 (추가 메모/동의어 설명 등)",
+  "importLangEn": "영어",
   "importButton": "CSV 파일 선택 후 가져오기",
   "importingInProgress": "가져오는 중…",
   "importDone": "가져오기 완료! 총 {count}개",

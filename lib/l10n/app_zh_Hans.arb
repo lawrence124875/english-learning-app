@@ -89,7 +89,7 @@
   "importLangJa": "日文",
   "importLangKo": "韩文",
   "importLangVi": "越南文",
-  "importLangEn": "英文（例如额外附注/同义说明）",
+  "importLangEn": "英文",
   "importButton": "选择 CSV 档并导入",
   "importingInProgress": "导入中…",
   "importDone": "导入完成！共 {count} 笔",

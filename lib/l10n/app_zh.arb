@@ -174,7 +174,7 @@
   "importLangJa": "日文",
   "importLangKo": "韓文",
   "importLangVi": "越南文",
-  "importLangEn": "英文（例如額外附註/同義說明）",
+  "importLangEn": "英文",
   "importButton": "選擇 CSV 檔並匯入",
   "importingInProgress": "匯入中…",
   "importDone": "匯入完成！共 {count} 筆",
