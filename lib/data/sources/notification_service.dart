@@ -39,7 +39,20 @@ class NotificationService {
     );
   }
 
+  /// 初始化若失敗，記錄錯誤給「通知診斷」畫面顯示（main.dart 會吞掉例外）。
+  static String? initError;
+
   static Future<void> initialize() async {
+    try {
+      await _initializeInner();
+      initError = null;
+    } catch (e) {
+      initError = e.toString();
+      rethrow;
+    }
+  }
+
+  static Future<void> _initializeInner() async {
     tz_data.initializeTimeZones();
 
     const androidSettings =
@@ -239,6 +252,82 @@ class NotificationService {
       await intent.launch();
     } catch (_) {
       // 非小米裝置或找不到這個頁面，靜默略過即可。
+    }
+  }
+
+  // --- 通知診斷（隱藏工具：學習統計頁長按「每日提醒」標題開啟）---
+  static const _testNowId = 1003;
+  static const _testLaterId = 1004;
+
+  /// 收集目前通知相關狀態，每行一項。
+  static Future<List<String>> diagnostics() async {
+    final lines = <String>[];
+    final android = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    lines.add('初始化：${initError == null ? "成功" : "失敗 → $initError"}');
+    try {
+      lines.add('通知權限（App 通知開關）：${await android?.areNotificationsEnabled()}');
+    } catch (e) {
+      lines.add('通知權限：查詢失敗 $e');
+    }
+    try {
+      lines.add('精準鬧鐘權限：${await android?.canScheduleExactNotifications()}');
+    } catch (e) {
+      lines.add('精準鬧鐘權限：查詢失敗 $e');
+    }
+    try {
+      final chans = await android?.getNotificationChannels() ?? [];
+      final mine = chans.where((c) => c.id == _channelId).toList();
+      lines.add(mine.isEmpty
+          ? '提醒頻道：不存在！'
+          : '提醒頻道重要性：${mine.first.importance.value}（0＝被使用者關閉）');
+    } catch (e) {
+      lines.add('提醒頻道：查詢失敗 $e');
+    }
+    try {
+      final pending = await _plugin.pendingNotificationRequests();
+      lines.add('已排程：${pending.isEmpty ? "無" : pending.map((p) => p.id).join(", ")}'
+          '（1001＝每日提醒、1002＝久未使用、1004＝1 分鐘測試）');
+    } catch (e) {
+      lines.add('已排程：查詢失敗 $e');
+    }
+    final now = DateTime.now();
+    lines.add('手機時間：${now.toString().substring(0, 19)}（UTC 偏移 ${now.timeZoneOffset.inHours}）');
+    return lines;
+  }
+
+  /// 立刻發一則通知。回傳 null 代表呼叫成功，否則是錯誤訊息。
+  static Future<String?> showTestNow() async {
+    try {
+      final l = BackgroundL10n.current();
+      await _plugin.show(_testNowId, l.notifDailyTitle, '測試通知（立即）', _details());
+      return null;
+    } catch (e) {
+      return e.toString();
+    }
+  }
+
+  /// 1 分鐘後發一則通知（排程方式與每日提醒相同）。
+  static Future<String?> scheduleTestInOneMinute() async {
+    try {
+      final now = DateTime.now();
+      final scheduled = tz.TZDateTime.from(
+          now.add(const Duration(minutes: 1)).subtract(now.timeZoneOffset),
+          tz.UTC);
+      final l = BackgroundL10n.current();
+      await _plugin.zonedSchedule(
+        _testLaterId,
+        l.notifDailyTitle,
+        '測試通知（1 分鐘後）',
+        scheduled,
+        _details(),
+        androidScheduleMode: await _scheduleMode(),
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+      );
+      return null;
+    } catch (e) {
+      return e.toString();
     }
   }
 }

@@ -127,7 +127,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 7 | 0.1.4 | 簡中、西、葡介面與教材翻譯 | **未上傳（跳過，有翻譯不跟隨語言的 bug）** |
 | 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | 已上傳送審（2026-09-24，Actions #102） |
 | 9 | 0.1.6 | 插頁廣告只在前景顯示（背景播完一輪改為待顯示）、開啟應用程式廣告（每小時上限、離開≥30秒、冷啟動不顯示）、全螢幕廣告間隔≥3分鐘、Firebase Analytics 事件、越南文/印尼文 App 內標題與商店一致、App 內特色介紹滑動導覽 | 已上傳封閉測試並送審（2026-09-27，連同 8 語新商店截圖/主題圖、多語版本資訊） |
-| 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除） | 程式已完成，待實機驗證；可與第十版候選項目一起上傳 |
+| 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除）；第三輪（2026-09-27 紅米實測仍無通知、通知中心與圖示角標皆無）：新增隱藏「通知診斷」工具（學習統計頁**長按「每日提醒」標題**）：顯示初始化結果、通知權限、精準鬧鐘權限、提醒頻道重要性、已排程 ID，並可發「立即測試」與「1 分鐘後測試」通知，用來區分是「通知根本發不出來」還是「排程沒觸發」 | 程式已完成，待實機驗證；可與第十版候選項目一起上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
 
@@ -219,7 +219,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
 - [x] 8 語商店截圖＋主題圖已上傳 Play Console（2026-09-27；圖在 `store_assets/localized/<lang>/`，腳本 `store_assets/generate_localized_assets.py`）
 - [ ] 收集 TestersCommunity 回報並修正
-- [ ] 第十版實機驗證提醒：設定 2～3 分鐘後的提醒時間 → 關掉 App/鎖屏 → 確認通知跳出（紅米需開自啟動、省電無限制）
+- [ ] 第十版實機驗證提醒：先用「通知診斷」回報截圖（立即測試有無跳出、1 分鐘後測試有無跳出）再決定下一步修法；原流程：設定 2～3 分鐘後的提醒時間 → 關掉 App/鎖屏 → 確認通知跳出（紅米需開自啟動、省電無限制）
 - [ ] **第十版候選（Lawrence 2026-09-27 同意）**：
   1. 自訂教材 CSV「第一欄語言」可選：目前 `app_state.dart` 朗讀 `word.word` 固定 `languageCode: 'en-US'`，匯入其他語言會用英文發音。改為匯入時選第一欄語言、朗讀用該語言 TTS。定位不變（仍是英文學習 App），只在功能介紹/商店說明提一句「也可匯入其他語言」。
   2. 英文介面只當「不支援語言」的預設介面（目前 fallback 是繁中，泰/土/德/法等手機會看到中文）；**不是**開拓印度等市場的策略。

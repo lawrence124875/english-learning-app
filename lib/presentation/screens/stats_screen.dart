@@ -12,6 +12,53 @@ import '../dataset_labels.dart';
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
 
+  /// 通知診斷對話框：顯示權限/頻道/排程狀態，並可發立即與 1 分鐘後的測試通知。
+  static Future<void> _showNotificationDiagnostics(BuildContext context) async {
+    var lines = await NotificationService.diagnostics();
+    String? result;
+    if (!context.mounted) return;
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setState) => AlertDialog(
+          title: const Text('通知診斷'),
+          content: SingleChildScrollView(
+            child: SelectableText([
+              ...lines,
+              if (result != null) '\n$result',
+            ].join('\n')),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                final err = await NotificationService.showTestNow();
+                lines = await NotificationService.diagnostics();
+                setState(() => result = err == null
+                    ? '已送出立即測試通知，請看通知中心'
+                    : '立即通知失敗：$err');
+              },
+              child: const Text('立即測試'),
+            ),
+            TextButton(
+              onPressed: () async {
+                final err = await NotificationService.scheduleTestInOneMinute();
+                lines = await NotificationService.diagnostics();
+                setState(() => result = err == null
+                    ? '已排 1 分鐘後測試，可關掉 App 或鎖屏等候'
+                    : '排程失敗：$err');
+              },
+              child: const Text('1 分鐘後測試'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('關閉'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final appState = context.watch<AppState>();
@@ -161,8 +208,12 @@ class _ReminderSectionState extends State<_ReminderSection> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(AppLocalizations.of(context)!.dailyReminderHeader,
-                style: const TextStyle(fontWeight: FontWeight.bold)),
+            // 長按標題開啟隱藏的「通知診斷」工具（開發/測試用）。
+            GestureDetector(
+              onLongPress: () => _showNotificationDiagnostics(context),
+              child: Text(AppLocalizations.of(context)!.dailyReminderHeader,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+            ),
             SwitchListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(AppLocalizations.of(context)!.enableDailyReminder),
