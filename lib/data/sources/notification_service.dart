@@ -117,7 +117,6 @@ class NotificationService {
   /// UTC 偏移量，包含日光節約時間）手動計算。
   static tz.TZDateTime _nextInstanceOfLocalTime(int hour, int minute) {
     final nowLocal = DateTime.now();
-    final offset = nowLocal.timeZoneOffset;
 
     var targetLocal =
         DateTime(nowLocal.year, nowLocal.month, nowLocal.day, hour, minute);
@@ -125,10 +124,10 @@ class NotificationService {
       targetLocal = targetLocal.add(const Duration(days: 1));
     }
 
-    // 把「裝置本地時間」轉成對應的 UTC 時間點，再包成 TZDateTime(UTC)——
-    // 這樣得到的是正確的絕對時間點，不需要知道裝置的 IANA 時區名稱。
-    final targetUtc = targetLocal.subtract(offset);
-    return tz.TZDateTime.from(targetUtc, tz.UTC);
+    // 注意：TZDateTime.from 取的是 DateTime 的「絕對時間點」（epoch），
+    // 不是牆上時鐘數字，所以直接傳本地 DateTime 即可，不能再減時區偏移——
+    // 第 10 版前多減了 8 小時，導致每日提醒提早 8 小時觸發（設 19:00 會在 11:00 跳）。
+    return tz.TZDateTime.from(targetLocal, tz.UTC);
   }
 
   /// 排程每天固定時間的複習提醒（[hour]/[minute] 為 24 小時制，裝置本地時間）。
@@ -176,10 +175,7 @@ class NotificationService {
 
     final now = DateTime.now();
     final target = now.add(const Duration(days: 3));
-    final scheduled = tz.TZDateTime.from(
-      target.subtract(now.timeZoneOffset),
-      tz.UTC,
-    );
+    final scheduled = tz.TZDateTime.from(target, tz.UTC);
 
     final l = BackgroundL10n.current();
     await _plugin.zonedSchedule(
@@ -311,9 +307,8 @@ class NotificationService {
   static Future<String?> scheduleTestInOneMinute() async {
     try {
       final now = DateTime.now();
-      final scheduled = tz.TZDateTime.from(
-          now.add(const Duration(minutes: 1)).subtract(now.timeZoneOffset),
-          tz.UTC);
+      final scheduled =
+          tz.TZDateTime.from(now.add(const Duration(minutes: 1)), tz.UTC);
       final l = BackgroundL10n.current();
       await _plugin.zonedSchedule(
         _testLaterId,
