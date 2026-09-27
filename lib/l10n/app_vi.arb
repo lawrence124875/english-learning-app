@@ -78,7 +78,7 @@
   "importSampleApple": "quả táo",
   "importSampleGiveUp": "từ bỏ",
   "importSampleHowAreYou": "Hôm nay bạn thế nào?",
-  "importFormatHint": "Cột thứ nhất là tiếng Anh (từ, cụm từ hoặc cả câu đều được), cột thứ hai là bản dịch tương ứng, lưu thành file CSV là có thể nhập.",
+  "importFormatHint": "Cột thứ nhất là tiếng Anh (từ, cụm từ hoặc cả câu đều được), cột thứ hai là bản dịch tương ứng, lưu thành file CSV là có thể nhập. Bạn cũng có thể nhập ngôn ngữ khác ngoài tiếng Anh, chỉ cần chọn ngôn ngữ của cột thứ nhất bên dưới.",
   "importGetTemplate": "Tải file mẫu",
   "importTemplateSaved": "Đã lưu file mẫu vào thư mục tạm: {path}",
   "importNameLabel": "Tên bộ tài liệu",
@@ -169,7 +169,8 @@
   "introTitle4": "Đọc song ngữ + kho từ chưa thuộc",
   "introBody4": "Đọc tiếng Anh trước, rồi đọc nghĩa tiếng Việt, không nhìn màn hình vẫn hiểu. Đánh dấu sao những từ chưa thuộc và dùng chế độ \"Chỉ từ chưa thuộc\" để nghe lại nhiều lần cho đến khi nhớ hẳn.",
   "introTitle5": "Nhập nội dung bạn muốn học",
-  "introBody5": "Từ vựng trong sách, cụm từ hay dùng trong công việc, phạm vi ôn thi… lưu thành file CSV (cột 1 tiếng Anh, cột 2 bản dịch) là nhập được, cũng nghe nền và đánh dấu từ chưa thuộc như bình thường.",
+  "introBody5": "Từ vựng trong sách, cụm từ hay dùng trong công việc, phạm vi ôn thi… lưu thành file CSV (cột 1 tiếng Anh, cột 2 bản dịch) là nhập được, cũng nghe nền và đánh dấu từ chưa thuộc như bình thường. Cũng có thể nhập ngôn ngữ khác ngoài tiếng Anh.",
   "introTitle6": "4 bộ tài liệu học thuật, bắt đầu miễn phí",
-  "introBody6": "Từ cốt lõi NGSL 2809, từ khẩu ngữ 720, cụm từ thông dụng 506, cụm động từ 150, đều từ các nghiên cứu học thuật công khai. Mỗi bộ đều có phần miễn phí để bạn trải nghiệm trước."
+  "introBody6": "Từ cốt lõi NGSL 2809, từ khẩu ngữ 720, cụm từ thông dụng 506, cụm động từ 150, đều từ các nghiên cứu học thuật công khai. Mỗi bộ đều có phần miễn phí để bạn trải nghiệm trước.",
+  "importWordLangLabel": "Cột thứ nhất là ngôn ngữ gì? (dùng cho giọng đọc)"
 }

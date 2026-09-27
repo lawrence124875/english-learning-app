@@ -131,7 +131,7 @@ class EnglishLearningApp extends StatelessWidget {
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         debugShowCheckedModeBanner: false,
         // 依手機語言自動選擇介面語言；中文會再分辨繁體/簡體，
-        // 不支援的語言退回繁體中文。規則集中在 BackgroundL10n.resolve，
+        // 不支援的語言用英文介面。規則集中在 BackgroundL10n.resolve，
         // 讓介面、通知、教材翻譯的語言判斷完全一致。
         localeListResolutionCallback: (locales, supported) =>
             BackgroundL10n.resolve(locales ?? const []),
@@ -150,6 +150,7 @@ class EnglishLearningApp extends StatelessWidget {
           Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
           Locale('es'),
           Locale('pt'),
+          Locale('en'),
         ],
         theme: ThemeData(
           useMaterial3: true,

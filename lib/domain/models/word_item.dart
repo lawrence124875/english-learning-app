@@ -59,6 +59,11 @@ class WordDataset {
   /// 自訂教材則固定使用匯入時選的 [primaryLocale]。
   final bool builtIn;
 
+  /// 第一欄（要學的文字）的語言，也是朗讀第一欄用的 TTS 語言代碼。
+  /// 內建教材一律 "en-US"；自訂教材在匯入時選擇（第 10 版新增，
+  /// 舊的自訂教材沒有這個欄位，視為英文）。
+  final String wordLocale;
+
   const WordDataset({
     required this.id,
     required this.name,
@@ -66,6 +71,7 @@ class WordDataset {
     required this.items,
     this.primaryLocale = 'zh-TW',
     this.builtIn = false,
+    this.wordLocale = 'en-US',
   });
 
   factory WordDataset.fromJson(Map<String, dynamic> json) {
@@ -79,6 +85,7 @@ class WordDataset {
           .toList(),
       primaryLocale: json['primaryLocale'] as String? ?? 'zh-TW',
       builtIn: json['builtIn'] as bool? ?? false,
+      wordLocale: json['wordLocale'] as String? ?? 'en-US',
     );
   }
 }

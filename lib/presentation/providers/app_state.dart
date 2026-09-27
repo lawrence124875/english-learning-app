@@ -368,7 +368,13 @@ class AppState extends ChangeNotifier {
     return word.resolveLocale(preferred);
   }
 
-  String meaningOf(WordItem word) => word.meaningFor(meaningLocaleFor(word));
+  /// 英文介面（含不支援語言）下，內建教材沒有對應翻譯，不顯示也不朗讀翻譯
+  /// （不能退回中文給英文介面的使用者看）。
+  bool get _hideBuiltInTranslation =>
+      currentDataset.builtIn && BackgroundL10n.translationKey() == 'en';
+
+  String meaningOf(WordItem word) =>
+      _hideBuiltInTranslation ? '' : word.meaningFor(meaningLocaleFor(word));
 
   /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
   void _updateNowPlaying() {
@@ -469,9 +475,11 @@ class AppState extends ChangeNotifier {
     final word = currentWord;
     if (word == null) return;
     for (var i = 0; i < settings.repeatCount; i++) {
-      await _ttsService.speak(word.word, languageCode: 'en-US');
+      // 第一欄語言：內建教材固定英文；自訂教材依匯入時選的語言朗讀。
+      await _ttsService.speak(word.word,
+          languageCode: currentDataset.wordLocale);
     }
-    if (settings.readMode == ReadMode.bilingual) {
+    if (settings.readMode == ReadMode.bilingual && !_hideBuiltInTranslation) {
       final locale = meaningLocaleFor(word);
       // 「〜」「~」「…」是釋義裡的占位符號，部分 TTS 引擎會把它念成
       // 「から」「물결」之類的字，朗讀前先拿掉（畫面顯示不受影響）。
@@ -479,7 +487,9 @@ class AppState extends ChangeNotifier {
           .meaningFor(locale)
           .replaceAll(RegExp(r'[〜～~…]'), ' ')
           .trim();
-      await _ttsService.speak(spoken, languageCode: locale);
+      if (spoken.isNotEmpty) {
+        await _ttsService.speak(spoken, languageCode: locale);
+      }
     }
     final state = currentPlaybackState;
     if (state.playlist.isNotEmpty) {

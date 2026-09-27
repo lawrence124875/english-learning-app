@@ -6,10 +6,11 @@ import '../../l10n/app_localizations.dart';
 ///
 /// 中文分成繁體與簡體：手機設定明確標示簡體（Hans），或地區是
 /// 中國、新加坡、馬來西亞時用簡體；其餘（台灣、香港、澳門）用繁體。
-/// App 不支援的語言一律退回繁體中文。
+/// 英文手機，以及 App 不支援的語言（泰、土、德、法…），一律用英文介面
+/// （第 10 版起；之前退回繁體中文）。英文介面下內建教材不顯示/不朗讀翻譯。
 class BackgroundL10n {
   static const _hans = Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans');
-  static const _supported = {'ja', 'ko', 'vi', 'id', 'es', 'pt'};
+  static const _supported = {'ja', 'ko', 'vi', 'id', 'es', 'pt', 'en'};
 
   static Locale resolve(Iterable<Locale> deviceLocales) {
     for (final l in deviceLocales) {
@@ -21,7 +22,7 @@ class BackgroundL10n {
       }
       if (_supported.contains(l.languageCode)) return Locale(l.languageCode);
     }
-    return const Locale('zh');
+    return const Locale('en');
   }
 
   static Locale get deviceLocale =>

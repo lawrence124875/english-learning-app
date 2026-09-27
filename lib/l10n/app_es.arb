@@ -78,7 +78,7 @@
   "importSampleApple": "manzana",
   "importSampleGiveUp": "rendirse",
   "importSampleHowAreYou": "¿Qué tal tu día?",
-  "importFormatHint": "La primera columna es el inglés (palabra, frase o una oración completa) y la segunda su traducción. Guárdalo como CSV e impórtalo.",
+  "importFormatHint": "La primera columna es el inglés (palabra, frase o una oración completa) y la segunda su traducción. Guárdalo como CSV e impórtalo. También puedes importar otros idiomas además del inglés: solo elige abajo el idioma de la primera columna.",
   "importGetTemplate": "Obtener plantilla",
   "importTemplateSaved": "Plantilla guardada en la carpeta temporal: {path}",
   "importNameLabel": "Nombre del material",
@@ -169,7 +169,8 @@
   "introTitle4": "Lectura bilingüe + lista de palabras difíciles",
   "introBody4": "Primero se lee el inglés y luego el significado en español, así lo entiendes sin mirar la pantalla. Marca con una estrella las palabras que aún no dominas y usa el modo \"Solo difíciles\" para repetirlas hasta memorizarlas.",
   "introTitle5": "Importa lo que quieras aprender",
-  "introBody5": "Vocabulario del libro de texto, expresiones del trabajo o temas de examen: guárdalos como CSV (columna 1 en inglés, columna 2 la traducción) e impórtalos. También se escuchan en segundo plano y puedes marcar las difíciles.",
+  "introBody5": "Vocabulario del libro de texto, expresiones del trabajo o temas de examen: guárdalos como CSV (columna 1 en inglés, columna 2 la traducción) e impórtalos. También se escuchan en segundo plano y puedes marcar las difíciles. También puedes importar otros idiomas además del inglés.",
   "introTitle6": "4 listas académicas, empieza gratis",
-  "introBody6": "Palabras básicas NGSL 2809, palabras del inglés hablado 720, expresiones frecuentes 506 y phrasal verbs 150, todas de investigaciones académicas públicas. Cada lista tiene contenido gratis para que la pruebes primero."
+  "introBody6": "Palabras básicas NGSL 2809, palabras del inglés hablado 720, expresiones frecuentes 506 y phrasal verbs 150, todas de investigaciones académicas públicas. Cada lista tiene contenido gratis para que la pruebes primero.",
+  "importWordLangLabel": "¿En qué idioma está la primera columna? (para la voz de lectura)"
 }

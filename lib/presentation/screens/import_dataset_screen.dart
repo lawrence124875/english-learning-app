@@ -22,6 +22,25 @@ class ImportDatasetScreen extends StatefulWidget {
 class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   final _nameController = TextEditingController();
   String _translationLocale = 'zh-TW';
+  String _wordLocale = 'en-US';
+
+  /// 第一欄（要學的文字）語言選項，值為 TTS 語言代碼。名稱用各語言
+  /// 自己的寫法（endonym），不需要翻譯，任何介面語言的使用者都認得。
+  static const _wordLocaleOptions = <String, String>{
+    'en-US': 'English',
+    'zh-TW': '中文（繁體）',
+    'zh-CN': '中文（简体）',
+    'ja-JP': '日本語',
+    'ko-KR': '한국어',
+    'vi-VN': 'Tiếng Việt',
+    'id-ID': 'Bahasa Indonesia',
+    'es-ES': 'Español',
+    'pt-BR': 'Português',
+    'fr-FR': 'Français',
+    'de-DE': 'Deutsch',
+    'it-IT': 'Italiano',
+    'th-TH': 'ไทย',
+  };
   bool _translationLocaleInitialized = false;
   bool _importing = false;
 
@@ -33,7 +52,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     if (!_translationLocaleInitialized) {
       final lang = Localizations.localeOf(context).languageCode;
       _translationLocale =
-          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR'}[lang] ?? 'zh-TW';
+          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'en': 'en'}[lang] ?? 'zh-TW';
       _translationLocaleInitialized = true;
     }
   }
@@ -117,6 +136,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
         shortName: name.length > 6 ? name.substring(0, 6) : name,
         items: parsed.items,
         primaryLocale: _translationLocale,
+        wordLocale: _wordLocale,
       );
 
       if (!mounted) return;
@@ -223,6 +243,20 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
               hintText: l.importNameHint,
               border: const OutlineInputBorder(),
             ),
+          ),
+          const SizedBox(height: 16),
+          DropdownButtonFormField<String>(
+            initialValue: _wordLocale,
+            decoration: InputDecoration(
+              labelText: l.importWordLangLabel,
+              border: const OutlineInputBorder(),
+            ),
+            items: _wordLocaleOptions.entries
+                .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
+                .toList(),
+            onChanged: (v) {
+              if (v != null) setState(() => _wordLocale = v);
+            },
           ),
           const SizedBox(height: 16),
           DropdownButtonFormField<String>(
