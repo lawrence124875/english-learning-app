@@ -71,6 +71,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final scheme = Theme.of(context).colorScheme;
     final pages = _pages(l);
     final isLast = _page == pages.length - 1;
+    // 橫向時可用高度只剩約 200dp，直向版面（圖示在上、文字在下）會把
+    // 文字擠出畫面外、只看得到圖示。橫向改成左右排版並縮小間距。
+    final landscape =
+        MediaQuery.orientationOf(context) == Orientation.landscape;
 
     return Scaffold(
       body: SafeArea(
@@ -92,6 +96,52 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 onPageChanged: (i) => setState(() => _page = i),
                 itemBuilder: (context, i) {
                   final p = pages[i];
+                  if (landscape) {
+                    return Center(
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 48, vertical: 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 88,
+                              height: 88,
+                              decoration: BoxDecoration(
+                                color: scheme.primaryContainer,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(p.icon,
+                                  size: 44, color: scheme.onPrimaryContainer),
+                            ),
+                            const SizedBox(width: 32),
+                            Expanded(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    p.title,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleLarge
+                                        ?.copyWith(fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  Text(
+                                    p.body,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyLarge
+                                        ?.copyWith(height: 1.5),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }
                   return SingleChildScrollView(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 32, vertical: 24),
@@ -151,10 +201,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
+              padding: landscape
+                  ? const EdgeInsets.fromLTRB(24, 10, 24, 10)
+                  : const EdgeInsets.fromLTRB(24, 20, 24, 24),
               child: SizedBox(
                 width: double.infinity,
-                height: 52,
+                height: landscape ? 44 : 52,
                 child: FilledButton(
                   onPressed: isLast
                       ? _close
