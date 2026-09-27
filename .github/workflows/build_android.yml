@@ -71,7 +71,14 @@ jobs:
             --dart-define=ADMOB_REWARDED_AD_UNIT_ID=$ADMOB_REWARDED_AD_UNIT_ID \
             --dart-define=ADMOB_INTERSTITIAL_AD_UNIT_ID=$ADMOB_INTERSTITIAL_AD_UNIT_ID \
             --dart-define=ADMOB_BANNER_AD_UNIT_ID=$ADMOB_BANNER_AD_UNIT_ID \
-            --dart-define=ADMOB_APP_OPEN_AD_UNIT_ID=$ADMOB_APP_OPEN_AD_UNIT_ID
+            --dart-define=ADMOB_APP_OPEN_AD_UNIT_ID=$ADMOB_APP_OPEN_AD_UNIT_ID \
+            2>&1 | tee /tmp/build_apk.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            # 把編譯錯誤行轉成 annotation，讓 Claude 能用 check-runs API 讀到（容器連不到日誌下載網址）。
+            grep -E "\.dart:[0-9]+|Error:|error:|FAILURE|What went wrong" /tmp/build_apk.log | head -30 | while IFS= read -r line; do echo "::error::$line"; done
+          fi
+          exit $status
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
