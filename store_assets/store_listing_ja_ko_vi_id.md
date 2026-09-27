@@ -41,7 +41,7 @@ Play Console →「營利」→「訂閱」→ 各方案 →「價格」，檢�
 頻出単語だけで日常英語の92%をカバー。聞き流すだけで、スキマ時間が英語学習に変わる
 ```
 
-**完整說明**（918/4000）
+**完整說明**（1158/4000）
 ```
 「何度も英語を勉強したのに、なかなか身につかない」――そんなあなたのためのアプリです。
 
@@ -63,8 +63,8 @@ Play Console →「營利」→「訂閱」→ 各方案 →「價格」，檢�
 ⭐ 苦手な単語を繰り返して、長期記憶へ
 まだ覚えていない単語に印をつけ、苦手な単語だけを集中的に聞き流せます。
 
-📥 自分の教材もインポート可能
-手持ちの単語帳や例文をCSVファイルで取り込み、内蔵教材と同じように聞き流せます。
+📥 自分の教材をインポート：どの言語でも聞き流し学習
+内蔵の英語教材に加えて、手持ちの単語帳や教科書の例文、仕事でよく使うフレーズをCSVファイルで取り込めます。内蔵教材と同じように聞き流したり、苦手な単語に印をつけたりできます。読み上げは14言語に対応：英語、日本語、中国語（繁体字）、中国語（簡体字）、韓国語、ベトナム語、インドネシア語、スペイン語、ポルトガル語、フランス語、ドイツ語、イタリア語、タイ語、アラビア語。訳は使い慣れた言語を選べます。韓国語の勉強、出張前のフランス語、お子さまの教科書の単語の復習にも使えます。（一部の言語は、端末の設定で音声データのダウンロードが必要です。）
 
 📊 学習統計と毎日のリマインダー
 今日の学習数、累計、教材ごとの進捗をひと目で確認。毎日決まった時間の復習通知で、学習習慣が身につきます。
@@ -89,7 +89,7 @@ Play Console →「營利」→「訂閱」→ 各方案 →「價格」，檢�
 핵심 단어만으로 일상 영어의 92% 커버. 흘려듣기만 해도 자투리 시간이 영어 공부 시간으로
 ```
 
-**完整說明**（1068/4000）
+**完整說明**（1358/4000）
 ```
 "영어 공부를 여러 번 했는데도 좀처럼 늘지 않는다" – 그런 분을 위한 앱입니다.
 
@@ -111,8 +111,8 @@ Play Console →「營利」→「訂閱」→ 各方案 →「價格」，檢�
 ⭐ 헷갈리는 단어를 반복해서 장기 기억으로
 아직 익숙하지 않은 단어를 표시해 두고, 그 단어들만 집중적으로 반복해서 들을 수 있습니다.
 
-📥 나만의 교재 가져오기
-가지고 있는 단어장이나 예문을 CSV 파일로 가져와 기본 교재처럼 들을 수 있습니다.
+📥 나만의 교재 가져오기: 어떤 언어든 백그라운드 낭독
+기본 영어 교재 외에도 가지고 있는 단어장, 교과서 예문, 업무에서 자주 쓰는 문장을 CSV 파일로 가져올 수 있습니다. 기본 교재처럼 백그라운드로 듣고, 익숙하지 않은 단어를 표시할 수 있습니다. 14개 언어 낭독 지원: 영어, 한국어, 중국어(번체), 중국어(간체), 일본어, 베트남어, 인도네시아어, 스페인어, 포르투갈어, 프랑스어, 독일어, 이탈리아어, 태국어, 아랍어. 번역은 익숙한 언어로 설정할 수 있어 일본어 공부, 출장 전 독일어 준비, 자녀의 교과서 단어 복습에도 활용할 수 있습니다. (일부 언어는 기기 설정에서 음성 데이터를 먼저 내려받아야 합니다.)
 
 📊 학습 통계와 매일 알림
 오늘 학습량, 누적 학습량, 교재별 진도를 한눈에 확인하세요. 매일 정해진 시간에 복습 알림을 받아 학습 습관을 만들 수 있습니다.
@@ -137,7 +137,7 @@ Nghe Tiếng Anh Thông Minh
 Từ vựng cốt lõi phủ 92% tiếng Anh hằng ngày. Chỉ cần nghe, học mọi lúc mọi nơi
 ```
 
-**完整說明**（1948/4000）
+**完整說明**（2538/4000）
 ```
 Dành cho những ai đã học tiếng Anh nhiều lần nhưng vẫn chưa tiến bộ.
 
@@ -159,8 +159,8 @@ Giao diện và nghĩa của hơn 4.000 từ và cụm từ đều bằng tiến
 ⭐ Ôn lại từ chưa thuộc để nhớ lâu
 Đánh dấu những từ chưa thuộc và chỉ nghe lại các từ đó cho đến khi nhớ hẳn.
 
-📥 Nhập tài liệu của riêng bạn
-Nhập sổ từ vựng hoặc câu mẫu của bạn bằng file CSV và nghe như tài liệu có sẵn.
+📥 Nhập tài liệu riêng – học nghe bất kỳ ngôn ngữ nào
+Ngoài tài liệu tiếng Anh có sẵn, bạn có thể nhập sổ từ vựng, câu mẫu trong sách hay câu thường dùng trong công việc bằng file CSV, rồi nghe nền và đánh dấu từ chưa thuộc như tài liệu có sẵn. Hỗ trợ đọc 14 ngôn ngữ: tiếng Anh, tiếng Việt, tiếng Trung (phồn thể), tiếng Trung (giản thể), tiếng Nhật, tiếng Hàn, tiếng Indonesia, tiếng Tây Ban Nha, tiếng Bồ Đào Nha, tiếng Pháp, tiếng Đức, tiếng Ý, tiếng Thái, tiếng Ả Rập; phần nghĩa có thể dùng ngôn ngữ bạn quen thuộc. Học tiếng Nhật, tiếng Hàn, chuẩn bị đi công tác hay cùng con ôn từ vựng trong sách giáo khoa đều được. (Một số ngôn ngữ cần tải dữ liệu giọng nói trong cài đặt điện thoại trước.)
 
 📊 Thống kê học tập và nhắc nhở hằng ngày
 Xem số từ học hôm nay, tổng số từ và tiến độ từng bộ tài liệu. Nhận thông báo nhắc ôn tập vào giờ cố định mỗi ngày để tạo thói quen học.
@@ -185,7 +185,7 @@ Belajar Inggris Sambil Dengar
 Kosakata inti mencakup 92% bahasa Inggris sehari-hari. Cukup dengar, kapan saja
 ```
 
-**完整說明**（2244/4000）
+**完整說明**（2863/4000）
 ```
 Untuk kamu yang sudah berkali-kali belajar bahasa Inggris tapi belum juga lancar.
 
@@ -207,8 +207,8 @@ Tampilan aplikasi dan arti lebih dari 4.000 kata dan frasa tersedia dalam bahasa
 ⭐ Ulangi kata yang belum hafal sampai benar-benar ingat
 Tandai kata yang belum kamu kuasai, lalu dengarkan hanya kata-kata itu secara berulang.
 
-📥 Impor materi milikmu sendiri
-Impor daftar kosakata atau contoh kalimatmu sendiri dengan file CSV dan dengarkan seperti materi bawaan.
+📥 Impor materi sendiri – dengarkan bahasa apa pun
+Selain materi bahasa Inggris bawaan, kamu bisa mengimpor daftar kosakata, contoh kalimat dari buku pelajaran, atau kalimat yang sering dipakai di kantor dengan file CSV, lalu mendengarkannya di latar belakang dan menandai kata yang belum dikuasai seperti materi bawaan. Mendukung pembacaan 14 bahasa: Inggris, Indonesia, Mandarin (Tradisional), Mandarin (Sederhana), Jepang, Korea, Vietnam, Spanyol, Portugis, Prancis, Jerman, Italia, Thai, dan Arab; artinya bisa memakai bahasa yang kamu kuasai. Cocok untuk belajar bahasa Jepang atau Korea, persiapan dinas ke luar negeri, atau menemani anak mengulang kosakata sekolah. (Beberapa bahasa perlu mengunduh data suara di pengaturan ponsel terlebih dahulu.)
 
 📊 Statistik belajar dan pengingat harian
 Lihat jumlah kata yang dipelajari hari ini, total, dan progres tiap materi. Dapatkan pengingat belajar pada jam yang sama setiap hari untuk membangun kebiasaan.

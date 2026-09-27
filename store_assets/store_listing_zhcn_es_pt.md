@@ -14,7 +14,7 @@
 用20/80法则学英文：92%涵盖率内核单词，背景朗读不浪费一分钟，重新找回学英文的信心
 ```
 
-**完整說明**（1307/4000）
+**完整說明**（1448/4000）
 ```
 【智慧听觉巡航】给每一个“学过很多次英文，却始终学不好”的你
 
@@ -53,9 +53,9 @@
 
 （以上教材均取自公开学术研究成果并标明出处，详见 App 内“关于本App”页面）
 
-📥 导入自己的教材
+📥 导入自己的教材，任何语言都能背景朗读
 
-手边有自己的单词本、课本例句或工作上常用的句子？存成 CSV 档（第一栏英文、第二栏中文）就能导入，跟内置教材一样可以背景朗读、标记不熟悉单词。
+除了内置英文教材，也可以把自己的单词本、课本例句、工作常用句存成 CSV 文件导入，跟内置教材一样背景朗读、标记不熟悉单词。支持 14 种语言朗读：英语、简体中文、繁体中文、日语、韩语、越南语、印尼语、西班牙语、葡萄牙语、法语、德语、意大利语、泰语、阿拉伯语，并可搭配你熟悉的语言作翻译。想学日语、准备出差用的德语、陪孩子复习课本单词，都能用同样的方式边通勤边听。（部分语言的语音需先在手机设置中下载。）
 
 📊 学习统计与每日提醒
 
@@ -82,7 +82,7 @@ Escucha Inteligente de Inglés
 Regla 20/80: palabras clave cubren el 92% del inglés. Escucha y gana confianza
 ```
 
-**完整說明**（2146/4000）
+**完整說明**（2746/4000）
 ```
 Para quienes han estudiado inglés muchas veces sin lograr avanzar.
 
@@ -104,8 +104,8 @@ La app y las traducciones de más de 4.000 palabras y expresiones están en espa
 ⭐ Repite las palabras difíciles hasta dominarlas
 Marca las palabras que aún no sabes y escucha solo esas, una y otra vez.
 
-📥 Importa tu propio material
-Importa tu lista de vocabulario o tus frases con un archivo CSV y escúchalas como los materiales incluidos.
+📥 Importa tu propio material: escucha en cualquier idioma
+Además de los materiales de inglés incluidos, puedes importar tu lista de vocabulario, frases de tus libros o expresiones de trabajo con un archivo CSV, escucharlas en segundo plano y marcar las palabras difíciles, igual que con los materiales incluidos. Lectura en 14 idiomas: inglés, español, portugués, francés, alemán, italiano, chino (tradicional), chino (simplificado), japonés, coreano, vietnamita, indonesio, tailandés y árabe, con la traducción en el idioma que prefieras. Sirve para aprender francés o japonés, preparar un viaje de trabajo o repasar el vocabulario escolar de tus hijos. (Algunos idiomas requieren descargar primero la voz en los ajustes del teléfono.)
 
 📊 Estadísticas y recordatorio diario
 Mira cuántas palabras estudiaste hoy, el total y el progreso de cada material. Recibe un recordatorio a la misma hora cada día para crear el hábito.
@@ -130,7 +130,7 @@ Escuta Inteligente de Inglês
 Regra 20/80: palavras-chave cobrem 92% do inglês. Ouça e recupere a confiança
 ```
 
-**完整說明**（2063/4000）
+**完整說明**（2651/4000）
 ```
 Para quem já estudou inglês várias vezes e ainda não conseguiu avançar.
 
@@ -152,8 +152,8 @@ O app e as traduções de mais de 4.000 palavras e expressões estão em portugu
 ⭐ Repita as palavras difíceis até dominar
 Marque as palavras que ainda não sabe e ouça só elas, várias vezes.
 
-📥 Importe seu próprio material
-Importe sua lista de vocabulário ou suas frases com um arquivo CSV e ouça como os materiais incluídos.
+📥 Importe seu próprio material: ouça em qualquer idioma
+Além dos materiais de inglês incluídos, você pode importar sua lista de vocabulário, frases dos livros ou expressões do trabalho com um arquivo CSV, ouvir em segundo plano e marcar as palavras difíceis, como nos materiais incluídos. Leitura em 14 idiomas: inglês, português, espanhol, francês, alemão, italiano, chinês (tradicional), chinês (simplificado), japonês, coreano, vietnamita, indonésio, tailandês e árabe, com a tradução no idioma que preferir. Serve para aprender espanhol, francês ou japonês, se preparar para uma viagem a trabalho ou revisar o vocabulário escolar dos filhos. (Alguns idiomas exigem baixar a voz nas configurações do celular primeiro.)
 
 📊 Estatísticas e lembrete diário
 Veja quantas palavras estudou hoje, o total e o progresso de cada material. Receba um lembrete no mesmo horário todo dia para criar o hábito.

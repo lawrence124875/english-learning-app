@@ -265,6 +265,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   - 泰文斷行用 pythainlp（`pip install pythainlp --break-system-packages`；泰文詞間無空格）。
   - 阿拉伯文整頁鏡像：`MDraw` 代理把 x 座標鏡像、文字錨點 l↔r、direction=rtl；打勾圖示與導覽頁上升趨勢圖示刻意**不鏡像**（鏡像後趨勢圖會像下降）；▶ 是文字所以不翻。
   - 可指定語言：`python3 store_assets/generate_localized_assets.py th ar`；已驗證既有 8 語輸出逐像素不變。
+- **商店完整說明加強「自訂教材可學 14 種語言」（2026-09-28，Lawrence 決定）**：10 語「📥 匯入自己的教材」段落改寫（內建教材仍是英文，匯入功能當次要特色，名稱／簡短說明不動以免誤導）；各語言來源檔已同步、字數標註已更新；可直接複製貼上的彙整版在 `store_assets/store_listing_v11_full_descriptions.md`。
 - **下一步**：確認 CI 建置成功→實機測試（見下方清單）→上傳 0.1.8+11、Play Console 新增 th、ar 商店資訊（文案 `store_listing_th_ar.md`、截圖/主題圖 `localized/th`、`localized/ar`、版本資訊 `release_notes_v11.md`）。
 
 ### 待實機確認（第十一版上傳前）
