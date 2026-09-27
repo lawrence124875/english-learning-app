@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-27（第九版 0.1.6+9 已送審；已列第十版候選）
+最後更新：2026-09-27（第九版已送審；第十版 0.1.7+10 已修提醒，待驗證）
 
 ---
 
@@ -127,6 +127,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 7 | 0.1.4 | 簡中、西、葡介面與教材翻譯 | **未上傳（跳過，有翻譯不跟隨語言的 bug）** |
 | 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | 已上傳送審（2026-09-24，Actions #102） |
 | 9 | 0.1.6 | 插頁廣告只在前景顯示（背景播完一輪改為待顯示）、開啟應用程式廣告（每小時上限、離開≥30秒、冷啟動不顯示）、全螢幕廣告間隔≥3分鐘、Firebase Analytics 事件、越南文/印尼文 App 內標題與商店一致、App 內特色介紹滑動導覽 | 已上傳封閉測試並送審（2026-09-27，連同 8 語新商店截圖/主題圖、多語版本資訊） |
+| 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發） | 程式已完成，待實機驗證；可與第十版候選項目一起上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
 
@@ -169,6 +170,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - Play Console 上傳當機後，版本代碼可能已被用掉 → 用「從檔案庫新增」選已上傳的 bundle。
 - `DropdownButtonFormField` 使用 `initialValue`（新版 Flutter API）。
 - 容器無法編譯 Flutter，所有改動靠 CI 驗證；建置失敗時用 Actions API 查 jobs/steps。
+- 新增任何 Android 原生套件功能時，要確認該套件 README 要求的 manifest 宣告（receiver/service/permission）有加進 `scripts/patch_android_manifest.sh`；android/ 目錄每次 CI 重新產生，手動改不會保留。
 - `--dart-define=X=$SECRET` 在 Secret 不存在時傳入**空字串**，`String.fromEnvironment` 的 defaultValue 不會生效。新增的 dart-define 要在程式裡自己判斷空字串再退回預設（見 AdsService 的 App Open ID）。
 - 全螢幕廣告本身會觸發 App 生命週期 paused/resumed，任何「回到前景」邏輯都要排除廣告造成的切換。
 - Play Console 的 edge-to-edge 提醒在修正後可能仍顯示一段時間（Flutter 框架本身也會被偵測）。
@@ -217,6 +219,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
 - [x] 8 語商店截圖＋主題圖已上傳 Play Console（2026-09-27；圖在 `store_assets/localized/<lang>/`，腳本 `store_assets/generate_localized_assets.py`）
 - [ ] 收集 TestersCommunity 回報並修正
+- [ ] 第十版實機驗證提醒：設定 2～3 分鐘後的提醒時間 → 關掉 App/鎖屏 → 確認通知跳出（紅米需開自啟動、省電無限制）
 - [ ] **第十版候選（Lawrence 2026-09-27 同意）**：
   1. 自訂教材 CSV「第一欄語言」可選：目前 `app_state.dart` 朗讀 `word.word` 固定 `languageCode: 'en-US'`，匯入其他語言會用英文發音。改為匯入時選第一欄語言、朗讀用該語言 TTS。定位不變（仍是英文學習 App），只在功能介紹/商店說明提一句「也可匯入其他語言」。
   2. 英文介面只當「不支援語言」的預設介面（目前 fallback 是繁中，泰/土/德/法等手機會看到中文）；**不是**開拓印度等市場的策略。
