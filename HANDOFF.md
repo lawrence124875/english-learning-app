@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-28（第十一版 0.1.8+11 進行中：程式部分已完成並通過 CI #135；教材泰/阿翻譯分批進行，進度見 §13）
+最後更新：2026-09-28（第十一版 0.1.8+11 進行中：程式、教材泰/阿翻譯、商店文案、泰/阿截圖與主題圖皆完成；剩實機測試與上傳，見 §13）
 
 ---
 
@@ -260,7 +260,12 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 取下一批：`sed -n <起>,<迄>p tools/translations/wordlist.tsv | cut -f2,3`（行號＝序號+1）。
 - **進度：batch_001～020 全部完成（2026-09-28）**：NGSL 2809/2809、Spoken 720/720、PHRASE 506/506、PhaVE 150/150 皆有 th、ar。`assets/data/manifest.json` version 已改為 3。
 - **商店文案與版本資訊已完成（2026-09-28）**：`store_assets/store_listing_th_ar.md`（泰：名稱21/簡短75/完整2109；阿：名稱26/簡短71/完整2167，架構同西/葡版，強調 20/80、92%、背景朗讀、以母語學習、TTS 需安裝該語言語音）；`store_assets/release_notes_v11.md`（10 語，皆 <500 字元）。
-- **下一步**：(1) 泰/阿商店截圖＋主題圖：`generate_localized_assets.py` 目前只用 NotoSansCJK，泰文需要 Noto Sans Thai、阿拉伯文需要 Noto Sans Arabic＋字形連寫（Pillow 需 libraqm，`ImageFont.Layout.RAQM`，`direction="rtl"`），阿拉伯文截圖版面也要左右鏡像——評估後再做；(2) 確認 CI 建置成功→實機測試（見下方清單）→上傳 0.1.8+11、Play Console 新增 th、ar 商店資訊。
+- **泰/阿商店截圖＋主題圖已完成（2026-09-28）**：`store_assets/localized/th/`、`store_assets/localized/ar/`（1_home、2_intro、3_stats、4_paywall、feature_graphic，規格同其他語言）。`generate_localized_assets.py` 改動：
+  - 字型：Noto Sans Thai/Arabic＋Noto Sans（拉丁數字）＋Noto Sans Symbols 2（✓▶☆★）用 fontTools 合併，首次執行自動從 GitHub notofonts 下載合併到 `store_assets/.fontcache/`（已 gitignore，不進 repo）；泰/阿用 `ImageFont.Layout.RAQM`（容器 Pillow 12 已含 raqm）。
+  - 泰文斷行用 pythainlp（`pip install pythainlp --break-system-packages`；泰文詞間無空格）。
+  - 阿拉伯文整頁鏡像：`MDraw` 代理把 x 座標鏡像、文字錨點 l↔r、direction=rtl；打勾圖示與導覽頁上升趨勢圖示刻意**不鏡像**（鏡像後趨勢圖會像下降）；▶ 是文字所以不翻。
+  - 可指定語言：`python3 store_assets/generate_localized_assets.py th ar`；已驗證既有 8 語輸出逐像素不變。
+- **下一步**：確認 CI 建置成功→實機測試（見下方清單）→上傳 0.1.8+11、Play Console 新增 th、ar 商店資訊（文案 `store_listing_th_ar.md`、截圖/主題圖 `localized/th`、`localized/ar`、版本資訊 `release_notes_v11.md`）。
 
 ### 待實機確認（第十一版上傳前）
 - 手機語言改泰文、阿拉伯文：介面、鎖屏、通知；阿拉伯文右到左排版（首頁、設定、匯入頁、導覽頁）。

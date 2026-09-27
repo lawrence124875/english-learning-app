@@ -3,9 +3,18 @@
 文字直接讀取 lib/l10n/app_<lang>.arb，確保與 App 內用語一致。
 輸出：store_assets/localized/<lang>/
   1_home.png、2_intro.png、3_stats.png、4_paywall.png、feature_graphic.png
-執行：python3 store_assets/generate_localized_assets.py（在 repo 根目錄）
+執行：python3 store_assets/generate_localized_assets.py [語言...]（在 repo 根目錄；不給語言＝全部）
+
+泰文／阿拉伯文（第十一版加入）：
+- 字型：Noto Sans Thai / Noto Sans Arabic 與 Noto Sans（拉丁、數字）、Noto Sans Symbols 2（✓▶☆★）
+  用 fontTools 合併成單一字型，首次執行自動從 GitHub（notofonts）下載並合併到 store_assets/.fontcache/（已 gitignore）。
+- 需要 Pillow 支援 libraqm（ImageFont.Layout.RAQM，負責阿拉伯文連寫、泰文組字）與 fontTools；
+  泰文斷行需要 pythainlp（pip install pythainlp --break-system-packages）。
+- 阿拉伯文截圖整個版面左右鏡像（MDraw 代理：座標 x→W-x、文字錨點 l↔r、direction=rtl），
+  只有打勾圖示與 ▶ 播放圖示不鏡像（Material 規範）。英文單字 bill 保持 LTR。
 """
-import json, os, re
+import json, os, re, sys, urllib.request
+from functools import lru_cache
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -15,6 +24,27 @@ FONT_DIR = "/usr/share/fonts/opentype/noto/"
 # Noto Sans CJK 的 face index：0=日 1=韓 2=簡中 3=繁中。拉丁語系用日文 face（含越南文字母）。
 FACE = {"zh": 3, "ja": 0, "ko": 1, "zh_Hans": 2, "vi": 0, "id": 0, "es": 0, "pt": 0}
 CJK = {"zh", "ja", "zh_Hans"}  # 逐字換行；韓文有空格，照單字換行
+SCRIPT = {"th": "Thai", "ar": "Arabic"}  # 用合併字型＋RAQM 排版的語言
+RTL = {"ar"}
+WEIGHTS = ["Regular", "Medium", "Bold", "Black"]
+CACHE = os.path.join(ROOT, "store_assets", ".fontcache")
+NOTO_URL = "https://raw.githubusercontent.com/notofonts/notofonts.github.io/main/fonts/{fam}/hinted/ttf/{fam}-{w}.ttf"
+
+def ensure_fonts(script):
+    """下載 Noto 字型並合併成 Merged<script>-<weight>.ttf（已存在就跳過）。"""
+    os.makedirs(CACHE, exist_ok=True)
+    def get(fam, w):
+        path = os.path.join(CACHE, f"{fam}-{w}.ttf")
+        if not os.path.exists(path):
+            urllib.request.urlretrieve(NOTO_URL.format(fam=fam, w=w), path)
+        return path
+    for w in WEIGHTS:
+        out = os.path.join(CACHE, f"Merged{script}-{w}.ttf")
+        if os.path.exists(out): continue
+        from fontTools.merge import Merger, Options
+        files = [get(f"NotoSans{script}", w), get("NotoSans", w), get("NotoSansSymbols2", "Regular")]
+        opts = Options(drop_tables=["vmtx", "vhea", "MATH", "hdmx", "LTSH", "VDMX", "kern", "DSIG"])
+        Merger(options=opts).merge(files).save(out)
 
 # ARB 沒有的少量文字
 EXTRA = {
@@ -34,6 +64,10 @@ EXTRA = {
                fg1="NGSL · Habla · Expresiones · Phrasal verbs", fg2="Aprende inglés escuchando, en el trayecto o haciendo deporte"),
     "pt": dict(word="conta", best="Mais vantajoso",
                fg1="NGSL · Fala · Expressões · Phrasal verbs", fg2="Aprenda inglês ouvindo, no trajeto ou malhando"),
+    "th": dict(word="ใบแจ้งหนี้", best="คุ้มที่สุด",
+               fg1="NGSL · ภาษาพูด · วลี · กริยาวลี", fg2="ฟังภาษาอังกฤษเบื้องหลัง ระหว่างเดินทางหรือออกกำลังกาย"),
+    "ar": dict(word="فاتورة", best="الأوفر",
+               fg1="NGSL · المحادثة · العبارات · الأفعال المركبة", fg2="تعلّم الإنجليزية بالاستماع في الخلفية، أثناء التنقل أو ممارسة الرياضة"),
 }
 
 TEAL = (13, 148, 136); TEAL_BG = (240, 249, 248); TEAL_LIGHT_BG = (224, 246, 242)
@@ -42,17 +76,60 @@ GREY_LIGHT = (223, 229, 228); AMBER = (245, 158, 11); CARD_BORDER = (228, 234, 2
 W, H = 1080, 2160
 
 LANG = None
-def font(weight, size):
+MIRROR = False
+
+@lru_cache(maxsize=None)
+def _font(lang, weight, size):
     name = {"regular": "Regular", "medium": "Medium", "bold": "Bold", "black": "Black"}[weight]
-    return ImageFont.truetype(f"{FONT_DIR}NotoSansCJK-{name}.ttc", size, index=FACE[LANG])
+    if lang in SCRIPT:
+        return ImageFont.truetype(os.path.join(CACHE, f"Merged{SCRIPT[lang]}-{name}.ttf"), size,
+                                  layout_engine=ImageFont.Layout.RAQM)
+    return ImageFont.truetype(f"{FONT_DIR}NotoSansCJK-{name}.ttc", size, index=FACE[lang])
+
+def font(weight, size): return _font(LANG, weight, size)
+
+class MDraw:
+    """ImageDraw 代理。MIRROR（阿拉伯文）時把所有 x 座標左右鏡像，文字錨點 l↔r，並以 RTL 排版。"""
+    def __init__(self, img):
+        self.d = ImageDraw.Draw(img); self.w = img.size[0]
+    def _x(self, x): return self.w - x if MIRROR else x
+    def _box(self, b):
+        x0, y0, x1, y1 = b
+        return [self.w - x1, y0, self.w - x0, y1] if MIRROR else b
+    def _pts(self, pts):
+        if not MIRROR: return pts
+        if pts and isinstance(pts[0], (tuple, list)): return [(self.w - x, y) for x, y in pts]
+        return [self.w - v if i % 2 == 0 else v for i, v in enumerate(pts)]
+    def textlength(self, text, font): return self.d.textlength(text, font=font)
+    def text(self, xy, text, font, fill, anchor="la"):
+        kw = {}
+        if LANG in RTL: kw["direction"] = "rtl"
+        if MIRROR:
+            anchor = {"l": "r", "r": "l"}.get(anchor[0], anchor[0]) + anchor[1:]
+        self.d.text((self._x(xy[0]), xy[1]), text, font=font, fill=fill, anchor=anchor, **kw)
+    def rectangle(self, b, **kw): self.d.rectangle(self._box(b), **kw)
+    def rounded_rectangle(self, b, **kw): self.d.rounded_rectangle(self._box(b), **kw)
+    def ellipse(self, b, **kw): self.d.ellipse(self._box(b), **kw)
+    def polygon(self, pts, **kw): self.d.polygon(self._pts(pts), **kw)
+    def line(self, pts, **kw): self.d.line(self._pts(pts), **kw)
+    def arc(self, b, start, end, **kw):
+        if MIRROR: start, end = 180 - end, 180 - start
+        self.d.arc(self._box(b), start=start, end=end, **kw)
 
 def fit_font(draw, text, weight, size, max_w, min_size=18):
     while size > min_size and draw.textlength(text, font=font(weight, size)) > max_w:
         size -= 1
     return font(weight, size)
 
+def _tokens(text):
+    if LANG in CJK: return list(text)
+    if LANG == "th":  # 泰文詞與詞之間沒有空格，用 pythainlp 斷詞
+        from pythainlp.tokenize import word_tokenize
+        return word_tokenize(text, engine="newmm", keep_whitespace=True)
+    return re.split(r"(\s+)", text)
+
 def wrap(draw, text, fnt, max_w):
-    tokens = list(text) if LANG in CJK else re.split(r"(\s+)", text)
+    tokens = _tokens(text)
     lines, line = [], ""
     for t in tokens:
         test = line + t
@@ -108,7 +185,7 @@ def fmt(s, **kw):
     return s
 
 def home(L, E, path):
-    img = Image.new("RGB", (W, H), TEAL_BG); d = ImageDraw.Draw(img)
+    img = Image.new("RGB", (W, H), TEAL_BG); d = MDraw(img)
     status_bar(d); app_bar(d, L["appTitle"])
     labels = [("✓ " + L["datasetShortNgsl"], True), (L["datasetShortSpoken"], False),
               (L["datasetShortPhrase"], False), (L["datasetShortPhave"], False)]
@@ -145,13 +222,14 @@ def home(L, E, path):
     gesture_and_crop(img, d, sb[3], path)
 
 def intro(L, E, path):
-    img = Image.new("RGB", (W, H), WHITE); d = ImageDraw.Draw(img)
+    img = Image.new("RGB", (W, H), WHITE); d = MDraw(img)
     status_bar(d)
     d.text((W - 60, 150), L["introSkip"], font=font("medium", 32), fill=TEAL, anchor="rm")
     cy = 420
     d.ellipse([W // 2 - 130, cy - 130, W // 2 + 130, cy + 130], fill=TEAL_LIGHT_BG)
     # 簡易「上升趨勢」圖示
-    pts = [(W // 2 - 70, cy + 40), (W // 2 - 20, cy - 10), (W // 2 + 15, cy + 20), (W // 2 + 70, cy - 45)]
+    k = -1 if MIRROR else 1  # 上升趨勢圖示不鏡像（鏡像後會變成下降）
+    pts = [(W // 2 - 70 * k, cy + 40), (W // 2 - 20 * k, cy - 10), (W // 2 + 15 * k, cy + 20), (W // 2 + 70 * k, cy - 45)]
     d.line(pts, fill=TEAL, width=16, joint="curve")
     for p in pts: d.ellipse([p[0] - 12, p[1] - 12, p[0] + 12, p[1] + 12], fill=TEAL)
     y = cy + 230
@@ -171,7 +249,7 @@ def intro(L, E, path):
     gesture_and_crop(img, d, y + 110, path)
 
 def stats(L, E, path):
-    img = Image.new("RGB", (W, H), TEAL_BG); d = ImageDraw.Draw(img)
+    img = Image.new("RGB", (W, H), TEAL_BG); d = MDraw(img)
     status_bar(d); app_bar(d, L["statsTitle"], back=True, icons=False)
     top = 260; cw = (W - 96 - 24) // 2
     for i, (v, lb) in enumerate([("12", L["todayLearnedLabel"]), ("1,248", L["totalLearnedLabel"])]):
@@ -201,7 +279,7 @@ def stats(L, E, path):
     gesture_and_crop(img, d, rb[3], path)
 
 def paywall(L, E, path):
-    img = Image.new("RGB", (W, H), WHITE); d = ImageDraw.Draw(img)
+    img = Image.new("RGB", (W, H), WHITE); d = MDraw(img)
     status_bar(d); app_bar(d, L["menuPremium"], back=True, icons=False)
     y = 300
     d.text((48, y), L["paywallHeadline"], font=fit_font(d, L["paywallHeadline"], "black", 52, W - 96), fill=INK, anchor="lm")
@@ -209,8 +287,9 @@ def paywall(L, E, path):
     for b in [L["paywallBenefitAllContent"], L["paywallBenefitNoAds"], L["paywallBenefitBackground"]]:
         cx, cy = 60, y + 20
         d.ellipse([cx - 22, cy - 22, cx + 22, cy + 22], fill=TEAL_LIGHT_BG)
-        d.line([cx - 10, cy, cx - 2, cy + 10], fill=TEAL, width=6)
-        d.line([cx - 2, cy + 10, cx + 12, cy - 10], fill=TEAL, width=6)
+        k = -1 if MIRROR else 1  # 打勾圖示不鏡像（鏡像後座標會再翻回來）
+        d.line([cx - 10 * k, cy, cx - 2 * k, cy + 10], fill=TEAL, width=6)
+        d.line([cx - 2 * k, cy + 10, cx + 12 * k, cy - 10], fill=TEAL, width=6)
         d.text((100, cy), b, font=fit_font(d, b, "regular", 36, W - 150), fill=INK, anchor="lm")
         y += 76
     y += 40
@@ -239,11 +318,11 @@ def feature_graphic(L, E, path):
             t = (x + yy) / (FW + FH)
             px[x, yy] = tuple(int(a + (b - a) * t) for a, b in zip((14, 116, 106), (9, 82, 75)))
     img = img.convert("RGBA")
-    ov = Image.new("RGBA", (FW, FH), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
+    ov = Image.new("RGBA", (FW, FH), (0, 0, 0, 0)); od = MDraw(ov)
     for i in range(22):  # 右側半透明音波（與繁中主題圖相同）
         x0 = 660 + i * 24; h = 40 + int(180 * abs(math.sin(i * 0.7)))
         od.rounded_rectangle([x0, FH // 2 - h // 2, x0 + 14, FH // 2 + h // 2], radius=7, fill=(255, 255, 255, 45))
-    img = Image.alpha_composite(img, ov); d = ImageDraw.Draw(img)
+    img = Image.alpha_composite(img, ov); d = MDraw(img)
     bx, by = 150, FH // 2
     d.ellipse([bx - 110, by - 110, bx + 110, by + 110], fill=WHITE)
     for i, h in enumerate([40, 74, 54, 86, 34]):
@@ -263,8 +342,10 @@ def feature_graphic(L, E, path):
     for ln in l2: d.text((x, y), ln, font=f2, fill=(220, 245, 242), anchor="lm"); y += 44
     img.convert("RGB").save(path, "PNG")
 
-for lang in ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt"]:
-    LANG = lang
+ALL = ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt", "th", "ar"]
+for lang in (sys.argv[1:] or ALL):
+    LANG = lang; MIRROR = lang in RTL
+    if lang in SCRIPT: ensure_fonts(SCRIPT[lang])
     L = json.load(open(os.path.join(ROOT, "lib", "l10n", f"app_{lang}.arb"), encoding="utf-8"))
     E = EXTRA[lang]
     od = os.path.join(OUT, lang); os.makedirs(od, exist_ok=True)
