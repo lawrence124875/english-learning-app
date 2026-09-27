@@ -295,6 +295,8 @@ class AppState extends ChangeNotifier {
       // null/false，但這不代表不能排程通知——不能用這個結果來擋排程動作，
       // 否則舊版 Android 上提醒永遠不會生效。
       await NotificationService.requestPermission();
+      // 精準鬧鐘權限：讓提醒準時跳出（小米等手機非精準排程常延遲或不觸發）。
+      await NotificationService.requestExactAlarmIfNeeded();
       await NotificationService.scheduleDailyReminder(hour: hour, minute: minute);
     } else {
       await NotificationService.cancelReminder();

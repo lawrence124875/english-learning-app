@@ -127,7 +127,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 7 | 0.1.4 | 簡中、西、葡介面與教材翻譯 | **未上傳（跳過，有翻譯不跟隨語言的 bug）** |
 | 8 | 0.1.5 | 修正內建教材翻譯未跟隨介面語言（RemoteWordRepository 補 builtIn；雲端快取需比內建新才使用） | 已上傳送審（2026-09-24，Actions #102） |
 | 9 | 0.1.6 | 插頁廣告只在前景顯示（背景播完一輪改為待顯示）、開啟應用程式廣告（每小時上限、離開≥30秒、冷啟動不顯示）、全螢幕廣告間隔≥3分鐘、Firebase Analytics 事件、越南文/印尼文 App 內標題與商店一致、App 內特色介紹滑動導覽 | 已上傳封閉測試並送審（2026-09-27，連同 8 語新商店截圖/主題圖、多語版本資訊） |
-| 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發） | 程式已完成，待實機驗證；可與第十版候選項目一起上傳 |
+| 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除） | 程式已完成，待實機驗證；可與第十版候選項目一起上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
 

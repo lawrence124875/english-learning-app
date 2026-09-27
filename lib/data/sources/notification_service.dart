@@ -18,7 +18,10 @@ import 'background_l10n.dart';
 class NotificationService {
   static final _plugin = FlutterLocalNotificationsPlugin();
   static const _reminderId = 1001;
-  static const _channelId = 'tw.bcc.englishapp.reminder';
+  /// 第 10 版起改用高重要性頻道（會跳出橫幅）。Android 建立頻道後就不能
+  /// 再調整重要性，所以換新 id，並刪掉舊頻道。
+  static const _channelId = 'tw.bcc.englishapp.reminder_high';
+  static const _oldChannelId = 'tw.bcc.englishapp.reminder';
 
   /// 通知內容依「排程當下」的手機語言產生。每日提醒與久未使用提醒
   /// 在每次開啟 App 時都會重新排程，所以使用者切換手機語言後，
@@ -30,7 +33,8 @@ class NotificationService {
         _channelId,
         l.notifChannelName,
         channelDescription: l.notifChannelDesc,
-        importance: Importance.defaultImportance,
+        importance: Importance.high,
+        priority: Priority.high,
       ),
     );
   }
@@ -48,12 +52,42 @@ class NotificationService {
       _channelId,
       l.notifChannelName,
       description: l.notifChannelDesc,
-      importance: Importance.defaultImportance,
+      importance: Importance.high,
     );
-    await _plugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.createNotificationChannel(channel);
+    final android = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    await android?.createNotificationChannel(channel);
+    try {
+      await android?.deleteNotificationChannel(_oldChannelId);
+    } catch (_) {}
+  }
+
+  /// 能用「精準鬧鐘」就用（時間到準時跳），不行才退回「非精準」
+  /// （小米等省電機制下，非精準排程可能延遲很久甚至不觸發）。
+  static Future<AndroidScheduleMode> _scheduleMode() async {
+    try {
+      final can = await _plugin
+          .resolvePlatformSpecificImplementation<
+              AndroidFlutterLocalNotificationsPlugin>()
+          ?.canScheduleExactNotifications();
+      if (can == true) return AndroidScheduleMode.exactAllowWhileIdle;
+    } catch (_) {}
+    return AndroidScheduleMode.inexactAllowWhileIdle;
+  }
+
+  /// 使用者主動設定提醒時呼叫：Android 12+ 若尚未允許「鬧鐘與提醒」
+  /// （精準鬧鐘），開系統設定頁請使用者允許。只在使用者操作時觸發，
+  /// 不在 App 啟動時自動跳出。
+  static Future<void> requestExactAlarmIfNeeded() async {
+    try {
+      final android = _plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
+      if (android == null) return;
+      final can = await android.canScheduleExactNotifications();
+      if (can == true) return;
+      AdsService.skipNextAppOpenAd();
+      await android.requestExactAlarmsPermission();
+    } catch (_) {}
   }
 
   static Future<bool> requestPermission() async {
@@ -98,7 +132,7 @@ class NotificationService {
       l.notifDailyBody,
       scheduled,
       _details(),
-      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      androidScheduleMode: await _scheduleMode(),
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       // 因為排的是 UTC 時間點，這裡比對的「時分」也是 UTC 時分——
