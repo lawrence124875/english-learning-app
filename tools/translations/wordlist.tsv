@@ -1,0 +1,3489 @@
+0	the	（定冠詞）	el; la (artículo definido)
+1	be	是／存在	ser; estar
+2	and	和／與	y
+3	of	的	de; sobre
+4	to	到／為了	a; para
+5	a	（不定冠詞）	un; una (artículo indefinido)
+6	in	在…裡	en; dentro de
+7	have	有	tener; haber (auxiliar)
+8	it	它	ello; eso
+9	you	你	tú; ustedes
+10	he	他	él
+11	for	為了	para; por
+12	they	他們	ellos; ellas
+13	not	不	no
+14	that	那個	eso; que
+15	we	我們	nosotros
+16	on	在…上	sobre; encendido
+17	with	和／用	con
+18	this	這個	este; esto
+19	I	我	yo
+20	do	做	hacer; (auxiliar)
+21	as	作為	como; cuando
+22	at	在	en (lugar/hora)
+23	she	她	ella
+24	but	但是	pero
+25	from	從	de; desde
+26	by	由	por; junto a
+27	will	將會	(futuro); voluntad
+28	or	或者	o
+29	say	說	decir
+30	go	去	ir
+31	so	所以	así que; tan
+32	all	所有	todo
+33	if	如果	si
+34	one	一個	uno
+35	would	會	(condicional); querría
+36	about	關於	sobre; alrededor de
+37	can	能夠	poder
+38	which	哪個	cuál; que
+39	there	那裡	allí; hay (there is)
+40	know	知道	saber; conocer
+41	more	更多	más
+42	get	得到	conseguir; ponerse; llegar
+43	who	誰	quién; que
+44	like	喜歡；像	gustar; como
+45	when	當…時	cuando; cuándo
+46	think	思考	pensar; creer
+47	make	製作	hacer
+48	time	時間	tiempo; vez
+49	see	看見	ver
+50	what	什麼	qué; lo que
+51	up	向上	arriba
+52	some	一些	algunos
+53	other	其他的	otro
+54	out	出去	fuera
+55	good	好的	bueno
+56	people	人們	gente
+57	year	年	año
+58	take	拿取	tomar; llevar
+59	no	不	no; ningún
+60	well	好	bueno; bien
+61	because	因為	porque
+62	very	非常	muy
+63	just	剛才	justo; solo
+64	come	來	venir
+65	could	能夠	podría; pudo
+66	work	工作	trabajar; trabajo
+67	use	使用	usar
+68	than	比	que (comparación)
+69	now	現在	ahora
+70	then	然後	entonces; luego
+71	also	也	también
+72	into	進入	dentro de; hacia
+73	only	只有	solo; único
+74	look	看	mirar
+75	want	想要	querer
+76	give	給	dar
+77	first	第一	primero
+78	new	新的	nuevo
+79	way	方式	camino; manera
+80	find	找到	encontrar
+81	over	超過	sobre; más de; terminado
+82	any	任何	cualquier
+83	after	之後	después de
+84	day	天	día
+85	where	哪裡	dónde; donde
+86	thing	事情	cosa
+87	most	最多	la mayoría; más
+88	should	應該	deber
+89	need	需要	necesitar
+90	much	許多	mucho
+91	right	對的	correcto; derecha
+92	how	如何	cómo; qué tan
+93	back	回來；後面；背部	de vuelta; atrás; espalda
+94	mean	意思是	significar
+95	even	甚至	incluso
+96	may	可能；可以	poder (posibilidad); puede que
+97	here	這裡	aquí
+98	many	許多	muchos
+99	such	如此	tal; tan
+100	last	最後的；持續	último; durar
+101	child	小孩	niño
+102	tell	告訴	decir; contar
+103	really	真的	realmente
+104	call	打電話	llamar
+105	before	之前	antes de
+106	company	公司	empresa; compañía
+107	through	穿過	a través de
+108	down	向下	abajo
+109	show	展示	mostrar
+110	life	生命	vida
+111	man	男人	hombre
+112	change	改變	cambiar; cambio
+113	place	地方	lugar
+114	long	長的	largo
+115	between	之間	entre
+116	feel	感覺	sentir
+117	too	也	también; demasiado
+118	still	仍然	todavía
+119	problem	問題	problema
+120	write	寫	escribir
+121	same	相同的	mismo
+122	lot	許多	mucho
+123	great	偉大的	genial; grande
+124	try	嘗試	intentar
+125	leave	離開	irse; dejar
+126	number	數字	número
+127	both	兩者	ambos
+128	own	自己的	propio; poseer
+129	part	部分	parte
+130	point	重點	punto; señalar
+131	little	小的	poco; pequeño
+132	help	幫助	ayudar
+133	ask	問	preguntar; pedir
+134	meet	見面	conocer; reunirse
+135	start	開始	empezar
+136	talk	談話	hablar
+137	something	某事	algo
+138	put	放置	poner
+139	another	另一個	otro más
+140	become	成為	llegar a ser
+141	interest	興趣；使感興趣	interés; interesar
+142	country	國家	país
+143	old	老的	viejo
+144	each	每個	cada
+145	school	學校	escuela
+146	late	晚的	tarde; tardío
+147	high	高的	alto
+148	different	不同的	diferente
+149	off	關閉	apagado; fuera
+150	next	下一個	siguiente
+151	end	結束	fin; terminar
+152	live	生活	vivir
+153	why	為什麼	por qué
+154	while	當…時候	mientras; un rato
+155	world	世界	mundo
+156	week	週	semana
+157	play	玩耍	jugar; tocar (música)
+158	might	可能	podría; quizás
+159	must	必須	deber; tener que
+160	home	家	casa; hogar
+161	never	從不	nunca
+162	include	包含	incluir
+163	course	課程	curso; por supuesto (of course)
+164	house	房子	casa
+165	report	報告	informe; informar
+166	group	群組	grupo
+167	case	案例	caso; asunto; caja
+168	woman	女人	mujer
+169	around	周圍	alrededor; aproximadamente
+170	book	書	libro
+171	family	家庭	familia
+172	seem	似乎	parecer
+173	let	讓	dejar; permitir
+174	again	再次	otra vez
+175	kind	種類	tipo; amable
+176	keep	保持	mantener; seguir
+177	hear	聽到	oír
+178	system	系統	sistema
+179	every	每個	cada
+180	question	問題	pregunta
+181	during	在…期間	durante
+182	always	總是	siempre
+183	big	大的	grande
+184	set	設置	poner; ajustar; juego
+185	small	小的	pequeño
+186	study	學習	estudiar; estudio
+187	follow	跟隨	seguir
+188	begin	開始	comenzar
+189	important	重要的	importante
+190	since	自從	desde; ya que
+191	run	跑	correr
+192	under	在…下面	debajo de
+193	turn	轉；轉彎；輪到	girar; turno
+194	few	少數	pocos
+195	bring	帶來	traer
+196	early	早的	temprano
+197	hand	手	mano
+198	state	狀態；陳述	estado; declarar
+199	move	移動	mover; mudarse
+200	money	金錢	dinero
+201	fact	事實	hecho
+202	however	然而	sin embargo
+203	area	地區	zona; área
+204	provide	提供	proporcionar
+205	name	名字	nombre
+206	read	閱讀	leer
+207	friend	朋友	amigo
+208	month	月	mes
+209	large	大的	grande
+210	business	商業	negocio
+211	without	沒有	sin
+212	information	資訊	información
+213	open	打開	abrir; abierto
+214	order	訂單	orden; pedido
+215	government	政府	gobierno
+216	word	單字	palabra
+217	issue	問題；議題；發行	problema; asunto; emitir
+218	market	市場	mercado
+219	pay	支付	pagar; sueldo
+220	build	建造	construir
+221	hold	持有	sostener; celebrar
+222	service	服務	servicio
+223	against	反對	contra
+224	believe	相信	creer
+225	second	第二；秒	segundo
+226	though	雖然	aunque
+227	yes	是的	sí
+228	love	愛	amor; amar
+229	increase	增加	aumentar; aumento
+230	job	工作	trabajo; empleo
+231	plan	計劃	plan
+232	result	結果	resultado
+233	away	離開	lejos; fuera
+234	example	例子	ejemplo
+235	happen	發生	pasar; ocurrir
+236	offer	提供	ofrecer
+237	young	年輕的	joven
+238	close	關閉	cerrar; cerca
+239	program	程式	programa
+240	lead	領導	dirigir; liderar
+241	buy	購買	comprar
+242	understand	了解	entender
+243	thank	感謝	agradecer
+244	far	遠的	lejos
+245	today	今天	hoy
+246	hour	小時	hora
+247	student	學生	estudiante
+248	face	臉	cara
+249	hope	希望	esperar; esperanza
+250	idea	想法	idea
+251	cost	費用	costo; costar
+252	less	較少	menos
+253	room	房間	habitación
+254	until	直到	hasta que
+255	reason	理由	razón
+256	form	表格	forma; formulario; formar
+257	spend	花費	pasar (tiempo); gastar
+258	head	頭部	cabeza
+259	car	汽車	coche
+260	learn	學習	aprender
+261	level	等級	nivel
+262	person	人	persona
+263	experience	經驗	experiencia
+264	once	一次	una vez
+265	member	成員	miembro
+266	enough	足夠	suficiente
+267	bad	壞的	malo
+268	city	城市	ciudad
+269	night	夜晚	noche
+270	able	能夠的	capaz
+271	support	支持	apoyar; apoyo
+272	whether	是否	si (… o no)
+273	line	線	línea; fila
+274	present	現在的；禮物；呈現	actual; regalo; presentar
+275	side	側面	lado
+276	quite	相當	bastante
+277	although	雖然	aunque
+278	sure	確定的	seguro; claro
+279	term	術語	trimestre; plazo; término
+280	least	最少	el menor; lo mínimo
+281	age	年齡	edad; época
+282	low	低的	bajo
+283	speak	說話	hablar
+284	within	在…內	dentro de
+285	process	過程	proceso; procesar
+286	public	公眾的	público
+287	often	經常	a menudo
+288	train	火車；訓練	tren; entrenar
+289	possible	可能的	posible
+290	actually	實際上	en realidad
+291	rather	寧可	más bien; bastante
+292	view	觀點	opinión; vista
+293	together	一起	juntos
+294	consider	考慮	considerar
+295	price	價格	precio
+296	parent	父母	padre o madre
+297	hard	努力	difícil; duro; mucho
+298	party	派對	fiesta; partido
+299	local	當地的	local
+300	control	控制	controlar; control
+301	already	已經	ya
+302	concern	關心	preocupación; concernir
+303	product	產品	producto
+304	lose	失去；輸	perder
+305	story	故事	historia
+306	almost	幾乎	casi
+307	continue	繼續	continuar
+308	stand	站立	estar de pie
+309	whole	整個	entero
+310	yet	還沒	todavía (no); sin embargo
+311	rate	比率	tasa; tarifa
+312	care	照顧	importar; cuidado
+313	expect	期望	esperar; prever
+314	effect	效果	efecto
+315	sort	分類	tipo; clasificar
+316	ever	曾經	alguna vez
+317	anything	任何事	cualquier cosa
+318	cause	原因	causa; causar
+319	fall	落下；跌倒	caer
+320	deal	交易	tratar; trato
+321	water	水	agua
+322	send	送出	enviar
+323	allow	允許	permitir
+324	soon	很快	pronto
+325	watch	手錶	mirar; reloj de pulsera
+326	base	基礎；以……為基礎	base; basar en
+327	probably	可能	probablemente
+328	suggest	建議	sugerir
+329	past	過去	pasado
+330	power	力量	poder; energía
+331	test	測試	prueba; examen
+332	visit	拜訪	visitar
+333	center	中心	centro
+334	grow	成長	crecer
+335	nothing	沒有	nada
+336	return	回來	volver; devolver
+337	mother	母親	madre
+338	walk	走	caminar
+339	matter	事情；要緊	asunto; importar
+340	mind	心智	importar (molestar); mente
+341	value	價值	valor
+342	office	辦公室	oficina
+343	record	記錄	registro; grabar
+344	stay	停留	quedarse
+345	force	力量	fuerza; obligar
+346	stop	停止	parar
+347	several	幾個	varios
+348	light	光	luz
+349	develop	發展	desarrollar
+350	remember	記得	recordar
+351	bit	一點	un poco
+352	share	分享	compartir; acción
+353	real	真實的	real
+354	answer	回答	responder; respuesta
+355	sit	坐	sentarse
+356	figure	數字	cifra; figura; creer
+357	letter	信件	carta; letra
+358	decide	決定	decidir
+359	language	語言	idioma
+360	subject	主題	tema; asignatura
+361	class	課程	clase
+362	development	發展	desarrollo
+363	town	城鎮	pueblo; ciudad
+364	half	一半	mitad
+365	minute	分鐘	minuto
+366	food	食物	comida
+367	break	打破	romper; descanso
+368	clear	清楚的	claro; despejar
+369	future	未來	futuro
+370	either	兩者之一	cualquiera (de dos); tampoco
+371	ago	以前	hace (tiempo)
+372	per	每	por (cada)
+373	remain	保持	permanecer; quedar
+374	top	頂部	parte superior
+375	among	在…之中	entre (varios)
+376	win	贏	ganar
+377	color	顏色	color
+378	involve	涉及	implicar; involucrar
+379	reach	到達	alcanzar; llegar a
+380	social	社會的	social
+381	period	時期	periodo
+382	across	橫越	a través de; al otro lado
+383	note	筆記	nota; anotar
+384	history	歷史	historia
+385	create	創造	crear
+386	drive	駕駛	conducir
+387	along	沿著	a lo largo de
+388	type	類型；打字	tipo; escribir a máquina
+389	sound	聲音；聽起來	sonido; sonar
+390	eye	眼睛	ojo
+391	music	音樂	música
+392	game	遊戲	juego; partido
+393	political	政治的	político
+394	free	自由的	gratis; libre
+395	receive	接收	recibir
+396	moment	時刻	momento
+397	sale	銷售	venta; rebajas
+398	policy	政策	política; póliza
+399	further	更進一步	más lejos; más
+400	body	身體	cuerpo
+401	require	要求	requerir
+402	wait	等待	esperar
+403	general	一般的	general
+404	appear	出現	aparecer; parecer
+405	toward	朝向	hacia
+406	team	團隊	equipo
+407	easy	容易的	fácil
+408	individual	個人	individuo; individual
+409	full	滿的	lleno
+410	black	黑色	negro
+411	sense	感覺	sentido
+412	perhaps	也許	quizás
+413	add	增加	añadir
+414	rule	規則	regla; gobernar
+415	pass	通過；傳遞	pasar; aprobar
+416	produce	生產	producir
+417	sell	銷售	vender
+418	short	短的	corto; bajo
+419	agree	同意	estar de acuerdo
+420	law	法律	ley
+421	everything	一切	todo
+422	research	研究	investigación
+423	cover	覆蓋	cubrir
+424	paper	紙	papel
+425	position	位置	posición; puesto
+426	near	附近	cerca
+427	human	人類	humano
+428	computer	電腦	ordenador; computadora
+429	situation	情況	situación
+430	staff	員工	personal
+431	activity	活動	actividad
+432	film	電影	película
+433	morning	早晨	mañana (parte del día)
+434	war	戰爭	guerra
+435	account	帳戶	cuenta; explicación
+436	shop	商店	tienda
+437	major	主要的	principal; especialidad
+438	someone	某人	alguien
+439	above	在…上方	encima de
+440	design	設計	diseño; diseñar
+441	event	事件	evento; suceso
+442	special	特別的	especial
+443	sometimes	有時	a veces
+444	condition	條件	condición
+445	carry	攜帶	llevar
+446	choose	選擇	elegir
+447	father	父親	padre
+448	decision	決定	decisión
+449	table	桌子	mesa; tabla
+450	certain	確定的	seguro; cierto
+451	forward	向前	adelante; reenviar
+452	main	主要的	principal
+453	die	死亡	morir
+454	bear	承受	soportar; oso
+455	cut	切割	cortar; recortar
+456	describe	描述	describir
+457	himself	他自己	él mismo
+458	available	可用的	disponible
+459	especially	特別	especialmente
+460	strong	強壯的	fuerte
+461	rise	上升	subir; aumento
+462	girl	女孩	chica
+463	maybe	也許	quizás
+464	community	社區	comunidad
+465	else	其他	más; otro
+466	particular	特定的	particular; específico
+467	role	角色	papel; rol
+468	join	加入	unirse
+469	difficult	困難的	difícil
+470	please	請	por favor
+471	detail	細節	detalle
+472	difference	差異	diferencia
+473	action	行動	acción
+474	health	健康	salud
+475	eat	吃	comer
+476	step	步驟	paso
+477	True	真	verdadero
+478	phone	電話；打電話	teléfono; llamar
+479	themselves	他們自己	ellos mismos
+480	draw	畫	dibujar; tirar; atraer
+481	white	白色	blanco
+482	date	日期	fecha; cita
+483	practice	練習	práctica
+484	model	模型	modelo
+485	raise	提高	subir; criar; levantar
+486	customer	顧客	cliente
+487	front	前面	frente
+488	explain	解釋	explicar
+489	door	門	puerta
+490	outside	外面	fuera
+491	behind	在…後面	detrás de
+492	economic	經濟的	económico
+493	site	地點	sitio
+494	approach	方法	enfoque; acercarse
+495	teacher	老師	profesor
+496	land	土地	tierra; aterrizar
+497	charge	收費	cobrar; cargar; cargo
+498	finally	最終	finalmente
+499	sign	標誌	señal; firmar; indicio
+500	claim	聲稱	afirmar; reclamar
+501	relationship	關係	relación
+502	travel	旅行	viajar
+503	enjoy	享受	disfrutar
+504	death	死亡	muerte
+505	nice	好的	agradable; bonito
+506	amount	數量	cantidad
+507	improve	改善	mejorar
+508	picture	圖片	foto; imagen
+509	boy	男孩	chico
+510	regard	考慮	considerar; consideración
+511	organization	組織	organización
+512	happy	快樂的	feliz
+513	couple	一對	pareja; un par
+514	act	行為	actuar; acto
+515	range	範圍	rango; gama
+516	quality	品質	calidad
+517	project	專案	proyecto
+518	round	圓形的	redondo; ronda; alrededor
+519	opportunity	機會	oportunidad
+520	road	道路	carretera
+521	accord	一致	acuerdo (according to: según)
+522	list	清單；列出	lista; enumerar
+523	wish	希望	desear; deseo
+524	therefore	因此	por lo tanto
+525	wear	穿戴	llevar puesto
+526	fund	基金	fondo (dinero)
+527	rest	休息；其餘	descanso; el resto
+528	kid	孩子	niño (coloquial)
+529	industry	產業	industria
+530	education	教育	educación
+531	measure	測量	medir; medida
+532	kill	殺死	matar
+533	serve	服務	servir
+534	likely	可能的	probable
+535	certainly	當然	ciertamente
+536	national	國家的	nacional
+537	itself	它自己	sí mismo
+538	teach	教	enseñar
+539	field	領域	campo; ámbito
+540	security	安全	seguridad
+541	air	空氣	aire
+542	benefit	好處	beneficio
+543	trade	貿易	comercio
+544	risk	風險	riesgo
+545	news	新聞	noticias
+546	standard	標準	estándar
+547	vote	投票	votar; voto
+548	percent	百分比	por ciento
+549	focus	焦點	enfoque; centrarse
+550	stage	階段	etapa
+551	space	空間	espacio
+552	instead	代替	en cambio
+553	realize	意識到	darse cuenta; realizar
+554	usually	通常	normalmente
+555	data	資料	datos
+556	single	單一的	único; soltero
+557	address	地址	dirección; discurso; abordar
+558	performance	表現	rendimiento; actuación
+559	chance	機會	oportunidad; posibilidad
+560	accept	接受	aceptar
+561	society	社會	sociedad
+562	technology	科技	tecnología
+563	mention	提到	mencionar
+564	choice	選擇	elección
+565	save	節省；保存；拯救	ahorrar; guardar; salvar
+566	common	常見的	común
+567	culture	文化	cultura
+568	total	總計	total
+569	demand	需求	demanda; exigir
+570	material	材料	material
+571	limit	限制	límite; limitar
+572	listen	聽	escuchar
+573	due	到期的	previsto; vencido (plazo)
+574	wrong	錯誤的	incorrecto
+575	foot	腳	pie
+576	effort	努力	esfuerzo
+577	attention	注意	atención
+578	upon	在…上	sobre
+579	check	檢查	comprobar
+580	complete	完成	completar; completo
+581	lie	說謊	mentir; estar tumbado
+582	pick	挑選	elegir
+583	reduce	減少	reducir
+584	personal	個人的	personal
+585	ground	地面	suelo
+586	animal	動物	animal
+587	arrive	到達	llegar
+588	patient	病人	paciente
+589	current	目前的	actual
+590	century	世紀	siglo
+591	evidence	證據	prueba; evidencia
+592	exist	存在	existir
+593	similar	相似的	similar
+594	fight	打架	pelear; pelea
+595	leader	領導者	líder
+596	fine	好的	bien
+597	street	街道	calle
+598	former	前任的	antiguo; anterior
+599	contact	聯絡；接觸	contactar; contacto
+600	particularly	特別地	particularmente
+601	wife	妻子	esposa
+602	sport	運動	deporte
+603	prepare	準備	preparar
+604	discuss	討論	discutir; hablar de
+605	response	回應	respuesta
+606	voice	聲音	voz
+607	piece	片段	pedazo; pieza
+608	finish	完成	terminar
+609	suppose	假設	suponer; se supone que
+610	apply	應用	solicitar; aplicar
+611	president	總統	presidente
+612	fire	火	fuego; despedir
+613	compare	比較	comparar
+614	court	法院	tribunal; cancha
+615	police	警察	policía
+616	store	商店	tienda; guardar
+617	poor	貧窮的	pobre
+618	knowledge	知識	conocimiento
+619	laugh	笑	reír
+620	arm	手臂	brazo
+621	heart	心	corazón
+622	source	來源	fuente
+623	employee	員工	empleado
+624	manage	管理	gestionar; arreglárselas
+625	simply	簡單地	simplemente
+626	bank	銀行	banco
+627	firm	公司	empresa; firme
+628	cell	細胞	célula; celular
+629	article	文章	artículo
+630	fast	快的	rápido
+631	attack	攻擊	atacar; ataque
+632	foreign	外國的	extranjero
+633	surprise	驚喜；使驚訝	sorpresa; sorprender
+634	feature	特色	característica
+635	factor	因素	factor
+636	pretty	漂亮的	bastante; bonito
+637	recently	最近	recientemente
+638	affect	影響	afectar
+639	drop	下降	dejar caer; gota
+640	recent	最近的	reciente
+641	relate	相關	relacionarse
+642	official	官方的	oficial
+643	financial	財務的	financiero
+644	miss	想念	perder (un tren); extrañar
+645	art	藝術	arte
+646	campaign	活動	campaña
+647	private	私人的	privado
+648	pause	暫停	pausa (marca de corpus)
+649	everyone	每個人	todos
+650	forget	忘記	olvidar
+651	page	頁面	página
+652	worry	擔心	preocuparse
+653	summer	夏天	verano
+654	drink	飲料	beber
+655	opinion	意見	opinión
+656	park	公園；停車	parque; aparcar
+657	represent	代表	representar
+658	key	鑰匙	llave; clave
+659	inside	裡面	dentro
+660	manager	經理	gerente
+661	international	國際的	internacional
+662	contain	包含	contener
+663	notice	注意	notar; aviso
+664	wonder	好奇	preguntarse; maravilla
+665	nature	自然	naturaleza
+666	structure	結構	estructura
+667	section	部分	sección
+668	myself	我自己	yo mismo
+669	exactly	確切地	exactamente
+670	plant	植物	planta; fábrica
+671	paint	油漆	pintura; pintar
+672	worker	工人	trabajador
+673	press	按壓	presionar; la prensa
+674	whatever	無論什麼	lo que sea
+675	necessary	必要的	necesario
+676	region	地區	región
+677	growth	成長	crecimiento
+678	evening	傍晚	tarde; noche
+679	influence	影響	influencia; influir
+680	respect	尊重	respeto; respetar
+681	various	各種的	varios; diversos
+682	catch	抓住；趕上	atrapar; alcanzar (el tren)
+683	thus	因此	así; por lo tanto
+684	skill	技能	habilidad
+685	attempt	嘗試	intento; intentar
+686	son	兒子	hijo
+687	simple	簡單的	simple
+688	medium	中等	mediano; medio
+689	average	平均	promedio
+690	stock	庫存	existencias; acciones
+691	management	管理	gestión
+692	character	性格	carácter; personaje
+693	bed	床	cama
+694	hit	打	golpear
+695	establish	建立	establecer
+696	indeed	確實	en efecto; de hecho
+697	final	最終的	final
+698	economy	經濟	economía
+699	fit	合適的	quedar bien; encajar
+700	guy	傢伙	tipo; chico
+701	function	功能	función
+702	yesterday	昨天	ayer
+703	image	圖像	imagen
+704	size	尺寸	tamaño
+705	behavior	行為	comportamiento
+706	addition	增加	adición
+707	determine	決定	determinar
+708	station	站	estación
+709	population	人口	población
+710	fail	失敗	fracasar
+711	environment	環境	medio ambiente; entorno
+712	production	生產	producción
+713	contract	合約	contrato
+714	player	玩家	jugador
+715	comment	評論	comentario
+716	enter	進入	entrar
+717	occur	發生	ocurrir
+718	alone	獨自	solo
+719	significant	重要的	significativo
+720	drug	藥物	medicamento; droga
+721	wall	牆	pared
+722	series	系列	serie
+723	direct	直接的	directo; dirigir
+724	success	成功	éxito
+725	tomorrow	明天	mañana (día siguiente)
+726	director	主任	director
+727	clearly	清楚地	claramente
+728	lack	缺乏	falta; carecer
+729	review	審查	repasar; revisar; reseña
+730	depend	依賴	depender
+731	race	種族	carrera; raza
+732	recognize	認識	reconocer
+733	window	窗戶	ventana
+734	purpose	目的	propósito
+735	department	部門	departamento
+736	gain	獲得	ganar; obtener
+737	tree	樹	árbol
+738	college	大學	universidad; colegio
+739	argue	爭論	discutir; argumentar
+740	board	董事會	junta; tabla; embarcar
+741	holiday	假日	vacaciones; día festivo
+742	mark	標記	marca; nota; marcar
+743	church	教堂	iglesia
+744	machine	機器	máquina
+745	achieve	達成	lograr
+746	item	物品	elemento; artículo
+747	prove	證明	demostrar
+748	cent	分錢	centavo
+749	season	季節	temporada; estación
+750	floor	地板	suelo; piso
+751	stuff	東西	cosas (coloquial)
+752	wide	寬的	ancho
+753	anyone	任何人	cualquiera
+754	method	方法	método
+755	analysis	分析	análisis
+756	election	選舉	elección
+757	military	軍事	militar
+758	hotel	飯店	hotel
+759	club	俱樂部	club
+760	below	低於	debajo de
+761	movie	電影	película
+762	doctor	醫生	médico
+763	discussion	討論	discusión; debate
+764	sorry	對不起	lo siento; perdón
+765	challenge	挑戰	desafío
+766	nation	國家	nación
+767	nearly	幾乎	casi
+768	statement	聲明	declaración; extracto
+769	link	連結	enlace; vínculo
+770	despite	儘管	a pesar de
+771	introduce	介紹	presentar; introducir
+772	advantage	優勢	ventaja
+773	ready	準備好的	listo
+774	marry	結婚	casarse
+775	strike	罷工	golpear; huelga
+776	mile	英里	milla
+777	seek	尋求	buscar
+778	ability	能力	capacidad
+779	unit	單位	unidad
+780	card	卡片	tarjeta
+781	hospital	醫院	hospital
+782	quickly	快速地	rápidamente
+783	interview	面試	entrevista
+784	agreement	協議	acuerdo
+785	release	發布	liberar; lanzar
+786	tax	稅	impuesto
+787	solution	解決方案	solución
+788	capital	首都	capital
+789	popular	受歡迎的	popular
+790	specific	具體的	específico
+791	beautiful	美麗的	hermoso
+792	fear	恐懼	miedo; temer
+793	aim	目標	objetivo; apuntar
+794	television	電視	televisión
+795	serious	嚴重的	serio; grave
+796	target	目標	objetivo; blanco
+797	degree	學位	grado; título
+798	pull	拉	tirar; jalar
+799	red	紅色	rojo
+800	husband	丈夫	marido
+801	access	存取	acceso
+802	movement	運動	movimiento
+803	treat	對待	tratar
+804	identify	識別	identificar
+805	loss	損失	pérdida
+806	shall	將	(futuro); ¿…?
+807	modern	現代的	moderno
+808	pressure	壓力	presión
+809	bus	公車	autobús
+810	treatment	治療	tratamiento
+811	conference	會議	conferencia
+812	yourself	你自己	tú mismo
+813	supply	供應	suministro; suministrar
+814	village	村莊	pueblo
+815	worth	值得	que vale; valor
+816	natural	自然的	natural
+817	express	表達	expresar
+818	indicate	指出	indicar
+819	attend	出席	asistir
+820	brother	兄弟	hermano
+821	investment	投資	inversión
+822	score	分數	puntuación
+823	organize	組織	organizar
+824	trip	旅行	viaje
+825	beyond	超越	más allá de
+826	sleep	睡眠	dormir
+827	fish	魚	pez; pescado
+828	promise	承諾	prometer; promesa
+829	potential	潛力	potencial
+830	energy	能量	energía
+831	trouble	麻煩	problema; dificultad
+832	relation	關係	relación
+833	touch	觸碰	tocar
+834	file	文件	archivo
+835	middle	中間	medio; centro
+836	bar	酒吧	bar; barra
+837	suffer	受苦	sufrir
+838	strategy	策略	estrategia
+839	deep	深的	profundo
+840	except	除了	excepto
+841	clean	清潔的	limpiar; limpio
+842	tend	傾向	tender a
+843	advance	進步	avance; avanzar
+844	fill	填滿	llenar
+845	star	星星	estrella
+846	network	網路	red
+847	generally	一般來說	generalmente
+848	operation	運作	operación
+849	match	比賽	partido; coincidir
+850	avoid	避免	evitar
+851	seat	座位	asiento
+852	throw	丟擲	lanzar
+853	task	任務	tarea
+854	normal	正常的	normal
+855	goal	目標	meta; gol
+856	associate	聯繫	asociar; socio
+857	blue	藍色	azul
+858	positive	正面的	positivo
+859	option	選項	opción
+860	box	盒子	caja
+861	huge	巨大的	enorme
+862	message	訊息	mensaje
+863	instance	例子	ejemplo; caso
+864	style	風格	estilo
+865	refer	參照	referirse
+866	cold	冷的	frío; resfriado
+867	push	推	empujar
+868	quarter	四分之一	cuarto; trimestre
+869	assume	假設	suponer
+870	baby	嬰兒	bebé
+871	successful	成功的	exitoso
+872	sing	唱歌	cantar
+873	doubt	懷疑	duda; dudar
+874	competition	競爭	competencia
+875	theory	理論	teoría
+876	propose	提議	proponer
+877	reference	參考	referencia
+878	argument	論點	argumento; discusión
+879	adult	成人	adulto
+880	fly	飛	volar
+881	document	文件	documento
+882	pattern	模式	patrón
+883	application	申請	solicitud; aplicación
+884	hot	熱的	caliente; caluroso
+885	obviously	顯然	obviamente
+886	unclear	不清楚的	inaudible (marca de corpus)
+887	bill	帳單	factura; proyecto de ley; billete
+888	search	搜尋	buscar; búsqueda
+889	separate	分開	separar; separado
+890	central	中央的	central
+891	career	職業	carrera profesional
+892	anyway	無論如何	de todos modos
+893	speech	演講	discurso
+894	dog	狗	perro
+895	officer	軍官	oficial; agente
+896	throughout	整個	a lo largo de
+897	oil	石油	petróleo; aceite
+898	dress	洋裝	vestido; vestirse
+899	profit	利潤	ganancia
+900	guess	猜測	suponer; adivinar
+901	fun	樂趣	diversión; divertido
+902	protect	保護	proteger
+903	resource	資源	recurso
+904	science	科學	ciencia
+905	disease	疾病	enfermedad
+906	balance	平衡	equilibrio; saldo
+907	damage	損害	daño; dañar
+908	basis	基礎	base
+909	author	作者	autor
+910	basic	基本的	básico
+911	encourage	鼓勵	animar
+912	hair	頭髮	pelo
+913	male	男性	masculino
+914	operate	操作	operar
+915	reflect	反映	reflejar; reflexionar
+916	exercise	運動	ejercicio
+917	useful	有用的	útil
+918	restaurant	餐廳	restaurante
+919	income	收入	ingresos
+920	property	財產	propiedad
+921	previous	之前的	anterior
+922	dark	黑暗的	oscuro
+923	imagine	想像	imaginar
+924	okay	好的	vale; de acuerdo
+925	earn	賺取	ganar (dinero)
+926	daughter	女兒	hija
+927	post	貼文	publicación; correo; puesto
+928	newspaper	報紙	periódico
+929	define	定義	definir
+930	conclusion	結論	conclusión
+931	clock	時鐘	reloj
+932	everybody	每個人	todos
+933	weekend	週末	fin de semana
+934	perform	執行	realizar; actuar
+935	professional	專業的	profesional
+936	mine	我的	mío
+937	debate	辯論	debate
+938	memory	記憶	memoria; recuerdo
+939	green	綠色	verde
+940	song	歌曲	canción
+941	object	物件	objeto
+942	maintain	維持	mantener
+943	credit	信用	crédito
+944	ring	戒指	llamar; sonar
+945	discover	發現	descubrir
+946	dead	死的	muerto
+947	afternoon	下午	tarde
+948	prefer	偏好	preferir
+949	extend	延伸	extender
+950	possibility	可能性	posibilidad
+951	direction	方向	dirección
+952	facility	設施	instalación
+953	variety	多樣性	variedad
+954	daily	每天的	diario
+955	clothes	衣服	ropa
+956	screen	螢幕	pantalla
+957	track	追蹤	pista; seguir la pista
+958	dance	舞蹈	baile; bailar
+959	completely	完全地	completamente
+960	female	女性	femenino
+961	responsibility	責任	responsabilidad
+962	original	原始的	original
+963	sister	姊妹	hermana
+964	rock	岩石	roca; rock
+965	dream	夢想	sueño
+966	nor	也不	ni
+967	university	大學	universidad
+968	easily	容易地	fácilmente
+969	agency	機構	agencia
+970	dollar	美元	dólar
+971	garden	花園	jardín
+972	fix	修理	arreglar
+973	ahead	在前面	adelante; por delante
+974	cross	穿越	cruzar; cruz
+975	yeah	是的	sí (coloquial)
+976	candidate	候選人	candidato
+977	weight	重量	peso
+978	legal	合法的	legal
+979	proposal	提案	propuesta
+980	version	版本	versión
+981	conversation	對話	conversación
+982	somebody	某人	alguien
+983	pound	英鎊	libra
+984	magazine	雜誌	revista
+985	shape	形狀	forma
+986	sea	海	mar
+987	immediately	立即	inmediatamente
+988	welcome	歡迎	dar la bienvenida; bienvenido
+989	smile	微笑	sonreír; sonrisa
+990	communication	溝通	comunicación
+991	agent	代理人	agente
+992	traditional	傳統的	tradicional
+993	replace	取代	reemplazar
+994	judge	法官	juez; juzgar
+995	herself	她自己	ella misma
+996	suddenly	突然	de repente
+997	generation	世代	generación
+998	estimate	估計	estimar; estimación
+999	favorite	最愛的	favorito
+1000	difficulty	困難	dificultad
+1001	purchase	購買	compra; comprar
+1002	shoot	射擊	disparar; rodar (filmar)
+1003	announce	宣布	anunciar
+1004	unless	除非	a menos que
+1005	independent	獨立的	independiente
+1006	recommend	推薦	recomendar
+1007	survey	調查	encuesta
+1008	majority	多數	mayoría
+1009	stick	黏貼	pegar; palo; ceñirse
+1010	request	請求	solicitud; pedir
+1011	rich	富有的	rico
+1012	wind	風	viento
+1013	none	沒有	ninguno
+1014	exchange	交換	intercambio; cambiar
+1015	budget	預算	presupuesto
+1016	famous	著名的	famoso
+1017	blood	血液	sangre
+1018	appropriate	適當的	apropiado
+1019	block	封鎖	bloque; manzana; bloquear
+1020	warm	溫暖的	cálido
+1021	count	計數	contar
+1022	scene	場景	escena
+1023	writer	作家	escritor
+1024	content	內容	contenido
+1025	prevent	預防	prevenir
+1026	safe	安全的	seguro
+1027	invite	邀請	invitar
+1028	mix	混合	mezclar
+1029	element	元素	elemento
+1030	effective	有效的	eficaz
+1031	correct	正確的	correcto; corregir
+1032	medical	醫療的	médico
+1033	admit	承認	admitir
+1034	beat	打敗	vencer; golpear
+1035	telephone	電話	teléfono
+1036	copy	複製	copiar; copia
+1037	committee	委員會	comité
+1038	aware	意識到	consciente
+1039	advice	建議	consejo
+1040	handle	處理	manejar; asa
+1041	glass	玻璃	vidrio; vaso
+1042	trial	試驗	juicio; prueba
+1043	stress	壓力	estrés; enfatizar
+1044	radio	收音機	radio
+1045	administration	行政	administración
+1046	complex	複雜的	complejo
+1047	text	文本	texto; mensaje
+1048	context	上下文	contexto
+1049	ride	騎乘	montar; viajar en
+1050	directly	直接地	directamente
+1051	heavy	重的	pesado
+1052	remove	移除	quitar
+1053	conduct	行為	realizar; conducta
+1054	equipment	設備	equipo (aparatos)
+1055	otherwise	否則	de lo contrario
+1056	title	標題	título
+1057	extra	額外的	extra
+1058	executive	主管	ejecutivo
+1059	chair	椅子	silla
+1060	expensive	昂貴的	caro
+1061	sample	樣本	muestra
+1062	sex	性別	sexo
+1063	deliver	交付	entregar
+1064	video	影片	video
+1065	connection	連接	conexión
+1066	primary	主要的	principal; primario
+1067	weather	天氣	tiempo (clima)
+1068	collect	收集	recoger; coleccionar
+1069	inform	告知	informar
+1070	principle	原則	principio
+1071	straight	直的	recto; directo
+1072	appeal	上訴	apelar; atractivo
+1073	highly	高度	muy; altamente
+1074	trust	信任	confiar; confianza
+1075	wonderful	精彩的	maravilloso
+1076	flat	平坦的	plano; apartamento
+1077	absolutely	絕對地	absolutamente
+1078	flow	流動	flujo; fluir
+1079	fair	公平的	justo; bastante; feria
+1080	additional	額外的	adicional
+1081	responsible	負責的	responsable
+1082	farm	農場	granja
+1083	collection	收藏	colección
+1084	hang	懸掛	colgar
+1085	negative	負面的	negativo
+1086	band	樂隊	banda
+1087	relative	相對的	pariente; relativo
+1088	tour	旅遊	gira; recorrido
+1089	alternative	替代方案	alternativa
+1090	software	軟體	software
+1091	pair	一對	par
+1092	ship	船	barco; enviar
+1093	attitude	態度	actitud
+1094	cheap	便宜的	barato
+1095	double	雙倍	doble
+1096	leg	腿	pierna
+1097	observe	觀察	observar
+1098	sentence	句子	oración; sentencia
+1099	print	列印	imprimir
+1100	progress	進步	progreso
+1101	truth	真相	verdad
+1102	nobody	沒有人	nadie
+1103	examine	檢查	examinar
+1104	lay	放置	poner; colocar
+1105	speed	速度	velocidad
+1106	politics	政治	política
+1107	reply	回覆	responder; respuesta
+1108	display	顯示	mostrar; pantalla
+1109	transfer	轉移	transferir
+1110	perfect	完美的	perfecto
+1111	slightly	稍微	ligeramente
+1112	overall	整體	en general; total
+1113	intend	打算	tener la intención
+1114	user	使用者	usuario
+1115	respond	回應	responder
+1116	dinner	晚餐	cena
+1117	slow	慢的	lento
+1118	regular	規律的	regular; habitual
+1119	physical	身體的	físico
+1120	apart	分開	separado; aparte
+1121	suit	西裝	traje; sentar bien
+1122	federal	聯邦的	federal
+1123	reveal	揭示	revelar
+1124	percentage	百分比	porcentaje
+1125	peace	和平	paz
+1126	status	狀態	estado; estatus
+1127	crime	犯罪	delito; crimen
+1128	decline	下降	disminuir; rechazar
+1129	decade	十年	década
+1130	launch	發射	lanzar
+1131	warn	警告	advertir
+1132	consumer	消費者	consumidor
+1133	favor	支持	favor; apoyar
+1134	dry	乾的	seco; secar
+1135	partner	夥伴	pareja; socio
+1136	institution	機構	institución
+1137	spot	地點	lugar; punto
+1138	horse	馬	caballo
+1139	eventually	最終	finalmente
+1140	heat	熱量	calor
+1141	excite	使興奮	emocionar
+1142	reader	讀者	lector
+1143	importance	重要性	importancia
+1144	distance	距離	distancia
+1145	guide	指南	guía; guiar
+1146	grant	授予	conceder; subvención
+1147	taxi	計程車	taxi
+1148	feed	餵食	alimentar
+1149	pain	疼痛	dolor
+1150	sector	部門	sector
+1151	mistake	錯誤	error
+1152	ensure	確保	asegurar
+1153	satisfy	滿足	satisfacer
+1154	chief	首席	jefe; principal
+1155	cool	涼爽的	fresco; genial
+1156	expert	專家	experto
+1157	wave	波浪	ola; saludar con la mano
+1158	south	南方	sur
+1159	labor	勞動	trabajo; mano de obra
+1160	surface	表面	superficie
+1161	library	圖書館	biblioteca
+1162	excellent	優秀的	excelente
+1163	edge	邊緣	borde
+1164	camp	營地	campamento
+1165	audience	觀眾	público
+1166	lift	舉起	levantar
+1167	procedure	程序	procedimiento
+1168	email	電子郵件	correo electrónico
+1169	global	全球的	global
+1170	struggle	掙扎	luchar; lucha
+1171	advertise	廣告	anunciar (publicidad)
+1172	select	選擇	seleccionar
+1173	surround	圍繞	rodear
+1174	extent	程度	grado; alcance
+1175	river	河流	río
+1176	annual	年度的	anual
+1177	fully	完全地	completamente
+1178	contrast	對比	contraste
+1179	roll	滾動	rodar; enrollar
+1180	reality	現實	realidad
+1181	photograph	照片	fotografía
+1182	artist	藝術家	artista
+1183	conflict	衝突	conflicto
+1184	entire	整個的	entero
+1185	presence	存在	presencia
+1186	crowd	人群	multitud
+1187	corner	角落	esquina; rincón
+1188	gas	氣體	gas; gasolina
+1189	shift	轉換	cambio; turno
+1190	net	網	red; neto
+1191	category	類別	categoría
+1192	secretary	秘書	secretario; ministro
+1193	defense	防禦	defensa
+1194	quick	快速的	rápido
+1195	cook	烹飪	cocinar
+1196	spread	散布	extender; propagarse
+1197	nuclear	核能的	nuclear
+1198	scale	規模	escala; báscula
+1199	driver	司機	conductor
+1200	ball	球	pelota
+1201	cry	哭泣	llorar; gritar
+1202	introduction	介紹	introducción
+1203	requirement	要求	requisito
+1204	north	北方	norte
+1205	confirm	確認	confirmar
+1206	senior	高級的	superior; mayor
+1207	photo	照片	foto
+1208	refuse	拒絕	negarse
+1209	transport	運輸	transporte
+1210	emerge	出現	surgir
+1211	map	地圖	mapa
+1212	concept	概念	concepto
+1213	island	島嶼	isla
+1214	reform	改革	reforma
+1215	neither	兩者都不	ninguno de los dos
+1216	football	足球	fútbol
+1217	survive	生存	sobrevivir
+1218	flight	飛行	vuelo
+1219	left	左邊	izquierda
+1220	solve	解決	resolver
+1221	neighbor	鄰居	vecino
+1222	background	背景	fondo; antecedentes
+1223	technique	技術	técnica
+1224	traffic	交通	tráfico
+1225	improvement	改善	mejora
+1226	tool	工具	herramienta
+1227	consequence	後果	consecuencia
+1228	circumstance	情況	circunstancia
+1229	smoke	煙	humo; fumar
+1230	reaction	反應	reacción
+1231	rain	雨	lluvia; llover
+1232	busy	忙碌的	ocupado
+1233	lesson	課	lección; clase
+1234	brain	大腦	cerebro
+1235	mass	大量	masa; masivo
+1236	funny	好笑的	gracioso
+1237	contribute	貢獻	contribuir
+1238	failure	失敗	fracaso
+1239	schedule	時程	horario; programar
+1240	speaker	演講者	orador; altavoz
+1241	bottom	底部	fondo; parte inferior
+1242	adopt	採用	adoptar
+1243	combine	結合	combinar
+1244	mountain	山	montaña
+1245	waste	浪費	desperdiciar; residuos
+1246	hide	隱藏	esconder
+1247	marriage	婚姻	matrimonio
+1248	ticket	票	billete; entrada
+1249	meal	餐點	comida
+1250	colleague	同事	colega
+1251	bag	袋子	bolsa
+1252	repeat	重複	repetir
+1253	equal	平等的	igual
+1254	expression	表達	expresión
+1255	plus	加上	más
+1256	extremely	極端地	extremadamente
+1257	owner	所有者	dueño
+1258	plane	飛機	avión
+1259	commercial	商業的	comercial; anuncio
+1260	lady	女士	señora
+1261	duty	職責	deber; impuesto
+1262	strength	力量	fuerza; punto fuerte
+1263	connect	連接	conectar
+1264	cultural	文化的	cultural
+1265	arrange	安排	organizar; ordenar
+1266	scheme	計劃	plan; esquema
+1267	payment	付款	pago
+1268	unfortunately	不幸地	desafortunadamente
+1269	brief	簡短的	breve
+1270	bird	鳥	pájaro
+1271	demonstrate	示範	demostrar
+1272	contribution	貢獻	contribución
+1273	appreciate	感謝	agradecer; apreciar
+1274	chapter	章節	capítulo
+1275	secret	秘密	secreto
+1276	apparently	顯然	al parecer
+1277	novel	小說	novela
+1278	union	聯盟	unión; sindicato
+1279	burn	燃燒	quemar
+1280	trend	趨勢	tendencia
+1281	initial	初始的	inicial
+1282	pleasure	樂趣	placer
+1283	suggestion	建議	sugerencia
+1284	critical	關鍵的	crítico
+1285	gather	聚集	reunir
+1286	mostly	大多數	mayormente
+1287	earth	地球	tierra
+1288	pop	流行	pop; estallar
+1289	essential	必要的	esencial
+1290	desire	渴望	deseo
+1291	promote	促進	promover; ascender
+1292	currently	目前	actualmente
+1293	employ	雇用	emplear
+1294	path	路徑	camino; sendero
+1295	topic	主題	tema
+1296	beach	海灘	playa
+1297	attract	吸引	atraer
+1298	engage	參與	participar; involucrar
+1299	powerful	強大的	poderoso
+1300	flower	花	flor
+1301	crisis	危機	crisis
+1302	settle	解決	resolver; establecerse
+1303	boat	船	barco
+1304	aid	援助	ayuda
+1305	fan	粉絲	aficionado; ventilador
+1306	kitchen	廚房	cocina
+1307	twice	兩次	dos veces
+1308	fresh	新鮮的	fresco
+1309	delay	延遲	retraso; retrasar
+1310	safety	安全	seguridad
+1311	engineer	工程師	ingeniero
+1312	quiet	安靜的	tranquilo
+1313	insurance	保險	seguro (póliza)
+1314	nurse	護士	enfermero
+1315	divide	分割	dividir
+1316	length	長度	longitud
+1317	investigation	調查	investigación
+1318	package	套裝	paquete
+1319	somewhere	某處	en algún lugar
+1320	expand	擴展	ampliar
+1321	commit	承諾	cometer; comprometerse
+1322	obvious	明顯的	obvio
+1323	jump	跳	saltar
+1324	weapon	武器	arma
+1325	relatively	相對地	relativamente
+1326	host	主人	anfitrión; presentador
+1327	winter	冬天	invierno
+1328	district	地區	distrito
+1329	broad	廣泛的	amplio
+1330	tire	輪胎	cansar; neumático
+1331	spring	春天	primavera; resorte
+1332	spirit	精神	espíritu
+1333	lunch	午餐	almuerzo
+1334	actual	實際的	real; efectivo
+1335	pool	游泳池	piscina
+1336	battle	戰役	batalla
+1337	tradition	傳統	tradición
+1338	cash	現金	efectivo (dinero)
+1339	hardly	幾乎不	apenas
+1340	award	獎項	premio
+1341	coach	教練	entrenador; autocar
+1342	experiment	實驗	experimento
+1343	consideration	考慮	consideración
+1344	strange	奇怪的	extraño
+1345	code	代碼	código
+1346	possibly	可能地	posiblemente
+1347	threat	威脅	amenaza
+1348	accident	事故	accidente
+1349	impossible	不可能的	imposible
+1350	revenue	收入	ingresos
+1351	enable	啟用	permitir; hacer posible
+1352	afraid	害怕的	asustado
+1353	active	活躍的	activo
+1354	conclude	結論	concluir
+1355	religious	宗教的	religioso
+1356	cancer	癌症	cáncer
+1357	convince	說服	convencer
+1358	vary	變化	variar
+1359	environmental	環境的	ambiental
+1360	sun	太陽	sol
+1361	healthy	健康的	sano
+1362	blow	吹	soplar; golpe
+1363	volume	音量	volumen
+1364	location	位置	ubicación
+1365	invest	投資	invertir
+1366	proceed	繼續	proceder
+1367	wash	洗	lavar
+1368	actor	演員	actor
+1369	glad	高興的	contento
+1370	tape	膠帶	cinta
+1371	whereas	然而	mientras que
+1372	opposite	相反的	opuesto; enfrente
+1373	stone	石頭	piedra
+1374	sum	總和	suma
+1375	murder	謀殺	asesinato
+1376	monitor	監控	vigilar; monitor
+1377	soldier	士兵	soldado
+1378	finance	財務	finanzas
+1379	hate	仇恨	odiar
+1380	egg	蛋	huevo
+1381	concert	音樂會	concierto
+1382	shock	震驚	choque; impactar
+1383	comfortable	舒適的	cómodo
+1384	usual	通常的	habitual
+1385	carefully	小心地	con cuidado
+1386	pack	打包	empacar; paquete
+1387	recall	回想	recordar
+1388	wine	葡萄酒	vino
+1389	camera	相機	cámara
+1390	swim	游泳	nadar
+1391	manufacture	製造	fabricar
+1392	theater	劇院	teatro
+1393	cycle	循環	ciclo; ir en bici
+1394	coffee	咖啡	café
+1395	totally	完全地	totalmente
+1396	museum	博物館	museo
+1397	visitor	訪客	visitante
+1398	freedom	自由	libertad
+1399	construction	建設	construcción
+1400	dear	親愛的	querido
+1401	objective	目標	objetivo
+1402	moreover	此外	además
+1403	onto	到…上	sobre (hacia encima)
+1404	historical	歷史的	histórico
+1405	oppose	反對	oponerse
+1406	branch	分支	rama; sucursal
+1407	vehicle	車輛	vehículo
+1408	scientist	科學家	científico
+1409	route	路線	ruta
+1410	bind	綁定	atar; vincular
+1411	belong	屬於	pertenecer
+1412	taste	口味	sabor; probar
+1413	tonight	今晚	esta noche
+1414	fashion	時尚	moda
+1415	danger	危險	peligro
+1416	bomb	炸彈	bomba
+1417	army	軍隊	ejército
+1418	dangerous	危險的	peligroso
+1419	decrease	減少	disminuir
+1420	hurt	受傷	herir; doler
+1421	council	委員會	consejo (órgano)
+1422	editor	編輯	editor
+1423	normally	通常地	normalmente
+1424	sight	視野	vista
+1425	generate	產生	generar
+1426	gift	禮物	regalo
+1427	delivery	交付	entrega
+1428	deny	否認	negar
+1429	guest	客人	invitado
+1430	anybody	任何人	cualquiera
+1431	bedroom	臥室	dormitorio
+1432	quote	引用	citar; presupuesto
+1433	climb	攀爬	escalar; subir
+1434	basically	基本上	básicamente
+1435	violence	暴力	violencia
+1436	minister	部長	ministro
+1437	mainly	主要地	principalmente
+1438	mouth	嘴	boca
+1439	noise	噪音	ruido
+1440	manner	方式	manera
+1441	gun	槍	pistola; arma
+1442	square	廣場	cuadrado; plaza
+1443	occasion	場合	ocasión
+1444	familiar	熟悉的	familiar; conocido
+1445	ignore	忽略	ignorar
+1446	destroy	摧毀	destruir
+1447	affair	事務	asunto
+1448	civil	公民的	civil
+1449	locate	定位	localizar; situar
+1450	citizen	公民	ciudadano
+1451	temperature	溫度	temperatura
+1452	gold	黃金	oro
+1453	domestic	國內的	nacional; doméstico
+1454	load	載入	carga; cargar
+1455	belief	信念	creencia
+1456	troop	部隊	tropas
+1457	technical	技術的	técnico
+1458	remind	提醒	recordar (a alguien)
+1459	arrangement	安排	arreglo; preparativo
+1460	skin	皮膚	piel
+1461	prison	監獄	prisión
+1462	switch	切換	cambiar; interruptor
+1463	acquire	獲得	adquirir
+1464	corporate	企業的	corporativo
+1465	fairly	相當	bastante; con justicia
+1466	wood	木頭	madera
+1467	participate	參與	participar
+1468	tough	艱難的	duro; difícil
+1469	tear	淚水	lágrima; rasgar
+1470	representative	代表	representante
+1471	capacity	容量	capacidad
+1472	border	邊界	frontera
+1473	shake	搖動	sacudir
+1474	assessment	評估	evaluación
+1475	shoe	鞋子	zapato
+1476	ought	應該	deber (ought to)
+1477	ad	廣告	anuncio
+1478	fee	費用	tarifa; cuota
+1479	hall	大廳	sala; pasillo
+1480	regulation	法規	regulación; norma
+1481	escape	逃跑	escapar
+1482	studio	工作室	estudio
+1483	proper	適當的	adecuado
+1484	relax	放鬆	relajarse
+1485	tourist	遊客	turista
+1486	component	零件	componente
+1487	afford	負擔得起	permitirse (pagar)
+1488	lawyer	律師	abogado
+1489	suspect	嫌疑人	sospechoso; sospechar
+1490	cup	杯子	taza
+1491	description	描述	descripción
+1492	confidence	信心	confianza
+1493	industrial	工業的	industrial
+1494	complain	抱怨	quejarse
+1495	perspective	觀點	perspectiva
+1496	error	錯誤	error
+1497	arrest	逮捕	arrestar
+1498	assess	評估	evaluar
+1499	register	登記	registrarse
+1500	asset	資產	activo (bien)
+1501	signal	信號	señal
+1502	finger	手指	dedo
+1503	relevant	相關的	relevante
+1504	explore	探索	explorar
+1505	leadership	領導力	liderazgo
+1506	commitment	承諾	compromiso
+1507	wake	喚醒	despertar
+1508	necessarily	必然地	necesariamente
+1509	bright	明亮的	brillante; listo
+1510	frame	框架	marco
+1511	slowly	慢慢地	despacio
+1512	bond	債券	vínculo; bono
+1513	hire	雇用	contratar
+1514	hole	洞	agujero
+1515	tie	領帶	atar; corbata
+1516	internal	內部的	interno
+1517	chain	鏈條	cadena
+1518	literature	文學	literatura
+1519	victim	受害者	víctima
+1520	threaten	威脅	amenazar
+1521	division	部門	división
+1522	secure	安全的	seguro; asegurar
+1523	amaze	驚訝	asombrar
+1524	device	裝置	dispositivo
+1525	birth	出生	nacimiento
+1526	forest	森林	bosque
+1527	label	標籤	etiqueta
+1528	root	根	raíz
+1529	factory	工廠	fábrica
+1530	expense	費用	gasto
+1531	channel	頻道	canal
+1532	investigate	調查	investigar
+1533	recommendation	推薦	recomendación
+1534	rank	排名	rango; clasificar
+1535	typical	典型的	típico
+1536	west	西方	oeste
+1537	friendly	友好的	amable
+1538	resident	居民	residente
+1539	provision	規定	provisión; disposición
+1540	concentrate	集中	concentrarse
+1541	plenty	充足	abundancia; de sobra
+1542	export	出口	exportar
+1543	entirely	完全地	completamente
+1544	strongly	強烈地	fuertemente
+1545	bridge	橋樑	puente
+1546	consist	由…組成	consistir
+1547	graduate	畢業	graduarse; graduado
+1548	brand	品牌	marca
+1549	moral	道德的	moral
+1550	insist	堅持	insistir
+1551	combination	組合	combinación
+1552	abuse	濫用	abuso
+1553	ice	冰	hielo
+1554	principal	校長	director (escuela); principal
+1555	master	主人	maestro; dominar
+1556	definitely	絕對地	definitivamente
+1557	session	會議	sesión
+1558	grade	成績	nota; grado; curso
+1559	nevertheless	儘管如此	sin embargo
+1560	predict	預測	predecir
+1561	previously	之前	anteriormente
+1562	protection	保護	protección
+1563	largely	主要地	en gran parte
+1564	wed	結婚	casarse
+1565	rent	租金	alquiler; alquilar
+1566	shot	射擊	disparo; tiro
+1567	appearance	外表	apariencia
+1568	reasonable	合理的	razonable
+1569	guarantee	保證	garantizar; garantía
+1570	till	直到	hasta
+1571	theme	主題	tema
+1572	judgment	判斷	juicio
+1573	odd	奇怪的	raro; impar
+1574	approve	批准	aprobar
+1575	loan	貸款	préstamo
+1576	definition	定義	definición
+1577	elect	選舉	elegir (por voto)
+1578	atmosphere	氣氛	ambiente; atmósfera
+1579	farmer	農民	agricultor
+1580	comparison	比較	comparación
+1581	characteristic	特徵	característica
+1582	license	執照	licencia
+1583	rely	依賴	depender
+1584	narrow	狹窄的	estrecho
+1585	succeed	成功	tener éxito
+1586	identity	身份	identidad
+1587	desk	桌子	escritorio
+1588	permit	許可	permitir; permiso
+1589	seriously	嚴重地	en serio; gravemente
+1590	wild	野生的	salvaje
+1591	empty	空的	vacío
+1592	commission	委員會	comisión
+1593	unique	獨特的	único
+1594	association	協會	asociación
+1595	instrument	樂器	instrumento
+1596	investor	投資者	inversor
+1597	practical	實際的	práctico
+1598	tea	茶	té
+1599	lovely	可愛的	encantador
+1600	soft	柔軟的	suave
+1601	row	排	fila
+1602	youth	青年	juventud
+1603	lock	鎖	cerrar con llave; cerradura
+1604	fuel	燃料	combustible
+1605	expectation	期望	expectativa
+1606	employment	就業	empleo
+1607	celebrate	慶祝	celebrar
+1608	sexual	性的	sexual
+1609	shoulder	肩膀	hombro
+1610	breath	呼吸	respiración; aliento
+1611	increasingly	越來越	cada vez más
+1612	import	進口	importar
+1613	bottle	瓶子	botella
+1614	ourselves	我們自己	nosotros mismos
+1615	sheet	床單	hoja; sábana
+1616	engine	引擎	motor
+1617	cast	投射	lanzar; reparto
+1618	notion	概念	noción
+1619	conservative	保守的	conservador
+1620	journey	旅程	viaje; trayecto
+1621	opposition	反對	oposición
+1622	relief	緩解	alivio
+1623	debt	債務	deuda
+1624	honor	榮譽	honor; honrar
+1625	outcome	結果	resultado
+1626	blame	責備	culpar
+1627	explanation	解釋	explicación
+1628	arise	產生	surgir
+1629	musical	音樂的	musical
+1630	recover	恢復	recuperarse
+1631	dad	爸爸	papá
+1632	stretch	延伸	estirar
+1633	declare	宣告	declarar
+1634	retire	退休	jubilarse
+1635	tiny	微小的	diminuto
+1636	careful	小心的	cuidadoso
+1637	suitable	適合的	adecuado
+1638	native	本地的	nativo
+1639	fruit	水果	fruta
+1640	analyze	分析	analizar
+1641	witness	目擊者	testigo; presenciar
+1642	mail	郵件	correo
+1643	terrible	可怕的	terrible
+1644	researcher	研究者	investigador
+1645	ordinary	普通的	común; corriente
+1646	selection	選擇	selección
+1647	anywhere	任何地方	en cualquier lugar
+1648	mental	精神的	mental
+1649	participant	參與者	participante
+1650	vision	視覺	visión
+1651	personality	個性	personalidad
+1652	specifically	具體地	específicamente
+1653	fat	脂肪	grasa; gordo
+1654	entry	入口	entrada
+1655	fellow	夥伴	compañero
+1656	chemical	化學的	químico
+1657	capture	捕捉	capturar
+1658	tip	小費	propina; punta; consejo
+1659	discount	折扣	descuento
+1660	peak	頂峰	pico; cumbre
+1661	chairman	主席	presidente (de junta)
+1662	proportion	比例	proporción
+1663	ear	耳朵	oreja
+1664	disappear	消失	desaparecer
+1665	shout	喊叫	gritar
+1666	yard	庭院	patio; yarda
+1667	constant	持續的	constante
+1668	significantly	顯著地	significativamente
+1669	hill	山丘	colina
+1670	considerable	相當大的	considerable
+1671	instruction	指示	instrucción
+1672	intelligence	智力	inteligencia
+1673	ideal	理想的	ideal
+1674	folk	民間的	gente; popular (folk)
+1675	surely	肯定地	seguramente
+1676	guard	守衛	guardia; vigilar
+1677	cat	貓	gato
+1678	somewhat	有點	algo; un tanto
+1679	kiss	親吻	besar
+1680	presentation	簡報	presentación
+1681	joint	關節	articulación; conjunto
+1682	compete	競爭	competir
+1683	poll	民調	encuesta
+1684	weak	虛弱的	débil
+1685	faith	信仰	fe
+1686	reduction	減少	reducción
+1687	reserve	預訂	reservar; reserva
+1688	complaint	投訴	queja
+1689	bore	使厭倦	aburrir
+1690	mission	任務	misión
+1691	somehow	不知何故	de alguna manera
+1692	tone	語氣	tono
+1693	neighborhood	社區	barrio
+1694	passenger	乘客	pasajero
+1695	justice	正義	justicia
+1696	phase	階段	fase
+1697	thin	薄的	delgado; fino
+1698	rush	匆忙	prisa; apresurarse
+1699	formal	正式的	formal
+1700	religion	宗教	religión
+1701	employer	雇主	empleador
+1702	reject	拒絕	rechazar
+1703	latter	後者	este último
+1704	plate	盤子	plato
+1705	ban	禁止	prohibir; prohibición
+1706	steal	偷竊	robar
+1707	protest	抗議	protestar; protesta
+1708	index	索引	índice
+1709	sad	悲傷的	triste
+1710	frequently	頻繁地	con frecuencia
+1711	circle	圓圈	círculo
+1712	helpful	有幫助的	útil
+1713	command	命令	mando; orden
+1714	attractive	吸引人的	atractivo
+1715	sick	生病的	enfermo
+1716	impression	印象	impresión
+1717	unable	無法的	incapaz
+1718	joke	笑話	broma; chiste
+1719	sky	天空	cielo
+1720	column	欄	columna
+1721	electronic	電子的	electrónico
+1722	impose	強加	imponer
+1723	criminal	罪犯	delincuente; criminal
+1724	besides	此外	además
+1725	properly	適當地	correctamente
+1726	ancient	古老的	antiguo
+1727	coast	海岸	costa
+1728	ill	生病的	enfermo
+1729	kick	踢	patear
+1730	closely	密切地	de cerca
+1731	multiple	多重的	múltiple
+1732	yield	產出	producir; rendimiento
+1733	via	透過	vía; a través de
+1734	legislation	立法	legislación
+1735	county	縣	condado
+1736	unlike	不同於	a diferencia de
+1737	mobile	行動的	móvil
+1738	assistant	助理	asistente
+1739	implement	實施	implementar
+1740	chart	圖表	gráfico
+1741	attach	附加	adjuntar
+1742	hell	地獄	infierno
+1743	everywhere	到處	en todas partes
+1744	advise	建議	aconsejar
+1745	household	家庭	hogar
+1746	acknowledge	承認	reconocer
+1747	reward	獎勵	recompensa
+1748	east	東方	este (punto cardinal)
+1749	hat	帽子	sombrero
+1750	academic	學術的	académico
+1751	voter	選民	votante
+1752	meanwhile	同時	mientras tanto
+1753	furthermore	此外	además
+1754	accuse	指控	acusar
+1755	scientific	科學的	científico
+1756	wage	薪資	salario
+1757	absence	缺席	ausencia
+1758	construct	建構	construir
+1759	remark	評論	comentario; comentar
+1760	medicine	藥	medicina; medicamento
+1761	professor	教授	profesor (universitario)
+1762	rare	罕見的	raro; poco común
+1763	intention	意圖	intención
+1764	dozen	十二個	docena
+1765	settlement	解決	acuerdo; asentamiento
+1766	gap	差距	brecha; hueco
+1767	widely	廣泛地	ampliamente
+1768	minimum	最小值	mínimo
+1769	northern	北部的	del norte
+1770	estate	房地產	finca; propiedad
+1771	equally	同等地	igualmente
+1772	expose	暴露	exponer
+1773	alive	活著的	vivo
+1774	shut	關閉	cerrar
+1775	victory	勝利	victoria
+1776	resolve	決心	resolver; decidir
+1777	critic	評論家	crítico (persona)
+1778	variable	變數	variable
+1779	enormous	巨大的	enorme
+1780	sweet	甜的	dulce
+1781	permanent	永久的	permanente
+1782	emotion	情緒	emoción
+1783	pursue	追求	perseguir; seguir
+1784	tall	高的	alto
+1785	urge	催促	instar; impulso
+1786	enemy	敵人	enemigo
+1787	appoint	任命	nombrar
+1788	milk	牛奶	leche
+1789	talent	才能	talento
+1790	smell	氣味	olor; oler
+1791	prior	之前的	previo
+1792	priority	優先順序	prioridad
+1793	online	線上的	en línea
+1794	phrase	片語	frase; expresión
+1795	pilot	飛行員	piloto
+1796	stable	穩定的	estable
+1797	merely	僅僅	simplemente
+1798	resolution	決心	resolución
+1799	communicate	溝通	comunicarse
+1800	injury	傷害	lesión
+1801	vast	廣大的	vasto
+1802	exhibition	展覽	exposición
+1803	producer	製作者	productor
+1804	regional	地區的	regional
+1805	immediate	即時的	inmediato
+1806	incident	事件	incidente
+1807	childhood	童年	infancia
+1808	draft	草稿	borrador
+1809	slip	滑倒	resbalar
+1810	accompany	陪伴	acompañar
+1811	politician	政治家	político (persona)
+1812	angry	憤怒的	enojado
+1813	knock	敲	tocar (la puerta); golpear
+1814	seed	種子	semilla
+1815	salary	薪資	salario
+1816	illustrate	說明	ilustrar
+1817	imply	暗示	implicar
+1818	breakfast	早餐	desayuno
+1819	temporary	暫時的	temporal
+1820	liberal	自由的	liberal
+1821	lake	湖	lago
+1822	qualify	合格	calificar; cumplir requisitos
+1823	competitive	競爭的	competitivo
+1824	truly	真正地	verdaderamente
+1825	hi	嗨	hola
+1826	yellow	黃色	amarillo
+1827	habit	習慣	hábito
+1828	disk	磁碟	disco
+1829	core	核心	núcleo
+1830	emotional	情緒的	emocional
+1831	aircraft	飛機	aeronave
+1832	self	自我	uno mismo; el yo
+1833	metal	金屬	metal
+1834	existence	存在	existencia
+1835	bone	骨頭	hueso
+1836	panel	面板	panel
+1837	prime	主要的	principal; primordial
+1838	appointment	預約	cita
+1839	emphasize	強調	enfatizar
+1840	maximum	最大值	máximo
+1841	effectively	有效地	eficazmente
+1842	elsewhere	其他地方	en otro lugar
+1843	bother	打擾	molestar
+1844	initiative	主動性	iniciativa
+1845	sharp	鋒利的	afilado; agudo
+1846	diet	飲食	dieta
+1847	motion	動作	movimiento; moción
+1848	gray	灰色	gris
+1849	plastic	塑膠	plástico
+1850	complicate	使複雜	complicar
+1851	discipline	紀律	disciplina
+1852	disappoint	失望	decepcionar
+1853	boss	老闆	jefe
+1854	assumption	假設	suposición
+1855	freeze	冷凍	congelar
+1856	extreme	極端的	extremo
+1857	passage	通道	pasaje; pasillo
+1858	reputation	聲譽	reputación
+1859	forth	向前	adelante
+1860	negotiation	談判	negociación
+1861	mechanism	機制	mecanismo
+1862	coat	外套	abrigo
+1863	democracy	民主	democracia
+1864	pocket	口袋	bolsillo
+1865	lucky	幸運的	afortunado
+1866	crash	墜毀	chocar; accidente
+1867	observation	觀察	observación
+1868	meat	肉	carne
+1869	concentration	濃度	concentración
+1870	implication	含義	implicación
+1871	deserve	應得	merecer
+1872	unusual	不尋常的	inusual
+1873	defend	防禦	defender
+1874	classic	經典的	clásico
+1875	king	國王	rey
+1876	interaction	互動	interacción
+1877	repair	修理	reparar
+1878	collapse	崩潰	derrumbarse
+1879	borrow	借	pedir prestado
+1880	fundamental	基本的	fundamental
+1881	dish	菜餚	plato
+1882	abroad	海外	en el extranjero
+1883	soul	靈魂	alma
+1884	capable	有能力的	capaz
+1885	defeat	打敗	derrotar; derrota
+1886	presidential	總統的	presidencial
+1887	perfectly	完美地	perfectamente
+1888	enhance	增強	mejorar
+1889	proud	驕傲的	orgulloso
+1890	emergency	緊急情況	emergencia
+1891	educational	教育的	educativo
+1892	distinguish	區分	distinguir
+1893	substantial	實質的	sustancial
+1894	nearby	附近的	cercano
+1895	manufacturer	製造商	fabricante
+1896	slide	滑動	deslizarse; diapositiva
+1897	valuable	有價值的	valioso
+1898	personally	個人地	personalmente
+1899	breast	胸部	pecho
+1900	cope	應對	hacer frente
+1901	approximately	大約	aproximadamente
+1902	accommodation	住宿	alojamiento
+1903	highlight	強調	destacar; lo más destacado
+1904	reporter	記者	reportero
+1905	climate	氣候	clima
+1906	shirt	襯衫	camisa
+1907	exception	例外	excepción
+1908	corporation	公司	corporación
+1909	chip	晶片	chip; trocito
+1910	winner	贏家	ganador
+1911	encounter	遭遇	encontrarse con
+1912	brown	棕色	marrón
+1913	breathe	呼吸	respirar
+1914	excuse	藉口	excusa; disculpar
+1915	partly	部分地	en parte
+1916	tennis	網球	tenis
+1917	urban	城市的	urbano
+1918	confuse	混淆	confundir
+1919	southern	南方的	del sur
+1920	output	輸出	producción; salida
+1921	beauty	美麗	belleza
+1922	massive	龐大的	masivo
+1923	install	安裝	instalar
+1924	calculate	計算	calcular
+1925	mouse	滑鼠	ratón
+1926	mathematics	數學	matemáticas
+1927	upper	上面的	superior
+1928	creation	創造	creación
+1929	occupy	佔領	ocupar
+1930	outline	大綱	esquema; resumen
+1931	sufficient	足夠的	suficiente
+1932	update	更新	actualizar
+1933	luck	運氣	suerte
+1934	preserve	保存	conservar
+1935	split	分割	dividir
+1936	swing	擺動	balancearse; columpio
+1937	illness	疾病	enfermedad
+1938	journalist	記者	periodista
+1939	sudden	突然的	repentino
+1940	advertisement	廣告	anuncio
+1941	consistent	一致的	coherente
+1942	originally	最初	originalmente
+1943	aside	在旁邊	a un lado
+1944	comfort	舒適	comodidad; consolar
+1945	secondly	其次	en segundo lugar
+1946	severe	嚴重的	grave
+1947	gene	基因	gen
+1948	prospect	前景	perspectiva
+1949	snow	雪	nieve
+1950	plot	情節	trama
+1951	neck	脖子	cuello
+1952	criteria	標準	criterios
+1953	primarily	主要地	principalmente
+1954	integrate	整合	integrar
+1955	criticism	批評	crítica
+1956	convention	慣例	convención
+1957	bet	打賭	apostar; seguro que
+1958	retain	保留	conservar
+1959	sequence	序列	secuencia
+1960	plain	平原	sencillo; llanura
+1961	volunteer	志願者	voluntario
+1962	rural	農村的	rural
+1963	calm	冷靜的	tranquilo
+1964	abandon	放棄	abandonar
+1965	examination	考試	examen
+1966	silence	沉默	silencio
+1967	rapidly	迅速地	rápidamente
+1968	efficient	有效率的	eficiente
+1969	revolution	革命	revolución
+1970	delight	高興	placer; encantar
+1971	spell	拼寫	deletrear
+1972	premise	前提	premisa
+1973	lean	傾斜	inclinarse; apoyarse
+1974	dramatic	戲劇性的	dramático
+1975	differ	不同	diferir
+1976	grateful	感激的	agradecido
+1977	protein	蛋白質	proteína
+1978	bike	自行車	bicicleta
+1979	distribute	分發	distribuir
+1980	intellectual	智力的	intelectual
+1981	derive	衍生	derivar
+1982	crucial	關鍵的	crucial
+1983	unemployment	失業	desempleo
+1984	wheel	輪子	rueda
+1985	crop	農作物	cultivo
+1986	minority	少數	minoría
+1987	origin	起源	origen
+1988	interpretation	解釋	interpretación
+1989	gentleman	紳士	caballero
+1990	drama	戲劇	drama
+1991	landscape	景觀	paisaje
+1992	educate	教育	educar
+1993	toy	玩具	juguete
+1994	fault	錯誤	culpa; falla
+1995	exhibit	展示	exhibir
+1996	minor	次要的	menor
+1997	hunt	狩獵	cazar
+1998	storm	暴風雨	tormenta
+1999	thick	厚的	grueso
+2000	achievement	成就	logro
+2001	negotiate	談判	negociar
+2002	dominate	主導	dominar
+2003	supplier	供應商	proveedor
+2004	prize	獎品	premio
+2005	typically	通常地	normalmente
+2006	peer	同輩	compañero; mirar fijamente
+2007	pension	退休金	pensión
+2008	wing	翅膀	ala
+2009	acquisition	收購	adquisición
+2010	laughter	笑聲	risa
+2011	deeply	深深地	profundamente
+2012	recognition	認可	reconocimiento
+2013	electricity	電力	electricidad
+2014	assistance	協助	asistencia
+2015	roof	屋頂	techo
+2016	retirement	退休	jubilación
+2017	respectively	分別地	respectivamente
+2018	variation	變化	variación
+2019	ultimately	最終	en última instancia
+2020	proof	證明	prueba
+2021	soil	土壤	suelo; tierra
+2022	smart	聰明的	inteligente
+2023	layer	層	capa
+2024	upset	心煩的	molesto
+2025	tooth	牙齒	diente
+2026	representation	代表	representación
+2027	preparation	準備	preparación
+2028	dispute	爭議	disputa
+2029	agenda	議程	agenda
+2030	emphasis	強調	énfasis
+2031	edition	版本	edición
+2032	silver	銀	plata
+2033	entertainment	娛樂	entretenimiento
+2034	honest	誠實的	honesto
+2035	undertake	承擔	emprender
+2036	retail	零售	venta al por menor
+2037	wire	電線	cable; alambre
+2038	unlikely	不太可能的	improbable
+2039	gay	同性戀的	gay; alegre
+2040	publication	出版物	publicación
+2041	slight	輕微的	ligero; leve
+2042	unknown	未知的	desconocido
+2043	framework	框架	marco (de trabajo)
+2044	zone	區域	zona
+2045	restrict	限制	restringir
+2046	trace	追蹤	rastro; rastrear
+2047	inch	英寸	pulgada
+2048	equivalent	等同的	equivalente
+2049	solid	固體	sólido
+2050	enterprise	企業	empresa
+2051	elderly	老年人	anciano; mayor
+2052	owe	欠	deber (dinero)
+2053	governor	州長	gobernador
+2054	uniform	制服	uniforme
+2055	port	港口	puerto
+2056	pitch	音調	tono; campo (deportivo)
+2057	arrival	到達	llegada
+2058	contemporary	當代的	contemporáneo
+2059	gate	大門	puerta; portón
+2060	ease	輕鬆	facilidad; aliviar
+2061	beer	啤酒	cerveza
+2062	specialist	專家	especialista
+2063	assure	保證	asegurar
+2064	profile	概況	perfil
+2065	mood	心情	humor; estado de ánimo
+2066	episode	集數	episodio
+2067	crack	裂縫	grieta; agrietarse
+2068	numerous	許多的	numeroso
+2069	submit	提交	enviar; presentar
+2070	symptom	症狀	síntoma
+2071	virtually	幾乎	prácticamente
+2072	era	時代	era
+2073	coverage	報導	cobertura
+2074	tension	緊張	tensión
+2075	cable	電纜	cable
+2076	sensitive	敏感的	sensible
+2077	nervous	緊張的	nervioso
+2078	input	輸入	aporte; entrada
+2079	isolate	隔離	aislar
+2080	prisoner	囚犯	prisionero
+2081	eliminate	消除	eliminar
+2082	tight	緊的	apretado; ajustado
+2083	wet	濕的	mojado
+2084	secondary	次要的	secundario
+2085	welfare	福利	bienestar
+2086	recruit	招募	reclutar
+2087	exclude	排除	excluir
+2088	string	字串	cuerda; cadena
+2089	cloud	雲	nube
+2090	persuade	說服	persuadir
+2091	inspire	激勵	inspirar
+2092	grand	宏大的	grandioso
+2093	hence	因此	por lo tanto
+2094	crew	船員	tripulación
+2095	phenomenon	現象	fenómeno
+2096	pupil	學生	alumno; pupila
+2097	False	假	falso
+2098	assist	協助	ayudar
+2099	restore	恢復	restaurar
+2100	formula	公式	fórmula
+2101	alter	改變	alterar
+2102	perceive	察覺	percibir
+2103	routine	例行公事	rutina
+2104	sink	下沉	hundirse; fregadero
+2105	stare	凝視	mirar fijamente
+2106	anymore	再也	ya no
+2107	hero	英雄	héroe
+2108	supporter	支持者	partidario
+2109	convert	轉換	convertir
+2110	steady	穩定的	constante; estable
+2111	meter	公尺	metro; medidor
+2112	truck	卡車	camión
+2113	nose	鼻子	nariz
+2114	beside	在旁邊	al lado de
+2115	sail	航行	navegar; vela
+2116	disaster	災難	desastre
+2117	pace	步調	ritmo
+2118	heavily	沉重地	fuertemente; mucho
+2119	devote	奉獻	dedicar
+2120	terrorist	恐怖份子	terrorista
+2121	justify	證明合理	justificar
+2122	vital	至關重要的	vital
+2123	fascinate	使著迷	fascinar
+2124	external	外部的	externo
+2125	spare	備用的	de repuesto; dedicar (tiempo)
+2126	whenever	每當	siempre que
+2127	depression	憂鬱	depresión
+2128	guilty	有罪的	culpable
+2129	underlie	構成基礎	subyacer
+2130	mom	媽媽	mamá
+2131	distinction	區別	distinción
+2132	satisfaction	滿意	satisfacción
+2133	incorporate	合併	incorporar
+2134	pour	倒	verter; servir
+2135	sweep	掃	barrer
+2136	obligation	義務	obligación
+2137	sir	先生	señor
+2138	evaluate	評估	evaluar
+2139	anger	憤怒	enojo; ira
+2140	pub	酒吧	bar; pub
+2141	perception	感知	percepción
+2142	naturally	自然地	naturalmente
+2143	currency	貨幣	moneda
+2144	database	資料庫	base de datos
+2145	initially	最初	inicialmente
+2146	territory	領土	territorio
+2147	stream	溪流	arroyo; corriente
+2148	rarely	很少	rara vez
+2149	height	高度	altura
+2150	apparent	明顯的	evidente
+2151	western	西方的	occidental
+2152	expansion	擴張	expansión
+2153	constantly	持續地	constantemente
+2154	muscle	肌肉	músculo
+2155	scare	恐嚇	asustar
+2156	badly	嚴重地	mal; gravemente
+2157	everyday	日常的	cotidiano
+2158	boundary	邊界	límite
+2159	ratio	比率	proporción
+2160	essay	論文	ensayo
+2161	scream	尖叫	gritar (de miedo)
+2162	withdraw	撤回	retirar; retirarse
+2163	pollution	污染	contaminación
+2164	disorder	混亂	trastorno; desorden
+2165	furniture	家具	muebles
+2166	symbol	符號	símbolo
+2167	apartment	公寓	apartamento
+2168	demonstration	示威	manifestación; demostración
+2169	analyst	分析師	analista
+2170	platform	平台	andén; plataforma
+2171	steel	鋼鐵	acero
+2172	cake	蛋糕	pastel
+2173	transform	轉變	transformar
+2174	wound	傷口	herida
+2175	restriction	限制	restricción
+2176	foundation	基礎	base; fundación
+2177	designer	設計師	diseñador
+2178	strain	壓力	tensión; esfuerzo
+2179	innovation	創新	innovación
+2180	album	專輯	álbum
+2181	singer	歌手	cantante
+2182	trail	小徑	sendero
+2183	trap	陷阱	trampa
+2184	loose	鬆的	suelto
+2185	extension	延伸	extensión; prórroga
+2186	wealth	財富	riqueza
+2187	gradually	逐漸地	gradualmente
+2188	tank	坦克	tanque
+2189	evil	邪惡的	malvado
+2190	remarkable	非凡的	notable
+2191	tune	曲調	melodía; afinar
+2192	grass	草	hierba
+2193	invitation	邀請	invitación
+2194	transition	轉變	transición
+2195	frighten	使恐懼	asustar
+2196	bid	出價	oferta; pujar
+2197	breed	繁殖	criar; raza
+2198	extraordinary	非凡的	extraordinario
+2199	brilliant	傑出的	brillante
+2200	adviser	顧問	asesor
+2201	stem	莖	tallo; derivarse
+2202	reverse	逆轉	invertir; revertir
+2203	mode	模式	modo
+2204	mirror	鏡子	espejo
+2205	awful	可怕的	horrible
+2206	pose	姿勢	posar; plantear
+2207	adjust	調整	ajustar
+2208	creative	創造的	creativo
+2209	nowadays	現今	hoy en día
+2210	poem	詩	poema
+2211	agricultural	農業的	agrícola
+2212	competitor	競爭者	competidor
+2213	alcohol	酒精	alcohol
+2214	festival	節日	festival
+2215	vegetable	蔬菜	verdura
+2216	van	廂型車	furgoneta
+2217	confident	自信的	seguro de sí mismo
+2218	planet	星球	planeta
+2219	curve	曲線	curva
+2220	knee	膝蓋	rodilla
+2221	overcome	克服	superar
+2222	web	網路	web; telaraña
+2223	depth	深度	profundidad
+2224	entrance	入口	entrada
+2225	log	日誌	tronco; registro
+2226	giant	巨人	gigante
+2227	god	神	dios
+2228	portion	部分	porción
+2229	substance	物質	sustancia
+2230	extensive	廣泛的	extenso
+2231	interpret	解釋	interpretar
+2232	independence	獨立	independencia
+2233	sugar	糖	azúcar
+2234	inner	內部的	interior
+2235	harm	傷害	daño; dañar
+2236	consult	諮詢	consultar
+2237	pink	粉紅色	rosa
+2238	shadow	影子	sombra
+2239	strip	條帶	tira; quitar
+2240	smooth	平滑的	liso; suave
+2241	intervention	干預	intervención
+2242	impress	給人留下印象	impresionar
+2243	exam	考試	examen
+2244	vice	副的	vice-; vicio
+2245	radical	激進的	radical
+2246	similarly	相似地	de manera similar
+2247	behave	行為	comportarse
+2248	loud	大聲的	fuerte (sonido)
+2249	dimension	維度	dimensión
+2250	subsequent	隨後的	posterior
+2251	infection	感染	infección
+2252	jacket	夾克	chaqueta
+2253	efficiency	效率	eficiencia
+2254	dirty	骯髒的	sucio
+2255	statistic	統計	estadística
+2256	regularly	定期地	regularmente
+2257	resort	度假村	complejo turístico; recurso
+2258	iron	鐵	hierro; plancha
+2259	broadcast	廣播	emitir; transmitir
+2260	membership	會員資格	membresía
+2261	bread	麵包	pan
+2262	blind	盲目的	ciego; persiana
+2263	pure	純粹的	puro
+2264	bloody	血腥的	maldito (intensificador británico)
+2265	ally	盟友	aliado
+2266	quantity	數量	cantidad
+2267	bend	彎曲	doblar
+2268	mature	成熟的	maduro
+2269	briefly	簡短地	brevemente
+2270	alarm	警報	alarma
+2271	disturb	打擾	molestar
+2272	sustain	維持	sostener
+2273	flood	洪水	inundación
+2274	poverty	貧困	pobreza
+2275	crazy	瘋狂的	loco
+2276	cite	引用	citar
+2277	newly	新近地	recién
+2278	parallel	平行的	paralelo
+2279	gender	性別	género
+2280	sponsor	贊助	patrocinador; patrocinar
+2281	boot	靴子	bota; arrancar (sistema)
+2282	accurate	準確的	preciso
+2283	dealer	經銷商	distribuidor
+2284	button	按鈕	botón
+2285	burden	負擔	carga
+2286	desert	沙漠	desierto; abandonar
+2287	mate	夥伴	compañero; amigo
+2288	occasionally	偶爾	de vez en cuando
+2289	shareholder	股東	accionista
+2290	bowl	碗	tazón
+2291	discovery	發現	descubrimiento
+2292	resistance	抵抗	resistencia
+2293	bath	浴缸	baño; bañera
+2294	frequency	頻率	frecuencia
+2295	criticize	批評	criticar
+2296	tap	水龍頭	grifo; golpear suavemente
+2297	philosophy	哲學	filosofía
+2298	lip	嘴唇	labio
+2299	attribute	歸因於	atribuir; atributo
+2300	apologize	道歉	disculparse
+2301	approval	批准	aprobación
+2302	grab	抓住	agarrar
+2303	entitle	賦予權利	dar derecho
+2304	lend	借出	prestar
+2305	involvement	參與	participación
+2306	exposure	曝光	exposición
+2307	conventional	傳統的	convencional
+2308	digital	數位的	digital
+2309	translate	翻譯	traducir
+2310	edit	編輯	editar
+2311	formation	形成	formación
+2312	deposit	存款	depósito
+2313	pleasant	令人愉快的	agradable
+2314	overseas	海外的	extranjero; en el exterior
+2315	advocate	倡導	defender; defensor
+2316	establishment	機構	establecimiento
+2317	summary	摘要	resumen
+2318	rough	粗糙的	áspero; aproximado
+2319	pen	筆	bolígrafo
+2320	recovery	恢復	recuperación
+2321	seal	封印	sellar; foca
+2322	tube	管子	tubo
+2323	tower	塔	torre
+2324	characterize	描述	caracterizar
+2325	specify	指定	especificar
+2326	exact	確切的	exacto
+2327	spin	旋轉	girar
+2328	operator	操作員	operador
+2329	infant	嬰兒	bebé
+2330	dig	挖	cavar
+2331	drag	拖	arrastrar
+2332	mount	上升	montar; aumentar
+2333	wrap	包裝	envolver
+2334	anticipate	預期	anticipar; prever
+2335	dependent	依賴的	dependiente
+2336	specialize	專門從事	especializarse
+2337	angle	角度	ángulo
+2338	chicken	雞	pollo; gallina
+2339	anxiety	焦慮	ansiedad
+2340	virus	病毒	virus
+2341	precisely	精確地	precisamente
+2342	rival	競爭對手	rival
+2343	offense	冒犯	ofensa; delito
+2344	detect	偵測	detectar
+2345	teenager	青少年	adolescente
+2346	admire	欽佩	admirar
+2347	moderate	適度的	moderado
+2348	surgery	手術	cirugía
+2349	musician	音樂家	músico
+2350	significance	重要性	importancia; significado
+2351	shower	淋浴	ducha
+2352	illegal	非法的	ilegal
+2353	charity	慈善	caridad; organización benéfica
+2354	universal	普遍的	universal
+2355	cigarette	香菸	cigarrillo
+2356	constitute	構成	constituir
+2357	adequate	足夠的	adecuado
+2358	consultant	顧問	consultor
+2359	historian	歷史學家	historiador
+2360	cousin	堂兄弟	primo
+2361	visual	視覺的	visual
+2362	stupid	愚蠢的	tonto
+2363	keen	熱衷的	entusiasta
+2364	ethnic	種族的	étnico
+2365	twin	雙胞胎	gemelo
+2366	clinical	臨床的	clínico
+2367	eastern	東方的	oriental; del este
+2368	forecast	預測	pronóstico; pronosticar
+2369	segment	部分	segmento
+2370	custom	習俗	costumbre; personalizado
+2371	adapt	適應	adaptarse
+2372	sand	沙	arena
+2373	cap	帽子	gorra; tapa
+2374	prompt	提示	provocar; inmediato
+2375	charm	魅力	encanto
+2376	react	反應	reaccionar
+2377	lecture	演講	conferencia; clase
+2378	venture	冒險	aventura; empresa
+2379	compound	化合物	compuesto
+2380	rescue	救援	rescatar
+2381	mess	混亂	desorden
+2382	preference	偏好	preferencia
+2383	comprehensive	全面的	integral; completo
+2384	incentive	激勵	incentivo
+2385	league	聯盟	liga
+2386	dialog	對話	diálogo
+2387	cream	奶油	crema; nata
+2388	rapid	快速的	rápido
+2389	cancel	取消	cancelar
+2390	regret	遺憾	lamentar
+2391	dismiss	解雇	descartar; despedir
+2392	margin	利潤率	margen
+2393	beneath	在…下方	debajo de
+2394	opponent	對手	oponente
+2395	resist	抵抗	resistir
+2396	capability	能力	capacidad
+2397	absolute	絕對的	absoluto
+2398	correspond	對應	corresponder
+2399	stroke	中風	derrame; golpe; acariciar
+2400	dare	膽敢	atreverse
+2401	barrier	障礙	barrera
+2402	rid	擺脫	deshacerse de
+2403	divorce	離婚	divorcio
+2404	ruin	毀滅	arruinar
+2405	bury	埋葬	enterrar
+2406	counsel	忠告	consejo; abogado
+2407	tendency	傾向	tendencia
+2408	frequent	頻繁的	frecuente
+2409	motor	馬達	motor
+2410	survival	生存	supervivencia
+2411	counter	計數器	mostrador; contrario
+2412	possess	擁有	poseer
+2413	permission	許可	permiso
+2414	valley	山谷	valle
+2415	float	漂浮	flotar
+2416	mad	瘋狂的	loco; enojado
+2417	greatly	大大地	enormemente
+2418	visible	可見的	visible
+2419	electric	電的	eléctrico
+2420	impressive	令人印象深刻的	impresionante
+2421	evolution	進化	evolución
+2422	awareness	意識	conciencia
+2423	violent	暴力的	violento
+2424	slave	奴隸	esclavo
+2425	wealthy	富有的	rico
+2426	architecture	建築	arquitectura
+2427	acceptable	可接受的	aceptable
+2428	journal	日記	diario; revista académica
+2429	coal	煤炭	carbón
+2430	measurement	測量	medición
+2431	random	隨機的	aleatorio
+2432	successfully	成功地	con éxito
+2433	depress	使沮喪	deprimir
+2434	illustration	插圖	ilustración
+2435	burst	爆炸	estallar
+2436	privilege	特權	privilegio
+2437	buyer	買家	comprador
+2438	mutual	相互的	mutuo
+2439	rail	鐵路	riel; ferrocarril
+2440	motivate	激勵	motivar
+2441	laboratory	實驗室	laboratorio
+2442	mortgage	抵押	hipoteca
+2443	promotion	晉升	ascenso; promoción
+2444	passion	熱情	pasión
+2445	champion	冠軍	campeón
+2446	fulfill	完成	cumplir
+2447	dust	灰塵	polvo
+2448	dedicate	奉獻	dedicar
+2449	roughly	大約	aproximadamente
+2450	skirt	裙子	falda
+2451	province	省份	provincia
+2452	march	進行	marchar
+2453	evaluation	評估	evaluación
+2454	compromise	妥協	compromiso; ceder
+2455	accomplish	完成	lograr
+2456	weakness	弱點	debilidad
+2457	announcement	公告	anuncio
+2458	salt	鹽	sal
+2459	glance	瞥見	echar un vistazo
+2460	opera	歌劇	ópera
+2461	contest	比賽	concurso
+2462	brush	刷子	cepillo; cepillar
+2463	embarrass	使尷尬	avergonzar
+2464	gallery	畫廊	galería
+2465	genetic	遺傳的	genético
+2466	aggressive	積極的	agresivo
+2467	chest	胸部	pecho; cofre
+2468	format	格式	formato
+2469	literary	文學的	literario
+2470	govern	統治	gobernar
+2471	embrace	擁抱	abrazar; aceptar
+2472	praise	讚美	elogiar; elogio
+2473	silent	沉默的	silencioso
+2474	pump	抽水	bomba; bombear
+2475	publisher	出版社	editorial
+2476	celebration	慶典	celebración
+2477	golf	高爾夫球	golf
+2478	compensation	補償	compensación
+2479	classical	古典的	clásico
+2480	weigh	稱重	pesar
+2481	versus	對	contra
+2482	deficit	赤字	déficit
+2483	modify	修改	modificar
+2484	flash	閃光	destello; parpadear
+2485	friendship	友誼	amistad
+2486	profession	職業	profesión
+2487	literally	字面上	literalmente
+2488	equation	方程式	ecuación
+2489	gesture	手勢	gesto
+2490	entertain	娛樂	entretener
+2491	fantastic	精彩的	fantástico
+2492	assign	分配	asignar
+2493	inflation	通貨膨脹	inflación
+2494	historic	歷史性的	histórico
+2495	injure	受傷	herir
+2496	remote	遙遠的	remoto
+2497	therapy	治療	terapia
+2498	orange	橙色	naranja
+2499	twist	扭轉	torcer; giro
+2500	personnel	人員	personal
+2501	imagination	想像力	imaginación
+2502	disagree	不同意	no estar de acuerdo
+2503	throat	喉嚨	garganta
+2504	insight	洞察力	perspicacia; visión
+2505	tackle	解決	abordar
+2506	forever	永遠	para siempre
+2507	exceed	超過	superar
+2508	expenditure	支出	gasto
+2509	joy	喜悅	alegría
+2510	pregnant	懷孕的	embarazada
+2511	reliable	可靠的	fiable
+2512	gear	齒輪	equipo; marcha
+2513	click	點擊	hacer clic
+2514	poet	詩人	poeta
+2515	fortune	財富	fortuna
+2516	ceremony	儀式	ceremonia
+2517	pile	堆	montón; amontonar
+2518	pig	豬	cerdo
+2519	mixture	混合物	mezcla
+2520	automatically	自動地	automáticamente
+2521	scholar	學者	erudito
+2522	psychological	心理的	psicológico
+2523	dramatically	戲劇性地	drásticamente
+2524	stake	股份	participación; estaca
+2525	creature	生物	criatura
+2526	partnership	合夥	asociación; sociedad
+2527	participation	參與	participación
+2528	clause	條款	cláusula
+2529	penalty	罰款	multa; penalti
+2530	chamber	議院	cámara
+2531	fancy	喜歡	apetecer; elegante
+2532	poetry	詩歌	poesía
+2533	chat	聊天	charlar
+2534	clothing	服裝	ropa
+2535	evolve	進化	evolucionar
+2536	sake	緣故	bien; causa (for the sake of)
+2537	shelf	架子	estante
+2538	boost	提升	impulsar
+2539	tail	尾巴	cola
+2540	possession	財產	posesión
+2541	abortion	墮胎	aborto
+2542	curious	好奇的	curioso
+2543	wooden	木製的	de madera
+2544	boom	繁榮	auge
+2545	tale	故事	cuento
+2546	democratic	民主的	democrático
+2547	maintenance	維護	mantenimiento
+2548	consequently	因此	en consecuencia
+2549	pot	鍋	olla; maceta
+2550	cow	牛	vaca
+2551	strengthen	加強	fortalecer
+2552	whilst	當…時	mientras
+2553	constraint	限制	restricción
+2554	fold	折疊	doblar
+2555	bin	垃圾桶	papelera
+2556	undergo	經歷	someterse a
+2557	potentially	潛在地	potencialmente
+2558	scope	範圍	alcance
+2559	pretend	假裝	fingir
+2560	diversity	多樣性	diversidad
+2561	allege	聲稱	alegar
+2562	pride	驕傲	orgullo
+2563	intense	強烈的	intenso
+2564	inquiry	詢問	investigación; consulta
+2565	resign	辭職	dimitir
+2566	craft	工藝	artesanía; oficio
+2567	strict	嚴格的	estricto
+2568	concrete	具體的	concreto; hormigón
+2569	shell	殼	concha; cáscara
+2570	damn	該死	maldito
+2571	distinct	明顯的	distinto
+2572	humor	幽默	humor
+2573	limitation	限制	limitación
+2574	indication	指示	indicio; indicación
+2575	stability	穩定	estabilidad
+2576	wise	明智的	sabio
+2577	neglect	忽視	descuidar
+2578	compose	組成	componer
+2579	jail	監獄	cárcel
+2580	shelter	避難所	refugio
+2581	mere	僅僅的	mero
+2582	carbon	碳	carbono
+2583	regulate	規範	regular
+2584	cheese	起司	queso
+2585	trigger	觸發	desencadenar; gatillo
+2586	pipe	管道	tubería
+2587	destruction	破壞	destrucción
+2588	guitar	吉他	guitarra
+2589	flag	旗幟	bandera
+2590	piano	鋼琴	piano
+2591	magic	魔法	magia
+2592	mystery	謎	misterio
+2593	ski	滑雪	esquiar
+2594	whisper	低語	susurrar
+2595	rear	後部	trasero; criar
+2596	menu	菜單	menú
+2597	species	物種	especie
+2598	moon	月亮	luna
+2599	presumably	大概	presumiblemente
+2600	bless	祝福	bendecir
+2601	airline	航空公司	aerolínea
+2602	amendment	修正案	enmienda
+2603	grandmother	祖母	abuela
+2604	jury	陪審團	jurado
+2605	cooperation	合作	cooperación
+2606	civilian	平民	civil (persona)
+2607	composition	作文	composición
+2608	coin	硬幣	moneda
+2609	regardless	不管	independientemente
+2610	scan	掃描	escanear
+2611	bunch	一束	manojo; racimo
+2612	racial	種族的	racial
+2613	greet	問候	saludar
+2614	hopefully	希望地	ojalá; con suerte
+2615	sanction	制裁	sanción
+2616	trick	技巧	truco
+2617	paragraph	段落	párrafo
+2618	maker	製造者	fabricante
+2619	chocolate	巧克力	chocolate
+2620	stimulate	刺激	estimular
+2621	belt	腰帶	cinturón
+2622	potato	馬鈴薯	papa; patata
+2623	narrative	敘述	narrativa
+2624	tissue	組織	pañuelo de papel; tejido
+2625	barely	勉強	apenas
+2626	invent	發明	inventar
+2627	tourism	旅遊業	turismo
+2628	pro	專業的	profesional; a favor
+2629	stair	樓梯	escalera
+2630	hesitate	猶豫	dudar
+2631	shine	發光	brillar
+2632	motivation	動機	motivación
+2633	romantic	浪漫的	romántico
+2634	firmly	堅定地	firmemente
+2635	interior	內部的	interior
+2636	stomach	胃	estómago
+2637	nowhere	哪裡都不	en ninguna parte
+2638	pray	祈禱	rezar
+2639	championship	冠軍賽	campeonato
+2640	servant	僕人	sirviente
+2641	immigrant	移民	inmigrante
+2642	excess	過量	exceso
+2643	complexity	複雜性	complejidad
+2644	liability	責任	responsabilidad legal; pasivo
+2645	surprisingly	令人驚訝地	sorprendentemente
+2646	extract	提取	extraer; extracto
+2647	implementation	實施	implementación
+2648	bias	偏見	sesgo
+2649	differently	不同地	de otra manera
+2650	catalog	目錄	catálogo
+2651	continuous	持續的	continuo
+2652	golden	黃金的	dorado
+2653	stamp	郵票	sello; estampar
+2654	guideline	指導方針	pauta; directriz
+2655	envelope	信封	sobre (de carta)
+2656	knife	刀	cuchillo
+2657	biological	生物的	biológico
+2658	consume	消費	consumir
+2659	luxury	奢侈	lujo
+2660	weekly	每週的	semanal
+2661	wherever	無論在哪	dondequiera
+2662	bite	咬	morder
+2663	printer	印表機	impresora
+2664	firstly	首先	en primer lugar
+2665	anxious	焦慮的	ansioso
+2666	adventure	冒險	aventura
+2667	fence	圍欄	valla
+2668	exhaust	耗盡	agotar; escape
+2669	attraction	吸引力	atracción
+2670	ocean	海洋	océano
+2671	quietly	安靜地	en silencio
+2672	castle	城堡	castillo
+2673	veteran	老兵	veterano
+2674	reflection	反思	reflexión; reflejo
+2675	nerve	神經	nervio; valor
+2676	determination	決心	determinación
+2677	altogether	完全地	en total; completamente
+2678	fiction	小說	ficción
+2679	carpet	地毯	alfombra
+2680	cluster	群集	grupo; racimo
+2681	confusion	混亂	confusión
+2682	hurry	匆忙	prisa; apresurarse
+2683	logic	邏輯	lógica
+2684	controversial	有爭議的	polémico
+2685	raw	生的	crudo
+2686	grammar	語法	gramática
+2687	revise	修改	revisar; repasar
+2688	hint	提示	pista; insinuar
+2689	hook	鉤	gancho
+2690	bell	鈴	campana; timbre
+2691	liquid	液體	líquido
+2692	panic	恐慌	pánico
+2693	uncle	叔叔	tío
+2694	rice	米	arroz
+2695	slope	坡度	pendiente
+2696	happiness	幸福	felicidad
+2697	genuine	真誠的	genuino
+2698	vessel	容器	recipiente; barco
+2699	verb	動詞	verbo
+2700	reckon	認為	creer; calcular
+2701	silly	愚蠢的	tonto
+2702	transportation	交通	transporte
+2703	harbor	港口	puerto
+2704	comedy	喜劇	comedia
+2705	chase	追逐	perseguir
+2706	storage	儲存	almacenamiento
+2707	universe	宇宙	universo
+2708	horrible	可怕的	horrible
+2709	sheep	羊	oveja
+2710	lover	戀人	amante
+2711	rat	老鼠	rata
+2712	portrait	肖像	retrato
+2713	innocent	無辜的	inocente
+2714	substitute	替代	sustituto; sustituir
+2715	supplement	補充	suplemento
+2716	adjustment	調整	ajuste
+2717	reasonably	合理地	razonablemente
+2718	filter	過濾	filtro; filtrar
+2719	flexible	靈活的	flexible
+2720	abstract	抽象的	abstracto; resumen
+2721	tent	帳篷	tienda de campaña
+2722	precise	精確的	preciso
+2723	distant	遙遠的	lejano
+2724	stranger	陌生人	desconocido; extraño
+2725	shade	陰影	sombra
+2726	grain	穀物	grano
+2727	situate	位於	situar
+2728	summarize	總結	resumir
+2729	leap	跳躍	saltar; salto
+2730	snap	快照	romper; chasquido
+2731	probability	概率	probabilidad
+2732	leather	皮革	cuero
+2733	uncertainty	不確定性	incertidumbre
+2734	swear	發誓	jurar; decir palabrotas
+2735	refugee	難民	refugiado
+2736	shore	海岸	orilla
+2737	monthly	每月的	mensual
+2738	comprise	包含	comprender; constar de
+2739	stir	攪拌	remover (revolver)
+2740	excitement	興奮	emoción; entusiasmo
+2741	sigh	嘆息	suspirar
+2742	pregnancy	懷孕	embarazo
+2743	experimental	實驗性的	experimental
+2744	institutional	機構的	institucional
+2745	slice	切片	rebanada; cortar
+2746	wander	漫遊	vagar
+2747	empire	帝國	imperio
+2748	subsequently	隨後	posteriormente
+2749	gentle	溫和的	suave; amable
+2750	attendance	出席	asistencia
+2751	ownership	所有權	propiedad
+2752	qualification	資格	cualificación; título
+2753	suspend	暫停	suspender
+2754	functional	功能的	funcional
+2755	voluntary	自願的	voluntario
+2756	pale	蒼白的	pálido
+2757	stain	污漬	mancha
+2758	athlete	運動員	atleta
+2759	organic	有機的	orgánico
+2760	tongue	舌頭	lengua
+2761	server	伺服器	servidor; camarero
+2762	structural	結構的	estructural
+2763	website	網站	sitio web
+2764	fool	傻瓜	tonto; engañar
+2765	alongside	沿著	junto a
+2766	unite	聯合	unir
+2767	gently	溫和地	suavemente
+2768	compute	計算	calcular
+2769	wipe	擦拭	limpiar (frotando)
+2770	weird	奇怪的	raro
+2771	gaze	凝視	mirar fijamente
+2772	fade	褪色	desvanecerse
+2773	cough	咳嗽	toser
+2774	hypothesis	假說	hipótesis
+2775	royal	皇家的	real (de la realeza)
+2776	theoretical	理論的	teórico
+2777	curtain	窗簾	cortina
+2778	mayor	市長	alcalde
+2779	darkness	黑暗	oscuridad
+2780	aunt	阿姨	tía
+2781	tournament	比賽	torneo
+2782	registration	登記	inscripción
+2783	fragment	片段	fragmento
+2784	listener	聽眾	oyente
+2785	immigration	移民	inmigración
+2786	tender	溫柔的	tierno
+2787	density	密度	densidad
+2788	ugly	醜陋的	feo
+2789	module	模組	módulo
+2790	faithfully	忠實地	atentamente; fielmente
+2791	autumn	秋天	otoño
+2792	cheek	臉頰	mejilla
+2793	attachment	附件	archivo adjunto; apego
+2794	holder	持有者	titular; soporte
+2795	solar	太陽的	solar
+2796	grin	咧嘴笑	sonreír ampliamente
+2797	rose	玫瑰	rosa
+2798	noun	名詞	sustantivo
+2799	fortunate	幸運的	afortunado
+2800	alright	好的	está bien; vale
+2801	lazy	懶惰的	perezoso
+2802	hello	哈囉	hola
+2803	hunger	飢餓	hambre
+2804	insure	投保	asegurar (seguro)
+2805	ashamed	羞愧的	avergonzado
+2806	found	建立	fundar
+2807	blog	部落格	blog
+2808	thirst	口渴	sed
+2809	two	二；兩個	dos
+2810	three	三	tres
+2811	five	五	cinco
+2812	four	四	cuatro
+2813	hundred	百	cien
+2814	six	六	seis
+2815	twenty	二十	veinte
+2816	eight	八	ocho
+2817	ten	十	diez
+2818	seven	七	siete
+2819	thousand	千	mil
+2820	nine	九	nueve
+2821	thirty	三十	treinta
+2822	fifty	五十	cincuenta
+2823	forty	四十	cuarenta
+2824	nineteen	十九	diecinueve
+2825	twelve	十二	doce
+2826	ninety	九十	noventa
+2827	eighty	八十	ochenta
+2828	sixty	六十	sesenta
+2829	fifteen	十五	quince
+2830	million	百萬	millón
+2831	seventy	七十	setenta
+2832	eleven	十一	once
+2833	Have To	必須；不得不	tener que
+2834	There Is/are	有（存在句型）	hay (existencia)
+2835	Such As	例如；諸如	como; por ejemplo
+2836	Going To (Future)	將要（未來式）	ir a (futuro)
+2837	Of Course	當然	por supuesto
+2838	A Few	一些；幾個	unos pocos; algunos
+2839	At Least	至少	al menos
+2840	Such A(n)	如此的；這麼一個	un(a) … tan
+2841	I Mean	我是說（口語填補語）	o sea; quiero decir (muletilla)
+2842	A Lot	很多；非常	mucho
+2843	Rather Than	而不是	en lugar de
+2844	So That	以便；使得	para que
+2845	A Little	一點點	un poco
+2846	A Bit (Of)	一點（的）	un poco (de)
+2847	As Well As	以及；不僅…而且	así como; además de
+2848	In Fact	事實上	de hecho
+2849	(Be) Likely To	很可能	ser probable que
+2850	Go On	繼續；發生	continuar; ocurrir
+2851	Is To	將要（用於既定安排）	estar previsto (que)
+2852	A Number Of	一些；若干	varios; una serie de
+2853	At All	究竟；根本（強調語氣）	en absoluto (énfasis)
+2854	As If	彷彿；好像	como si
+2855	Used To (Past)	過去曾經（做某事）	solía (en el pasado)
+2856	Was To	將要（過去的安排）	iba a (plan pasado)
+2857	Not Only	不僅	no solo
+2858	Those Who	…的人	quienes; los que
+2859	Deal With	處理；應付	tratar con; ocuparse de
+2860	Lead To ('cause')	導致	llevar a; causar
+2861	Sort Of	有點；算是	más o menos; algo así
+2862	The Following	以下的；如下	lo siguiente
+2863	In Order To	為了	para (con el fin de)
+2864	Have Got (+Np)	擁有；有	tener
+2865	Have Got To	必須	tener que
+2866	Set Up	建立；設立	establecer; montar
+2867	As To	至於；關於	en cuanto a
+2868	As Well	也；同樣	también
+2869	Based On	根據；基於	basado en
+2870	Carry Out	執行；進行	llevar a cabo
+2871	Take Place	發生；舉行	tener lugar; celebrarse
+2872	Tend To	傾向於	tender a
+2873	Due To	由於；因為	debido a
+2874	Fail To	未能	no lograr
+2875	Each Other	彼此	el uno al otro
+2876	In Terms Of	就…而言	en cuanto a; en términos de
+2877	No One	沒有人	nadie
+2878	Pick Up	拿起；接（人）	recoger; ir a buscar (a alguien)
+2879	Up To (Maximum)	最多；至多	hasta (máximo)
+2880	A Single (‘Any’)	任何一個；一個都（不）	ni un solo
+2881	No Longer	不再	ya no
+2882	Look For	尋找	buscar
+2883	Last Night	昨晚	anoche
+2884	As A Result	結果；因此	como resultado
+2885	In Addition (To)	除…之外；此外	además (de)
+2886	Work On	致力於；處理	trabajar en
+2887	Think About	考慮；思考	pensar en
+2888	For Instance	舉例來說	por ejemplo
+2889	Too Much	太多	demasiado
+2890	You See	你知道的（口語填補語）	¿sabes? (muletilla)
+2891	In Particular	尤其；特別是	en particular
+2892	A Couple Of	兩三個；幾個	un par de
+2893	Instead Of	而不是	en vez de
+2894	Come Back	回來	volver
+2895	Look Like	看起來像	parecerse a
+2896	Find Out	找出；發現	averiguar
+2897	Point Out	指出	señalar
+2898	Apart From	除了…之外	aparte de
+2899	Call For	需要；要求	exigir; requerer
+2900	Manage To	設法做到	lograr; conseguir
+2901	Or Two	一兩個	o dos
+2902	A Further (‘Another’)	另一個；又一個	otro más
+2903	Come Out	出來；出版；結果是	salir; publicarse; resultar
+2904	Be Expected To	被期望；預期會	se espera que
+2905	Seek To	試圖；設法	intentar; procurar
+2906	Go Through	經歷；仔細檢查	pasar por; revisar a fondo
+2907	Long Term	長期的	a largo plazo
+2908	Result In	導致；造成	dar lugar a
+2909	That Is (Rephrasing)	也就是說	es decir
+2910	Even Though	儘管；即使	aunque
+2911	A Range Of	一系列的	una serie de; diversos
+2912	The Latter (Anaphor)	後者	este último
+2913	Make Sure	確保	asegurarse de
+2914	Take Over	接管	tomar el control
+2915	Consist Of	由…組成	consistir en
+2916	As Soon As	一…就	en cuanto
+2917	At The Time ('when This Happened')	當時	en ese momento
+2918	On The Other Hand	另一方面	por otro lado
+2919	On One's Own	獨自；靠自己	solo; por su cuenta
+2920	All Right	沒問題；好的	está bien; de acuerdo
+2921	Subject To	受…約束；視…而定	sujeto a
+2922	After All (Adv.)	畢竟	después de todo
+2923	In Front Of ('before')	在…前面	delante de
+2924	To Do With	與…有關	tener que ver con
+2925	Go Out	出去；外出	salir
+2926	A Good/great Deal ('much')	大量；很多	mucho; gran cantidad
+2927	On The Way	在途中	de camino
+2928	As Long As	只要	siempre que; mientras
+2929	So Far ('until Now')	到目前為止	hasta ahora
+2930	Ought To	應該	deber
+2931	At The Moment	目前；此刻	en este momento
+2932	As Though	彷彿；好像	como si
+2933	Come To ('evolve To')	逐漸變得；後來	llegar a (con el tiempo)
+2934	Along With	連同；與…一起	junto con
+2935	May Well ('could')	很可能	es muy posible que
+2936	Get Out	出去；離開	salir; irse
+2937	Followed By	接著是	seguido de
+2938	In (The Sense) That	就…意義上而言	en el sentido de que
+2939	The Case ('true')	事實；情況	el caso; cierto
+2940	Take Up	開始從事；佔用	empezar (una actividad); ocupar
+2941	Account For	說明；佔（比例）	explicar; representar (un porcentaje)
+2942	Set Out	出發；著手；闡明	partir; proponerse; exponer
+2943	As Far As	就…而言；遠至	en cuanto a; hasta
+2944	Concerned With	與…有關	relacionado con
+2945	About To	即將	a punto de
+2946	Supposed To	應該；被認為	se supone que
+2947	And So On	等等	etcétera
+2948	Come On	快點；拜託	¡vamos!; ¡por favor!
+2949	Take On	承擔；僱用	asumir; contratar
+2950	Work Out	想出；鍛鍊；結果變成	resolver; hacer ejercicio; salir (bien o mal)
+2951	All Over ('everywhere')	到處	por todas partes
+2952	Other Than	除了	aparte de
+2953	Out Of (‘In’/’from’)	在…之中；由…	de entre; de
+2954	Turn Out	結果是；證明是	resultar
+2955	Look After	照顧	cuidar
+2956	At Last	終於	por fin
+2957	A Variety Of	各式各樣的	una variedad de
+2958	At First	起初	al principio
+2959	Or So	大約；左右	más o menos; aproximadamente
+2960	In Favour	贊成	a favor
+2961	Give Up	放棄	rendirse; dejar
+2962	Get To ('arrive At')	到達	llegar a
+2963	Find Oneself	發現自己（處於某狀態）	encontrarse (en una situación)
+2964	Get Up	起床	levantarse
+2965	Carry On	繼續	continuar
+2966	Go Back	回去	volver
+2967	Focus On	專注於	centrarse en
+2968	At Once	立刻	de inmediato
+2969	It Takes	需要（花費）	hace falta; se tarda
+2970	Get On/off (Trans)	上/下（交通工具）	subir a / bajar de (un vehículo)
+2971	As A Whole	整體而言	en conjunto
+2972	In Practice	實際上	en la práctica
+2973	By The Time	到…時候	para cuando
+2974	Lots Of	很多	muchos
+2975	Said To Be	據說是	se dice que es
+2976	In Time	及時	a tiempo
+2977	In Turn	依次；反過來	por turnos; a su vez
+2978	Once Again	再一次	una vez más
+2979	All The Time	一直；始終	todo el tiempo
+2980	On The Basis (Of)	基於	sobre la base (de)
+2981	Kind Of	有點；算是	un poco; algo así
+2982	Get Into	進入；養成（習慣）	entrar en; aficionarse a
+2983	Rely On	依賴	depender de
+2984	Go For	選擇；爭取	optar por; ir a por
+2985	Aim To	旨在；目標是	tener como objetivo
+2986	Make Up (‘Comprise’)	組成	componer; formar
+2987	Appeal To	吸引；訴諸	atraer; apelar a
+2988	End Up	最終變成；結果	terminar (acabando)
+2989	Shake One’s Head	搖頭	negar con la cabeza
+2990	No More Than (‘Only’)	僅僅；只不過	no más que; solo
+2991	Get Back	回來；拿回	volver; recuperar
+2992	What About	…怎麼樣	¿qué tal …?
+2993	In Other Words	換句話說	en otras palabras
+2994	As For	至於	en cuanto a
+2995	Not Even	甚至不	ni siquiera
+2996	Entitled To	有權（做某事）	tener derecho a
+2997	Prior To	在…之前	antes de
+2998	Choose To	選擇（做某事）	elegir (hacer algo)
+2999	Something Like (‘Around’)	大約；差不多	algo así como; alrededor de
+3000	Known To	為…所知	conocido por
+3001	In Touch (With)	與…保持聯繫	en contacto (con)
+3002	In The End	最終	al final
+3003	In The Way	擋路	estorbando
+3004	Care For	喜歡；照顧	gustar; cuidar de
+3005	In The Event (Of)	萬一；如果發生	en caso (de)
+3006	They Say	據說；人們說	dicen que
+3007	So Called	所謂的	el llamado; supuesto
+3008	Take Into Account	考慮到	tener en cuenta
+3009	In Respect Of	關於；就…而言	con respecto a
+3010	Out Of ('using')	用…（材料）製成	hecho de (material)
+3011	At The Same Time ('conversely')	同時；然而	al mismo tiempo; sin embargo
+3012	Next To	緊鄰；在…旁邊	al lado de
+3013	Turn Up	出現；到場	aparecer; presentarse
+3014	Point Of View	觀點	punto de vista
+3015	At Present	目前	actualmente
+3016	Used To (Accustomed)	習慣於	acostumbrado a
+3017	Whether Or Not	是否	si … o no
+3018	In Place	就位；到位	en su lugar; listo
+3019	No Doubt ('surely')	無疑；肯定	sin duda
+3020	Full Time	全職	a tiempo completo
+3021	Sort Out	解決；整理	resolver; ordenar
+3022	In A Way	在某種程度上	en cierto modo
+3023	Or Something ('perhaps')	或什麼的	o algo así
+3024	On Behalf Of	代表	en nombre de
+3025	Over There	那邊	allí
+3026	In Spite Of	儘管	a pesar de
+3027	That's It	就這樣；沒了	eso es todo
+3028	In Part	部分地	en parte
+3029	Oh No	噢不	¡oh, no!
+3030	In Mind	記在心裡；考慮中	en mente
+3031	(With) Regard To	關於	con respecto a
+3032	One Another	彼此	el uno al otro
+3033	As Follows	如下	como sigue
+3034	The Above	上述（內容）	lo anterior
+3035	To Date	迄今為止	hasta la fecha
+3036	Go Into	深入探討；從事	profundizar en; dedicarse a
+3037	Too Many	太多	demasiados
+3038	In The Course Of	在…過程中	en el transcurso de
+3039	More Or Less	或多或少	más o menos
+3040	Short Term	短期的	a corto plazo
+3041	Aimed At	針對；旨在	dirigido a
+3042	Go Off	離開；爆炸；（鬧鐘）響	irse; explotar; sonar (alarma)
+3043	In Case	以防萬一	por si acaso
+3044	Out There	在外面；在那邊	ahí fuera
+3045	Led By	由…領導	liderado por
+3046	More And More	越來越多	cada vez más
+3047	Have A Look	看一看	echar un vistazo
+3048	Believe In	相信	creer en
+3049	Put It ('say')	這麼說；表達	decirlo; expresarlo
+3050	These Days	現今	hoy en día
+3051	In Charge	負責	a cargo
+3052	Feel Like	想要（做某事）；感覺像	tener ganas de; sentirse como
+3053	Up To (Until)	直到	hasta
+3054	Heard Of	聽說過	haber oído hablar de
+3055	Take Part In	參加	participar en
+3056	In So Far As	就…範圍而言	en la medida en que
+3057	Part Time	兼職	a tiempo parcial
+3058	Look Forward To	期待	tener ganas de; esperar con ilusión
+3059	As Such	本身；就此而言	como tal
+3060	Bound To	必然；肯定會	seguro que (algo pasará)
+3061	Turn On	打開（開關）	encender
+3062	Set To	準備好；即將	a punto de; preparado para
+3063	Move On	繼續前進	seguir adelante
+3064	In Contrast (To)	相比之下	en contraste (con)
+3065	This Stage	這個階段	esta etapa
+3066	All But	幾乎；差一點	casi
+3067	Above All	最重要的是	sobre todo
+3068	Rid Of	擺脫	librarse de
+3069	In Any Case	無論如何	en cualquier caso
+3070	Thanks To	多虧了；由於	gracias a
+3071	Go Away	走開；離開	irse; marcharse
+3072	Once More	再一次	una vez más
+3073	Oh Well	哦好吧（無奈語氣）	bueno, qué se le va a hacer
+3074	Follow Up	跟進	hacer seguimiento
+3075	Would Say	會說；認為	diría
+3076	Found To	被發現是	se descubrió que
+3077	Meant To	本應；打算	se supone que; con la intención de
+3078	Hang On	稍等；堅持	espera un momento; aguantar
+3079	Turn Into	變成	convertirse en
+3080	Something About	關於…的某種特質	algo de (alguien o algo)
+3081	By Now	到現在	a estas alturas
+3082	Think So	這麼認為	creo que sí
+3083	Go Ahead	繼續；儘管做	adelante; seguir
+3084	Bring About	促成；導致	provocar; causar
+3085	Had Better	最好（做某事）	más vale que
+3086	In Accordance With	依照；根據	de acuerdo con
+3087	Call On	呼籲；拜訪	pedir; visitar
+3088	At Times	有時	a veces
+3089	All The Way	一路；完全	todo el camino; completamente
+3090	In Effect	實際上；生效	en efecto; en vigor
+3091	Afford To	負擔得起	poder permitirse
+3092	Sight Of	看見；視野	ver; la vista de
+3093	In Advance	提前	por adelantado
+3094	On The Part Of	由…方面	por parte de
+3095	Bring Up	提出（話題）；養育	mencionar; criar
+3096	Take Off	起飛；脫掉；請假	despegar; quitarse; tomarse (días libres)
+3097	So As To	以便	para (con el fin de)
+3098	Take Advantage	利用	aprovechar
+3099	Short Of	除非；缺乏	salvo; falto de
+3100	Over The Years	多年來	con los años
+3101	Switch On	打開（開關）	encender
+3102	By No Means	絕不	de ninguna manera
+3103	Could Hardly	幾乎不能	apenas podía
+3104	Come Up With	想出（辦法）	idear; ocurrírsele
+3105	In Question	討論中的；有問題的	en cuestión
+3106	In The First Place	首先；一開始	en primer lugar
+3107	Prove To Be	證明是	resultar ser
+3108	In Common	共同的	en común
+3109	No Matter	無論	no importa
+3110	At This Point	此時	en este punto
+3111	In Itself	就其本身而言	en sí mismo
+3112	The Former	前者	el primero (de dos)
+3113	If Only	要是…就好了	ojalá
+3114	Yet To	尚未	aún no
+3115	Up To (Decisions)	取決於	depende de
+3116	Or Whatever	或諸如此類	o lo que sea
+3117	Hand Over	交出；移交	entregar
+3118	In The Light Of	鑒於	a la luz de
+3119	In The Same Way	同樣地	de la misma manera
+3120	That Much	那麼多	tanto
+3121	The Extent To Which	…的程度	la medida en que
+3122	For Some Time	有一段時間	durante un tiempo
+3123	In Return (For)	作為回報	a cambio (de)
+3124	To Death	極度地；到死	a muerte; muchísimo
+3125	On The Grounds	以…為理由	con el argumento de
+3126	Oh Dear	哎呀	¡vaya!; ¡ay!
+3127	In Full	全部；全額	en su totalidad
+3128	On Board	在船（機、車）上；加入	a bordo; involucrado
+3129	To Some Extent	在某種程度上	hasta cierto punto
+3130	Some Kind Of	某種	algún tipo de
+3131	Keep Up	跟上；維持	seguir el ritmo; mantener
+3132	No Idea	不知道	ni idea
+3133	Greater Than	大於	mayor que
+3134	Happen To (Be)	碰巧	dar la casualidad de
+3135	Held That (‘Believed’)	認為	sostuvo que
+3136	Faced With	面對	ante; frente a
+3137	Do(ing) So	這樣做	hacerlo
+3138	Set Off	出發；引發	partir; provocar
+3139	Put Forward	提出	proponer
+3140	From Time To Time	偶爾；不時	de vez en cuando
+3141	The Means	手段；方法	los medios
+3142	Ever Since	從那時起	desde entonces
+3143	Just About	差不多；幾乎	casi
+3144	As Opposed To	相對於；而不是	a diferencia de
+3145	Give Rise To	引起；導致	dar lugar a
+3146	Large Scale	大規模的	a gran escala
+3147	Make Sense	有道理；說得通	tener sentido
+3148	By Means Of	藉由；透過	por medio de
+3149	In Short	簡言之	en resumen
+3150	A Bit Of A	有點像是（帶貶義的）	un poco (de)
+3151	Break Up	分手；分解	romper (una relación); dividir
+3152	But Then (Again)	不過話說回來	pero, por otro lado
+3153	All Too	太過於	demasiado
+3154	Put Up	張貼；搭建；忍受	colgar; montar; aguantar
+3155	Good At	擅長	bueno en
+3156	A Long Way	一段很長的路；差得遠	un largo camino
+3157	Amount To	相當於；累計達	equivaler a; ascender a
+3158	For Long	長時間	mucho tiempo
+3159	(Be) Run By	由…經營	dirigido por
+3160	Some More	再多一些	un poco más
+3161	In The Absence Of	在缺乏…的情況下	a falta de
+3162	All Sorts Of	各式各樣的	todo tipo de
+3163	Get On With	繼續做；與…相處	seguir con; llevarse bien con
+3164	No Good	沒有用；不好	inútil; no sirve
+3165	Yet Another	又一個	otro más
+3166	Key To	…的關鍵	la clave de
+3167	I'm Afraid	恐怕（委婉語）	me temo que
+3168	That Which	…的那個東西	lo que
+3169	If So	如果是這樣	si es así
+3170	Right Now	現在；此刻	ahora mismo
+3171	In View Of	鑒於	en vista de
+3172	In Detail	詳細地	en detalle
+3173	Reflected In	反映在	reflejado en
+3174	No Such	沒有這樣的	no existe tal
+3175	Nothing But	只不過是	nada más que
+3176	In The Face Of	面對	ante; frente a
+3177	Such That	以致於	de tal modo que
+3178	Out Of (‘Due To’)	出於（某種原因）	por (motivo)
+3179	Next Door	隔壁	al lado (casa vecina)
+3180	To The Point	恰到好處；言簡意賅	al grano
+3181	Make Its/one’s Way	前進；行進	abrirse paso; avanzar
+3182	In Hand	在掌控中；正在進行	bajo control; en marcha
+3183	Get To ('opportunity')	有機會（做某事）	tener la oportunidad de
+3184	By The Way	順便一提	por cierto
+3185	By Contrast	相比之下	en cambio
+3186	Run Out (Of)	用完；耗盡	quedarse sin
+3187	In Principle	原則上	en principio
+3188	Add To	增加；使更加	aumentar; añadir a
+3189	As Yet	迄今；至今	hasta ahora
+3190	At Risk	處於危險中	en riesgo
+3191	A Mere	僅僅是	un simple; apenas
+3192	Shown To	被證明；被顯示	demostrado que
+3193	On The One Hand	一方面	por un lado
+3194	By Way Of	藉由；透過	a modo de; mediante
+3195	On The Road	在路上；巡迴中	de viaje; de gira
+3196	Bear In Mind	謹記；留意	tener en cuenta
+3197	Old Fashioned	老式的；過時的	anticuado
+3198	For Sale	出售中	en venta
+3199	Or Anything	或什麼的	o algo
+3200	Most Likely	很可能	lo más probable
+3201	Provide For	供養；為…做準備	mantener; prever
+3202	Even So	即便如此	aun así
+3203	Come Across	偶然遇到；顯得	encontrarse con; parecer
+3204	First Of All	首先	primero que nada
+3205	Might As Well	不妨；乾脆	mejor (hacer algo)
+3206	Limited To	僅限於	limitado a
+3207	To Me ('in My Opinion')	依我看	para mí
+3208	Mind You	不過話說回來；注意	eso sí; ojo
+3209	At A Time ('simultaneously')	同時；一次	a la vez; de uno en uno
+3210	Half Past	…過半（時間，如三點半）	y media (hora)
+3211	With Respect To	關於	con respecto a
+3212	Consistent With	與…一致	coherente con
+3213	Way Out	出路；出口	salida; solución
+3214	Third Party	第三方	tercero (parte)
+3215	Contrary To	與…相反	contrario a
+3216	Worth Of	價值…的	por valor de
+3217	A Good (‘At Least’)	足足（有）	nada menos que; al menos
+3218	Act On	依…行事；對…採取行動	actuar según
+3219	Except That	只是；除了…之外	excepto que
+3220	Day To Day	日常的	cotidiano
+3221	As Usual	照常	como de costumbre
+3222	Long Before	早在…之前	mucho antes
+3223	Long Ago	很久以前	hace mucho tiempo
+3224	In Conjunction With	與…一起；配合	junto con
+3225	Up To Date	最新的；跟上時代	actualizado
+3226	Let Alone	更不用說	y mucho menos
+3227	Quite A Lot	相當多	bastante
+3228	If You Like	如果你願意的話	si quieres
+3229	To The Extent	…的程度	en la medida en que
+3230	So Far As	就…而言	en cuanto a
+3231	Given That	鑒於；既然	dado que
+3232	In Line With	符合；與…一致	en línea con
+3233	On The Whole	整體而言	en general
+3234	Care To	想要（做某事）	querer (hacer algo)
+3235	Take Account Of	考慮到	tener en cuenta
+3236	Something Like That	諸如此類的事	algo así
+3237	Make Use Of	利用	hacer uso de
+3238	When It Comes To	談到；說到	cuando se trata de
+3239	Fill In	填寫；代替	rellenar; sustituir
+3240	For All ('considering')	儘管；就…而言	a pesar de; con todo
+3241	A Question Of	…的問題	una cuestión de
+3242	For Life	終生	de por vida
+3243	Get Away	逃離；擺脫	escaparse; alejarse
+3244	In The Meantime	與此同時	mientras tanto
+3245	Something Of A	有點像是（某種角色/程度）	algo así como
+3246	The Odd	偶爾的；個別的	alguno que otro
+3247	Little More Than	幾乎只是；不過是	poco más que
+3248	Would You Like	你想要…嗎（禮貌詢問）	¿te gustaría …?
+3249	In Need	有需要的	necesitado
+3250	Take For Granted	視為理所當然	dar por sentado
+3251	In This Respect	在這方面	en este sentido
+3252	Provided That	只要；假設	siempre que
+3253	Allow For (‘Calculate In’)	將…考慮在內	tener en cuenta
+3254	Catch Up	趕上	ponerse al día
+3255	A Go (‘Attempt’)	嘗試一下	un intento
+3256	For The Moment	暫時	por ahora
+3257	At The Expense Of	以…為代價	a costa de
+3258	Put Together	組合；拼湊	juntar; armar
+3259	Things Like That	諸如此類的事	cosas así
+3260	Of Little	極少的（重要性、價值等）	de poca (importancia/valor)
+3261	Shut Up	閉嘴	callarse
+3262	As Of	從…起（生效）	a partir de
+3263	Over Time	隨著時間推移	con el tiempo
+3264	Would Appear	似乎；看來	parecería
+3265	The Other Day	前幾天	el otro día
+3266	In Theory	理論上	en teoría
+3267	Thought Of (As)	被認為是	considerado (como)
+3268	For Good	永遠地	para siempre
+3269	Opposed To	反對	en contra de
+3270	Common Sense	常識	sentido común
+3271	Bother To	費心去（做）	molestarse en
+3272	As Good As ('like')	幾乎等於；就像	prácticamente; como si
+3273	Back Up	支持；備份	apoyar; hacer copia de seguridad
+3274	Take Care Of	照顧；處理	cuidar de; encargarse de
+3275	The Sight Of	看見（某事物的景象）	la vista de
+3276	Go Round	足夠分配；繞行	alcanzar para todos; dar la vuelta
+3277	The Whole Thing	整件事	todo el asunto
+3278	At One Time	曾經；一度	en un tiempo
+3279	Head To	前往	dirigirse a
+3280	In A Sense	從某種意義上說	en cierto sentido
+3281	On Average	平均而言	en promedio
+3282	Way Round	繞行的路線；方向	camino alrededor; sentido
+3283	Can Tell	看得出來；分辨得出	se nota; poder distinguir
+3284	Free From	免於；擺脫	libre de
+3285	And All That	等等之類	y todo eso
+3286	As It Were	可以說；彷彿	por así decirlo
+3287	What If	如果…會怎樣	¿y si …?
+3288	Touch Of	一絲；些許	un toque de
+3289	Better Off	更好；境況更佳	en mejor situación
+3290	Stand For	代表；象徵	representar; significar
+3291	To Blame	該受責備	culpable
+3292	The Bulk Of	大部分的	la mayor parte de
+3293	A Handful Of	少數的；一把	un puñado de
+3294	(At) The Outset	一開始	desde el principio
+3295	By Virtue Of	憑藉；由於	en virtud de
+3296	Turn Down	拒絕；調低	rechazar; bajar (volumen)
+3297	Get On (‘Relate’)	相處	llevarse bien
+3298	Under Way	進行中	en marcha
+3299	In The Interest Of	為了…的利益	en interés de
+3300	On The Market	上市；出售中	en el mercado; en venta
+3301	By Far	迄今為止；遠遠地	con diferencia
+3302	A Degree Of	一定程度的	cierto grado de
+3303	Never Mind	沒關係；不要緊	no importa
+3304	Up And Down	上上下下	arriba y abajo
+3305	In One’s Own Right	憑自己的實力	por derecho propio
+3306	A Case Of	…的情況	un caso de
+3307	More So	更是如此	más aún
+3308	Come Up To	達到；接近	acercarse a; alcanzar
+3309	In Which Case	在這種情況下	en cuyo caso
+3310	No Sign Of	沒有…的跡象	ni rastro de
+3311	Just As (‘When’)	正當…時	justo cuando
+3312	For The Sake Of	為了…的緣故	por el bien de
+3313	In A Position To	能夠；有能力	en condiciones de
+3314	To Come (Future)	未來的；即將到來的	por venir
+3315	Backed By	得到…的支持	respaldado por
+3316	At Best	充其量；最多	en el mejor de los casos
+3317	Wealth Of	豐富的	gran cantidad de
+3318	That Sort Of Thing	那類的事	ese tipo de cosas
+3319	Make Out	辨認出；聲稱	distinguir; afirmar
+3320	Come To Terms With	接受（困難的事）	aceptar (algo difícil)
+3321	Fond Of	喜愛	aficionado a
+3322	With A View To	為了；旨在	con miras a
+3323	Turn Back	折返	dar la vuelta
+3324	Get Away With	逃脫懲罰；僥倖成功	salirse con la suya
+3325	No Wonder	難怪	no es de extrañar
+3326	Well Being	幸福；福祉	bienestar
+3327	How About	…如何	¿qué tal …?
+3328	To Go (‘Remaining’)	剩下的	restante; que falta
+3329	Straight Away	立刻	enseguida
+3330	Owing To	由於	debido a
+3331	Hold Up	舉起；耽擱	levantar; retrasar
+3332	Look To	指望；期望	contar con; esperar
+3333	Lay Out	佈置；規劃	disponer; planear
+3334	The Lot	全部	todo
+3335	Keep On	繼續	seguir (haciendo)
+3336	Make Up One’s Mind	下定決心	decidirse
+3337	At Work	在工作；起作用	trabajando; en acción
+3338	Come About	發生	ocurrir
+3339	Go on	繼續；發生	continuar; ocurrir
+3340	Pick up	撿起；接（人）；學會	recoger; ir a buscar (a alguien); aprender
+3341	Come back	回來	volver
+3342	Come up	出現；被提及	surgir; mencionarse
+3343	Go back	回去	regresar
+3344	Find out	找出	averiguar
+3345	Come out	出來；出版	salir; publicarse
+3346	Go out	出去	salir
+3347	Point out	指出	señalar
+3348	Grow up	長大	crecer
+3349	Set up	建立	establecer; montar
+3350	Turn out	結果是	resultar
+3351	Get out	出去	salir
+3352	Come in	進來	entrar
+3353	Take on	承擔	asumir
+3354	Give up	放棄	rendirse; dejar
+3355	Make up	組成；和好；化妝	formar; reconciliarse; maquillarse
+3356	End up	最終	terminar (acabando)
+3357	Get back	回來	volver; recuperar
+3358	Look up	查閱；仰望；好轉	buscar (información); mirar hacia arriba; mejorar
+3359	Figure out	弄清楚	entender; resolver
+3360	Sit down	坐下	sentarse
+3361	Get up	起床	levantarse
+3362	Take out	拿出；帶出去	sacar; invitar a salir
+3363	Come on	快點	¡vamos!; ¡date prisa!
+3364	Go down	下降；被接受	bajar; ser recibido
+3365	Show up	出現	aparecer; presentarse
+3366	Take off	起飛；脫掉	despegar; quitarse (ropa)
+3367	Work out	想出；健身；結果如何	resolver; hacer ejercicio; salir bien
+3368	Stand up	站起來	ponerse de pie
+3369	Come down	下來；降價	bajar; bajar de precio
+3370	Go ahead	繼續進行	adelante; seguir
+3371	Go up	上升	subir
+3372	Look back	回顧	recordar; mirar atrás
+3373	Wake up	醒來	despertarse
+3374	Carry out	執行	llevar a cabo
+3375	Take over	接管	tomar el control
+3376	Hold up	舉起；耽擱	levantar; retrasar
+3377	Pull out	撤出；拔出	retirarse; sacar
+3378	Turn around	轉身；扭轉局面	darse la vuelta; dar un giro
+3379	Take up	開始從事；佔用	empezar (una actividad); ocupar
+3380	Look down	俯視；看不起	mirar hacia abajo; menospreciar
+3381	Put up	張貼；搭建	colgar (un cartel); montar
+3382	Bring back	帶回；恢復	traer de vuelta; recuperar
+3383	Bring up	提出；養育	mencionar; criar
+3384	Look out	小心；留意	¡cuidado!; estar atento
+3385	Bring in	引進；帶來	introducir; traer
+3386	Open up	打開；敞開心扉	abrir; abrirse (emocionalmente)
+3387	Check out	查看；退房	mirar; hacer el check-out
+3388	Move on	繼續前進	seguir adelante
+3389	Put out	熄滅；發布	apagar; publicar
+3390	Look around	四處看看	mirar alrededor
+3391	Catch up	趕上	ponerse al día
+3392	Go in	進去	entrar
+3393	Break down	故障；崩潰	averiarse; derrumbarse
+3394	Get off	下車；下班	bajarse; salir del trabajo
+3395	Keep up	跟上；維持	seguir el ritmo; mantener
+3396	Put down	放下；貶低	dejar; menospreciar
+3397	Reach out	伸出；聯繫	tender la mano; contactar
+3398	Go off	離開；爆炸；響起	irse; explotar; sonar
+3399	Cut off	切斷	cortar
+3400	Turn back	折返	dar la vuelta
+3401	Pull up	停下；拉起	detenerse; subir (algo)
+3402	Set out	出發；著手	partir; proponerse
+3403	Clean up	打掃乾淨	limpiar
+3404	Shut down	關閉	cerrar; apagar
+3405	Turn over	翻轉；移交	dar la vuelta; entregar
+3406	Slow down	放慢	ir más despacio
+3407	Wind up	結束；使緊張	terminar; poner nervioso
+3408	Turn up	出現；調高	aparecer; subir (volumen)
+3409	Line up	排隊；安排	hacer fila; organizar
+3410	Take back	拿回；收回（話）	recuperar; retirar (lo dicho)
+3411	Lay out	佈置；規劃	disponer; planear
+3412	Go over	複查；越過	repasar; pasar por
+3413	Hang up	掛斷電話	colgar (el teléfono)
+3414	Go through	經歷；仔細檢查	pasar por; revisar a fondo
+3415	Hold on	稍等；堅持	esperar; aguantar
+3416	Pay off	還清；有回報	pagar por completo; dar frutos
+3417	Hold out	撐住；伸出	resistir; extender
+3418	Break up	分手；分解	romper (una relación); dividir
+3419	Bring out	推出；顯現	lanzar; sacar a relucir
+3420	Pull back	撤回；退縮	retirarse; echarse atrás
+3421	Hang on	稍等；堅持	espera un momento; aguantar
+3422	Build up	建立；增強	construir; fortalecer
+3423	Throw out	丟棄；提出	tirar; proponer
+3424	Hang out	閒逛	pasar el rato
+3425	Put on	穿上；增加（體重）	ponerse (ropa); subir de peso
+3426	Get down	下來；蹲下	bajar; agacharse
+3427	Come over	過來；感覺（情緒）襲來	venir; (una emoción) invadir
+3428	Move in	搬進	mudarse (a)
+3429	Start out	開始；起步	empezar
+3430	Call out	喊叫；點名	gritar; nombrar
+3431	Sit up	坐直；熬夜	sentarse derecho; trasnochar
+3432	Turn down	拒絕；調低	rechazar; bajar (volumen)
+3433	Back up	支持；備份；倒車	apoyar; hacer copia de seguridad; dar marcha atrás
+3434	Put back	放回	devolver a su lugar
+3435	Send out	發送；派出	enviar
+3436	Get in	進入；到達	entrar; llegar
+3437	Blow up	爆炸；發怒	explotar; enfurecerse
+3438	Carry on	繼續	continuar
+3439	Set off	出發；引發	partir; provocar
+3440	Keep on	繼續	seguir (haciendo)
+3441	Run out	用完	quedarse sin
+3442	Make out	辨認出；聲稱	distinguir; afirmar
+3443	Shut up	閉嘴	callarse
+3444	Turn off	關掉	apagar
+3445	Bring about	促成	provocar; causar
+3446	Step back	退後一步	dar un paso atrás
+3447	Lay down	放下；規定	dejar; establecer (reglas)
+3448	Bring down	使倒下；降低	derribar; bajar
+3449	Stand out	突出；顯眼	destacar
+3450	Come along	一起來；進展	venir también; avanzar
+3451	Play out	上演；展開	desarrollarse
+3452	Break out	爆發	estallar
+3453	Go around	到處走；流傳	dar vueltas; circular
+3454	Walk out	罷工離開；退場	abandonar (una reunión); declararse en huelga
+3455	Get through	通過；完成	superar; terminar
+3456	Hold back	抑制；隱瞞	contener; ocultar
+3457	Write down	寫下	anotar
+3458	Move back	搬回；後退	volver a mudarse; retroceder
+3459	Fill out	填寫	rellenar (un formulario)
+3460	Sit back	坐回去；放鬆	recostarse; relajarse
+3461	Rule out	排除	descartar
+3462	Move up	提升；上移	ascender; subir
+3463	Pick out	挑選出	elegir
+3464	Take down	記下；拆除	anotar; desmontar
+3465	Get on	上車；相處	subir (a un vehículo); llevarse bien
+3466	Give back	歸還	devolver
+3467	Hand over	移交	entregar
+3468	Sum up	總結	resumir
+3469	Move out	搬出	mudarse (de)
+3470	Come off	脫落；成功	desprenderse; salir bien
+3471	Pass on	傳遞；去世（委婉）	transmitir; fallecer (eufemismo)
+3472	Take in	吸收；理解；欺騙	asimilar; entender; engañar
+3473	Set down	放下；記下	dejar; anotar
+3474	Sort out	解決；整理	resolver; ordenar
+3475	Follow up	跟進	hacer seguimiento
+3476	Come through	度過難關；傳達	superar; llegar (un mensaje)
+3477	Settle down	安定下來	establecerse; calmarse
+3478	Come around	甦醒；改變主意	volver en sí; cambiar de opinión
+3479	Fill in	填寫；代替	rellenar; sustituir
+3480	Give out	分發；用盡	repartir; agotarse
+3481	Give in	屈服	ceder
+3482	Go along	一起去；贊同	acompañar; estar de acuerdo
+3483	Break off	中斷；斷絕	interrumpir; romper
+3484	Put off	推遲	posponer
+3485	Come about	發生	ocurrir
+3486	Close down	關閉；停業	cerrar (un negocio)
+3487	Put in	放入；投入（時間）	meter; dedicar (tiempo)
+3488	Set about	著手做	ponerse a (hacer algo)
