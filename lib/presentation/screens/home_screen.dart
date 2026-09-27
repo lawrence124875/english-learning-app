@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
         // 寬度足夠時（橫屏、中文）維持原本大小，不會被放大。
         title: FittedBox(
           fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
+          alignment: AlignmentDirectional.centerStart,
           child: Text(AppLocalizations.of(context)!.appTitle),
         ),
         actions: [
@@ -260,6 +260,10 @@ class _PlaybackCard extends StatelessWidget {
                 children: [
                   Text(
                     word?.word ?? '—',
+                    textAlign: TextAlign.center,
+                    textDirection: appState.wordIsRtl
+                        ? TextDirection.rtl
+                        : TextDirection.ltr,
                     style: Theme.of(context)
                         .textTheme
                         .headlineMedium
@@ -268,6 +272,10 @@ class _PlaybackCard extends StatelessWidget {
                   if (settings.showTranslation && word != null) ...[
                     const SizedBox(height: 8),
                     Text(appState.meaningOf(word),
+                        textAlign: TextAlign.center,
+                        textDirection: appState.meaningIsRtl(word)
+                            ? TextDirection.rtl
+                            : TextDirection.ltr,
                         style: Theme.of(context).textTheme.titleMedium),
                   ],
                 ],
@@ -310,13 +318,16 @@ class _NavigationButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 右到左介面（阿拉伯文）時 Row 會自動鏡像，「上一個」在右邊；
+    // 圖示也要跟著換方向，箭頭才會指向外側。
+    final rtl = Directionality.of(context) == TextDirection.rtl;
     return Row(
       children: [
         Expanded(
           child: OutlinedButton.icon(
             onPressed: () => appState.previous(
                 speak: appState.settings.speakOnManualNavigate),
-            icon: const Icon(Icons.skip_previous),
+            icon: Icon(rtl ? Icons.skip_next : Icons.skip_previous),
             label: Text(AppLocalizations.of(context)!.navPrevious),
           ),
         ),
@@ -333,7 +344,7 @@ class _NavigationButtons extends StatelessWidget {
           child: OutlinedButton.icon(
             onPressed: () => appState.next(
                 speak: appState.settings.speakOnManualNavigate),
-            icon: const Icon(Icons.skip_next),
+            icon: Icon(rtl ? Icons.skip_previous : Icons.skip_next),
             label: Text(AppLocalizations.of(context)!.navNext),
           ),
         ),

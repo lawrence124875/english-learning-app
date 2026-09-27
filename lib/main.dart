@@ -150,6 +150,8 @@ class EnglishLearningApp extends StatelessWidget {
           Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
           Locale('es'),
           Locale('pt'),
+          Locale('th'),
+          Locale('ar'),
           Locale('en'),
         ],
         theme: ThemeData(

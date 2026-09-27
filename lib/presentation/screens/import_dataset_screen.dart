@@ -40,6 +40,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     'de-DE': 'Deutsch',
     'it-IT': 'Italiano',
     'th-TH': 'ไทย',
+    'ar-SA': 'العربية',
   };
   bool _translationLocaleInitialized = false;
   bool _importing = false;
@@ -54,8 +55,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       final lang = locale.languageCode;
       _translationLocale = lang == 'zh'
           ? (locale.scriptCode == 'Hans' ? 'zh-CN' : 'zh-TW')
-          : const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'en': 'en'}[lang] ?? 'en';
-      // 英文介面（含不支援語言）時，若手機語言是法/德/義/泰，翻譯欄
+          : const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'th': 'th', 'ar': 'ar', 'en': 'en'}[lang] ?? 'en';
+      // 英文介面（含不支援語言）時，若手機語言是法/德/義，翻譯欄
       // 預設就用手機語言（他們的母語），不是英文。
       if (lang == 'en') {
         final device =
@@ -85,6 +86,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     'de': 'Deutsch',
     'it': 'Italiano',
     'th': 'ไทย',
+    'ar': 'العربية',
   };
   String _errorMessage(CsvImportError e, AppLocalizations l) {
     switch (e) {

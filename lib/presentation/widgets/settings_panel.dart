@@ -35,7 +35,7 @@ class SettingsPanel extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Align(
-              alignment: Alignment.centerLeft,
+              alignment: AlignmentDirectional.centerStart,
               child: Text(l.starredCountLabel(appState.currentStarred.length),
                   style: const TextStyle(color: Colors.redAccent)),
             ),

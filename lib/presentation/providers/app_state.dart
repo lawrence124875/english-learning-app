@@ -370,15 +370,34 @@ class AppState extends ChangeNotifier {
 
   /// 英文介面（含不支援語言）下，內建教材沒有對應翻譯，不顯示也不朗讀翻譯
   /// （不能退回中文給英文介面的使用者看）。
-  bool get _hideBuiltInTranslation =>
-      currentDataset.builtIn && BackgroundL10n.translationKey() == 'en';
+  ///
+  /// 第 11 版起改為逐項判斷：非中文介面（泰、阿…）若某個內建項目還沒有
+  /// 該語言翻譯，也不顯示、不朗讀（不退回中文），讓教材翻譯可以分批補齊。
+  bool _hideBuiltInTranslationFor(WordItem word) {
+    if (!currentDataset.builtIn) return false;
+    final key = BackgroundL10n.translationKey();
+    if (key == 'en') return true;
+    return !key.startsWith('zh') && !word.translations.containsKey(key);
+  }
+
+  /// 右到左書寫的語言（阿拉伯文等）。單字卡依「內容的語言」決定文字方向，
+  /// 不是依介面語言：阿拉伯文介面下英文單字仍左到右，中文介面下匯入的
+  /// 阿拉伯文翻譯仍右到左（標點與括號位置才會正確）。
+  static bool isRtlLanguage(String code) {
+    final lang = code.split(RegExp('[-_]')).first.toLowerCase();
+    return const {'ar', 'he', 'iw', 'fa', 'ur'}.contains(lang);
+  }
+
+  bool get wordIsRtl => isRtlLanguage(currentDataset.wordLocale);
+
+  bool meaningIsRtl(WordItem word) => isRtlLanguage(meaningLocaleFor(word));
 
   /// 手機是否有這個語言的朗讀語音（匯入畫面用）。
   Future<bool> isTtsLanguageAvailable(String languageCode) =>
       _ttsService.isLanguageAvailable(languageCode);
 
   String meaningOf(WordItem word) =>
-      _hideBuiltInTranslation ? '' : word.meaningFor(meaningLocaleFor(word));
+      _hideBuiltInTranslationFor(word) ? '' : word.meaningFor(meaningLocaleFor(word));
 
   /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
   void _updateNowPlaying() {
@@ -483,7 +502,8 @@ class AppState extends ChangeNotifier {
       await _ttsService.speak(word.word,
           languageCode: currentDataset.wordLocale);
     }
-    if (settings.readMode == ReadMode.bilingual && !_hideBuiltInTranslation) {
+    if (settings.readMode == ReadMode.bilingual &&
+        !_hideBuiltInTranslationFor(word)) {
       final locale = meaningLocaleFor(word);
       // 「〜」「~」「…」是釋義裡的占位符號，部分 TTS 引擎會把它念成
       // 「から」「물결」之類的字，朗讀前先拿掉（畫面顯示不受影響）。

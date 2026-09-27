@@ -52,6 +52,12 @@ class CsvImportService {
     'inglés', 'ingles', 'español', 'espanol', 'japonés', 'japones',
     'inglês', 'português', 'portugues', 'japonês',
     'français', 'francais', 'deutsch', 'italiano', 'ไทย', 'อังกฤษ', 'ภาษาอังกฤษ',
+    // 泰文（第 11 版）
+    'ภาษาไทย', 'คำ', 'คำศัพท์', 'คำแปล', 'ความหมาย', 'วลี', 'ประโยค',
+    // 阿拉伯文（第 11 版；含有無 hamza 的常見寫法）
+    'العربية', 'عربي', 'الإنجليزية', 'الانجليزية', 'إنجليزي', 'انجليزي',
+    'كلمة', 'الكلمة', 'كلمات', 'الكلمات', 'ترجمة', 'الترجمة', 'معنى', 'المعنى',
+    'عبارة', 'العبارة', 'جملة', 'الجملة',
   };
 
   /// [translationLocale] 例如 "zh-TW"、"ja"、"ko"、"vi"、"en" 等，
@@ -67,10 +73,26 @@ class CsvImportService {
     // 統一換行符號，避免不同作業系統/工具產生的 \r\n、\r 造成解析落差。
     content = content.replaceAll('\r\n', '\n').replaceAll('\r', '\n');
 
+    // 分隔符號：預設逗號。第一列完全沒有逗號時，改用它含有的 Tab、
+    // 分號，或阿拉伯文分號「؛」、阿拉伯文逗號「،」（第 11 版：阿拉伯文、
+    // 歐洲地區的 Excel 常匯出分號分隔，阿拉伯文輸入法也常打出「،」）。
+    final firstLine = content
+        .split('\n')
+        .firstWhere((l) => l.trim().isNotEmpty, orElse: () => '');
+    var delimiter = ',';
+    if (!firstLine.contains(',')) {
+      for (final d in const ['\t', ';', '\u061B', '\u060C']) {
+        if (firstLine.contains(d)) {
+          delimiter = d;
+          break;
+        }
+      }
+    }
+
     List<List<dynamic>> rows;
     try {
       rows = const CsvToListConverter(eol: '\n', shouldParseNumbers: false)
-          .convert(content, fieldDelimiter: ',');
+          .convert(content, fieldDelimiter: delimiter);
     } catch (e) {
       throw CsvImportException(CsvImportError.parseFailed);
     }
