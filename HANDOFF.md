@@ -259,7 +259,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 翻譯原則：同其他語言，以最常用意思為主，對齊 zh-TW 的詞義；泰文多義用「, 」分隔，阿拉伯文用「، 」分隔；阿拉伯文用標準阿拉伯文（MSA），少加母音符號。
 - 取下一批：`sed -n <起>,<迄>p tools/translations/wordlist.tsv | cut -f2,3`（行號＝序號+1）。
 - **進度：batch_001～020 全部完成（2026-09-28）**：NGSL 2809/2809、Spoken 720/720、PHRASE 506/506、PhaVE 150/150 皆有 th、ar。`assets/data/manifest.json` version 已改為 3。
-- **下一步**：商店文案（泰 th、阿 ar：名稱 ≤30、簡短 ≤80、完整 ≤4000，用 Python len 檢查）與版本資訊。
+- **商店文案與版本資訊已完成（2026-09-28）**：`store_assets/store_listing_th_ar.md`（泰：名稱21/簡短75/完整2109；阿：名稱26/簡短71/完整2167，架構同西/葡版，強調 20/80、92%、背景朗讀、以母語學習、TTS 需安裝該語言語音）；`store_assets/release_notes_v11.md`（10 語，皆 <500 字元）。
+- **下一步**：(1) 泰/阿商店截圖＋主題圖：`generate_localized_assets.py` 目前只用 NotoSansCJK，泰文需要 Noto Sans Thai、阿拉伯文需要 Noto Sans Arabic＋字形連寫（Pillow 需 libraqm，`ImageFont.Layout.RAQM`，`direction="rtl"`），阿拉伯文截圖版面也要左右鏡像——評估後再做；(2) 確認 CI 建置成功→實機測試（見下方清單）→上傳 0.1.8+11、Play Console 新增 th、ar 商店資訊。
 
 ### 待實機確認（第十一版上傳前）
 - 手機語言改泰文、阿拉伯文：介面、鎖屏、通知；阿拉伯文右到左排版（首頁、設定、匯入頁、導覽頁）。
