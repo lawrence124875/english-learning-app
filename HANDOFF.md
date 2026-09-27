@@ -258,7 +258,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 每批寫一個 `batch_NNN.tsv`（UTF-8、Tab 分隔、無表頭：英文<TAB>泰文<TAB>阿拉伯文），然後 `python3 tools/translations/merge.py` 合併進四份教材 JSON（依英文比對、同字多份教材一起寫入、不改順序），會印出各教材完成度。**不要把 merge.py 輸出接 head（會 BrokenPipe 中斷寫檔）**。
 - 翻譯原則：同其他語言，以最常用意思為主，對齊 zh-TW 的詞義；泰文多義用「, 」分隔，阿拉伯文用「، 」分隔；阿拉伯文用標準阿拉伯文（MSA），少加母音符號。
 - 取下一批：`sed -n <起>,<迄>p tools/translations/wordlist.tsv | cut -f2,3`（行號＝序號+1）。
-- **進度：batch_001～017 完成 = wordlist 第 1～3030 行**（NGSL 2809/2809 ✅、Spoken 720/720 ✅、PHRASE 197/506、PhaVE 0/150）。**下一批從第 3031 行開始，檔名 batch_018.tsv**（片語：英文欄保留原樣含括號說明，泰/阿只翻意思），每批約 180 項。驗證對齊：`bash -c 'diff <(cut -f1 batch_NNN.tsv) <(sed -n 起,迄p wordlist.tsv | cut -f2)'`（sh 不支援 <( )，要用 bash -c）。
+- **進度：batch_001～018 完成 = wordlist 第 1～3210 行**（NGSL 2809/2809 ✅、Spoken 720/720 ✅、PHRASE 377/506、PhaVE 0/150）。**下一批從第 3211 行開始，檔名 batch_019.tsv；剩 3211～3489 共 279 項，約 2 批（019、020）即全部完成**（片語：英文欄保留原樣含括號說明，泰/阿只翻意思），每批約 180 項。驗證對齊：`bash -c 'diff <(cut -f1 batch_NNN.tsv) <(sed -n 起,迄p wordlist.tsv | cut -f2)'`（sh 不支援 <( )，要用 bash -c）。
 - 全部完成後：`assets/data/manifest.json` version 改 3；再做商店文案（泰 th、阿 ar：名稱 ≤30、簡短 ≤80、完整 ≤4000，用 Python len 檢查）與版本資訊。
 
 ### 待實機確認（第十一版上傳前）
