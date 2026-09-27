@@ -172,5 +172,6 @@
   "introBody5": "Vocabulario del libro de texto, expresiones del trabajo o temas de examen: guárdalos como CSV (columna 1 en inglés, columna 2 la traducción) e impórtalos. También se escuchan en segundo plano y puedes marcar las difíciles. También puedes importar otros idiomas además del inglés.",
   "introTitle6": "4 listas académicas, empieza gratis",
   "introBody6": "Palabras básicas NGSL 2809, palabras del inglés hablado 720, expresiones frecuentes 506 y phrasal verbs 150, todas de investigaciones académicas públicas. Cada lista tiene contenido gratis para que la pruebes primero.",
-  "importWordLangLabel": "¿En qué idioma está la primera columna? (para la voz de lectura)"
+  "importWordLangLabel": "¿En qué idioma está la primera columna? (para la voz de lectura)",
+  "importVoiceMissing": "Tu teléfono no tiene voz de lectura para \"{language}\", así que no se podrá leer en voz alta. Instálala en \"Ajustes → Texto a voz\"."
 }

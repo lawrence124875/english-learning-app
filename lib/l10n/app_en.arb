@@ -172,5 +172,6 @@
   "introBody5": "Textbook vocabulary, work phrases, exam lists: save them as a CSV file (text to learn in the first column, translation in the second) and import them. Languages other than English work too.",
   "introTitle6": "Four academic word lists, free to start",
   "introBody6": "NGSL 2809 core words, Spoken 720, PHRASE List 506 and PhaVE List 150, all from published academic research. Every list has free content so you can try before deciding.",
-  "importWordLangLabel": "What language is the first column? (sets the reading voice)"
+  "importWordLangLabel": "What language is the first column? (sets the reading voice)",
+  "importVoiceMissing": "Your phone has no text-to-speech voice for \"{language}\", so it can't be read aloud. Install one in Settings → Text-to-speech."
 }

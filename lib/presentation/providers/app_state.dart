@@ -373,6 +373,10 @@ class AppState extends ChangeNotifier {
   bool get _hideBuiltInTranslation =>
       currentDataset.builtIn && BackgroundL10n.translationKey() == 'en';
 
+  /// 手機是否有這個語言的朗讀語音（匯入畫面用）。
+  Future<bool> isTtsLanguageAvailable(String languageCode) =>
+      _ttsService.isLanguageAvailable(languageCode);
+
   String meaningOf(WordItem word) =>
       _hideBuiltInTranslation ? '' : word.meaningFor(meaningLocaleFor(word));
 

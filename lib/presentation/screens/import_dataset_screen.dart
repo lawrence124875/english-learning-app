@@ -140,15 +140,27 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       );
 
       if (!mounted) return;
-      await context.read<AppState>().addCustomDataset(dataset);
-
+      final appState = context.read<AppState>();
+      await appState.addCustomDataset(dataset);
+      // 第一欄或翻譯欄的語言在手機上沒有朗讀語音時，提醒使用者去安裝
+      // （例如英文介面的人匯入泰文或德文教材，手機沒有該語音就會念不出來）。
+      final missing = <String>[];
+      if (!await appState.isTtsLanguageAvailable(_wordLocale)) {
+        missing.add(_wordLocaleOptions[_wordLocale] ?? _wordLocale);
+      }
+      if (!await appState.isTtsLanguageAvailable(_translationLocale)) {
+        missing.add(_localeOptions(l)[_translationLocale] ?? _translationLocale);
+      }
       if (!mounted) return;
+      final done = parsed.skippedRows > 0
+          ? l.importDoneWithSkipped(parsed.items.length, parsed.skippedRows)
+          : l.importDone(parsed.items.length);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(parsed.skippedRows > 0
-              ? l.importDoneWithSkipped(
-                  parsed.items.length, parsed.skippedRows)
-              : l.importDone(parsed.items.length)),
+          duration: Duration(seconds: missing.isEmpty ? 4 : 10),
+          content: Text(missing.isEmpty
+              ? done
+              : '$done\n${l.importVoiceMissing(missing.join(' / '))}'),
         ),
       );
       Navigator.pop(context);

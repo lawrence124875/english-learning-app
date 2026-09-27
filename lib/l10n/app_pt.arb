@@ -172,5 +172,6 @@
   "introBody5": "Vocabulário do livro, expressões do trabalho, conteúdo de provas: salve como CSV (coluna 1 em inglês, coluna 2 a tradução) e importe. Também toca em segundo plano e dá para marcar as difíceis. Também é possível importar outros idiomas além do inglês.",
   "introTitle6": "4 listas acadêmicas, comece grátis",
   "introBody6": "Palavras essenciais NGSL 2809, palavras do inglês falado 720, expressões frequentes 506 e phrasal verbs 150, todas de pesquisas acadêmicas públicas. Cada lista tem conteúdo grátis para você experimentar antes.",
-  "importWordLangLabel": "Qual é o idioma da primeira coluna? (para a voz de leitura)"
+  "importWordLangLabel": "Qual é o idioma da primeira coluna? (para a voz de leitura)",
+  "importVoiceMissing": "Seu celular não tem voz de leitura para \"{language}\", então não será lido em voz alta. Instale-a em \"Configurações → Conversão de texto em voz\"."
 }

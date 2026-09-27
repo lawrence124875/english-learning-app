@@ -4,6 +4,8 @@ import 'package:flutter_tts/flutter_tts.dart';
 /// 之後若要換成雲端 TTS，只需要新增另一個實作，不影響上層播放邏輯。
 abstract class TtsService {
   Future<void> speak(String text, {required String languageCode});
+  /// 手機是否有這個語言的 TTS 語音（匯入非英文自訂教材時提醒使用者安裝）。
+  Future<bool> isLanguageAvailable(String languageCode);
   Future<void> stop();
   Future<void> setRate(double rate);
   Future<List<Map<String, String>>> getVoices();
@@ -34,6 +36,17 @@ class SystemTtsService implements TtsService {
       await _tts.setLanguage(languageCode);
     }
     await _tts.speak(text);
+  }
+
+  @override
+  Future<bool> isLanguageAvailable(String languageCode) async {
+    try {
+      final r = await _tts.isLanguageAvailable(languageCode);
+      return r == true || r == 1;
+    } catch (_) {
+      // 查詢失敗時不要誤報「沒有語音」。
+      return true;
+    }
   }
 
   @override

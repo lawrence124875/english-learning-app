@@ -42,8 +42,11 @@ class CsvImportService {
     // 語言名稱（英文寫法）
     'english', 'chinese', 'japanese', 'korean', 'vietnamese', 'indonesian',
     'spanish', 'portuguese', 'french', 'german', 'italian', 'thai',
+    'mandarin', 'cantonese', 'traditional chinese', 'simplified chinese',
+    'russian', 'arabic', 'hindi', 'turkish', 'dutch', 'polish', 'malay',
+    'tagalog', 'filipino',
     // 語言名稱（各語言寫法／App 介面語言的說法）
-    '英文', '英語', '英语', '中文', '日文', '日語', '日语', '日本語', '韓文', '韓語', '韩语',
+    '英文', '英語', '英语', '中文', '繁體中文', '简体中文', '繁中', '簡中', '简中', '日文', '日語', '日语', '日本語', '韓文', '韓語', '韩语',
     '한국어', '영어', '일본어', '중국어', 'tiếng anh', 'tiếng việt', 'tiếng nhật',
     'inggris', 'bahasa inggris', 'bahasa indonesia', 'jepang', 'bahasa jepang',
     'inglés', 'ingles', 'español', 'espanol', 'japonés', 'japones',

@@ -172,5 +172,6 @@
   "introBody5": "Kosakata buku pelajaran, ungkapan kerja, materi ujian, dan lainnya bisa disimpan sebagai file CSV (kolom 1 bahasa Inggris, kolom 2 terjemahan) lalu diimpor, dan tetap bisa diputar di latar belakang serta ditandai. Bahasa selain Inggris juga bisa diimpor.",
   "introTitle6": "4 materi akademis, mulai gratis",
   "introBody6": "Kata inti NGSL 2809, kata lisan 720, frasa umum 506, dan phrasal verb 150, semuanya dari riset akademis terbuka. Setiap materi punya konten gratis, jadi coba dulu sebelum memutuskan.",
-  "importWordLangLabel": "Bahasa apa di kolom pertama? (untuk suara pembacaan)"
+  "importWordLangLabel": "Bahasa apa di kolom pertama? (untuk suara pembacaan)",
+  "importVoiceMissing": "Ponsel belum punya suara pembacaan \"{language}\", jadi tidak bisa dibacakan. Pasang paket suaranya di \"Setelan → Text-to-speech\"."
 }
