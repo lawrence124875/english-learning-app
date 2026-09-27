@@ -9,55 +9,56 @@ import '../dataset_labels.dart';
 /// 學習統計畫面：今日學習數、總計學習數、每日複習提醒設定，
 /// 以及四份教材各自的學習進度（NGSL 2809 額外附上官方公開的
 /// 「完整涵蓋率」數據作為參考，不虛構精確百分比）。
+/// 通知診斷對話框：顯示權限/頻道/排程狀態，並可發立即與 1 分鐘後的測試通知。
+Future<void> _showNotificationDiagnostics(BuildContext context) async {
+  var lines = await NotificationService.diagnostics();
+  String? result;
+  if (!context.mounted) return;
+  await showDialog<void>(
+    context: context,
+    builder: (ctx) => StatefulBuilder(
+      builder: (ctx, setState) => AlertDialog(
+        title: const Text('通知診斷'),
+        content: SingleChildScrollView(
+          child: SelectableText([
+            ...lines,
+            if (result != null) '\n$result',
+          ].join('\n')),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () async {
+              final err = await NotificationService.showTestNow();
+              lines = await NotificationService.diagnostics();
+              setState(() => result = err == null
+                  ? '已送出立即測試通知，請看通知中心'
+                  : '立即通知失敗：$err');
+            },
+            child: const Text('立即測試'),
+          ),
+          TextButton(
+            onPressed: () async {
+              final err = await NotificationService.scheduleTestInOneMinute();
+              lines = await NotificationService.diagnostics();
+              setState(() => result = err == null
+                  ? '已排 1 分鐘後測試，可關掉 App 或鎖屏等候'
+                  : '排程失敗：$err');
+            },
+            child: const Text('1 分鐘後測試'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('關閉'),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
 
-  /// 通知診斷對話框：顯示權限/頻道/排程狀態，並可發立即與 1 分鐘後的測試通知。
-  static Future<void> _showNotificationDiagnostics(BuildContext context) async {
-    var lines = await NotificationService.diagnostics();
-    String? result;
-    if (!context.mounted) return;
-    await showDialog<void>(
-      context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setState) => AlertDialog(
-          title: const Text('通知診斷'),
-          content: SingleChildScrollView(
-            child: SelectableText([
-              ...lines,
-              if (result != null) '\n$result',
-            ].join('\n')),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () async {
-                final err = await NotificationService.showTestNow();
-                lines = await NotificationService.diagnostics();
-                setState(() => result = err == null
-                    ? '已送出立即測試通知，請看通知中心'
-                    : '立即通知失敗：$err');
-              },
-              child: const Text('立即測試'),
-            ),
-            TextButton(
-              onPressed: () async {
-                final err = await NotificationService.scheduleTestInOneMinute();
-                lines = await NotificationService.diagnostics();
-                setState(() => result = err == null
-                    ? '已排 1 分鐘後測試，可關掉 App 或鎖屏等候'
-                    : '排程失敗：$err');
-              },
-              child: const Text('1 分鐘後測試'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(ctx),
-              child: const Text('關閉'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
