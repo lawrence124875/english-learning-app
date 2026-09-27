@@ -50,24 +50,42 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     // 翻譯語言預設跟著 App 介面語言走（日文介面預設「日文」…），
     // 使用者仍可手動改選。只在第一次進入畫面時設定一次。
     if (!_translationLocaleInitialized) {
-      final lang = Localizations.localeOf(context).languageCode;
-      _translationLocale =
-          const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'en': 'en'}[lang] ?? 'zh-TW';
+      final locale = Localizations.localeOf(context);
+      final lang = locale.languageCode;
+      _translationLocale = lang == 'zh'
+          ? (locale.scriptCode == 'Hans' ? 'zh-CN' : 'zh-TW')
+          : const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'en': 'en'}[lang] ?? 'en';
+      // 英文介面（含不支援語言）時，若手機語言是法/德/義/泰，翻譯欄
+      // 預設就用手機語言（他們的母語），不是英文。
+      if (lang == 'en') {
+        final device =
+            WidgetsBinding.instance.platformDispatcher.locale.languageCode;
+        if (_translationLocaleOptions.containsKey(device)) {
+          _translationLocale = device;
+        }
+      }
       _translationLocaleInitialized = true;
     }
   }
 
-  Map<String, String> _localeOptions(AppLocalizations l) => {
-        'zh-TW': l.importLangZh,
-        'ja': l.importLangJa,
-        'ko': l.importLangKo,
-        'vi': l.importLangVi,
-        'id': l.importLangId,
-        'es': l.importLangEs,
-        'pt-BR': l.importLangPt,
-        'en': l.importLangEn,
-      };
-
+  /// 翻譯欄（第二欄）語言選項，值為存進教材的翻譯語言代碼，也是朗讀
+  /// 翻譯用的 TTS 語言。第 10 版起擴充為與第一欄相同的 13 種，名稱一樣
+  /// 用 endonym（原本 8 種用介面語言翻譯的 importLangXx 字串，已不使用）。
+  static const _translationLocaleOptions = <String, String>{
+    'zh-TW': '中文（繁體）',
+    'zh-CN': '中文（简体）',
+    'ja': '日本語',
+    'ko': '한국어',
+    'vi': 'Tiếng Việt',
+    'id': 'Bahasa Indonesia',
+    'es': 'Español',
+    'pt-BR': 'Português',
+    'en': 'English',
+    'fr': 'Français',
+    'de': 'Deutsch',
+    'it': 'Italiano',
+    'th': 'ไทย',
+  };
   String _errorMessage(CsvImportError e, AppLocalizations l) {
     switch (e) {
       case CsvImportError.encoding:
@@ -149,7 +167,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
         missing.add(_wordLocaleOptions[_wordLocale] ?? _wordLocale);
       }
       if (!await appState.isTtsLanguageAvailable(_translationLocale)) {
-        missing.add(_localeOptions(l)[_translationLocale] ?? _translationLocale);
+        missing.add(_translationLocaleOptions[_translationLocale] ?? _translationLocale);
       }
       if (!mounted) return;
       final done = parsed.skippedRows > 0
@@ -277,7 +295,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
               labelText: l.importTranslationLangLabel,
               border: const OutlineInputBorder(),
             ),
-            items: _localeOptions(l).entries
+            items: _translationLocaleOptions.entries
                 .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
                 .toList(),
             onChanged: (v) {
