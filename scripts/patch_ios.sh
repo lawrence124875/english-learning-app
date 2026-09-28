@@ -65,7 +65,17 @@ done
 setp ITSAppUsesNonExemptEncryption bool false
 plutil -lint "$PLIST"
 
-# 4) Podfile 最低版本（有 Podfile 時）
+# 4) App 圖示：用 store_assets/icon.png 依原本每張圖的尺寸覆蓋 Flutter 預設圖示
+ICONSET=ios/Runner/Assets.xcassets/AppIcon.appiconset
+if [ -f store_assets/icon.png ] && [ -d "$ICONSET" ]; then
+  for f in "$ICONSET"/*.png; do
+    w=$(sips -g pixelWidth "$f" | awk '/pixelWidth/{print $2}')
+    sips -s format png -z "$w" "$w" store_assets/icon.png --out "$f" >/dev/null
+  done
+  echo "已替換 App 圖示"
+fi
+
+# 5) Podfile 最低版本（有 Podfile 時）
 if [ -f ios/Podfile ]; then
   sed -i '' -E "s/^#? *platform :ios, '[0-9.]+'/platform :ios, '${MIN_IOS}'/" ios/Podfile
   grep -n "platform :ios" ios/Podfile || sed -i '' "1s/^/platform :ios, '${MIN_IOS}'\n/" ios/Podfile
