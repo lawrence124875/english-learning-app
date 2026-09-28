@@ -65,12 +65,12 @@ done
 setp ITSAppUsesNonExemptEncryption bool false
 plutil -lint "$PLIST"
 
-# 4) App 圖示：用 store_assets/icon.png 依原本每張圖的尺寸覆蓋 Flutter 預設圖示
+# 4) App 圖示：用 tools/icons/out/ios/icon_1024.png 依原本每張圖的尺寸覆蓋 Flutter 預設圖示
 ICONSET=ios/Runner/Assets.xcassets/AppIcon.appiconset
-if [ -f store_assets/icon.png ] && [ -d "$ICONSET" ]; then
+if [ -f tools/icons/out/ios/icon_1024.png ] && [ -d "$ICONSET" ]; then
   for f in "$ICONSET"/*.png; do
     w=$(sips -g pixelWidth "$f" | awk '/pixelWidth/{print $2}')
-    sips -s format png -z "$w" "$w" store_assets/icon.png --out "$f" >/dev/null
+    sips -s format png -z "$w" "$w" tools/icons/out/ios/icon_1024.png --out "$f" >/dev/null
   done
   echo "已替換 App 圖示"
 fi

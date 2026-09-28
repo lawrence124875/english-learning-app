@@ -24,6 +24,8 @@ jobs:
             flutter create --platforms=android --project-name=english_learning_app --org tw.bcc .
           fi
 
+      - name: Apply app launcher icon
+        run: bash scripts/patch_android_icons.sh
 
       - name: Patch AndroidManifest for background audio playback
         env:

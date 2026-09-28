@@ -294,4 +294,13 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   - Dart：`UpdateService`、電池最佳化、小米自啟動在非 Android 直接略過；統計頁這兩個按鈕只在 Android 顯示；通知加 Darwin 初始化（啟動不要權限）與 iOS 權限請求、iOS 通知樣式；TTS 在 iOS 設 sharedInstance＋playback 音訊類別（spokenAudio、藍牙、duckOthers）。
   - 尚未處理：AppDelegate 的 UNUserNotificationCenter delegate（只影響 App 在前景時通知是否顯示）；正式上架需另做簽署、RevenueCat iOS、AdMob iOS 廣告單元、App Store 截圖/隱私標籤。
   - **待 Lawrence 實機確認**：背景/鎖屏連續朗讀（iOS 在字與字之間的靜音空檔可能暫停 App，最需要驗證）、鎖屏播放控制、每日提醒、11 語介面、匯入 CSV。
-- 狀態：自用版已可安裝，等實機回報。
+- 2026-09-28 第一次用 Sideloadly v0.60 安裝失敗：密碼驗證通過後報 `Install failed: Guru Meditation … Invalid file`（iPhone 為 iOS 27.0；Mac 已裝 Apple 裝置支援元件）。已請 Lawrence 試：IPA 移到桌面、給 Sideloadly 完全取用磁碟、更新 Sideloadly。尚未確認原因。
+- 狀態：等安裝結果。
+
+## 16. App 桌面圖示（2026-09-28 發現並修正）
+
+- **第十一版以前，Android 與 iOS 安裝後的桌面圖示都是 Flutter 預設藍色圖案**（CI 從沒替換過 mipmap；商店圖示 store_assets/icon.png 只用在 Play 商店頁）。Lawrence 確認紅米上是 Flutter 圖案。
+- 修法：`tools/icons/generate_launcher_icons.py`（圖案同 generate_assets.py 的商店圖示，分層高解析度重畫）產生 `tools/icons/out/`：Android 各密度 `ic_launcher.png`＋自適應圖示（`mipmap-anydpi-v26/ic_launcher.xml`，背景漸層層＋前景白色圖案層，圖案縮到 0.72 倍落在 66dp 安全區內）；iOS `icon_1024.png`（不透明）。
+- `scripts/patch_android_icons.sh` 在 flutter create 後把 out/android 複製進 res/（build_android.yml、build_personal.yml 都有這步）；`patch_ios.sh` 用 icon_1024.png 以 sips 覆蓋 AppIcon.appiconset 每張圖。
+- 改圖示時：改 generate_launcher_icons.py → 重跑 → commit out/。
+- **Play 版要到下一次上傳（版本代碼 12 以上）才會換圖示**；個人版 APK 重新手動建置即可先看到。
