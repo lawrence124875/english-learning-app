@@ -304,6 +304,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 修法：`tools/icons/generate_launcher_icons.py`（圖案同 generate_assets.py 的商店圖示，分層高解析度重畫）產生 `tools/icons/out/`：Android 各密度 `ic_launcher.png`＋自適應圖示（`mipmap-anydpi-v26/ic_launcher.xml`，背景漸層層＋前景白色圖案層，圖案縮到 0.72 倍落在 66dp 安全區內）；iOS `icon_1024.png`（不透明）。
 - `scripts/patch_android_icons.sh` 在 flutter create 後把 out/android 複製進 res/（build_android.yml、build_personal.yml 都有這步）；`patch_ios.sh` 用 icon_1024.png 以 sips 覆蓋 AppIcon.appiconset 每張圖。
 - 改圖示時：改 generate_launcher_icons.py → 重跑 → commit out/。
+- **桌面 App 名稱同樣從沒設定過**（2026-09-28 Lawrence 在個人版發現）：Android 一直顯示 flutter create 預設的 `english_learning_app`。修法 `scripts/patch_android_label.sh`（兩個 Android workflow 都在圖示之後執行）：依各語言 ARB 的 `appTitle` 產生 `res/values-*/strings.xml` 的 `app_name`（values＝英文預設；zh/zh-rTW/HK/MO 繁中；zh-rCN/SG/b+zh+Hans 簡中；印尼文 values-in＋values-id），manifest `android:label` 改 `@string/app_name`。改 appTitle 就會同步。一樣要第十二版才會在 Play 版生效。
+- iOS 目前 CFBundleDisplayName 固定「智慧聽覺巡航」（patch_ios.sh）；若日後 iOS 正式上架要做各語言名稱（各 .lproj 的 InfoPlist.strings，需用 xcodeproj 加成 variant group）。
 - **Play 版要到下一次上傳（版本代碼 12 以上）才會換圖示**；個人版 APK 重新手動建置即可先看到。
 
 ---
@@ -316,7 +318,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 3. **正式版存取權問卷草稿**：`store_assets/launch_prep.md`，先把第 8～11 版的修正紀錄（翻譯 bug、提醒時區、介面語言 fallback、自訂 CSV 多語、泰/阿）填進去，期滿直接送。
 
 ### B. 第十二版（0.1.9+12）—— 已在 main 上、尚未上傳的改動
-- **App 桌面圖示**（§16）：Play 版目前還是 Flutter 預設圖案，要上傳第十二版才會換。
+- **App 桌面圖示與桌面名稱**（§16）：Play 版目前還是 Flutter 預設圖案、名稱顯示 `english_learning_app`，要上傳第十二版才會換（名稱依手機語言顯示 10 語 appTitle）。
 - **桌面 App 名稱**（2026-09-28 Lawrence 發現）：Android 安裝後名稱一直是 `english_learning_app`（flutter create 預設，從沒改過，Play 版也一樣）。`scripts/patch_android_label.sh` 用各語 ARB 的 `appTitle` 產生 `res/values-*/strings.xml` 的 app_name（values 預設英文；繁中 values-zh/zh-rTW/HK/MO/b+zh+Hant；簡中 zh-rCN/SG/b+zh+Hans；印尼 values-in 與 values-id），並把 manifest 的 android:label 改成 `@string/app_name`。兩個 Android workflow 在套圖示後執行。iOS 名稱目前固定「智慧聽覺巡航」（patch_ios.sh 的 CFBundleDisplayName），正式上架 iOS 前再做多語 InfoPlist.strings。
 - iOS 相容的平台判斷（§15）：`UpdateService`、電池/小米按鈕、通知權限在 Android 行為應不變 → **上傳前在紅米實機確認**：統計頁電池與小米按鈕仍在、每日提醒照常、App 內更新提示照常。
 - 版本號要改成 0.1.9+12、寫 10 語版本資訊（新圖示＋測試回饋修正）。

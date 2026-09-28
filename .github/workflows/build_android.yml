@@ -27,6 +27,9 @@ jobs:
       - name: Apply app launcher icon
         run: bash scripts/patch_android_icons.sh
 
+      - name: Apply localized app name
+        run: bash scripts/patch_android_label.sh
+
       - name: Apply localized app name (launcher label)
         run: bash scripts/patch_android_label.sh
 
