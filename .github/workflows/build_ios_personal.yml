@@ -49,9 +49,23 @@ jobs:
 
       - name: Package IPA
         run: |
+          rm -rf Payload english-learning-app-personal.ipa
           mkdir -p Payload
-          cp -R build/ios/iphoneos/Runner.app Payload/
-          zip -qry english-learning-app-personal.ipa Payload
+          # ditto 會把符號連結複製成實體檔（IPA 內不能有符號連結）
+          ditto build/ios/iphoneos/Runner.app Payload/Runner.app
+          xattr -cr Payload
+          find Payload -name '.DS_Store' -delete
+          # 檢查：符號連結、主程式、Info.plist
+          links=$(find Payload -type l | head -20)
+          if [ -n "$links" ]; then echo "$links" | while read -r l; do echo "::warning::symlink $l"; done; fi
+          exe=$(/usr/libexec/PlistBuddy -c "Print :CFBundleExecutable" Payload/Runner.app/Info.plist)
+          test -f "Payload/Runner.app/$exe" || { echo "::error::找不到主程式 $exe"; exit 1; }
+          lipo -info "Payload/Runner.app/$exe" | sed 's/^/::notice::/'
+          echo "::notice::MinimumOSVersion $(/usr/libexec/PlistBuddy -c 'Print :MinimumOSVersion' Payload/Runner.app/Info.plist) bundle $(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' Payload/Runner.app/Info.plist)"
+          ls Payload/Runner.app/Frameworks | tr '\n' ' ' | sed 's/^/::notice::Frameworks: /'; echo
+          # 用不含符號連結、不含 macOS 額外屬性的標準 zip 打包
+          zip -qr -X english-learning-app-personal.ipa Payload
+          unzip -tq english-learning-app-personal.ipa
           ls -lh english-learning-app-personal.ipa
 
       - name: Upload IPA artifact
