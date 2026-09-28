@@ -288,4 +288,10 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - Lawrence 的設備（2026-09-28）：MacBook Air 2017（macOS 最高 Monterey，裝不了新版 Xcode → **一律用 CI 建置 IPA，Mac 只負責簽署安裝**；僅晚上 7 點後在家可用）、公司 Windows 無管理員權限（只能用網頁，不能裝 Sideloadly/iTunes）。
 - 7 天限制是 Apple 對免費帳號的規定，無法避開；建議用 AltStore（Mac 裝 AltServer，iPhone 與 Mac 同 Wi-Fi 時自動續簽）減少手動重裝。付 US$99 年費後改為一年一次。
 - Android 個人全解鎖版：`build_personal.yml` 手動觸發即是當時 main 的內容。2026-09-28 以第十一版（d4d06d6）建置成功（build_personal #4）。與 Play 版同套件名稱、同簽署金鑰 → 安裝會取代 Play 測試版（資料保留）；之後 Play 推送更高版本代碼時會被覆蓋回一般版，需再手動建置一次。權杖需 Actions 寫入權限才能用 API 觸發（目前權杖可以）。
-- 狀態：尚未開工，等 Lawrence 決定。
+- **2026-09-28 iOS 自用版建置成功**（commit c71d907，`build_ios_personal.yml` 第一次即成功，約 25 分鐘；同 commit 的 Android 建置也成功）：
+  - `build_ios_personal.yml`：手動觸發、macos-latest；flutter create ios → pub get → `flutter build ios --config-only`（產生 Podfile）→ `scripts/patch_ios.sh` → `flutter build ios --release --no-codesign --dart-define=FORCE_PREMIUM=true` → 打包 Payload/Runner.app 成未簽署 IPA（artifact `english-learning-app-personal-ios-ipa`）。沒傳 RevenueCat 金鑰（`SubscriptionService.initialize` 空字串略過）。
+  - `patch_ios.sh`：Secret `FIREBASE_GOOGLE_SERVICE_INFO_PLIST`（plist 原文，Firebase 同一專案新增的 iOS App，Bundle ID `tw.bcc.englishapp`）寫入 ios/Runner 並用 xcodeproj gem 加入 Runner 資源；Bundle ID、最低 iOS 15.0；Info.plist：顯示名稱「智慧聽覺巡航」、UIBackgroundModes audio、GADApplicationIdentifier（預設 Google 測試 ID，正式上架改 Secret `ADMOB_IOS_APP_ID`）、CFBundleLocalizations 11 語、ITSAppUsesNonExemptEncryption=false。
+  - Dart：`UpdateService`、電池最佳化、小米自啟動在非 Android 直接略過；統計頁這兩個按鈕只在 Android 顯示；通知加 Darwin 初始化（啟動不要權限）與 iOS 權限請求、iOS 通知樣式；TTS 在 iOS 設 sharedInstance＋playback 音訊類別（spokenAudio、藍牙、duckOthers）。
+  - 尚未處理：AppDelegate 的 UNUserNotificationCenter delegate（只影響 App 在前景時通知是否顯示）；正式上架需另做簽署、RevenueCat iOS、AdMob iOS 廣告單元、App Store 截圖/隱私標籤。
+  - **待 Lawrence 實機確認**：背景/鎖屏連續朗讀（iOS 在字與字之間的靜音空檔可能暫停 App，最需要驗證）、鎖屏播放控制、每日提醒、11 語介面、匯入 CSV。
+- 狀態：自用版已可安裝，等實機回報。
