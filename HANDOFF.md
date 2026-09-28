@@ -317,6 +317,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ### B. 第十二版（0.1.9+12）—— 已在 main 上、尚未上傳的改動
 - **App 桌面圖示**（§16）：Play 版目前還是 Flutter 預設圖案，要上傳第十二版才會換。
+- **桌面 App 名稱**（2026-09-28 Lawrence 發現）：Android 安裝後名稱一直是 `english_learning_app`（flutter create 預設，從沒改過，Play 版也一樣）。`scripts/patch_android_label.sh` 用各語 ARB 的 `appTitle` 產生 `res/values-*/strings.xml` 的 app_name（values 預設英文；繁中 values-zh/zh-rTW/HK/MO/b+zh+Hant；簡中 zh-rCN/SG/b+zh+Hans；印尼 values-in 與 values-id），並把 manifest 的 android:label 改成 `@string/app_name`。兩個 Android workflow 在套圖示後執行。iOS 名稱目前固定「智慧聽覺巡航」（patch_ios.sh 的 CFBundleDisplayName），正式上架 iOS 前再做多語 InfoPlist.strings。
 - iOS 相容的平台判斷（§15）：`UpdateService`、電池/小米按鈕、通知權限在 Android 行為應不變 → **上傳前在紅米實機確認**：統計頁電池與小米按鈕仍在、每日提醒照常、App 內更新提示照常。
 - 版本號要改成 0.1.9+12、寫 10 語版本資訊（新圖示＋測試回饋修正）。
 - 建議時機：收集完測試回饋後，把修正一起放進第十二版，再上傳一次（也順便讓 Google 看到持續更新）。
