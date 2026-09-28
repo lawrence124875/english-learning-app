@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'ads_service.dart';
 import 'package:in_app_update/in_app_update.dart';
@@ -21,6 +22,8 @@ class UpdateService {
   /// 檢查並處理更新。回傳 true 代表彈性更新已下載完成，
   /// 呼叫端應提示使用者重新啟動（呼叫 [completeFlexibleUpdate]）。
   static Future<bool> checkForUpdate() async {
+    // iOS 沒有 Google Play 應用程式內更新。
+    if (!Platform.isAndroid) return false;
     try {
       final info = await InAppUpdate.checkForUpdate();
       if (info.updateAvailability != UpdateAvailability.updateAvailable) {
@@ -45,6 +48,7 @@ class UpdateService {
 
   /// 套用已下載的彈性更新（App 會重新啟動）。
   static Future<void> completeFlexibleUpdate() async {
+    if (!Platform.isAndroid) return;
     try {
       await InAppUpdate.completeFlexibleUpdate();
     } catch (e) {

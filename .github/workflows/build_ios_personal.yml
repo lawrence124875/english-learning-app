@@ -1,0 +1,61 @@
+name: Build Personal iOS IPA (manual only)
+
+# Lawrence 自用的 iOS 全解鎖版（FORCE_PREMIUM、無廣告、無訂閱）。
+# 產出「未簽署」IPA，由 Lawrence 在 Mac 上用 Sideloadly / AltStore
+# 以免費 Apple ID 簽署安裝（每 7 天需續簽）。只手動觸發。
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Create iOS platform scaffold
+        run: |
+          if [ ! -d "ios" ]; then
+            flutter create --platforms=ios --project-name=english_learning_app --org tw.bcc .
+          fi
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate iOS config (Podfile)
+        run: flutter build ios --config-only --release --no-codesign || true
+
+      - name: Patch iOS project
+        env:
+          FIREBASE_GOOGLE_SERVICE_INFO_PLIST: ${{ secrets.FIREBASE_GOOGLE_SERVICE_INFO_PLIST }}
+        run: bash scripts/patch_ios.sh
+
+      - name: Build iOS (personal, all-unlocked, unsigned)
+        run: |
+          set +e
+          flutter build ios --release --no-codesign \
+            --dart-define=FORCE_PREMIUM=true \
+            2>&1 | tee /tmp/build_ios.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            grep -E "\.dart:[0-9]+|Error:|error:|FAILURE|What went wrong|Swift Compiler Error|pod install" /tmp/build_ios.log | head -40 | while IFS= read -r line; do echo "::error::$line"; done
+          fi
+          exit $status
+
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/ios/iphoneos/Runner.app Payload/
+          zip -qry english-learning-app-personal.ipa Payload
+          ls -lh english-learning-app-personal.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: english-learning-app-personal-ios-ipa
+          path: english-learning-app-personal.ipa

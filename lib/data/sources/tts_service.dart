@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter_tts/flutter_tts.dart';
 
 /// TTS 服務抽象介面。目前是系統內建 TTS；
@@ -26,6 +27,20 @@ class SystemTtsService implements TtsService {
 
   SystemTtsService() {
     _tts.awaitSpeakCompletion(true);
+    if (Platform.isIOS) {
+      // iOS：用「播放」音訊類別，鎖屏、靜音開關打開時仍會朗讀，
+      // 並配合 Info.plist 的背景音訊模式讓 App 在背景持續朗讀。
+      _tts.setSharedInstance(true);
+      _tts.setIosAudioCategory(
+        IosTextToSpeechAudioCategory.playback,
+        [
+          IosTextToSpeechAudioCategoryOptions.allowBluetooth,
+          IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
+          IosTextToSpeechAudioCategoryOptions.duckOthers,
+        ],
+        IosTextToSpeechAudioMode.spokenAudio,
+      );
+    }
   }
 
   @override

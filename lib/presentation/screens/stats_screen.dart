@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
@@ -267,6 +268,8 @@ class _ReminderSectionState extends State<_ReminderSection> {
                   },
                 ),
               ),
+              // 電池最佳化、小米自啟動設定只有 Android 有。
+              if (Platform.isAndroid) ...[
               const SizedBox(height: 4),
               OutlinedButton.icon(
                 onPressed: () async {
@@ -300,6 +303,7 @@ class _ReminderSectionState extends State<_ReminderSection> {
                 label:
                     Text(AppLocalizations.of(context)!.miuiAutostartButtonLabel),
               ),
+              ],
             ],
           ],
         ),

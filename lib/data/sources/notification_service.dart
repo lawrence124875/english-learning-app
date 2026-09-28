@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'ads_service.dart';
 import 'package:timezone/timezone.dart' as tz;
@@ -36,6 +37,12 @@ class NotificationService {
         importance: Importance.high,
         priority: Priority.high,
       ),
+      iOS: const DarwinNotificationDetails(
+        presentAlert: true,
+        presentBanner: true,
+        presentList: true,
+        presentSound: true,
+      ),
     );
   }
 
@@ -57,7 +64,14 @@ class NotificationService {
 
     const androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
-    const settings = InitializationSettings(android: androidSettings);
+    // iOS：啟動時不主動要通知權限，和 Android 一樣等使用者開啟提醒時才要。
+    const darwinSettings = DarwinInitializationSettings(
+      requestAlertPermission: false,
+      requestBadgePermission: false,
+      requestSoundPermission: false,
+    );
+    const settings = InitializationSettings(
+        android: androidSettings, iOS: darwinSettings);
     await _plugin.initialize(settings);
 
     final l = BackgroundL10n.current();
@@ -104,6 +118,13 @@ class NotificationService {
   }
 
   static Future<bool> requestPermission() async {
+    if (Platform.isIOS) {
+      final ok = await _plugin
+          .resolvePlatformSpecificImplementation<
+              IOSFlutterLocalNotificationsPlugin>()
+          ?.requestPermissions(alert: true, badge: true, sound: true);
+      return ok ?? false;
+    }
     final granted = await _plugin
         .resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>()
@@ -201,6 +222,7 @@ class NotificationService {
   /// 這裡優先嘗試跳轉到 MIUI 專屬設定頁；如果失敗（例如不是小米手機、
   /// 或該頁面在這個 MIUI 版本上不存在），才退回標準 Android 設定頁。
   static Future<void> requestIgnoreBatteryOptimizations() async {
+    if (!Platform.isAndroid) return;
     final openedMiui = await _tryOpenMiuiPowerSettings();
     if (openedMiui) return;
 
@@ -237,6 +259,7 @@ class NotificationService {
   /// 需要使用者自己在列表裡找到本 App 開啟）。同樣只在小米裝置上
   /// 有作用，其他廠牌會靜默失敗。
   static Future<void> openMiuiAutostartSettings() async {
+    if (!Platform.isAndroid) return;
     try {
       final intent = AndroidIntent(
         action: 'action_view',
