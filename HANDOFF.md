@@ -295,7 +295,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   - 尚未處理：AppDelegate 的 UNUserNotificationCenter delegate（只影響 App 在前景時通知是否顯示）；正式上架需另做簽署、RevenueCat iOS、AdMob iOS 廣告單元、App Store 截圖/隱私標籤。
   - **待 Lawrence 實機確認**：背景/鎖屏連續朗讀（iOS 在字與字之間的靜音空檔可能暫停 App，最需要驗證）、鎖屏播放控制、每日提醒、11 語介面、匯入 CSV。
 - 2026-09-28 第一次用 Sideloadly v0.60 安裝失敗：密碼驗證通過後報 `Install failed: Guru Meditation … Invalid file`（iPhone 為 iOS 27.0；Mac 已裝 Apple 裝置支援元件）。已請 Lawrence 試：IPA 移到桌面、給 Sideloadly 完全取用磁碟、更新 Sideloadly。四步都做了仍失敗。**查到原因：Sideloadly 本身的已知問題**（SideloadlyiOS/Sideloadly-Download issue #17，iOS 27 普遍發生，其他 App 也一樣，不是我們 IPA 的問題；改圖示後的 IPA Sideloadly 能正常讀出名稱/版本/圖示）。社群暫時解法：改用開源的 **Impactor**（claration/Impactor，前身 PlumeImpactor，支援 macOS，也有自動續簽）。
-- 狀態：請 Lawrence 改用 Impactor 安裝，等結果。
+- Impactor v2.6.5（macOS universal）用測試帳號登入時，簡訊雙重認證失敗（`Authentication SRP error 500: Failed to send SMS 2FA to devices`，Impactor 已知問題 #76/#128；該帳號未登入任何 Apple 裝置，只能走簡訊）。**改用 iPhone 本身登入的 Apple ID（驗證碼跳在 iPhone 上）→ 2026-09-28 17:43 安裝成功**。已勾 Auto Refresh [BETA]。以後固定用 Impactor＋主帳號，不要換工具（識別碼可能不同，會變成另一個 App、資料不共用）。Sideloadly 已不用。
+- 狀態：已安裝，等 Lawrence 實機測試回報（背景朗讀最重要）。
 
 ## 16. App 桌面圖示（2026-09-28 發現並修正）
 
