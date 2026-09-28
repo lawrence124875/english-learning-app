@@ -285,4 +285,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 付費前自用：iOS 沒有 APK，安裝檔是 IPA；可用 CI 建置未簽署 IPA，再用 Sideloadly（Windows/Mac）以免費 Apple ID 簽署安裝到自己的 iPhone。限制：**每 7 天要重新簽署一次**、免費帳號最多 3 個自簽 App、不能用 App 內購買（用個人全解鎖版 FORCE_PREMIUM）。
 - 改程式要注意的 Android 專屬部分：`in_app_update`、`android_intent_plus`（小米/電池設定按鈕）、Android 精準鬧鐘權限與通知診斷裡的 Android 項目 → 需加 `Platform.isAndroid` 判斷。
 - iOS 設定需要：Firebase 新增 iOS App 取得 `GoogleService-Info.plist`（存 GitHub Secret）、Info.plist 加 `UIBackgroundModes: audio`（背景朗讀）、`GADApplicationIdentifier`（AdMob，沒有會閃退；個人版可用測試 ID）、檔案選取與通知權限說明文字、iOS 最低版本（Firebase 需 iOS 13+）。
+- Lawrence 的設備（2026-09-28）：MacBook Air 2017（macOS 最高 Monterey，裝不了新版 Xcode → **一律用 CI 建置 IPA，Mac 只負責簽署安裝**；僅晚上 7 點後在家可用）、公司 Windows 無管理員權限（只能用網頁，不能裝 Sideloadly/iTunes）。
+- 7 天限制是 Apple 對免費帳號的規定，無法避開；建議用 AltStore（Mac 裝 AltServer，iPhone 與 Mac 同 Wi-Fi 時自動續簽）減少手動重裝。付 US$99 年費後改為一年一次。
+- Android 個人全解鎖版：`build_personal.yml` 手動觸發即是當時 main 的內容。2026-09-28 以第十一版（d4d06d6）建置成功（build_personal #4）。與 Play 版同套件名稱、同簽署金鑰 → 安裝會取代 Play 測試版（資料保留）；之後 Play 推送更高版本代碼時會被覆蓋回一般版，需再手動建置一次。權杖需 Actions 寫入權限才能用 API 觸發（目前權杖可以）。
 - 狀態：尚未開工，等 Lawrence 決定。
