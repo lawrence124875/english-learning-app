@@ -294,8 +294,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   - Dart：`UpdateService`、電池最佳化、小米自啟動在非 Android 直接略過；統計頁這兩個按鈕只在 Android 顯示；通知加 Darwin 初始化（啟動不要權限）與 iOS 權限請求、iOS 通知樣式；TTS 在 iOS 設 sharedInstance＋playback 音訊類別（spokenAudio、藍牙、duckOthers）。
   - 尚未處理：AppDelegate 的 UNUserNotificationCenter delegate（只影響 App 在前景時通知是否顯示）；正式上架需另做簽署、RevenueCat iOS、AdMob iOS 廣告單元、App Store 截圖/隱私標籤。
   - **待 Lawrence 實機確認**：背景/鎖屏連續朗讀（iOS 在字與字之間的靜音空檔可能暫停 App，最需要驗證）、鎖屏播放控制、每日提醒、11 語介面、匯入 CSV。
-- 2026-09-28 第一次用 Sideloadly v0.60 安裝失敗：密碼驗證通過後報 `Install failed: Guru Meditation … Invalid file`（iPhone 為 iOS 27.0；Mac 已裝 Apple 裝置支援元件）。已請 Lawrence 試：IPA 移到桌面、給 Sideloadly 完全取用磁碟、更新 Sideloadly。尚未確認原因。
-- 狀態：等安裝結果。
+- 2026-09-28 第一次用 Sideloadly v0.60 安裝失敗：密碼驗證通過後報 `Install failed: Guru Meditation … Invalid file`（iPhone 為 iOS 27.0；Mac 已裝 Apple 裝置支援元件）。已請 Lawrence 試：IPA 移到桌面、給 Sideloadly 完全取用磁碟、更新 Sideloadly。四步都做了仍失敗。**查到原因：Sideloadly 本身的已知問題**（SideloadlyiOS/Sideloadly-Download issue #17，iOS 27 普遍發生，其他 App 也一樣，不是我們 IPA 的問題；改圖示後的 IPA Sideloadly 能正常讀出名稱/版本/圖示）。社群暫時解法：改用開源的 **Impactor**（claration/Impactor，前身 PlumeImpactor，支援 macOS，也有自動續簽）。
+- 狀態：請 Lawrence 改用 Impactor 安裝，等結果。
 
 ## 16. App 桌面圖示（2026-09-28 發現並修正）
 
