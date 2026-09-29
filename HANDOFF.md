@@ -331,7 +331,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 時機（2026-09-29 決定）：**第十二版先做**（圖示＋名稱＋版本資訊），不等測試回饋；上傳新版不影響封閉測試天數，還能產生第一份正式發布前測試報告。測試回饋的修正放第十三版。
 
 ### B2. 第十三版（0.1.10+13）—— 2026-09-29 修正 Crashlytics 當機
-- Crashlytics（最近 7 天）4 個問題：① `NotificationService.requestPermission`（0.1.6～0.1.7，3 次/2 人）→ **第十三版已修正**；② `HsdpShimActivity`（Google Play 內部元件，targetPackageName is null）、③ `ProxyBillingActivity.onCreate`（Google 帳單程式庫內部 NPE），兩者都只在 0.1.2、各 1 次，屬 Google 程式庫內部問題，觀察即可；④ `Purchases.getOfferings`（0.1.0，RevenueCat 設定錯誤 23）早期設定問題，現在程式已 try/catch，可在 Crashlytics 關閉。
+- Crashlytics（最近 7 天）4 個問題：① `NotificationService.requestPermission`（0.1.6～0.1.7，3 次/2 人）→ **第十三版已修正**；② `HsdpShimActivity`（Google Play 內部元件，targetPackageName is null）、③ `ProxyBillingActivity.onCreate`（Google 帳單程式庫內部 NPE），兩者都只在 0.1.2、各 1 次，屬 Google 程式庫內部問題，觀察即可；④ `Purchases.getOfferings`（0.1.0，RevenueCat 設定錯誤 23）早期設定問題，現在程式已 try/catch，可在 Crashlytics 關閉。②③④ 已於 2026-09-29 由 Lawrence 在 Crashlytics 關閉（若再發生會自動以「回歸」重新開啟）；① 待第十三版上線數天無新事件後關閉。堆疊追蹤已確認 ① 發生在 AppState.initialize 呼叫 requestPermission（通知外掛取得 Context 為 null）。
 - 上傳：CI 成功 → 第十二版審查通過後，封閉測試建立新版本上傳第十三版 AAB，貼 `release_notes_v13.md`。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
