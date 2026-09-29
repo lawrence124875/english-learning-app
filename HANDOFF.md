@@ -313,7 +313,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 ## 17. Android 後續事項總整理（2026-09-28，新對話從這裡開始）
 
 ### A. 等待期間（現在可做）
-1. **Play Console「預先發布報告」**：看第十一版的閃退、無障礙、安全性警告，有問題截圖給 Claude。
+1. **Play Console「正式發布前測試報告」**（測試及發布 → 測試 → 正式發布前測試報告）：到第十一版為止**一份都沒有產生**。2026-09-29 已在「設定」選好測試語言（繁中、阿拉伯文、泰文、日文、英文）、不提供憑證、深層連結留空並儲存；**第十二版上傳後檢查報告**（總覽／詳細資訊），有問題截圖給 Claude。
 2. **收集 TestersCommunity 回饋**：整理回報，決定哪些併入第十二版。
 3. **正式版存取權問卷草稿**：`store_assets/launch_prep.md`，先把第 8～11 版的修正紀錄（翻譯 bug、提醒時區、介面語言 fallback、自訂 CSV 多語、泰/阿）填進去，期滿直接送。
 
@@ -322,7 +322,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - **桌面 App 名稱**（2026-09-28 Lawrence 發現）：Android 安裝後名稱一直是 `english_learning_app`（flutter create 預設，從沒改過，Play 版也一樣）。`scripts/patch_android_label.sh` 用各語 ARB 的 `appTitle` 產生 `res/values-*/strings.xml` 的 app_name（values 預設英文；繁中 values-zh/zh-rTW/HK/MO/b+zh+Hant；簡中 zh-rCN/SG/b+zh+Hans；印尼 values-in 與 values-id），並把 manifest 的 android:label 改成 `@string/app_name`。兩個 Android workflow 在套圖示後執行。iOS 名稱目前固定「智慧聽覺巡航」（patch_ios.sh 的 CFBundleDisplayName），正式上架 iOS 前再做多語 InfoPlist.strings。
 - iOS 相容的平台判斷（§15）：`UpdateService`、電池/小米按鈕、通知權限在 Android 行為應不變 → **上傳前在紅米實機確認**：統計頁電池與小米按鈕仍在、每日提醒照常、App 內更新提示照常。
 - 版本號要改成 0.1.9+12、寫 10 語版本資訊（新圖示＋測試回饋修正）。
-- 建議時機：收集完測試回饋後，把修正一起放進第十二版，再上傳一次（也順便讓 Google 看到持續更新）。
+- 時機（2026-09-29 決定）：**第十二版先做**（圖示＋名稱＋版本資訊），不等測試回饋；上傳新版不影響封閉測試天數，還能產生第一份正式發布前測試報告。測試回饋的修正放第十三版。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。
