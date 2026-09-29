@@ -308,6 +308,31 @@ class NotificationService {
     final android = _plugin.resolvePlatformSpecificImplementation<
         AndroidFlutterLocalNotificationsPlugin>();
     lines.add('初始化：${initError == null ? "成功" : "失敗 → $initError"}');
+    if (Platform.isIOS) {
+      // iOS 沒有精準鬧鐘與通知頻道，改顯示 iOS 的通知設定（含圖示標記）。
+      try {
+        final p = await _plugin
+            .resolvePlatformSpecificImplementation<
+                IOSFlutterLocalNotificationsPlugin>()
+            ?.checkPermissions();
+        lines.add(p == null
+            ? 'iOS 通知權限：查詢不到'
+            : 'iOS 通知：允許 ${p.isEnabled}、提示 ${p.isAlertEnabled}、'
+                '標記 ${p.isBadgeEnabled}、聲音 ${p.isSoundEnabled}');
+      } catch (e) {
+        lines.add('iOS 通知權限：查詢失敗 $e');
+      }
+      try {
+        final pending = await _plugin.pendingNotificationRequests();
+        lines.add('已排程：${pending.isEmpty ? "無" : pending.map((p) => p.id).join(", ")}'
+            '（1001＝每日提醒、1002＝久未使用、1004＝1 分鐘測試）');
+      } catch (e) {
+        lines.add('已排程：查詢失敗 $e');
+      }
+      final now = DateTime.now();
+      lines.add('手機時間：${now.toString().substring(0, 19)}（UTC 偏移 ${now.timeZoneOffset.inHours}）');
+      return lines;
+    }
     try {
       lines.add('通知權限（App 通知開關）：${await android?.areNotificationsEnabled()}');
     } catch (e) {
