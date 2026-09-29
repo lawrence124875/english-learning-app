@@ -33,42 +33,47 @@
 
 ## 二、正式版存取權問卷（草稿）
 
-封閉測試期滿後，Play Console 會出現「申請正式版存取權」，需要回答測試過程的問題。Google 審核人員看的是英文，建議用英文回答。以下草稿中 **【 】的部分要換成實際情況**，尤其是測試回饋，一定要依照真實收到的內容填寫，不要誇大。
+> 2026-09-29 更新：依第 4～12 版實際修正紀錄改寫。**【 】內要換成實際情況**，尤其測試者回饋一定要依真實收到的內容填，不誇大。大部分修正來自開發者自己在紅米實機測試發現（例如提醒提早 8 小時），問卷如實寫「自己測試發現」即可，Google 並不要求每項都來自測試者。Google 審核人員看英文，用英文回答。
 
 ### 第 1 部分：封閉測試
 
 **How easy was it to recruit testers for your app?**
-> It was moderately difficult to recruit enough testers on my own as an individual developer, so I used a tester community service (TestersCommunity) in addition to 【friends and colleagues】. All 15 testers joined through a Google Group and stayed opted in for the full testing period.
+> As an individual developer it was difficult to find enough testers on my own, so I used a tester community service (TestersCommunity) 【and friends/colleagues, if any】. The 15 testers joined through a Google Group and stayed opted in for the whole testing period.
 
 **Describe the engagement you received from testers during your closed test.**
-> Testers installed the app and used its core features: background audio playback of English vocabulary, bilingual (English + native-language) reading, marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. 【Summarize actual engagement, e.g., how many testers submitted reports or feedback.】
+> Testers installed the app and used its core features: background and lock-screen audio playback of English vocabulary, bilingual reading (English followed by the meaning in their language), marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. I also tested every build myself on a physical device (Redmi Note 8, Android 11) and released 【9】 updates to the closed testing track during the test. 【Add actual engagement from the TestersCommunity report, e.g., number of testers who sent reports.】
 
 **Provide a summary of the feedback you received from testers. Include how you collected the feedback.**
-> Feedback was collected through the tester community's reports, the in-app feedback form (stored in Firebase Firestore), and 【direct messages from friends】. Main feedback: 【fill in from the TestersCommunity reports, e.g., UI text cut off in some languages, translations not following device language, suggestions on playback settings】.
+> Feedback was collected through the tester community's reports, the in-app feedback form (stored in Firebase Firestore), Firebase Crashlytics, and my own daily use on a physical device. 【Summarize the real feedback from TestersCommunity here.】 The most important issues found were: built-in translations and audio not following the device language, daily reminders not appearing at the set time, and the home-screen icon and app name not being set.
 
 ### 第 2 部分：關於你的 App
 
 **Who is the intended audience of your app?**
-> Adults who have studied English many times without success, especially busy learners and older learners with little English exposure in daily life. The app is available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, and Portuguese.
+> Adults who have studied English many times without success, especially busy and older learners with little English exposure in daily life. The app interface and built-in translations are available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, Portuguese, Thai, and Arabic, with English as the default for other languages.
 
 **Describe how your app provides value to users.**
-> The app focuses on high-frequency core vocabulary based on published academic research (NGSL 2809, NGSL-Spoken 720, PHRASE List, PhaVE List). Mastering the NGSL core words covers about 92% of everyday English text. Users can learn by listening in the background while commuting, walking, or doing chores, with bilingual audio (English followed by the meaning in their native language), a difficult-word review list, learning statistics, and daily reminders. Users can also import their own study materials.
+> The app focuses on high-frequency core vocabulary from openly licensed academic word lists (NGSL, NGSL-Spoken, PHRASE List, PhaVE List; 4,185 items in total). The NGSL core words cover about 92% of everyday English text. Users learn by listening in the background while commuting, walking, or doing chores, with bilingual audio, a difficult-word review list, learning statistics, and daily reminders. Users can also import their own study lists in 14 languages.
 
 **How many installs do you expect your app to have in your first year?**
-> 【建議選較保守的區間，例如 1,000–10,000】
+> 【建議選保守區間，例如 1,000–10,000】
 
 ### 第 3 部分：正式版準備程度
 
 **What changes did you make to your app based on what you learned during closed testing?**
-> During the testing period I released several updates:
-> - Added custom study material import (CSV) with clear error messages
-> - Added interface and content translations for 8 languages, and fixed an issue where built-in translations and audio did not follow the device language
-> - Fixed layout issues so long app titles display fully, and added edge-to-edge support for Android 15
-> - Added in-app update prompts and clearer subscription terms with a "manage/cancel subscription" link
-> - 【Add changes made in response to actual tester reports】
+> During the testing period I released several updates to the closed testing track:
+> - Fixed built-in translations and audio not following the device language.
+> - Fixed daily reminders: added missing notification receivers, corrected a time-zone calculation that made reminders fire 8 hours early, and used exact alarms with a high-priority channel. Verified on a physical device.
+> - Ads: interstitial ads are shown only when the app is in the foreground, with frequency limits between full-screen ads.
+> - English is now the default interface for unsupported device languages (previously Chinese).
+> - Custom CSV import: users can choose the language of each column (14 languages), headers and different separators are detected, and the app tells users when a text-to-speech voice for that language needs to be installed.
+> - Added Thai and Arabic (right-to-left layout), including translations of all 4,185 built-in items.
+> - Added an in-app feature tour, with a side-by-side layout in landscape.
+> - Added the proper home-screen icon and a localized app name.
+> - Earlier updates: in-app update prompts, clearer subscription terms with a "manage subscription" link, and edge-to-edge support.
+> - 【Add any changes made in response to TestersCommunity reports.】
 
 **How did you decide that your app is ready for production?**
-> All core features worked reliably across testers' devices, background playback and notifications were stable, crash reports in Firebase Crashlytics showed 【no major crashes】, and all issues found during testing were fixed in the latest version.
+> Core features (background playback, bilingual reading, reminders, CSV import, subscriptions) work reliably on tested devices, the reminder issue was confirmed fixed on a physical device, Firebase Crashlytics shows 【no major crashes】, the Play pre-launch report shows 【no critical issues】, and all known issues were fixed in the latest version.
 
 ---
 
