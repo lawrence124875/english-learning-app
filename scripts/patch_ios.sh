@@ -80,4 +80,37 @@ if [ -f ios/Podfile ]; then
   sed -i '' -E "s/^#? *platform :ios, '[0-9.]+'/platform :ios, '${MIN_IOS}'/" ios/Podfile
   grep -n "platform :ios" ios/Podfile || sed -i '' "1s/^/platform :ios, '${MIN_IOS}'\n/" ios/Podfile
 fi
+
+# 6) AppDelegate：通知在前景顯示＋開 App 時清除圖示角標（2026-09-29）
+# - 沒設 UNUserNotificationCenter delegate 時，App 在前景的通知 iOS 一律不顯示
+#   （通知診斷「立即測試」在 iPhone 沒反應就是這個原因）。
+# - 通知帶 badge 1（notification_service.dart），App 變成使用中時歸零。
+APPDELEGATE=ios/Runner/AppDelegate.swift
+if [ -f "$APPDELEGATE" ] && ! grep -q "UNUserNotificationCenter" "$APPDELEGATE"; then
+python3 <<'PYEOF'
+import re
+path = "ios/Runner/AppDelegate.swift"
+s = open(path, encoding="utf-8").read()
+if "import UserNotifications" not in s:
+    s = s.replace("import UIKit", "import UIKit\nimport UserNotifications", 1)
+inject = """    UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+    NotificationCenter.default.addObserver(
+      forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main
+    ) { _ in
+      if #available(iOS 16.0, *) {
+        UNUserNotificationCenter.current().setBadgeCount(0) { _ in }
+      } else {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+      }
+    }
+"""
+m = re.search(r"didFinishLaunchingWithOptions[^{]*\{\n", s)
+if not m:
+    raise SystemExit("找不到 didFinishLaunchingWithOptions，請檢查 AppDelegate.swift")
+s = s[:m.end()] + inject + s[m.end():]
+open(path, "w", encoding="utf-8").write(s)
+print("AppDelegate 已加入通知 delegate 與角標清除")
+PYEOF
+fi
+
 echo "iOS 修補完成"

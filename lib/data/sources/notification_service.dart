@@ -38,11 +38,14 @@ class NotificationService {
         importance: Importance.high,
         priority: Priority.high,
       ),
+      // iOS：badgeNumber 讓桌面圖示右上角顯示 1（App 開啟時由 AppDelegate 歸零）。
       iOS: const DarwinNotificationDetails(
         presentAlert: true,
         presentBanner: true,
         presentList: true,
         presentSound: true,
+        presentBadge: true,
+        badgeNumber: 1,
       ),
     );
   }
