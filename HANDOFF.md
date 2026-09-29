@@ -20,6 +20,7 @@
    `curl -H "Authorization: Bearer <TOKEN>" https://api.github.com/repos/lawrence124875/english-learning-app/actions/runs?per_page=5`
    **容器內沒有 Flutter SDK（網路白名單擋掉 Google 儲存空間），無法本機編譯，一律靠 CI 驗證。** 改完程式一定要等建置成功才回報完成。
 6b. **讀建置錯誤**：容器連不到日誌下載網址（Azure blob），`build_android.yml` 建置失敗時會把錯誤行輸出成 `::error::` annotation，用 `GET /repos/.../check-runs/<job_id>/annotations` 讀取（權杖需加 Actions 讀取權限）。
+6c. **main 分支保護（2026-09-29 設定）**：規則集 `protect-main`（Active，目標＝預設分支 main）只開「限制删除」與「阻止强制推送」。一般 push 不受影響；**不可用 `git push --force`**（會被拒）。不要加「需要拉取请求」等規則，否則 Claude 無法直接推送。權杖沒有 Administration 權限，規則集只能由 Lawrence 在網頁（设置→规则→规则集）修改。
 7. 容器網路白名單只有 GitHub、pypi、npm 等；**連不到 Firebase / Google API**。需要操作 Firebase 時，應該用 GitHub Secrets + Actions 代為執行（見第 9 節）。
 
 ---
