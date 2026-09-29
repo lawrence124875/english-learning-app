@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-29（第十二版 0.1.9+12 程式與版本資訊完成，待實機確認後上傳；**Android 後續事項總整理見 §17，新對話從 §17 開始**）
+最後更新：2026-09-29（第十二版已發布；第十三版 0.1.10+13 已上傳封閉測試送審；個人版重建延到正式上架後；**Android 後續事項總整理見 §17，新對話從 §17 開始**）
 
 ---
 
@@ -136,7 +136,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 9 | 0.1.6 | 插頁廣告只在前景顯示（背景播完一輪改為待顯示）、開啟應用程式廣告（每小時上限、離開≥30秒、冷啟動不顯示）、全螢幕廣告間隔≥3分鐘、Firebase Analytics 事件、越南文/印尼文 App 內標題與商店一致、App 內特色介紹滑動導覽 | 已上傳封閉測試並送審（2026-09-27，連同 8 語新商店截圖/主題圖、多語版本資訊） |
 | 11 | 0.1.8 | 泰文、阿拉伯文介面（RTL）與教材翻譯；自訂 CSV 支援阿拉伯文（兩欄選項、表頭字、分號/阿拉伯文分隔符號）；內建教材缺翻譯的項目不退回中文；功能介紹頁 14 語自訂教材、橫向左右排版 | **已上傳封閉測試，連同泰/阿商店資訊審查通過並發布（2026-09-28）** |
 | 12 | 0.1.9 | 正式 App 桌面圖示（Android 自適應圖示）、桌面 App 名稱依手機語言顯示 10 語 appTitle（原為 english_learning_app）；iOS 相容的平台判斷（Android 行為不變）。版本資訊 `store_assets/release_notes_v12.md`（10 語） | 2026-09-29 程式完成，Actions #164、#165 建置成功（#165 只多改 HANDOFF，程式相同）；**2026-09-29 Lawrence 以 #165 的 AAB 上傳封閉測試（未先實機測試），同日審查通過發布** |
-| 13 | 0.1.10 | **修正 Crashlytics 回報的當機** `NotificationService.requestPermission`（第 9～10 版，3 次/2 人）：`PlatformException(error, Attempt to invoke virtual method ... on a null object reference)`，外掛在沒有前景 Activity 時請求通知權限失敗；未接住導致 `AppState.initialize()` 中斷、畫面卡在載入中。修法：requestPermission 一律 try/catch（失敗回傳 false、記 Crashlytics 非當機）；啟動時不再請求通知權限（只在使用者開啟提醒時請求）；啟動時兩個提醒排程各包 try/catch。版本資訊 `store_assets/release_notes_v13.md`（10 語） | 2026-09-29 程式完成，Actions #179、#180 建置成功（#180 只多了版本資訊與 HANDOFF，程式相同，上傳用 #180）；第十二版已發布，2026-09-29 準備上傳 #180 |
+| 13 | 0.1.10 | **修正 Crashlytics 回報的當機** `NotificationService.requestPermission`（第 9～10 版，3 次/2 人）：`PlatformException(error, Attempt to invoke virtual method ... on a null object reference)`，外掛在沒有前景 Activity 時請求通知權限失敗；未接住導致 `AppState.initialize()` 中斷、畫面卡在載入中。修法：requestPermission 一律 try/catch（失敗回傳 false、記 Crashlytics 非當機）；啟動時不再請求通知權限（只在使用者開啟提醒時請求）；啟動時兩個提醒排程各包 try/catch。版本資訊 `store_assets/release_notes_v13.md`（10 語） | 2026-09-29 程式完成，Actions #179、#180 建置成功（#180 只多了版本資訊與 HANDOFF，程式相同，上傳用 #180）；第十二版已發布；**2026-09-29 Lawrence 已上傳第十三版 AAB 至封閉測試送審** |
 | 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除）；第三輪（2026-09-27 紅米實測仍無通知、通知中心與圖示角標皆無）：新增隱藏「通知診斷」工具（學習統計頁**長按「每日提醒」標題**）：顯示初始化結果、通知權限、精準鬧鐘權限、提醒頻道重要性、已排程 ID，並可發「立即測試」與「1 分鐘後測試」通知，用來區分是「通知根本發不出來」還是「排程沒觸發」。Lawrence 回報：通知開關、自啟動、省電無限制都已設定；特殊權限裡找不到「鬧鐘與提醒」；設定時間後有顯示「已完成設定」（=排程有進系統），但從未跳出「允許通知」系統視窗。測試機為紅米 Note 8／Android 11（所以沒有通知權限視窗、沒有「鬧鐘與提醒」，精準鬧鐘預設允許）。按 Home 鍵不滑掉 App、鎖屏等候仍無提醒，但朗讀的鎖屏媒體通知正常顯示→排除強制停止，問題在提醒頻道或排程觸發。診斷工具在 Actions #125 建置成功。**真正原因找到**：診斷顯示權限/頻道/排程全正常、立即通知會跳，但 1 分鐘測試報 `scheduledDate: Must be a date in the future`——`_nextInstanceOfLocalTime` 等處把本地時間先減時區偏移再丟 `TZDateTime.from`，但 `from` 取的是絕對時間點（epoch），等於多減 8 小時：每日提醒其實每天在設定時間**提早 8 小時**觸發（設 19:00 會在 11:00 跳），久未使用提醒也提早 8 小時。已改為直接 `TZDateTime.from(本地DateTime, tz.UTC)`。踩坑：**TZDateTime.from 不看牆上時鐘，別手動加減時區偏移**。2026-09-27 Actions #127 紅米實測：1 分鐘測試與每日提醒皆準時跳出 ✅。「通知診斷」工具保留（隱藏、僅中文，開發用） 另含：自訂教材 CSV 第一欄語言可選（朗讀用該語言 TTS）、英文介面作為不支援語言的預設（新增 app_en.arb）、功能介紹與匯入說明加一句「也可匯入英文以外的語言」（新 key `importWordLangLabel`）、CSV 表頭改為第一或第二欄是語言名稱也算表頭、翻譯語言英文選項改為單純「英文」、匯入時檢查手機有無該語言 TTS 語音並提示安裝、翻譯欄擴充為 13 種（新增簡中、法、德、義、泰） | 提醒已實機驗證通過；第一欄語言與英文介面待實機確認後上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
@@ -332,7 +332,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ### B2. 第十三版（0.1.10+13）—— 2026-09-29 修正 Crashlytics 當機
 - Crashlytics（最近 7 天）4 個問題：① `NotificationService.requestPermission`（0.1.6～0.1.7，3 次/2 人）→ **第十三版已修正**；② `HsdpShimActivity`（Google Play 內部元件，targetPackageName is null）、③ `ProxyBillingActivity.onCreate`（Google 帳單程式庫內部 NPE），兩者都只在 0.1.2、各 1 次，屬 Google 程式庫內部問題，觀察即可；④ `Purchases.getOfferings`（0.1.0，RevenueCat 設定錯誤 23）早期設定問題，現在程式已 try/catch，可在 Crashlytics 關閉。②③④ 已於 2026-09-29 由 Lawrence 在 Crashlytics 關閉（若再發生會自動以「回歸」重新開啟）；① 待第十三版上線數天無新事件後關閉。堆疊追蹤已確認 ① 發生在 AppState.initialize 呼叫 requestPermission（通知外掛取得 Context 為 null）。
-- 上傳：CI 成功 → 第十二版審查通過後，封閉測試建立新版本上傳第十三版 AAB，貼 `release_notes_v13.md`。
+- 上傳：✅ 2026-09-29 Lawrence 已上傳第十三版 AAB 至封閉測試並送審（版本資訊 `release_notes_v13.md`）。審查通過後：紅米確認不再卡在載入中；數天無新事件後在 Crashlytics 關閉 ①。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。
@@ -344,5 +344,6 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 2. 依數據再決定：各國訂閱價格個別調整、土耳其文、iOS 是否付費上架（US$99/年）。
 
 ### E. 個人版提醒
-- Android 個人全解鎖版（含新圖示）已建置：build_personal 以 30ce8fd 建置成功。Play 推第十二版後會被覆蓋回一般版，需再手動建置。
+- Android 個人全解鎖版（含新圖示）已建置：build_personal 以 30ce8fd 建置成功。Play 推第十二版後會被覆蓋回一般版。
+- **2026-09-29 Lawrence 決定：個人版暫不重建，等正式版上架、版本穩定後，再以當時最新版重新手動建置**（避免後續改版還要一直重建）。在此之前手機上用 Play 的一般版即可。
 - iOS 自用版：Impactor＋主帳號、自動重新整理已勾、開機自動啟動已勾；每 7 天續簽（Mac 開著 Impactor＋同一個非訪客 Wi-Fi，或每週接線手動重裝）。
