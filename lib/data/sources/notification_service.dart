@@ -1,4 +1,5 @@
 import 'dart:io' show Platform;
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'ads_service.dart';
 import 'package:timezone/timezone.dart' as tz;
@@ -117,19 +118,39 @@ class NotificationService {
     } catch (_) {}
   }
 
+  /// 請求通知權限。**一律不拋例外**：
+  /// Crashlytics 回報（第 9～10 版，2026-09）這裡會拋
+  /// `PlatformException(error, Attempt to invoke virtual method ... on a null object reference)`
+  /// ——外掛在沒有前景 Activity 時（例如 App 被關閉但背景播放行程還活著、
+  /// 再次開啟的瞬間）呼叫系統權限對話框會失敗。以前沒接住，導致
+  /// AppState.initialize() 中斷、畫面卡在載入中。現在改成失敗就回傳 false，
+  /// 並記一筆「非當機」錯誤供觀察。
   static Future<bool> requestPermission() async {
-    if (Platform.isIOS) {
-      final ok = await _plugin
+    try {
+      if (Platform.isIOS) {
+        final ok = await _plugin
+            .resolvePlatformSpecificImplementation<
+                IOSFlutterLocalNotificationsPlugin>()
+            ?.requestPermissions(alert: true, badge: true, sound: true);
+        return ok ?? false;
+      }
+      final granted = await _plugin
           .resolvePlatformSpecificImplementation<
-              IOSFlutterLocalNotificationsPlugin>()
-          ?.requestPermissions(alert: true, badge: true, sound: true);
-      return ok ?? false;
+              AndroidFlutterLocalNotificationsPlugin>()
+          ?.requestNotificationsPermission();
+      return granted ?? false;
+    } catch (e, st) {
+      _recordNonFatal(e, st, 'requestPermission');
+      return false;
     }
-    final granted = await _plugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.requestNotificationsPermission();
-    return granted ?? false;
+  }
+
+  /// 通知相關錯誤只記為「非當機」，不影響 App 運作。
+  static void _recordNonFatal(Object e, StackTrace st, String where) {
+    try {
+      FirebaseCrashlytics.instance
+          .recordError(e, st, fatal: false, reason: 'NotificationService.$where');
+    } catch (_) {}
   }
 
   /// 把「裝置本地時間的某個時間點」換算成 TZDateTime，

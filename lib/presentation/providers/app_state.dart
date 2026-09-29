@@ -130,15 +130,26 @@ class AppState extends ChangeNotifier {
     final reminderTime = await _progressRepository.loadReminderTime();
     reminderHour = reminderTime.$1;
     reminderMinute = reminderTime.$2;
-    if (reminderEnabled) {
-      // 重新排程一次，確保裝置重開機等情況下提醒仍然有效。
-      await NotificationService.requestPermission();
-      await NotificationService.scheduleDailyReminder(
-          hour: reminderHour, minute: reminderMinute);
+    // 通知排程失敗絕不能中斷 initialize()，否則畫面會一直卡在載入中
+    // （第 9～10 版 Crashlytics 回報的 NotificationService.requestPermission 當機）。
+    // 啟動時也不再請求通知權限：使用者開啟每日提醒時（setReminder）已經問過，
+    // 啟動時沒有使用者操作、Activity 可能還沒就緒，正是出錯的時機。
+    try {
+      if (reminderEnabled) {
+        // 重新排程一次，確保裝置重開機等情況下提醒仍然有效。
+        await NotificationService.scheduleDailyReminder(
+            hour: reminderHour, minute: reminderMinute);
+      }
+    } catch (e) {
+      debugPrint('每日提醒重新排程失敗（不影響 App）：$e');
     }
     // 久未使用提醒：不受使用者是否關閉每日提醒影響，每次啟動都重新
     // 排到 3 天後，只要持續正常使用就永遠不會真的跳出來。
-    await NotificationService.rescheduleInactivityReminder();
+    try {
+      await NotificationService.rescheduleInactivityReminder();
+    } catch (e) {
+      debugPrint('久未使用提醒排程失敗（不影響 App）：$e');
+    }
     datasets = await _wordRepository.loadAllDatasets();
     datasets.addAll(await _customDatasetRepository.loadAll());
     settings = await _progressRepository.loadSettings();
