@@ -9,7 +9,7 @@ TestersCommunity 回饋「商店說明文字與關鍵字不足」：原因是一
 ## App 名稱（26/30）
 
 ```
-Smart English Audio Cruise
+English Words Audio Cruise
 ```
 
 ## 簡短說明（76/80）
@@ -21,7 +21,7 @@ Learn core English vocabulary by listening: 92% of daily English, hands-free
 ## 完整說明（3360/4000）
 
 ```
-Smart English Audio Cruise is for everyone who has studied English many times but never quite made it stick.
+English Words Audio Cruise is for everyone who has studied English many times but never quite made it stick.
 
 If you have bought course after course and downloaded app after app, only to give up halfway, the problem may not be you. It may be that your study time was never spent on the words that really matter.
 

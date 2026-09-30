@@ -2,6 +2,7 @@
 
 <en-US>
 ・New: "Share with friends" in the menu — recommend the app via LINE, WhatsApp, email and more
+・The app is now called "English Words Audio Cruise"
 </en-US>
 
 <zh-TW>
@@ -22,24 +23,30 @@
 
 <vi>
 ・Thêm mục "Chia sẻ với bạn bè" trong menu, giới thiệu ứng dụng qua Zalo, Messenger, email…
+・Ứng dụng đổi tên thành "Học Từ Vựng Tiếng Anh Qua Nghe"
 </vi>
 
 <id>
 ・Baru: menu "Bagikan ke teman" untuk merekomendasikan aplikasi lewat WhatsApp, email, dan lainnya
+・Nama aplikasi kini "Kosakata Inggris Sambil Dengar"
 </id>
 
 <es-419>
 ・Nuevo: opción "Compartir con amigos" en el menú para recomendar la app por WhatsApp, correo y más
+・La app ahora se llama "Aprender Inglés Escuchando"
 </es-419>
 
 <pt-BR>
 ・Novo: opção "Compartilhar com amigos" no menu para recomendar o app pelo WhatsApp, e-mail e mais
+・O app agora se chama "Aprender Inglês Ouvindo"
 </pt-BR>
 
 <th>
 ・เพิ่มเมนู "แชร์ให้เพื่อน" แนะนำแอปผ่าน LINE, WhatsApp, อีเมล และอื่น ๆ
+・เปลี่ยนชื่อแอปเป็น "คำศัพท์ภาษาอังกฤษ ฝึกฟัง"
 </th>
 
 <ar>
 ・جديد: خيار "شارك مع الأصدقاء" في القائمة للتوصية بالتطبيق عبر واتساب والبريد الإلكتروني وغيرها
+・تغيّر اسم التطبيق إلى "تعلم الإنجليزية بالاستماع"
 </ar>

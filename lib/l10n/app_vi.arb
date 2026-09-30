@@ -1,6 +1,6 @@
 {
   "@@locale": "vi",
-  "appTitle": "Nghe Tiếng Anh Thông Minh",
+  "appTitle": "Học Từ Vựng Tiếng Anh Qua Nghe",
   "statsTooltip": "Thống kê học tập",
   "moreTooltip": "Thêm",
   "menuPremium": "Nâng cấp Premium",
@@ -175,5 +175,5 @@
   "importWordLangLabel": "Cột thứ nhất là ngôn ngữ gì? (dùng cho giọng đọc)",
   "importVoiceMissing": "Điện thoại chưa có giọng đọc \"{language}\" nên sẽ không đọc được. Hãy cài gói giọng nói trong \"Cài đặt → Chuyển văn bản thành giọng nói\".",
   "menuShare": "Chia sẻ với bạn bè",
-  "shareMessage": "Mình giới thiệu ứng dụng học tiếng Anh \"Nghe Tiếng Anh Thông Minh\": học theo quy tắc 20/80, chỉ tập trung vào các từ cốt lõi chiếm 92% tiếng Anh hằng ngày, tự đọc nền khi bạn đi làm, đi bộ hay làm việc nhà, nghe song ngữ. Tải miễn phí:"
+  "shareMessage": "Mình giới thiệu ứng dụng học tiếng Anh \"Học Từ Vựng Tiếng Anh Qua Nghe\": học theo quy tắc 20/80, chỉ tập trung vào các từ cốt lõi chiếm 92% tiếng Anh hằng ngày, tự đọc nền khi bạn đi làm, đi bộ hay làm việc nhà, nghe song ngữ. Tải miễn phí:"
 }
