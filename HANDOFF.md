@@ -288,6 +288,15 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ---
 
+## 14b. repo 改私人的評估（2026-09-30，待正式上架、版本穩定後再處理）
+- 構想（易經 App 對話提出）：另建一個只放網頁的公開 repo，放兩個 App 的隱私權政策與 app-ads.txt；Play Console 隱私權政策網址／開發者網站改指向新網頁、確認 AdMob app-ads.txt 驗證正常後，再把 english-learning-app 改私人。iching-cards 從一開始就私人。
+- **網頁 repo 建議命名 `lawrence124875.github.io`（使用者站台）**：app-ads.txt 必須在開發者網站網域的根目錄，AdMob 會找 `https://lawrence124875.github.io/app-ads.txt`；目前放在專案站台子路徑 `/english-learning-app/app-ads.txt`，可能根本沒被 AdMob 讀到（搬家時順便修正，並在 AdMob 確認驗證狀態）。兩個 App 共用同一份 app-ads.txt（同一個發布商 ID）。資料安全性裡的刪除資料網址 `#data-deletion` 也要一起改。
+- **改私人前必須先解決的代價**（免費帳號）：
+  1. **GitHub Actions 分鐘數**：公開 repo 免費不限；私人 repo 每月 2,000 分鐘，macOS 執行器按 10 倍計。實測 9/28～9/30 約兩天就跑了 48 次 Android 建置、共約 544 分鐘（平均 11 分鐘），照這個頻率一個月會遠超 2,000；iOS 建置一次約 12～25 分鐘 ×10 倍＝120～250 分鐘。
+  2. **main 分支保護規則集**：免費帳號的私人 repo 不能用規則集（9/29 設的禁止刪除／強制推送會失效）。
+  3. 選項：維持公開（repo 內本來就沒有金鑰，教材也是公開學術資料，主要風險只是程式被抄）／改私人並大幅減少 CI（workflow 加 paths-ignore，HANDOFF.md、store_assets/、docs/ 等文件改動不觸發建置——目前每次改 HANDOFF 都會白跑一次 11 分鐘建置）／升級 GitHub Pro（約 US$4／月：私人 repo 可用 Pages 與規則集、3,000 分鐘）。
+- 建議先做的低風險改善：build_android.yml 加 paths-ignore（公開或私人都受益），可在下一次改版時一起做。
+
 ## 15. iOS 版規劃（2026-09-28 討論）
 
 - **不開新專案**：Flutter 同一份程式碼、同一個 repo，只是多一個 iOS 建置 workflow（GitHub Actions `macos-latest`，公開 repo 免費）。
