@@ -67,4 +67,6 @@ class AnalyticsService {
 
   static void importCsv(int itemCount) =>
       _log('import_csv', {'item_count': itemCount});
+
+  static void shareApp() => _log('share_app');
 }

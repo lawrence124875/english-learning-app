@@ -1,7 +1,7 @@
 name: english_learning_app
 description: "智慧聽覺巡航 - 四合一英語核心學習神器"
 publish_to: 'none'
-version: 0.1.11+14
+version: 0.1.12+15
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -27,6 +27,7 @@ dependencies:
   permission_handler: ^11.3.1
   android_intent_plus: ^5.1.0
   url_launcher: ^6.3.1
+  share_plus: ^10.1.4
   csv: ^6.0.0
   file_picker: ^8.1.4
   in_app_update: ^4.2.3

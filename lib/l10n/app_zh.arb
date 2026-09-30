@@ -330,5 +330,13 @@
         "type": "String"
       }
     }
+  },
+  "menuShare": "分享給朋友",
+  "shareMessage": "推薦你一個學英文的 App「智慧聽覺巡航」：用 20/80 法則，只學涵蓋 92% 日常英文的核心單字，通勤、走路、做家事時背景朗讀，雙語一起聽。免費下載：",
+  "@menuShare": {
+    "description": "選單：分享 App 給朋友（依測試者回饋新增，第十五版）"
+  },
+  "@shareMessage": {
+    "description": "分享文字，程式會在後面接上 Play 商店連結"
   }
 }

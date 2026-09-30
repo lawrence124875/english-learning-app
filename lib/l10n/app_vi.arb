@@ -173,5 +173,7 @@
   "introTitle6": "4 bộ tài liệu học thuật, bắt đầu miễn phí",
   "introBody6": "Từ cốt lõi NGSL 2809, từ khẩu ngữ 720, cụm từ thông dụng 506, cụm động từ 150, đều từ các nghiên cứu học thuật công khai. Mỗi bộ đều có phần miễn phí để bạn trải nghiệm trước.",
   "importWordLangLabel": "Cột thứ nhất là ngôn ngữ gì? (dùng cho giọng đọc)",
-  "importVoiceMissing": "Điện thoại chưa có giọng đọc \"{language}\" nên sẽ không đọc được. Hãy cài gói giọng nói trong \"Cài đặt → Chuyển văn bản thành giọng nói\"."
+  "importVoiceMissing": "Điện thoại chưa có giọng đọc \"{language}\" nên sẽ không đọc được. Hãy cài gói giọng nói trong \"Cài đặt → Chuyển văn bản thành giọng nói\".",
+  "menuShare": "Chia sẻ với bạn bè",
+  "shareMessage": "Mình giới thiệu ứng dụng học tiếng Anh \"Nghe Tiếng Anh Thông Minh\": học theo quy tắc 20/80, chỉ tập trung vào các từ cốt lõi chiếm 92% tiếng Anh hằng ngày, tự đọc nền khi bạn đi làm, đi bộ hay làm việc nhà, nghe song ngữ. Tải miễn phí:"
 }

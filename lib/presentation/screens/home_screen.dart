@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 import '../providers/app_state.dart';
 import '../widgets/settings_panel.dart';
 import '../widgets/unlock_banner.dart';
@@ -13,6 +14,7 @@ import 'onboarding_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
+import '../../data/sources/analytics_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -99,6 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(
                         fullscreenDialog: true,
                         builder: (_) => const OnboardingScreen()));
+              } else if (value == 'share') {
+                _shareApp(context);
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -132,6 +136,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                   leading: const Icon(Icons.upload_file),
                   title: Text(AppLocalizations.of(context)!.menuImport),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'share',
+                child: ListTile(
+                  leading: const Icon(Icons.share),
+                  title: Text(AppLocalizations.of(context)!.menuShare),
                 ),
               ),
               PopupMenuItem(
@@ -176,6 +187,24 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+}
+
+/// 第十五版（依 TestersCommunity 回饋新增）：叫出系統分享面板，
+/// 分享文字依介面語言，後面接 Play 商店連結。
+const String _playStoreUrl =
+    'https://play.google.com/store/apps/details?id=tw.bcc.englishapp';
+
+Future<void> _shareApp(BuildContext context) async {
+  final l10n = AppLocalizations.of(context)!;
+  AnalyticsService.shareApp();
+  try {
+    await Share.share(
+      '${l10n.shareMessage}\n$_playStoreUrl',
+      subject: l10n.appTitle,
+    );
+  } catch (e) {
+    debugPrint('分享失敗：$e');
   }
 }
 

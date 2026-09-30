@@ -173,5 +173,7 @@
   "introTitle6": "4 listas acadêmicas, comece grátis",
   "introBody6": "Palavras essenciais NGSL 2809, palavras do inglês falado 720, expressões frequentes 506 e phrasal verbs 150, todas de pesquisas acadêmicas públicas. Cada lista tem conteúdo grátis para você experimentar antes.",
   "importWordLangLabel": "Qual é o idioma da primeira coluna? (para a voz de leitura)",
-  "importVoiceMissing": "Seu celular não tem voz de leitura para \"{language}\", então não será lido em voz alta. Instale-a em \"Configurações → Conversão de texto em voz\"."
+  "importVoiceMissing": "Seu celular não tem voz de leitura para \"{language}\", então não será lido em voz alta. Instale-a em \"Configurações → Conversão de texto em voz\".",
+  "menuShare": "Compartilhar com amigos",
+  "shareMessage": "Recomendo o \"Escuta Inteligente de Inglês\": aprenda com a regra 20/80 só as palavras essenciais que cobrem 92% do inglês do dia a dia, ouvindo em segundo plano enquanto se desloca, caminha ou faz tarefas, em inglês e em português. Baixe grátis:"
 }
