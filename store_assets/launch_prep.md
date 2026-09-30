@@ -60,6 +60,7 @@
 
 ## 二、正式版存取權問卷（草稿）
 
+> 2026-09-30 補充：TestersCommunity 報告與儀表板仍顯示舊名稱「智慧聽覺巡航 - 英語背景朗讀」，第 3 部分已加一句說明測試期間依 ASO 回饋改名（套件名稱不變），避免審核人員疑惑。名稱改動不影響 Google 14 天與測試者計算（以套件名稱 tw.bcc.englishapp 辨識）。
 > 2026-09-30 更新：已收到 TestersCommunity 兩份報告（Testers Feedback Report、Production Access Questionnaire 範本），回饋已併入下方；**範本答案不照抄**（內容通用、第 8 題寫「we plan to」等於還沒改、第 5 題族群寫學生與本 App 不符）。
 > 2026-09-29 更新：依第 4～12 版實際修正紀錄改寫。**【 】內要換成實際情況**，尤其測試者回饋一定要依真實收到的內容填，不誇大。大部分修正來自開發者自己在紅米實機測試發現（例如提醒提早 8 小時），問卷如實寫「自己測試發現」即可，Google 並不要求每項都來自測試者。Google 審核人員看英文，用英文回答。
 
@@ -101,6 +102,7 @@
 > - Fixed a startup issue reported by Firebase Crashlytics where the app could stay on the loading screen if the notification permission request failed.
 > - Fixed the screen freezing when returning to the app from a reminder notification. Verified on a physical device.
 > - In response to tester feedback: added a "Share with friends" option in the menu (system share sheet with a localized message and the Play Store link), and added a full English store listing with keywords, feature highlights, and English screenshots.
+> - Also based on the store-optimization feedback, I updated the store listing names during the test to include search keywords (for example, the Traditional Chinese name changed from "智慧聽覺巡航 - 英語背景朗讀" to "智慧聽覺巡航：英文單字・聽力背景朗讀"), so the tester reports and dashboard may still show the earlier name. The package name and app are unchanged.
 
 **How did you decide that your app is ready for production?**
 > Core features (background playback, bilingual reading, reminders, CSV import, subscriptions) work reliably on tested devices, the reminder issue was confirmed fixed on a physical device, Firebase Crashlytics shows 【no major crashes】, the Play pre-launch report shows 【no critical issues】, and all known issues were fixed in the latest version.
