@@ -305,6 +305,11 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   - ✅ 2026-09-29：`patch_ios.sh` 第 6 步在 AppDelegate 設 UNUserNotificationCenter delegate（Lawrence 回報 iPhone 通知診斷「立即測試」沒反應、1 分鐘與每日提醒有跳——前景通知沒 delegate 不顯示），並在 App 變使用中時把角標歸零；`notification_service.dart` 的 iOS 通知加 `presentBadge`、`badgeNumber: 1`（回報：有通知但圖示右上角沒有 1）。只影響 iOS，Android 不需改版。通知診斷在 iOS 改顯示 checkPermissions（允許/提示/標記/聲音），不再顯示 Android 專用的精準鬧鐘與頻道（原本在 iOS 顯示 null、「頻道不存在」屬正常）。iOS 個人版 Actions「Build Personal iOS IPA」#6（7ffe158）建置成功，待 Lawrence 用 Impactor 安裝確認：立即測試會跳、通知後圖示有 1、開 App 後 1 消失。AppDelegate 範本為新版 FlutterImplicitEngineDelegate＋SceneDelegate，注入點是 didFinishLaunchingWithOptions。
   - 尚未處理：正式上架需另做簽署、RevenueCat iOS、AdMob iOS 廣告單元、App Store 截圖/隱私標籤。
   - **待 Lawrence 實機確認**：背景/鎖屏連續朗讀（iOS 在字與字之間的靜音空檔可能暫停 App，最需要驗證）、鎖屏播放控制、每日提醒、11 語介面、匯入 CSV。
+- **2026-09-30 iOS 決定與評估準則**（Lawrence 確認）：
+  - 個人全解鎖版**不先更新**，等 Android 正式上架、確定一兩週內不再改版後，再以當時最新版重建一次（Android 仍可能因審核／測試報告再出版；iOS 版只自用、不影響 Google 測試與正式版申請；Mac 晚上 7 點後才能用，集中做一次最省事）。等待期間照常用 Impactor 續簽。
+  - 付費開發者（US$99／年）後的續簽：App Store 上架版＝不需續簽（自用可從 App Store 下載，全解鎖用 RevenueCat 後台手動授權自己帳號或直接訂閱）；TestFlight＝每版 90 天到期；開發者簽章直接安裝＝約一年一次。停繳年費 App 會從 App Store 下架。
+  - **是否付費上架 iOS：正式上架後觀察 1～2 個月 Android 數據再評估**，看 ①訂閱收入（年費約 NT$3,200 ≈ 3～4 個年繳訂閱即打平）②Firebase Analytics 留存（7／30 天）③使用者國家（日、台、韓 iPhone 比例高）④App 內回饋是否有人要 iOS 版。
+  - 技術前提：MacBook Air 2017 macOS 升不到 App Store 上傳所需的新版 Xcode，**上架建置與上傳沿用 GitHub Actions 雲端 Mac**（macos-latest），不需買新電腦。
 - 2026-09-28 第一次用 Sideloadly v0.60 安裝失敗：密碼驗證通過後報 `Install failed: Guru Meditation … Invalid file`（iPhone 為 iOS 27.0；Mac 已裝 Apple 裝置支援元件）。已請 Lawrence 試：IPA 移到桌面、給 Sideloadly 完全取用磁碟、更新 Sideloadly。四步都做了仍失敗。**查到原因：Sideloadly 本身的已知問題**（SideloadlyiOS/Sideloadly-Download issue #17，iOS 27 普遍發生，其他 App 也一樣，不是我們 IPA 的問題；改圖示後的 IPA Sideloadly 能正常讀出名稱/版本/圖示）。社群暫時解法：改用開源的 **Impactor**（claration/Impactor，前身 PlumeImpactor，支援 macOS，也有自動續簽）。
 - Impactor v2.6.5（macOS universal）用測試帳號登入時，簡訊雙重認證失敗（`Authentication SRP error 500: Failed to send SMS 2FA to devices`，Impactor 已知問題 #76/#128；該帳號未登入任何 Apple 裝置，只能走簡訊）。**改用 iPhone 本身登入的 Apple ID（驗證碼跳在 iPhone 上）→ 2026-09-28 17:43 安裝成功**。已勾 Auto Refresh [BETA]。以後固定用 Impactor＋主帳號，不要換工具（識別碼可能不同，會變成另一個 App、資料不共用）。Sideloadly 已不用。
 - 狀態：已安裝，等 Lawrence 實機測試回報（背景朗讀最重要）。
