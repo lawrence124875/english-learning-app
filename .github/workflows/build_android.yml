@@ -3,6 +3,12 @@ name: Build Android APK
 on:
   push:
     branches: [main]
+    # 只改文件／商店素材／網頁的 commit 不觸發建置（2026-09-30 Lawrence 決定，長期維持）
+    # 注意：tools/ 不可加入（tools/icons/out 是建置時會複製的桌面圖示）
+    paths-ignore:
+      - '**.md'
+      - 'store_assets/**'
+      - 'docs/**'
   workflow_dispatch: {}
 
 jobs:
