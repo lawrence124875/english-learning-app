@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-29（第十二版已發布；第十三版 0.1.10+13 已上傳封閉測試送審；個人版重建延到正式上架後；**Android 後續事項總整理見 §17，新對話從 §17 開始**）
+最後更新：2026-09-30（收到 TestersCommunity 回饋報告與問卷範本；第十五版 0.1.12+15 新增「分享給朋友」、新增英文商店資訊；第十四版審查中；**Android 後續事項總整理見 §17，新對話從 §17 開始**）
 
 ---
 
@@ -138,6 +138,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 12 | 0.1.9 | 正式 App 桌面圖示（Android 自適應圖示）、桌面 App 名稱依手機語言顯示 10 語 appTitle（原為 english_learning_app）；iOS 相容的平台判斷（Android 行為不變）。版本資訊 `store_assets/release_notes_v12.md`（10 語） | 2026-09-29 程式完成，Actions #164、#165 建置成功（#165 只多改 HANDOFF，程式相同）；**2026-09-29 Lawrence 以 #165 的 AAB 上傳封閉測試（未先實機測試），同日審查通過發布** |
 | 13 | 0.1.10 | **修正 Crashlytics 回報的當機** `NotificationService.requestPermission`（第 9～10 版，3 次/2 人）：`PlatformException(error, Attempt to invoke virtual method ... on a null object reference)`，外掛在沒有前景 Activity 時請求通知權限失敗；未接住導致 `AppState.initialize()` 中斷、畫面卡在載入中。修法：requestPermission 一律 try/catch（失敗回傳 false、記 Crashlytics 非當機）；啟動時不再請求通知權限（只在使用者開啟提醒時請求）；啟動時兩個提醒排程各包 try/catch。版本資訊 `store_assets/release_notes_v13.md`（10 語） | 2026-09-29 程式完成，Actions #179、#180 建置成功（#180 只多了版本資訊與 HANDOFF，程式相同，上傳用 #180）；第十二版已發布；**2026-09-29 Lawrence 已上傳第十三版 AAB 至封閉測試送審** |
 | 14 | 0.1.11 | **修正點每日提醒通知回到 App 後畫面停住不能操作**（2026-09-29 Lawrence 在紅米的第十三版（Play 版）回報：通知診斷「1 分鐘後測試」通知有跳，點下去回 App 就停住；Play 上第十三版以前都有此問題，第十四版實機確認後應盡快上傳）。原因：flutter create 範本 MainActivity 為 `launchMode="singleTop"`（新範本另有 `taskAffinity=""`），flutter_local_notifications 的通知 PendingIntent 在 App 已在背景時會再建立第二個 MainActivity；AudioServiceActivity 讓所有 MainActivity 共用同一個快取 FlutterEngine，舊實例被銷毀時把引擎拆離 → 新畫面只剩最後一格、無法操作。修法：`scripts/patch_main_activity.sh` 把 MainActivity 改成 `launchMode="singleTask"`（通知、桌面圖示都回到同一個實例）。取捨：在 Play 付款頁/檔案選擇等外部畫面時按 Home 再點桌面圖示，外部畫面會被關掉（付款視為取消），可接受。版本資訊 `store_assets/release_notes_v14.md`（10 語） | 2026-09-29 程式完成，Actions #185、#186 建置成功（#186 只多版本資訊，程式相同，上傳用 #186）；**2026-09-29 紅米實機三項確認通過**（點通知回 App、媒體卡片回 App、桌面圖示回原頁面皆正常）；**2026-09-29 已上傳 #186 AAB 至封閉測試，審查中**，並通知 TestersCommunity 測試者 |
+| 15 | 0.1.12 | **依 TestersCommunity 回饋新增「分享給朋友」**：首頁右上選單（關於本 App 上方）新增 `menuShare`，用 `share_plus`（^10.1.4，`Share.share`）叫出系統分享面板，文字為 11 語 `shareMessage`＋Play 商店連結，subject＝appTitle；Analytics 事件 `share_app`。版本資訊 `store_assets/release_notes_v15.md`（含 en-US 共 11 語） | 2026-09-30 程式完成（commit 5938d9b），Actions #195 建置成功；下一次 push（文件＋英文商店素材，程式相同）的建置也可用，上傳前待紅米實機確認分享功能 |
 | 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除）；第三輪（2026-09-27 紅米實測仍無通知、通知中心與圖示角標皆無）：新增隱藏「通知診斷」工具（學習統計頁**長按「每日提醒」標題**）：顯示初始化結果、通知權限、精準鬧鐘權限、提醒頻道重要性、已排程 ID，並可發「立即測試」與「1 分鐘後測試」通知，用來區分是「通知根本發不出來」還是「排程沒觸發」。Lawrence 回報：通知開關、自啟動、省電無限制都已設定；特殊權限裡找不到「鬧鐘與提醒」；設定時間後有顯示「已完成設定」（=排程有進系統），但從未跳出「允許通知」系統視窗。測試機為紅米 Note 8／Android 11（所以沒有通知權限視窗、沒有「鬧鐘與提醒」，精準鬧鐘預設允許）。按 Home 鍵不滑掉 App、鎖屏等候仍無提醒，但朗讀的鎖屏媒體通知正常顯示→排除強制停止，問題在提醒頻道或排程觸發。診斷工具在 Actions #125 建置成功。**真正原因找到**：診斷顯示權限/頻道/排程全正常、立即通知會跳，但 1 分鐘測試報 `scheduledDate: Must be a date in the future`——`_nextInstanceOfLocalTime` 等處把本地時間先減時區偏移再丟 `TZDateTime.from`，但 `from` 取的是絕對時間點（epoch），等於多減 8 小時：每日提醒其實每天在設定時間**提早 8 小時**觸發（設 19:00 會在 11:00 跳），久未使用提醒也提早 8 小時。已改為直接 `TZDateTime.from(本地DateTime, tz.UTC)`。踩坑：**TZDateTime.from 不看牆上時鐘，別手動加減時區偏移**。2026-09-27 Actions #127 紅米實測：1 分鐘測試與每日提醒皆準時跳出 ✅。「通知診斷」工具保留（隱藏、僅中文，開發用） 另含：自訂教材 CSV 第一欄語言可選（朗讀用該語言 TTS）、英文介面作為不支援語言的預設（新增 app_en.arb）、功能介紹與匯入說明加一句「也可匯入英文以外的語言」（新 key `importWordLangLabel`）、CSV 表頭改為第一或第二欄是語言名稱也算表頭、翻譯語言英文選項改為單純「英文」、匯入時檢查手機有無該語言 TTS 語音並提示安裝、翻譯欄擴充為 13 種（新增簡中、法、德、義、泰） | 提醒已實機驗證通過；第一欄語言與英文介面待實機確認後上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
@@ -339,6 +340,12 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - ✅ 第十四版（0.1.11+14）：修正點通知回 App 畫面停住（MainActivity 改 singleTask，見 §6）。✅ 2026-09-29 紅米實機確認通過，下一步上傳 #186 AAB＋release_notes_v14.md。原確認項目：①按 Home 讓 App 在背景→通知診斷「1 分鐘後測試」→點通知，可正常操作；②朗讀中點鎖屏/通知列的媒體卡片回 App 正常；③從桌面圖示回 App 仍停在原本頁面（不會重新啟動）。
 - Crashlytics（最近 7 天）4 個問題：① `NotificationService.requestPermission`（0.1.6～0.1.7，3 次/2 人）→ **第十三版已修正**；② `HsdpShimActivity`（Google Play 內部元件，targetPackageName is null）、③ `ProxyBillingActivity.onCreate`（Google 帳單程式庫內部 NPE），兩者都只在 0.1.2、各 1 次，屬 Google 程式庫內部問題，觀察即可；④ `Purchases.getOfferings`（0.1.0，RevenueCat 設定錯誤 23）早期設定問題，現在程式已 try/catch，可在 Crashlytics 關閉。②③④ 已於 2026-09-29 由 Lawrence 在 Crashlytics 關閉（若再發生會自動以「回歸」重新開啟）；① 待第十三版上線數天無新事件後關閉。堆疊追蹤已確認 ① 發生在 AppState.initialize 呼叫 requestPermission（通知外掛取得 Context 為 null）。
 - 上傳：✅ 2026-09-29 Lawrence 已上傳第十三版 AAB 至封閉測試並送審（版本資訊 `release_notes_v13.md`）。審查通過後：紅米確認不再卡在載入中；數天無新事件後在 Crashlytics 關閉 ①。
+
+### B3. TestersCommunity 回饋（2026-09-30 收到兩份 PDF 報告）與第十五版
+- 報告結論：各裝置/SDK 沒有當機或功能錯誤。建議兩項：①ASO：商店說明文字與關鍵字不足（原因是**沒有英文 en-US 商店資訊**，測試者看到繁中預設或機器翻譯）；②設定/選單加「分享 App」。其他建議（導覽、App 內回饋、多語）早已具備。
+- 處理：①新增英文商店資訊 `store_assets/store_listing_en.md`（名稱 26、簡短 76、完整 3360 字元；寫明 10 語可雙語、其他語言只念英文，與 App 一致）＋英文截圖/主題圖 `store_assets/localized/en/`（generate_localized_assets.py 新增 en；既有語言輸出逐像素不變）；②第十五版分享功能（§6）。
+- 問卷：TestersCommunity 附的範本**不照抄**（通用、寫「we plan to」、族群寫學生），`launch_prep.md` 第二節已併入報告內容與第 13～15 版修正；期滿前要把第十五版與英文商店資訊都上線，問卷才能寫「已完成」。
+- 待辦：CI 成功→紅米確認選單「分享給朋友」可叫出分享面板（LINE 等）、文字依手機語言、連結正確→上傳 AAB＋release_notes_v15.md；Play Console 新增 en-US 商店資訊（步驟見 store_listing_en.md）。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。

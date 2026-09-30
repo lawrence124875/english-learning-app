@@ -22,7 +22,7 @@ OUT = os.path.join(ROOT, "store_assets", "localized")
 FONT_DIR = "/usr/share/fonts/opentype/noto/"
 
 # Noto Sans CJK 的 face index：0=日 1=韓 2=簡中 3=繁中。拉丁語系用日文 face（含越南文字母）。
-FACE = {"zh": 3, "ja": 0, "ko": 1, "zh_Hans": 2, "vi": 0, "id": 0, "es": 0, "pt": 0}
+FACE = {"zh": 3, "ja": 0, "ko": 1, "zh_Hans": 2, "vi": 0, "id": 0, "es": 0, "pt": 0, "en": 0}
 CJK = {"zh", "ja", "zh_Hans"}  # 逐字換行；韓文有空格，照單字換行
 SCRIPT = {"th": "Thai", "ar": "Arabic"}  # 用合併字型＋RAQM 排版的語言
 RTL = {"ar"}
@@ -64,6 +64,9 @@ EXTRA = {
                fg1="NGSL · Habla · Expresiones · Phrasal verbs", fg2="Aprende inglés escuchando, en el trayecto o haciendo deporte"),
     "pt": dict(word="conta", best="Mais vantajoso",
                fg1="NGSL · Fala · Expressões · Phrasal verbs", fg2="Aprenda inglês ouvindo, no trajeto ou malhando"),
+    # 英文介面不顯示內建教材翻譯（App 行為），所以截圖單字卡下方留空、朗讀模式顯示「只念單字」
+    "en": dict(word="", best="Best value",
+               fg1="NGSL · Spoken · Phrases · Phrasal verbs", fg2="Learn English by listening, on your commute or during a workout"),
     "th": dict(word="ใบแจ้งหนี้", best="คุ้มที่สุด",
                fg1="NGSL · ภาษาพูด · วลี · กริยาวลี", fg2="ฟังภาษาอังกฤษเบื้องหลัง ระหว่างเดินทางหรือออกกำลังกาย"),
     "ar": dict(word="فاتورة", best="الأوفر",
@@ -199,7 +202,8 @@ def home(L, E, path):
     rr(d, [ix0, top + 56, ix1, top + 70], 7, fill=GREY_LIGHT)
     rr(d, [ix0, top + 56, ix0 + int((ix1 - ix0) * 0.33), top + 70], 7, fill=TEAL)
     d.text((W // 2, top + 220), "bill", font=font("black", 96), fill=INK, anchor="mm")
-    d.text((W // 2, top + 310), E["word"], font=font("regular", 44), fill=GREY, anchor="mm")
+    if E["word"]:
+        d.text((W // 2, top + 310), E["word"], font=font("regular", 44), fill=GREY, anchor="mm")
     button(d, [ix0, top + 400, ix1, top + 496], L["playButtonStart"], icon="▶")
     button(d, [ix0, top + 520, ix1, top + 616], L["starButton"], filled=False, color=AMBER, icon="☆")
     ut = box[3] + 32; ub = [48, ut, W - 48, ut + 260]
@@ -215,7 +219,7 @@ def home(L, E, path):
         button(d, [x0, nt, x0 + bw3, nt + 96], lb, filled=False, color=GREY, size=30)
     st = nt + 124; sb = [48, st, W - 48, st + 130]; card(d, sb, 28)
     d.text((sb[0] + 36, st + 45), L["settingsTitle"], font=font("medium", 34), fill=INK, anchor="lm")
-    s = fmt(L["settingsSummaryLine"], mode=L["summaryReadBilingual"], count=2, rate="0.9")
+    s = fmt(L["settingsSummaryLine"], mode=L["summaryReadEnglishOnly" if LANG == "en" else "summaryReadBilingual"], count=2, rate="0.9")
     d.text((sb[0] + 36, st + 95), s, font=font("regular", 26), fill=GREY, anchor="lm")
     cx, cy = sb[2] - 40, st + 65
     d.polygon([(cx - 12, cy - 6), (cx + 12, cy - 6), (cx, cy + 10)], fill=GREY)
@@ -342,7 +346,7 @@ def feature_graphic(L, E, path):
     for ln in l2: d.text((x, y), ln, font=f2, fill=(220, 245, 242), anchor="lm"); y += 44
     img.convert("RGB").save(path, "PNG")
 
-ALL = ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt", "th", "ar"]
+ALL = ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt", "th", "ar", "en"]
 for lang in (sys.argv[1:] or ALL):
     LANG = lang; MIRROR = lang in RTL
     if lang in SCRIPT: ensure_fonts(SCRIPT[lang])

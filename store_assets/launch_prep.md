@@ -60,6 +60,7 @@
 
 ## 二、正式版存取權問卷（草稿）
 
+> 2026-09-30 更新：已收到 TestersCommunity 兩份報告（Testers Feedback Report、Production Access Questionnaire 範本），回饋已併入下方；**範本答案不照抄**（內容通用、第 8 題寫「we plan to」等於還沒改、第 5 題族群寫學生與本 App 不符）。
 > 2026-09-29 更新：依第 4～12 版實際修正紀錄改寫。**【 】內要換成實際情況**，尤其測試者回饋一定要依真實收到的內容填，不誇大。大部分修正來自開發者自己在紅米實機測試發現（例如提醒提早 8 小時），問卷如實寫「自己測試發現」即可，Google 並不要求每項都來自測試者。Google 審核人員看英文，用英文回答。
 
 ### 第 1 部分：封閉測試
@@ -68,10 +69,10 @@
 > As an individual developer it was difficult to find enough testers on my own, so I used a tester community service (TestersCommunity) 【and friends/colleagues, if any】. The 15 testers joined through a Google Group and stayed opted in for the whole testing period.
 
 **Describe the engagement you received from testers during your closed test.**
-> Testers installed the app and used its core features: background and lock-screen audio playback of English vocabulary, bilingual reading (English followed by the meaning in their language), marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. I also tested every build myself on a physical device (Redmi Note 8, Android 11) and released 【9】 updates to the closed testing track during the test. 【Add actual engagement from the TestersCommunity report, e.g., number of testers who sent reports.】
+> Testers installed the app and used its core features: background and lock-screen audio playback of English vocabulary, bilingual reading (English followed by the meaning in their language), marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. I also tested every build myself on a physical device (Redmi Note 8, Android 11) and released 【9】 updates to the closed testing track during the test. The tester community also returned a written test report covering testing on a variety of devices and Android versions, including functionality, usability, responsiveness, and store-policy compliance.
 
 **Provide a summary of the feedback you received from testers. Include how you collected the feedback.**
-> Feedback was collected through the tester community's reports, the in-app feedback form (stored in Firebase Firestore), Firebase Crashlytics, and my own daily use on a physical device. 【Summarize the real feedback from TestersCommunity here.】 The most important issues found were: built-in translations and audio not following the device language, daily reminders not appearing at the set time, and the home-screen icon and app name not being set.
+> Feedback was collected through the tester community's reports, the in-app feedback form (stored in Firebase Firestore), Firebase Crashlytics, and my own daily use on a physical device. The TestersCommunity report found no crashes or functional bugs across the devices and SDK versions they tested. Their two main suggestions were: (1) App Store Optimization: the store listing lacked enough text and keywords for English-speaking users (the app had no English store listing yet), and (2) adding a "Share App" option so users can recommend the app to friends. They also recommended onboarding, an in-app feedback channel, and localization, which the app already had (feature tour, in-app feedback form, interface in 10 languages plus English). The most important issues found were: built-in translations and audio not following the device language, daily reminders not appearing at the set time, and the home-screen icon and app name not being set.
 
 ### 第 2 部分：關於你的 App
 
@@ -97,7 +98,9 @@
 > - Added an in-app feature tour, with a side-by-side layout in landscape.
 > - Added the proper home-screen icon and a localized app name.
 > - Earlier updates: in-app update prompts, clearer subscription terms with a "manage subscription" link, and edge-to-edge support.
-> - 【Add any changes made in response to TestersCommunity reports.】
+> - Fixed a startup issue reported by Firebase Crashlytics where the app could stay on the loading screen if the notification permission request failed.
+> - Fixed the screen freezing when returning to the app from a reminder notification. Verified on a physical device.
+> - In response to tester feedback: added a "Share with friends" option in the menu (system share sheet with a localized message and the Play Store link), and added a full English store listing with keywords, feature highlights, and English screenshots.
 
 **How did you decide that your app is ready for production?**
 > Core features (background playback, bilingual reading, reminders, CSV import, subscriptions) work reliably on tested devices, the reminder issue was confirmed fixed on a physical device, Firebase Crashlytics shows 【no major crashes】, the Play pre-launch report shows 【no critical issues】, and all known issues were fixed in the latest version.
