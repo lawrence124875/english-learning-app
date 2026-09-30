@@ -296,7 +296,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
   1. **GitHub Actions 分鐘數**：公開 repo 免費不限；私人 repo 每月 2,000 分鐘，macOS 執行器按 10 倍計。實測 9/28～9/30 約兩天就跑了 48 次 Android 建置、共約 544 分鐘（平均 11 分鐘），照這個頻率一個月會遠超 2,000；iOS 建置一次約 12～25 分鐘 ×10 倍＝120～250 分鐘。
   2. **main 分支保護規則集**：免費帳號的私人 repo 不能用規則集（9/29 設的禁止刪除／強制推送會失效）。
   3. 選項：維持公開（repo 內本來就沒有金鑰，教材也是公開學術資料，主要風險只是程式被抄）／改私人並大幅減少 CI（workflow 加 paths-ignore，HANDOFF.md、store_assets/、docs/ 等文件改動不觸發建置——目前每次改 HANDOFF 都會白跑一次 11 分鐘建置）／升級 GitHub Pro（約 US$4／月：私人 repo 可用 Pages 與規則集、3,000 分鐘）。
-- ✅ 2026-09-30 已做（Lawrence 要求**長期維持**）：build_android.yml 的 push 觸發加 `paths-ignore`（`**.md`、`store_assets/**`、`docs/**`）。只改 HANDOFF、商店文案、版本資訊、隱私權政策網頁的 commit **不再觸發 Android 建置**（GitHub Pages 部署照常）；有改到程式的 commit 照常建置；需要時可在 Actions 頁手動 Run workflow。**tools/ 不可加入**（tools/icons/out 是建置用圖示）。今後新增的建置 workflow 若是 push 觸發，也要加同樣的 paths-ignore。因此版本表不會再出現「#N 只多改 HANDOFF、程式相同」的重複建置。
+- ✅ 2026-09-30 已做（Lawrence 要求**長期維持**，已驗證文件 commit 不觸發建置）：build_android.yml 的 push 觸發加 `paths-ignore`（`**.md`、`store_assets/**`、`docs/**`）。只改 HANDOFF、商店文案、版本資訊、隱私權政策網頁的 commit **不再觸發 Android 建置**（GitHub Pages 部署照常）；有改到程式的 commit 照常建置；需要時可在 Actions 頁手動 Run workflow。**tools/ 不可加入**（tools/icons/out 是建置用圖示）。今後新增的建置 workflow 若是 push 觸發，也要加同樣的 paths-ignore。因此版本表不會再出現「#N 只多改 HANDOFF、程式相同」的重複建置。
 
 ## 15. iOS 版規劃（2026-09-28 討論）
 
