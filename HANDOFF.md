@@ -288,7 +288,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ---
 
-## 14b. repo 改私人的評估（2026-09-30，待正式上架、版本穩定後再處理）
+## 14b. repo 改私人的評估（2026-09-30）
+- **結論（2026-09-30 Lawrence 決定）：english-learning-app 與 iching-cards 都維持公開，不改私人、不另建網頁 repo。** 以下評估留作紀錄。仍要做的：①在 AdMob 確認 app-ads.txt 驗證狀態（目前在專案子路徑，AdMob 找的是網域根目錄；若顯示找不到，再建 `lawrence124875.github.io` 放根目錄的 app-ads.txt）②build_android.yml 加 paths-ignore（下次改版時）。repo 公開＝文件、commit、Issue 內絕不可寫金鑰／密碼／權杖。
 - 構想（易經 App 對話提出）：另建一個只放網頁的公開 repo，放兩個 App 的隱私權政策與 app-ads.txt；Play Console 隱私權政策網址／開發者網站改指向新網頁、確認 AdMob app-ads.txt 驗證正常後，再把 english-learning-app 改私人。iching-cards 從一開始就私人。
 - **網頁 repo 建議命名 `lawrence124875.github.io`（使用者站台）**：app-ads.txt 必須在開發者網站網域的根目錄，AdMob 會找 `https://lawrence124875.github.io/app-ads.txt`；目前放在專案站台子路徑 `/english-learning-app/app-ads.txt`，可能根本沒被 AdMob 讀到（搬家時順便修正，並在 AdMob 確認驗證狀態）。兩個 App 共用同一份 app-ads.txt（同一個發布商 ID）。資料安全性裡的刪除資料網址 `#data-deletion` 也要一起改。
 - **改私人前必須先解決的代價**（免費帳號）：
