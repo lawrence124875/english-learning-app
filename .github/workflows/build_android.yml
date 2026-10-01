@@ -94,12 +94,6 @@ jobs:
           fi
           exit $status
 
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: english-learning-app-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-
       - name: Build AAB (release, for Play Console upload)
         env:
           REVENUECAT_API_KEY: ${{ secrets.REVENUECAT_ANDROID_API_KEY }}
@@ -115,8 +109,18 @@ jobs:
             --dart-define=ADMOB_BANNER_AD_UNIT_ID=$ADMOB_BANNER_AD_UNIT_ID \
             --dart-define=ADMOB_APP_OPEN_AD_UNIT_ID=$ADMOB_APP_OPEN_AD_UNIT_ID
 
-      - name: Upload AAB artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: english-learning-app-release-aab
-          path: build/app/outputs/bundle/release/app-release.aab
+      # 2026-10-01 Lawrence 決定：任何 APK/AAB 都不放公開 repo 的 Artifacts，
+      # 一律發佈到私人 repo english-app-builds 的 Release（Secret BUILDS_REPO_TOKEN＝CI 專用權杖）。
+      - name: Publish APK + AAB to private repo release
+        env:
+          GH_TOKEN: ${{ secrets.BUILDS_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          ver=$(grep '^version:' pubspec.yaml | awk '{print $2}')
+          n=${{ github.run_number }}
+          cp build/app/outputs/flutter-apk/app-release.apk "release_${ver}_run${n}.apk"
+          cp build/app/outputs/bundle/release/app-release.aab "release_${ver}_run${n}.aab"
+          gh release create "android-release-run${n}" "release_${ver}_run${n}.apk" "release_${ver}_run${n}.aab" \
+            --repo lawrence124875/english-app-builds \
+            --title "Android 一般版 ${ver}（run ${n}）" \
+            --notes "commit ${{ github.sha }}。AAB 上傳 Play Console 用；APK 供實機測試。"
