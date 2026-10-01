@@ -30,6 +30,7 @@
 
 - App 名稱：智慧聽覺巡航 - 英語背景朗讀（Flutter，僅 Android；iOS 尚未開發）
 - 套件名稱 applicationId：**`tw.bcc.englishapp`**
+  - **套件名稱上傳 Play 後永久不能改**（2026-10-01 Lawrence 詢問能否改為 LC Lab：改＝全新 App，封閉測試、商店資訊、訂閱、Firebase/RevenueCat/AdMob 全部重來，結論不改）。App 畫面、商店文案、隱私權政策都沒有 BCC 字樣；品牌若要呈現「LC Lab」，改 Play Console 的**開發人員名稱**（設定→開發人員帳戶→帳戶詳細資料，隨時可改、不影響測試）。
   - 注意：CI 的 `flutter create --project-name english_learning_app --org tw.bcc` 會產生 `tw.bcc.english_learning_app`，但 `scripts/patch_firebase.sh` 會**強制改回 `tw.bcc.englishapp`**。2026-09-24 曾誤判套件名稱，已更正。
 - 開發者：Lawrence（BCC 員工，個人專案）
 - 核心功能：背景/鎖屏英語單字朗讀巡航、雙語朗讀（英文＋翻譯）、不熟悉單字庫（星號）、學習統計、每日提醒、匯入自訂 CSV 教材、訂閱解鎖、App 內更新
