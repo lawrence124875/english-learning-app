@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-09-30（**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-01（個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -179,6 +179,9 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 ---
 
 ## 10. 踩過的坑
+
+- **個人全解鎖版不可放公開 repo 的 Artifacts**（2026-10-01 發現）：公開 repo 的 Artifacts 任何登入 GitHub 的人都能下載，等於免費送出 Premium。`build_personal.yml`、`build_ios_personal.yml` 已改為發佈到**私人 repo `lawrence124875/english-app-builds` 的 Release**（tag `android-personal-run<N>`／`ios-personal-run<N>`），Lawrence 手機登入 GitHub 從 Releases 下載。舊的 13 個個人版 artifact 已用一次性 workflow `archive_personal_builds.yml` 搬到該 repo 的 Release `archive-2026-09`。一般版 APK/AAB（build_android.yml）內容與 Play 版相同、付費靠 RevenueCat 驗證，可留在 Artifacts。**新增任何會產生全解鎖或私人內容的建置，都不可用 upload-artifact。**
+- **權杖分工**（2026-10-01 Lawrence 決定）：①英文對話用（每次貼上，授權 english-learning-app）②易經對話用（另一個）③**CI 專用**（名稱 `ci-private-releases`，只授權 english-app-builds＋iching-content、Contents 讀寫；只存 Secret，英文 App 為 `BUILDS_REPO_TOKEN`，從不貼到對話）。③到期時個人版建置會失敗，需重產並更新兩個 repo 的 Secret。對話用權杖看不到 english-app-builds（私人、未授權），Release 內容由 workflow 日誌或 Lawrence 確認。
 
 - **MainActivity 必須是 singleTask**（第十四版）：singleTop 時點通知會建立第二個 MainActivity，與 AudioServiceActivity 共用的快取 FlutterEngine 被舊實例拆離 → 畫面停住。`patch_main_activity.sh` 負責設定，不要拿掉。
 
@@ -376,6 +379,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 2. 依數據再決定：各國訂閱價格個別調整、土耳其文、iOS 是否付費上架（US$99/年）。
 
 ### E. 個人版提醒
+- 2026-10-01 起個人版（Android／iOS）建置產物一律發佈到私人 repo `english-app-builds` 的 Releases（見 §10），不再出現在公開 Artifacts。
 - Android 個人全解鎖版（含新圖示）已建置：build_personal 以 30ce8fd 建置成功。Play 推第十二版後會被覆蓋回一般版。
 - **2026-09-29 Lawrence 決定：個人版暫不重建，等正式版上架、版本穩定後，再以當時最新版重新手動建置**（避免後續改版還要一直重建）。在此之前手機上用 Play 的一般版即可。
 - iOS 自用版：Impactor＋主帳號、自動重新整理已勾、開機自動啟動已勾；每 7 天續簽（Mac 開著 Impactor＋同一個非訪客 Wi-Fi，或每週接線手動重裝）。

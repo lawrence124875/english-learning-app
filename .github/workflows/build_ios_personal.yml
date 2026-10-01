@@ -68,8 +68,16 @@ jobs:
           unzip -tq english-learning-app-personal.ipa
           ls -lh english-learning-app-personal.ipa
 
-      - name: Upload IPA artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: english-learning-app-personal-ios-ipa
-          path: english-learning-app-personal.ipa
+      # 2026-10-01：不上傳公開 Artifacts，改發佈到私人 repo english-app-builds 的 Release。
+      - name: Publish IPA to private repo release
+        env:
+          GH_TOKEN: ${{ secrets.BUILDS_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          ver=$(grep '^version:' pubspec.yaml | awk '{print $2}')
+          f="personal-ios_${ver}_run${{ github.run_number }}.ipa"
+          cp english-learning-app-personal.ipa "$f"
+          gh release create "ios-personal-run${{ github.run_number }}" "$f" \
+            --repo lawrence124875/english-app-builds \
+            --title "iOS 個人全解鎖版 ${ver}（run ${{ github.run_number }}）" \
+            --notes "commit ${{ github.sha }}；僅供本人安裝（Impactor 側載）。"
