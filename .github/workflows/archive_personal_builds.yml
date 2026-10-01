@@ -1,0 +1,50 @@
+name: Archive personal builds to private repo (one-off, manual)
+
+# 2026-10-01：公開 repo 的 Artifacts 任何登入 GitHub 的人都能下載，
+# 個人全解鎖版（APK/IPA）不能留在這裡。此 workflow 把現存未過期的個人版產物
+# 搬到私人 repo english-app-builds 的 Release（tag: archive-2026-09），
+# 搬完由 Claude 用 API 刪除這裡的 artifacts。
+# 需要 Secret：BUILDS_REPO_TOKEN（fine-grained，只授權 english-app-builds，Contents 讀寫）
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download personal artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          gh api --paginate "repos/${{ github.repository }}/actions/artifacts?per_page=100" \
+            --jq '.artifacts[] | select(.expired == false and (.name | test("personal"))) | "\(.id) \(.name) \(.created_at) \(.workflow_run.id)"' > list.txt
+          cat list.txt
+          while read -r id name created run; do
+            ts=$(echo "$created" | sed 's/[-:]//g; s/Z$//')
+            gh api "repos/${{ github.repository }}/actions/artifacts/$id/zip" > a.zip
+            rm -rf x && mkdir x && unzip -q a.zip -d x
+            f=$(find x -type f | head -1)
+            ext="${f##*.}"
+            kind=$(echo "$name" | sed 's/english-learning-app-//')
+            cp "$f" "out/${kind}_${ts}_run${run}.${ext}"
+          done < list.txt
+          ls -la out
+          test "$(ls out | wc -l)" -eq "$(wc -l < list.txt)"
+
+      - name: Upload to private repo release
+        env:
+          GH_TOKEN: ${{ secrets.BUILDS_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh release create archive-2026-09 out/* \
+            --repo lawrence124875/english-app-builds \
+            --title "個人版封存（2026-09，自公開 repo Artifacts 搬移）" \
+            --notes "個人全解鎖版 APK/IPA，僅供本人安裝。檔名含建置時間與 run ID。"
+          gh release view archive-2026-09 --repo lawrence124875/english-app-builds --json assets --jq '.assets[] | "\(.name) \(.size)"'
