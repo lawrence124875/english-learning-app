@@ -58,6 +58,17 @@ class AppState extends ChangeNotifier {
   bool isLoading = true;
   Timer? _cruiseTimer;
 
+  /// 朗讀世代編號：每開始一次新的朗讀（或停止）就 +1。
+  /// 舊的朗讀流程在每個 await 之後檢查編號，發現已過期就立刻結束，
+  /// 避免快速連按上一個/下一個時，舊單字的重複朗讀或翻譯接著念出來，
+  /// 把新單字的聲音蓋掉（沒聲音、聲音和畫面上的字不同步）。
+  int _speakGen = 0;
+  bool _speechActive = false;
+
+  /// 巡航迴圈世代編號：暫停後很快又按播放時，舊迴圈醒來會發現已過期而結束，
+  /// 不會出現兩個迴圈同時推進（單字跳得比設定的間隔快）。
+  int _cruiseGen = 0;
+
   // --- 免費版 / 訂閱相關 ---
   bool isPremium = false;
 
@@ -506,12 +517,28 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> _speakCurrent() async {
+    final gen = ++_speakGen;
+    // 上一個單字還在念（手動快速切換）：先確實停止，再念新的。
+    if (_speechActive) {
+      await _ttsService.stop();
+      if (gen != _speakGen) return;
+    }
     final word = currentWord;
     if (word == null) return;
+    _speechActive = true;
+    try {
+      await _speakWord(word, gen);
+    } finally {
+      if (gen == _speakGen) _speechActive = false;
+    }
+  }
+
+  Future<void> _speakWord(WordItem word, int gen) async {
     for (var i = 0; i < settings.repeatCount; i++) {
       // 第一欄語言：內建教材固定英文；自訂教材依匯入時選的語言朗讀。
       await _ttsService.speak(word.word,
           languageCode: currentDataset.wordLocale);
+      if (gen != _speakGen) return;
     }
     if (settings.readMode == ReadMode.bilingual &&
         !_hideBuiltInTranslationFor(word)) {
@@ -524,6 +551,7 @@ class AppState extends ChangeNotifier {
           .trim();
       if (spoken.isNotEmpty) {
         await _ttsService.speak(spoken, languageCode: locale);
+        if (gen != _speakGen) return;
       }
     }
     final state = currentPlaybackState;
@@ -553,6 +581,9 @@ class AppState extends ChangeNotifier {
 
   void stopCruise() {
     isPlaying = false;
+    _cruiseGen++;
+    _speakGen++; // 讓正在進行的朗讀流程不再接著念重複/翻譯
+    _speechActive = false;
     _cruiseTimer?.cancel();
     _ttsService.stop();
     _updateNowPlaying();
@@ -560,12 +591,14 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> _cruiseLoop() async {
-    while (isPlaying) {
+    final gen = ++_cruiseGen;
+    bool alive() => isPlaying && gen == _cruiseGen;
+    while (alive()) {
       await _speakCurrent();
-      if (!isPlaying) break;
+      if (!alive()) break;
       await Future.delayed(
           Duration(milliseconds: (settings.intervalSeconds * 1000).round()));
-      if (!isPlaying) break;
+      if (!alive()) break;
       await next(speak: false, fromCruise: true);
     }
   }
