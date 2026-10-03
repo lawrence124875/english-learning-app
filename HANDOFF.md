@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-03（**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-03（**Firebase 專案與謙卦共用，見 §0 第 8 點**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -23,6 +23,13 @@
 6b. **讀建置錯誤**：容器連不到日誌下載網址（Azure blob），`build_android.yml` 建置失敗時會把錯誤行輸出成 `::error::` annotation，用 `GET /repos/.../check-runs/<job_id>/annotations` 讀取（權杖需加 Actions 讀取權限）。
 6c. **main 分支保護（2026-09-29 設定）**：規則集 `protect-main`（Active，目標＝預設分支 main）只開「限制删除」與「阻止强制推送」。一般 push 不受影響；**不可用 `git push --force`**（會被拒）。不要加「需要拉取请求」等規則，否則 Claude 無法直接推送。權杖沒有 Administration 權限，規則集只能由 Lawrence 在網頁（设置→规则→规则集）修改。
 7. 容器網路白名單只有 GitHub、pypi、npm 等；**連不到 Firebase / Google API**。需要操作 Firebase 時，應該用 GitHub Secrets + Actions 代為執行（見第 9 節）。
+
+8. **Firebase 專案共用（2026-10-03 起）**：本 App 與 謙卦（`com.lclab.qiangua`）共用同一個 Firebase 專案。
+   - Crashlytics／Analytics 查看時要先**篩選 App**（本 App＝`tw.bcc.englishapp`）。
+   - Remote Config 目前未使用；若日後使用，參數一律加英文 App 前綴（如 `en_`），並以 **App ID 條件**區隔。
+   - 重新下載的 `google-services.json` 會含兩個 client。已確認相容：`patch_firebase.sh` 只把整份 JSON 寫入並強制 applicationId＝`tw.bcc.englishapp`，google-services 外掛會自動挑對應套件名稱的 client；`main.dart` 用 `Firebase.initializeApp()` 讀原生設定，沒有 firebase_options.dart。替換 Secret `FIREBASE_GOOGLE_SERVICES_JSON` 前仍先確認 JSON 內有 `tw.bcc.englishapp` 的 client。
+   - **Firestore 安全規則是整個專案共用一份**：本 App 只用 `feedback` 集合（create-only，見 FIRESTORE_RULES.md）。謙卦若要用 Firestore，發布規則時必須**合併**、保留 `feedback` 的 create 規則，集合名稱也要避開 `feedback`（或加前綴）。目前 `feedback` 文件沒有套件名稱欄位。
+   - **不可刪除專案中的謙卦 App**。
 
 ---
 
