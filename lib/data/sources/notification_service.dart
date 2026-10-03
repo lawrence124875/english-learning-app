@@ -53,6 +53,21 @@ class NotificationService {
   /// 初始化若失敗，記錄錯誤給「通知診斷」畫面顯示（main.dart 會吞掉例外）。
   static String? initError;
 
+  /// audio_service 媒體通知固定使用的 ID（套件原生端寫死 1124）。
+  static const _audioServiceNotificationId = 1124;
+
+  /// 清掉上一次執行殘留的朗讀媒體卡片（第十七版）。
+  /// 只在 main() 冷啟動、AudioService.init() 之前呼叫：此時不可能有正在播放的
+  /// 朗讀，若通知列/鎖屏還留著卡片，一定是上次關閉 App 時沒收乾淨的孤兒通知。
+  static Future<void> clearStaleMediaNotification() async {
+    if (!Platform.isAndroid) return;
+    try {
+      await _plugin.cancel(_audioServiceNotificationId);
+    } catch (e) {
+      // 清不掉不影響使用，忽略。
+    }
+  }
+
   static Future<void> initialize() async {
     try {
       await _initializeInner();

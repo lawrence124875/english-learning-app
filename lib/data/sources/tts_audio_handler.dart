@@ -71,7 +71,11 @@ class TtsAudioHandler extends BaseAudioHandler {
 
   @override
   Future<void> stop() async {
-    await onPause?.call();
+    // 第十七版：停止朗讀若出錯或卡住，也一定要送出 idle，
+    // 否則原生端不會結束服務、收掉通知與鎖屏卡片。
+    try {
+      await onPause?.call().timeout(const Duration(seconds: 2));
+    } catch (_) {}
     playbackState.add(playbackState.value.copyWith(
       playing: false,
       processingState: AudioProcessingState.idle,

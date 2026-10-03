@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-02（**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-03（**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -380,6 +380,8 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 2026-10-02 #212 紅米實機確認通過（鎖屏與通知中心卡片按鈕皆出現且可用）。
 - 同版加入快速連按上一個／下一個的朗讀同步修正（見 §6 第 16 版）。踩坑：flutter_tts 的 speak 是 await 完成才往下，stop 只停當下那句；**多段朗讀流程要用世代編號自行中止**，不能只靠 stop()。
 - 第十五版仍在審查中；第十六版可在第十五版通過後上傳到同一封閉測試軌道。
+- **2026-10-03 再併入：關閉 App 後朗讀卡片殘留在鎖屏／通知中心**（Lawrence 在 #213 實機發現；版本號仍 0.1.13+16，版本資訊第三點已補 11 語）。原因（讀 audio_service 0.18 原生 AudioService.java）：①`androidResumeOnClick` 預設 true 時，服務 `onDestroy` 用 `STOP_FOREGROUND_DETACH`——前景通知被「分離」而不是移除；Android 11 起前景服務中的 `cancel()` 無效（原始碼註解也寫 Android 11 problem），所以播放中滑掉 App，卡片成為孤兒。②`TtsAudioHandler.stop()` 若 `onPause` 拋例外或卡住，idle 狀態送不出去，服務不會結束。修法：`main.dart` AudioServiceConfig 加 `androidResumeOnClick: false`（onDestroy 改 STOP_FOREGROUND_REMOVE；代價是 App 完全結束後耳機播放鍵不會喚醒朗讀）；`stop()` 的 onPause 包 try＋2 秒逾時，一定送 idle；另加保險 `NotificationService.clearStaleMediaNotification()`：main() 冷啟動、AudioService.init 之前取消 ID 1124（audio_service 原生寫死的通知 ID）的殘留卡片。
+- 實機確認（新建置）：①播放中→從最近使用列表滑掉 App ②暫停後→滑掉 App ③按返回鍵離開（設計上播放中應繼續朗讀、卡片保留）。①②卡片應消失；若 MIUI 直接殺行程仍殘留，下次開 App 應自動清掉。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。

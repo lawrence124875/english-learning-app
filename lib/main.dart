@@ -67,6 +67,9 @@ Future<void> main() async {
     debugPrint('本地通知初始化失敗（不影響 App 繼續啟動）：$e\n$st');
   }
 
+  // 第十七版：冷啟動時清掉上次關閉 App 殘留的朗讀卡片（必須在 AudioService.init 之前）。
+  await NotificationService.clearStaleMediaNotification();
+
   try {
     _audioHandler = await AudioService.init(
       builder: () => TtsAudioHandler(),
@@ -74,6 +77,11 @@ Future<void> main() async {
         androidNotificationChannelId: 'tw.bcc.englishapp.audio',
         androidNotificationChannelName:
             BackgroundL10n.current().audioChannelName,
+        // 第十七版：預設 true 時，服務結束（onDestroy）只會 DETACH 前景通知，
+        // 播放中把 App 從最近使用列表滑掉，卡片會變成孤兒留在鎖屏/通知中心。
+        // 改 false → 服務結束時 STOP_FOREGROUND_REMOVE，卡片一起移除。
+        // 代價：App 完全結束後，按耳機播放鍵不會自動喚醒朗讀（本 App 用不到）。
+        androidResumeOnClick: false,
         // 不再設成 ongoing:true——這個設定會讓通知變成「不可滑掉」，
         // 但同時似乎也影響了 App 被關閉、呼叫 stop() 之後通知/鎖屏卡片
         // 沒辦法正常消失的問題。改用套件預設值（false），這是絕大多數
