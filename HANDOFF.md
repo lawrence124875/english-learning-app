@@ -175,8 +175,9 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 ### AdMob 後台設定（2026-10-05 Lawrence 在聊天那邊完成）
 - **應用程式名稱**：改為「智慧聽覺巡航 English Words Audio Cruise」（原為 `tw.bcc.englishapp`）。
 - **GDPR 訊息「LC Lab GDPR」已發布**：套用英文 App 與謙卦；語言英、德、法、西、義 5 語；含「Do not consent」（不同意）按鈕；地區為歐洲經濟區、英國、瑞士；隱私權政策網址 `https://lawrence124875.github.io/english-learning-app/`。App 端整合見第十七版（§6、§17 B5）。
-- **廣告內容分級**：維持 MA（沿用帳戶層級設定）。
-- **敏感類別封鎖**：賭博與投注、酒精飲料、性愛相關內容、社交類賭場遊戲、聳色腥；其餘允許。（隱私權政策目前沒寫分級與封鎖類別，日後若要寫需與此一致。）
+- **廣告內容分級**：**PG**（2026-10-05 Lawrence 決定，與謙卦一致；學習 App 可能有學生使用者）。原為 MA（沿用帳戶層級設定）。
+- **敏感類別封鎖**：賭博與投注、酒精飲料、性愛相關內容、社交類賭場遊戲、聳色腥；其餘允許。（隱私權政策目前沒寫分級與封鎖類別，日後若要寫需與此一致：PG＋上列封鎖類別。）
+- **Play 開發人員名稱**：已確認為 **LC Lab**（2026-10-05）；隱私權政策的「LC Lab（Lawrence Chang）」維持。
 - **app-ads.txt 已放網域根目錄** `https://lawrence124875.github.io/app-ads.txt`（repo `lawrence124875/lawrence124875.github.io`），內容 `google.com, pub-6291816733600445, DIRECT, f08c47fec0942fa0`，與謙卦共用；本 repo `docs/app-ads.txt`（專案子路徑）保留不刪。
 
 ---
