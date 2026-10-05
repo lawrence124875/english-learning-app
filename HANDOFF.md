@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-05（**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-05（**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -168,7 +168,14 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - 訂閱：`premium_monthly`（NT$149）、年繳（NT$999）。年繳設定：帳單週期每年、寬限期用 Google 建議值、帳戶保留自動計算、方案變更「下個結帳日收費」（建議）、重新訂閱允許。取消訂閱後自動於期末回到免費版，不需後台操作。RevenueCat Offering 的 Package 需設為 Monthly / Annual 類型，訂閱頁才會顯示「月繳/年繳方案」。
 - 商店資訊：繁中 + 日韓越印尼 + 簡中/西/葡 皆已送審；**泰文已移除**（App 沒有泰文）。簡中（zh-CN）、西（es-419，可另加 es-ES）、葡（pt-BR）文案在 `store_assets/store_listing_zhcn_es_pt.md`，待上傳。簡短說明採「忠於中文原句（20/80、92%、找回信心）」的版本。
 - AI 素材聲明：選「不為素材加上標籤」（截圖為實機畫面、圖示由 generate_assets.py 程式繪製）。
-- 隱私權政策、app-ads.txt：GitHub Pages `https://lawrence124875.github.io/english-learning-app/`。
+- 隱私權政策：GitHub Pages `https://lawrence124875.github.io/english-learning-app/`（中英雙語，2026-10-05）。app-ads.txt：見下方 AdMob 後台設定（網域根目錄）；`docs/app-ads.txt` 保留不刪。
+
+### AdMob 後台設定（2026-10-05 Lawrence 在聊天那邊完成）
+- **應用程式名稱**：改為「智慧聽覺巡航 English Words Audio Cruise」（原為 `tw.bcc.englishapp`）。
+- **GDPR 訊息「LC Lab GDPR」已發布**：套用英文 App 與謙卦；語言英、德、法、西、義 5 語；含「Do not consent」（不同意）按鈕；地區為歐洲經濟區、英國、瑞士；隱私權政策網址 `https://lawrence124875.github.io/english-learning-app/`。App 端整合見第十七版（§6、§17 B5）。
+- **廣告內容分級**：維持 MA（沿用帳戶層級設定）。
+- **敏感類別封鎖**：賭博與投注、酒精飲料、性愛相關內容、社交類賭場遊戲、聳色腥；其餘允許。（隱私權政策目前沒寫分級與封鎖類別，日後若要寫需與此一致。）
+- **app-ads.txt 已放網域根目錄** `https://lawrence124875.github.io/app-ads.txt`（repo `lawrence124875/lawrence124875.github.io`），內容 `google.com, pub-6291816733600445, DIRECT, f08c47fec0942fa0`，與謙卦共用；本 repo `docs/app-ads.txt`（專案子路徑）保留不刪。
 
 ---
 
@@ -308,9 +315,9 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 ---
 
 ## 14b. repo 改私人的評估（2026-09-30）
-- **結論（2026-09-30 Lawrence 決定）：english-learning-app 與 iching-cards 都維持公開，不改私人、不另建網頁 repo。** 以下評估留作紀錄。仍要做的：①在 AdMob 確認 app-ads.txt 驗證狀態（目前在專案子路徑，AdMob 找的是網域根目錄；若顯示找不到，再建 `lawrence124875.github.io` 放根目錄的 app-ads.txt）②build_android.yml 加 paths-ignore（下次改版時）。repo 公開＝文件、commit、Issue 內絕不可寫金鑰／密碼／權杖。
+- **結論（2026-09-30 Lawrence 決定）：english-learning-app 與 iching-cards 都維持公開，不改私人、不另建網頁 repo。** 以下評估留作紀錄。仍要做的：①~~在 AdMob 確認 app-ads.txt 驗證狀態（目前在專案子路徑，AdMob 找的是網域根目錄；若顯示找不到，再建 `lawrence124875.github.io` 放根目錄的 app-ads.txt）~~ **✅ 2026-10-05 已解決：已建 `lawrence124875.github.io` repo，app-ads.txt 放在網域根目錄（見 §7 AdMob 後台設定）；驗證狀態待正式上架連結 Play 商店後確認（§17 C）** ②build_android.yml 加 paths-ignore（下次改版時）。repo 公開＝文件、commit、Issue 內絕不可寫金鑰／密碼／權杖。
 - 構想（易經 App 對話提出）：另建一個只放網頁的公開 repo，放兩個 App 的隱私權政策與 app-ads.txt；Play Console 隱私權政策網址／開發者網站改指向新網頁、確認 AdMob app-ads.txt 驗證正常後，再把 english-learning-app 改私人。iching-cards 從一開始就私人。
-- **網頁 repo 建議命名 `lawrence124875.github.io`（使用者站台）**：app-ads.txt 必須在開發者網站網域的根目錄，AdMob 會找 `https://lawrence124875.github.io/app-ads.txt`；目前放在專案站台子路徑 `/english-learning-app/app-ads.txt`，可能根本沒被 AdMob 讀到（搬家時順便修正，並在 AdMob 確認驗證狀態）。兩個 App 共用同一份 app-ads.txt（同一個發布商 ID）。資料安全性裡的刪除資料網址 `#data-deletion` 也要一起改。
+- **網頁 repo 建議命名 `lawrence124875.github.io`（使用者站台）**：app-ads.txt 必須在開發者網站網域的根目錄，AdMob 會找 `https://lawrence124875.github.io/app-ads.txt`；目前放在專案站台子路徑 `/english-learning-app/app-ads.txt`，可能根本沒被 AdMob 讀到（搬家時順便修正，並在 AdMob 確認驗證狀態）。**✅ 2026-10-05 已解決：只建使用者站台 repo 放根目錄 app-ads.txt，隱私權政策仍留在本 repo（未搬家）。**兩個 App 共用同一份 app-ads.txt（同一個發布商 ID）。資料安全性裡的刪除資料網址 `#data-deletion` 也要一起改。
 - **改私人前必須先解決的代價**（免費帳號）：
   1. **GitHub Actions 分鐘數**：公開 repo 免費不限；私人 repo 每月 2,000 分鐘，macOS 執行器按 10 倍計。實測 9/28～9/30 約兩天就跑了 48 次 Android 建置、共約 544 分鐘（平均 11 分鐘），照這個頻率一個月會遠超 2,000；iOS 建置一次約 12～25 分鐘 ×10 倍＝120～250 分鐘。
   2. **main 分支保護規則集**：免費帳號的私人 repo 不能用規則集（9/29 設的禁止刪除／強制推送會失效）。
@@ -397,6 +404,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - ✅ **2026-10-03 #214（94b9e7e）紅米實機 4 項全部通過**：①播放中滑掉 App 卡片消失 ②暫停後滑掉 App 卡片消失 ③播放中按返回鍵繼續朗讀 ④快速連按上一個／下一個正常。**下一步：第十五版審查通過後，上傳 #214 AAB（english-app-builds Release `android-release-run214`）＋ `release_notes_v16.md`（11 語、三項）到封閉測試軌道。**
 
 ### B5. 第十七版（0.1.14+17）—— 2026-10-05 歐洲廣告同意（UMP）與隱私權政策
+- AdMob 端：GDPR 訊息「LC Lab GDPR」2026-10-05 已發布（5 語、含不同意按鈕、EEA／英國／瑞士），細節見 §7「AdMob 後台設定」。
 - 做法比照謙卦 `lib/core/admob/admob_ads.dart`（UMP API 已內建在 google_mobile_ads，不需另加套件）。程式：`ads_service.dart`（`startConsentAndAds`、`showPrivacyOptions`、`sdkReady`、`privacyOptionsRequired`）、`app_state.dart`（非 Premium 才啟動）、`banner_ad_widget.dart`（等 sdkReady）、`home_screen.dart`（選單）。
 - 取捨：Premium 使用者完全不走同意流程、不初始化廣告 SDK；免費版每次啟動都會請求同意資訊（UMP 規定），需要時才顯示表單。同意流程失敗／逾時：若 `canRequestAds()` 仍為 true（例如之前已同意、或非歐洲）照常初始化，否則這次不顯示廣告。
 - 隱私權政策 `docs/index.html` 改寫為中英雙語（生效日期 2026-10-05），AdMob 段落比照謙卦 privacy.html：AdMob 收集的資料、歐洲同意表單、「廣告隱私設定」入口、訂閱者不顯示廣告；開發者名稱改「LC Lab（Lawrence Chang）」。`#data-deletion` 錨點保留（Play 資料安全性網址用），英文版另有 `#data-deletion-en`。
@@ -406,7 +414,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。
 2. 核准後建立正式版，推第十二版（或當時最新版）。
-3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）、確認廣告出現在免費版。
+3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；確認廣告出現在免費版。
 
 ### D. 正式版上架後
 1. 小預算驗證（NT$1～3 萬、2～3 個市場投 Google App 廣告），看 Analytics D1/D7 留存與付費轉換。
