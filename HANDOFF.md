@@ -20,8 +20,9 @@
 6. english-app-builds 的 Releases（`android-release-run<N>`、個人版）可直接用 GitHub 工具查看，不必再請 Lawrence 確認。
 7. 本機編譯：舊容器連不到 Google 儲存空間無法裝 Flutter SDK；雲端工作階段 2026-10-05 測試可連到 storage.googleapis.com，**是否能本機裝 Flutter 尚未驗證**，目前仍以 CI 為準。
 
-舊流程紀錄（2026-10-04 以前的一般對話，已停用）：每次由 Lawrence 貼 fine-grained 權杖（`english-app-claude`，到期 2026-10-26），push 用 `https://x-access-token:<TOKEN>@...`，以 curl 呼叫 Actions API、讀 `::error::` annotation。雲端工作階段不再需要這個權杖，到期不必重產（可由 Lawrence 自行刪除）。易經對話權杖 `iching-cards`（到期 2026-10-30）依易經對話需要處理。**CI 專用權杖 `ci-private-releases`（只存 Secret `BUILDS_REPO_TOKEN`）仍在使用**，workflow 發 Release 靠它，到期時仍須重產並更新 Secret。
+舊流程紀錄（2026-10-04 以前的一般對話，已停用）：每次由 Lawrence 貼 fine-grained 權杖（`english-app-claude`，到期 2026-10-26），push 用 `https://x-access-token:<TOKEN>@...`，以 curl 呼叫 Actions API、讀 `::error::` annotation。雲端工作階段不再需要這個權杖，到期不必重產（可由 Lawrence 自行刪除）。易經對話權杖 `iching-cards`（到期 2026-10-30）依易經對話需要處理。**CI 專用權杖 `ci-private-releases`（只存 Secret `BUILDS_REPO_TOKEN`，無到期日）仍在使用**，workflow 發 Release 靠它。
 
+- **分工（2026-10-05 Lawrence 決定）**：Play Console、AdMob、RevenueCat 等後台操作與截圖判讀，在 **Claude 聊天**那邊處理；**Claude Code** 只負責程式、文件（含本檔、商店文案、版本資訊）與 CI。Code 這邊遇到需要後台操作的事，寫進本檔待辦並提醒 Lawrence 到聊天處理，不在 Code 這邊判讀後台截圖。
 - **main 分支保護（2026-09-29 設定）**：規則集 `protect-main`（Active，目標＝預設分支 main）只開「限制删除」與「阻止强制推送」。一般 push 不受影響；**不可用 `git push --force`**（會被拒）。不要加「需要拉取请求」等規則，否則 Claude 無法直接推送。規則集只能由 Lawrence 在網頁（设置→规则→规则集）修改。
 - 容器**不能直接操作 Firebase**（沒有憑證）。需要操作 Firebase 時，應該用 GitHub Secrets + Actions 代為執行（見第 9 節）。
 
@@ -192,7 +193,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 ## 10. 踩過的坑
 
 - **個人全解鎖版不可放公開 repo 的 Artifacts**（2026-10-01 發現）：公開 repo 的 Artifacts 任何登入 GitHub 的人都能下載，等於免費送出 Premium。`build_personal.yml`、`build_ios_personal.yml` 已改為發佈到**私人 repo `lawrence124875/english-app-builds` 的 Release**（tag `android-personal-run<N>`／`ios-personal-run<N>`），Lawrence 手機登入 GitHub 從 Releases 下載。舊的 13 個個人版 artifact 已用一次性 workflow `archive_personal_builds.yml`（用完已刪除）搬到該 repo 的 Release `archive-2026-09`，2026-10-01 公開 repo 的 13 個個人版 artifact 已全部刪除（Release 另有 GitHub 自動附的 2 個 Source code 檔，正常）。**2026-10-01 Lawrence 決定：任何 APK/AAB 都不放公開 Artifacts**——build_android.yml 也改為發佈到 english-app-builds 的 Release `android-release-run<N>`（含 `release_<版本>_run<N>.apk/.aab`）；上傳 Play 時到該 Release 下載 AAB（不再從 Actions 頁面下載）。2026-10-01 以 Actions #211 驗證新流程成功（Release `android-release-run211`），公開 repo 其餘 338 個 artifacts（多數已過期）全部刪除、剩 0 個（Play 已上傳的版本可在 Play Console 的 App Bundle 檔案庫取得）。**新增任何會產生全解鎖或私人內容的建置，都不可用 upload-artifact。**
-- **權杖分工**（2026-10-01 Lawrence 決定）：①英文對話用（每次貼上，授權 english-learning-app）②易經對話用（另一個）③**CI 專用**（名稱 `ci-private-releases`，只授權 english-app-builds＋iching-content、Contents 讀寫；只存 Secret，英文 App 為 `BUILDS_REPO_TOKEN`，從不貼到對話）。③到期時個人版建置會失敗，需重產並更新兩個 repo 的 Secret。對話用權杖看不到 english-app-builds（私人、未授權），Release 內容由 workflow 日誌或 Lawrence 確認。**2026-10-05 起改雲端工作階段，①②不再需要，english-app-builds 可直接查看（見 §0）；③照舊。**
+- **權杖分工**（2026-10-01 Lawrence 決定）：①英文對話用（每次貼上，授權 english-learning-app）②易經對話用（另一個）③**CI 專用**（名稱 `ci-private-releases`，只授權 english-app-builds＋iching-content、Contents 讀寫；只存 Secret，英文 App 為 `BUILDS_REPO_TOKEN`，從不貼到對話）。③無到期日（不需定期重產）。對話用權杖看不到 english-app-builds（私人、未授權），Release 內容由 workflow 日誌或 Lawrence 確認。**2026-10-05 起改雲端工作階段，①②不再需要，english-app-builds 可直接查看（見 §0）；③照舊。**
 
 - **MainActivity 必須是 singleTask**（第十四版）：singleTop 時點通知會建立第二個 MainActivity，與 AudioServiceActivity 共用的快取 FlutterEngine 被舊實例拆離 → 畫面停住。`patch_main_activity.sh` 負責設定，不要拿掉。
 
