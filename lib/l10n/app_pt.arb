@@ -175,5 +175,6 @@
   "importWordLangLabel": "Qual é o idioma da primeira coluna? (para a voz de leitura)",
   "importVoiceMissing": "Seu celular não tem voz de leitura para \"{language}\", então não será lido em voz alta. Instale-a em \"Configurações → Conversão de texto em voz\".",
   "menuShare": "Compartilhar com amigos",
-  "shareMessage": "Recomendo o \"Aprender Inglês Ouvindo\": aprenda com a regra 20/80 só as palavras essenciais que cobrem 92% do inglês do dia a dia, ouvindo em segundo plano enquanto se desloca, caminha ou faz tarefas, em inglês e em português. Baixe grátis:"
+  "shareMessage": "Recomendo o \"Aprender Inglês Ouvindo\": aprenda com a regra 20/80 só as palavras essenciais que cobrem 92% do inglês do dia a dia, ouvindo em segundo plano enquanto se desloca, caminha ou faz tarefas, em inglês e em português. Baixe grátis:",
+  "menuAdPrivacy": "Privacidade de anúncios"
 }

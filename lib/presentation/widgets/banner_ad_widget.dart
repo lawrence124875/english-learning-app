@@ -17,10 +17,22 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void initState() {
     super.initState();
+    // 第十七版：廣告 SDK 要等使用者同意（UMP）後才初始化，就緒時才載入。
+    if (AdsService.sdkReady.value) {
+      _loadBanner();
+    } else {
+      AdsService.sdkReady.addListener(_onSdkReady);
+    }
+  }
+
+  void _onSdkReady() {
+    if (!AdsService.sdkReady.value || !mounted) return;
+    AdsService.sdkReady.removeListener(_onSdkReady);
     _loadBanner();
   }
 
   void _loadBanner() {
+    if (_bannerAd != null) return;
     _bannerAd = BannerAd(
       adUnitId: AdsService.bannerAdUnitId,
       size: AdSize.banner,
@@ -38,6 +50,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   void dispose() {
+    AdsService.sdkReady.removeListener(_onSdkReady);
     _bannerAd?.dispose();
     super.dispose();
   }

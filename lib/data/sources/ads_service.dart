@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'analytics_service.dart';
@@ -16,12 +19,86 @@ import 'analytics_service.dart';
 ///
 /// 正式廣告單元 ID 透過 --dart-define 在編譯時期注入（見 CI），
 /// 沒有注入時會退回 Google 官方測試版位 ID，方便本機開發測試。
+///
+/// 第十七版：歐洲等地區的使用者同意（Google UMP，AdMob「LC Lab GDPR」訊息）。
+/// 啟動時只掛生命週期監聽，**不初始化廣告 SDK**；AppState 確認不是 Premium 後
+/// 呼叫 [startConsentAndAds]：先請求同意資訊、需要時顯示同意表單，
+/// `canRequestAds()` 為 true 才初始化 MobileAds 並開始載入廣告。
 class AdsService {
   static Future<void> initialize() async {
-    await MobileAds.instance.initialize();
     WidgetsBinding.instance.addObserver(_AdLifecycleObserver());
+  }
+
+  /// 廣告 SDK 已初始化（已取得同意或該地區不需同意）。橫幅與獎勵廣告要等它。
+  static final ValueNotifier<bool> sdkReady = ValueNotifier(false);
+
+  /// 是否需要在選單提供「廣告隱私設定」（歐洲等需要同意的地區才為 true）。
+  static bool privacyOptionsRequired = false;
+
+  static bool _consentStarted = false;
+
+  /// 免費版才呼叫（AppState 確認不是 Premium 後）；只會執行一次。
+  /// 同意流程失敗或逾時不影響 App，只是這次不初始化廣告（除非 canRequestAds
+  /// 已經是 true，例如上次已同意）。
+  static Future<void> startConsentAndAds() async {
+    if (_consentStarted) return;
+    _consentStarted = true;
+    try {
+      await _gatherConsent().timeout(const Duration(seconds: 15));
+    } catch (e) {
+      debugPrint('廣告同意流程失敗：$e');
+    }
+    try {
+      if (await ConsentInformation.instance.canRequestAds()) await _startSdk();
+    } catch (e) {
+      debugPrint('AdMob 初始化失敗，不顯示廣告：$e');
+    }
+  }
+
+  static Future<void> _gatherConsent() {
+    final done = Completer<void>();
+    ConsentInformation.instance.requestConsentInfoUpdate(
+      ConsentRequestParameters(),
+      () => ConsentForm.loadAndShowConsentFormIfRequired((FormError? e) async {
+        await _refreshPrivacyRequirement();
+        if (!done.isCompleted) done.complete();
+      }),
+      (FormError e) {
+        if (!done.isCompleted) done.complete();
+      },
+    );
+    return done.future;
+  }
+
+  static Future<void> _refreshPrivacyRequirement() async {
+    try {
+      privacyOptionsRequired = await ConsentInformation.instance
+              .getPrivacyOptionsRequirementStatus() ==
+          PrivacyOptionsRequirementStatus.required;
+    } catch (_) {}
+  }
+
+  static Future<void> _startSdk() async {
+    if (sdkReady.value) return;
+    await MobileAds.instance.initialize();
+    sdkReady.value = true;
     _preloadInterstitial();
     _preloadAppOpen();
+  }
+
+  /// 選單「廣告隱私設定」：重新顯示 UMP 隱私選項表單，讓使用者修改或撤回同意。
+  static Future<void> showPrivacyOptions() async {
+    final done = Completer<void>();
+    ConsentForm.showPrivacyOptionsForm((FormError? e) async {
+      try {
+        if (await ConsentInformation.instance.canRequestAds()) {
+          await _startSdk();
+        }
+      } catch (_) {}
+      await _refreshPrivacyRequirement();
+      if (!done.isCompleted) done.complete();
+    });
+    return done.future;
   }
 
   static const _rewardedAdUnitId = String.fromEnvironment(
@@ -105,6 +182,10 @@ class AdsService {
     required void Function() onLoaded,
     required void Function() onFailed,
   }) async {
+    if (!sdkReady.value) {
+      onFailed();
+      return;
+    }
     await RewardedAd.load(
       adUnitId: _rewardedAdUnitId,
       request: const AdRequest(),
@@ -152,6 +233,7 @@ class AdsService {
   // ---------------- 插頁廣告 ----------------
 
   static void _preloadInterstitial() {
+    if (!sdkReady.value) return;
     InterstitialAd.load(
       adUnitId: _interstitialAdUnitId,
       request: const AdRequest(),
@@ -214,7 +296,7 @@ class AdsService {
   }
 
   static void _preloadAppOpen() {
-    if (_appOpenLoading || _appOpenAvailable) return;
+    if (!sdkReady.value || _appOpenLoading || _appOpenAvailable) return;
     _appOpenLoading = true;
     AppOpenAd.load(
       adUnitId: _appOpenAdUnitId,

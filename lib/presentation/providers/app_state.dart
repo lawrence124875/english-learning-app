@@ -135,6 +135,8 @@ class AppState extends ChangeNotifier {
 
     isPremium = await SubscriptionService.isPremium();
     AdsService.adsEnabled = !isPremium;
+    // 第十七版：免費版才走廣告同意（UMP）流程並初始化廣告；不等它完成。
+    if (!isPremium) unawaited(AdsService.startConsentAndAds());
     AnalyticsService.setUserProperties(isPremium: isPremium);
     stats = await _statsRepository.loadStats();
     reminderEnabled = await _progressRepository.loadReminderEnabled();

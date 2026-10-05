@@ -175,5 +175,6 @@
   "importWordLangLabel": "What language is the first column? (sets the reading voice)",
   "importVoiceMissing": "Your phone has no text-to-speech voice for \"{language}\", so it can't be read aloud. Install one in Settings → Text-to-speech.",
   "menuShare": "Share with friends",
-  "shareMessage": "Try English Words Audio Cruise: learn the core English words that cover 92% of everyday English with the 80/20 rule. It reads them aloud in the background while you commute, walk, or do chores. Free download:"
+  "shareMessage": "Try English Words Audio Cruise: learn the core English words that cover 92% of everyday English with the 80/20 rule. It reads them aloud in the background while you commute, walk, or do chores. Free download:",
+  "menuAdPrivacy": "Ad privacy settings"
 }

@@ -15,6 +15,7 @@ import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
 import '../../data/sources/analytics_service.dart';
+import '../../data/sources/ads_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -103,6 +104,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         builder: (_) => const OnboardingScreen()));
               } else if (value == 'share') {
                 _shareApp(context);
+              } else if (value == 'adPrivacy') {
+                AdsService.showPrivacyOptions();
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -145,6 +148,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuShare),
                 ),
               ),
+              // 第十七版：歐洲等需要同意的地區（UMP）才顯示，讓使用者修改廣告同意。
+              if (!appState.isPremium && AdsService.privacyOptionsRequired)
+                PopupMenuItem(
+                  value: 'adPrivacy',
+                  child: ListTile(
+                    leading: const Icon(Icons.privacy_tip_outlined),
+                    title: Text(AppLocalizations.of(context)!.menuAdPrivacy),
+                  ),
+                ),
               PopupMenuItem(
                 value: 'about',
                 child: ListTile(

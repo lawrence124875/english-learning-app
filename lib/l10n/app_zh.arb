@@ -338,5 +338,9 @@
   },
   "@shareMessage": {
     "description": "分享文字，程式會在後面接上 Play 商店連結"
+  },
+  "menuAdPrivacy": "廣告隱私設定",
+  "@menuAdPrivacy": {
+    "description": "選單：廣告隱私設定（Google UMP 隱私選項表單，只在歐洲等需要同意的地區顯示，第十七版）"
   }
 }

@@ -175,5 +175,6 @@
   "importWordLangLabel": "Bahasa apa di kolom pertama? (untuk suara pembacaan)",
   "importVoiceMissing": "Ponsel belum punya suara pembacaan \"{language}\", jadi tidak bisa dibacakan. Pasang paket suaranya di \"Setelan → Text-to-speech\".",
   "menuShare": "Bagikan ke teman",
-  "shareMessage": "Coba aplikasi \"Kosakata Inggris Sambil Dengar\": belajar dengan prinsip 20/80, fokus pada kosakata inti yang mencakup 92% bahasa Inggris sehari-hari, dibacakan di latar belakang saat perjalanan, jalan kaki, atau mengerjakan pekerjaan rumah, dengan dua bahasa. Unduh gratis:"
+  "shareMessage": "Coba aplikasi \"Kosakata Inggris Sambil Dengar\": belajar dengan prinsip 20/80, fokus pada kosakata inti yang mencakup 92% bahasa Inggris sehari-hari, dibacakan di latar belakang saat perjalanan, jalan kaki, atau mengerjakan pekerjaan rumah, dengan dua bahasa. Unduh gratis:",
+  "menuAdPrivacy": "Pengaturan privasi iklan"
 }

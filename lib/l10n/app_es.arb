@@ -175,5 +175,6 @@
   "importWordLangLabel": "¿En qué idioma está la primera columna? (para la voz de lectura)",
   "importVoiceMissing": "Tu teléfono no tiene voz de lectura para \"{language}\", así que no se podrá leer en voz alta. Instálala en \"Ajustes → Texto a voz\".",
   "menuShare": "Compartir con amigos",
-  "shareMessage": "Te recomiendo \"Aprender Inglés Escuchando\": aprende con la regla 20/80 solo las palabras clave que cubren el 92 % del inglés cotidiano, escuchándolas en segundo plano mientras viajas, caminas o haces tareas, en inglés y en español. Descarga gratis:"
+  "shareMessage": "Te recomiendo \"Aprender Inglés Escuchando\": aprende con la regla 20/80 solo las palabras clave que cubren el 92 % del inglés cotidiano, escuchándolas en segundo plano mientras viajas, caminas o haces tareas, en inglés y en español. Descarga gratis:",
+  "menuAdPrivacy": "Privacidad de anuncios"
 }

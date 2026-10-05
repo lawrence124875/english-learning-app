@@ -3,70 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>智慧聽覺巡航 - 隱私權政策</title>
+<title>智慧聽覺巡航 - 隱私權政策 Privacy Policy</title>
 <style>
-  body { font-family: -apple-system, "Noto Sans TC", "PingFang TC", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #2C2C28; background: #FAFAF7; }
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #2C2C28; background: #FAFAF7; }
   h1 { font-size: 1.6em; }
   h2 { font-size: 1.2em; margin-top: 2em; color: #5B8A72; }
   a { color: #5B8A72; }
-  footer { margin-top: 3em; color: #888; font-size: 0.9em; }
+  li { margin-bottom: 0.4em; }
+  hr { border: none; border-top: 1px solid #ccc; margin: 3em 0; }
+  .meta, footer { color: #777; font-size: 0.92em; }
+  footer { margin-top: 3em; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #E6E6E0; background: #1E1F1C; }
+    h2, a { color: #8CC3A6; }
+    .meta, footer { color: #A0A098; }
+  }
 </style>
 </head>
 <body>
+<p class="meta"><a href="#en">English version below</a></p>
+
 <h1>智慧聽覺巡航 隱私權政策</h1>
-<p>生效日期：2026年9月（最後更新：2026年9月26日，新增使用統計說明）</p>
-<p>開發者：Lawrence.chang（聯絡信箱：<a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a>）</p>
+<p class="meta">生效日期：2026 年 10 月 5 日（新增歐洲廣告同意與英文版）<br>
+開發者：LC Lab（Lawrence Chang）　聯絡信箱：<a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a></p>
 
-<p>「智慧聽覺巡航」（以下稱「本App」）尊重並保護使用者的隱私。本政策說明本App在使用過程中會蒐集哪些資訊、如何使用，以及使用者擁有的權利。</p>
+<p>「智慧聽覺巡航」（以下稱「本 App」）是背景朗讀英文單字的學習 App。本 App 不需要註冊或登入。本政策說明本 App 會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
 
-<h2>本App蒐集的資訊</h2>
+<h2>只存在您手機裡的資料</h2>
 <ul>
-  <li><strong>當機報告（Firebase Crashlytics）</strong>：本App使用 Firebase Crashlytics 蒐集當機診斷資訊（例如錯誤堆疊、裝置型號、系統版本），用於改善App穩定性，不包含使用者個人身分資訊。</li>
-  <li><strong>匿名使用統計（Firebase Analytics）</strong>：本App使用 Firebase Analytics 蒐集匿名的使用行為統計，例如開始播放、播完一輪、切換教材、標記不熟悉單字、查看訂閱頁、購買訂閱、觀看獎勵廣告、匯入自訂教材的筆數，以及App介面語言與是否為訂閱用戶。Firebase Analytics 會使用 App 實例識別碼等裝置識別碼。這些資料僅用於了解功能使用情形、改善App與規劃支援的語言，不包含使用者姓名、聯絡方式，也不會記錄自訂教材的名稱或單字內容。</li>
-  <li><strong>廣告識別碼（Google AdMob）</strong>：免費版會顯示廣告，AdMob 可能會使用裝置的廣告識別碼提供個人化廣告，使用者可在裝置系統設定中關閉個人化廣告或重設廣告識別碼。</li>
-  <li><strong>訂閱購買紀錄（RevenueCat / Google Play）</strong>：若使用者選擇訂閱付費方案，交易透過 Google Play 帳單處理，本App透過 RevenueCat 確認訂閱狀態，不會取得使用者的付款卡片資訊。</li>
-  <li><strong>使用者主動提交的意見回饋</strong>：使用者在App內「意見回饋」功能中主動填寫的內容（回饋類型、文字內容、選填的聯絡信箱），會被儲存至 Firebase Firestore，僅供開發者查看、改善App使用。</li>
-  <li><strong>本機儲存的學習進度</strong>：學習進度、星號標記、設定偏好等資料，儲存在使用者裝置本機，不會上傳到伺服器。</li>
+  <li><strong>學習進度與設定</strong>：學習進度、星號（不熟悉單字）、學習統計、提醒時間、朗讀設定等，只儲存在您的裝置本機，不會上傳到伺服器。</li>
+  <li><strong>自訂教材</strong>：您匯入的 CSV 教材內容只存在本機，不會上傳。</li>
 </ul>
 
-<h2>本App不會做的事</h2>
+<h2>為改善 App 而蒐集的資訊</h2>
 <ul>
-  <li>不需要註冊帳號或登入即可使用本App</li>
-  <li>不會蒐集使用者姓名、電話、地址等個人身分資訊</li>
-  <li>不會將使用者資料出售給第三方</li>
+  <li><strong>匿名使用統計（Firebase Analytics）</strong>：記錄少數操作事件，例如開始播放、播完一輪、切換教材、標記不熟悉單字、查看訂閱頁、購買訂閱、觀看獎勵廣告、匯入自訂教材的筆數、分享 App，以及 App 介面語言與是否為訂閱會員。Firebase Analytics 也會自動收集一般的裝置與使用資訊（例如裝置型號、系統版本、App 版本、大致地區），並使用 App 實例識別碼等裝置識別碼。<br>
+  <strong>統計絕不包含</strong>您的姓名、聯絡方式，也不記錄自訂教材的名稱或單字內容（自訂教材一律記為「custom」）。</li>
+  <li><strong>當機報告（Firebase Crashlytics）</strong>：App 發生當機時，蒐集錯誤堆疊、裝置型號、系統版本等診斷資訊，用於修正問題，不包含您的個人身分資訊。</li>
+  <li><strong>您主動提交的意見回饋（Firebase Firestore）</strong>：App 內「意見回饋」填寫的類型、文字內容、選填的聯絡信箱，以及 App 版本、介面語言與提交時間，僅供開發者查看與改善 App。</li>
 </ul>
+
+<h2>廣告（免費版）</h2>
+<p>免費版會在首頁底部顯示橫幅廣告；播完一輪時顯示插頁廣告（只在 App 位於前景時顯示，鎖屏或背景收聽時會等您回到 App 才顯示）；離開 App 一段時間後回來時，偶爾顯示開啟應用程式廣告（每小時最多一次）；並提供您自行選擇觀看的獎勵廣告（看完可多解鎖教材單字）。廣告由 <strong>Google AdMob</strong> 提供，AdMob 可能蒐集並使用：裝置廣告識別碼、IP 位址與由此推得的大致地區、裝置與 App 資訊、廣告互動紀錄，用於投放、計算成效、限制頻率與防止詐欺；在您同意的情況下也可能用於個人化廣告。</p>
+<ul>
+  <li>在需要取得同意的地區（例如歐洲經濟區、英國、瑞士），App 會先以 Google 的同意表單詢問您，取得同意前不會初始化廣告；之後可從首頁右上角選單的「廣告隱私設定」隨時更改。</li>
+  <li>您可在裝置系統設定中重設或刪除廣告識別碼，或選擇停用個人化廣告。</li>
+  <li>訂閱會員（Premium）不顯示任何廣告；App 啟動時確認為會員後，也不會詢問廣告同意或初始化廣告。</li>
+</ul>
+<p>AdMob 的資料處理方式請見 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用合作夥伴網站或應用程式的資訊</a>。</p>
+
+<h2>訂閱（Premium）</h2>
+<p>月繳與年繳訂閱經由 <strong>Google Play 結帳</strong>完成，付款資料（信用卡等）由 Google 處理，開發者看不到。訂閱狀態透過 <strong>RevenueCat</strong> 服務確認：RevenueCat 會收到一組隨機產生的匿名使用者 ID、購買紀錄（方案、購買與到期時間、交易編號）以及裝置與 App 基本資訊，只用於確認您是否為會員、恢復購買與訂閱統計，不含您的姓名或電子郵件。訂閱會自動續訂，可隨時在 Google Play 的「付款和訂閱」中取消，取消後會員資格保留到本期結束。RevenueCat 的資料處理方式請見 <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat 隱私權政策</a>。</p>
+
+<h2>App 使用的權限</h2>
+<ul>
+  <li><strong>通知、準時鬧鐘、開機後重新排程</strong>：只用於您自行開啟的每日學習提醒與久未使用提醒。</li>
+  <li><strong>前景服務（媒體播放）、保持喚醒</strong>：讓您關閉螢幕或切到其他 App 時能繼續朗讀，並在鎖定畫面與通知列顯示播放控制。</li>
+  <li><strong>忽略電池最佳化（由您決定是否允許）</strong>：避免系統在背景朗讀或提醒時關閉 App。</li>
+  <li><strong>網路、廣告識別碼</strong>：用於上述 Firebase 服務、顯示廣告（免費版）與確認訂閱狀態。</li>
+  <li><strong>Google Play 結帳</strong>：只用於購買與恢復訂閱。</li>
+</ul>
+
+<h2>本 App 不會做的事</h2>
+<ul>
+  <li>不要求註冊帳號或登入。</li>
+  <li>不蒐集姓名、電話、地址、相片、聯絡人或精確位置（意見回饋中您自願填寫的信箱除外）。</li>
+  <li>不出售或出租任何使用者資料。</li>
+</ul>
+
+<h2>資料分享</h2>
+<p>上述統計、當機與意見回饋資料由 Google 的 Firebase 服務處理；廣告由 Google AdMob 處理；訂閱由 Google Play 與 RevenueCat 處理（見上方各段）。傳輸過程皆經過加密。除此之外，本 App 不與任何第三方分享資料。Firebase 的資料處理方式請見 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權與安全性說明</a>。</p>
 
 <h2>兒童隱私</h2>
-<p>本App內容適合所有年齡層學習英語使用，但並非專門設計給13歲以下兒童使用，也不會刻意向兒童蒐集個人資訊。</p>
+<p>本 App 適合各年齡層學習英文，但並非專為 13 歲以下兒童設計，也不會刻意向兒童蒐集個人資訊。</p>
 
-<h2>第三方服務</h2>
-<p>本App使用以下第三方服務，其各自的隱私權政策適用：</p>
+<h2 id="data-deletion">如何刪除您的資料</h2>
 <ul>
-  <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase（Google）</a></li>
-  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a></li>
-  <li><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat</a></li>
+  <li><strong>學習進度、星號、設定、自訂教材</strong>：只在您的裝置上。在系統設定中清除本 App 的資料或解除安裝，即全部刪除。</li>
+  <li><strong>意見回饋內容</strong>：來信 <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a>，主旨註明「資料刪除請求」，說明您希望刪除的內容，我們會盡快處理並回覆；可完全刪除。</li>
+  <li><strong>使用統計與當機報告</strong>：不含可識別您身分的資訊，依 Google Firebase 的保留政策處理（Analytics 事件資料保留期限為 14 個月）。若您希望刪除與您裝置相關的統計資料，請來信（同上）。</li>
+  <li><strong>廣告資料</strong>：由 Google 依其政策處理；重設或刪除裝置廣告識別碼即可切斷與先前廣告資料的關聯。</li>
+  <li><strong>訂閱紀錄</strong>：可來信（同上）要求刪除 RevenueCat 中與您匿名 ID 相關的資料；Google Play 的交易紀錄依 Google 政策保存。刪除資料不會自動取消訂閱，請先在 Google Play 取消。</li>
 </ul>
 
 <h2>政策異動</h2>
-<p>本隱私權政策若有更新，會在本頁面公告。建議使用者定期查看本頁面以了解最新內容。</p>
-
-<h2 id="data-deletion">如何要求刪除您的資料</h2>
-<p>「智慧聽覺巡航」（開發者：Lawrence.chang）提供以下方式，讓使用者要求刪除透過本App蒐集的資料：</p>
-<ol>
-  <li>寄送信件至 <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a>，主旨註明「資料刪除請求」，信件中請說明您希望刪除的內容（例如您透過App內「意見回饋」功能提交過的內容）。</li>
-  <li>我們會在收到請求後，確認身分後盡快處理，並以電子郵件回覆處理結果。</li>
-</ol>
-<p>可刪除的資料類型：</p>
-<ul>
-  <li><strong>意見回饋內容</strong>（使用者主動透過App內「意見回饋」功能提交的文字與選填聯絡信箱）：可完全刪除，無保留期限。</li>
-  <li><strong>當機診斷資訊</strong>（Firebase Crashlytics蒐集，不含個人身分資訊）：依 Google Firebase 預設政策保留，詳見 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase隱私權政策</a>。</li>
-  <li><strong>匿名使用統計</strong>（Firebase Analytics蒐集，不含個人身分資訊）：依 Google Firebase 預設政策保留（事件資料最長 14 個月），詳見 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase隱私權政策</a>。</li>
-  <li><strong>學習進度、星號標記、設定偏好</strong>：僅儲存在使用者裝置本機，解除安裝App即會一併移除，不會上傳至任何伺服器。</li>
-</ul>
+<p>本政策如有更新，會公告於本頁並更新生效日期。</p>
 
 <h2>聯絡我們</h2>
-<p>如對本隱私權政策有任何疑問，歡迎透過信箱 <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a> 與我們聯絡，或直接在App內使用「意見回饋」功能。</p>
+<p>對本政策有任何疑問，請來信 <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a>，或使用 App 內的「意見回饋」。</p>
 
-<footer>智慧聽覺巡航 © 2026</footer>
+<hr>
+
+<h1 id="en">English Words Audio Cruise Privacy Policy</h1>
+<p class="meta">Effective date: October 5, 2026 (added EU ad consent and this English version)<br>
+Developer: LC Lab (Lawrence Chang) · Contact: <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a></p>
+
+<p>English Words Audio Cruise (智慧聽覺巡航, “the App”) reads English vocabulary aloud in the background to help you learn. The App requires no account or sign-in. This policy explains what information the App collects, how it is used, and your rights.</p>
+
+<h2>Data that stays on your phone</h2>
+<ul>
+  <li><strong>Progress and settings</strong>: learning progress, starred (unfamiliar) words, statistics, reminder times and playback settings are stored only on your device and are never uploaded.</li>
+  <li><strong>Custom word lists</strong>: CSV lists you import stay on your device and are never uploaded.</li>
+</ul>
+
+<h2>Information collected to improve the App</h2>
+<ul>
+  <li><strong>Anonymous usage statistics (Firebase Analytics)</strong>: a few events such as starting playback, finishing a round, switching word lists, starring a word, viewing the subscription page, purchasing, watching a rewarded ad, the number of items in an imported list, and sharing the App, plus the App’s interface language and whether you are a subscriber. Firebase Analytics also automatically collects general device and usage information (such as device model, OS version, App version and approximate region) and uses device identifiers such as the app instance ID.<br>
+  <strong>Statistics never include</strong> your name or contact details, nor the names or contents of custom word lists (they are always recorded as “custom”).</li>
+  <li><strong>Crash reports (Firebase Crashlytics)</strong>: when the App crashes, diagnostic information such as the stack trace, device model and OS version is collected to fix the problem. It contains no personal identity information.</li>
+  <li><strong>Feedback you send (Firebase Firestore)</strong>: the category, message and optional contact email you enter in the in-app Feedback form, along with the App version, interface language and time sent, are used only by the developer to improve the App.</li>
+</ul>
+
+<h2>Ads (free version)</h2>
+<p>The free version shows a banner at the bottom of the home screen; an interstitial ad when a round finishes (only while the App is in the foreground — if you are listening from the lock screen or in the background, it waits until you return); occasionally an app-open ad when you come back after being away for a while (at most once an hour); and optional rewarded ads that you choose to watch to unlock more words. Ads are served by <strong>Google AdMob</strong>, which may collect and use the device advertising ID, IP address and the approximate location derived from it, device and app information, and ad interactions, for ad delivery, measurement, frequency capping and fraud prevention, and, with your consent, for personalized ads.</p>
+<ul>
+  <li>Where consent is required (for example in the EEA, the UK and Switzerland), the App first asks using Google’s consent form and does not initialize ads before then; you can change your choice at any time under “Ad privacy settings” in the menu at the top right of the home screen.</li>
+  <li>You can reset or delete your advertising ID, or opt out of personalized ads, in your device settings.</li>
+  <li>Premium subscribers see no ads; once the App confirms your subscription at startup, it neither asks for ad consent nor initializes ads.</li>
+</ul>
+<p>See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
+
+<h2>Subscription (Premium)</h2>
+<p>Monthly and yearly subscriptions are purchased through <strong>Google Play Billing</strong>; your payment details are handled by Google and are never visible to the developer. Subscription status is checked through <strong>RevenueCat</strong>, which receives a randomly generated anonymous user ID, purchase records (plan, purchase and expiry times, transaction ID) and basic device and app information. This is used only to confirm membership, restore purchases and produce subscription statistics, and does not include your name or email address. Subscriptions renew automatically; cancel anytime in Google Play under Payments &amp; subscriptions, and you keep Premium until the end of the current period. See the <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Notifications, exact alarms, rescheduling after reboot</strong>: used only for the daily study reminder and inactivity reminder that you turn on.</li>
+  <li><strong>Foreground service (media playback), wake lock</strong>: so reading continues with the screen off or in other apps, with playback controls on the lock screen and in notifications.</li>
+  <li><strong>Ignore battery optimizations (only if you allow it)</strong>: keeps the system from closing the App during background reading or reminders.</li>
+  <li><strong>Internet, advertising ID</strong>: used for the Firebase services above, for ads in the free version, and for checking subscription status.</li>
+  <li><strong>Google Play Billing</strong>: used only to purchase and restore subscriptions.</li>
+</ul>
+
+<h2>What the App does not do</h2>
+<ul>
+  <li>No account or sign-in.</li>
+  <li>No collection of names, phone numbers, home addresses, photos, contacts or precise location (except an email address you choose to enter in Feedback).</li>
+  <li>No selling or renting of user data.</li>
+</ul>
+
+<h2>Data sharing</h2>
+<p>The statistics, crash and feedback data above are processed by Google Firebase; ads by Google AdMob; subscriptions by Google Play and RevenueCat (see the sections above). All data is encrypted in transit. The App shares no data with any other third party. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
+
+<h2>Children</h2>
+<p>The App is suitable for English learners of all ages but is not designed for children under 13 and does not knowingly collect personal information from children.</p>
+
+<h2 id="data-deletion-en">How to delete your data</h2>
+<ul>
+  <li><strong>Progress, stars, settings and custom lists</strong> exist only on your device. Clear the App’s data or uninstall it to delete everything.</li>
+  <li><strong>Feedback</strong>: email <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a> with the subject “Data deletion request” and describe what you want deleted; it can be deleted completely.</li>
+  <li><strong>Usage statistics and crash reports</strong> contain no information that identifies you and are retained under Google Firebase policies (Analytics event data: 14 months). To request deletion of statistics associated with your device, email us (as above).</li>
+  <li><strong>Ad data</strong> is handled by Google under its policies; resetting or deleting your advertising ID breaks the link to earlier ad data.</li>
+  <li><strong>Subscription records</strong>: you can email us (as above) to delete RevenueCat data linked to your anonymous ID; Google Play keeps transaction records under its own policies. Deleting data does not cancel a subscription; please cancel in Google Play first.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>Any update to this policy will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a>, or use Feedback in the App.</p>
+
+<footer>智慧聽覺巡航 English Words Audio Cruise · LC Lab © 2026</footer>
 </body>
 </html>
