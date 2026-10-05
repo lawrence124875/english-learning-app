@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-05（**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-05（**RevenueCat／訂閱後台設定（服務帳戶、Entitlement 改 premium、Offering）見 §7，訂閱實機測試待辦見 §17 A-4**；**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -179,6 +179,16 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - **敏感類別封鎖**：賭博與投注、酒精飲料、性愛相關內容、社交類賭場遊戲、聳色腥；其餘允許。（隱私權政策目前沒寫分級與封鎖類別，日後若要寫需與此一致：PG＋上列封鎖類別。）
 - **Play 開發人員名稱**：已確認為 **LC Lab**（2026-10-05）；隱私權政策的「LC Lab（Lawrence Chang）」維持。
 - **app-ads.txt 已放網域根目錄** `https://lawrence124875.github.io/app-ads.txt`（repo `lawrence124875/lawrence124875.github.io`），內容 `google.com, pub-6291816733600445, DIRECT, f08c47fec0942fa0`，與謙卦共用；本 repo `docs/app-ads.txt`（專案子路徑）保留不刪。
+
+### RevenueCat／訂閱後台設定（2026-10-05 Lawrence 在聊天那邊逐欄確認完成）
+- **Google Cloud 專案 `learning-english-5ea8b`**（即 Firebase 專案）：已啟用 Google Play Android Developer API、Google Play Developer Reporting API。
+- **服務帳戶** `revenuecat@learning-english-5ea8b.iam.gserviceaccount.com`（英文 App 與謙卦共用）：角色「發布/訂閱編輯者」「監控檢視者」。**JSON 金鑰只上傳 RevenueCat，不進 repo**（repo 公開）。
+- **Play Console 使用者和權限**：以「帳戶權限」邀請上述服務帳戶（涵蓋帳戶下所有 App），勾「查看應用程式資訊及下載大量報表(唯讀)」「查看財務資料、訂單和取消訂閱問卷回覆情形」「管理訂單和訂閱項目」。
+- **RevenueCat 專案 `english-learning-app` → App `tw.bcc.englishapp`**：已上傳 JSON。驗證結果：讀商品目錄 ✅、讀訂閱目錄 ✅、**驗證訂閱購買 ❌**（等 Google 權限同步，最長約 36 小時，之後按 Check again）。
+- **Products**：匯入 `premium_monthly:monthly-auto`、`premium_yearly:yearly-auto`。
+- ⚠️ **Entitlement 名稱不符（已修正）**：原本只有 RevenueCat 自動產生的 `english_learning_app_pro`，但程式 `subscription_service.dart` 檢查的是 `'premium'`（`_entitlementId`）——照舊設定，購買後 App 不會解鎖。已新建 Entitlement **`premium`**，掛上兩個 Play 商品＋Test Store 的 Monthly／Yearly（共 4 個）。舊的 `english_learning_app_pro` 暫時保留，實機確認購買可解鎖後再決定是否封存。**程式不需修改**；日後若改 Entitlement 名稱，程式與後台要同步。
+- **Offering `default`（Current）**：`$rc_monthly` → Test Store Monthly＋`premium_monthly:monthly-auto`；`$rc_annual` → Test Store Yearly＋`premium_yearly:yearly-auto`。
+- **待辦**：「驗證訂閱購買」變綠後，用 Play 授權測試帳號實機測訂閱，確認購買後解鎖（Premium、無廣告）與「恢復購買」正常（見 §17 A-4）。
 
 ---
 
@@ -371,6 +381,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 1. **Play Console「正式發布前測試報告」**（測試及發布 → 測試 → 正式發布前測試報告）：到第十一版為止**一份都沒有產生**。2026-09-29 已在「設定」選好測試語言（繁中、阿拉伯文、泰文、日文、英文）、不提供憑證、深層連結留空並儲存；**第十二版上傳後檢查報告**（總覽／詳細資訊），有問題截圖給 Claude。 2026-09-30：到第十五版仍無報告；設定頁**沒有啟用開關**（官方：上傳時自動產生，但視裝置實驗室容量，不保證每版都跑）。Lawrence 已把第十五版 AAB 以「從檔案庫新增」另發布到**內部測試**軌道，觀察是否產生報告（不影響封閉測試天數）。若仍無報告，問卷改寫「以 Crashlytics 監控＋每版實機測試」即可，不影響申請。
 2. **收集 TestersCommunity 回饋**：整理回報，決定哪些併入第十二版。
 3. **正式版存取權問卷草稿**：`store_assets/launch_prep.md` 第二節，✅ 2026-09-29 已依第 4～12 版修正紀錄改寫；期滿時補上【 】處（TestersCommunity 實際回饋、Crashlytics、正式發布前測試報告結果、預估安裝數）即可送出。
+4. **訂閱實機測試**（2026-10-05 RevenueCat 後台設定完成，見 §7「RevenueCat／訂閱後台設定」）：RevenueCat「驗證訂閱購買」變綠（最長約 36 小時）後，用 Play 授權測試帳號實機購買月繳／年繳，確認解鎖與恢復購買；通過後決定是否封存舊 Entitlement `english_learning_app_pro`。
 
 ### B. 第十二版（0.1.9+12）—— ✅ 2026-09-29 以 Actions #165 AAB 上傳封閉測試，同日審查通過發布
 - 內容：正式 App 桌面圖示、桌面名稱依手機語言顯示 appTitle（細節見 §16）、iOS 相容的平台判斷（Android 行為不變）；版本資訊 `release_notes_v12.md`。
