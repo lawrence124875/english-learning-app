@@ -170,6 +170,8 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - AI 素材聲明：選「不為素材加上標籤」（截圖為實機畫面、圖示由 generate_assets.py 程式繪製）。
 - 隱私權政策：GitHub Pages `https://lawrence124875.github.io/english-learning-app/`（中英雙語，2026-10-05）。app-ads.txt：見下方 AdMob 後台設定（網域根目錄）；`docs/app-ads.txt` 保留不刪。
 
+- **LC Lab 開發者首頁**（2026-10-05）：repo `lawrence124875/lawrence124875.github.io`（使用者站台）根目錄 `index.html`，網址 `https://lawrence124875.github.io/`（Play Console 帳戶網站已填這個）。兩張 App 卡片（智慧聽覺巡航、謙卦）各連隱私權政策；同 repo 根目錄 `app-ads.txt` 兩個 App 共用，**內容不可改動或刪除**。⚠️ **正式上架後回來補 Play 商店連結**（§17 C）：卡片目前是「Google Play 即將推出」佔位，本 App 連結 `https://play.google.com/store/apps/details?id=tw.bcc.englishapp`（已寫在 index.html 註解）。
+
 ### AdMob 後台設定（2026-10-05 Lawrence 在聊天那邊完成）
 - **應用程式名稱**：改為「智慧聽覺巡航 English Words Audio Cruise」（原為 `tw.bcc.englishapp`）。
 - **GDPR 訊息「LC Lab GDPR」已發布**：套用英文 App 與謙卦；語言英、德、法、西、義 5 語；含「Do not consent」（不同意）按鈕；地區為歐洲經濟區、英國、瑞士；隱私權政策網址 `https://lawrence124875.github.io/english-learning-app/`。App 端整合見第十七版（§6、§17 B5）。
@@ -414,7 +416,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。
 2. 核准後建立正式版，推第十二版（或當時最新版）。
-3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；確認廣告出現在免費版。
+3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；到 `lawrence124875.github.io` repo 的 `index.html` 把本 App 卡片的「即將推出」換成 Play 商店連結；確認廣告出現在免費版。
 
 ### D. 正式版上架後
 1. 小預算驗證（NT$1～3 萬、2～3 個市場投 Google App 廣告），看 Analytics D1/D7 留存與付費轉換。
