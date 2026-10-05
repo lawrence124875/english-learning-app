@@ -4,27 +4,28 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-03（**Firebase 專案與謙卦共用，見 §0 第 8 點**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-05（**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
 ## 0. 新對話開始時的標準流程
 
-1. 向 Lawrence 要 GitHub 權杖（fine-grained token，只授權這個 repo；權限 Contents 讀寫、Workflows 讀寫、Actions 讀取以上）。權杖**不存進記憶、不寫進任何檔案**，每次對話由他貼上。
-   要權杖時主動附上網址：建立新權杖 https://github.com/settings/personal-access-tokens/new ；管理現有權杖 https://github.com/settings/personal-access-tokens 。未到期的舊權杖可沿用。
-1b. **權杖到期日（2026-10-01 記錄）**：英文對話用 `english-app-claude` 到 **2026-10-26（週一）**；易經對話用 `iching-cards` 到 2026-10-30；CI 專用 `ci-private-releases` 未設有效期。新對話若日期接近（7 天內）或已過期，**主動提醒 Lawrence 到管理權杖頁按 Regenerate**（權杖名稱與權限不變，只換字串；重產後更新此處日期）。
-2. Clone repo：`git clone https://github.com/lawrence124875/english-learning-app.git`（公開 repo，clone 不需權杖）。
-3. 先讀本文件，再依需求讀程式碼。
-4. Commit 時用 `git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit ...`（容器沒有 git 身分設定）。
-5. Push：`git push "https://x-access-token:<TOKEN>@github.com/lawrence124875/english-learning-app.git" HEAD:main`，輸出要用 sed 把權杖遮掉。
-6. Push 後 GitHub Actions 自動建置（約 12~20 分鐘）。用 API 查狀態：
-   `curl -H "Authorization: Bearer <TOKEN>" https://api.github.com/repos/lawrence124875/english-learning-app/actions/runs?per_page=5`
-   **容器內沒有 Flutter SDK（網路白名單擋掉 Google 儲存空間），無法本機編譯，一律靠 CI 驗證。** 改完程式一定要等建置成功才回報完成。
-6b. **讀建置錯誤**：容器連不到日誌下載網址（Azure blob），`build_android.yml` 建置失敗時會把錯誤行輸出成 `::error::` annotation，用 `GET /repos/.../check-runs/<job_id>/annotations` 讀取（權杖需加 Actions 讀取權限）。
-6c. **main 分支保護（2026-09-29 設定）**：規則集 `protect-main`（Active，目標＝預設分支 main）只開「限制删除」與「阻止强制推送」。一般 push 不受影響；**不可用 `git push --force`**（會被拒）。不要加「需要拉取请求」等規則，否則 Claude 無法直接推送。權杖沒有 Administration 權限，規則集只能由 Lawrence 在網頁（设置→规则→规则集）修改。
-7. 容器網路白名單只有 GitHub、pypi、npm 等；**連不到 Firebase / Google API**。需要操作 Firebase 時，應該用 GitHub Secrets + Actions 代為執行（見第 9 節）。
+**2026-10-05 起開發改在 Claude Code 雲端工作階段（claude.ai/code）進行。** GitHub App 已授權 `english-learning-app` 與私人 repo `english-app-builds`，**不需要再貼權杖**。流程不變：直接 commit 到 main、push 觸發 CI，APK/AAB 只發到 english-app-builds 的 Releases，絕不放公開 Artifacts（§10）。
 
-8. **Firebase 專案共用（2026-10-03 起）**：本 App 與 謙卦（`com.lclab.qiangua`）共用同一個 Firebase 專案。
+1. 工作階段若沒有掛上這兩個 repo，用 `add_repo` 加入後 clone 到 `/home/user/english-learning-app`、`/home/user/english-app-builds`（工作階段可能開在 iching-cards 等其他 repo，要確認是在英文 App 的 repo 操作）。
+2. 先讀本文件，再依需求讀程式碼。
+3. Commit 時用 `git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit ...`；只改文件時訊息加 `[skip ci]`（paths-ignore 本來就不會觸發建置，加上更保險）。
+4. Push：`git push origin HEAD:main`（經雲端工作階段的 git proxy，不需權杖）。**一律推 main**；工作階段系統預設的 `claude/...` 分支不使用（2026-10-05 Lawrence 確認）。push 前先 `git fetch origin main` 確認沒有落後。
+5. Push 後 GitHub Actions 自動建置（約 12~20 分鐘）。用 GitHub MCP 工具查 Actions 執行狀態、job 日誌與失敗訊息；改完程式一定要等建置成功才回報完成。
+6. english-app-builds 的 Releases（`android-release-run<N>`、個人版）可直接用 GitHub 工具查看，不必再請 Lawrence 確認。
+7. 本機編譯：舊容器連不到 Google 儲存空間無法裝 Flutter SDK；雲端工作階段 2026-10-05 測試可連到 storage.googleapis.com，**是否能本機裝 Flutter 尚未驗證**，目前仍以 CI 為準。
+
+舊流程紀錄（2026-10-04 以前的一般對話，已停用）：每次由 Lawrence 貼 fine-grained 權杖（`english-app-claude`，到期 2026-10-26），push 用 `https://x-access-token:<TOKEN>@...`，以 curl 呼叫 Actions API、讀 `::error::` annotation。雲端工作階段不再需要這個權杖，到期不必重產（可由 Lawrence 自行刪除）。易經對話權杖 `iching-cards`（到期 2026-10-30）依易經對話需要處理。**CI 專用權杖 `ci-private-releases`（只存 Secret `BUILDS_REPO_TOKEN`）仍在使用**，workflow 發 Release 靠它，到期時仍須重產並更新 Secret。
+
+- **main 分支保護（2026-09-29 設定）**：規則集 `protect-main`（Active，目標＝預設分支 main）只開「限制删除」與「阻止强制推送」。一般 push 不受影響；**不可用 `git push --force`**（會被拒）。不要加「需要拉取请求」等規則，否則 Claude 無法直接推送。規則集只能由 Lawrence 在網頁（设置→规则→规则集）修改。
+- 容器**不能直接操作 Firebase**（沒有憑證）。需要操作 Firebase 時，應該用 GitHub Secrets + Actions 代為執行（見第 9 節）。
+
+- **Firebase 專案共用（2026-10-03 起）**：本 App 與 謙卦（`com.lclab.qiangua`）共用同一個 Firebase 專案。
    - Crashlytics／Analytics 查看時要先**篩選 App**（本 App＝`tw.bcc.englishapp`）。
    - Remote Config 目前未使用；若日後使用，參數一律加英文 App 前綴（如 `en_`），並以 **App ID 條件**區隔。
    - 重新下載的 `google-services.json` 會含兩個 client。已確認相容：`patch_firebase.sh` 只把整份 JSON 寫入並強制 applicationId＝`tw.bcc.englishapp`，google-services 外掛會自動挑對應套件名稱的 client；`main.dart` 用 `Firebase.initializeApp()` 讀原生設定，沒有 firebase_options.dart。替換 Secret `FIREBASE_GOOGLE_SERVICES_JSON` 前仍先確認 JSON 內有 `tw.bcc.englishapp` 的 client。
@@ -148,7 +149,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 13 | 0.1.10 | **修正 Crashlytics 回報的當機** `NotificationService.requestPermission`（第 9～10 版，3 次/2 人）：`PlatformException(error, Attempt to invoke virtual method ... on a null object reference)`，外掛在沒有前景 Activity 時請求通知權限失敗；未接住導致 `AppState.initialize()` 中斷、畫面卡在載入中。修法：requestPermission 一律 try/catch（失敗回傳 false、記 Crashlytics 非當機）；啟動時不再請求通知權限（只在使用者開啟提醒時請求）；啟動時兩個提醒排程各包 try/catch。版本資訊 `store_assets/release_notes_v13.md`（10 語） | 2026-09-29 程式完成，Actions #179、#180 建置成功（#180 只多了版本資訊與 HANDOFF，程式相同，上傳用 #180）；第十二版已發布；**2026-09-29 Lawrence 已上傳第十三版 AAB 至封閉測試送審** |
 | 14 | 0.1.11 | **修正點每日提醒通知回到 App 後畫面停住不能操作**（2026-09-29 Lawrence 在紅米的第十三版（Play 版）回報：通知診斷「1 分鐘後測試」通知有跳，點下去回 App 就停住；Play 上第十三版以前都有此問題，第十四版實機確認後應盡快上傳）。原因：flutter create 範本 MainActivity 為 `launchMode="singleTop"`（新範本另有 `taskAffinity=""`），flutter_local_notifications 的通知 PendingIntent 在 App 已在背景時會再建立第二個 MainActivity；AudioServiceActivity 讓所有 MainActivity 共用同一個快取 FlutterEngine，舊實例被銷毀時把引擎拆離 → 新畫面只剩最後一格、無法操作。修法：`scripts/patch_main_activity.sh` 把 MainActivity 改成 `launchMode="singleTask"`（通知、桌面圖示都回到同一個實例）。取捨：在 Play 付款頁/檔案選擇等外部畫面時按 Home 再點桌面圖示，外部畫面會被關掉（付款視為取消），可接受。版本資訊 `store_assets/release_notes_v14.md`（10 語） | 2026-09-29 程式完成，Actions #185、#186 建置成功（#186 只多版本資訊，程式相同，上傳用 #186）；**2026-09-29 紅米實機三項確認通過**（點通知回 App、媒體卡片回 App、桌面圖示回原頁面皆正常）；**2026-09-29 已上傳 #186 AAB 至封閉測試，審查中**，並通知 TestersCommunity 測試者 |
 | 15 | 0.1.12 | **依 TestersCommunity 回饋新增「分享給朋友」**：首頁右上選單（關於本 App 上方）新增 `menuShare`，用 `share_plus`（^10.1.4，`Share.share`）叫出系統分享面板，文字為 11 語 `shareMessage`＋Play 商店連結，subject＝appTitle；Analytics 事件 `share_app`。**另依 ASO 調查，越/印尼/西/葡/泰/阿/英的 appTitle（桌面名稱與 App 頂端標題）改為關鍵字名稱**（Học Từ Vựng Tiếng Anh Qua Nghe、Kosakata Inggris Sambil Dengar、Aprender Inglés Escuchando、Aprender Inglês Ouvindo、คำศัพท์ภาษาอังกฤษ ฝึกฟัง、تعلم الإنجليزية بالاستماع、English Words Audio Cruise；shareMessage 內名稱同步），中/日/韓 appTitle 不變；11 語商店名稱＋簡短說明見 `store_assets/store_listing_v15_names.md`，7 語截圖/主題圖已重產。版本資訊 `store_assets/release_notes_v15.md`（含 en-US 共 11 語） | 2026-09-30 紅米實機確認（選單「分享給朋友」正常、手機切西班牙文桌面名稱顯示 Aprender Inglés Escuchando）後，#198 AAB 與商店資訊變更一起送審，**審查中** |
-| 16 | 0.1.13 | **修正鎖定畫面／通知列朗讀卡片沒有暫停、播放、停止按鈕**（比照謙卦 0.1.0+15，謙卦對話發現：release 版 shrinkResources 把 audio_service 以名稱字串查詢的 `audio_service_*` 按鈕圖示當成沒用到而刪除，小米卡片整排按鈕不顯示）。修法：`scripts/patch_android_icons.sh` 產生 `res/raw/keep.xml`，`tools:keep="@drawable/audio_service_*"`（一般版與個人版 workflow 都會執行）。**同版再加：修正快速連按上一個／下一個時沒聲音、聲音與畫面不同步、單字跳太快**（2026-10-02 Lawrence 回報；原因：舊的 `_speakCurrent` 流程在 stop 後仍接著念重複次數與翻譯，蓋掉新單字；暫停後很快再播放會有兩個巡航迴圈同時推進。修法：`app_state.dart` 加 `_speakGen`（每次新朗讀/停止 +1，舊流程每個 await 後檢查過期就結束；上一個還在念時先 await stop）與 `_cruiseGen`（舊巡航迴圈過期即退出））。版本資訊 `store_assets/release_notes_v16.md`（11 語，兩項） | 2026-10-02 #212 紅米確認鎖屏/通知按鈕 ✅；2026-10-03 #214 實機 4 項全通過 ✅，**上傳用 #214 AAB**；同日加入快速切換修正（版本號不變，仍 0.1.13+16），**待新建置實機確認快速連按後再上傳（上傳用新建置，不用 #212）** |
+| 16 | 0.1.13 | **修正鎖定畫面／通知列朗讀卡片沒有暫停、播放、停止按鈕**（比照謙卦 0.1.0+15，謙卦對話發現：release 版 shrinkResources 把 audio_service 以名稱字串查詢的 `audio_service_*` 按鈕圖示當成沒用到而刪除，小米卡片整排按鈕不顯示）。修法：`scripts/patch_android_icons.sh` 產生 `res/raw/keep.xml`，`tools:keep="@drawable/audio_service_*"`（一般版與個人版 workflow 都會執行）。**同版再加：修正快速連按上一個／下一個時沒聲音、聲音與畫面不同步、單字跳太快**（2026-10-02 Lawrence 回報；原因：舊的 `_speakCurrent` 流程在 stop 後仍接著念重複次數與翻譯，蓋掉新單字；暫停後很快再播放會有兩個巡航迴圈同時推進。修法：`app_state.dart` 加 `_speakGen`（每次新朗讀/停止 +1，舊流程每個 await 後檢查過期就結束；上一個還在念時先 await stop）與 `_cruiseGen`（舊巡航迴圈過期即退出））。版本資訊 `store_assets/release_notes_v16.md`（11 語，兩項） | 2026-10-02 #212 紅米確認鎖屏/通知按鈕 ✅；2026-10-03 #214 實機 4 項全通過 ✅，**上傳用 #214 AAB**；同日加入快速切換修正（版本號不變，仍 0.1.13+16），#214（94b9e7e）已含此修正，實機 4 項（含快速連按）通過，**第十五版過審後上傳 #214 AAB**（見 §17 B4） |
 | 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除）；第三輪（2026-09-27 紅米實測仍無通知、通知中心與圖示角標皆無）：新增隱藏「通知診斷」工具（學習統計頁**長按「每日提醒」標題**）：顯示初始化結果、通知權限、精準鬧鐘權限、提醒頻道重要性、已排程 ID，並可發「立即測試」與「1 分鐘後測試」通知，用來區分是「通知根本發不出來」還是「排程沒觸發」。Lawrence 回報：通知開關、自啟動、省電無限制都已設定；特殊權限裡找不到「鬧鐘與提醒」；設定時間後有顯示「已完成設定」（=排程有進系統），但從未跳出「允許通知」系統視窗。測試機為紅米 Note 8／Android 11（所以沒有通知權限視窗、沒有「鬧鐘與提醒」，精準鬧鐘預設允許）。按 Home 鍵不滑掉 App、鎖屏等候仍無提醒，但朗讀的鎖屏媒體通知正常顯示→排除強制停止，問題在提醒頻道或排程觸發。診斷工具在 Actions #125 建置成功。**真正原因找到**：診斷顯示權限/頻道/排程全正常、立即通知會跳，但 1 分鐘測試報 `scheduledDate: Must be a date in the future`——`_nextInstanceOfLocalTime` 等處把本地時間先減時區偏移再丟 `TZDateTime.from`，但 `from` 取的是絕對時間點（epoch），等於多減 8 小時：每日提醒其實每天在設定時間**提早 8 小時**觸發（設 19:00 會在 11:00 跳），久未使用提醒也提早 8 小時。已改為直接 `TZDateTime.from(本地DateTime, tz.UTC)`。踩坑：**TZDateTime.from 不看牆上時鐘，別手動加減時區偏移**。2026-09-27 Actions #127 紅米實測：1 分鐘測試與每日提醒皆準時跳出 ✅。「通知診斷」工具保留（隱藏、僅中文，開發用） 另含：自訂教材 CSV 第一欄語言可選（朗讀用該語言 TTS）、英文介面作為不支援語言的預設（新增 app_en.arb）、功能介紹與匯入說明加一句「也可匯入英文以外的語言」（新 key `importWordLangLabel`）、CSV 表頭改為第一或第二欄是語言名稱也算表頭、翻譯語言英文選項改為單純「英文」、匯入時檢查手機有無該語言 TTS 語音並提示安裝、翻譯欄擴充為 13 種（新增簡中、法、德、義、泰） | 提醒已實機驗證通過；第一欄語言與英文介面待實機確認後上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
@@ -191,7 +192,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 ## 10. 踩過的坑
 
 - **個人全解鎖版不可放公開 repo 的 Artifacts**（2026-10-01 發現）：公開 repo 的 Artifacts 任何登入 GitHub 的人都能下載，等於免費送出 Premium。`build_personal.yml`、`build_ios_personal.yml` 已改為發佈到**私人 repo `lawrence124875/english-app-builds` 的 Release**（tag `android-personal-run<N>`／`ios-personal-run<N>`），Lawrence 手機登入 GitHub 從 Releases 下載。舊的 13 個個人版 artifact 已用一次性 workflow `archive_personal_builds.yml`（用完已刪除）搬到該 repo 的 Release `archive-2026-09`，2026-10-01 公開 repo 的 13 個個人版 artifact 已全部刪除（Release 另有 GitHub 自動附的 2 個 Source code 檔，正常）。**2026-10-01 Lawrence 決定：任何 APK/AAB 都不放公開 Artifacts**——build_android.yml 也改為發佈到 english-app-builds 的 Release `android-release-run<N>`（含 `release_<版本>_run<N>.apk/.aab`）；上傳 Play 時到該 Release 下載 AAB（不再從 Actions 頁面下載）。2026-10-01 以 Actions #211 驗證新流程成功（Release `android-release-run211`），公開 repo 其餘 338 個 artifacts（多數已過期）全部刪除、剩 0 個（Play 已上傳的版本可在 Play Console 的 App Bundle 檔案庫取得）。**新增任何會產生全解鎖或私人內容的建置，都不可用 upload-artifact。**
-- **權杖分工**（2026-10-01 Lawrence 決定）：①英文對話用（每次貼上，授權 english-learning-app）②易經對話用（另一個）③**CI 專用**（名稱 `ci-private-releases`，只授權 english-app-builds＋iching-content、Contents 讀寫；只存 Secret，英文 App 為 `BUILDS_REPO_TOKEN`，從不貼到對話）。③到期時個人版建置會失敗，需重產並更新兩個 repo 的 Secret。對話用權杖看不到 english-app-builds（私人、未授權），Release 內容由 workflow 日誌或 Lawrence 確認。
+- **權杖分工**（2026-10-01 Lawrence 決定）：①英文對話用（每次貼上，授權 english-learning-app）②易經對話用（另一個）③**CI 專用**（名稱 `ci-private-releases`，只授權 english-app-builds＋iching-content、Contents 讀寫；只存 Secret，英文 App 為 `BUILDS_REPO_TOKEN`，從不貼到對話）。③到期時個人版建置會失敗，需重產並更新兩個 repo 的 Secret。對話用權杖看不到 english-app-builds（私人、未授權），Release 內容由 workflow 日誌或 Lawrence 確認。**2026-10-05 起改雲端工作階段，①②不再需要，english-app-builds 可直接查看（見 §0）；③照舊。**
 
 - **MainActivity 必須是 singleTask**（第十四版）：singleTop 時點通知會建立第二個 MainActivity，與 AudioServiceActivity 共用的快取 FlutterEngine 被舊實例拆離 → 畫面停住。`patch_main_activity.sh` 負責設定，不要拿掉。
 
@@ -321,7 +322,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - iOS 設定需要：Firebase 新增 iOS App 取得 `GoogleService-Info.plist`（存 GitHub Secret）、Info.plist 加 `UIBackgroundModes: audio`（背景朗讀）、`GADApplicationIdentifier`（AdMob，沒有會閃退；個人版可用測試 ID）、檔案選取與通知權限說明文字、iOS 最低版本（Firebase 需 iOS 13+）。
 - Lawrence 的設備（2026-09-28）：MacBook Air 2017（macOS 最高 Monterey，裝不了新版 Xcode → **一律用 CI 建置 IPA，Mac 只負責簽署安裝**；僅晚上 7 點後在家可用）、公司 Windows 無管理員權限（只能用網頁，不能裝 Sideloadly/iTunes）。
 - 7 天限制是 Apple 對免費帳號的規定，無法避開；建議用 AltStore（Mac 裝 AltServer，iPhone 與 Mac 同 Wi-Fi 時自動續簽）減少手動重裝。付 US$99 年費後改為一年一次。
-- Android 個人全解鎖版：`build_personal.yml` 手動觸發即是當時 main 的內容。2026-09-28 以第十一版（d4d06d6）建置成功（build_personal #4）。與 Play 版同套件名稱、同簽署金鑰 → 安裝會取代 Play 測試版（資料保留）；之後 Play 推送更高版本代碼時會被覆蓋回一般版，需再手動建置一次。權杖需 Actions 寫入權限才能用 API 觸發（目前權杖可以）。
+- Android 個人全解鎖版：`build_personal.yml` 手動觸發即是當時 main 的內容。2026-09-28 以第十一版（d4d06d6）建置成功（build_personal #4）。與 Play 版同套件名稱、同簽署金鑰 → 安裝會取代 Play 測試版（資料保留）；之後 Play 推送更高版本代碼時會被覆蓋回一般版，需再手動建置一次。手動建置可用 GitHub 工具觸發 workflow（2026-10-05 起雲端工作階段，不需權杖），或由 Lawrence 在 Actions 頁按 Run workflow。
 - **2026-09-28 iOS 自用版建置成功**（commit c71d907，`build_ios_personal.yml` 第一次即成功，約 25 分鐘；同 commit 的 Android 建置也成功）：
   - `build_ios_personal.yml`：手動觸發、macos-latest；flutter create ios → pub get → `flutter build ios --config-only`（產生 Podfile）→ `scripts/patch_ios.sh` → `flutter build ios --release --no-codesign --dart-define=FORCE_PREMIUM=true` → 打包 Payload/Runner.app 成未簽署 IPA（artifact `english-learning-app-personal-ios-ipa`）。沒傳 RevenueCat 金鑰（`SubscriptionService.initialize` 空字串略過）。
   - `patch_ios.sh`：Secret `FIREBASE_GOOGLE_SERVICE_INFO_PLIST`（plist 原文，Firebase 同一專案新增的 iOS App，Bundle ID `tw.bcc.englishapp`）寫入 ios/Runner 並用 xcodeproj gem 加入 Runner 資源；Bundle ID、最低 iOS 15.0；Info.plist：顯示名稱「智慧聽覺巡航」、UIBackgroundModes audio、GADApplicationIdentifier（預設 Google 測試 ID，正式上架改 Secret `ADMOB_IOS_APP_ID`）、CFBundleLocalizations 11 語、ITSAppUsesNonExemptEncryption=false。
