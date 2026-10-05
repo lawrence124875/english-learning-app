@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-05（**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-05（**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -166,7 +166,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - 測試期滿 → Play Console 申請正式版存取權（Google 問卷會問測試回饋與修正，版本更新紀錄可當素材）。
 - 正式版前 AdMob 無法連結（平台限制），廣告不會顯示。
 - 訂閱：`premium_monthly`（NT$149）、年繳（NT$999）。年繳設定：帳單週期每年、寬限期用 Google 建議值、帳戶保留自動計算、方案變更「下個結帳日收費」（建議）、重新訂閱允許。取消訂閱後自動於期末回到免費版，不需後台操作。RevenueCat Offering 的 Package 需設為 Monthly / Annual 類型，訂閱頁才會顯示「月繳/年繳方案」。
-- 商店資訊：繁中 + 日韓越印尼 + 簡中/西/葡 皆已送審；**泰文已移除**（App 沒有泰文）。簡中（zh-CN）、西（es-419，可另加 es-ES）、葡（pt-BR）文案在 `store_assets/store_listing_zhcn_es_pt.md`，待上傳。簡短說明採「忠於中文原句（20/80、92%、找回信心）」的版本。
+- 商店資訊（11 語）：繁中、日、韓、越、印尼、簡中（zh-CN）、西（es-419，可另加 es-ES）、葡（pt-BR）、泰、阿（第十一版，2026-09-28 發布）、英（en-US，第十五版一起送審）。文案來源：`store_assets/store_listing_zhcn_es_pt.md`、`store_listing_th_ar.md`、`store_listing_en.md`；名稱＋簡短說明最新版見 `store_listing_v15_names.md`。簡短說明採「忠於中文原句（20/80、92%、找回信心）」的版本。
 - AI 素材聲明：選「不為素材加上標籤」（截圖為實機畫面、圖示由 generate_assets.py 程式繪製）。
 - 隱私權政策：GitHub Pages `https://lawrence124875.github.io/english-learning-app/`（中英雙語，2026-10-05）。app-ads.txt：見下方 AdMob 後台設定（網域根目錄）；`docs/app-ads.txt` 保留不刪。
 
@@ -266,7 +266,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - [ ] 正式版存取權問卷：草稿見 `store_assets/launch_prep.md`（測試期滿後填，需補上實際收到的測試回饋）
 - [x] 8 語商店截圖＋主題圖已上傳 Play Console（2026-09-27；圖在 `store_assets/localized/<lang>/`，腳本 `store_assets/generate_localized_assets.py`）
 - [ ] 收集 TestersCommunity 回報並修正
-- [ ] 第十版上傳前實機確認：匯入非英文 CSV（選第一欄語言）朗讀正確；手機語言改英文/德文看到英文介面、內建教材不顯示翻譯
+- [x] ~~第十版上傳前實機確認~~（第十一版以後的版本都已上傳且包含第十版內容，此項已不適用）
 - 小米設定按鈕（電池/自啟動）**保留**：提醒不跳的真因是時區換算，但 MIUI 在 App 被清理、重開機後仍可能擋掉排程，按鈕是實際使用的保險（Lawrence 2026-09-27 詢問後的結論）
 - [x] 第十版實機驗證提醒（2026-09-27 通過）：先用「通知診斷」回報截圖（立即測試有無跳出、1 分鐘後測試有無跳出）再決定下一步修法；原流程：設定 2～3 分鐘後的提醒時間 → 關掉 App/鎖屏 → 確認通知跳出（紅米需開自啟動、省電無限制）
 - [x] **第十版候選（Lawrence 2026-09-27 同意，同日決定併入第十版一起上傳，已完成）**：
@@ -372,13 +372,9 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 2. **收集 TestersCommunity 回饋**：整理回報，決定哪些併入第十二版。
 3. **正式版存取權問卷草稿**：`store_assets/launch_prep.md` 第二節，✅ 2026-09-29 已依第 4～12 版修正紀錄改寫；期滿時補上【 】處（TestersCommunity 實際回饋、Crashlytics、正式發布前測試報告結果、預估安裝數）即可送出。
 
-### B. 第十二版（0.1.9+12）—— **2026-09-29 已以 Actions #165 AAB 上傳封閉測試（未先實機測試）**；上傳後待辦：Play 更新後在紅米確認圖示/名稱/電池與小米按鈕/每日提醒，並重新手動建置個人版
-- **App 桌面圖示與桌面名稱**（§16）：Play 版目前還是 Flutter 預設圖案、名稱顯示 `english_learning_app`，要上傳第十二版才會換（名稱依手機語言顯示 10 語 appTitle）。
-- **桌面 App 名稱**（2026-09-28 Lawrence 發現）：Android 安裝後名稱一直是 `english_learning_app`（flutter create 預設，從沒改過，Play 版也一樣）。`scripts/patch_android_label.sh` 用各語 ARB 的 `appTitle` 產生 `res/values-*/strings.xml` 的 app_name（values 預設英文；繁中 values-zh/zh-rTW/HK/MO/b+zh+Hant；簡中 zh-rCN/SG/b+zh+Hans；印尼 values-in 與 values-id），並把 manifest 的 android:label 改成 `@string/app_name`。兩個 Android workflow 在套圖示後執行。iOS 名稱目前固定「智慧聽覺巡航」（patch_ios.sh 的 CFBundleDisplayName），正式上架 iOS 前再做多語 InfoPlist.strings。
-- iOS 相容的平台判斷（§15）：`UpdateService`、電池/小米按鈕、通知權限在 Android 行為應不變 → **上傳前在紅米實機確認**：統計頁電池與小米按鈕仍在、每日提醒照常、App 內更新提示照常。
-- ✅ 2026-09-29：版本號已改 0.1.9+12；10 語版本資訊 `store_assets/release_notes_v12.md`（只寫新圖示＋桌面名稱兩點，沒有寫「穩定性改善」——這版對 Android 使用者沒有其他實質修正，不寫不實內容）。
-- **上傳步驟**：CI 成功 → 下載 AAB artifact → 紅米先裝 APK 確認（桌面圖示、名稱依語言、電池/小米按鈕、每日提醒、App 內更新）→ Play Console 封閉測試建立新版本、上傳 AAB、貼 10 語版本資訊 → 送審 → 通過後檢查「正式發布前測試報告」（A-1）。
-- 時機（2026-09-29 決定）：**第十二版先做**（圖示＋名稱＋版本資訊），不等測試回饋；上傳新版不影響封閉測試天數，還能產生第一份正式發布前測試報告。測試回饋的修正放第十三版。
+### B. 第十二版（0.1.9+12）—— ✅ 2026-09-29 以 Actions #165 AAB 上傳封閉測試，同日審查通過發布
+- 內容：正式 App 桌面圖示、桌面名稱依手機語言顯示 appTitle（細節見 §16）、iOS 相容的平台判斷（Android 行為不變）；版本資訊 `release_notes_v12.md`。
+- 第十五版紅米實機已確認桌面名稱依手機語言顯示（西文 Aprender Inglés Escuchando）；個人版重建依 §17 E 延後到正式版穩定後。
 
 ### B2. 第十三版（0.1.10+13）—— 2026-09-29 修正 Crashlytics 當機
 - ✅ 第十四版（0.1.11+14）：修正點通知回 App 畫面停住（MainActivity 改 singleTask，見 §6）。✅ 2026-09-29 紅米實機確認通過，下一步上傳 #186 AAB＋release_notes_v14.md。原確認項目：①按 Home 讓 App 在背景→通知診斷「1 分鐘後測試」→點通知，可正常操作；②朗讀中點鎖屏/通知列的媒體卡片回 App 正常；③從桌面圖示回 App 仍停在原本頁面（不會重新啟動）。
