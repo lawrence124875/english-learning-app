@@ -15,7 +15,7 @@
 1. 工作階段若沒有掛上這兩個 repo，用 `add_repo` 加入後 clone 到 `/home/user/english-learning-app`、`/home/user/english-app-builds`（工作階段可能開在 iching-cards 等其他 repo，要確認是在英文 App 的 repo 操作）。
 2. 先讀本文件，再依需求讀程式碼。
 3. Commit 時用 `git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit ...`；只改文件時訊息加 `[skip ci]`（paths-ignore 本來就不會觸發建置，加上更保險）。
-4. Push：`git push origin HEAD:main`（經雲端工作階段的 git proxy，不需權杖）。**一律推 main**；工作階段系統預設的 `claude/...` 分支不使用（2026-10-05 Lawrence 確認）。push 前先 `git fetch origin main` 確認沒有落後。
+4. Push：**2026-10-06 起（Lawrence 新合作規則）中途 commit 推工作分支**（例：`claude/<功能>`，用 `git push origin HEAD:<分支>`），整個功能或語言完成、CI 建置成功後才併入 main（`git fetch origin main` 後 merge，不 force push）。只改文件的小修正可直接推 main。大工作切小批（一次約 8 項），每批一個討論串，做完回報「完成了什麼、下一步」，分支名稱與進度寫進本文件。（2026-10-05 以前是一律推 main。）
 5. Push 後 GitHub Actions 自動建置（約 12~20 分鐘）。用 GitHub MCP 工具查 Actions 執行狀態、job 日誌與失敗訊息；改完程式一定要等建置成功才回報完成。
 6. english-app-builds 的 Releases（`android-release-run<N>`、個人版）可直接用 GitHub 工具查看，不必再請 Lawrence 確認。
 7. 本機編譯：舊容器連不到 Google 儲存空間無法裝 Flutter SDK；雲端工作階段 2026-10-05 測試可連到 storage.googleapis.com，**是否能本機裝 Flutter 尚未驗證**，目前仍以 CI 為準。
