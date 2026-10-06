@@ -5,6 +5,7 @@ import '../providers/app_state.dart';
 import '../widgets/settings_panel.dart';
 import '../widgets/unlock_banner.dart';
 import '../widgets/banner_ad_widget.dart';
+import '../widgets/fit_word_area.dart';
 import '../app_theme.dart';
 import 'voice_test_screen.dart';
 import 'about_screen.dart';
@@ -409,40 +410,29 @@ class _WordCard extends StatelessWidget {
                 onTap: appState.replay,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _FitWord(
-                        text: word?.word ?? '—',
-                        maxSize: wordSize,
-                        textDirection: appState.wordIsRtl
-                            ? TextDirection.rtl
-                            : TextDirection.ltr,
-                        style: TextStyle(
-                          fontFamily: AppTheme.wordFontFamily,
-                          fontWeight: FontWeight.w800,
-                          color: palette.word,
-                          height: 1.1,
-                        ),
-                      ),
-                      if (settings.showTranslation && word != null) ...[
-                        const SizedBox(height: 10),
-                        Text(
-                          appState.meaningOf(word),
-                          textAlign: TextAlign.center,
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
-                          textDirection: appState.meaningIsRtl(word)
-                              ? TextDirection.rtl
-                              : TextDirection.ltr,
-                          style: TextStyle(
-                            color: palette.translation,
-                            fontSize: 16 + settings.wordSize.index * 2.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ],
+                  child: FitWordArea(
+                    word: word?.word ?? '—',
+                    meaning: settings.showTranslation && word != null
+                        ? appState.meaningOf(word)
+                        : null,
+                    maxWordSize: wordSize,
+                    meaningSize: 16 + settings.wordSize.index * 2.0,
+                    wordDirection: appState.wordIsRtl
+                        ? TextDirection.rtl
+                        : TextDirection.ltr,
+                    meaningDirection: word != null && appState.meaningIsRtl(word)
+                        ? TextDirection.rtl
+                        : TextDirection.ltr,
+                    wordStyle: TextStyle(
+                      fontFamily: AppTheme.wordFontFamily,
+                      fontWeight: FontWeight.w800,
+                      color: palette.word,
+                      height: 1.1,
+                    ),
+                    meaningStyle: TextStyle(
+                      color: palette.translation,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
@@ -563,58 +553,5 @@ class _Controls extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-/// 單字自動縮小：從設定的大小開始，放不下（超過兩行或單一長字超寬）
-/// 就逐步縮小，最小到 55%，確保長片語也完整顯示、不截斷。
-class _FitWord extends StatelessWidget {
-  final String text;
-  final double maxSize;
-  final TextStyle style;
-  final TextDirection textDirection;
-  const _FitWord({
-    required this.text,
-    required this.maxSize,
-    required this.style,
-    required this.textDirection,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      final scaler = MediaQuery.textScalerOf(context);
-      var size = maxSize;
-      final minSize = maxSize * 0.55;
-      while (size > minSize) {
-        final tp = TextPainter(
-          text: TextSpan(text: text, style: style.copyWith(fontSize: size)),
-          textDirection: textDirection,
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          textScaler: scaler,
-        )..layout(maxWidth: constraints.maxWidth);
-        final longest = text
-            .split(RegExp(r'\s+'))
-            .fold<String>('', (a, b) => b.length > a.length ? b : a);
-        final wp = TextPainter(
-          text: TextSpan(text: longest, style: style.copyWith(fontSize: size)),
-          textDirection: textDirection,
-          textScaler: scaler,
-        )..layout();
-        final fits = !tp.didExceedMaxLines && wp.width <= constraints.maxWidth;
-        tp.dispose();
-        wp.dispose();
-        if (fits) break;
-        size -= 2;
-      }
-      return Text(
-        text,
-        textAlign: TextAlign.center,
-        textDirection: textDirection,
-        maxLines: 2,
-        style: style.copyWith(fontSize: size),
-      );
-    });
   }
 }

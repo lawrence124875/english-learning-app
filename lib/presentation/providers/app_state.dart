@@ -5,6 +5,7 @@ import '../../domain/models/playback_settings.dart';
 import '../../domain/services/playlist_builder.dart';
 import '../../data/repositories/word_repository.dart';
 import '../../data/repositories/progress_repository.dart';
+import '../../data/sources/device_quirks.dart';
 import '../../data/sources/tts_service.dart';
 import '../../data/sources/tts_audio_handler.dart';
 import '../../data/sources/subscription_service.dart';
@@ -528,6 +529,10 @@ class AppState extends ChangeNotifier {
   /// 連續快速換字時只送最後一次（世代編號比對），避免舊字蓋掉新字。
   int _nowPlayingGen = 0;
 
+  /// 鎖屏大字封面是否開啟：使用者沒選過時，小米系手機預設關。
+  bool get lockScreenCoverOn =>
+      settings.lockScreenCover ?? !DeviceQuirks.xiaomiFamily;
+
   void _updateNowPlaying() {
     final word = currentWord;
     if (word == null || _audioHandler == null) return;
@@ -551,7 +556,7 @@ class AppState extends ChangeNotifier {
     }
 
     _scheduleReminderRefresh();
-    if (!settings.lockScreenCover) {
+    if (!lockScreenCoverOn) {
       push(null);
       return;
     }

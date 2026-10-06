@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'data/repositories/remote_word_repository.dart';
 import 'data/repositories/progress_repository.dart';
+import 'data/sources/device_quirks.dart';
 import 'data/sources/tts_service.dart';
 import 'data/sources/tts_audio_handler.dart';
 import 'data/sources/subscription_service.dart';
@@ -74,6 +75,8 @@ Future<void> main() async {
   } catch (e, st) {
     debugPrint('本地通知初始化失敗（不影響 App 繼續啟動）：$e\n$st');
   }
+
+  await DeviceQuirks.detect();
 
   // 第十七版：冷啟動時清掉上次關閉 App 殘留的朗讀卡片（必須在 AudioService.init 之前）。
   await NotificationService.clearStaleMediaNotification();
