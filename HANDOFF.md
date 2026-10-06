@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-06（**新增 CHAT_BRIEF.md（聊天專案用摘要），改重要內容時要同步更新，見 §0**；**版號規則：下一版起 versionName 改 0.3.x（下一版 0.3.0+18），見 §5**；**英文版隱私權政策引號改半形**）；2026-10-05（**RevenueCat／訂閱後台設定（服務帳戶、Entitlement 改 premium、Offering）見 §7，訂閱實機測試待辦見 §17 A-4**；**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-06（**第十八版 0.3.0+18 介面改版：柔光卡片／深色模式、首頁版面 D、單字大小、鎖屏大字封面、每日提醒改良，見 §17 B6**；**新增 CHAT_BRIEF.md（聊天專案用摘要），改重要內容時要同步更新，見 §0**；**版號規則：下一版起 versionName 改 0.3.x（下一版 0.3.0+18），見 §5**；**英文版隱私權政策引號改半形**）；2026-10-05（**RevenueCat／訂閱後台設定（服務帳戶、Entitlement 改 premium、Offering）見 §7，訂閱實機測試待辦見 §17 A-4**；**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -71,12 +71,14 @@ lib/
     update_service.dart        Google Play 應用程式內更新（in_app_update）
     csv_import_service.dart    CSV 匯入（錯誤用 CsvImportError enum 回報，畫面層翻譯）
     feedback_service.dart      意見回饋寫入 Firestore（含 locale 欄位）
+    cover_art.dart             0.3.0 鎖屏大字封面 PNG、提醒大圖示（dart:ui 繪製）
     ads_service.dart           AdMob（插頁/開啟應用程式/獎勵/橫幅廣告＋全螢幕廣告頻率控制與生命週期監聽）
     analytics_service.dart     Firebase Analytics 事件（第 9 版新增）
   domain/models/word_item.dart  WordItem / WordDataset（translations map、resolveLocale、builtIn 旗標）
   presentation/
     providers/app_state.dart   核心狀態；meaningLocaleFor() 決定翻譯語言
     dataset_labels.dart        內建教材名稱多語言化
+    app_theme.dart             0.3.0 淺色／深色主題、AppPalette（頁面配色一律從這裡取）
     screens/ widgets/
   l10n/app_*.arb               介面文字（8 種）
 assets/data/                   四份教材 JSON + manifest.json
@@ -156,6 +158,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 | 15 | 0.1.12 | **依 TestersCommunity 回饋新增「分享給朋友」**：首頁右上選單（關於本 App 上方）新增 `menuShare`，用 `share_plus`（^10.1.4，`Share.share`）叫出系統分享面板，文字為 11 語 `shareMessage`＋Play 商店連結，subject＝appTitle；Analytics 事件 `share_app`。**另依 ASO 調查，越/印尼/西/葡/泰/阿/英的 appTitle（桌面名稱與 App 頂端標題）改為關鍵字名稱**（Học Từ Vựng Tiếng Anh Qua Nghe、Kosakata Inggris Sambil Dengar、Aprender Inglés Escuchando、Aprender Inglês Ouvindo、คำศัพท์ภาษาอังกฤษ ฝึกฟัง、تعلم الإنجليزية بالاستماع、English Words Audio Cruise；shareMessage 內名稱同步），中/日/韓 appTitle 不變；11 語商店名稱＋簡短說明見 `store_assets/store_listing_v15_names.md`，7 語截圖/主題圖已重產。版本資訊 `store_assets/release_notes_v15.md`（含 en-US 共 11 語） | 2026-09-30 紅米實機確認（選單「分享給朋友」正常、手機切西班牙文桌面名稱顯示 Aprender Inglés Escuchando）後，#198 AAB 與商店資訊變更一起送審，**審查中** |
 | 16 | 0.1.13 | **修正鎖定畫面／通知列朗讀卡片沒有暫停、播放、停止按鈕**（比照謙卦 0.1.0+15，謙卦對話發現：release 版 shrinkResources 把 audio_service 以名稱字串查詢的 `audio_service_*` 按鈕圖示當成沒用到而刪除，小米卡片整排按鈕不顯示）。修法：`scripts/patch_android_icons.sh` 產生 `res/raw/keep.xml`，`tools:keep="@drawable/audio_service_*"`（一般版與個人版 workflow 都會執行）。**同版再加：修正快速連按上一個／下一個時沒聲音、聲音與畫面不同步、單字跳太快**（2026-10-02 Lawrence 回報；原因：舊的 `_speakCurrent` 流程在 stop 後仍接著念重複次數與翻譯，蓋掉新單字；暫停後很快再播放會有兩個巡航迴圈同時推進。修法：`app_state.dart` 加 `_speakGen`（每次新朗讀/停止 +1，舊流程每個 await 後檢查過期就結束；上一個還在念時先 await stop）與 `_cruiseGen`（舊巡航迴圈過期即退出））。版本資訊 `store_assets/release_notes_v16.md`（11 語，兩項） | 2026-10-02 #212 紅米確認鎖屏/通知按鈕 ✅；2026-10-03 #214 實機 4 項全通過 ✅，**上傳用 #214 AAB**；同日加入快速切換修正（版本號不變，仍 0.1.13+16），#214（94b9e7e）已含此修正，實機 4 項（含快速連按）通過，**第十五版過審後上傳 #214 AAB**（見 §17 B4） |
 | 17 | 0.1.14+17 | **歐洲廣告同意（Google UMP）**：AdMob 已建立 GDPR 訊息「LC Lab GDPR」（套用英文 App 與謙卦，2026-10-05）。`AdsService` 啟動時不再初始化 MobileAds；`AppState.initialize` 確認不是 Premium 後呼叫 `startConsentAndAds()`（請求同意資訊→需要時顯示表單→`canRequestAds()` 才初始化並預載廣告，15 秒逾時）；橫幅等 `sdkReady`、獎勵廣告未就緒回報失敗；首頁選單新增「廣告隱私設定」`menuAdPrivacy`（11 語，只在 UMP 回報需要時且非 Premium 顯示）。版本資訊 `store_assets/release_notes_v17.md`（11 語） | 2026-10-05 Actions #215（3f9efbe）建置成功，產物 english-app-builds Release `android-release-run215`；待實機確認；**在第十六版之後上傳** |
+| 18 | 0.3.0+18 | **介面視覺改版**（規格 `store_assets/ui_proposals_2026-10-06/spec_0.3.0.md`）：淺色「柔光卡片」＋深色「夜讀深綠」，外觀可選跟隨系統／淺色／深色；首頁版面 D（大單字卡、教材下拉、小膠囊上一個／下一個、中型播放鍵、星號與重播小字列）；單字大小小／中／大；單字字型 Nunito ExtraBold（OFL，已登錄授權）；鎖屏／通知卡片大字封面圖（可關）＋精簡檢視三鍵；每日提醒品牌色、大圖示、內文「上次聽到」或「還有 N 個不熟悉單字」、「▶ 開始朗讀」「稍後提醒（1 小時後一次）」。版本資訊 `store_assets/release_notes_v18.md`（11 語） | 2026-10-06 程式完成，待 CI 與實機確認（§17 B6） |
 | 10 | 0.1.7 | **修正每日提醒從未跳出**：manifest 補上 flutter_local_notifications 的 ScheduledNotificationReceiver、ScheduledNotificationBootReceiver 與 RECEIVE_BOOT_COMPLETED（先前所有手機的定時提醒都不會觸發）；第二輪（紅米實測仍未跳出）：改用精準鬧鐘（SCHEDULE_EXACT_ALARM，使用者設定提醒時若未允許會開系統「鬧鐘與提醒」頁；未允許則退回非精準）、提醒頻道改高重要性 `reminder_high`（會跳橫幅，舊頻道刪除）；第三輪（2026-09-27 紅米實測仍無通知、通知中心與圖示角標皆無）：新增隱藏「通知診斷」工具（學習統計頁**長按「每日提醒」標題**）：顯示初始化結果、通知權限、精準鬧鐘權限、提醒頻道重要性、已排程 ID，並可發「立即測試」與「1 分鐘後測試」通知，用來區分是「通知根本發不出來」還是「排程沒觸發」。Lawrence 回報：通知開關、自啟動、省電無限制都已設定；特殊權限裡找不到「鬧鐘與提醒」；設定時間後有顯示「已完成設定」（=排程有進系統），但從未跳出「允許通知」系統視窗。測試機為紅米 Note 8／Android 11（所以沒有通知權限視窗、沒有「鬧鐘與提醒」，精準鬧鐘預設允許）。按 Home 鍵不滑掉 App、鎖屏等候仍無提醒，但朗讀的鎖屏媒體通知正常顯示→排除強制停止，問題在提醒頻道或排程觸發。診斷工具在 Actions #125 建置成功。**真正原因找到**：診斷顯示權限/頻道/排程全正常、立即通知會跳，但 1 分鐘測試報 `scheduledDate: Must be a date in the future`——`_nextInstanceOfLocalTime` 等處把本地時間先減時區偏移再丟 `TZDateTime.from`，但 `from` 取的是絕對時間點（epoch），等於多減 8 小時：每日提醒其實每天在設定時間**提早 8 小時**觸發（設 19:00 會在 11:00 跳），久未使用提醒也提早 8 小時。已改為直接 `TZDateTime.from(本地DateTime, tz.UTC)`。踩坑：**TZDateTime.from 不看牆上時鐘，別手動加減時區偏移**。2026-09-27 Actions #127 紅米實測：1 分鐘測試與每日提醒皆準時跳出 ✅。「通知診斷」工具保留（隱藏、僅中文，開發用） 另含：自訂教材 CSV 第一欄語言可選（朗讀用該語言 TTS）、英文介面作為不支援語言的預設（新增 app_en.arb）、功能介紹與匯入說明加一句「也可匯入英文以外的語言」（新 key `importWordLangLabel`）、CSV 表頭改為第一或第二欄是語言名稱也算表頭、翻譯語言英文選項改為單純「英文」、匯入時檢查手機有無該語言 TTS 語音並提示安裝、翻譯欄擴充為 13 種（新增簡中、法、德、義、泰） | 提醒已實機驗證通過；第一欄語言與英文介面待實機確認後上傳 |
 
 注意：第 5 版之前的日韓越印尼教材翻譯其實也受第 8 版修正的 bug 影響（實際沒顯示），第 8 版起才真正生效。
@@ -205,6 +208,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - 版本更新不必等 14 天測試結束（上傳新版不會重置測試天數；只有暫停軌道或測試者退出才會）。
 - 拒絕加入無授權的商業版權內容（例：牛津片語清單），以「匯入自訂教材」替代。
 - 測試機為小米/Redmi（MIUI），已加小米自啟動設定按鈕，但以標準 Android 行為為準。
+- **0.3.0 介面（2026-10-06）**：主色維持鼠尾草綠 `#5B8A72`，白字實心按鈕用 `#4F7C65`（對比 ≥4.5）；首頁版面 D，按鈕刻意小、以單字為主角；淺色＝柔光卡片、深色＝夜讀深綠，預設跟隨系統；單字大小可調（顧慮旁人看到）；鎖屏大字封面預設開。頁面配色從 `AppPalette` 取，不要再寫死顏色。
 
 ---
 
@@ -232,6 +236,9 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - 全螢幕廣告本身會觸發 App 生命週期 paused/resumed，任何「回到前景」邏輯都要排除廣告造成的切換。
 - **任何原生外掛呼叫（尤其需要 Activity 的權限對話框）都不能放在 `AppState.initialize()` 裡不加 try/catch**：一拋例外 initialize 就中斷，isLoading 永遠 true，使用者看到的就是「卡在載入中」。Crashlytics 會把這類未接住的例外標成「當機」（main.dart 的 PlatformDispatcher.onError 以 fatal 記錄）。
 - Play Console 的 edge-to-edge 提醒在修正後可能仍顯示一段時間（Flutter 框架本身也會被偵測）。
+- **flutter gen-l10n 產生的 `lib/l10n/app_localizations*.dart` 不進 git**（pubspec `generate: true`，CI 的 pub get 會產生；已加 .gitignore）。
+- **`SliverFillRemaining(hasScrollBody: false)` 裡不能放 LayoutBuilder**（會丟「LayoutBuilder does not support returning intrinsic dimensions」，畫面整個掛掉）；首頁改用 LayoutBuilder 算卡片高度＋SingleChildScrollView。
+- 通知動作按鈕（AndroidNotificationAction）需要 manifest 的 `ActionBroadcastReceiver`（已加進 patch_android_manifest.sh）；背景按「稍後提醒」走 `notificationBackgroundHandler`（top-level、`@pragma('vm:entry-point')`），在另一個 isolate 執行，要自己初始化 tz 與外掛。
 - **release 版資源壓縮會刪掉「只用名稱字串引用」的資源**：audio_service 的媒體按鈕圖示 `audio_service_*` 曾因此全被刪除（鎖屏/通知卡片沒有按鈕，第十六版修正）。這類資源要加進 `res/raw/keep.xml` 的 `tools:keep`（由 `patch_android_icons.sh` 產生）。
 
 ---
@@ -424,6 +431,14 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - 隱私權政策 `docs/index.html` 改寫為中英雙語（生效日期 2026-10-05；2026-10-06 英文版的彎引號／全形引號改為半形 `"` `'`，中文版不動；之後改英文頁也用半形引號），AdMob 段落比照謙卦 privacy.html：AdMob 收集的資料、歐洲同意表單、「廣告隱私設定」入口、訂閱者不顯示廣告；開發者名稱改「LC Lab（Lawrence Chang）」。`#data-deletion` 錨點保留（Play 資料安全性網址用），英文版另有 `#data-deletion-en`。
 - **待 Lawrence（聊天那邊處理）**：①到 english-app-builds Release `android-release-run215` 下載 APK，紅米實機確認免費版廣告照常出現（台灣不會跳同意表單、選單不會出現「廣告隱私設定」，屬正常）；要測歐洲表單需 VPN 到歐洲或在 AdMob 隱私權與訊息設定測試裝置。②第十六版上傳後，再上傳第十七版 AAB＋`release_notes_v17.md`。③Play Console「資料安全性」不需改（AdMob 收集項目不變）；確認商店的隱私權政策網址仍是 `https://lawrence124875.github.io/english-learning-app/`。
 - 實機確認項目：免費版橫幅、插頁、開啟應用程式、獎勵廣告都正常；Premium（個人版）不會跳同意表單、沒有廣告。
+
+### B6. 第十八版（0.3.0+18）—— 2026-10-06 介面視覺改版
+- 規格與示意圖：`store_assets/ui_proposals_2026-10-06/spec_0.3.0.md`（Lawrence 在 0.3.0 介面討論串逐項確認）。
+- 程式：`app_theme.dart`（主題、AppPalette）、`home_screen.dart`（版面 D、`_DatasetPicker`、`_WordCard`、`_Controls`、`_FitWord` 自動縮字）、`unlock_banner.dart`（一行＋底部選單）、`settings_panel.dart`（單字大小、鎖屏封面、外觀）、`playback_settings.dart`（`wordSize`、`lockScreenCover`、`appearance`）、`cover_art.dart`、`notification_service.dart`、`app_state.dart`（`_updateNowPlaying` 封面、`_refreshReminders` 提醒內文、開始朗讀請求）。
+- 新增 19 個介面字串（11 語）。阿拉伯文首頁按鈕列自動鏡像，上一個／下一個圖示朝外側。
+- 封面效果依手機而異（有些手機只顯示小縮圖）；通知字型大小由系統決定，App 改不了。
+- **待實機確認（紅米 Note 8）**：①首頁淺色／深色（手機切深色自動跟隨）、外觀三選項；②單字大小小／中／大、長片語不截斷；③鎖屏卡片大字封面＋上一個／播放／下一個，關閉「鎖屏顯示大字封面」後回到一般卡片；App 在背景換字時封面也更新；④每日提醒：綠色、大圖示、內文顯示上次聽到的單字；按「▶ 開始朗讀」開 App 並開始朗讀（App 已關閉時也要可以）；按「稍後提醒」1 小時後再跳一次；⑤關閉 App 後沒有殘留卡片；⑥免費版橫幅廣告區、Premium 無廣告；⑦阿拉伯文介面版面。
+- 上傳順序：第十六、十七版之後。
 
 ### C. 測試期滿後（預計 2026-10 上旬，2026-09-24 起算 TestersCommunity 16 天）
 1. Play Console 申請正式版存取權（用 A-3 的問卷）。
