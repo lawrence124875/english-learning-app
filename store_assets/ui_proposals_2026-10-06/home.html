@@ -1,0 +1,96 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><style>
+/* A 現況 */
+.a .bar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;font-size:20px;font-weight:bold}
+.a .chips{display:flex;flex-wrap:wrap;gap:6px;padding:4px 16px}
+.chip{border:1px solid #c9cdc4;border-radius:8px;padding:5px 10px;font-size:13px;background:#fff}
+.a .chip.on{background:#DCEEE1;border-color:#DCEEE1}
+.a .card{margin:12px 16px;background:#F3F4EF;border-radius:12px;padding:16px;text-align:center}
+.mini{display:flex;justify-content:space-between}.mini span{font-size:11px;border:1px solid #ccc;border-radius:8px;padding:2px 8px;background:#fff}
+.prog{height:4px;background:#dfe3dc;border-radius:4px;margin:10px 0 4px}.prog i{display:block;height:100%;width:33%;background:#5B8A72;border-radius:4px}
+.small{font-size:11px;color:#999}
+.a .w{font-size:30px;font-weight:bold;margin-top:8px}.a .m{font-size:17px;margin:6px 0 14px}
+.btnf{background:#5B8A72;color:#fff;border-radius:22px;padding:11px;font-size:15px}
+.btno{border:1px solid #9aa39a;border-radius:22px;padding:10px;font-size:14px;color:#5B8A72;margin-top:8px}
+.unlock{margin:0 16px;background:#FFF7E6;border-radius:12px;padding:12px;font-size:13px}
+.unlock .b{display:flex;gap:8px;margin-top:8px}.unlock .b div{flex:1;text-align:center;border-radius:18px;padding:8px;font-size:13px}
+.nav{display:flex;gap:8px;margin:12px 16px}.nav div{flex:1;text-align:center;border:1px solid #9aa39a;border-radius:20px;padding:9px 0;font-size:13px;color:#5B8A72}
+.set{margin:0 16px;border:1px solid #ddd;border-radius:12px;padding:12px;font-size:14px;background:#fff}
+.ad{position:absolute;bottom:0;left:0;right:0;height:50px;background:#e6e6e6;font-size:11px;color:#888;display:flex;align-items:center;justify-content:center}
+/* B 柔和卡片 */
+.b{background:#F4F8F6}
+.b .bar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;font-size:20px;font-weight:bold;color:#1E3A2A}
+.b .seg{margin:4px 16px;display:flex;background:#E3ECE7;border-radius:14px;padding:4px;gap:4px}
+.b .seg div{flex:1;text-align:center;font-size:12px;padding:7px 0;border-radius:10px;color:#4a5a50}
+.b .seg .on{background:#fff;color:#1E3A2A;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.b .card{margin:14px 16px;background:#fff;border-radius:24px;padding:18px 18px 22px;text-align:center;box-shadow:0 4px 14px rgba(40,80,60,.10)}
+.b .top{display:flex;justify-content:space-between;font-size:12px;color:#6b7a70}
+.ring{width:170px;height:170px;border-radius:50%;margin:14px auto 6px;background:conic-gradient(#5B8A72 0 33%,#E3ECE7 33% 100%);display:flex;align-items:center;justify-content:center}
+.ring>div{width:150px;height:150px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.b .w{font-size:40px;font-weight:bold;color:#1E3A2A}.b .m{font-size:19px;color:#5B8A72;margin-top:4px}
+.b .ctrl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:14px}
+.cb{width:48px;height:48px;border-radius:50%;background:#EEF4F0;color:#5B8A72;font-size:18px}
+.pb{width:72px;height:72px;border-radius:50%;background:#5B8A72;color:#fff;font-size:28px;box-shadow:0 4px 10px rgba(91,138,114,.4)}
+.b .star{margin-top:14px;font-size:14px;color:#C98A2E}
+.b .unlock2{margin:0 16px;background:#fff;border-radius:16px;padding:12px 14px;font-size:13px;display:flex;align-items:center;justify-content:space-between;border:1px solid #F0DDB8}
+.b .unlock2 span{background:#5B8A72;color:#fff;border-radius:14px;padding:6px 12px;font-size:12px}
+.b .set{border:none;border-radius:16px;margin-top:12px}
+/* C 沉浸播放器 */
+.c{background:#F4F7F7}
+.c .hero{background:linear-gradient(160deg,#3F7F78 0%,#5B8A72 55%,#6B8CAE 100%);color:#fff;padding:0 0 26px;border-radius:0 0 30px 30px}
+.c .bar{display:flex;justify-content:space-between;align-items:center;padding:8px 18px;font-size:19px;font-weight:bold}
+.c .chips{display:flex;gap:6px;padding:6px 16px;overflow:hidden}
+.c .chip{background:rgba(255,255,255,.18);border:none;color:#fff;border-radius:14px;white-space:nowrap}
+.c .chip.on{background:#fff;color:#2F6B5F;font-weight:bold}
+.c .w{font-size:46px;font-weight:bold;text-align:center;margin-top:34px}.c .m{font-size:21px;text-align:center;opacity:.92;margin-top:6px}
+.c .meta{text-align:center;font-size:12px;opacity:.8;margin-top:22px}
+.c .pg{height:4px;background:rgba(255,255,255,.3);margin:8px 34px 0;border-radius:4px}.c .pg i{display:block;width:33%;height:100%;background:#fff;border-radius:4px}
+.c .ctrl{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:-34px}
+.c .cb{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);color:#3F7F78}
+.c .pb{width:70px;height:70px;background:#E0A458;box-shadow:0 4px 12px rgba(224,164,88,.5)}
+.c .lbl{display:flex;justify-content:center;gap:40px;font-size:11px;color:#6b7a70;margin-top:6px}
+.c .star{margin:14px 16px 0;text-align:center;border:1px solid #E0A458;color:#C98A2E;border-radius:20px;padding:9px;font-size:14px;background:#fff}
+.c .unlock2{margin:12px 16px 0;background:#fff;border-radius:16px;padding:12px 14px;font-size:13px;display:flex;justify-content:space-between;align-items:center}
+.c .unlock2 span{background:#3F7F78;color:#fff;border-radius:14px;padding:6px 12px;font-size:12px}
+.c .set{margin-top:12px;border:none;border-radius:16px}
+</style></head><body>
+<h1>首頁設計方案（顏色都保留藍綠系）</h1>
+<div class="sub">示意圖，非實際截圖；文字以繁中為例。三個方案的功能和按鈕都一樣，只改版面與視覺層次。</div>
+<div class="row">
+<div class="col"><div class="label">A　現況（約略）</div>
+<div class="phone a"><div class="status"><span>9:41</span><span>▮▮ 80%</span></div>
+<div class="bar">智慧聽覺巡航<span style="font-size:16px;color:#666">☆ ⓘ ⋮</span></div>
+<div class="chips"><span class="chip on">✓ NGSL 2809字</span><span class="chip">口語 720字</span><span class="chip">高頻語塊 506</span><span class="chip">片語動詞 150</span></div>
+<div class="card"><div class="mini"><span>No. 937 / 2809</span><span>第 1 輪學習</span></div><div class="prog"><i></i></div><div class="small">本輪已聽過進度：936 / 2809 (33%)</div>
+<div class="w">bill</div><div class="m">帳單</div><div class="btnf">▶ 開始巡航朗讀</div><div class="btno"><span style="color:#E0A458">☆</span> 加入不熟悉單字庫</div></div>
+<div class="unlock">免費版已解鎖 936 / 2809 個項目<div class="b"><div style="border:1px solid #5B8A72;color:#5B8A72">▶ 看廣告 +20</div><div style="background:#5B8A72;color:#fff">★ 升級 Premium</div></div></div>
+<div class="nav"><div>⏮ 上一個</div><div>↻ 再讀一次</div><div>下一個 ⏭</div></div>
+<div class="set">播放設定 ▾<div class="small">英雙讀・讀2次・0.9x</div></div>
+<div class="ad">橫幅廣告</div></div>
+<div class="note">按鈕多、層級接近，單字不夠突出；上一個／下一個離播放鍵很遠。</div></div>
+
+<div class="col"><div class="label">B　柔和卡片（推薦）</div>
+<div class="phone b"><div class="status"><span>9:41</span><span>▮▮ 80%</span></div>
+<div class="bar">智慧聽覺巡航<span style="font-size:16px;color:#6b7a70">☆ ⋮</span></div>
+<div class="seg"><div class="on">NGSL</div><div>口語</div><div>語塊</div><div>片語動詞</div></div>
+<div class="card"><div class="top"><span>No. 937 / 2809</span><span>第 1 輪</span></div>
+<div class="ring"><div><div class="w">bill</div><div class="m">帳單</div></div></div>
+<div class="small">本輪 33%</div>
+<div class="ctrl"><div class="icon cb">⏮</div><div class="icon pb">▶</div><div class="icon cb">⏭</div></div>
+<div class="star">☆ 加入不熟悉單字庫　·　↻ 再讀一次</div></div>
+<div class="unlock2">免費版已解鎖 936 / 2809<span>解鎖更多</span></div>
+<div class="set">播放設定 ▾<div class="small">英雙讀・讀2次・0.9x</div></div>
+<div class="ad">橫幅廣告</div></div>
+<div class="note">單字放大、圓形進度環；播放、上一個、下一個集中成一排音樂播放器式按鈕。整體最接近現在，改動中等。</div></div>
+
+<div class="col"><div class="label">C　沉浸播放器</div>
+<div class="phone c"><div class="hero"><div class="status" style="color:#fff"><span>9:41</span><span>▮▮ 80%</span></div>
+<div class="bar">智慧聽覺巡航<span style="font-size:16px">☆ ⋮</span></div>
+<div class="chips"><span class="chip on">NGSL 2809</span><span class="chip">口語 720</span><span class="chip">語塊 506</span><span class="chip">片語 150</span></div>
+<div class="w">bill</div><div class="m">帳單</div>
+<div class="meta">No. 937 / 2809 · 第 1 輪 · 33%</div><div class="pg"><i></i></div><div style="height:30px"></div></div>
+<div class="ctrl"><div class="icon cb">⏮</div><div class="icon cb">↻</div><div class="icon pb">▶</div><div class="icon cb">☆</div><div class="icon cb">⏭</div></div>
+<div class="unlock2">免費版已解鎖 936 / 2809<span>解鎖更多</span></div>
+<div class="set">播放設定 ▾<div class="small">英雙讀・讀2次・0.9x</div></div>
+<div class="ad">橫幅廣告</div></div>
+<div class="note">上半部藍綠漸層像音樂 App，單字最大；播放鍵用暖橘點綴（現有 tertiary 色）。視覺變化最大。</div></div>
+</div></body></html>
