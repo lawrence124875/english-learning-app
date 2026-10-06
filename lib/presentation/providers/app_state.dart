@@ -195,6 +195,30 @@ class AppState extends ChangeNotifier {
   /// 會比全部清單少）。
   int get roundTotalCount => currentPlaybackState.playlist.length;
 
+  /// 只給介面截圖測試用：不碰任何外掛，直接放入教材與播放位置。
+  @visibleForTesting
+  void debugPreview({
+    required List<WordDataset> data,
+    PlaybackSettings? newSettings,
+    bool premium = false,
+    int step = 0,
+    int index = 0,
+  }) {
+    datasets = data;
+    currentDatasetIndex = index;
+    if (newSettings != null) settings = newSettings;
+    isPremium = premium;
+    for (final d in data) {
+      _starredSets[d.id] = <int>{};
+      _playbackStates[d.id] = DatasetPlaybackState(
+        playlist: List.generate(d.items.length, (i) => i),
+        currentStep: step.clamp(0, d.items.length - 1),
+      );
+    }
+    isLoading = false;
+    notifyListeners();
+  }
+
   Future<void> initialize() async {
     isLoading = true;
     notifyListeners();

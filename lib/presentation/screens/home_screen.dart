@@ -22,13 +22,18 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
+  /// 只給介面截圖測試用：不初始化外掛、不跳新手導覽與更新檢查。
+  @visibleForTesting
+  static bool previewMode = false;
+
   @override
   void initState() {
     super.initState();
+    if (previewMode) return;
     context.read<AppState>().initialize();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 第一次開啟 App 時顯示特色介紹（看過就不再自動出現）。
@@ -190,27 +195,32 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Expanded(
-                child: CustomScrollView(
-                  slivers: [
-                    SliverPadding(
-                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-                      sliver: SliverFillRemaining(
-                        hasScrollBody: false,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            _DatasetPicker(appState: appState),
-                            const SizedBox(height: 14),
-                            Expanded(child: _WordCard(appState: appState)),
-                            const SizedBox(height: 12),
-                            const UnlockBanner(),
-                            const SettingsPanel(),
-                          ],
+                // 單字卡撐滿剩下的高度（Premium 沒有解鎖列和廣告，卡片自動變高）；
+                // 螢幕太矮或播放設定展開時整頁可捲動。
+                child: LayoutBuilder(builder: (context, constraints) {
+                  final showUnlock = !appState.isPremium &&
+                      !appState.currentDatasetFullyUnlocked;
+                  final others = 4 + 16 + 50 + 14 + 12 + 72 + (showUnlock ? 62 : 0);
+                  final cardHeight =
+                      (constraints.maxHeight - others).clamp(360.0, 900.0);
+                  return SingleChildScrollView(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _DatasetPicker(appState: appState),
+                        const SizedBox(height: 14),
+                        SizedBox(
+                          height: cardHeight,
+                          child: _WordCard(appState: appState),
                         ),
-                      ),
+                        const SizedBox(height: 12),
+                        const UnlockBanner(),
+                        const SettingsPanel(),
+                      ],
                     ),
-                  ],
-                ),
+                  );
+                }),
               ),
               if (!appState.isPremium)
                 ColoredBox(
@@ -277,7 +287,8 @@ class _DatasetPicker extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              Flexible(
+              ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 170),
                 child: Text(
                   l.switchDatasetButton,
                   maxLines: 1,
@@ -351,8 +362,7 @@ class _WordCard extends StatelessWidget {
         fontSize: 13,
         fontFeatures: const [FontFeature.tabularFigures()]);
 
-    return ConstrainedBox(
-      constraints: const BoxConstraints(minHeight: 340),
+    return SizedBox.expand(
       child: Container(
         padding: const EdgeInsets.fromLTRB(18, 18, 18, 10),
         decoration: BoxDecoration(
@@ -489,7 +499,7 @@ class _Controls extends StatelessWidget {
     final pillStyle = TextButton.styleFrom(
       backgroundColor: palette.pill,
       foregroundColor: palette.onPill,
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
       minimumSize: const Size(0, 40),
       shape: const StadiumBorder(),
     );
@@ -501,7 +511,8 @@ class _Controls extends StatelessWidget {
         );
     return Row(
       children: [
-        Flexible(
+        Expanded(
+          flex: 5,
           child: TextButton.icon(
             style: pillStyle,
             onPressed: () => appState.previous(
@@ -512,13 +523,13 @@ class _Controls extends StatelessWidget {
         ),
         const SizedBox(width: 8),
         Expanded(
-          flex: 2,
+          flex: 6,
           child: Center(
             child: FilledButton.icon(
               onPressed: appState.togglePlay,
               style: FilledButton.styleFrom(
                 minimumSize: const Size(0, 46),
-                padding: const EdgeInsets.symmetric(horizontal: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 14),
                 shape: const StadiumBorder(),
                 elevation: 2,
               ),
@@ -536,7 +547,8 @@ class _Controls extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 8),
-        Flexible(
+        Expanded(
+          flex: 5,
           child: Directionality(
             // 「下一個」圖示放在文字後面（外側）。
             textDirection: rtl ? TextDirection.ltr : TextDirection.rtl,
