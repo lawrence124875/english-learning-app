@@ -117,7 +117,7 @@ class SettingsPanel extends StatelessWidget {
           SwitchListTile(
             title: Text(l.lockScreenCoverLabel),
             subtitle: Text(l.lockScreenCoverDesc),
-            value: settings.lockScreenCover,
+            value: appState.lockScreenCoverOn,
             onChanged: (v) => appState
                 .updateSettings(settings.copyWith(lockScreenCover: v)),
           ),
