@@ -99,7 +99,7 @@ class SettingsPanel extends StatelessWidget {
               ],
             ),
           ),
-          // 0.3.0 新增：單字大小、鎖屏大字封面、外觀（深色模式）。
+          // 0.3.0 新增：單字大小、外觀（深色模式）。（鎖屏大字封面開關 0.3.1 移除）
           _StackedSettingRow(
             title: l.wordSizeLabel,
             control: SegmentedButton<WordSize>(
@@ -113,13 +113,6 @@ class SettingsPanel extends StatelessWidget {
               onSelectionChanged: (v) => appState
                   .updateSettings(settings.copyWith(wordSize: v.first)),
             ),
-          ),
-          SwitchListTile(
-            title: Text(l.lockScreenCoverLabel),
-            subtitle: Text(l.lockScreenCoverDesc),
-            value: appState.lockScreenCoverOn,
-            onChanged: (v) => appState
-                .updateSettings(settings.copyWith(lockScreenCover: v)),
           ),
           _StackedSettingRow(
             title: l.appearanceLabel,

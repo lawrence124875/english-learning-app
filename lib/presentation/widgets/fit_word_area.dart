@@ -35,8 +35,13 @@ class FitWordArea extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, c) {
       final scaler = MediaQuery.textScalerOf(context);
+      // Text 會套上主題預設字型樣式（Material 3 行高 1.43），量的時候也要套，
+      // 否則實際比量到的高，翻譯會被切掉（0.3.1 第一版實機發生）。
+      final base = DefaultTextStyle.of(context).style;
+      final wordStyle = base.merge(this.wordStyle);
+      final meaningStyle = base.merge(this.meaningStyle);
       final width = c.maxWidth;
-      final height = c.maxHeight;
+      final height = c.maxHeight - 2; // 留一點餘裕，避免小數誤差
 
       // 翻譯最多占一半高度。
       var mLines = 3;

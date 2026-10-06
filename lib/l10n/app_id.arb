@@ -186,8 +186,6 @@
   "wordSizeSmall": "Kecil",
   "wordSizeMedium": "Sedang",
   "wordSizeLarge": "Besar",
-  "lockScreenCoverLabel": "Tampilkan sampul huruf besar di layar kunci",
-  "lockScreenCoverDesc": "Jika dimatikan, layar kunci hanya menampilkan kartu huruf kecil biasa",
   "appearanceLabel": "Tampilan",
   "appearanceSystem": "Ikuti sistem",
   "appearanceLight": "Terang",

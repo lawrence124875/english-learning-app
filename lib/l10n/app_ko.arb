@@ -186,8 +186,6 @@
   "wordSizeSmall": "작게",
   "wordSizeMedium": "보통",
   "wordSizeLarge": "크게",
-  "lockScreenCoverLabel": "잠금 화면에 큰 글자 표지 표시",
-  "lockScreenCoverDesc": "끄면 잠금 화면에 일반 작은 글자 카드만 표시됩니다",
   "appearanceLabel": "화면 모드",
   "appearanceSystem": "시스템 설정 따르기",
   "appearanceLight": "라이트",

@@ -5,7 +5,6 @@ import '../../domain/models/playback_settings.dart';
 import '../../domain/services/playlist_builder.dart';
 import '../../data/repositories/word_repository.dart';
 import '../../data/repositories/progress_repository.dart';
-import '../../data/sources/device_quirks.dart';
 import '../../data/sources/tts_service.dart';
 import '../../data/sources/tts_audio_handler.dart';
 import '../../data/sources/subscription_service.dart';
@@ -436,8 +435,7 @@ class AppState extends ChangeNotifier {
     final voiceChanged = newSettings.voiceId != settings.voiceId;
     final rateChanged = newSettings.speechRate != settings.speechRate;
     final nowPlayingChanged =
-        newSettings.lockScreenCover != settings.lockScreenCover ||
-            newSettings.showTranslation != settings.showTranslation;
+        newSettings.showTranslation != settings.showTranslation;
     settings = newSettings;
     if (nowPlayingChanged) _updateNowPlaying();
     await _progressRepository.saveSettings(settings);
@@ -525,13 +523,9 @@ class AppState extends ChangeNotifier {
       _hideBuiltInTranslationFor(word) ? '' : word.meaningFor(meaningLocaleFor(word));
 
   /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
-  /// 0.3.0：開啟「鎖屏大字封面」時，先畫好封面圖再一起送出；
+  /// 0.3.1：封面是固定的無字綠底（見 CoverArt.lockScreen）。
   /// 連續快速換字時只送最後一次（世代編號比對），避免舊字蓋掉新字。
   int _nowPlayingGen = 0;
-
-  /// 鎖屏大字封面是否開啟：使用者沒選過時，小米系手機預設關。
-  bool get lockScreenCoverOn =>
-      settings.lockScreenCover ?? !DeviceQuirks.xiaomiFamily;
 
   void _updateNowPlaying() {
     final word = currentWord;
@@ -556,16 +550,9 @@ class AppState extends ChangeNotifier {
     }
 
     _scheduleReminderRefresh();
-    if (!lockScreenCoverOn) {
-      push(null);
-      return;
-    }
-    CoverArt.forWord(
-      word: word.word,
-      meaning: meaning,
-      footer: '${BackgroundL10n.current().appTitle}  $index / $total',
-      meaningRtl: meaningIsRtl(word),
-    ).timeout(const Duration(seconds: 2)).then(push, onError: (_) => push(null));
+    CoverArt.lockScreen()
+        .timeout(const Duration(seconds: 2))
+        .then(push, onError: (_) => push(null));
   }
 
   Future<void> _persistCurrentProgress() async {

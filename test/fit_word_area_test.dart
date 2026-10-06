@@ -36,7 +36,11 @@ void main() {
               data: MediaQueryData(textScaler: TextScaler.linear(scale)),
               child: Directionality(
                 textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
-                child: Center(
+                // 模擬 Material 3 bodyMedium（行高 1.43、字距 0.25），
+                // 0.3.1 第一版沒算進去，實機翻譯被切掉一半。
+                child: DefaultTextStyle(
+                 style: const TextStyle(height: 1.43, letterSpacing: 0.25),
+                 child: Center(
                   child: SizedBox.fromSize(
                     size: box,
                     child: FitWordArea(
@@ -52,6 +56,7 @@ void main() {
                     ),
                   ),
                 ),
+               ),
               ),
             ));
             expect(tester.takeException(), isNull,

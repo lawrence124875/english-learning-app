@@ -31,9 +31,6 @@ class PlaybackSettings {
   final String? voiceId; // 選定的語音（系統 TTS voice identifier）
   final bool settingsPanelExpanded; // 設定面板是否展開（記住上次狀態）
   final WordSize wordSize; // 0.3.0：首頁單字大小
-  /// 0.3.0：鎖屏顯示大字封面圖。0.3.1 起 null＝依手機自動
-  /// （小米系預設關，其他預設開；見 DeviceQuirks、AppState.lockScreenCoverOn）。
-  final bool? lockScreenCover;
   final AppearanceMode appearance; // 0.3.0：外觀（深色模式）
 
   const PlaybackSettings({
@@ -47,7 +44,6 @@ class PlaybackSettings {
     this.voiceId,
     this.settingsPanelExpanded = false,
     this.wordSize = WordSize.medium,
-    this.lockScreenCover,
     this.appearance = AppearanceMode.system,
   });
 
@@ -63,7 +59,6 @@ class PlaybackSettings {
     bool clearVoiceId = false,
     bool? settingsPanelExpanded,
     WordSize? wordSize,
-    bool? lockScreenCover,
     AppearanceMode? appearance,
   }) {
     return PlaybackSettings(
@@ -79,7 +74,6 @@ class PlaybackSettings {
       settingsPanelExpanded:
           settingsPanelExpanded ?? this.settingsPanelExpanded,
       wordSize: wordSize ?? this.wordSize,
-      lockScreenCover: lockScreenCover ?? this.lockScreenCover,
       appearance: appearance ?? this.appearance,
     );
   }
@@ -95,8 +89,6 @@ class PlaybackSettings {
         'voiceId': voiceId,
         'settingsPanelExpanded': settingsPanelExpanded,
         'wordSize': wordSize.index,
-        // 0.3.1 換新鍵：0.3.0 存的 true 是舊預設，不算使用者選的。
-        'lockScreenCoverV2': lockScreenCover,
         'appearance': appearance.index,
       };
 
@@ -113,7 +105,6 @@ class PlaybackSettings {
       voiceId: json['voiceId'] as String?,
       settingsPanelExpanded: json['settingsPanelExpanded'] as bool? ?? false,
       wordSize: _enumAt(WordSize.values, json['wordSize'], WordSize.medium),
-      lockScreenCover: json['lockScreenCoverV2'] as bool?,
       appearance: _enumAt(
           AppearanceMode.values, json['appearance'], AppearanceMode.system),
     );
