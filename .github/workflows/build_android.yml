@@ -120,7 +120,9 @@ jobs:
           n=${{ github.run_number }}
           cp build/app/outputs/flutter-apk/app-release.apk "release_${ver}_run${n}.apk"
           cp build/app/outputs/bundle/release/app-release.aab "release_${ver}_run${n}.aab"
+          # 版本資訊（store_assets/release_notes_v<versionCode>.md）直接放進 Release 說明，方便複製到 Play Console。
+          bash scripts/release_body.sh "commit ${{ github.sha }}。AAB 上傳 Play Console 用；APK 供實機測試。" "${ver#*+}" > release_body.md
           gh release create "android-release-run${n}" "release_${ver}_run${n}.apk" "release_${ver}_run${n}.aab" \
             --repo lawrence124875/english-app-builds \
             --title "Android 一般版 ${ver}（run ${n}）" \
-            --notes "commit ${{ github.sha }}。AAB 上傳 Play Console 用；APK 供實機測試。"
+            --notes-file release_body.md

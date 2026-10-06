@@ -1,0 +1,29 @@
+name: Update release notes on builds release
+
+# 手動觸發：把 store_assets/release_notes_v<versionCode>.md 放進 english-app-builds 既有 Release 的說明
+# （建置後才補寫或修改版本資訊時用）。不建置、不改 APK/AAB。
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag，例：android-release-run216'
+        required: true
+      version_code:
+        description: 'versionCode，例：18（讀 store_assets/release_notes_v18.md）'
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Edit release body
+        env:
+          GH_TOKEN: ${{ secrets.BUILDS_REPO_TOKEN }}
+          TAG: ${{ inputs.tag }}
+          CODE: ${{ inputs.version_code }}
+        run: |
+          set -euo pipefail
+          first=$(gh release view "$TAG" --repo lawrence124875/english-app-builds --json body -q .body | head -n 1)
+          bash scripts/release_body.sh "$first" "$CODE" > release_body.md
+          gh release edit "$TAG" --repo lawrence124875/english-app-builds --notes-file release_body.md

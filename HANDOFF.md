@@ -18,7 +18,8 @@
 4. Push：**2026-10-06 起（Lawrence 新合作規則）中途 commit 推工作分支**（例：`claude/<功能>`，用 `git push origin HEAD:<分支>`），整個功能或語言完成、CI 建置成功後才併入 main（`git fetch origin main` 後 merge，不 force push）。大工作切小批（一次約 8 項），每批一個討論串，做完回報「完成了什麼、下一步」，分支名稱與進度寫進本文件。（2026-10-05 以前是一律推 main。）
 5. Push 後 GitHub Actions 自動建置（約 12~20 分鐘）。用 GitHub MCP 工具查 Actions 執行狀態、job 日誌與失敗訊息；改完程式一定要等建置成功才回報完成。
 6. english-app-builds 的 Releases（`android-release-run<N>`、個人版）可直接用 GitHub 工具查看，不必再請 Lawrence 確認。
-7. 本機編譯：舊容器連不到 Google 儲存空間無法裝 Flutter SDK；雲端工作階段 2026-10-05 測試可連到 storage.googleapis.com，**是否能本機裝 Flutter 尚未驗證**，目前仍以 CI 為準。
+   - **版本資訊放在 Release 說明裡（2026-10-06 Lawrence 決定）**：每版都要寫 `store_assets/release_notes_v<versionCode>.md`（11 語、`<zh-TW>…</en-US>` 格式），**在推觸發建置的 commit 之前完成**，build_android.yml 會用 `scripts/release_body.sh` 把它整段放進 Release 說明的程式碼區塊，Lawrence 直接複製貼到 Play Console。建置後才寫或改版本資訊：手動執行 workflow `update_release_notes.yml`（輸入 tag 與 versionCode）更新既有 Release。
+7. 本機編譯：雲端工作階段可裝 Flutter SDK（2026-10-06 已用 `flutter analyze`、`flutter test` 驗證；APK 建置仍以 CI 為準）。
 
 舊流程紀錄（2026-10-04 以前的一般對話，已停用）：每次由 Lawrence 貼 fine-grained 權杖（`english-app-claude`，到期 2026-10-26），push 用 `https://x-access-token:<TOKEN>@...`，以 curl 呼叫 Actions API、讀 `::error::` annotation。雲端工作階段不再需要這個權杖，到期不必重產（可由 Lawrence 自行刪除）。易經對話權杖 `iching-cards`（到期 2026-10-30）依易經對話需要處理。**CI 專用權杖 `ci-private-releases`（只存 Secret `BUILDS_REPO_TOKEN`；無到期日，不需定期更新）仍在使用**，workflow 發 Release 靠它。
 
