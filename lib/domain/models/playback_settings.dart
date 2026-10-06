@@ -12,6 +12,12 @@ enum ReadMode {
   bilingual, // 英雙讀（先英文，再中文）
 }
 
+/// 0.3.0：首頁單字大小三段（小／中／大）。
+enum WordSize { small, medium, large }
+
+/// 0.3.0：外觀（跟隨系統／淺色／深色）。
+enum AppearanceMode { system, light, dark }
+
 /// 對應原網頁版的播放設定（語速、間隔、重複次數等）。
 /// 這組設定是「全域」的，四份教材共用同一組朗讀偏好。
 class PlaybackSettings {
@@ -24,6 +30,9 @@ class PlaybackSettings {
   final double speechRate; // 朗讀語速
   final String? voiceId; // 選定的語音（系統 TTS voice identifier）
   final bool settingsPanelExpanded; // 設定面板是否展開（記住上次狀態）
+  final WordSize wordSize; // 0.3.0：首頁單字大小
+  final bool lockScreenCover; // 0.3.0：鎖屏顯示大字封面圖
+  final AppearanceMode appearance; // 0.3.0：外觀（深色模式）
 
   const PlaybackSettings({
     this.scopeMode = ScopeMode.allRandom,
@@ -35,6 +44,9 @@ class PlaybackSettings {
     this.speechRate = 0.5,
     this.voiceId,
     this.settingsPanelExpanded = false,
+    this.wordSize = WordSize.medium,
+    this.lockScreenCover = true,
+    this.appearance = AppearanceMode.system,
   });
 
   PlaybackSettings copyWith({
@@ -48,6 +60,9 @@ class PlaybackSettings {
     String? voiceId,
     bool clearVoiceId = false,
     bool? settingsPanelExpanded,
+    WordSize? wordSize,
+    bool? lockScreenCover,
+    AppearanceMode? appearance,
   }) {
     return PlaybackSettings(
       scopeMode: scopeMode ?? this.scopeMode,
@@ -61,6 +76,9 @@ class PlaybackSettings {
       voiceId: clearVoiceId ? null : (voiceId ?? this.voiceId),
       settingsPanelExpanded:
           settingsPanelExpanded ?? this.settingsPanelExpanded,
+      wordSize: wordSize ?? this.wordSize,
+      lockScreenCover: lockScreenCover ?? this.lockScreenCover,
+      appearance: appearance ?? this.appearance,
     );
   }
 
@@ -74,6 +92,9 @@ class PlaybackSettings {
         'speechRate': speechRate,
         'voiceId': voiceId,
         'settingsPanelExpanded': settingsPanelExpanded,
+        'wordSize': wordSize.index,
+        'lockScreenCover': lockScreenCover,
+        'appearance': appearance.index,
       };
 
   factory PlaybackSettings.fromJson(Map<String, dynamic> json) {
@@ -88,7 +109,16 @@ class PlaybackSettings {
       speechRate: (json['speechRate'] as num?)?.toDouble() ?? 0.9,
       voiceId: json['voiceId'] as String?,
       settingsPanelExpanded: json['settingsPanelExpanded'] as bool? ?? false,
+      wordSize: _enumAt(WordSize.values, json['wordSize'], WordSize.medium),
+      lockScreenCover: json['lockScreenCover'] as bool? ?? true,
+      appearance: _enumAt(
+          AppearanceMode.values, json['appearance'], AppearanceMode.system),
     );
+  }
+
+  static T _enumAt<T>(List<T> values, Object? raw, T fallback) {
+    final i = raw is int ? raw : -1;
+    return i >= 0 && i < values.length ? values[i] : fallback;
   }
 }
 

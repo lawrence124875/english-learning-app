@@ -342,5 +342,45 @@
   "menuAdPrivacy": "廣告隱私設定",
   "@menuAdPrivacy": {
     "description": "選單：廣告隱私設定（Google UMP 隱私選項表單，只在歐洲等需要同意的地區顯示，第十七版）"
-  }
+  },
+  "switchDatasetButton": "切換教材",
+  "unlockMoreButton": "解鎖更多",
+  "playShortStart": "開始朗讀",
+  "playShortPause": "暫停",
+  "cycleShort": "第 {n} 輪",
+  "@cycleShort": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wordSizeLabel": "單字大小",
+  "wordSizeSmall": "小",
+  "wordSizeMedium": "中",
+  "wordSizeLarge": "大",
+  "lockScreenCoverLabel": "鎖屏顯示大字封面",
+  "lockScreenCoverDesc": "關閉後，鎖屏只顯示一般的小字卡片",
+  "appearanceLabel": "外觀",
+  "appearanceSystem": "跟隨系統",
+  "appearanceLight": "淺色",
+  "appearanceDark": "深色",
+  "notifLastHeard": "上次聽到：{word}",
+  "@notifLastHeard": {
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "notifStarredLeft": "還有 {count} 個不熟悉單字",
+  "@notifStarredLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "notifActionStart": "▶ 開始朗讀",
+  "notifActionSnooze": "稍後提醒"
 }

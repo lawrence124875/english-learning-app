@@ -98,6 +98,14 @@ class AppState extends ChangeNotifier {
 
   Set<int> get currentStarred => _starredSets[currentDataset.id] ?? <int>{};
 
+  /// 目前單字是否已加入不熟悉單字庫（首頁星號實心／空心）。
+  bool get isCurrentStarred {
+    final state = currentPlaybackState;
+    if (state.playlist.isEmpty) return false;
+    return currentStarred
+        .contains(state.playlist[state.currentStep % state.playlist.length]);
+  }
+
   WordItem? get currentWord {
     final state = currentPlaybackState;
     if (state.playlist.isEmpty) return null;

@@ -18,6 +18,8 @@ import 'presentation/providers/app_state.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/app_localizations.dart';
 import 'presentation/screens/home_screen.dart';
+import 'presentation/app_theme.dart';
+import 'domain/models/playback_settings.dart';
 
 /// 背景播放服務的控制器。可能為 null——見下方說明。
 TtsAudioHandler? _audioHandler;
@@ -28,6 +30,12 @@ Future<void> main() async {
   // 無邊框，這裡讓舊版 Android 也採用相同顯示方式，畫面延伸到狀態列與
   // 導覽列底下；內容避開系統列的處理在 MaterialApp 的 builder 裡。
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+  // 0.3.0：英文單字字型 Nunito（SIL OFL 1.1）授權，顯示在「關於」的授權清單。
+  LicenseRegistry.addLicense(() async* {
+    final text = await rootBundle.loadString('assets/fonts/Nunito-OFL.txt');
+    yield LicenseEntryWithLineBreaks(const ['Nunito'], text);
+  });
 
   // 每一個初始化步驟都個別包一層 try-catch：任何一個服務初始化失敗，
   // 都不該讓整個 App 開不起來。特別是 AudioService.init()——如果使用者
@@ -127,7 +135,9 @@ class EnglishLearningApp extends StatelessWidget {
           ),
         ),
       ],
-      child: MaterialApp(
+      child: Selector<AppState, AppearanceMode>(
+        selector: (_, s) => s.settings.appearance,
+        builder: (context, appearance, _) => MaterialApp(
         // 所有畫面統一避開底部導覽列與左右瀏海（上方狀態列由各頁 AppBar
         // 自動處理），避免無邊框模式下清單最後一項或按鈕被手勢列蓋住；
         // 讓出的區域塗上背景色，看起來跟畫面連成一片。
@@ -162,35 +172,17 @@ class EnglishLearningApp extends StatelessWidget {
           Locale('ar'),
           Locale('en'),
         ],
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: const ColorScheme.light(
-            // 柔和鼠尾草綠/藍綠色：研究顯示冷色調有助於放鬆專注、
-            // 利於長期記憶保存，且對眼睛負擔較小，適合長時間閱讀學習。
-            primary: Color(0xFF5B8A72),
-            onPrimary: Colors.white,
-            primaryContainer: Color(0xFFDCEEE1),
-            onPrimaryContainer: Color(0xFF1E3A2A),
-            secondary: Color(0xFF6B8CAE),
-            onSecondary: Colors.white,
-            // 暖色只用在需要吸引注意力的重點（例如標記不熟悉單字的
-            // 星號），依色彩心理學研究應少量點綴、避免過度刺激。
-            tertiary: Color(0xFFE0A458),
-            onTertiary: Colors.white,
-            surface: Color(0xFFFAFAF7),
-            onSurface: Color(0xFF2C2C28),
-            surfaceContainerHighest: Color(0xFFF0F0EA),
-            error: Color(0xFFC5705D),
-            onError: Colors.white,
-          ),
-          scaffoldBackgroundColor: const Color(0xFFFAFAF7),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Color(0xFFFAFAF7),
-            foregroundColor: Color(0xFF2C2C28),
-            elevation: 0,
-          ),
-        ),
+        // 0.3.0：淺色「柔光卡片」＋深色「夜讀深綠」，外觀可在播放設定切換
+        //（跟隨系統／淺色／深色）。配色見 app_theme.dart。
+        theme: AppTheme.light(),
+        darkTheme: AppTheme.dark(),
+        themeMode: switch (appearance) {
+          AppearanceMode.light => ThemeMode.light,
+          AppearanceMode.dark => ThemeMode.dark,
+          AppearanceMode.system => ThemeMode.system,
+        },
         home: const HomeScreen(),
+        ),
       ),
     );
   }

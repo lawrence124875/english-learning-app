@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../domain/models/playback_settings.dart';
 import '../providers/app_state.dart';
 import '../../l10n/app_localizations.dart';
+import '../app_theme.dart';
 
 /// 可收合的播放設定面板。
 /// 預設收合、記住上次展開狀態、收合時顯示目前設定摘要。
@@ -15,9 +16,17 @@ class SettingsPanel extends StatelessWidget {
     final settings = appState.settings;
     final l = AppLocalizations.of(context)!;
 
-    return Card(
+    final palette = AppPalette.of(context);
+    return Material(
+      color: palette.softRow,
+      borderRadius: BorderRadius.circular(16),
+      clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
-        title: Text('⚙️ ${l.settingsTitle}'),
+        shape: const Border(),
+        collapsedShape: const Border(),
+        leading: Icon(Icons.tune, color: Theme.of(context).colorScheme.primary),
+        title: Text(l.settingsTitle,
+            style: const TextStyle(fontWeight: FontWeight.w600)),
         subtitle: Text(l.settingsSummaryLine(
           settings.readMode == ReadMode.bilingual
               ? l.summaryReadBilingual
@@ -37,7 +46,7 @@ class SettingsPanel extends StatelessWidget {
             child: Align(
               alignment: AlignmentDirectional.centerStart,
               child: Text(l.starredCountLabel(appState.currentStarred.length),
-                  style: const TextStyle(color: Colors.redAccent)),
+                  style: TextStyle(color: palette.star)),
             ),
           ),
           const SizedBox(height: 8),
@@ -88,6 +97,48 @@ class SettingsPanel extends StatelessWidget {
                       appState.updateSettings(settings.copyWith(speechRate: v)),
                 ),
               ],
+            ),
+          ),
+          // 0.3.0 新增：單字大小、鎖屏大字封面、外觀（深色模式）。
+          _StackedSettingRow(
+            title: l.wordSizeLabel,
+            control: SegmentedButton<WordSize>(
+              showSelectedIcon: false,
+              segments: [
+                ButtonSegment(value: WordSize.small, label: Text(l.wordSizeSmall)),
+                ButtonSegment(value: WordSize.medium, label: Text(l.wordSizeMedium)),
+                ButtonSegment(value: WordSize.large, label: Text(l.wordSizeLarge)),
+              ],
+              selected: {settings.wordSize},
+              onSelectionChanged: (v) => appState
+                  .updateSettings(settings.copyWith(wordSize: v.first)),
+            ),
+          ),
+          SwitchListTile(
+            title: Text(l.lockScreenCoverLabel),
+            subtitle: Text(l.lockScreenCoverDesc),
+            value: settings.lockScreenCover,
+            onChanged: (v) => appState
+                .updateSettings(settings.copyWith(lockScreenCover: v)),
+          ),
+          _StackedSettingRow(
+            title: l.appearanceLabel,
+            control: SegmentedButton<AppearanceMode>(
+              showSelectedIcon: false,
+              segments: [
+                ButtonSegment(
+                    value: AppearanceMode.system,
+                    label: Text(l.appearanceSystem,
+                        maxLines: 2, textAlign: TextAlign.center)),
+                ButtonSegment(
+                    value: AppearanceMode.light,
+                    label: Text(l.appearanceLight)),
+                ButtonSegment(
+                    value: AppearanceMode.dark, label: Text(l.appearanceDark)),
+              ],
+              selected: {settings.appearance},
+              onSelectionChanged: (v) => appState
+                  .updateSettings(settings.copyWith(appearance: v.first)),
             ),
           ),
           const SizedBox(height: 12),

@@ -1,7 +1,7 @@
 name: english_learning_app
 description: "智慧聽覺巡航 - 四合一英語核心學習神器"
 publish_to: 'none'
-version: 0.1.14+17
+version: 0.3.0+18
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -49,3 +49,11 @@ flutter:
     - assets/data/ngsl_spoken_720.json
     - assets/data/phrase_list_506.json
     - assets/data/phave_list_150.json
+    - assets/fonts/Nunito-OFL.txt
+  # 0.3.0：只內嵌英文單字用的 Nunito ExtraBold（SIL OFL 1.1，可商用）；
+  # 其他語言一律用手機內建字體，不另外內嵌。
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-ExtraBold.ttf
+          weight: 800

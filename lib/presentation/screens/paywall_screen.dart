@@ -189,7 +189,7 @@ class _BenefitRow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          const Icon(Icons.check_circle, color: Colors.teal, size: 20),
+          Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary, size: 20),
           const SizedBox(width: 8),
           Expanded(child: Text(text)),
         ],
