@@ -35,6 +35,12 @@ class TtsAudioHandler extends BaseAudioHandler {
     required int totalCount,
     Uri? artUri,
   }) {
+    // 0.3.1：已 stop()（App 被滑掉）就不再更新。封面圖是非同步取得，
+    // 停止過程中觸發的更新會晚於 idle 送出，把狀態改回 ready，
+    // 前景服務與卡片就收不掉（0.3.0 起紅米實機：滑掉 App 通知沒消失）。
+    // 之後重新開始朗讀（playing=true）才恢復。
+    if (_stopped && !playing) return;
+    _stopped = false;
     mediaItem.add(MediaItem(
       id: word,
       title: word,
@@ -62,8 +68,13 @@ class TtsAudioHandler extends BaseAudioHandler {
     ));
   }
 
+  bool _stopped = false;
+
   @override
-  Future<void> play() async => onPlay?.call();
+  Future<void> play() async {
+    _stopped = false;
+    await onPlay?.call();
+  }
 
   @override
   Future<void> pause() async => onPause?.call();
@@ -76,6 +87,7 @@ class TtsAudioHandler extends BaseAudioHandler {
 
   @override
   Future<void> stop() async {
+    _stopped = true;
     // 第十七版：停止朗讀若出錯或卡住，也一定要送出 idle，
     // 否則原生端不會結束服務、收掉通知與鎖屏卡片。
     try {
