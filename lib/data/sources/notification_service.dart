@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'dart:io' show Platform;
+import 'dart:ui' show Color, DartPluginRegistrant;
+import 'package:flutter/foundation.dart' show ValueNotifier, debugPrint;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'ads_service.dart';
@@ -7,6 +10,20 @@ import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:android_intent_plus/android_intent.dart';
 import 'background_l10n.dart';
+import 'cover_art.dart';
+
+/// 0.3.0：每日提醒「稍後提醒」按鈕在背景（App 沒開）時由系統叫醒這個函式，
+/// 一小時後再排一次同樣內容的提醒（只補一次，補的那則不再有「稍後提醒」）。
+@pragma('vm:entry-point')
+Future<void> notificationBackgroundHandler(NotificationResponse response) async {
+  if (response.actionId != NotificationService.actionSnooze) return;
+  try {
+    DartPluginRegistrant.ensureInitialized();
+    await NotificationService.snooze(response.payload, inBackground: true);
+  } catch (e) {
+    debugPrint('稍後提醒排程失敗：$e');
+  }
+}
 
 /// 複習提醒的本地通知服務。
 /// 使用者可以設定一個每天固定的提醒時間，App 會在那個時間跳出通知，
@@ -24,11 +41,114 @@ class NotificationService {
   /// 再調整重要性，所以換新 id，並刪掉舊頻道。
   static const _channelId = 'tw.bcc.englishapp.reminder_high';
   static const _oldChannelId = 'tw.bcc.englishapp.reminder';
+  static const _snoozeId = 1005;
+
+  static const actionStart = 'start_cruise';
+  static const actionSnooze = 'snooze';
+
+  /// 「▶ 開始朗讀」被按下（App 已在執行中）時 +1，AppState 收到後開始巡航。
+  static final startRequests = ValueNotifier<int>(0);
+
+  /// 提醒內文（排程當下的資料）：上次聽到的單字，或不熟悉單字數。
+  /// 由 AppState 在開 App、換字後（節流）更新並重新排程。
+  static String? reminderBody;
+  static String? _reminderIconPath;
+
+  static Future<void> setReminderContent({
+    String? lastHeard,
+    int starredCount = 0,
+    String? iconWord,
+  }) async {
+    final l = BackgroundL10n.current();
+    if (lastHeard != null && lastHeard.trim().isNotEmpty) {
+      reminderBody = l.notifLastHeard(lastHeard.trim());
+    } else if (starredCount > 0) {
+      reminderBody = l.notifStarredLeft(starredCount);
+    } else {
+      reminderBody = null;
+    }
+    try {
+      _reminderIconPath = await CoverArt.reminderIcon(iconWord ?? 'Aa');
+    } catch (_) {
+      _reminderIconPath = null;
+    }
+  }
+
+  static void _onResponse(NotificationResponse response) {
+    if (response.actionId == actionStart) {
+      startRequests.value++;
+    } else if (response.actionId == actionSnooze) {
+      snooze(response.payload);
+    }
+  }
+
+  /// App 是被「▶ 開始朗讀」按鈕冷啟動的話回傳 true（只回報一次）。
+  static bool _launchHandled = false;
+  static Future<bool> launchedByStartAction() async {
+    if (_launchHandled) return false;
+    _launchHandled = true;
+    try {
+      final details = await _plugin.getNotificationAppLaunchDetails();
+      return details?.didNotificationLaunchApp == true &&
+          details?.notificationResponse?.actionId == actionStart;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  static String _payload(String title, String body) => jsonEncode({
+        't': title,
+        'b': body,
+        'i': _reminderIconPath,
+      });
+
+  /// 一小時後再提醒一次（只補一次）。
+  static Future<void> snooze(String? payload, {bool inBackground = false}) async {
+    final l = BackgroundL10n.current();
+    var title = l.notifDailyTitle;
+    var body = l.notifDailyBody;
+    String? icon;
+    try {
+      final m = jsonDecode(payload ?? '{}') as Map<String, dynamic>;
+      title = m['t'] as String? ?? title;
+      body = m['b'] as String? ?? body;
+      icon = m['i'] as String?;
+    } catch (_) {}
+    if (inBackground) {
+      tz_data.initializeTimeZones();
+      await _plugin.initialize(const InitializationSettings(
+          android: AndroidInitializationSettings('@mipmap/ic_launcher')));
+    }
+    final at = tz.TZDateTime.from(
+        DateTime.now().add(const Duration(hours: 1)), tz.UTC);
+    await _plugin.zonedSchedule(
+      _snoozeId,
+      title,
+      body,
+      at,
+      _details(
+          largeIconPath: icon,
+          body: body,
+          withActions: true,
+          withSnooze: false),
+      androidScheduleMode: await _scheduleMode(),
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+    );
+  }
 
   /// 通知內容依「排程當下」的手機語言產生。每日提醒與久未使用提醒
   /// 在每次開啟 App 時都會重新排程，所以使用者切換手機語言後，
   /// 只要再開一次 App，之後跳出的提醒就會是新語言。
-  static NotificationDetails _details() {
+  ///
+  /// 0.3.0：提醒帶 App 主色、大圖示（鼠尾草綠底白字的單字小卡）、
+  /// 「▶ 開始朗讀」與「稍後提醒」兩個按鈕。
+  static NotificationDetails _details({
+    String? largeIconPath,
+    String? body,
+    bool withActions = false,
+    bool withSnooze = true,
+  }) {
     final l = BackgroundL10n.current();
     return NotificationDetails(
       android: AndroidNotificationDetails(
@@ -37,6 +157,20 @@ class NotificationService {
         channelDescription: l.notifChannelDesc,
         importance: Importance.high,
         priority: Priority.high,
+        color: const Color(0xFF5B8A72),
+        largeIcon:
+            largeIconPath == null ? null : FilePathAndroidBitmap(largeIconPath),
+        styleInformation:
+            body == null ? null : BigTextStyleInformation(body),
+        actions: withActions
+            ? [
+                AndroidNotificationAction(actionStart, l.notifActionStart,
+                    showsUserInterface: true, cancelNotification: true),
+                if (withSnooze)
+                  AndroidNotificationAction(actionSnooze, l.notifActionSnooze,
+                      cancelNotification: true),
+              ]
+            : null,
       ),
       // iOS：badgeNumber 讓桌面圖示右上角顯示 1（App 開啟時由 AppDelegate 歸零）。
       iOS: const DarwinNotificationDetails(
@@ -91,7 +225,11 @@ class NotificationService {
     );
     const settings = InitializationSettings(
         android: androidSettings, iOS: darwinSettings);
-    await _plugin.initialize(settings);
+    await _plugin.initialize(
+      settings,
+      onDidReceiveNotificationResponse: _onResponse,
+      onDidReceiveBackgroundNotificationResponse: notificationBackgroundHandler,
+    );
 
     final l = BackgroundL10n.current();
     final channel = AndroidNotificationChannel(
@@ -197,13 +335,16 @@ class NotificationService {
   }) async {
     final scheduled = _nextInstanceOfLocalTime(hour, minute);
     final l = BackgroundL10n.current();
+    final body = reminderBody ?? l.notifDailyBody;
 
     await _plugin.zonedSchedule(
       _reminderId,
       l.notifDailyTitle,
-      l.notifDailyBody,
+      body,
       scheduled,
-      _details(),
+      _details(
+          largeIconPath: _reminderIconPath, body: body, withActions: true),
+      payload: _payload(l.notifDailyTitle, body),
       androidScheduleMode: await _scheduleMode(),
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
@@ -238,12 +379,17 @@ class NotificationService {
     final scheduled = tz.TZDateTime.from(target, tz.UTC);
 
     final l = BackgroundL10n.current();
+    final body = reminderBody == null
+        ? l.notifInactivityBody
+        : '${l.notifInactivityBody}\n${reminderBody!}';
     await _plugin.zonedSchedule(
       _inactivityReminderId,
       l.notifInactivityTitle,
-      l.notifInactivityBody,
+      body,
       scheduled,
-      _details(),
+      _details(
+          largeIconPath: _reminderIconPath, body: body, withActions: true),
+      payload: _payload(l.notifInactivityTitle, body),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
@@ -383,7 +529,15 @@ class NotificationService {
   static Future<String?> showTestNow() async {
     try {
       final l = BackgroundL10n.current();
-      await _plugin.show(_testNowId, l.notifDailyTitle, '測試通知（立即）', _details());
+      await _plugin.show(
+          _testNowId,
+          l.notifDailyTitle,
+          reminderBody ?? '測試通知（立即）',
+          _details(
+              largeIconPath: _reminderIconPath,
+              body: reminderBody,
+              withActions: true),
+          payload: _payload(l.notifDailyTitle, reminderBody ?? ''));
       return null;
     } catch (e) {
       return e.toString();

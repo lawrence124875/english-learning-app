@@ -18,3 +18,6 @@ android/key.properties
 *.jks
 *.keystore
 store_assets/.fontcache/
+
+# flutter gen-l10n 產生的檔案（CI 建置時自動產生）
+lib/l10n/app_localizations*.dart

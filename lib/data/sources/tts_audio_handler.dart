@@ -33,12 +33,15 @@ class TtsAudioHandler extends BaseAudioHandler {
     required bool playing,
     required int currentIndex,
     required int totalCount,
+    Uri? artUri,
   }) {
     mediaItem.add(MediaItem(
       id: word,
       title: word,
       artist: meaning,
       album: '${BackgroundL10n.current().appTitle} ($currentIndex / $totalCount)',
+      // 0.3.0：大字封面圖（設定可關閉；null＝一般小字卡片）。
+      artUri: artUri,
     ));
     playbackState.add(playbackState.value.copyWith(
       controls: [
@@ -46,6 +49,8 @@ class TtsAudioHandler extends BaseAudioHandler {
         playing ? MediaControl.pause : MediaControl.play,
         MediaControl.skipToNext,
       ],
+      // 0.3.0：精簡檢視（小米等鎖屏只顯示精簡按鈕）也放上一個／下一個。
+      androidCompactActionIndices: const [0, 1, 2],
       systemActions: const {
         MediaAction.skipToPrevious,
         MediaAction.skipToNext,

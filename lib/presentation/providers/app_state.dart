@@ -13,6 +13,7 @@ import '../../data/sources/analytics_service.dart';
 import '../../data/repositories/stats_repository.dart';
 import '../../data/sources/notification_service.dart';
 import '../../data/sources/background_l10n.dart';
+import '../../data/sources/cover_art.dart';
 import '../../data/repositories/custom_dataset_repository.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
@@ -45,6 +46,63 @@ class AppState extends ChangeNotifier {
       onSkipNext: () => next(),
       onSkipPrevious: () => previous(),
     );
+    NotificationService.startRequests.addListener(_onStartRequest);
+  }
+
+  // --- 0.3.0：每日提醒的「▶ 開始朗讀」與提醒內文 ---
+  bool _pendingStart = false;
+
+  void _onStartRequest() {
+    if (isLoading || datasets.isEmpty) {
+      _pendingStart = true;
+    } else {
+      unawaited(startCruise());
+    }
+  }
+
+  Timer? _reminderDebounce;
+  DateTime _lastReminderRefresh = DateTime.fromMillisecondsSinceEpoch(0);
+
+  /// 換字後節流更新提醒內文（最多每 3 分鐘一次），避免巡航時一直重排。
+  void _scheduleReminderRefresh({bool force = false}) {
+    if (!force &&
+        DateTime.now().difference(_lastReminderRefresh) <
+            const Duration(minutes: 3)) {
+      return;
+    }
+    _reminderDebounce?.cancel();
+    _reminderDebounce =
+        Timer(const Duration(seconds: 5), () => unawaited(_refreshReminders()));
+  }
+
+  /// 依目前資料更新提醒內文與大圖示，並重新排程每日提醒與久未使用提醒。
+  /// 內文是排程當下的資料（不是即時的）。失敗不影響 App。
+  Future<void> _refreshReminders() async {
+    _lastReminderRefresh = DateTime.now();
+    try {
+      final word = currentWord;
+      final state = currentPlaybackState;
+      final hasProgress = state.currentStep > 0 || state.cycleCount > 1;
+      final starred =
+          _starredSets.values.fold<int>(0, (sum, s) => sum + s.length);
+      String? lastHeard;
+      if (word != null && hasProgress) {
+        final meaning = meaningOf(word);
+        lastHeard = meaning.isEmpty ? word.word : '${word.word} $meaning';
+      }
+      await NotificationService.setReminderContent(
+        lastHeard: lastHeard,
+        starredCount: starred,
+        iconWord: word?.word,
+      );
+      if (reminderEnabled) {
+        await NotificationService.scheduleDailyReminder(
+            hour: reminderHour, minute: reminderMinute);
+      }
+      await NotificationService.rescheduleInactivityReminder();
+    } catch (e) {
+      debugPrint('提醒內文更新失敗（不影響 App）：$e');
+    }
   }
 
   List<WordDataset> datasets = [];
@@ -189,6 +247,12 @@ class AppState extends ChangeNotifier {
     isLoading = false;
     _updateNowPlaying();
     notifyListeners();
+    unawaited(_refreshReminders());
+    // 0.3.0：從提醒的「▶ 開始朗讀」按鈕開啟 App 時，直接開始巡航。
+    if (_pendingStart || await NotificationService.launchedByStartAction()) {
+      _pendingStart = false;
+      unawaited(startCruise());
+    }
   }
 
   /// 依照 settings.voiceId 重新把先前選定的語音套用到 TTS 引擎，
@@ -346,7 +410,11 @@ class AppState extends ChangeNotifier {
     final scopeChanged = newSettings.scopeMode != settings.scopeMode;
     final voiceChanged = newSettings.voiceId != settings.voiceId;
     final rateChanged = newSettings.speechRate != settings.speechRate;
+    final nowPlayingChanged =
+        newSettings.lockScreenCover != settings.lockScreenCover ||
+            newSettings.showTranslation != settings.showTranslation;
     settings = newSettings;
+    if (nowPlayingChanged) _updateNowPlaying();
     await _progressRepository.saveSettings(settings);
     if (voiceChanged) {
       await _applyVoiceIfNeeded();
@@ -432,17 +500,43 @@ class AppState extends ChangeNotifier {
       _hideBuiltInTranslationFor(word) ? '' : word.meaningFor(meaningLocaleFor(word));
 
   /// 同步目前單字/播放狀態到鎖屏與通知列顯示（背景播放時看得到）。
+  /// 0.3.0：開啟「鎖屏大字封面」時，先畫好封面圖再一起送出；
+  /// 連續快速換字時只送最後一次（世代編號比對），避免舊字蓋掉新字。
+  int _nowPlayingGen = 0;
+
   void _updateNowPlaying() {
     final word = currentWord;
     if (word == null || _audioHandler == null) return;
+    final gen = ++_nowPlayingGen;
     final state = currentPlaybackState;
-    _audioHandler?.updateNowPlaying(
+    final meaning = settings.showTranslation ? meaningOf(word) : '';
+    final index = state.playlist.isEmpty ? 0 : state.currentStep + 1;
+    final total = state.playlist.length;
+    final playing = isPlaying;
+
+    void push(Uri? art) {
+      if (gen != _nowPlayingGen) return;
+      _audioHandler?.updateNowPlaying(
+        word: word.word,
+        meaning: meaning,
+        playing: playing,
+        currentIndex: index,
+        totalCount: total,
+        artUri: art,
+      );
+    }
+
+    _scheduleReminderRefresh();
+    if (!settings.lockScreenCover) {
+      push(null);
+      return;
+    }
+    CoverArt.forWord(
       word: word.word,
-      meaning: settings.showTranslation ? meaningOf(word) : '',
-      playing: isPlaying,
-      currentIndex: state.playlist.isEmpty ? 0 : state.currentStep + 1,
-      totalCount: state.playlist.length,
-    );
+      meaning: meaning,
+      footer: '${BackgroundL10n.current().appTitle}  $index / $total',
+      meaningRtl: meaningIsRtl(word),
+    ).timeout(const Duration(seconds: 2)).then(push, onError: (_) => push(null));
   }
 
   Future<void> _persistCurrentProgress() async {
@@ -615,6 +709,8 @@ class AppState extends ChangeNotifier {
 
   @override
   void dispose() {
+    NotificationService.startRequests.removeListener(_onStartRequest);
+    _reminderDebounce?.cancel();
     _cruiseTimer?.cancel();
     super.dispose();
   }
