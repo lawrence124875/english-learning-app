@@ -4,7 +4,7 @@
 > **每次改版、做出新決策、踩到新坑之後，都要同步更新這份文件並 commit。**
 > 注意：repo 是公開的，這裡不能寫任何密碼、金鑰、權杖明文。
 
-最後更新：2026-10-05（**RevenueCat／訂閱後台設定（服務帳戶、Entitlement 改 premium、Offering）見 §7，訂閱實機測試待辦見 §17 A-4**；**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
+最後更新：2026-10-06（**版號規則：下一版起 versionName 改 0.3.x（下一版 0.3.0+18），見 §5**；**英文版隱私權政策引號改半形**）；2026-10-05（**RevenueCat／訂閱後台設定（服務帳戶、Entitlement 改 premium、Offering）見 §7，訂閱實機測試待辦見 §17 A-4**；**清理過時內容：§7 商店資訊、§12 第十版確認、§17 B 第十二版**；**AdMob 後台設定（名稱、GDPR 訊息發布、分級與封鎖類別、根目錄 app-ads.txt）見 §7**；**第十七版 0.1.14+17：歐洲廣告同意 UMP＋「廣告隱私設定」選單、隱私權政策補英文版，見 §17 B5**；**開發已改到 Claude Code 雲端工作階段，不需再貼權杖，見 §0**）；2026-10-03（**Firebase 專案與謙卦共用，見 §0「Firebase 專案共用」**；**第十六版 #214 實機 4 項通過，待第十五版過審後上傳 #214 AAB**；**第十六版再併入：關閉 App 後朗讀卡片殘留修正，見 §17 B4**；**第十六版 0.1.13+16：保留 audio_service 媒體按鈕圖示，修正小米鎖屏/通知卡片沒有按鈕，見 §17 B4**；個人版產物改發佈到私人 repo english-app-builds，見 §10；**第十五版 0.1.12+15（#198）與 11 語商店資訊變更（ASO 名稱/簡短說明、7 語換圖、新增 en-US）已一起送審**；Android 後續事項總整理見 §17，新對話從 §17 開始）
 
 ---
 
@@ -133,6 +133,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - AdMob 廣告單元 Secrets：`ADMOB_APP_ID`、`ADMOB_REWARDED_AD_UNIT_ID`、`ADMOB_INTERSTITIAL_AD_UNIT_ID`、`ADMOB_BANNER_AD_UNIT_ID`、`ADMOB_APP_OPEN_AD_UNIT_ID`（第 9 版新增；未設定時程式退回 Google 測試 ID）。
 - minSdk 固定 21（Android 5.0+）。`purchases_flutter` 鎖在 `">=9.0.0 <10.8.0"`（9.0+ 符合 Billing Library 8；10.8+ 會把 minSdk 提到 23）。
 - 版本號在 `pubspec.yaml`（`version: x.y.z+N`，N 是 Play 的版本代碼，每次上傳都要比之前任何上傳過的大；可以跳號，上傳過的號碼不能重用）。
+  - **版號規則（2026-10-06 Lawrence 決定）**：下一個新建置的版本起，versionName 改用 **0.3.x 系列**（下一版＝`0.3.0+18`，之後 0.3.1+19、0.3.2+20…），versionCode 照常 +1。已建置好的第十六版 0.1.13+16（#214）、第十七版 0.1.14+17（#215）維持原版號照原計畫上傳，不重建。0.2.x 不使用。
 
 ---
 
@@ -417,7 +418,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - AdMob 端：GDPR 訊息「LC Lab GDPR」2026-10-05 已發布（5 語、含不同意按鈕、EEA／英國／瑞士），細節見 §7「AdMob 後台設定」。
 - 做法比照謙卦 `lib/core/admob/admob_ads.dart`（UMP API 已內建在 google_mobile_ads，不需另加套件）。程式：`ads_service.dart`（`startConsentAndAds`、`showPrivacyOptions`、`sdkReady`、`privacyOptionsRequired`）、`app_state.dart`（非 Premium 才啟動）、`banner_ad_widget.dart`（等 sdkReady）、`home_screen.dart`（選單）。
 - 取捨：Premium 使用者完全不走同意流程、不初始化廣告 SDK；免費版每次啟動都會請求同意資訊（UMP 規定），需要時才顯示表單。同意流程失敗／逾時：若 `canRequestAds()` 仍為 true（例如之前已同意、或非歐洲）照常初始化，否則這次不顯示廣告。
-- 隱私權政策 `docs/index.html` 改寫為中英雙語（生效日期 2026-10-05），AdMob 段落比照謙卦 privacy.html：AdMob 收集的資料、歐洲同意表單、「廣告隱私設定」入口、訂閱者不顯示廣告；開發者名稱改「LC Lab（Lawrence Chang）」。`#data-deletion` 錨點保留（Play 資料安全性網址用），英文版另有 `#data-deletion-en`。
+- 隱私權政策 `docs/index.html` 改寫為中英雙語（生效日期 2026-10-05；2026-10-06 英文版的彎引號／全形引號改為半形 `"` `'`，中文版不動；之後改英文頁也用半形引號），AdMob 段落比照謙卦 privacy.html：AdMob 收集的資料、歐洲同意表單、「廣告隱私設定」入口、訂閱者不顯示廣告；開發者名稱改「LC Lab（Lawrence Chang）」。`#data-deletion` 錨點保留（Play 資料安全性網址用），英文版另有 `#data-deletion-en`。
 - **待 Lawrence（聊天那邊處理）**：①到 english-app-builds Release `android-release-run215` 下載 APK，紅米實機確認免費版廣告照常出現（台灣不會跳同意表單、選單不會出現「廣告隱私設定」，屬正常）；要測歐洲表單需 VPN 到歐洲或在 AdMob 隱私權與訊息設定測試裝置。②第十六版上傳後，再上傳第十七版 AAB＋`release_notes_v17.md`。③Play Console「資料安全性」不需改（AdMob 收集項目不變）；確認商店的隱私權政策網址仍是 `https://lawrence124875.github.io/english-learning-app/`。
 - 實機確認項目：免費版橫幅、插頁、開啟應用程式、獎勵廣告都正常；Premium（個人版）不會跳同意表單、沒有廣告。
 
