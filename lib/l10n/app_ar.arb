@@ -186,8 +186,6 @@
   "wordSizeSmall": "صغير",
   "wordSizeMedium": "متوسط",
   "wordSizeLarge": "كبير",
-  "lockScreenCoverLabel": "غلاف بخط كبير على شاشة القفل",
-  "lockScreenCoverDesc": "عند الإيقاف تعرض شاشة القفل البطاقة العادية بخط صغير فقط",
   "appearanceLabel": "المظهر",
   "appearanceSystem": "حسب النظام",
   "appearanceLight": "فاتح",

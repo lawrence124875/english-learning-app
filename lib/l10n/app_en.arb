@@ -186,8 +186,6 @@
   "wordSizeSmall": "Small",
   "wordSizeMedium": "Medium",
   "wordSizeLarge": "Large",
-  "lockScreenCoverLabel": "Big-word cover on lock screen",
-  "lockScreenCoverDesc": "When off, the lock screen shows only the regular small-text card",
   "appearanceLabel": "Appearance",
   "appearanceSystem": "Follow system",
   "appearanceLight": "Light",

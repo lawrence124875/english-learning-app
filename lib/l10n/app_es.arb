@@ -186,8 +186,6 @@
   "wordSizeSmall": "Pequeño",
   "wordSizeMedium": "Mediano",
   "wordSizeLarge": "Grande",
-  "lockScreenCoverLabel": "Portada con letra grande en la pantalla de bloqueo",
-  "lockScreenCoverDesc": "Si lo desactivas, la pantalla de bloqueo solo muestra la tarjeta normal con letra pequeña",
   "appearanceLabel": "Apariencia",
   "appearanceSystem": "Según el sistema",
   "appearanceLight": "Claro",

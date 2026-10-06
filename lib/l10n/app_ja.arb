@@ -186,8 +186,6 @@
   "wordSizeSmall": "小",
   "wordSizeMedium": "中",
   "wordSizeLarge": "大",
-  "lockScreenCoverLabel": "ロック画面に大きな文字のカバーを表示",
-  "lockScreenCoverDesc": "オフにすると、ロック画面は通常の小さな文字のカードになります",
   "appearanceLabel": "表示モード",
   "appearanceSystem": "システムに合わせる",
   "appearanceLight": "ライト",

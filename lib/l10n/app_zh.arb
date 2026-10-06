@@ -359,8 +359,6 @@
   "wordSizeSmall": "小",
   "wordSizeMedium": "中",
   "wordSizeLarge": "大",
-  "lockScreenCoverLabel": "鎖屏顯示大字封面",
-  "lockScreenCoverDesc": "關閉後，鎖屏只顯示一般的小字卡片",
   "appearanceLabel": "外觀",
   "appearanceSystem": "跟隨系統",
   "appearanceLight": "淺色",

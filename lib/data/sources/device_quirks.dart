@@ -1,9 +1,8 @@
 import 'dart:io';
 
 /// 手機廠牌差異（0.3.1）。
-/// 小米／紅米／POCO（MIUI、HyperOS）的鎖屏音樂卡片把封面當「旁邊的小圖」，
-/// 大字封面會跟左邊的標題重複（2026-10-06 紅米 Note 8 實測），
-/// 所以這些手機「鎖屏大字封面」預設關閉；使用者仍可在設定打開。
+/// 小米／紅米／POCO（MIUI、HyperOS）的鎖屏音樂卡片把封面當「右側小圖」，
+/// 一般手機當卡片背景，所以封面圖依廠牌選（見 CoverArt.lockScreen）。
 class DeviceQuirks {
   static bool xiaomiFamily = false;
 

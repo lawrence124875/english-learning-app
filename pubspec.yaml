@@ -50,6 +50,8 @@ flutter:
     - assets/data/phrase_list_506.json
     - assets/data/phave_list_150.json
     - assets/fonts/Nunito-OFL.txt
+    - assets/cover/cover_plain.png
+    - assets/cover/cover_logo.png
   # 0.3.0：只內嵌英文單字用的 Nunito ExtraBold（SIL OFL 1.1，可商用）；
   # 其他語言一律用手機內建字體，不另外內嵌。
   fonts:

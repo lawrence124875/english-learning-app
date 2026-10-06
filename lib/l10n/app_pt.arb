@@ -186,8 +186,6 @@
   "wordSizeSmall": "Pequeno",
   "wordSizeMedium": "Médio",
   "wordSizeLarge": "Grande",
-  "lockScreenCoverLabel": "Capa com letra grande na tela de bloqueio",
-  "lockScreenCoverDesc": "Se desativar, a tela de bloqueio mostra só o cartão normal com letra pequena",
   "appearanceLabel": "Aparência",
   "appearanceSystem": "Seguir o sistema",
   "appearanceLight": "Claro",

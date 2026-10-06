@@ -186,8 +186,6 @@
   "wordSizeSmall": "เล็ก",
   "wordSizeMedium": "กลาง",
   "wordSizeLarge": "ใหญ่",
-  "lockScreenCoverLabel": "แสดงปกตัวอักษรใหญ่บนหน้าจอล็อก",
-  "lockScreenCoverDesc": "เมื่อปิด หน้าจอล็อกจะแสดงการ์ดตัวอักษรเล็กแบบปกติ",
   "appearanceLabel": "รูปแบบการแสดงผล",
   "appearanceSystem": "ตามระบบ",
   "appearanceLight": "สว่าง",
