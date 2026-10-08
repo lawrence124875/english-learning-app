@@ -392,7 +392,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 1. **Play Console「正式發布前測試報告」**（測試及發布 → 測試 → 正式發布前測試報告）：到第十一版為止**一份都沒有產生**。2026-09-29 已在「設定」選好測試語言（繁中、阿拉伯文、泰文、日文、英文）、不提供憑證、深層連結留空並儲存；**第十二版上傳後檢查報告**（總覽／詳細資訊），有問題截圖給 Claude。 2026-09-30：到第十五版仍無報告；設定頁**沒有啟用開關**（官方：上傳時自動產生，但視裝置實驗室容量，不保證每版都跑）。Lawrence 已把第十五版 AAB 以「從檔案庫新增」另發布到**內部測試**軌道，觀察是否產生報告（不影響封閉測試天數）。若仍無報告，問卷改寫「以 Crashlytics 監控＋每版實機測試」即可，不影響申請。
 2. **收集 TestersCommunity 回饋**：整理回報，決定哪些併入第十二版。
 3. **正式版存取權問卷草稿**：`store_assets/launch_prep.md` 第二節，✅ 2026-09-29 已依第 4～12 版修正紀錄改寫；期滿時補上【 】處（TestersCommunity 實際回饋、Crashlytics、正式發布前測試報告結果、預估安裝數）即可送出。
-4. **訂閱實機測試**（2026-10-05 RevenueCat 後台設定完成，見 §7「RevenueCat／訂閱後台設定」）：RevenueCat「驗證訂閱購買」變綠（最長約 36 小時）後，用 Play 授權測試帳號實機購買月繳／年繳，確認解鎖與恢復購買；通過後決定是否封存舊 Entitlement `english_learning_app_pro`。
+4. ✅ 2026-10-08 已通過（見 §17 C-1）。**訂閱實機測試**（2026-10-05 RevenueCat 後台設定完成，見 §7「RevenueCat／訂閱後台設定」）：RevenueCat「驗證訂閱購買」變綠（最長約 36 小時）後，用 Play 授權測試帳號實機購買月繳／年繳，確認解鎖與恢復購買；通過後決定是否封存舊 Entitlement `english_learning_app_pro`。
 
 4b. **介面視覺優化（2026-10-06 討論中，未定案、未改程式）**：保留藍綠配色，示意圖在 `store_assets/ui_proposals_2026-10-06/`（首頁 A 現況／B 柔和卡片／C 沉浸播放器；鎖屏朗讀卡片加「單字封面圖」；每日提醒加顏色、大圖示、「開始朗讀」按鈕）。通知字型大小由系統決定，App 無法直接調整。Lawrence 選定後再排入 0.3.0 版。
 
@@ -457,7 +457,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ### C. 測試期滿後（✅ 2026-10-08 Lawrence 確認期滿，開始申請）
 0. **V1 正式上架盤點** `store_assets/v1_release_audit_2026-10-08.md`（2026-10-08，Lawrence 指示：這串只做 V1 上架、不大改程式、V2 只標記）。必須處理：M1 問卷、M2 訂閱實機購買測試、M3 Crashlytics、M4 run219 廣告不能是 Test Ad、M5 應用程式內容／資料安全性無警告、M6 發布設定。程式與建置無擋上架問題。
-1. Play Console 申請正式版存取權：**2026-10-08 問卷已依第 4～19 版改寫定稿**（`store_assets/launch_prep.md` 第二節，英文貼上、中文對照；專案檔案 `production_access/production_access_questionnaire.md` 同內容）。送出前 Lawrence 確認：Crashlytics 第十九版無未結當機、訂閱實機測試（A-4）是否已做（沒做就刪問卷第 8 題 subscription）、目標對象設定、安裝數選最小區間。2026-10-08 已確認：Crashlytics 最近 7 天無當機、目標對象 16～17／18 歲以上（問卷已更新）；訂閱實機測試步驟 `store_assets/subscription_test_steps.md`，等 Lawrence 測完。M4 ✅：2026-10-08 拆 run219 APK，libapp.so 只有 4 個正式廣告單元（pub-6291816733600445）、manifest 為正式 App ID，沒有 Google 測試 ID；Lawrence 手機看到測試廣告是測試裝置或 AdMob 尚未連結，非程式問題。狀態：【待 Lawrence 送出／審核中／已核准——更新這行】
+1. Play Console 申請正式版存取權：**2026-10-08 問卷已依第 4～19 版改寫定稿**（`store_assets/launch_prep.md` 第二節，英文貼上、中文對照；專案檔案 `production_access/production_access_questionnaire.md` 同內容）。送出前 Lawrence 確認：Crashlytics 第十九版無未結當機、訂閱實機測試（A-4）是否已做（沒做就刪問卷第 8 題 subscription）、目標對象設定、安裝數選最小區間。2026-10-08 已確認：Crashlytics 最近 7 天無當機、目標對象 16～17／18 歲以上（問卷已更新）；訂閱實機測試步驟 `store_assets/subscription_test_steps.md`；✅ 2026-10-08 Lawrence 實測通過（購買成功、重裝自動恢復 Premium、意見回饋送出成功）。**問卷可送出。**M4 ✅：2026-10-08 拆 run219 APK，libapp.so 只有 4 個正式廣告單元（pub-6291816733600445）、manifest 為正式 App ID，沒有 Google 測試 ID；Lawrence 手機看到測試廣告是測試裝置或 AdMob 尚未連結，非程式問題。狀態：【待 Lawrence 送出／審核中／已核准——更新這行】
 2. 核准後建立正式版：建議從封閉測試軌道**推廣第十九版 0.3.1+19（run219）**、版本資訊 `release_notes_v19.md`、國家選所有可用國家、直接 100%（不分階段）。
 3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；到 `lawrence124875.github.io` repo 的 `index.html` 把本 App 卡片的「即將推出」換成 Play 商店連結；確認廣告出現在免費版。
 
