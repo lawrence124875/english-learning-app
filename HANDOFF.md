@@ -135,7 +135,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 - `build_personal.yml`：手動觸發，`FORCE_PREMIUM=true` 建置全解鎖無廣告的個人版 APK。
 - 簽署金鑰存在 GitHub Secrets：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`(=englishapp)、`ANDROID_KEY_PASSWORD`。Lawrence 本機也有備份。**金鑰遺失＝App 永遠無法更新。**
 - AdMob 廣告單元 Secrets：`ADMOB_APP_ID`、`ADMOB_REWARDED_AD_UNIT_ID`、`ADMOB_INTERSTITIAL_AD_UNIT_ID`、`ADMOB_BANNER_AD_UNIT_ID`、`ADMOB_APP_OPEN_AD_UNIT_ID`（第 9 版新增；未設定時程式退回 Google 測試 ID）。
-- minSdk 固定 21（Android 5.0+）。`purchases_flutter` 鎖在 `">=9.0.0 <10.8.0"`（9.0+ 符合 Billing Library 8；10.8+ 會把 minSdk 提到 23）。
+- minSdk：patch 寫 21，但 **實際建置結果是 24（Android 7.0+）**，被套件拉高（2026-10-08 拆 run219 APK 確認；targetSdk 36、三種架構、16 KB 對齊）。`purchases_flutter` 鎖在 `">=9.0.0 <10.8.0"`（9.0+ 符合 Billing Library 8；10.8+ 會把 minSdk 提到 23）。
 - 版本號在 `pubspec.yaml`（`version: x.y.z+N`，N 是 Play 的版本代碼，每次上傳都要比之前任何上傳過的大；可以跳號，上傳過的號碼不能重用）。
   - **版號規則（2026-10-06 Lawrence 決定）**：下一個新建置的版本起，versionName 改用 **0.3.x 系列**（下一版＝`0.3.0+18`，之後 0.3.1+19、0.3.2+20…），versionCode 照常 +1。已建置好的第十六版 0.1.13+16（#214）、第十七版 0.1.14+17（#215）維持原版號照原計畫上傳，不重建。0.2.x 不使用。
 
@@ -452,6 +452,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ### C. 測試期滿後（✅ 2026-10-08 Lawrence 確認期滿，開始申請）
 0. **V1 正式上架盤點** `store_assets/v1_release_audit_2026-10-08.md`（2026-10-08，Lawrence 指示：這串只做 V1 上架、不大改程式、V2 只標記）。必須處理：M1 問卷、M2 訂閱實機購買測試、M3 Crashlytics、M4 run219 廣告不能是 Test Ad、M5 應用程式內容／資料安全性無警告、M6 發布設定。程式與建置無擋上架問題。
+0b. **完整版盤點** `store_assets/v1_production_release_audit_2026-10-08.md`（專案檔案 production_audit/ 同內容，A/B/C 三類＋Checklist）。結論 READY WITH MINOR FIXES，程式不改、不重建。拆 run219 APK 已驗證：AdMob 4 個正式廣告單元、無測試 ID；RevenueCat 為 `goog_` 正式金鑰（原 M4 解決）。新增必做：A2 資料安全性補「電子郵件地址（選填，意見回饋）」；A4 確認 Firestore 規則是 create-only（與謙卦共用專案）。上架後：CI 鎖 Flutter 版本（目前 channel stable 不鎖）。app-ads.txt 開頭有 3 個空白，AdMob 驗證失敗才處理（與謙卦共用，需 Lawrence 同意）。
 1. Play Console 申請正式版存取權：**2026-10-08 問卷已依第 4～19 版改寫定稿**（`store_assets/launch_prep.md` 第二節，英文貼上、中文對照；專案檔案 `production_access/production_access_questionnaire.md` 同內容）。送出前 Lawrence 確認：Crashlytics 第十九版無未結當機、訂閱實機測試（A-4）是否已做（沒做就刪問卷第 8 題 subscription）、目標對象設定、安裝數選最小區間。狀態：【待 Lawrence 送出／審核中／已核准——更新這行】
 2. 核准後建立正式版：建議從封閉測試軌道**推廣第十九版 0.3.1+19（run219）**、版本資訊 `release_notes_v19.md`、國家選所有可用國家、直接 100%（不分階段）。
 3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；到 `lawrence124875.github.io` repo 的 `index.html` 把本 App 卡片的「即將推出」換成 Play 商店連結；確認廣告出現在免費版。
