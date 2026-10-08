@@ -100,7 +100,7 @@ EN:
 
 中：學了很多次英文卻沒學好的成人，特別是忙碌、年紀漸長、生活中很少接觸英文的人。介面與內建翻譯支援繁中、簡中、日、韓、越、印尼、西、葡、泰、阿，其他語言顯示英文。App 不是為 13 歲以下兒童設計（與隱私權政策一致）。
 
-【確認：Play Console「目標對象」若有勾 13 歲以下年齡層，就刪掉最後一句。】
+（2026-10-08 確認：Play Console 目標對象為 16～17 歲與 18 歲以上，與此句一致。）
 
 #### 5. Describe how your app provides value to users.
 
@@ -144,9 +144,9 @@ EN:
 #### 8. How did you decide that your app is ready for production?
 
 EN:
-> All issues found by testers, Crashlytics and my own testing are fixed in the current version (0.3.1), and each fix was verified on a physical device before release. The tester report found no crashes or functional bugs. Firebase Crashlytics shows 【no open crashes in the latest version】. Core features (background playback, bilingual reading, reminders, CSV import, ads and the subscription) work reliably on the tested devices. The store listing is complete in 11 languages, the privacy policy and data safety form are up to date, and the EU ad consent form is in place.
+> All issues found by testers, Crashlytics and my own testing are fixed in the current version (0.3.1), and each fix was verified on a physical device before release. The tester report found no crashes or functional bugs. Firebase Crashlytics shows no crashes in the last 7 days. Core features (background playback, bilingual reading, reminders, CSV import, ads and the subscription) work reliably on the tested devices. The store listing is complete in 11 languages, the privacy policy and data safety form are up to date, and the EU ad consent form is in place.
 
-中：測試者、Crashlytics 與我自己測試發現的問題都已在目前版本（0.3.1）修正，每項修正發布前都在實機確認。測試報告沒有當機或功能錯誤。Firebase Crashlytics 顯示【最新版沒有未結當機】。核心功能（背景朗讀、雙語、提醒、CSV 匯入、廣告、訂閱）在測試裝置上穩定運作。11 語商店資訊完整，隱私權政策與資料安全性表單已更新，歐洲廣告同意表單已上線。
+中：測試者、Crashlytics 與我自己測試發現的問題都已在目前版本（0.3.1）修正，每項修正發布前都在實機確認。測試報告沒有當機或功能錯誤。Firebase Crashlytics 最近 7 天沒有當機。核心功能（背景朗讀、雙語、提醒、CSV 匯入、廣告、訂閱）在測試裝置上穩定運作。11 語商店資訊完整，隱私權政策與資料安全性表單已更新，歐洲廣告同意表單已上線。
 
 【若 Play「正式發布前測試報告」有產生且沒有嚴重問題，可在 Crashlytics 那句後面加：The Play pre-launch report shows no critical issues.】
 
@@ -154,9 +154,9 @@ EN:
 
 ### 送出前你要確認的事
 
-1. **Crashlytics**：看最近 7 天第十九版有沒有未結當機，有的話截圖給我，第 8 題那句要改。
-2. **訂閱實機測試**（HANDOFF §17 A-4）：如果還沒用授權測試帳號實際買過一次並恢復購買，建議送出前先測；沒測就把第 8 題的 "and the subscription" 刪掉。
-3. **目標對象**：第 4 題最後一句要和 Play Console 目標對象設定一致。
+1. ✅ **Crashlytics**：2026-10-08 確認最近 7 天沒有當機。
+2. **訂閱實機測試**（HANDOFF §17 A-4）：步驟見 subscription_test_steps.md；通過前不要送出，或先把第 8 題的 "and the subscription" 刪掉。
+3. ✅ **目標對象**：16～17 歲、18 歲以上，與第 4 題一致。
 4. **安裝數**：第 6 題選最小區間。
 
 ### 核准後建立正式版時要確認的事
