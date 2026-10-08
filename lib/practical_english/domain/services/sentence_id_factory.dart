@@ -47,8 +47,9 @@ class SentenceIdFactory {
   /// 句子正規化：trim → 內部空白合併成一個空格 → 彎引號改直引號 →
   /// 去掉句尾 . ! ? 。 ！ ？ → 小寫。
   ///
-  /// 註：SPEC 寫的 Unicode NFC 正規化，Dart 標準函式庫沒有內建，
-  /// 目前不另加套件；匯入的 CSV 幾乎都已是 NFC。見 Phase 1 回報。
+  /// 註：Dart 沒有內建 Unicode NFC，V2.0 不加套件（SPEC §6.2 NFC 註記）。
+  /// 這裡每一步在所有裝置上結果都相同，ID 因此穩定；日後若要加 NFC，
+  /// 會改變 ID，必須先規劃 ID 遷移。
   static String normalize(String text) {
     var s = text.trim().replaceAll(RegExp(r'\s+'), ' ');
     s = s

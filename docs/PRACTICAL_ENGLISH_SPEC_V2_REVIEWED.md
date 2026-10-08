@@ -118,6 +118,8 @@ After migration, V2 logic reads and writes only canonical state. V1 keeps workin
 
 For every dataset, `fingerprint = FNV-1a 64 over the ordered list of WordItem.id joined by "\n"`. The fingerprint stored with each sync shows whether the index→ID mapping that V1 used is still the same.
 
+The item count is stored with the fingerprint. A dataset is **compatible** with the last sync when the fingerprint of its first `count` items equals the stored fingerprint: unchanged and append-only datasets keep every old index valid. Anything else (reorder, insert, delete) is **changed**. A dataset with no stored fingerprint (first sync, or a newly imported custom dataset) is treated as compatible.
+
 ### 5.4 Timing
 
 1. **Initial migration**: the first time Practical English loads (lazy, not during V1 startup).
@@ -132,8 +134,8 @@ For each dataset (built-in and custom):
   - V1 ★ indexes → `weak = true`.
   - V1 learned `<datasetId>:<index>` → `exposedInV1 = true` (exposure only, **never** mastery).
 - Reconciliation:
-  - **Fingerprint unchanged** since the last sync: V1 ★ is authoritative. Replace that dataset's canonical `weak` set with the mapped V1 ★ set.
-  - **Fingerprint changed** (content order changed): do not trust index mapping. Keep the canonical `weak` set, and write it back to `starred_v1_<datasetId>` using the new indexes (repair). Log the event.
+  - **Compatible** since the last sync (§5.3): V1 ★ is authoritative. Replace that dataset's canonical `weak` set with the mapped V1 ★ set.
+  - **Changed** (content order changed, §5.3): do not trust index mapping. Keep the canonical `weak` set, and write it back to `starred_v1_<datasetId>` using the new indexes (repair). Log the event.
 - Store the new fingerprint per dataset after a successful sync.
 
 ### 5.6 Unresolved items
@@ -204,6 +206,7 @@ Example:
 
 - `dedupKey = targetLanguage + "\u0001" + normalize(sentenceText)`.
 - `normalize`: Unicode NFC → trim → collapse internal whitespace to one space → map curly quotes/apostrophes to straight ones → remove trailing `.`, `!`, `?`, `。`, `！`, `？` → lowercase.
+- NFC implementation note (2026-10-08): Dart has no built-in Unicode NFC normalization, and V2.0 adds no package for it. The V2.0 implementation applies every other step above, all of which Dart runs reliably and identically on every device, so Sentence IDs stay deterministic and stable. Imported CSV text is almost always NFC already. If cross-source or multilingual content later needs Unicode canonical normalization, a dedicated package will be evaluated then; adding it would change `normalize` and therefore requires an ID-stability migration plan first.
 - FNV-1a 64 is implemented in Dart (offset basis `0xcbf29ce484222325`, prime `0x100000001b3`, over UTF-8 bytes). No new package. `String.hashCode` is never used for any persisted ID.
 - The two prefixes guarantee built-in and imported IDs never collide.
 - **Collision handling**: the importer keeps an in-memory `dedupKey → id` index. If a generated ID already belongs to a different dedupKey, append `-2`, `-3`, … until free. Because lookup is by dedupKey first, re-importing returns the already-assigned ID, so the result stays stable.

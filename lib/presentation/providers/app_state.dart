@@ -482,6 +482,31 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  // --- V2 Practical English 相容掛勾（SPEC §3、§9.2）；不改變 V1 既有行為 ---
+
+  /// 某份教材目前的 ★ index 集合（唯讀副本）。
+  Set<int> starredIndexesFor(String datasetId) =>
+      Set<int>.unmodifiable(_starredSets[datasetId] ?? const <int>{});
+
+  /// Practical English 標記／取消弱字時寫回 V1 ★：與 [toggleStarCurrent]
+  /// 相同的存檔與播放清單重建方式，key 與資料格式不變。
+  Future<void> replaceStarredFromPracticalEnglish(
+      String datasetId, Set<int> starred) async {
+    final matches = datasets.where((d) => d.id == datasetId);
+    if (matches.isEmpty) return;
+    final dataset = matches.first;
+    final updated = Set<int>.from(starred);
+    _starredSets[dataset.id] = updated;
+    await _progressRepository.saveStarred(dataset.id, updated);
+    if (settings.scopeMode == ScopeMode.starredRandom ||
+        settings.scopeMode == ScopeMode.starredSequential) {
+      _playbackStates[dataset.id] = _rebuildPlaylist(dataset, updated);
+      await _progressRepository.saveProgress(
+          dataset.id, _playbackStates[dataset.id]!);
+    }
+    notifyListeners();
+  }
+
   /// 這個項目實際要顯示/朗讀的翻譯語言。內建教材跟著介面語言，
   /// 自訂教材用匯入時選的語言；該語言還沒翻譯時退回中文。
   String meaningLocaleFor(WordItem word) {
