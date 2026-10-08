@@ -58,54 +58,114 @@
 
 ---
 
-## 二、正式版存取權問卷（草稿）
+## 二、正式版存取權問卷（2026-10-08 定稿草稿，取代 9/29～9/30 舊稿）
 
-> 2026-09-30 補充：TestersCommunity 報告與儀表板仍顯示舊名稱「智慧聽覺巡航 - 英語背景朗讀」，第 3 部分已加一句說明測試期間依 ASO 回饋改名（套件名稱不變），避免審核人員疑惑。名稱改動不影響 Google 14 天與測試者計算（以套件名稱 tw.bcc.englishapp 辨識）。
-> 2026-09-30 更新：已收到 TestersCommunity 兩份報告（Testers Feedback Report、Production Access Questionnaire 範本），回饋已併入下方；**範本答案不照抄**（內容通用、第 8 題寫「we plan to」等於還沒改、第 5 題族群寫學生與本 App 不符）。
-> 2026-09-29 更新：依第 4～12 版實際修正紀錄改寫。**【 】內要換成實際情況**，尤其測試者回饋一定要依真實收到的內容填，不誇大。大部分修正來自開發者自己在紅米實機測試發現（例如提醒提早 8 小時），問卷如實寫「自己測試發現」即可，Google 並不要求每項都來自測試者。Google 審核人員看英文，用英文回答。
+用法：英文（EN）貼進 Play Console；中文（中）是對照，不用貼。【 】是送出前要你確認或替換的地方。
+來源：HANDOFF.md §6 版本紀錄、§17 B3～B7，以及 store_assets/launch_prep.md 舊草稿（已併入第十六～十九版）。
+
+---
 
 ### 第 1 部分：封閉測試
 
-**How easy was it to recruit testers for your app?**
-> As an individual developer it was difficult to find enough testers on my own, so I used a tester community service (TestersCommunity), and I also tested every build myself. The 15 testers joined through a Google Group and stayed opted in for the whole testing period.
+#### 1. How easy was it to recruit testers for your app?
+選項建議：**Difficult（困難）**。若有文字欄：
 
-**Describe the engagement you received from testers during your closed test.**
-> Testers installed the app and used its core features: background and lock-screen audio playback of English vocabulary, bilingual reading (English followed by the meaning in their language), marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. I also tested every build myself on a physical device (Redmi Note 8, Android 11) and released 7 updates to the closed testing track during the test. The tester community also returned a written test report covering testing on a variety of devices and Android versions, including functionality, usability, responsiveness, and store-policy compliance.
+EN:
+> As an individual developer it was difficult to find enough testers on my own, so I used a tester community service (TestersCommunity). 15 testers joined through a Google Group and stayed opted in for the whole testing period, and I also tested every build myself on a physical device.
 
-**Provide a summary of the feedback you received from testers. Include how you collected the feedback.**
-> Feedback was collected through the tester community's reports, the in-app feedback form (stored in Firebase Firestore), Firebase Crashlytics, and my own daily use on a physical device. The TestersCommunity report found no crashes or functional bugs across the devices and SDK versions they tested. Their two main suggestions were: (1) App Store Optimization: the store listing lacked enough text and keywords for English-speaking users (the app had no English store listing yet), and (2) adding a "Share App" option so users can recommend the app to friends. They also recommended onboarding, an in-app feedback channel, and localization, which the app already had (feature tour, in-app feedback form, interface in 10 languages plus English). The most important issues found were: built-in translations and audio not following the device language, daily reminders not appearing at the set time, and the home-screen icon and app name not being set.
+中：個人開發者自己很難找到足夠測試者，所以使用 TestersCommunity 測試者社群服務。15 位測試者透過 Google 群組加入，整個測試期間都維持參與；每個建置我也都在實機上自己測試。
+
+#### 2. Describe the engagement you received from testers during your closed test.
+
+EN:
+> Testers installed the app and used its core features: background and lock-screen audio playback of English vocabulary, bilingual reading (English followed by the meaning in their language), marking difficult words, learning statistics, daily reminders, and importing custom word lists via CSV. The tester community returned a written test report covering a variety of devices and Android versions (functionality, usability, responsiveness and store-policy compliance). I tested every build on a physical device (Redmi Note 8, Android 11) and published 9 updates to the closed testing track during the test, from version 0.1.1 to 0.3.1.
+
+中：測試者安裝並使用核心功能：背景／鎖屏英文單字朗讀、雙語朗讀、標記不熟悉單字、學習統計、每日提醒、CSV 匯入自訂單字表。TestersCommunity 提供書面測試報告，涵蓋多種裝置與 Android 版本（功能、易用性、反應速度、商店政策）。我每個建置都在紅米 Note 8（Android 11）實機測試，測試期間共發布 9 次更新到封閉測試軌道（0.1.1 到 0.3.1）。
+
+#### 3. Provide a summary of the feedback you received from testers. Include how you collected the feedback.
+
+EN:
+> I collected feedback through the tester community's written report, the in-app feedback form, Firebase Crashlytics, and my own daily use on a physical device. The tester report found no crashes or functional bugs on the devices and Android versions tested. Its two main suggestions were: (1) store optimization, because the app had no English store listing and too few keywords, and (2) a "Share app" option so users can recommend it to friends. Other suggestions (onboarding, in-app feedback, localization) were already in the app. Crashlytics reported one startup crash related to the notification permission request. My own device testing found several issues: daily reminders firing at the wrong time, the app freezing when opened from a reminder, missing pause/play buttons on the lock-screen media card, audio getting out of sync when tapping next/previous quickly, the media card staying visible after closing the app, and long phrases overlapping the buttons in the new large word size.
+
+中：回饋來源：TestersCommunity 書面報告、App 內意見回饋表單、Firebase Crashlytics、我自己每天實機使用。報告結論：測試的裝置與 Android 版本都沒有當機或功能錯誤。兩項主要建議：①商店最佳化（沒有英文商店資訊、關鍵字太少）②加「分享 App」。其他建議（導覽、App 內回饋、多語）App 原本就有。Crashlytics 回報一個與通知權限請求有關的啟動當機。我自己實機測試發現：每日提醒時間錯誤、從提醒回 App 畫面停住、鎖屏媒體卡片沒有暫停／播放鍵、快速按上一個／下一個聲音不同步、關閉 App 後卡片殘留、新的大字模式長片語蓋到按鈕。
+
+---
 
 ### 第 2 部分：關於你的 App
 
-**Who is the intended audience of your app?**
-> Adults who have studied English many times without success, especially busy and older learners with little English exposure in daily life. The app interface and built-in translations are available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, Portuguese, Thai, and Arabic, with English as the default for other languages.
+#### 4. Who is the intended audience of your app?
 
-**Describe how your app provides value to users.**
-> The app focuses on high-frequency core vocabulary from openly licensed academic word lists (NGSL, NGSL-Spoken, PHRASE List, PhaVE List; 4,185 items in total). The NGSL core words cover about 92% of everyday English text. Users learn by listening in the background while commuting, walking, or doing chores, with bilingual audio, a difficult-word review list, learning statistics, and daily reminders. Users can also import their own study lists in 14 languages.
+EN:
+> Adults who have studied English many times without success, especially busy and older learners who have little English in their daily lives. The interface and built-in translations are available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, Portuguese, Thai and Arabic, with English for all other languages. The app is not designed for children.
 
-**How many installs do you expect your app to have in your first year?**
-> 【建議選保守區間，例如 1,000–10,000】
+中：學了很多次英文卻沒學好的成人，特別是忙碌、年紀漸長、生活中很少接觸英文的人。介面與內建翻譯支援繁中、簡中、日、韓、越、印尼、西、葡、泰、阿，其他語言顯示英文。App 不是為兒童設計。
+
+【確認：最後一句要和 Play Console「目標對象和內容」設定一致；若你當時有勾 13～17 歲，就刪掉這句。】
+
+#### 5. Describe how your app provides value to users.
+
+EN:
+> The app teaches high-frequency core vocabulary from openly licensed academic word lists (NGSL, NGSL-Spoken, PHRASE List and PhaVE List; 4,185 items). The NGSL core words cover about 92% of everyday English text. Users learn by listening in the background while commuting, walking or doing chores, with bilingual audio, a difficult-word review list, learning statistics and daily reminders. It works from the lock screen, offers light and dark themes and an adjustable word size, and lets users import their own word lists in 14 languages. All core features work offline and for free; an optional subscription unlocks all words and removes ads.
+
+中：教授高頻核心字彙，來源是公開授權的學術字表（NGSL、NGSL-Spoken、PHRASE List、PhaVE List，共 4,185 項），NGSL 核心字涵蓋日常英文約 92%。使用者在通勤、散步、做家事時背景聆聽學習，有雙語朗讀、不熟悉單字庫、學習統計、每日提醒；可在鎖屏操作，有淺色／深色主題與可調單字大小，可匯入 14 種語言的自訂單字表。核心功能可離線免費使用；訂閱可選，解鎖全部單字並移除廣告。
+
+【確認：「離線」— 內建教材與手機 TTS 可離線朗讀；若你不確定就刪掉 "offline and"。】
+
+#### 6. How many installs do you expect your app to have in your first year?
+建議選**最小的區間（0–10,000）**：個人開發、初期只打算小預算投廣告，保守較可信。
+
+---
 
 ### 第 3 部分：正式版準備程度
 
-**What changes did you make to your app based on what you learned during closed testing?**
-> During the testing period I released several updates to the closed testing track:
-> - Fixed built-in translations and audio not following the device language.
-> - Fixed daily reminders: added missing notification receivers, corrected a time-zone calculation that made reminders fire 8 hours early, and used exact alarms with a high-priority channel. Verified on a physical device.
-> - Ads: interstitial ads are shown only when the app is in the foreground, with frequency limits between full-screen ads.
-> - English is now the default interface for unsupported device languages (previously Chinese).
-> - Custom CSV import: users can choose the language of each column (14 languages), headers and different separators are detected, and the app tells users when a text-to-speech voice for that language needs to be installed.
-> - Added Thai and Arabic (right-to-left layout), including translations of all 4,185 built-in items.
-> - Added an in-app feature tour, with a side-by-side layout in landscape.
-> - Added the proper home-screen icon and a localized app name.
-> - Earlier updates: in-app update prompts, clearer subscription terms with a "manage subscription" link, and edge-to-edge support.
-> - Fixed a startup issue reported by Firebase Crashlytics where the app could stay on the loading screen if the notification permission request failed.
-> - Fixed the screen freezing when returning to the app from a reminder notification. Verified on a physical device.
-> - In response to tester feedback: added a "Share with friends" option in the menu (system share sheet with a localized message and the Play Store link), and added a full English store listing with keywords, feature highlights, and English screenshots.
-> - Also based on the store-optimization feedback, I updated the store listing names during the test to include search keywords (for example, the Traditional Chinese name changed from "智慧聽覺巡航 - 英語背景朗讀" to "智慧聽覺巡航：英文單字・聽力背景朗讀"), so the tester reports and dashboard may still show the earlier name. The package name and app are unchanged.
+#### 7. What changes did you make to your app based on what you learned during closed testing?
 
-**How did you decide that your app is ready for production?**
-> Core features (background playback, bilingual reading, reminders, CSV import, subscriptions) work reliably on tested devices, the reminder issue was confirmed fixed on a physical device, Firebase Crashlytics shows 【no major crashes】, the Play pre-launch report shows 【no critical issues】, and all known issues were fixed in the latest version.
+EN:
+> I released 9 updates to the closed testing track during the test:
+> - Based on tester feedback: added a "Share with friends" option (system share sheet with a localized message and the Play Store link), and added a full English store listing with keywords and English screenshots. I also updated the store names in several languages to include search keywords, so the tester report may still show the earlier name; the package name is unchanged.
+> - Fixed a startup crash reported by Crashlytics when the notification permission request failed; permission is now requested only when the user turns on reminders.
+> - Daily reminders: added missing notification receivers, fixed a time-zone error that made reminders fire 8 hours early, and fixed the app freezing when opened from a reminder.
+> - Lock-screen and notification media card: restored the pause/play/stop buttons (removed by resource shrinking), and the card now disappears when the app is closed.
+> - Audio and screen now stay in sync when tapping next/previous quickly.
+> - Added the Google consent form for users in the EEA, UK and Switzerland, an "Ad privacy settings" menu item, and an updated bilingual privacy policy.
+> - Redesigned the interface (0.3.x): light and dark themes that follow the system, a cleaner home screen focused on the word, adjustable word size, automatic text fitting so long phrases never overlap the buttons, and a clearer daily reminder with "Start listening" and "Remind me later" actions.
+> - Added Thai and Arabic (right-to-left), English as the default for unsupported languages, built-in translations that follow the device language, better CSV import, a feature tour, and the final app icon.
+
+中：測試期間發布 9 次更新：
+- 依測試者回饋：新增「分享給朋友」（系統分享、在地化訊息＋Play 連結）；新增完整英文商店資訊（關鍵字、英文截圖）；多語商店名稱加入搜尋關鍵字，所以測試報告可能顯示舊名，套件名稱不變。
+- 修正 Crashlytics 回報的啟動當機（通知權限請求失敗）；改為使用者開啟提醒時才請求權限。
+- 每日提醒：補上通知接收器、修正時區造成提早 8 小時、修正從提醒開 App 畫面停住。
+- 鎖屏／通知媒體卡片：恢復暫停／播放／停止按鈕（被資源壓縮移除），關閉 App 後卡片會消失。
+- 快速按上一個／下一個時聲音與畫面保持同步。
+- 歐洲經濟區、英國、瑞士使用者的 Google 同意表單，「廣告隱私設定」選單，隱私權政策更新為中英雙語。
+- 介面改版（0.3.x）：淺色／深色跟隨系統、以單字為主的首頁、單字大小可調、長片語自動縮字不蓋按鈕、每日提醒加「開始朗讀」「稍後提醒」。
+- 新增泰文、阿拉伯文（右到左）、不支援語言預設英文、內建翻譯跟隨裝置語言、改善 CSV 匯入、功能導覽、正式圖示。
+
+#### 8. How did you decide that your app is ready for production?
+
+EN:
+> All issues found by testers, Crashlytics and my own testing are fixed in the current version (0.3.1), and each fix was verified on a physical device before release. The tester report found no crashes or functional bugs. Firebase Crashlytics shows 【no open crashes in the latest version】. Core features (background playback, bilingual reading, reminders, CSV import, ads and the subscription) work reliably on the tested devices. The store listing is complete in 11 languages, the privacy policy and data safety form are up to date, and the EU ad consent form is in place.
+
+中：測試者、Crashlytics 與我自己測試發現的問題都已在目前版本（0.3.1）修正，每項修正發布前都在實機確認。測試報告沒有當機或功能錯誤。Firebase Crashlytics 顯示【最新版沒有未結當機】。核心功能（背景朗讀、雙語、提醒、CSV 匯入、廣告、訂閱）在測試裝置上穩定運作。11 語商店資訊完整，隱私權政策與資料安全性表單已更新，歐洲廣告同意表單已上線。
+
+【若 Play「正式發布前測試報告」有產生且沒有嚴重問題，可在 Crashlytics 那句後面加：The Play pre-launch report shows no critical issues.】
+
+---
+
+### 送出前你要確認的事
+
+1. **Crashlytics**：看最近 7 天第十九版有沒有未結當機，有的話截圖給我，第 8 題那句要改。
+2. **訂閱實機測試**（HANDOFF §17 A-4）：如果還沒用授權測試帳號實際買過一次並恢復購買，建議送出前先測；沒測就把第 8 題的 "and the subscription" 刪掉。
+3. **目標對象**：第 4 題最後一句要和 Play Console 目標對象設定一致。
+4. **安裝數**：第 6 題選最小區間。
+
+### 核准後建立正式版時要確認的事
+
+1. **推哪個版本**：建議第十九版 0.3.1+19（run219）。在封閉測試軌道用「推廣版本 → 正式版」，不必重新上傳；版本資訊沿用 `store_assets/release_notes_v19.md`（11 語，english-app-builds Release run219 頁面可直接複製）。
+2. **國家／地區**：建議「所有可用國家／地區」。24 個主要市場的訂閱價格已手動設定，其他自動換算；改價時不要選「套用到所有國家」。
+3. **分階段發布**：建議直接 100%（新 App 沒有既有使用者，分階段意義不大）。
+4. **控管型發布**：目前關閉，審核通過就自動上線；想自己挑上線時間才需要打開。
+5. **上線後**（HANDOFF §17 C-3）：AdMob 連結 Play 商店並看 app-ads.txt 驗證；LC Lab 網站把「即將推出」換成 Play 連結（這個我可以做，上線後說一聲）。
 
 ---
 
