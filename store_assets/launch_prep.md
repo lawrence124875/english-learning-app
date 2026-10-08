@@ -144,9 +144,9 @@ EN:
 #### 8. How did you decide that your app is ready for production?
 
 EN:
-> All issues found by testers, Crashlytics and my own testing are fixed in the current version (0.3.1), and each fix was verified on a physical device before release. The tester report found no crashes or functional bugs. Firebase Crashlytics shows 【no open crashes in the latest version】. Core features (background playback, bilingual reading, reminders, CSV import, ads and the subscription) work reliably on the tested devices. The store listing is complete in 11 languages, the privacy policy and data safety form are up to date, and the EU ad consent form is in place.
+> All issues found by testers, Crashlytics and my own testing are fixed in the current version (0.3.1), and each fix was verified on a physical device before release. The tester report found no crashes or functional bugs. Firebase Crashlytics shows 100% crash-free users for the latest version, and Android vitals shows no crashes or ANRs in the last 28 days. Core features (background playback, bilingual reading, reminders, CSV import, ads and the subscription) work reliably on the tested devices. The store listing is complete in 11 languages, the privacy policy and data safety form are up to date, and the EU ad consent form is in place.
 
-中：測試者、Crashlytics 與我自己測試發現的問題都已在目前版本（0.3.1）修正，每項修正發布前都在實機確認。測試報告沒有當機或功能錯誤。Firebase Crashlytics 顯示【最新版沒有未結當機】。核心功能（背景朗讀、雙語、提醒、CSV 匯入、廣告、訂閱）在測試裝置上穩定運作。11 語商店資訊完整，隱私權政策與資料安全性表單已更新，歐洲廣告同意表單已上線。
+中：測試者、Crashlytics 與我自己測試發現的問題都已在目前版本（0.3.1）修正，每項修正發布前都在實機確認。測試報告沒有當機或功能錯誤。Firebase Crashlytics 顯示最新版 100% 無當機，Android Vitals 過去 28 天無當機與 ANR。核心功能（背景朗讀、雙語、提醒、CSV 匯入、廣告、訂閱）在測試裝置上穩定運作。11 語商店資訊完整，隱私權政策與資料安全性表單已更新，歐洲廣告同意表單已上線。
 
 【若 Play「正式發布前測試報告」有產生且沒有嚴重問題，可在 Crashlytics 那句後面加：The Play pre-launch report shows no critical issues.】
 
