@@ -123,6 +123,7 @@ R8 壓縮已開（有 Firebase 與媒體按鈕的保留規則）。簽章不需�
 - C3 RevenueCat 記錄等級 info → warn；allowBackup 明確設定。都是小事，併入第 20 版。
 - C4 app-ads.txt 開頭空白（見第 6 節），驗證失敗才處理。
 - C5 **公開文件去識別化**（外部安全審查低風險項，2026-10-08）：已掃 main 無機密；Firebase 專案 ID、發布商 ID、套件名本來就公開。上架後把 HANDOFF §7 後台明細、§9、測試群組搬到私人 repo english-app-builds，公開 HANDOFF 只留架構與流程。V2 規格檔不動（V2 串使用中）。repo 維持公開。✅ 2026-10-08 Lawrence 同意，上架後執行。
+- C6 意見回饋入口太深（⋮ → 關於本 App → 意見回饋），Lawrence 自己都找不到；上架後移到選單第一層。
 
 ## V2 標記
 - 只有 C1（Flutter 鎖版）和 C2（雲端教材）可能與 V2 有關：**可以留給 V2**。V1 現在都不需要處理。
