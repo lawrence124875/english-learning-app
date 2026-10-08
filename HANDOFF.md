@@ -451,6 +451,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 - **待實機確認（紅米 Note 8）**：①三種單字大小＋長片語（PHRASE List、PhaVE 片語）單字不蓋按鈕、翻譯與星號列；②紅米鎖屏卡片右側是綠底 App 圖示、沒有重複的大字；播放設定裡已沒有「鎖屏大字封面」開關；③播放中與暫停後從最近使用列表滑掉 App，卡片都要消失；④長片語（如 Once Again）翻譯完整不被切；⑤其餘 B6 項目（B6 ③ 大字封面那項作廢）。
 
 ### C. 測試期滿後（✅ 2026-10-08 Lawrence 確認期滿，開始申請）
+0. **V1 正式上架盤點** `store_assets/v1_release_audit_2026-10-08.md`（2026-10-08，Lawrence 指示：這串只做 V1 上架、不大改程式、V2 只標記）。必須處理：M1 問卷、M2 訂閱實機購買測試、M3 Crashlytics、M4 run219 廣告不能是 Test Ad、M5 應用程式內容／資料安全性無警告、M6 發布設定。程式與建置無擋上架問題。
 1. Play Console 申請正式版存取權：**2026-10-08 問卷已依第 4～19 版改寫定稿**（`store_assets/launch_prep.md` 第二節，英文貼上、中文對照；專案檔案 `production_access/production_access_questionnaire.md` 同內容）。送出前 Lawrence 確認：Crashlytics 第十九版無未結當機、訂閱實機測試（A-4）是否已做（沒做就刪問卷第 8 題 subscription）、目標對象設定、安裝數選最小區間。狀態：【待 Lawrence 送出／審核中／已核准——更新這行】
 2. 核准後建立正式版：建議從封閉測試軌道**推廣第十九版 0.3.1+19（run219）**、版本資訊 `release_notes_v19.md`、國家選所有可用國家、直接 100%（不分階段）。
 3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；到 `lawrence124875.github.io` repo 的 `index.html` 把本 App 卡片的「即將推出」換成 Play 商店連結；確認廣告出現在免費版。

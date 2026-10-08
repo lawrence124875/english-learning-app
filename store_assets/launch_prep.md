@@ -96,11 +96,11 @@ EN:
 #### 4. Who is the intended audience of your app?
 
 EN:
-> Adults who have studied English many times without success, especially busy and older learners who have little English in their daily lives. The interface and built-in translations are available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, Portuguese, Thai and Arabic, with English for all other languages. The app is not designed for children.
+> Adults who have studied English many times without success, especially busy and older learners who have little English in their daily lives. The interface and built-in translations are available in Traditional and Simplified Chinese, Japanese, Korean, Vietnamese, Indonesian, Spanish, Portuguese, Thai and Arabic, with English for all other languages. The app is not designed for children under 13.
 
-中：學了很多次英文卻沒學好的成人，特別是忙碌、年紀漸長、生活中很少接觸英文的人。介面與內建翻譯支援繁中、簡中、日、韓、越、印尼、西、葡、泰、阿，其他語言顯示英文。App 不是為兒童設計。
+中：學了很多次英文卻沒學好的成人，特別是忙碌、年紀漸長、生活中很少接觸英文的人。介面與內建翻譯支援繁中、簡中、日、韓、越、印尼、西、葡、泰、阿，其他語言顯示英文。App 不是為 13 歲以下兒童設計（與隱私權政策一致）。
 
-【確認：最後一句要和 Play Console「目標對象和內容」設定一致；若你當時有勾 13～17 歲，就刪掉這句。】
+【確認：Play Console「目標對象」若有勾 13 歲以下年齡層，就刪掉最後一句。】
 
 #### 5. Describe how your app provides value to users.
 
