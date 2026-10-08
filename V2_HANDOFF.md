@@ -18,7 +18,7 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 |---|---|---|
 | 1 | Foundation：模組結構、Sentence、WordRef、SentenceIdFactory、JsonFileStore、SentenceRepository、反向索引 | ✅ 2026-10-08 |
 | 2 | V1 相容：Migration Layer、fingerprint／reconciliation、★ ↔ Weak | ✅ 2026-10-08 |
-| 3 | CSV Format B 匯入 | ○ |
+| 3 | CSV Format B 匯入 | ✅ 2026-10-08 |
 | 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾 | ○ |
 | 5 | PlaybackCoordinator | ○ |
 | 6 | What's New | ○ |
@@ -36,3 +36,9 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - V1 ★ 讀寫一律經 `V1LegacyGateway`；正式版 `AppStateV1Gateway` 走 AppState 新增的兩個方法（`starredIndexesFor`、`replaceStarredFromPracticalEnglish`），同步更新 V1 記憶體、存檔與「僅不熟悉」播放清單。
 - 相容判斷：教材前 count 筆的 fingerprint 與上次相同（未變更或只在尾端新增）→ V1 ★ 為準；否則視為重排 → 保留 V2 weak、修復 V1 ★。SPEC §5.3 已補充這條。
 - 初次 migration（`pe_migration_version` 未設定）不寫任何 V1 資料。
+
+## Phase 3 備註
+
+- `SentenceCsvImporter.importCsv(csv, translationLocale:)`：先在記憶體驗證與合併，有變更才一次原子寫入。匯入畫面在 Phase 4 做。
+- 計數以「列」為單位，每個非空白列剛好屬於 Added／Updated／Duplicate／Invalid Word ID／Invalid Row 其中一類。
+- 欄位依表頭名稱對應（不分大小寫、順序不限）；`word_id` 可用 `|` 放多個；自訂單字必須寫 `datasetId/wordId`。
