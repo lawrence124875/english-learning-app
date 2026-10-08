@@ -216,6 +216,7 @@ docs/                          GitHub Pages：隱私權政策、app-ads.txt（�
 
 ## 9. Firebase
 
+- **2026-10-08 發現 Firestore 從未建立（意見回饋一直送不出去）→ Lawrence 已建立 (default) 資料庫，位置台灣 asia-east1，正式版模式，規則已發布 create-only（同 FIRESTORE_RULES.md）。**
 - 用途：Firestore（意見回饋，collection 由 FIRESTORE_RULES.md 規範）、Crashlytics、Storage（教材雲端更新，**擱置**：Storage 需 Blaze 付費方案，Lawrence 暫不升級）。
 - Claude 無法從容器連 Firebase。若未來要透過 Firebase 更新教材：Lawrence 在 Firebase 產生服務帳戶金鑰 → 存進 GitHub Secrets（不可貼在對話）→ Claude 寫 Actions workflow 代為上傳；雲端 manifest version 必須大於內建版本（目前需 ≥3）。
 
