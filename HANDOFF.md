@@ -453,6 +453,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 
 ### C. 測試期滿後（✅ 2026-10-08 Lawrence 確認期滿，開始申請）
 0. **V1 正式上架盤點** `store_assets/v1_release_audit_2026-10-08.md`（2026-10-08，Lawrence 指示：這串只做 V1 上架、不大改程式、V2 只標記）。必須處理：M1 問卷、M2 訂閱實機購買測試、M3 Crashlytics、M4 run219 廣告不能是 Test Ad、M5 應用程式內容／資料安全性無警告、M6 發布設定。程式與建置無擋上架問題。
+0c. **2026-10-08 Lawrence 逐項確認進度**：目標對象 16-17＋18+ ✅；資料安全性項目齊全 ✅（建議補大概位置）；Firestore 建立＋規則發布、App 內意見回饋實測成功 ✅；Crashlytics 第十九版 7 天 100% 無當機 ✅；**訂閱實機購買成功、移除重裝後自動恢復 ✅（§17 A-4 完成）**。剩：Android Vitals、應用程式內容無警告、送出問卷。
 0b. **完整版盤點** `store_assets/v1_production_release_audit_2026-10-08.md`（專案檔案 production_audit/ 同內容，A/B/C 三類＋Checklist）。結論 READY WITH MINOR FIXES，程式不改、不重建。拆 run219 APK 已驗證：AdMob 4 個正式廣告單元、無測試 ID；RevenueCat 為 `goog_` 正式金鑰（原 M4 解決）。新增必做：A2 資料安全性補「電子郵件地址（選填，意見回饋）」；A4 確認 Firestore 規則是 create-only（與謙卦共用專案）。上架後：CI 鎖 Flutter 版本（目前 channel stable 不鎖）。app-ads.txt 開頭有 3 個空白，AdMob 驗證失敗才處理（與謙卦共用，需 Lawrence 同意）。
 1. Play Console 申請正式版存取權：**2026-10-08 問卷已依第 4～19 版改寫定稿**（`store_assets/launch_prep.md` 第二節，英文貼上、中文對照；專案檔案 `production_access/production_access_questionnaire.md` 同內容）。送出前 Lawrence 確認：Crashlytics 第十九版無未結當機、訂閱實機測試（A-4）是否已做（沒做就刪問卷第 8 題 subscription）、目標對象設定、安裝數選最小區間。狀態：【待 Lawrence 送出／審核中／已核准——更新這行】
 2. 核准後建立正式版：建議從封閉測試軌道**推廣第十九版 0.3.1+19（run219）**、版本資訊 `release_notes_v19.md`、國家選所有可用國家、直接 100%（不分階段）。
