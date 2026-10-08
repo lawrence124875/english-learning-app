@@ -380,5 +380,88 @@
     }
   },
   "notifActionStart": "▶ 開始朗讀",
-  "notifActionSnooze": "稍後提醒"
+  "notifActionSnooze": "稍後提醒",
+  "peTitle": "實用英文",
+  "peModeWeakPriority": "不熟悉優先",
+  "peModeWeakOnly": "只練不熟悉",
+  "peModeAll": "全部",
+  "peStatusUnseen": "未學習",
+  "peStatusSeen": "看過",
+  "peStatusLearning": "學習中",
+  "peStatusWeak": "不熟悉",
+  "peStatusMastered": "已學會",
+  "peEmpty": "目前還沒有可學的句子。",
+  "peEmptyWeakOnly": "沒有含不熟悉單字的句子。",
+  "peLockedCount": "還有 {count} 句需要 Premium 才能學習",
+  "@peLockedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "peCoverageTitle": "學習進度",
+  "peCoverageSentences": "可學句子 {available} / {total}",
+  "@peCoverageSentences": {
+    "placeholders": {
+      "available": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "peCoverageWords": "有例句的單字 {covered} / {total}",
+  "@peCoverageWords": {
+    "placeholders": {
+      "covered": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "peCoveragePracticed": "練習過的單字",
+  "peTargetWords": "目標單字",
+  "pePlay": "播放",
+  "peMarkWeak": "標為不熟悉",
+  "peUnmarkWeak": "取消不熟悉",
+  "peIKnowIt": "我會了",
+  "peUndoMastered": "取消「我會了」",
+  "pePrevious": "上一句",
+  "peNext": "下一句",
+  "peTtsFailed": "無法朗讀，請確認手機的文字轉語音設定。",
+  "peLoadFailed": "載入失敗，請再試一次。",
+  "peRetry": "重試",
+  "peImportTitle": "匯入句子（CSV）",
+  "peImportHint": "格式（第一列為表頭）：word_id,sentence,sentence_translation，多個單字用 | 分隔。",
+  "peImportChoose": "選擇 CSV 檔案",
+  "peImportAdded": "新增",
+  "peImportUpdated": "更新",
+  "peImportDuplicate": "重複（略過）",
+  "peImportInvalidWordId": "單字 ID 無效",
+  "peImportInvalidRow": "格式錯誤的列",
+  "peImportRowLabel": "第 {row} 列",
+  "@peImportRowLabel": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      }
+    }
+  },
+  "peImportMissingWordId": "缺少 word_id",
+  "peImportMissingSentence": "缺少句子",
+  "peImportFileEmpty": "檔案是空的。",
+  "peImportFileUnreadable": "無法讀取這個檔案，請確認是 UTF-8 編碼的 CSV。",
+  "peImportMissingColumns": "缺少欄位：{columns}",
+  "@peImportMissingColumns": {
+    "placeholders": {
+      "columns": {
+        "type": "String"
+      }
+    }
+  },
+  "peImportNoChanges": "沒有新增或更新任何句子。"
 }

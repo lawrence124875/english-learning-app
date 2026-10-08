@@ -13,6 +13,7 @@ import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import 'onboarding_screen.dart';
+import '../../practical_english/presentation/screens/practical_english_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
@@ -130,6 +131,11 @@ class HomeScreenState extends State<HomeScreen> {
                 _shareApp(context);
               } else if (value == 'adPrivacy') {
                 AdsService.showPrivacyOptions();
+              } else if (value == 'practicalEnglish') {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const PracticalEnglishScreen()));
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -156,6 +162,13 @@ class HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                   leading: const Icon(Icons.record_voice_over),
                   title: Text(AppLocalizations.of(context)!.menuVoicePreview),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'practicalEnglish',
+                child: ListTile(
+                  leading: const Icon(Icons.chat_bubble_outline),
+                  title: Text(AppLocalizations.of(context)!.peTitle),
                 ),
               ),
               PopupMenuItem(

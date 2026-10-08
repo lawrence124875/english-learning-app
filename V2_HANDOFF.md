@@ -19,7 +19,7 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 | 1 | Foundation：模組結構、Sentence、WordRef、SentenceIdFactory、JsonFileStore、SentenceRepository、反向索引 | ✅ 2026-10-08 |
 | 2 | V1 相容：Migration Layer、fingerprint／reconciliation、★ ↔ Weak | ✅ 2026-10-08 |
 | 3 | CSV Format B 匯入 | ✅ 2026-10-08 |
-| 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾 | ○ |
+| 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾、匯入畫面 | ✅ 2026-10-08 |
 | 5 | PlaybackCoordinator | ○ |
 | 6 | What's New | ○ |
 | 7 | 整體測試 | ○ |
@@ -28,7 +28,7 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 
 - `assets/practical_english/pe_core.json` 目前是空清單，第一批內容（NGSL 前 1,000 字）另外製作。
 - 正規化不做 Unicode NFC（Dart 沒有內建，V2.0 不加套件）；SPEC §6.2 已註記，Lawrence 2026-10-08 確認。
-- V2 程式尚未接到 `main.dart` 或任何 V1 畫面，Phase 4 才接。
+- V2 程式不接 `main.dart`；Phase 4 只在首頁選單加一個入口。
 
 ## Phase 2 備註
 
@@ -42,3 +42,14 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - `SentenceCsvImporter.importCsv(csv, translationLocale:)`：先在記憶體驗證與合併，有變更才一次原子寫入。匯入畫面在 Phase 4 做。
 - 計數以「列」為單位，每個非空白列剛好屬於 Added／Updated／Duplicate／Invalid Word ID／Invalid Row 其中一類。
 - 欄位依表頭名稱對應（不分大小寫、順序不限）；`word_id` 可用 `|` 放多個；自訂單字必須寫 `datasetId/wordId`。
+
+## Phase 4 備註
+
+- 入口：首頁「⋮」選單「實用英文」（`home_screen.dart` 唯一 V1 修改：+13 行）。`PracticalEnglishState` 隨這個 route 建立、離開時 dispose＋flush，沒有註冊在 main.dart 的 MultiProvider（與 SPEC §3 字面不同，避免改 main.dart）。
+- 每次進入：句子載入 → `LegacyMigration.run` → word_state 載入 → 建索引。之後只在 AppState 的 isPremium 或教材數量改變時重算。
+- 排序：`SentenceSelector`，分數＝3×弱字＋1×（未學／看過／學習中），已學會 0；同分→句子最近練習時間較舊者→ID。「全部」模式用原始順序。
+- 權限：`SentenceAccess`，句中每個字 index < `AppState.unlockedCount(dataset)` 才可學（含看廣告暫時解鎖的範圍）。
+- 進入句子頁就算練習一次（句中每字 peExposureCount+1，同一字只算一次）。
+- 播放：暫用既有介面（V1 巡航中先 `stopCruise()`，再用同一個 TTS 朗讀）。V1 播放搶回、鎖屏等交給 Phase 5 PlaybackCoordinator。
+- 字串：42 個 `pe*` key，11 語系都有。
+- 測試：`test/practical_english/learning_test.dart`（23 個，含 widget test；I/O 用 `tester.runAsync`）。
