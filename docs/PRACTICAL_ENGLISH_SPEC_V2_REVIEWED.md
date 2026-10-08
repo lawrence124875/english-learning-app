@@ -279,7 +279,114 @@ Workflow:
 - cloud TTS
 - complex Pattern/Scenario engines
 
-## 15. Implementation principle
+
+## 15. Security and build-repository separation
+
+GitHub is the long-term source of truth for application code and approved product/architecture documentation, but it must not become a general-purpose secret vault.
+
+Before V2 implementation, Claude must perform a Security & Repository Audit of the existing `english-learning-app` repository.
+
+Audit requirements:
+
+1. Identify API keys, credentials, tokens, signing material, private certificates, private configuration, proprietary build artifacts and other sensitive information.
+2. Classify each finding as safe to remain public, suitable for private build storage, or requiring secret-manager handling.
+3. Check current files and, where tooling permits, relevant Git history for previously committed secrets.
+4. Do not assume deleting a secret from the latest commit makes it safe. Previously exposed credentials may require revocation and regeneration.
+5. Report findings and proposed actions before deleting or relocating critical material.
+
+### Designated build repository
+
+The designated repository for private build-related materials is:
+
+`lawrence124875/english-app-builds`
+
+Sensitive build-related materials that are appropriate for repository storage should be transferred there by Claude after the audit, subject to confirmation that the repository is private and access-controlled.
+
+Security rules:
+
+- Raw production secrets, passwords, private keys, signing passwords and equivalent credentials must not be committed as plaintext files.
+- Where GitHub Actions/GitHub Secrets or another secret-management mechanism is appropriate, use secrets rather than repository files.
+- If a sensitive file must be retained in `english-app-builds`, it must use an agreed encryption-at-rest method and the decryption key must be stored separately from the repository.
+- Do not store encryption keys together with encrypted payloads.
+- Public application source code and approved product specifications remain in `english-learning-app`.
+- Build APKs/AABs and other approved build artifacts may be stored in `english-app-builds` according to its retention/access policy.
+
+Claude must not make destructive security changes, revoke credentials, or delete historical material without reporting the finding and receiving approval when the action could affect the build or production environment.
+
+## 16. Roadmap
+
+- V2.0: Sentence learning + learning coverage/weak-word priority
+- V2.1: Patterns
+- V2.2: Scenarios/context
+- V2.3: Listening improvements
+- V2.4: Speaking/ASR
+- V3: AI generation, role-play and adaptive learning
+
+AI is intentionally deferred from the V2 core to control operating cost. V3 AI should be evaluated after real subscriber count, usage, retention and revenue data are available.
+
+## 17. AI collaboration
+
+- ChatGPT: product management, architecture and final decision synthesis.
+- Gemini: independent technical review and challenge.
+- Claude: primary Flutter/Dart implementation and debugging.
+
+Workflow:
+
+1. ChatGPT defines requirements.
+2. Gemini reviews.
+3. ChatGPT integrates and finalizes.
+4. Claude implements.
+5. Gemini may review implementation.
+6. Final decisions are synchronized to GitHub.
+
+## 18. Final decision classification
+
+### Must decide now
+
+1. Independent Sentence.id.
+2. Sentence.wordIds list referencing WordItem.id.
+3. Independent SentenceRepository.
+4. Independent Practical English State/Provider.
+5. Multilingual-ready core fields: datasetId, targetLanguage, translationLocale.
+6. CSV validation and sentence-level deduplication.
+7. Offline-first.
+8. No SQLite for V2.0 unless actual implementation evidence proves it necessary.
+9. V1 persistence backward compatibility.
+10. 4,185-word learning coverage and weak-word priority.
+11. V2 sentence TTS using the existing TTS direction.
+12. Continuity of the existing 11-language architecture.
+13. V2 first-launch feature introduction and reusable What's New mechanism.
+14. Security audit before V2 implementation.
+15. `english-app-builds` as the designated private build repository, subject to privacy/access verification and the secret-handling rules above.
+
+### Can remain simple in V2.0
+
+- system TTS
+- basic learning/progress state
+- Traditional Chinese translation as the first content release
+- simple local content repository
+- existing project-compatible State management
+- deterministic/rule-based weak-word prioritization
+
+### Deliberately defer
+
+- SQLite/Drift migration
+- cloud sync/authentication
+- advanced spaced repetition
+- ASR scoring
+- AI conversation
+- AI sentence generation
+- cloud TTS
+- complex Pattern/Scenario engines
+- AI-dependent V2 core learning
+
+## 19. Implementation principle
+
+Make the smallest safe architectural additions required for V2.0 while preserving the current V1.
+
+The goal is controlled evolution, not a rewrite.
+
+## 19. Implementation principle
 
 Make the smallest safe architectural additions required for V2.0 while preserving the current V1.
 
