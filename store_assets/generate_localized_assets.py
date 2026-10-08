@@ -320,7 +320,7 @@ def feature_graphic(L, E, path):
     for yy in range(FH):
         for x in range(FW):
             t = (x + yy) / (FW + FH)
-            px[x, yy] = tuple(int(a + (b - a) * t) for a, b in zip((14, 116, 106), (9, 82, 75)))
+            px[x, yy] = tuple(int(a + (b - a) * t) for a, b in zip((91, 138, 114), (55, 92, 74)))  # 0.3.1 起鼠尾草綠（原 teal）
     img = img.convert("RGBA")
     ov = Image.new("RGBA", (FW, FH), (0, 0, 0, 0)); od = MDraw(ov)
     for i in range(22):  # 右側半透明音波（與繁中主題圖相同）
@@ -331,7 +331,7 @@ def feature_graphic(L, E, path):
     d.ellipse([bx - 110, by - 110, bx + 110, by + 110], fill=WHITE)
     for i, h in enumerate([40, 74, 54, 86, 34]):
         x0 = bx - 57 + i * 23
-        rr(d, [x0, by - h // 2, x0 + 13, by + h // 2], 6, fill=TEAL)
+        rr(d, [x0, by - h // 2, x0 + 13, by + h // 2], 6, fill=(79, 124, 101))
     d.arc([bx - 140, by - 140, bx + 140, by + 140], start=200, end=340, fill=(255, 255, 255, 230), width=16)
     x, max_w = 300, FW - 300 - 40
     tf = fit_font(d, L["appTitle"], "black", 66, max_w, 40)
@@ -342,8 +342,8 @@ def feature_graphic(L, E, path):
     y = FH // 2 - total // 2 + 40
     for ln in tl: d.text((x, y), ln, font=tf, fill=WHITE, anchor="lm"); y += 80
     y += 10
-    d.text((x, y), E["fg1"], font=f1, fill=(220, 245, 242), anchor="lm"); y += 60
-    for ln in l2: d.text((x, y), ln, font=f2, fill=(220, 245, 242), anchor="lm"); y += 44
+    d.text((x, y), E["fg1"], font=f1, fill=(230, 241, 234), anchor="lm"); y += 60
+    for ln in l2: d.text((x, y), ln, font=f2, fill=(230, 241, 234), anchor="lm"); y += 44
     img.convert("RGB").save(path, "PNG")
 
 ALL = ["zh", "ja", "ko", "vi", "id", "zh_Hans", "es", "pt", "th", "ar", "en"]
@@ -353,9 +353,12 @@ for lang in (sys.argv[1:] or ALL):
     L = json.load(open(os.path.join(ROOT, "lib", "l10n", f"app_{lang}.arb"), encoding="utf-8"))
     E = EXTRA[lang]
     od = os.path.join(OUT, lang); os.makedirs(od, exist_ok=True)
-    home(L, E, os.path.join(od, "1_home.png"))
-    intro(L, E, os.path.join(od, "2_intro.png"))
-    stats(L, E, os.path.join(od, "3_stats.png"))
-    paywall(L, E, os.path.join(od, "4_paywall.png"))
+    # 0.3.1 起截圖改用真實 App 畫面（tool/store_screenshots/），這裡只產主題圖；
+    # LEGACY=1 才重產舊版手繪截圖。
+    if os.environ.get("LEGACY") == "1":
+        home(L, E, os.path.join(od, "1_home.png"))
+        intro(L, E, os.path.join(od, "2_intro.png"))
+        stats(L, E, os.path.join(od, "3_stats.png"))
+        paywall(L, E, os.path.join(od, "4_paywall.png"))
     feature_graphic(L, E, os.path.join(od, "feature_graphic.png"))
     print(lang, "done")
