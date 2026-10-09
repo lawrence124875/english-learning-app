@@ -31,7 +31,7 @@
 
 用法：python3 tools/practical_english/build_pe_core.py [--check]
   --check 只驗證、不寫檔（內容與現有 JSON 不同時回傳錯誤）。
-  python3 tools/practical_english/build_pe_core.py --draft <來源.tsv> <輸出.json>
+  python3 tools/practical_english/build_pe_core.py --draft <輸出.json> <來源.tsv> [來源.tsv …]
   草稿預覽：只讀指定檔案、寫到指定位置，絕不寫 pe_core.json；未審的詞義列為提醒。
 """
 import csv, glob, json, os, re, sys
@@ -66,8 +66,8 @@ def main():
     if '--draft' in args:
         i = args.index('--draft')
         if len(args) < i + 3:
-            sys.exit('用法：--draft <來源.tsv> <輸出.json>')
-        draft = (os.path.abspath(args[i + 1]), os.path.abspath(args[i + 2]))
+            sys.exit('用法：--draft <輸出.json> <來源.tsv> [來源.tsv …]')
+        draft = ([os.path.abspath(a) for a in args[i + 2:]], os.path.abspath(args[i + 1]))
         if draft[1] == os.path.abspath(OUT):
             sys.exit('--draft 不能寫入 pe_core.json')
     errors, pending = [], []
@@ -97,7 +97,7 @@ def main():
                 sense[(r['sentence_id'], r['candidate_id'])] = r
 
     rows = []
-    sources = [draft[0]] if draft else sorted(glob.glob(os.path.join(SRC, 'batch_*.tsv')))
+    sources = draft[0] if draft else sorted(glob.glob(os.path.join(SRC, 'batch_*.tsv')))
     for path in sources:
         with open(path, encoding='utf-8') as f:
             reader = csv.reader(f, delimiter='\t', quoting=csv.QUOTE_NONE)
@@ -122,7 +122,7 @@ def main():
         if not 0 <= idx < len(ngsl) or ngsl[idx]['w'] != r['word']:
             errors.append(f'{where}: ngsl_index {r["ngsl_index"]} 不是 "{r["word"]}"')
             continue
-        if not re.search(r"(?<![A-Za-z'])" + re.escape(r['form']) + r"(?![A-Za-z])", r['sentence']):
+        if not re.search(r"(?<![A-Za-z'])" + re.escape(r['form']) + r"(?![A-Za-z])", r['sentence'], re.I):
             errors.append(f'{where}: 句子裡找不到完整單字 "{r["form"]}"')
         if r['form'].lower() != r['word'].lower() and r['word'].lower() not in r['form'].lower():
             print(f'提醒 {where}: form "{r["form"]}" 與 word "{r["word"]}" 拼法不同，請確認是同一字的變化')
