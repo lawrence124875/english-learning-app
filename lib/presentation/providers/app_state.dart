@@ -56,6 +56,9 @@ class AppState extends ChangeNotifier {
   /// V1／V2 共用 TTS 的朗讀擁有者（SPEC §10）。V1 只在 [_speakCurrent]
   /// 開頭 claim、在朗讀結束與 [stopCruise] 時歸還，其餘播放邏輯不變。
   final PlaybackCoordinator playbackCoordinator = PlaybackCoordinator();
+
+  /// 背景播放／鎖屏控制（V2 句子播放接管鎖屏用）；初始化失敗時為 null。
+  TtsAudioHandler? get audioHandler => _audioHandler;
   PlaybackLease? _v1Lease;
 
   void _releaseV1Playback() {

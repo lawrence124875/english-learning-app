@@ -488,7 +488,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.detached) {
-      // V2.0 沒有背景朗讀。
+      // 句子頁單句朗讀在背景停止；連續播放（SentencePlayer）由鎖屏服務維持，不在這裡停。
       stopSpeaking();
       flush().catchError((Object e, StackTrace st) => _onError(e, st));
     }

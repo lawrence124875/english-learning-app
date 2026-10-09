@@ -74,6 +74,19 @@ class SentencePlaybackSettings {
       Object.hash(readTranslation, repeatCount, intervalSeconds);
 }
 
+/// 鎖屏／通知列顯示（C3）。實作見 `AudioHandlerSentenceNowPlaying`。
+abstract class SentenceNowPlaying {
+  /// 顯示目前句子；第一次呼叫時接管鎖屏按鈕。
+  void show(Sentence sentence,
+      {String? subtitle,
+      required bool playing,
+      required int position,
+      required int total});
+
+  /// 交還鎖屏給 V1。
+  void release();
+}
+
 /// 句子頁的播放器：連續播放（英文 × N → 翻譯 → 間隔 → 下一句）與手動逐句播放。
 ///
 /// 同步規則（Lawrence 2026-10-09）：
@@ -105,13 +118,22 @@ class SentencePlayer extends ChangeNotifier {
     int initialIndex = 0,
     Future<void> Function(Duration)? delay,
     void Function(Object, StackTrace)? onError,
+    SentenceNowPlaying Function(SentencePlayer player)? nowPlaying,
   })  : assert(sentences.isNotEmpty),
         _state = state,
         _tts = tts,
         _playback = playback,
         _delay = delay ?? Future<void>.delayed,
         _onError = onError,
-        _index = initialIndex.clamp(0, sentences.length - 1);
+        _index = initialIndex.clamp(0, sentences.length - 1) {
+    _nowPlaying = nowPlaying?.call(this);
+    _playback.addClaimListener(_onClaim);
+  }
+
+  SentenceNowPlaying? _nowPlaying;
+
+  /// 已接管鎖屏（第一次開口後），直到被 V1 接手或離開頁面。
+  bool _onLockScreen = false;
 
   static const prefsKey = 'pe_playback_v1';
 
@@ -254,6 +276,8 @@ class SentencePlayer extends ChangeNotifier {
           return;
         }
         _lease = lease;
+        if (_nowPlaying != null) _onLockScreen = true;
+        _publishNowPlaying();
       }
       await _tts.stop();
       if (!valid()) return;
@@ -314,7 +338,37 @@ class SentencePlayer extends ChangeNotifier {
   }
 
   void _notify() {
-    if (!_disposed) notifyListeners();
+    if (_disposed) return;
+    notifyListeners();
+    _publishNowPlaying();
+  }
+
+  void _publishNowPlaying() {
+    final sink = _nowPlaying;
+    if (sink == null || !_onLockScreen || _disposed) return;
+    sink.show(
+      current,
+      subtitle: _settings.readTranslation
+          ? _state.translationFor(current)?.text
+          : null,
+      playing: _autoPlaying,
+      position: _index + 1,
+      total: sentences.length,
+    );
+  }
+
+  /// 另一方（V1 巡航、鎖屏以外的播放）開始朗讀：停止連續播放並交還鎖屏。
+  void _onClaim(PlaybackOwner who) {
+    if (who == PlaybackOwner.v2 || _disposed) return;
+    _autoPlaying = false;
+    _loopGen++;
+    _speakGen++;
+    _lease = null;
+    if (_onLockScreen) {
+      _onLockScreen = false;
+      _nowPlaying?.release();
+    }
+    notifyListeners();
   }
 
   @override
@@ -325,6 +379,11 @@ class SentencePlayer extends ChangeNotifier {
     _loopGen++;
     _speakGen++;
     _releaseLease();
+    _playback.removeClaimListener(_onClaim);
+    if (_onLockScreen) {
+      _onLockScreen = false;
+      _nowPlaying?.release();
+    }
     if (wasActive) unawaited(_stopTts());
     super.dispose();
   }

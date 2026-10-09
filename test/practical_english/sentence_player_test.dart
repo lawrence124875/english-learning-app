@@ -8,6 +8,7 @@ import 'package:english_learning_app/data/sources/tts_service.dart';
 import 'package:english_learning_app/domain/models/playback_settings.dart';
 import 'package:english_learning_app/domain/models/word_item.dart';
 import 'package:english_learning_app/practical_english/data/sentence_repository.dart';
+import 'package:english_learning_app/practical_english/domain/models/sentence.dart';
 import 'package:english_learning_app/practical_english/domain/services/playback_coordinator.dart';
 import 'package:english_learning_app/practical_english/presentation/providers/practical_english_state.dart';
 import 'package:english_learning_app/practical_english/presentation/providers/sentence_player.dart';
@@ -51,6 +52,24 @@ class _GateTts implements TtsService {
 
   @override
   dynamic noSuchMethod(Invocation invocation) => null;
+}
+
+class _FakeSink implements SentenceNowPlaying {
+  final shown = <String>[];
+  int releases = 0;
+
+  @override
+  void show(Sentence sentence,
+      {String? subtitle,
+      required bool playing,
+      required int position,
+      required int total}) {
+    shown.add(
+        '${sentence.sentenceText}|${subtitle ?? ''}|$playing|$position/$total');
+  }
+
+  @override
+  void release() => releases++;
 }
 
 class _NoWords implements WordRepository {
@@ -142,8 +161,9 @@ void main() {
     await dir.delete(recursive: true);
   });
 
-  SentencePlayer player({int index = 0}) {
+  SentencePlayer player({int index = 0, _FakeSink? sink}) {
     final p = SentencePlayer(
+      nowPlaying: sink == null ? null : (_) => sink,
       state: pe,
       tts: tts,
       playback: app.playbackCoordinator,
@@ -368,5 +388,80 @@ void main() {
     unawaited(p.next());
     await tick();
     expect(pe.stateOf('ngsl_2809_0001').peExposureCount, before + 1);
+  });
+
+  group('lock screen (C3)', () {
+    test('nothing shown before the first speech', () async {
+      final sink = _FakeSink();
+      player(sink: sink);
+      await tick();
+      expect(sink.shown, isEmpty);
+    });
+
+    test('auto play shows the current sentence and follows it', () async {
+      final sink = _FakeSink();
+      final p = player(sink: sink);
+      await p.updateSettings(p.settings.copyWith(repeatCount: 1));
+      unawaited(p.play());
+      await tick();
+      expect(sink.shown.last, 'S0.|句0|true|1/8');
+      tts.finish();
+      await tick();
+      tts.finish();
+      await tick();
+      expect(p.index, 1);
+      expect(sink.shown.last, 'S1.|句1|true|2/8');
+      await p.pause();
+      expect(sink.shown.last, 'S1.|句1|false|2/8');
+      expect(sink.releases, 0, reason: 'card stays while on the sentence page');
+    });
+
+    test('translation off hides the subtitle', () async {
+      final sink = _FakeSink();
+      final p = player(sink: sink);
+      await p.updateSettings(p.settings.copyWith(readTranslation: false));
+      unawaited(p.replay());
+      await tick();
+      expect(sink.shown.last, 'S0.||false|1/8');
+    });
+
+    test('V1 starts (e.g. reminder ▶): auto stops and lock screen is released',
+        () async {
+      final sink = _FakeSink();
+      final p = player(sink: sink);
+      unawaited(p.play());
+      await tick();
+      unawaited(app.startCruise());
+      await tick();
+      expect(p.isAutoPlaying, isFalse);
+      expect(sink.releases, 1);
+      expect(tts.speaking, 'w0');
+    });
+
+    test('V1 starts after a manual one-shot: lock screen is released too',
+        () async {
+      final sink = _FakeSink();
+      final p = player(sink: sink);
+      await p.updateSettings(
+          p.settings.copyWith(repeatCount: 1, readTranslation: false));
+      final f = p.replay();
+      await tick();
+      tts.finish();
+      await f;
+      expect(app.playbackCoordinator.owner, PlaybackOwner.none);
+      unawaited(app.startCruise());
+      await tick();
+      expect(sink.releases, 1);
+    });
+
+    test('leaving the sentence page releases the lock screen', () async {
+      final sink = _FakeSink();
+      final p = player(sink: sink);
+      unawaited(p.play());
+      await tick();
+      players.remove(p);
+      p.dispose();
+      expect(sink.releases, 1);
+    });
   });
 }
