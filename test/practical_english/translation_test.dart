@@ -124,12 +124,14 @@ void main() {
     TtsService? tts,
     PeVoiceStatus voice = PeVoiceStatus.available,
     List<String>? voiceChecks,
+    String? corpus,
   }) async {
     final s = PracticalEnglishState(
       appState: app,
       tts: tts ?? _RecordingTts(),
       sentences: SentenceRepository(
-          loadBuiltInAsset: () async => _coreJson, baseDir: () async => dir),
+          loadBuiltInAsset: () async => corpus ?? _coreJson,
+          baseDir: () async => dir),
       baseDir: () async => dir,
       onError: (e, st) => fail('unexpected error: $e\n$st'),
       translationKey: () => uiKey,
@@ -225,6 +227,25 @@ void main() {
     });
   });
 
+  test('picker offers only languages with ≥95% built-in coverage + current',
+      () async {
+    final s = await enter(_app());
+    expect(s.pickerLanguages, isEmpty); // 每種語言都只有 1/2
+    await s.setTranslationLocale('ar');
+    expect(s.pickerLanguages.map((l) => l.code), ['ar']);
+    await s.setTranslationLocale(null);
+    final full = await enter(_app(),
+        corpus: jsonEncode({
+          'schema': 1,
+          'datasetId': 'pe_core',
+          'sentences': [
+            _s('pe_core_000001', [_id(1)], 'One.', {'zh-TW': '一', 'ja': 'いち'}),
+            _s('pe_core_000002', [_id(2)], 'Two.', {'zh-TW': '二'}),
+          ],
+        }));
+    expect(full.pickerLanguages.map((l) => l.code), ['zh-TW']);
+  });
+
   group('translation speech (SPEC §10)', () {
     test('uses the registry ttsCode and takes the playback lease', () async {
       final tts = _RecordingTts();
@@ -300,11 +321,12 @@ void main() {
 
   group('UI', () {
     Future<PracticalEnglishState> pumpList(WidgetTester tester,
-        {String uiKey = 'zh-TW'}) async {
+        {String uiKey = 'zh-TW', String? corpus}) async {
       tester.view.physicalSize = const Size(2400, 4800);
       addTearDown(tester.view.reset);
       final app = _app();
-      final s = (await tester.runAsync(() => enter(app, uiKey: uiKey)))!;
+      final s = (await tester
+          .runAsync(() => enter(app, uiKey: uiKey, corpus: corpus)))!;
       await tester.pumpWidget(MaterialApp(
         locale: const Locale('zh'),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -338,9 +360,16 @@ void main() {
       await finish(tester, s);
     });
 
-    testWidgets('picker lists follow + 10 endonyms and switches language',
+    testWidgets(
+        'empty built-in library (test build): picker lists all 10 and switches',
         (tester) async {
-      final s = await pumpList(tester);
+      final s = await pumpList(tester,
+          corpus: jsonEncode(
+              {'schema': 1, 'datasetId': 'pe_core', 'sentences': []}));
+      await tester.runAsync(
+          () => s.importCsv('word_id,sentence,sentence_translation_ja\n'
+              '${_id(1)},Only Japanese.,日本語だけ。\n'));
+      await tester.pump();
       await tester.tap(find.byKey(const Key('pe_translation_action')));
       await tester.pumpAndSettle();
       expect(find.text('跟隨 App 語言'), findsOneWidget);

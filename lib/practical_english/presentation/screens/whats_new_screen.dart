@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../data/whats_new_service.dart';
 import 'practical_english_screen.dart';
+import '../../practical_english_release.dart';
 
 /// V2 What's New（SPEC §11）：升級的 V1 使用者自動看到一次，
 /// 之後可從首頁選單「新功能」再打開。
@@ -13,6 +14,7 @@ class WhatsNewScreen extends StatelessWidget {
   /// onboarding_seen_v1 之前），再顯示 V1 功能介紹，最後視需要顯示 What's New。
   static Future<void> showOnLaunch(BuildContext context,
       {required Future<void> Function() showOnboarding}) async {
+    if (!PracticalEnglishRelease.enabled) return showOnboarding();
     final showWhatsNew = await WhatsNewService.prepareOnLaunch();
     if (!context.mounted) return;
     await showOnboarding();
@@ -39,10 +41,16 @@ class WhatsNewScreen extends StatelessWidget {
     final l = AppLocalizations.of(context)!;
     final text = Theme.of(context).textTheme;
     final items = [
-      (Icons.chat_bubble_outline, l.peWhatsNewPracticalTitle,
-          l.peWhatsNewPracticalBody),
-      (Icons.record_voice_over, l.peWhatsNewSentenceTitle,
-          l.peWhatsNewSentenceBody),
+      (
+        Icons.chat_bubble_outline,
+        l.peWhatsNewPracticalTitle,
+        l.peWhatsNewPracticalBody
+      ),
+      (
+        Icons.record_voice_over,
+        l.peWhatsNewSentenceTitle,
+        l.peWhatsNewSentenceBody
+      ),
       (Icons.star_outline, l.peWhatsNewWeakTitle, l.peWhatsNewWeakBody),
       (Icons.more_vert, l.peWhatsNewWhereTitle, l.peWhatsNewWhereBody),
     ];

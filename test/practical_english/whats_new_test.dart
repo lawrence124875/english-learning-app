@@ -1,5 +1,6 @@
 import 'package:english_learning_app/l10n/app_localizations.dart';
 import 'package:english_learning_app/practical_english/data/whats_new_service.dart';
+import 'package:english_learning_app/practical_english/practical_english_release.dart';
 import 'package:english_learning_app/practical_english/presentation/screens/whats_new_screen.dart';
 import 'package:english_learning_app/data/repositories/progress_repository.dart';
 import 'package:english_learning_app/data/repositories/word_repository.dart';
@@ -88,6 +89,10 @@ void main() {
   });
 
   group('Launch flow (real V1 onboarding)', () {
+    // 這組驗證開關開啟後的行為；關閉時的行為在 'Readiness switch' 組。
+    setUp(() => PracticalEnglishRelease.debugOverride = true);
+    tearDown(() => PracticalEnglishRelease.debugOverride = null);
+
     Widget app(Future<void> Function(BuildContext) onReady) => MaterialApp(
           locale: const Locale('zh'),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -165,7 +170,8 @@ void main() {
         await tester.pumpAndSettle();
       }
       // 從選單打開不改變已看過的紀錄
-      expect((await prefs()).getString('last_seen_whats_new_version'), 'pe_2_0');
+      expect(
+          (await prefs()).getString('last_seen_whats_new_version'), 'pe_2_0');
     });
 
     testWidgets('all 11 languages render the page', (tester) async {
@@ -225,5 +231,88 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text(_whatsNewTitle), findsOneWidget);
     });
+  });
+
+  group('Readiness switch (SPEC §16)', () {
+    tearDown(() => PracticalEnglishRelease.debugOverride = null);
+
+    test('ships off', () {
+      expect(PracticalEnglishRelease.ready, isFalse);
+      expect(PracticalEnglishRelease.enabled, isFalse);
+    });
+
+    testWidgets('off: V1 upgrade sees no What\'s New and nothing is recorded',
+        (tester) async {
+      PracticalEnglishRelease.debugOverride = false;
+      SharedPreferences.setMockInitialValues(
+          {'onboarding_seen_v1': true, 'settings_v1': '{}'});
+      await tester.pumpWidget(MaterialApp(
+        locale: const Locale('zh'),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: Builder(builder: (context) {
+          WidgetsBinding.instance.addPostFrameCallback((_) =>
+              WhatsNewScreen.showOnLaunch(context,
+                  showOnboarding: () =>
+                      OnboardingScreen.showIfFirstTime(context)));
+          return const Scaffold(body: Text('home'));
+        }),
+      ));
+      await tester.pumpAndSettle();
+      expect(find.byType(WhatsNewScreen), findsNothing);
+      final p = await prefs();
+      expect(p.containsKey('app_schema_version'), isFalse);
+      expect(p.containsKey('last_seen_whats_new_version'), isFalse);
+
+      // 之後開啟開關：這位 V1 使用者仍會看到一次
+      PracticalEnglishRelease.debugOverride = true;
+      expect(await WhatsNewService.prepareOnLaunch(), isTrue);
+    });
+
+    for (final on in [false, true]) {
+      testWidgets('home ⋮ menu entries follow the switch (on: $on)',
+          (tester) async {
+        PracticalEnglishRelease.debugOverride = on;
+        SharedPreferences.setMockInitialValues({});
+        HomeScreenState.previewMode = true;
+        addTearDown(() => HomeScreenState.previewMode = false);
+        final tts = _SilentTts();
+        final appState = AppState(
+          wordRepository: _NoWords(),
+          progressRepository: ProgressRepository(),
+          ttsService: tts,
+        )..debugPreview(data: [
+            WordDataset(
+              id: 'ngsl_2809',
+              name: 'NGSL',
+              shortName: 'NGSL',
+              builtIn: true,
+              items: const [
+                WordItem(id: 'ngsl_2809_0000', word: 'the', translations: {}),
+              ],
+            ),
+          ], premium: true);
+        tester.view.physicalSize = const Size(1080, 2400);
+        tester.view.devicePixelRatio = 2.5;
+        addTearDown(tester.view.reset);
+        await tester.pumpWidget(MultiProvider(
+          providers: [
+            Provider<TtsService>.value(value: tts),
+            ChangeNotifierProvider.value(value: appState),
+          ],
+          child: MaterialApp(
+            locale: const Locale('zh'),
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            home: const HomeScreen(),
+          ),
+        ));
+        await tester.pump();
+        await tester.tap(find.byIcon(Icons.more_vert));
+        await tester.pumpAndSettle();
+        expect(find.text('實用英文'), on ? findsOneWidget : findsNothing);
+        expect(find.text('新功能'), on ? findsOneWidget : findsNothing);
+      });
+    }
   });
 }

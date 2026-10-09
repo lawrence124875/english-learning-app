@@ -458,6 +458,25 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   /// 匯入畫面預設的單欄翻譯語言：目前翻譯語言；英文介面跟隨時用 zh-TW。
   String get defaultTranslationLocale => translationLocale ?? 'zh-TW';
 
+  /// 翻譯語言選單列出的語言（SPEC §16）：內建句庫中翻譯覆蓋率 ≥95% 的
+  /// 語言，加上目前選的語言。內建句庫是空的（測試版）時列出全部。
+  static const pickerCoverageThreshold = 0.95;
+
+  List<PeLanguage> get pickerLanguages {
+    final builtIn = _sentences.builtIn;
+    if (builtIn.isEmpty) return PeLanguages.all;
+    return [
+      for (final lang in PeLanguages.all)
+        if (lang.code == _translationSetting ||
+            builtIn
+                    .where(
+                        (s) => s.translationFor(lang.code)?.code == lang.code)
+                    .length >=
+                builtIn.length * pickerCoverageThreshold)
+          lang
+    ];
+  }
+
   /// 某語言有翻譯的可用句子數（翻譯語言選單用）。
   int translatedCount(String code) =>
       _sentences.all.where((s) => s.translationFor(code)?.code == code).length;

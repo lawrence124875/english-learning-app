@@ -20,6 +20,7 @@ import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
 import '../../data/sources/analytics_service.dart';
 import '../../data/sources/ads_service.dart';
+import '../../practical_english/practical_english_release.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -166,13 +167,14 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuIntro),
                 ),
               ),
-              PopupMenuItem(
-                value: 'whatsNew',
-                child: ListTile(
-                  leading: const Icon(Icons.new_releases_outlined),
-                  title: Text(AppLocalizations.of(context)!.menuWhatsNew),
+              if (PracticalEnglishRelease.enabled)
+                PopupMenuItem(
+                  value: 'whatsNew',
+                  child: ListTile(
+                    leading: const Icon(Icons.new_releases_outlined),
+                    title: Text(AppLocalizations.of(context)!.menuWhatsNew),
+                  ),
                 ),
-              ),
               PopupMenuItem(
                 value: 'voice',
                 child: ListTile(
@@ -180,13 +182,14 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuVoicePreview),
                 ),
               ),
-              PopupMenuItem(
-                value: 'practicalEnglish',
-                child: ListTile(
-                  leading: const Icon(Icons.chat_bubble_outline),
-                  title: Text(AppLocalizations.of(context)!.peTitle),
+              if (PracticalEnglishRelease.enabled)
+                PopupMenuItem(
+                  value: 'practicalEnglish',
+                  child: ListTile(
+                    leading: const Icon(Icons.chat_bubble_outline),
+                    title: Text(AppLocalizations.of(context)!.peTitle),
+                  ),
                 ),
-              ),
               PopupMenuItem(
                 value: 'import',
                 child: ListTile(
