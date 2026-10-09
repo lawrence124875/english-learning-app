@@ -22,7 +22,20 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 | 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾、匯入畫面 | ✅ 2026-10-08 |
 | 5 | PlaybackCoordinator | ✅ 2026-10-09 |
 | 6 | What's New | ✅ 2026-10-09 |
-| 7 | 整體測試 | ○ |
+| 7 | 整體測試 | ○（實機驗收併入 S8） |
+
+多語言與架構確認版（`/mnt/project-files/v2/V2_ARCHITECTURE_CONFIRMED.md`，2026-10-09）之後的階段：
+
+| 階段 | 內容 | commit |
+|---|---|---|
+| S0 | 規格 r2：多語言、架構決定 D16–D21 | c563a08 |
+| S1a | 合併免費規則 A（f208aec） | 62b405d |
+| S1b | 翻譯語言登錄表 `PeLanguages` | c4246d3 |
+| S2 | `secondaryWordIds`；已刪除自訂教材的連結略過 | 70ff109 |
+| S3 | Migration 防護：狀態檔損毀重建時不修復 V1 ★ | b9e1f12 |
+| S4–S6 | CSV 多語言匯入；翻譯語言設定與顯示；同拼字分組；翻譯朗讀 | fb08096 |
+| S7 | 就緒開關（預設關）；選單語言覆蓋率門檻 | 30909b5 |
+| S8 | 實機驗收（含 V1 回歸、升級路徑） | ○ |
 
 ## Phase 1 備註
 
@@ -81,3 +94,14 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - 產生工具：`tools/practical_english/build_pe_core.py` 只讀審核通過的 `batch_*.tsv` → `pe_core.json`；檢查 index／拼字、目標字出現、重複句、append-only。
 - `pe_core.json` 目前仍是空清單。
 - 免費版規則 A（Lawrence 2026-10-09 正式）：句中每個目標詞彙只要任一個 WordRef 已解鎖就算解鎖；同一詞彙只在該句 `wordIds` 內以「同原文語言＋同拼字」判斷。已改 `SentenceAccess`、SPEC §12，測試 `test/practical_english/sentence_access_test.dart`。第一批 100 句：免費 100／鎖 0。
+
+## 多語言階段備註（S1b–S7）
+
+- 語言登錄表：`lib/practical_english/domain/models/pe_language.dart`。10 種翻譯語言、別名、ttsCode、RTL；原文只收英文（`canonicalTarget`）。
+- 翻譯顯示（SPEC §6.4）：`pe_translation_locale`（沒有＝跟隨 App 語言；無效值視為跟隨，不改寫）。只有 zh-CN 可退回 zh-TW；其他顯示「此句尚無翻譯」。英文介面跟隨時不顯示翻譯。每段翻譯依自己的語言決定方向。
+- CSV（SPEC §8）：寬欄 `sentence_translation_<code>`；表頭代碼錯或重複＝整檔錯誤；先檔內比對（同句同語言不同翻譯＝衝突，不寫，覆寫不適用）再比對已存資料；內建句命中列出列號；覆寫只限匯入句；每列只算最嚴重的結果。
+- 語音檢查：V1 v20 的 `TtsService.checkLanguage`（commit 29c6434，在 `claude/project-thread-sesnlg`）還沒進 main，V2 先用 `PracticalEnglishState` 內的三態轉接（`PeVoiceStatus`）。v20 合入後改呼叫 `checkLanguage`，並在 V2 測試的 TtsService 假物件補上該方法。
+- 就緒開關：`lib/practical_english/practical_english_release.dart` 的 `ready`。關閉時不寫 What's New 判斷資料。開啟要單獨 commit＋Lawrence 批准。
+- 測試 APK：開關開啟的那一行只放在測試分支 `claude/project-thread-3l87sc`（不合併），用 CI workflow_dispatch 建置；V2 分支維持關閉。測試 APK 的版本號沿用 0.3.1+19，**AAB 不得上傳 Play**。
+- 測試：`flutter test` 178 個全過；`flutter analyze` 只剩 3 個 V1 既有提示。
+
