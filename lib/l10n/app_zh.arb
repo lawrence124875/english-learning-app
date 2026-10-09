@@ -111,9 +111,9 @@
   "scopeStarredRandom": "僅不熟悉（隨機播放）",
   "scopeStarredSequential": "僅不熟悉（依序播放）",
   "readModeLabel": "朗讀內容模式",
-  "readModeBilingual": "雙語朗讀（英文＋翻譯）",
-  "readModeEnglishOnly": "純英文",
-  "repeatCountLabel": "英文重複朗讀次數",
+  "readModeBilingual": "雙語朗讀（原文＋翻譯）",
+  "readModeEnglishOnly": "只念原文",
+  "repeatCountLabel": "每個字重複朗讀次數",
   "repeatOnce": "讀 1 次",
   "repeatTwice": "讀 2 次（推薦）",
   "repeatThrice": "讀 3 次",
@@ -156,7 +156,7 @@
   "importSampleApple": "蘋果",
   "importSampleGiveUp": "放棄",
   "importSampleHowAreYou": "你今天過得怎麼樣？",
-  "importFormatHint": "第一欄放英文（單字、片語、整句例句都可以），第二欄放對應翻譯，存成 CSV 檔即可匯入。也可以匯入英文以外的語言，在下方選擇第一欄語言即可。",
+  "importFormatHint": "第一欄放要學的原文（任何語言的單字、片語、整句例句都可以），第二欄放對應翻譯，存成 CSV 檔即可匯入。上方範例以英文為例，請在下方選擇第一欄與翻譯欄的語言。",
   "importGetTemplate": "取得範本檔案",
   "importTemplateSaved": "範本已存到暫存資料夾：{path}",
   "@importTemplateSaved": {
@@ -270,8 +270,8 @@
   "statsDescSpoken": "從日常口語對話中挑出的 720 個高頻詞彙，專門加強「聽」與「說」情境的反應速度，跟 NGSL 核心單字表互補，涵蓋口語裡常用、但書面文字裡較少出現的用詞。",
   "statsDescPhrase": "506 個英語母語人士真正常用的固定搭配與語塊（例如 \"in order to\"、\"as well as\"），不是單字而是「一整組一起記」的片語，能幫助說出更自然道地的英文。",
   "statsDescPhave": "收錄 150 個最常用的片語動詞（例如 \"look after\"、\"give up\"），這類「動詞+介詞」組合是英語學習者公認最難掌握的一塊，集中複習這 150 個能涵蓋大部分日常會遇到的片語動詞。",
-  "summaryReadBilingual": "英雙讀",
-  "summaryReadEnglishOnly": "純英文",
+  "summaryReadBilingual": "雙語",
+  "summaryReadEnglishOnly": "只念原文",
   "settingsSummaryLine": "{mode}・讀{count}次・{rate}x",
   "@settingsSummaryLine": {
     "placeholders": {
@@ -325,6 +325,14 @@
   "importWordLangLabel": "第一欄是什麼語言？（決定朗讀語音）",
   "importVoiceMissing": "手機目前沒有「{language}」的朗讀語音，會念不出來。請到手機「設定 → 文字轉語音」安裝該語言的語音包。",
   "@importVoiceMissing": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "importVoiceUnknown": "無法確認手機是否有「{language}」的朗讀語音。如果之後念不出來，請到手機「設定 → 文字轉語音」安裝該語言的語音包。",
+  "@importVoiceUnknown": {
     "placeholders": {
       "language": {
         "type": "String"
