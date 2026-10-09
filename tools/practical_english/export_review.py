@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """把句庫草稿匯出成外部審閱用的 Excel 與 CSV（不動 pe_core.json）。
 
-來源：source/draft_*.tsv、sense_review.tsv、assets/data 的 4 份詞表。
+來源：source/*_*.tsv、sense_review.tsv、assets/data 的 4 份詞表。
 輸出：<輸出資料夾>/pe_core_review.xlsx（說明／例句／詞義連結 3 個工作表）
       <輸出資料夾>/pe_core_review.csv（例句工作表，UTF-8 BOM，Excel 可直接開）
 
@@ -43,7 +43,7 @@ def main():
             linked.setdefault(r['sentence_id'], []).append(r['candidate_id'])
 
     rows, sentences = [], {}
-    for path in sorted(glob.glob(os.path.join(HERE, 'source', 'draft_*.tsv'))):
+    for path in sorted(glob.glob(os.path.join(HERE, 'source', '*_*.tsv'))):
         for r in read_tsv(path):
             pid = r['primary_word_id']
             same = [c for c in items if c != pid and items[c]['w'].strip().lower() == r['word'].strip().lower()

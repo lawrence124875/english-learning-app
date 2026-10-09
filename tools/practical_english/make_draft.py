@@ -61,6 +61,8 @@ def main():
     batch = int(args[0])
     src = os.path.join(HERE, 'authoring', f'batch_{batch:03d}.txt')
     out = os.path.join(HERE, 'source', f'draft_{batch:03d}.tsv')
+    if os.path.exists(os.path.join(HERE, 'source', f'batch_{batch:03d}.tsv')):
+        sys.exit(f'第 {batch:03d} 批已寫入正式句庫（source/batch_{batch:03d}.tsv），請直接修改該檔；已發布的句子只能修錯字')
 
     items, by_w = {}, {}
     for name in FILES:
@@ -84,14 +86,16 @@ def main():
     first_idx = (batch - 1) * BATCH_SIZE
     # 其他批次已用掉的主要詞，避免同一個 ID 當兩次主要詞
     used = {}
-    for path in glob.glob(os.path.join(HERE, 'source', 'draft_*.tsv')):
+    for path in glob.glob(os.path.join(HERE, 'source', '*_*.tsv')):
         if os.path.abspath(path) != os.path.abspath(out):
             for r in read_tsv(path, HEADER):
                 used[r['primary_word_id']] = f"{os.path.basename(path)}#{r['id']}"
     if extra:
         first_id = len(ngsl) + 1
         for b in range(NGSL_BATCHES + 1, batch):
-            prev = os.path.join(HERE, 'source', f'draft_{b:03d}.tsv')
+            prev = os.path.join(HERE, 'source', f'batch_{b:03d}.tsv')
+            if not os.path.exists(prev):
+                prev = os.path.join(HERE, 'source', f'draft_{b:03d}.tsv')
             if not os.path.exists(prev):
                 if check_only:
                     continue  # 只檢查時句子 ID 不重要
