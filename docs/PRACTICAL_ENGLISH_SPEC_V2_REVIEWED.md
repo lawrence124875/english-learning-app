@@ -4,6 +4,7 @@
 - Supersedes: earlier versions of this file and `docs/PRACTICAL_ENGLISH_SPEC.md`
 - Scope: V2.0 only. V2.1–V3 items appear only as boundaries, not as requirements.
 - Workflow: Review → Discuss → Confirm → Implement. Any change to a decision in §2 requires Lawrence's confirmation first.
+- Revision r2 2026-10-09 (S0, multilingual completeness and architecture confirmation): every change in this revision was confirmed by Lawrence on 2026-10-09 (05:33Z multilingual decisions; 10:19–10:33Z V2 architecture confirmation). Technical details were delegated to engineering and are marked "technical rule". Changed sections: §2 (D14, D16–D21), §3, §4, §6.1, §6.3, §6.4 (new), §7.1, §8, §9.4–§9.6, §10, §13, §14, §16. §12 free-tier rule A arrives with the merge of f208aec (stage S1a); the §12 alignments named in §4 and §6.1 are applied during that merge.
 
 ---
 
@@ -36,8 +37,14 @@ Learning path: Vocabulary → Sentence (V2.0) → Pattern (V2.1) → Scenario (V
 | D11 | Lightweight `PlaybackCoordinator`: one speech owner at a time; V1 audio_service and lock screen unchanged | §10 |
 | D12 | What's New uses `app_schema_version` + `last_seen_whats_new_version`, independent of app version | §11 |
 | D13 | Same Premium entitlement (`premium`) as V1; no new product or entitlement | §12 |
-| D14 | Content = AI draft at authoring time + human proofreading; first batch NGSL 1,000 words × ~1 sentence; English + zh-TW first | §13 |
+| D14 | Content = AI draft at authoring time + human review; first batch NGSL 1,000 words × ~1 sentence; English source; translations ship in waves, zh-TW first. Unreviewed drafts are never published | §13 |
 | D15 | Public repo holds code, approved specs and non-secret docs; private `english-app-builds` holds build artifacts; secrets only in GitHub Secrets / secret manager | §15 |
+| D16 | Multilingual (2026-10-09): the code supports 10 translation languages through one language registry. The translation language is a separate user setting, independent of the UI language. When a translation is missing, the app follows the V1 rule (§6.4): non-Chinese users see "no translation yet", and zh-CN may fall back to zh-TW | §6.4 |
+| D17 | Cross-list ★ sync (propagating weak/★ to other lists' WordRefs with the same surface) is deferred to V2.x. V2.0 writes V1 ★ only for the WordRef the user acted on | §9.6 |
+| D18 | Translation language never affects word state, ★, exposure, mastery or free-tier access | §6.4 |
+| D19 | Each built-in sentence has exactly one primary word (the NGSL word of its batch, function words included), stored with its sense-verified same-surface WordRefs in `wordIds`. Other words worth learning go in the optional `secondaryWordIds`, used for word→sentence lookup and weak-mode selection/ordering, never for free-tier access, coverage or exposure counts | §6.1, §9 |
+| D20 | Sentence source language is English only, for built-in and imported sentences; non-English sources are V2.x | §8, §13 |
+| D21 | Readiness switch: a code constant, default off, hides the entry and What's New; turning it on is a separate commit approved by Lawrence, after the §16 thresholds are met (≥ 300 reviewed sentences) | §16 |
 
 ---
 
@@ -46,14 +53,19 @@ Learning path: Vocabulary → Sentence (V2.0) → Pattern (V2.1) → Scenario (V
 ```
 lib/practical_english/
   domain/
-    models/        sentence.dart, word_ref.dart, word_learning_state.dart
+    models/        sentence.dart, word_ref.dart, word_learning_state.dart,
+                   pe_language.dart (language registry, §6.4)
     services/      sentence_id_factory.dart, sentence_selector.dart,
-                   legacy_migration.dart, playback_coordinator.dart
+                   legacy_migration.dart, playback_coordinator.dart,
+                   sentence_access.dart, coverage_calculator.dart,
+                   weak_word_sync.dart, word_ref_index.dart
   data/
     sentence_repository.dart
     word_state_repository.dart
     sentence_csv_importer.dart
     json_file_store.dart
+    v1_legacy_gateway.dart, app_state_v1_gateway.dart
+    whats_new_service.dart
   presentation/
     providers/     practical_english_state.dart
     screens/
@@ -63,7 +75,7 @@ lib/practical_english/
 Rules:
 
 - `SentenceRepository` is independent of `CustomDatasetRepository`; the two are never merged.
-- `PracticalEnglishState` is a separate `ChangeNotifier` registered in the existing `MultiProvider` (the project already uses `provider`). No Riverpod/Bloc.
+- `PracticalEnglishState` is a separate `ChangeNotifier` (the project already uses `provider`; no Riverpod/Bloc). It is created when the Practical English screen opens (route-scoped `ChangeNotifierProvider`) and disposed when it closes, so nothing is loaded during V1 startup.
 - `PracticalEnglishState` may **read** from AppState: `isPremium`, `datasets`, `unlockedCount(dataset)`, and the starred sets (via a read accessor). It must not add sentence lists, sentence playback state, filters or sentence progress to AppState.
 - Allowed AppState changes are limited to: a read accessor for starred sets, the PlaybackCoordinator hooks in §10, and the weak-toggle write-through in §9.2. No V1 behavior change.
 - Pure-Dart domain services (ID factory, selector, migration mapping, CSV parsing) must have no Flutter dependency so they can be unit-tested.
@@ -84,8 +96,19 @@ Facts and rules:
 - Built-in IDs are `<datasetId>_<4-digit 0-based index>` and are globally unique. They are never renumbered.
 - Custom `WordItem.id` values (`custom_<row>_<hash>`) can repeat across custom datasets, so custom words must always be qualified with their dataset ID.
 - `/` is reserved as the separator; built-in IDs never contain `/`.
-- Resolution: `WordRef → (dataset, WordItem)` through a map built in memory when Practical English loads. Unresolvable refs are kept, hidden from learning, and counted as "unresolved" (for example, a custom dataset that was deleted). They are not deleted.
-- The same surface word can appear in several built-in lists (4,185 items, 3,439 unique forms). Each item keeps its own WordRef. At **authoring time** the content pipeline links a sentence to every built-in WordRef whose surface form is the target word. The app never guesses links at runtime.
+- Resolution: `WordRef → (dataset, WordItem)` through a map built in memory when Practical English loads. Unresolvable refs are kept in the data and counted as "unresolved". They are never deleted.
+- Deleted custom datasets (confirmed 2026-10-09): a ref whose custom dataset no longer exists is ignored. A sentence that still has at least one resolvable ref in `wordIds` is shown and judged only by its resolvable refs, so re-importing a deleted custom dataset and its sentences makes them usable again. Any other unresolvable ref (an unknown built-in ID, or a missing word in an existing dataset) still hides the sentence. During the S1a merge, the §12 sentence about unresolvable WordRefs is aligned with this rule.
+- The same surface word can appear in several built-in lists (4,185 items, 3,439 unique forms). Each item keeps its own WordRef. The app never guesses links at runtime.
+- **Same surface ≠ same word.** The word lists carry only `id`, surface and translations (no part of speech or sense ID). Some shared surfaces clearly have different senses across lists, for example `watch` (手錶 / 觀看) and `term` (術語 / 學期).
+- Content pipeline linking:
+  - At **authoring time**, the pipeline proposes every built-in WordRef with the target word's surface form as a candidate.
+  - Candidates whose translations differ are flagged for review.
+  - A reviewer removes every candidate whose sense does not match the sentence.
+  - Only the confirmed (sense-verified) WordRefs are written to `wordIds`.
+- Primary word: each built-in sentence has exactly one primary word, the NGSL word of its batch (function words such as `the` included). `wordIds` = that word's WordRef plus its sense-verified same-surface WordRefs.
+- Consequence: within one built-in sentence, WordRefs in `wordIds` with the same `wordLocale` and surface may be treated as one word (free-tier rule in §12, display grouping in §9.6).
+- `secondaryWordIds` (§6.1) uses official WordRefs only; the same sense review applies.
+- Imported sentences: each WordRef was chosen by the user. No WordRef outside the sentence's own lists is ever inferred.
 
 ---
 
@@ -165,20 +188,21 @@ V1 itself still uses indexes, so built-in datasets stay **append-only**: no inse
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `id` | String | yes | Sentence ID, §6.2 |
-| `wordIds` | List<String> | yes, ≥1 | WordRefs, §4. Only persisted relationship |
+| `wordIds` | List<String> | yes, ≥1 | Primary word WordRefs, §4. Used for free-tier access (§12), coverage (§9.5), exposure counts and selection |
+| `secondaryWordIds` | List<String> | no (default empty) | Other words worth learning, official WordRefs only. Used for word→sentence lookup (§6.3) and weak-mode selection/ordering (§9.4). **Never** used for free-tier access, coverage or exposure counts. A WordRef in both lists counts as `wordIds` only. Files without the field stay valid; it is written only when non-empty |
 | `datasetId` | String | yes | Sentence source, e.g. `pe_core`, or `pe_import` for user imports |
 | `targetLanguage` | String | yes | Same format as `WordDataset.wordLocale`, e.g. `en-US`. Used as TTS language |
 | `sentenceText` | String | yes | The sentence to learn |
-| `translations` | Map<String,String> | yes (may be empty) | Locale keys use the **same codes as WordItem translations**: `zh-TW`, `zh-CN`, `ja`, `ko`, `vi`, `id`, `es`, `pt-BR`, `th`, `ar` |
+| `translations` | Map<String,String> | yes (may be empty) | One entry per translation language. Keys are **canonical translation codes** from the language registry (§6.4), the same codes as WordItem translations: `zh-TW`, `zh-CN`, `ja`, `ko`, `vi`, `id`, `es`, `pt-BR`, `th`, `ar` |
 | `level` | String? | no | e.g. `A1`–`C2` |
 | `category` | String? | no | e.g. `daily`, `work` |
 | `patternId` | String? | no | Reserved for V2.1; always null in V2.0 |
 | `scenarioId` | String? | no | Reserved for V2.2; always null in V2.0 |
 | `metadata` | Map<String,dynamic>? | no | Free-form notes only. Never used for anything that needs querying |
 
-`translationLocale` and `translationText` are **not** used.
+`translationLocale` and `translationText` are **not** used. `wordIds` and `secondaryWordIds` together are the only persisted Sentence↔Word relationship (D4).
 
-Translation fallback (same as V1 `WordItem.resolveLocale`): UI locale → `zh-TW` → first available → none (show English only).
+Translation selection and fallback: see §6.4. The earlier rule "UI locale → zh-TW → first available" is replaced. It showed Chinese to non-Chinese users, which V1 does not do for built-in content.
 
 Example:
 
@@ -213,8 +237,82 @@ Example:
 
 ### 6.3 Relationship and reverse index
 
-- `Sentence.wordIds` is the only persisted Sentence↔Word link. No Word→Sentence data is saved anywhere.
+- `Sentence.wordIds` and `Sentence.secondaryWordIds` are the only persisted Sentence↔Word links. No Word→Sentence data is saved anywhere.
+- The in-memory reverse index includes both lists, so word→sentence lookup also finds a sentence through its secondary words. Free-tier access and coverage read `wordIds` only.
 - On load, `SentenceRepository` builds `Map<WordRef, List<SentenceId>>` in memory once, and rebuilds it after an import. It is discarded with the repository.
+
+### 6.4 Languages (2026-10-09)
+
+**Four separate concepts.** They must never be derived from one another, except for the stated defaults.
+
+| Concept | Meaning | Source | Format |
+|---|---|---|---|
+| UI language | Language of app strings | Device locale through `BackgroundL10n.resolve` (11 ARB languages; unsupported → `en`). No in-app switch in V2.0 | Flutter `Locale` |
+| Translation language | Which `translations` entry is shown or spoken | User setting `pe_translation_locale`; default "follow UI" = `BackgroundL10n.translationKey()` | Canonical translation code |
+| Target language | Language of `sentenceText` | `Sentence.targetLanguage` | `wordLocale` format, e.g. `en-US` |
+| TTS language | Voice used for speech | Sentence: `targetLanguage`. Translation: the registry `ttsCode` of the translation language | TTS locale, e.g. `ja-JP` |
+
+**Language registry.** There is one Dart table in `lib/practical_english/domain/`. Every language list in Practical English (picker, CSV validation, TTS, text direction) reads from it. V1 lists stay unchanged in V2.0.
+
+| Field | Meaning |
+|---|---|
+| `code` | Canonical translation code (the `translations` key) |
+| `aliases` | Accepted alternative spellings (case-insensitive, `-` or `_`) |
+| `endonym` | Name shown in the picker, in its own language |
+| `ttsCode` | Locale passed to TTS |
+| `isRtl` | Text direction of this language's text |
+| `hasUi` | Whether an app UI translation exists (11 ARB languages) |
+
+Translation languages supported in V2.0 (the code supports all 10; content availability is separate, see §13):
+
+| code | aliases (product rule of this app, not a general standard) | ttsCode | isRtl |
+|---|---|---|---|
+| `zh-TW` | `zh_TW`, `zh-Hant`, `zh-Hant-TW` | `zh-TW` | no |
+| `zh-CN` | `zh_CN`, `zh-Hans`, `zh-Hans-CN` | `zh-CN` | no |
+| `ja` | `ja-JP` | `ja-JP` | no |
+| `ko` | `ko-KR` | `ko-KR` | no |
+| `vi` | `vi-VN` | `vi-VN` | no |
+| `id` | `id-ID`, `in` | `id-ID` | no |
+| `es` | `es-ES` | `es-ES` | no |
+| `pt-BR` | `pt`, `pt_BR` | `pt-BR` | no |
+| `th` | `th-TH` | `th-TH` | no |
+| `ar` | `ar-SA` | `ar-SA` | yes |
+
+Normalization rules:
+- Matching is case-insensitive, and `_` equals `-`. So `JA` becomes `ja`, and `zh_tw` becomes `zh-TW`.
+- Codes that are not language tags, such as `jp`, `cn`, `tw` or `chinese`, are **invalid**. They are never guessed.
+- `pt` → `pt-BR` and `zh` + Hans → `zh-CN` repeat the existing app rule in `BackgroundL10n.translationKey()`.
+- Bare `zh` is invalid in CSV, because it is ambiguous.
+
+Normalization is applied when data is written by the importer. When reading, existing keys are matched through the same alias table. Stored files are never rewritten just to normalize keys.
+
+**Choosing the translation** (aligned with V1 built-in words, `_hideBuiltInTranslationFor`):
+1. Let `L` be the translation language: the user setting, or "follow UI".
+2. If `translations[L]` exists, show it.
+3. Otherwise, if `L` is `zh-CN` and `translations['zh-TW']` exists, show zh-TW. This is the only fallback, and it matches V1.
+4. Otherwise, show "此句尚無翻譯" ("No translation for this sentence yet"), localized in all 11 UI languages and **without** a language name. Never show another language, including Chinese or English.
+
+When "follow UI" resolves to `en` (English UI, or an unsupported UI language), no translation is shown.
+
+**Picker.**
+- Practical English offers "Follow app language" plus the 10 registry languages, shown by endonym.
+- A language may show how many published sentences have a translation in it.
+- The setting is stored in SharedPreferences `pe_translation_locale`. It does not touch `settings_v1` or V1 translation display.
+- Technical rule: a missing key means "follow app language"; choosing "follow" removes the key; only canonical codes are stored; a stored value that is not a registry code is treated as "follow".
+
+**Text direction.**
+- The overall layout direction follows the UI language (Flutter default).
+- Each text block takes the direction of its own content: a translation uses the registry `isRtl`, and English sentences stay left-to-right. This matches V1's content-based `AppState.isRtlLanguage`.
+
+**Independence (D18).** Changing the translation language never changes any of these:
+- `word_state.json`
+- V1 ★
+- exposure or practice counts
+- mastery
+- free-tier access (§12 depends only on WordRef unlock state)
+- available sentence counts
+
+Neither the picker nor translation speech is a Premium feature.
 
 ---
 
@@ -228,7 +326,7 @@ Example:
 | Imported sentences | `<appDocuments>/practical_english/imported_sentences.json` | importer |
 | Canonical word state | `<appDocuments>/practical_english/word_state.json` | PracticalEnglishState |
 | Migration state (fingerprints, unresolved) | `<appDocuments>/practical_english/migration_state.json` | Migration Layer |
-| Small flags | SharedPreferences keys prefixed `pe_` plus the two What's New keys in §11 | various |
+| Small flags | SharedPreferences keys prefixed `pe_` (including `pe_translation_locale`, §6.4) plus the two What's New keys in §11 | various |
 
 Large data is never stored in SharedPreferences (Android loads all of SharedPreferences into memory at startup).
 
@@ -268,11 +366,13 @@ Only words with some state are stored. Absent = unseen.
 
 ### 8.1 Format B (V2.0)
 
-Header row is required. Columns:
+A header row is required. Column names are matched case-insensitively, in any order.
 
 ```
-word_id,sentence,sentence_translation[,target_language,translation_locale,level,category]
+word_id,sentence[,sentence_translation][,sentence_translation_<code>…][,target_language,translation_locale,level,category]
 ```
+
+Two ways to give translations. Both may appear in the same file:
 
 ```csv
 word_id,sentence,sentence_translation
@@ -280,27 +380,64 @@ ngsl_2809_0001,I need more time.,我需要更多時間。
 ngsl_2809_0001|ngsl_2809_0120,I need some help with this.,這件事我需要一些幫忙。
 ```
 
-- `word_id` holds one or more WordRefs separated by `|`.
-- Defaults: `target_language = en-US`; `translation_locale` = the locale chosen on the import screen; `level` and `category` empty.
+```csv
+word_id,sentence,sentence_translation_zh-TW,sentence_translation_ja
+ngsl_2809_0002,Can you help me?,你可以幫我嗎？,手伝ってくれますか？
+```
+
+- `word_id` holds one or more WordRefs, separated by `|`.
+- Required columns:
+  - `word_id`
+  - `sentence`
+  - at least one translation column: `sentence_translation` or any `sentence_translation_<code>`
+- **Single column** `sentence_translation`: its language is the row's `translation_locale`. If that is empty, the import screen's selected language is used.
+  - The import screen offers a language picker from the registry.
+  - Its default is the current translation language (§6.4).
+- **Wide columns** `sentence_translation_<code>`: `<code>` is normalized through the registry (§6.4). An invalid code in a header is a **file-level error** listing the column, because a misspelled header must not be ignored silently. Two header columns that normalize to the same code are also a file-level error.
+- Defaults:
+  - `target_language` = `en-US`.
+  - `level` and `category` are empty.
+- `target_language` (V2.0):
+  - English codes only (`en`, `en-US`, `en-GB`, `en-AU`, `en-IN`, normalized case-insensitively).
+  - Any other value is an **Invalid Row** (`invalidTargetLanguage`). Non-English source sentences are a V2.x scope item.
 - Reuses the existing CSV parsing behavior (BOM removal, newline normalization, delimiter detection).
 - No AI is called during import.
 
 ### 8.2 Row validation (in order)
 
-1. Missing required column or empty `sentence` → **Invalid Row**.
-2. Any WordRef that does not resolve → **Invalid Word ID**; the whole row is rejected and listed with the bad IDs. No partial linking.
-3. Compute `dedupKey`:
-   - New key → **Added** (new imported Sentence with an ID per §6.2).
-   - Existing key with new WordRefs not yet linked → **Updated** (merge WordRefs into `wordIds`; existing translations are kept).
-   - Existing key with a translation for a locale that has none yet → **Updated** (add that locale).
-   - Otherwise → **Duplicate** (nothing changes; an existing different translation is not overwritten).
-4. Built-in sentences are never modified by import. A row matching a built-in sentence's dedupKey is a **Duplicate**.
+1. Empty `word_id` or empty `sentence` → **Invalid Row**.
+2. Invalid `translation_locale` value, or invalid `target_language` → **Invalid Row**, with the reason (`invalidLocale` / `invalidTargetLanguage`).
+3. Any WordRef that does not resolve → **Invalid Word ID**. The whole row is rejected and listed with the bad IDs. No partial linking.
+4. Build the row's translations:
+   - Empty translation cells are ignored. They are not errors, and they never delete anything.
+   - A wide column and the single column for the same language:
+     - Same text → use it.
+     - Different text → that language is a **Conflict** for this row and neither text is written.
+   - A row with no non-empty translation is still accepted. It is listed as a warning, "no translation".
+5. Compute `dedupKey` and compare per language:
+   - New key → **Added** (a new imported Sentence with an ID per §6.2).
+   - Existing imported key:
+     - New WordRefs are merged into `wordIds` (union; a valid link is never dropped).
+     - A language with no translation yet is added.
+     - A language with the same text is unchanged.
+     - A language with **different** text is a **Conflict**. The existing text is kept, unless the user enabled "Overwrite existing translations" on the import screen; in that case it is replaced.
+     - If anything was added or replaced → **Updated**. Otherwise → **Duplicate**.
+   - **Within one file** (confirmed 2026-10-09): the file is first resolved on its own. If the same dedupKey and language appear with two or more different texts anywhere in the file, that language is a **Conflict** for every row involved, nothing is written for it, and "Overwrite" does not apply. Identical repeats count once. Only then is the file compared with stored data as above, so the result never depends on row order.
+6. Built-in sentences are never modified by import, and overwrite never applies to them.
+   - A row whose dedupKey matches a built-in sentence → **Built-in match**.
+   - It is listed with row numbers, and the summary says that its links or translations were not applied.
+   - It is never counted as Duplicate silently.
+   - User translations or links for built-in sentences are a V2.x scope item.
 
 ### 8.3 Guarantees
 
-- Idempotent: importing the same file twice gives Added = 0 and Updated = 0 the second time.
-- The whole file is validated in memory first, then written with one atomic write. A failed write leaves the previous data intact.
-- Summary shown to the user: **Added / Updated / Duplicate / Invalid Word ID / Invalid Row**, with row numbers for the last two.
+- Idempotent: importing the same file a second time changes nothing (Added = 0, Updated = 0), with or without overwrite. Conflicts inside the file are reported again but never write.
+- Technical rule: each row is counted once, by its most severe result (Invalid Row > Invalid Word ID > Conflict > Built-in match > Added > Updated > Duplicate).
+- Technical rule: `target_language` is canonicalized before building the dedupKey (case and `_`/`-` normalized; bare `en` = `en-US`), so the same sentence is not imported twice under different spellings of the code.
+- The whole file is validated in memory first, then written with one atomic write. A failed write leaves the previous data intact; there are no partial updates.
+- Translations and `wordIds` survive write → reload unchanged, all languages included.
+- Older `imported_sentences.json` files (`schema: 1`) stay readable. New behavior adds no required field.
+- Summary shown to the user: **Added / Updated / Duplicate / Conflict / Built-in match / Invalid Word ID / Invalid Row**. Every category except Added, Updated and Duplicate shows row numbers. Rows with no translation are shown as a warning count.
 - A file-level hash can skip unchanged files as an optimization only; sentence-level dedup is still authoritative.
 
 ### 8.4 Format A (deferred, not in V2.0)
@@ -341,22 +478,30 @@ Modes: **All words** / **Weak priority** / **Weak only**.
 
 For each candidate sentence:
 
-`score = 3 × (weak words in wordIds) + 1 × (unseen/seen/learning words in wordIds)`
+`score = 3 × (weak words) + 1 × (unseen/seen/learning words)`, counted over `wordIds` ∪ `secondaryWordIds` (each WordRef once). Weak only: a sentence qualifies if any WordRef in either list is weak.
 
 - Weak only: candidates must contain ≥1 weak word.
 - Weak priority: all candidates, sorted by score descending.
 - All words: all candidates, sorted by sentence order (or shuffled with the existing `PlaylistBuilder.shuffle` if shuffle is on).
 - Ties: oldest `lastPracticedAt` first, then sentence ID.
-- One sentence containing several weak words strengthens all of them; practicing it increments `peExposureCount` for every word in `wordIds`.
+- One sentence containing several weak words strengthens all of them; practicing it increments `peExposureCount` for every word in `wordIds` (not `secondaryWordIds`).
 - Practice in Practical English does not change V1 statistics (`stats_*` keys).
 
 ### 9.5 Learning coverage
 
 - Per dataset and overall (4,185 built-in items plus custom items):
-  - **Available**: words with ≥1 resolvable sentence.
+  - **Available**: words with ≥1 resolvable sentence through `wordIds` (secondary links do not count).
   - **Practiced**: words with `peExposureCount > 0`.
   - **Mastered**: words with `mastered == true`.
 - Shown as counts and percentages. Words with no sentence yet count as "not available", not as failures.
+
+### 9.6 Same-surface words in one sentence (display only)
+
+- In a sentence view, WordRefs in that sentence's `wordIds` with the same `wordLocale` and surface (trimmed, case-insensitive) are shown as **one word**, with one chip.
+- The chip lists the lists it belongs to. If the WordRefs have different statuses, the chip shows a "status differs between lists" hint.
+- Grouping is display only. It writes nothing and never looks outside `wordIds`.
+- V2.0: marking weak, unmarking weak or "我會了" acts on the WordRef the user chose. The UI makes the list explicit when a word belongs to several lists.
+- Cross-list ★ sync, meaning applying one action to every WordRef of the group and writing ★ in other lists, is **deferred to V2.x** (D17). When it comes back, it requires sense-verified `wordIds` (§4) and a decision by Lawrence, because ★ would appear in V1 lists the user did not touch.
 
 ---
 
@@ -367,10 +512,23 @@ For each candidate sentence:
 
 Rules:
 
-- `claim(v2)`: if the owner is V1, call `AppState.stopCruise()` and `TtsService.stop()`, then set the owner to V2.
-- `claim(v1)`: if the owner is V2, stop V2 playback and `TtsService.stop()`, then set the owner to V1.
-- V1 calls `claim(v1)` at the start of `startCruise()` and before any manual speak (`next`/`previous`/`replay`/`jumpTo`). These are the only V1 code changes; V1 behavior is otherwise unchanged.
+- `PlaybackCoordinator` lives on `AppState` (`playbackCoordinator`). Each side registers a stopper: V1 registers `stopCruise()`, Practical English registers its own stop while its screen is open.
+- `claim(owner)` returns a `PlaybackLease`: the owner is switched first, then the previous owner's stopper is awaited. A caller checks `isCurrent(lease)` before speaking, so a superseded or stale call never speaks.
+- `release(lease)` only clears ownership for the current lease; stale completions and repeated stops do nothing.
+- V1 claims at the start of `_speakCurrent` (covering cruise, manual next/previous/replay/jump and lock-screen play) and releases when speech ends without cruise, or on `stopCruise()`. These are the only V1 playback changes; V1 behavior is otherwise unchanged.
+- Practical English releases on stop, screen exit and app pause.
 - Only one speech owner exists at any time.
+
+Translation speech (2026-10-09):
+
+- Speaking a translation is an optional user action or toggle on the sentence screen. It uses the registry `ttsCode` (§6.4), never the sentence's `targetLanguage`.
+- It runs under the same V2 lease as the sentence. Before each utterance, the code checks that the lease is still current. A newer tap, a sentence change or a V1 claim stops it, and a stale callback never speaks.
+- Voice availability:
+  - Check with the three-state `TtsService.checkLanguage` (available / unavailable / unknown) from V1 v20 (commit 29c6434), not a separate implementation. It reaches the V2 branch through a normal merge of main once v20 is merged there; until then V2 uses a local adapter with the same three states.
+  - Treat "unknown" as unknown, not as "available". If speaking then fails, show a one-time message ("This device has no <language> voice") with a link to system TTS settings.
+  - Reading is never blocked.
+- Detection is best effort. Real voice availability per language is verified on devices (§16).
+- English speech keeps V1's pinned-voice behavior. Non-English voices use the system default for the `ttsCode`; a voice picker is V2.x.
 
 Not changed in V2.0:
 
@@ -414,17 +572,57 @@ V1 data is never reset. `settings_v1` is used only as evidence that V1 data exis
 ## 13. Content strategy
 
 - Built-in corpus `pe_core` is original content: AI drafts **at authoring time** plus human proofreading, owned by the developer. No unlicensed third-party sentences.
-- First batch: NGSL 2,809 items 1–1,000 (by list order) × about 1 sentence per word, English + zh-TW.
-- The content pipeline (outside the app) validates every WordRef, assigns `pe_core_` IDs, links all built-in items with the same surface form (§4), and outputs `assets/practical_english/pe_core.json`.
+- First batch: NGSL 2,809 items 1–1,000 (by list order) × about 1 sentence per word. English is the only source language.
+- The content pipeline (outside the app):
+  - validates every WordRef;
+  - assigns `pe_core_` IDs;
+  - proposes same-surface candidates and keeps only sense-verified WordRefs (§4);
+  - merges translations per language by sentence ID;
+  - reports coverage per language;
+  - outputs `assets/practical_english/pe_core.json`.
 - Expand to all 4,185 items only after the first batch passes the checks in §16.
-- Language: English + zh-TW in V2.0. The model is multilingual-ready (other locales are only additional `translations` entries). UI strings for Practical English are still provided in all 11 app languages.
+- **Unreviewed drafts are never published.** Only batches approved by Lawrence go into `pe_core.json`.
+
+Languages (2026-10-09):
+
+- The code supports all 10 translation languages (§6.4). Content ships in waves; a missing translation shows "no translation yet" (§6.4).
+- Proposed waves (order is a content decision, not a code dependency):
+  1. zh-TW
+  2. zh-CN, ja, ko
+  3. vi, id, es, pt-BR, th, ar
+- fr, de and it are not translation languages in V2.0. They have no UI and no built-in word translations.
+- UI strings for Practical English are provided in all 11 app languages. That is a separate condition from translation content.
+- Three separate completion conditions per language. A language is "done" only when all three hold:
+  - **(P)** the code supports it, verified by tests;
+  - **(C)** reviewed translations exist in the asset;
+  - **(V)** a device voice works for it, verified on a real device.
+
+Translation quality (per entry):
+
+| Criterion | Check |
+|---|---|
+| Meaning | Same as the English sentence; nothing added or omitted |
+| Tone | Everyday spoken register, with consistent politeness per language (for example ja です・ます, ko 해요) |
+| Target word | The target word's meaning is represented |
+| Script and punctuation | Correct script (zh-TW Traditional, zh-CN Simplified, no Simplified characters in ja), language-appropriate punctuation, no leftover English except proper nouns |
+| Length | Length ratio to English within the range set by the pipeline; outliers are flagged |
+
+Review flow for each language:
+1. AI draft.
+2. A second AI checks the criteria above and flags issues.
+3. Automated checks: empty values, script, length ratio, duplicates.
+4. Human review of every flag, plus a random sample of 5–10% per language. zh-TW is reviewed by Lawrence; other languages by native reviewers when available.
+5. A batch with a sampled error rate above 3% is returned for rework.
+
+AI-only reviewed languages are labelled as such in the coverage report.
 
 ---
 
 ## 14. Performance
 
 - V1 startup is not affected (Practical English loads lazily).
-- Expected sizes: ~1,000 sentences in V2.0 (< 0.5 MB); full 4,185+ sentences × 10 locales ≈ 3 MB JSON. Parsing in a background isolate keeps the UI responsive.
+- Expected sizes: ~1,000 sentences with zh-TW only (< 0.5 MB); ~1,000 sentences × 10 translation languages ≈ 1 MB JSON (estimate); full 4,185+ sentences × 10 languages ≈ 3 MB JSON. Parsing in a background isolate keeps the UI responsive.
+- Before assuming a bottleneck, measure it: a unit test parses a synthetic 1,000 × 10-language file and records the time, and entering Practical English is timed once on a mid-range device. Optimize only if the measurements require it.
 - The reverse index and the selector run in memory over ≤ ~10,000 sentences; no database needed.
 - Word state is written with debounce (§7.3), never once per spoken word.
 - SQLite/Drift/Isar would be reconsidered only if measured load time or memory becomes a real problem (for example, full-text search or large downloadable packs).
@@ -457,11 +655,42 @@ V1 data is never reset. `settings_v1` is used only as evidence that V1 data exis
 7. Weak Word (shared with V1 ★), manual mastery, three learning modes, coverage
 8. Independent PracticalEnglishState
 9. What's New
-10. First content batch (NGSL 1,000 words, English + zh-TW)
+10. First content batch (NGSL 1,000 words, English source; translations in waves, zh-TW first)
+11. Multilingual (§6.4, §8, §10):
+    - language registry;
+    - translation-language picker separate from the UI language;
+    - V1-aligned fallback;
+    - per-text RTL;
+    - multi-language CSV with validation, Conflict, overwrite and Built-in match;
+    - translation speech with a voice check.
+12. Same-surface display grouping (§9.6, display only)
+13. Readiness switch (below)
+
+### Readiness switch
+
+- One code constant, default **off**, controls the Practical English entry and its What's New. While off, the entry is hidden and What's New is never shown. Turning it on is its own commit, approved by Lawrence. No remote config: Firebase is not changed.
+- In the picker, each translation language shows its coverage. A language is offered only when it has coverage on the published sentences (threshold in the table below).
+- The entry is switched on only when all three groups pass:
+
+| Group | Threshold |
+|---|---|
+| Code ready | All implementation stages done; full `flutter test` passes; `flutter analyze` has no errors |
+| Content ready | ≥ 300 approved built-in English sentences (confirmed by Lawrence 2026-10-09); ≥ 100 sentences available to free users; each language offered in the picker has ≥ 95% coverage of published sentences, a sampled error rate ≤ 3% and no open flags |
+| Acceptance ready | Device checklist passed; upgrade test passed (path per signing setup below); V1 regression checklist passed |
 
 ### Acceptance criteria
 
 - **V1 safety**: upgrading a device with V1 data keeps all ★, learned stats, playback position, settings, custom datasets, reminders and Premium state, verified by installing V2 over V1 v19 on a real device.
+  - Choose the upgrade path by the actual signatures, not by assumption.
+    - If Play App Signing is managed by Google, a CI-signed APK cannot install over the Play build. Use the Play internal testing track (v19 from Play → V2) for the real update path. Use sideloading (CI run219 APK → CI V2 APK) only to test data migration.
+    - Confirm the signatures by comparing the certificate of the Play-delivered APK (App bundle explorer download) with the CI APK, or by an install attempt on a test device. Never use private keys for this.
+  - Before and after the upgrade, every V1 SharedPreferences key is compared.
+- **Multilingual**:
+  - For every UI language, no translation in another language is shown, except zh-CN → zh-TW.
+  - Changing the translation language leaves word state, ★, exposure, mastery and free-tier access unchanged.
+  - A multi-language CSV produces the exact expected counts, including Conflict and Built-in match, and survives reload.
+  - Arabic text renders right-to-left.
+  - On a device, each of the 10 languages is spoken (or missing voices are reported).
 - **Migration**: every V1 ★ shows as weak in V2; running migration twice changes nothing; an out-of-range index ends up in `unresolved` without errors.
 - **Weak sync**: ★ set in V1 appears as weak in V2 on next entry, and weak set in V2 appears as ★ in V1.
 - **Import**: a test file covering Added / Updated / Duplicate / Invalid Word ID / Invalid Row produces the exact expected counts; re-importing gives Added = 0, Updated = 0.
@@ -483,7 +712,11 @@ V1 data is never reset. `settings_v1` is used only as evidence that V1 data exis
 - Separate V2 entitlement or pricing
 - Cache framework
 - CSV Format A
-- Full multilingual sentence content
+- Translation content for all 10 languages at launch (the code supports them; content ships in waves)
+- Cross-list ★ sync (D17)
+- User translations or links added to built-in sentences
+- Non-English source (target) sentences, built-in or imported
+- fr / de / it as translation languages; non-English voice picker; V1 using the shared language registry
 - Pattern / Scenario engines (only the nullable fields exist)
 - Cloud sync / accounts
 - Any change to Firebase, RevenueCat, AdMob, Play settings, GitHub Actions or Application ID
