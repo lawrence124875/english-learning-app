@@ -405,7 +405,10 @@ V1 data is never reset. `settings_v1` is used only as evidence that V1 data exis
 ## 12. Premium and monetization
 
 - Same RevenueCat entitlement `premium`, same products and prices. No `sentence_pro`, `v2_pro` or second subscription system.
-- Free tier (consistent with V1): a sentence is available to a free user only if every WordRef in `wordIds` is within that dataset's `unlockedCount()` range. Imported sentences follow the same rule through their linked words. Premium users have everything.
+- Free tier (product rule A, confirmed by Lawrence 2026-10-09): a sentence is available to a free user only if **every target word** in it is unlocked. A target word may be linked through several WordRefs in different lists (§4); it counts as unlocked if **any** of its WordRefs in the sentence's `wordIds` is within that dataset's `unlockedCount()` range.
+  - "The same target word" is decided only among the sentence's own `wordIds`: WordRefs whose items have the same source language (`wordLocale`) and the same surface form (trimmed, case-insensitive). No WordRef outside `wordIds` is ever considered.
+  - Any unresolvable WordRef hides the sentence (§4), whether or not the word is unlocked elsewhere.
+  - Imported sentences follow the same rule through their linked words. Premium users have everything.
 - Ads in Practical English follow V1's conservative policy: no new ad formats or placements beyond what V1 already uses.
 - Future price changes: new subscribers may get new prices; existing subscribers may be grandfathered. That is a product decision outside V2.0.
 
