@@ -130,8 +130,13 @@ void main() {
       expect(back.wordIds, s.wordIds);
       expect(back.level, 'A1');
       expect(back.patternId, isNull);
-      expect(back.translationFor('ja'), '我需要更多時間。'); // 退回 zh-TW
-      expect(back.translationFor('zh-TW'), '我需要更多時間。');
+      // SPEC §6.4：只有 zh-CN 可退回 zh-TW，其他語言不顯示別種翻譯
+      expect(back.translationFor('ja'), isNull);
+      expect(back.translationFor('zh-TW'),
+          const SentenceTranslation('zh-TW', '我需要更多時間。'));
+      expect(back.translationFor('zh-CN'),
+          const SentenceTranslation('zh-TW', '我需要更多時間。'));
+      expect(back.translationFor(null), isNull);
       expect(const Sentence(
               id: 'x', wordIds: ['a'], datasetId: 'd',
               targetLanguage: 'en-US', sentenceText: 't')

@@ -5,6 +5,7 @@ import '../../../l10n/app_localizations.dart';
 import '../../domain/models/sentence.dart';
 import '../../domain/services/sentence_selector.dart';
 import '../providers/practical_english_state.dart';
+import '../widgets/translation_text.dart';
 import '../widgets/word_status_label.dart';
 
 /// 句子學習頁。[sentences] 是進入時的列表快照：標記弱字／我會了會讓
@@ -59,12 +60,36 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
     }
   }
 
+  /// 這次畫面已提示過「沒有語音」的語言，只提示一次。
+  final Set<String> _voiceWarned = {};
+
+  Future<void> _playTranslation() async {
+    final l10n = AppLocalizations.of(context)!;
+    final code = _state.translationFor(_sentence)?.code;
+    final result = await _state.speakTranslation(_sentence);
+    if (!mounted) return;
+    String? message;
+    if (result == TranslationSpeechResult.voiceUnavailable &&
+        code != null &&
+        _voiceWarned.add(code)) {
+      message = l10n.peVoiceUnavailable;
+    } else if (result == TranslationSpeechResult.failed) {
+      message = l10n.peTtsFailed;
+    }
+    if (message != null) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final state = context.watch<PracticalEnglishState>();
     final s = _sentence;
     final translation = state.translationFor(s);
+    final groups = state.wordGroups(s);
+    final others = state.otherWordsOf(s);
     final text = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
@@ -77,24 +102,40 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
             Text(s.sentenceText,
                 key: const Key('pe_detail_sentence'),
                 style: text.headlineSmall),
-            if (translation != null) ...[
-              const SizedBox(height: 8),
-              Text(translation, style: text.titleMedium),
-            ],
+            const SizedBox(height: 8),
+            TranslationText(state: state, sentence: s, style: text.titleMedium),
             const SizedBox(height: 12),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: FilledButton.icon(
-                key: const Key('pe_play'),
-                onPressed: _play,
-                icon: const Icon(Icons.volume_up),
-                label: Text(l10n.pePlay),
-              ),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                FilledButton.icon(
+                  key: const Key('pe_play'),
+                  onPressed: _play,
+                  icon: const Icon(Icons.volume_up),
+                  label: Text(l10n.pePlay),
+                ),
+                if (translation != null)
+                  OutlinedButton.icon(
+                    key: const Key('pe_play_translation'),
+                    onPressed: _playTranslation,
+                    icon: const Icon(Icons.record_voice_over),
+                    label: Text(l10n.pePlayTranslation),
+                  ),
+              ],
             ),
             const SizedBox(height: 20),
             Text(l10n.peTargetWords, style: text.titleSmall),
             const SizedBox(height: 4),
-            for (final ref in s.wordIds.toSet()) _WordRow(wordRef: ref),
+            for (final group in groups)
+              for (final ref in group.refs)
+                _WordRow(wordRef: ref, showList: group.refs.length > 1),
+            if (others.isNotEmpty) ...[
+              const SizedBox(height: 16),
+              Text(l10n.peOtherWords, style: text.titleSmall),
+              const SizedBox(height: 4),
+              for (final ref in others) _WordRow(wordRef: ref),
+            ],
           ],
         ),
       ),
@@ -133,13 +174,17 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
 class _WordRow extends StatelessWidget {
   final String wordRef;
 
-  const _WordRow({required this.wordRef});
+  /// 同拼字出現在多份清單時，標出這一筆屬於哪份清單（SPEC §9.6）。
+  final bool showList;
+
+  const _WordRow({required this.wordRef, this.showList = false});
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final state = context.watch<PracticalEnglishState>();
-    final word = state.wordFor(wordRef)?.item.word ?? wordRef;
+    final location = state.wordFor(wordRef);
+    final word = location?.item.word ?? wordRef;
     final meaning = state.meaningFor(wordRef);
     final status = state.statusOf(wordRef);
     final weak = status == WordStatus.weak;
@@ -154,7 +199,10 @@ class _WordRow extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Text(word,
+                  child: Text(
+                      showList && location != null
+                          ? '$word · ${location.dataset.shortName}'
+                          : word,
                       style: Theme.of(context).textTheme.titleMedium),
                 ),
                 WordStatusChip(word: word, status: status),

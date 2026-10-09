@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../data/sentence_csv_importer.dart';
+import '../../domain/models/pe_language.dart';
 import '../providers/practical_english_state.dart';
 
 /// 基本的句子 CSV 匯入畫面：選檔 → 呼叫 Phase 3 importer → 顯示結果。
@@ -23,6 +24,13 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
   bool _busy = false;
   SentenceImportResult? _result;
   String? _error;
+
+  /// 單欄 `sentence_translation` 的語言（列上沒有 translation_locale 時）。
+  late String _locale =
+      context.read<PracticalEnglishState>().defaultTranslationLocale;
+
+  /// 與既有匯入句翻譯不同時是否覆寫（內建句不適用）。
+  bool _overwrite = false;
 
   Future<String?> _pickFromDevice() async {
     final picked = await FilePicker.platform.pickFiles(
@@ -44,7 +52,8 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
     try {
       final content = await (widget.pickContent ?? _pickFromDevice)();
       if (content == null) return;
-      final result = await state.importCsv(content);
+      final result = await state.importCsv(content,
+          translationLocale: _locale, overwrite: _overwrite);
       if (mounted) setState(() => _result = result);
     } on SentenceCsvFileException catch (e) {
       final msg = switch (e.error) {
@@ -52,6 +61,10 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
         SentenceCsvFileError.parseFailed => l10n.peImportFileUnreadable,
         SentenceCsvFileError.missingRequiredColumns =>
           l10n.peImportMissingColumns(e.missingColumns.join(', ')),
+        SentenceCsvFileError.invalidTranslationColumn =>
+          l10n.peImportInvalidTranslationColumn(e.columns.join(', ')),
+        SentenceCsvFileError.duplicateTranslationColumn =>
+          l10n.peImportDuplicateTranslationColumn(e.columns.join(', ')),
       };
       if (mounted) setState(() => _error = msg);
     } on FormatException {
@@ -75,6 +88,28 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
           children: [
             Text(l10n.peImportHint),
             const SizedBox(height: 12),
+            DropdownButtonFormField<String>(
+              key: const Key('pe_import_locale'),
+              initialValue: _locale,
+              decoration:
+                  InputDecoration(labelText: l10n.peImportTranslationLanguage),
+              items: [
+                for (final lang in PeLanguages.all)
+                  DropdownMenuItem(value: lang.code, child: Text(lang.endonym)),
+              ],
+              onChanged:
+                  _busy ? null : (v) => setState(() => _locale = v ?? _locale),
+            ),
+            CheckboxListTile(
+              key: const Key('pe_import_overwrite'),
+              contentPadding: EdgeInsets.zero,
+              controlAffinity: ListTileControlAffinity.leading,
+              value: _overwrite,
+              title: Text(l10n.peImportOverwrite),
+              onChanged:
+                  _busy ? null : (v) => setState(() => _overwrite = v ?? false),
+            ),
+            const SizedBox(height: 8),
             FilledButton.icon(
               key: const Key('pe_import_choose'),
               onPressed: _busy ? null : _choose,
@@ -98,10 +133,22 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
               _count(l10n.peImportAdded, result.added, 'added'),
               _count(l10n.peImportUpdated, result.updated, 'updated'),
               _count(l10n.peImportDuplicate, result.duplicate, 'duplicate'),
+              _count(
+                  l10n.peImportConflict, result.conflicts.length, 'conflict'),
+              for (final r in result.conflicts)
+                _detail(
+                    '${l10n.peImportRowLabel(r.row)}: ${r.languages.map(_languageName).join(', ')}'),
+              _count(l10n.peImportBuiltInMatch, result.builtInMatches.length,
+                  'builtInMatch'),
+              if (result.builtInMatches.isNotEmpty)
+                _detail(result.builtInMatches
+                    .map(l10n.peImportRowLabel)
+                    .join(', ')),
               _count(l10n.peImportInvalidWordId, result.invalidWordIds.length,
                   'invalidWordId'),
               for (final r in result.invalidWordIds)
-                _detail('${l10n.peImportRowLabel(r.row)}: ${r.wordIds.join(', ')}'),
+                _detail(
+                    '${l10n.peImportRowLabel(r.row)}: ${r.wordIds.join(', ')}'),
               _count(l10n.peImportInvalidRow, result.invalidRows.length,
                   'invalidRow'),
               for (final r in result.invalidRows)
@@ -109,13 +156,26 @@ class _SentenceImportScreenState extends State<SentenceImportScreen> {
                   InvalidRowReason.missingWordId => l10n.peImportMissingWordId,
                   InvalidRowReason.missingSentence =>
                     l10n.peImportMissingSentence,
+                  InvalidRowReason.invalidLocale => l10n.peImportInvalidLocale,
+                  InvalidRowReason.invalidTargetLanguage =>
+                    l10n.peImportInvalidTargetLanguage,
                 }}'),
+              if (result.noTranslationRows.isNotEmpty) ...[
+                _count(l10n.peImportNoTranslation,
+                    result.noTranslationRows.length, 'noTranslation'),
+                _detail(result.noTranslationRows
+                    .map(l10n.peImportRowLabel)
+                    .join(', ')),
+              ],
             ],
           ],
         ),
       ),
     );
   }
+
+  static String _languageName(String code) =>
+      PeLanguages.lookup(code)?.endonym ?? code;
 
   Widget _count(String label, int value, String key) => ListTile(
         dense: true,

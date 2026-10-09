@@ -83,10 +83,16 @@ void main() {
   });
 
   test('changed dataset + corrupt word state: V1 ★ is not wiped', () async {
-    await enter(_MemGateway({'ngsl_2809': {1}}), original);
+    await enter(
+        _MemGateway({
+          'ngsl_2809': {1}
+        }),
+        original);
     await corruptWordState();
 
-    final gw = _MemGateway({'ngsl_2809': {1}});
+    final gw = _MemGateway({
+      'ngsl_2809': {1}
+    });
     final (report, states) = await enter(gw, reordered);
     expect(states.rebuiltFromCorruption, isTrue);
     expect(report.repairedDatasets, isEmpty);
@@ -97,7 +103,9 @@ void main() {
     expect(states.get('ngsl_2809_0002').weak, isTrue);
 
     // 下次進入：狀態檔已正常寫回、教材已相容，不再寫 V1
-    final gw2 = _MemGateway({'ngsl_2809': {1}});
+    final gw2 = _MemGateway({
+      'ngsl_2809': {1}
+    });
     final (report2, states2) = await enter(gw2, reordered);
     expect(states2.rebuiltFromCorruption, isFalse);
     expect(report2.compatibleDatasets, ['ngsl_2809']);
@@ -105,8 +113,14 @@ void main() {
   });
 
   test('changed dataset with healthy word state still repairs V1 ★', () async {
-    await enter(_MemGateway({'ngsl_2809': {1}}), original);
-    final gw = _MemGateway({'ngsl_2809': {1}});
+    await enter(
+        _MemGateway({
+          'ngsl_2809': {1}
+        }),
+        original);
+    final gw = _MemGateway({
+      'ngsl_2809': {1}
+    });
     final (report, states) = await enter(gw, reordered);
     expect(states.rebuiltFromCorruption, isFalse);
     expect(report.repairedDatasets, ['ngsl_2809']);
@@ -115,9 +129,15 @@ void main() {
 
   test('compatible dataset + corrupt word state rebuilds weak from V1 ★',
       () async {
-    await enter(_MemGateway({'ngsl_2809': {0, 2}}), original);
+    await enter(
+        _MemGateway({
+          'ngsl_2809': {0, 2}
+        }),
+        original);
     await corruptWordState();
-    final gw = _MemGateway({'ngsl_2809': {0, 2}});
+    final gw = _MemGateway({
+      'ngsl_2809': {0, 2}
+    });
     final (report, states) = await enter(gw, original);
     expect(report.compatibleDatasets, ['ngsl_2809']);
     expect(gw.writes, 0);

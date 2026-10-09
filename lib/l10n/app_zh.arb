@@ -436,7 +436,7 @@
   "peLoadFailed": "載入失敗，請再試一次。",
   "peRetry": "重試",
   "peImportTitle": "匯入句子（CSV）",
-  "peImportHint": "格式（第一列為表頭）：word_id,sentence,sentence_translation，多個單字用 | 分隔。",
+  "peImportHint": "格式（第一列為表頭）：word_id,sentence,sentence_translation；也可用 sentence_translation_ja 這類欄位放多種語言。多個單字用 | 分隔。",
   "peImportChoose": "選擇 CSV 檔案",
   "peImportAdded": "新增",
   "peImportUpdated": "更新",
@@ -475,5 +475,35 @@
   "peWhatsNewWhereTitle": "在哪裡找到",
   "peWhatsNewWhereBody": "首頁右上角「⋮」選單 →「實用英文」。這頁之後也可以從同一個選單的「新功能」再打開。",
   "peWhatsNewTry": "立即試試",
-  "peWhatsNewDone": "知道了"
+  "peWhatsNewDone": "知道了",
+  "peImportConflict": "翻譯衝突（未寫入）",
+  "peImportBuiltInMatch": "與內建句相同（未套用）",
+  "peImportNoTranslation": "沒有翻譯（警告）",
+  "peImportInvalidLocale": "翻譯語言代碼無效",
+  "peImportInvalidTargetLanguage": "句子必須是英文（target_language 無效）",
+  "peImportInvalidTranslationColumn": "翻譯欄的語言代碼無效：{columns}",
+  "@peImportInvalidTranslationColumn": {
+    "placeholders": {
+      "columns": {
+        "type": "String"
+      }
+    }
+  },
+  "peImportDuplicateTranslationColumn": "翻譯欄重複：{columns}",
+  "@peImportDuplicateTranslationColumn": {
+    "placeholders": {
+      "columns": {
+        "type": "String"
+      }
+    }
+  },
+  "peImportOverwrite": "覆寫既有翻譯（只限匯入的句子）",
+  "peImportTranslationLanguage": "sentence_translation 欄的語言",
+  "peTranslationLanguage": "翻譯語言",
+  "peTranslationFollowApp": "跟隨 App 語言",
+  "peNoTranslation": "此句尚無翻譯",
+  "pePlayTranslation": "朗讀翻譯",
+  "peVoiceUnavailable": "手機沒有這個語言的語音，翻譯仍可閱讀。",
+  "peStatusDiffers": "各清單狀態不同",
+  "peOtherWords": "句中其他單字"
 }

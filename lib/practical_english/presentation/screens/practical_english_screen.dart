@@ -7,6 +7,8 @@ import '../../../presentation/providers/app_state.dart';
 import '../../domain/models/sentence.dart';
 import '../../domain/services/sentence_selector.dart';
 import '../providers/practical_english_state.dart';
+import '../widgets/translation_language_picker.dart';
+import '../widgets/translation_text.dart';
 import '../widgets/word_status_label.dart';
 import 'sentence_detail_screen.dart';
 import 'sentence_import_screen.dart';
@@ -49,6 +51,13 @@ class _PracticalEnglishView extends StatelessWidget {
       appBar: AppBar(
         title: Text(l10n.peTitle),
         actions: [
+          if (state.isReady)
+            IconButton(
+              key: const Key('pe_translation_action'),
+              tooltip: l10n.peTranslationLanguage,
+              icon: const Icon(Icons.translate),
+              onPressed: () => showTranslationLanguagePicker(context, state),
+            ),
           if (state.isReady)
             IconButton(
               key: const Key('pe_import_action'),
@@ -206,24 +215,25 @@ class _SentenceTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.read<PracticalEnglishState>();
     final s = sentences[index];
-    final translation = state.translationFor(s);
     return ListTile(
       key: ValueKey('pe_sentence_${s.id}'),
       title: Text(s.sentenceText),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (translation != null) Text(translation),
+          TranslationText(state: state, sentence: s),
           const SizedBox(height: 4),
           Wrap(
             spacing: 6,
             runSpacing: 4,
             children: [
-              for (final ref in s.wordIds.toSet())
-                WordStatusChip(
-                  word: state.wordFor(ref)?.item.word ?? ref,
-                  status: state.statusOf(ref),
-                ),
+              for (final group in state.wordGroups(s))
+                Builder(builder: (_) {
+                  final (status, differs) = WordStatusChip.combine(
+                      [for (final r in group.refs) state.statusOf(r)]);
+                  return WordStatusChip(
+                      word: group.word, status: status, differs: differs);
+                }),
             ],
           ),
         ],

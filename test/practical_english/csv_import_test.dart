@@ -57,7 +57,7 @@ void main() {
       'ngsl_2809_0002,Can you help me?,你可以幫我嗎？\n' // 2 Added
       'ngsl_2809_0003|custom_1/custom_0_7,I like apples.,我喜歡蘋果。\n' // 3 Added（多字）
       'ngsl_2809_0004,can you  help me,\n' // 4 同句＋新字 → Updated（併入第 2 列）
-      'ngsl_2809_0001,I need more time!,\n' // 5 與內建句子相同 → Duplicate
+      'ngsl_2809_0001,I need more time!,\n' // 5 與內建句子相同 → Built-in match
       'ngsl_9999_0000,Hello there.,你好。\n' // 6 Invalid Word ID
       'custom_0_7,Bare custom id.,\n' // 7 自訂字未加教材 → Invalid Word ID
       ',No word id.,\n' // 8 Invalid Row
@@ -69,7 +69,10 @@ void main() {
     final r = await importer(repo).importCsv(mixed, translationLocale: 'zh-TW');
     expect(r.added, 2);
     expect(r.updated, 1);
-    expect(r.duplicate, 1);
+    expect(r.duplicate, 0);
+    expect(r.builtInMatches, [5]);
+    expect(r.conflicts, isEmpty);
+    expect(r.noTranslationRows, [4, 5]);
     expect(r.invalidWordIds.map((e) => e.row), [6, 7]);
     expect(r.invalidWordIds.first.wordIds, ['ngsl_9999_0000']);
     expect(r.invalidRows.map((e) => '${e.row}:${e.reason.name}'),
@@ -96,7 +99,8 @@ void main() {
     final again = await importer(repo).importCsv(mixed, translationLocale: 'zh-TW');
     expect(again.added, 0);
     expect(again.updated, 0);
-    expect(again.duplicate, 4); // 第 2、3、4、5 列
+    expect(again.duplicate, 3); // 第 2、3、4 列
+    expect(again.builtInMatches, [5]);
     expect(await File('${dir.path}/imported_sentences.json').readAsString(), before);
 
     // 重新啟動（新的 repository 從磁碟載入）再匯入，結果仍相同
@@ -107,7 +111,7 @@ void main() {
     expect(reloaded.imported.length, 2);
   });
 
-  test('Updated: new word link or new translation locale; translations never overwritten',
+  test('Updated: new word link or new translation locale; different text is a Conflict',
       () async {
     final repo = newRepo();
     await importer(repo).importCsv(
@@ -119,11 +123,12 @@ void main() {
         'word_id,sentence,sentence_translation,translation_locale\n'
         'ngsl_2809_0003,Can you help me?,,\n' // 新連結 → Updated
         'ngsl_2809_0002,Can you help me?,手伝ってくれますか？,ja\n' // 新語言 → Updated
-        'ngsl_2809_0002,Can you help me?,不同的翻譯,zh-TW\n', // 已有 zh-TW → Duplicate
+        'ngsl_2809_0002,Can you help me?,不同的翻譯,zh-TW\n', // 已有 zh-TW → Conflict
         translationLocale: 'zh-TW');
     expect(r.added, 0);
     expect(r.updated, 2);
-    expect(r.duplicate, 1);
+    expect(r.duplicate, 0);
+    expect(r.conflicts.map((c) => '${c.row}:${c.languages}'), ['4:[zh-TW]']);
     final s = repo.imported.single;
     expect(s.id, id); // ID 不變
     expect(s.wordIds, ['ngsl_2809_0002', 'ngsl_2809_0003']);

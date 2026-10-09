@@ -428,7 +428,7 @@ void main() {
       final imported = s.sentences.where((x) => x.id.startsWith('imp_')).toList();
       expect(imported, hasLength(1)); // w8 對免費版鎖住
       expect(imported.single.sentenceText, 'Imported sentence.');
-      expect(s.translationFor(imported.single), '匯入句');
+      expect(s.translationFor(imported.single)?.text, '匯入句');
       expect(s.lockedCount, 4);
     });
 
@@ -598,6 +598,8 @@ void main() {
     });
 
     testWidgets('23. import result UI', (tester) async {
+      tester.view.physicalSize = const Size(2400, 6000);
+      addTearDown(tester.view.reset);
       final s = (await tester.runAsync(() => enter(_app())))!;
       var csv = 'word_id,sentence,sentence_translation\n'
           '${_id(1)},New one.,新\n'

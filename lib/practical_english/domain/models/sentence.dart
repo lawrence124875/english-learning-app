@@ -1,3 +1,25 @@
+import 'pe_language.dart';
+
+/// 解析後的翻譯：實際使用的語言（canonical）與文字。
+class SentenceTranslation {
+  final String code;
+  final String text;
+  const SentenceTranslation(this.code, this.text);
+
+  /// 這段翻譯的文字方向（阿拉伯文由右到左）。
+  bool get isRtl => PeLanguages.lookup(code)?.isRtl ?? false;
+
+  @override
+  bool operator ==(Object other) =>
+      other is SentenceTranslation && other.code == code && other.text == text;
+
+  @override
+  int get hashCode => Object.hash(code, text);
+
+  @override
+  String toString() => '$code:$text';
+}
+
 /// Practical English 句子（SPEC §6.1）。
 ///
 /// [wordIds]（主要詞）與 [secondaryWordIds]（次要詞）是 Sentence ↔ Word
@@ -47,12 +69,26 @@ class Sentence {
     this.metadata,
   });
 
-  /// 翻譯 fallback 與 V1 `WordItem.resolveLocale` 相同：
-  /// 介面語言 → zh-TW → 第一個可用的 → 無（回傳 null，只顯示英文）。
-  String? translationFor(String localeCode) {
-    if (translations.containsKey(localeCode)) return translations[localeCode];
-    if (translations.containsKey('zh-TW')) return translations['zh-TW'];
-    return translations.isEmpty ? null : translations.values.first;
+  /// 依翻譯語言取得翻譯（SPEC §6.4，與 V1 內建單字的規則一致）：
+  /// 1. 有 [localeCode] 的翻譯就用它（key 經登錄表別名比對）。
+  /// 2. 否則只有 `zh-CN` 可退回 `zh-TW`。
+  /// 3. 其他情況回傳 null（畫面顯示「此句尚無翻譯」），不會顯示別的語言。
+  /// [localeCode] 為 null（跟隨英文介面）時一律回傳 null。
+  SentenceTranslation? translationFor(String? localeCode) {
+    final wanted =
+        localeCode == null ? null : PeLanguages.canonicalize(localeCode);
+    if (wanted == null) return null;
+    SentenceTranslation? find(String code) {
+      for (final e in translations.entries) {
+        if (e.value.isEmpty) continue;
+        if (e.key == code || PeLanguages.canonicalize(e.key) == code) {
+          return SentenceTranslation(code, e.value);
+        }
+      }
+      return null;
+    }
+
+    return find(wanted) ?? (wanted == 'zh-CN' ? find('zh-TW') : null);
   }
 
   /// 主要詞＋次要詞（去重，主要詞在前）。同時出現在兩邊的只算主要詞。
