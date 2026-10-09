@@ -41,7 +41,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1740	1739	implement	implement	We'll implement the new system next month.	我們下個月會實施新系統。	B2	work	ngsl_2809_1739	ngsl_2809_0078|ngsl_2809_0178|ngsl_2809_0150|ngsl_2809_0208		
 1741	1740	chart	chart	The chart shows our sales this year.	這張圖表顯示我們今年的業績。	B1	work	ngsl_2809_1740	ngsl_2809_0109|ngsl_2809_0397|ngsl_2809_0057		
 1742	1741	attach	attached	I've attached the file to the email.	我已經把檔案附在電子郵件裡了。	B1	work	ngsl_2809_1741	ngsl_2809_0834|ngsl_2809_1168		
-1743	1742	hell	hell	It's been a hell of a week.	這個星期真是累翻了。	B2	daily	ngsl_2809_1742	ngsl_2809_0156	a hell of a ...	口語強調用法，語氣隨便，正式場合避免
+1743	1742	hell	hell	It's been a hell of a week.	這個星期真是累翻了。	B2	daily	ngsl_2809_1742	ngsl_2809_0156	a hell of a ...	口語強調用法，語氣隨便，正式場合避免；2026-10-09 第一輪風險複審保留；語域：非正式（Informal）
 1744	1743	everywhere	everywhere	I looked everywhere for my keys.	我到處找我的鑰匙。	A2	daily	ngsl_2809_1743	ngsl_2809_0074|ngsl_2809_0658	look for	
 1745	1744	advise	advise	I'd advise you to book early.	我建議你早點訂。	B1	travel	ngsl_2809_1744	ngsl_2809_0170|ngsl_2809_0196		
 1746	1745	household	household	We share the household chores.	我們分攤家事。	B1	daily	ngsl_2809_1745	ngsl_2809_0352		

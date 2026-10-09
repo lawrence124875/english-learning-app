@@ -17,7 +17,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 616	615	police	police	Call the police!	快報警！	A2	official	ngsl_2809_0615	ngsl_2809_0104	call the police	
 617	616	store	store	Is there a convenience store nearby?	附近有便利商店嗎？	A2	shopping	ngsl_2809_0616	ngsl_2809_1894	convenience store	
 618	617	poor	poor	They help poor families in the area.	他們幫助這一區的貧困家庭。	B1	social	ngsl_2809_0617	ngsl_2809_0132|ngsl_2809_0171|ngsl_2809_0203		
-619	618	knowledge	knowledge	She has a good knowledge of wine.	她對葡萄酒很有研究。	B2	food	ngsl_2809_0618	ngsl_2809_0055|ngsl_2809_1388		
+619	618	knowledge	knowledge	She has a good knowledge of wine.	她對葡萄酒很有研究。	B2	food	ngsl_2809_0618	ngsl_2809_0055|ngsl_2809_1388		2026-10-09 第一輪風險複審保留；主題：酒類
 620	619	laugh	laugh	Don't make me laugh.	別逗我笑了。	A2	social	ngsl_2809_0619	ngsl_2809_0047		
 621	620	arm	arm	I hurt my arm at the gym.	我在健身房弄傷了手臂。	A2	health	ngsl_2809_0620	ngsl_2809_1420		
 622	621	heart	heart	Thank you from the bottom of my heart.	打從心底謝謝你。	B1	social	ngsl_2809_0621	ngsl_2809_0243|ngsl_2809_1241	from the bottom of my heart	

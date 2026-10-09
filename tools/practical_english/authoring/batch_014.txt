@@ -55,7 +55,7 @@
 1353|active|My grandma is still very active.|我奶奶還是很活躍。|A2|health|still||
 1354|concluded|We concluded that the plan wouldn't work.|我們的結論是這個計畫行不通。|B2|work|plan,work||
 1355|religious|It's a religious holiday here.|這天在當地是宗教節日。|B1|travel|holiday,here||
-1356|cancer|Smoking increases the risk of cancer.|吸菸會增加罹癌風險。|B1|health|smoke<Smoking,increase<increases,risk||
+1356|cancer|Smoking increases the risk of cancer.|吸菸會增加罹癌風險。|B1|health|smoke<Smoking,increase<increases,risk||2026-10-09 第一輪風險複審保留；主題：衛教常識
 1357|convinced|She convinced me to come.|她說服我來了。|B1|social|come|convince someone to ...|
 1358|vary|Prices vary from shop to shop.|每家店的價格都不一樣。|B1|shopping|price<Prices,shop||
 1359|environmental|Plastic bags cause serious environmental problems.|塑膠袋造成嚴重的環境問題。|B1|news|plastic,bag<bags,cause,serious,problem<problems||
@@ -74,7 +74,7 @@
 1372|opposite|They have opposite opinions on this.|他們對這件事的意見完全相反。|B1|social|opinion<opinions||
 1373|stone|The old bridge is made of stone.|那座舊橋是用石頭蓋的。|A2|travel|old,bridge|be made of|
 1374|sum|We paid a large sum of money for the house.|我們買這間房子花了一大筆錢。|B2|daily|pay<paid,large,money,house|a sum of money|sum 在此為「金額」
-1375|murder|I love reading murder mysteries.|我很愛看推理謀殺小說。|B1|daily|love,read<reading,mystery<mysteries|murder mystery|指推理小說類型，避開暴力描寫
+1375|murder|I love reading murder mysteries.|我很愛看推理謀殺小說。|B1|daily|love,read<reading,mystery<mysteries|murder mystery|指推理小說類型，避開暴力描寫；2026-10-09 第一輪風險複審保留；主題：文學類型
 1376|monitor|We monitor the temperature every hour.|我們每小時監測一次溫度。|B2|work|temperature,hour||
 1377|soldier|My grandfather was a soldier.|我爺爺以前是軍人。|A2|daily|||
 1378|finance|She works in finance.|她在金融業工作。|B2|work|work<works||finance 在此為「金融業」
@@ -87,7 +87,7 @@
 1385|carefully|Please listen carefully.|請仔細聽。|A2|study|please,listen||
 1386|packed|Have you packed for the trip yet?|你旅行的行李收好了嗎？|A2|travel|trip,yet||
 1387|recall|I can't recall his name.|我想不起他的名字。|B1|social|name||
-1388|wine|Would you like red or white wine?|你要紅酒還是白酒？|A2|food|like,red,white||
+1388|wine|Would you like red or white wine?|你要紅酒還是白酒？|A2|food|like,red,white||2026-10-09 第一輪風險複審保留；主題：酒類
 1389|camera|My phone has a really good camera.|我的手機相機很好。|A1|phone|phone,really,good||
 1390|swim|I learned to swim when I was five.|我五歲學會游泳。|A1|health|learn<learned,five||
 1391|manufactures|This company manufactures car parts.|這家公司製造汽車零件。|B2|work|company,car,part<parts||

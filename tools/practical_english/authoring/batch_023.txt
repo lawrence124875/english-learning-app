@@ -26,7 +26,7 @@
 2224|entrance|Let's meet at the main entrance.|我們在大門口碰面吧。|A2|travel|meet,main||
 2225|log|Please log your hours every Friday.|請在每週五登記你的工時。|B2|work|please,hour<hours||log 在此為動詞「記錄」
 2226|giant|The kids loved the giant panda.|孩子們很喜歡那隻大貓熊。|B1|travel|kid<kids,love<loved||giant 在此為形容詞「巨大的」
-2227|god|Oh my God, look at that view!|天啊，你看那個景色！|A2|travel|look,view|Oh my God!|
+2227|god|Oh my God, look at that view!|天啊，你看那個景色！|A2|travel|look,view|Oh my God!|2026-10-09 第一輪風險複審保留；語域：口語驚嘆
 2228|portions|The portions at this restaurant are huge.|這家餐廳的份量很大。|B1|food|restaurant,huge||portion 在此為「（食物的）一份」
 2229|substance|This substance is harmful to children.|這種物質對孩童有害。|B2|health|child<children||
 2230|extensive|The hotel has an extensive breakfast menu.|這間飯店的早餐菜色很豐富。|B2|travel|hotel,breakfast,menu||
@@ -63,7 +63,7 @@
 2261|bread|Would you like some bread?|你要來點麵包嗎？|A1|food|like||
 2262|blind|The dog helps a blind man cross the street.|那隻狗幫助一位盲人過馬路。|B1|daily|dog,help<helps,man,cross,street||blind 在此為「失明的」，與詞表解釋「盲目的」不同
 2263|pure|This juice is pure orange.|這杯果汁是純柳橙汁。|B1|food|orange||
-2264|bloody|The movie was too bloody for me.|那部電影對我來說太血腥了。|B2|daily|movie,too||
+2264|bloody|The movie was too bloody for me.|那部電影對我來說太血腥了。|B2|daily|movie,too||2026-10-09 第一輪風險複審保留；主題：影視評價
 2265|ally|She's been my ally at work.|她一直是我工作上的盟友。|C1|work|work||
 2266|quantities|We sell in large quantities.|我們大量出售。|B2|shopping|sell,large|in large quantities|
 2267|bend|Bend your knees when you lift something heavy.|搬重物時要彎曲膝蓋。|B1|health|knee<knees,lift,something,heavy||
@@ -74,7 +74,7 @@
 2272|sustain|It's hard to sustain this pace.|這個步調很難維持下去。|C1|work|hard,pace||
 2273|floods|The street floods every time it rains.|每次下雨這條街就淹水。|B1|news|street,time,rain<rains|every time ...|flood 在此為動詞「淹水」
 2274|poverty|Many families still live in poverty.|很多家庭仍然生活貧困。|B2|news|many,family<families,still,live|live in poverty|
-2275|crazy|This weather is crazy!|這天氣太誇張了！|A2|daily|weather||
+2275|crazy|This weather is crazy!|這天氣太誇張了！|A2|daily|weather||2026-10-09 第一輪風險複審保留；語域：口語
 2276|cite|Remember to cite your sources.|記得註明你的資料來源。|C1|study|remember,source<sources||
 2277|newly|We just moved into a newly built apartment.|我們剛搬進一間新蓋好的公寓。|B2|daily|move<moved,build<built,apartment|move into ...|
 2278|parallel|The road runs parallel to the river.|這條路和河流平行。|B2|travel|road,run<runs,river||
@@ -86,7 +86,7 @@
 2284|button|Press the red button to stop.|按紅色按鈕停止。|A2|daily|press,red,stop||
 2285|burden|I don't want to be a burden to you.|我不想成為你的負擔。|B2|social|want||
 2286|desert|We rode camels in the desert.|我們在沙漠裡騎駱駝。|B1|travel|ride<rode||
-2287|mate|He's my best mate from school.|他是我學校最好的朋友。|B1|social|school||mate 在此為英式口語「朋友、哥兒們」
+2287|mate|He's my best mate from school.|他是我學校最好的朋友。|B1|social|school||mate 在此為英式口語「朋友、哥兒們」；2026-10-09 第一輪風險複審保留；語域：英式口語
 2288|occasionally|I occasionally work from home.|我偶爾在家工作。|B1|work|work,home|work from home|
 2289|shareholders|The shareholders will meet next week.|股東們下週會開會。|C1|work|meet,next,week||
 2290|bowl|Can I have another bowl of rice?|我可以再來一碗飯嗎？|A1|food|another,rice|a bowl of ...|

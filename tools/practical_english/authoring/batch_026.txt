@@ -30,7 +30,7 @@
 2528|clause|Please read this clause in the contract carefully.|請仔細閱讀合約裡的這一條款。|C1|official|please,read,contract,carefully||
 2529|penalty|There's a penalty for returning books late.|圖書逾期歸還會被罰款。|B2|official|return<returning,book<books,late||
 2530|chamber|We enjoyed a chamber music concert last night.|我們昨晚去聽了一場室內樂音樂會，很享受。|C1|social|enjoy<enjoyed,music,concert,last,night|chamber music|chamber 在此為「室內樂」用法，非 NGSL 解釋的「議院」
-2531|fancy|Do you fancy a cup of tea?|你想喝杯茶嗎？|B1|food|cup,tea||fancy 在此為英式口語「想要」
+2531|fancy|Do you fancy a cup of tea?|你想喝杯茶嗎？|B1|food|cup,tea||fancy 在此為英式口語「想要」；2026-10-09 第一輪風險複審保留；語域：英式口語
 2532|poetry|She writes poetry in her free time.|她有空的時候會寫詩。|B1|daily|write<writes,free,time|free time|
 2533|chat|Let's chat over lunch.|我們午餐時邊吃邊聊吧。|A2|social|lunch||
 2534|clothing|This store sells children's clothing.|這家店賣童裝。|B1|shopping|store,sell<sells,child<children||
@@ -40,7 +40,7 @@
 2538|boost|A cup of coffee gives me a quick boost.|一杯咖啡能讓我馬上提振精神。|B2|food|cup,coffee,give<gives,quick||boost 在此為名詞「提振」
 2539|tail|The dog wags its tail when it's happy.|狗開心的時候會搖尾巴。|A2|daily|dog,happy||
 2540|possessions|Please keep your possessions with you at all times.|請隨時看好您的隨身物品。|B2|travel|please,keep,time<times|at all times|possession 在此為「隨身物品」
-2541|Abortion|Abortion is a sensitive topic for many people.|墮胎對很多人來說是個敏感的話題。|C1|news|sensitive,topic,many,people||
+2541|Abortion|Abortion is a sensitive topic for many people.|墮胎對很多人來說是個敏感的話題。|C1|news|sensitive,topic,many,people||2026-10-09 第一輪風險複審保留；主題：社會議題
 2542|curious|I'm curious about how this works.|我很好奇這是怎麼運作的。|B1|daily|work<works|be curious about ...|
 2543|wooden|We have a wooden table in the kitchen.|我們廚房裡有一張木頭桌子。|A2|daily|table,kitchen||
 2544|boom|There's been a boom in online shopping.|網購最近大幅成長。|B2|news|online,shop<shopping||boom 在此為「激增、繁榮」
@@ -51,7 +51,7 @@
 2549|pot|Let me make a pot of coffee.|我來煮一壺咖啡。|A2|food|let,make,coffee|a pot of ...|pot 在此為「壺」
 2550|cows|The cows are eating grass in the field.|牛在草地上吃草。|A1|travel|eat<eating,grass,field||
 2551|strengthened|This trip strengthened our friendship.|這趟旅行讓我們的友誼更深厚了。|B2|travel|trip,friendship||
-2552|whilst|She read a book whilst waiting for the train.|她等火車的時候在看書。|B2|travel|read,book,wait<waiting,train||whilst 為英式用法，同 while
+2552|whilst|She read a book whilst waiting for the train.|她等火車的時候在看書。|B2|travel|read,book,wait<waiting,train||whilst 為英式用法，同 while；2026-10-09 第一輪風險複審保留；語域：英式
 2553|constraints|We're working under time constraints.|我們的時間很緊迫。|C1|work|work<working,time|time constraints|
 2554|fold|Can you help me fold the laundry?|你可以幫我摺衣服嗎？|A2|daily|help||
 2555|bin|Please throw it in the bin.|請把它丟進垃圾桶。|A2|daily|please,throw||
@@ -69,7 +69,7 @@
 2567|strict|My parents were very strict.|我爸媽以前很嚴格。|B1|daily|parent<parents||
 2568|concrete|Can you give me a concrete example?|你可以給我一個具體的例子嗎？|B2|work|give,example||
 2569|shells|We collected shells on the beach.|我們在海灘上撿貝殼。|A2|travel|collect<collected,beach||shell 在此為「貝殼」
-2570|Damn|Damn, I left my keys at home!|糟了，我把鑰匙忘在家裡了！|B1|daily|leave<left,key<keys,home||Damn 為輕微粗話，表懊惱
+2570|Damn|Damn, I left my keys at home!|糟了，我把鑰匙忘在家裡了！|B1|daily|leave<left,key<keys,home||Damn 為輕微粗話，表懊惱；2026-10-09 第一輪風險複審保留；語域：非正式（Informal），輕微粗話
 2571|distinct|There's a distinct smell of smoke in here.|這裡有一股明顯的煙味。|B2|daily|smell,smoke,here||
 2572|humor|He has a great sense of humor.|他很有幽默感。|B1|social|great,sense|sense of humor|
 2573|limitations|Everyone has their limitations.|每個人都有自己的極限。|B2|social|everyone||
@@ -78,7 +78,7 @@
 2576|wise|That was a wise decision.|那是個明智的決定。|B1|social|decision||
 2577|neglected|The garden has been neglected for years.|這座花園已經荒廢好幾年了。|B2|daily|garden,year<years||
 2578|composed|The team is composed of five people.|這個團隊由五個人組成。|B2|work|team,five,people|be composed of ...|
-2579|jail|He spent a night in jail.|他在牢裡待了一晚。|B1|news|spend<spent,night||jail 在此為「拘留所、監獄」
+2579|jail|He spent a night in jail.|他在牢裡待了一晚。|B1|news|spend<spent,night||jail 在此為「拘留所、監獄」；2026-10-09 第一輪風險複審保留；主題：司法
 2580|shelter|We took shelter from the rain under a tree.|我們在樹下躲雨。|B1|travel|take<took,rain,tree|take shelter|shelter 在此為「遮蔽處」
 2581|mere|It costs a mere ten dollars.|它只要十塊錢而已。|B2|shopping|cost<costs,ten,dollar<dollars||
 2582|carbon|We want to reduce our carbon footprint.|我們想減少碳足跡。|B2|news|want,reduce|carbon footprint|

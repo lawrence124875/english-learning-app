@@ -21,7 +21,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1120	1119	physical	physical	This job requires a lot of physical work.	這份工作需要大量體力活。	B1	work	ngsl_2809_1119	ngsl_2809_0230|ngsl_2809_0401|ngsl_2809_0122|ngsl_2809_0066		
 1121	1120	apart	apart	The two towns are about ten miles apart.	這兩個小鎮相距大約十英里。	B1	travel	ngsl_2809_1120	ngsl_spoken_720_0070|ngsl_2809_0363|ngsl_spoken_720_0209|ngsl_2809_0776		apart 在此為「相距」
 1122	1121	suit	suit	He wore a dark suit to the interview.	他穿深色西裝去面試。	A2	work	ngsl_2809_1121	ngsl_2809_0525|ngsl_2809_0922|ngsl_2809_0783		
-1123	1122	federal	federal	The post office is closed on federal holidays.	郵局在聯邦假日不營業。	B2	official	ngsl_2809_1122	ngsl_2809_0927|ngsl_2809_0342|ngsl_2809_0238|ngsl_2809_0741	federal holiday	美國用語
+1123	1122	federal	Federal	Federal holidays are observed in the United States.	美國會在聯邦假日放假。	B2	official	ngsl_2809_1122	ngsl_2809_0741|ngsl_2809_1097		美國制度用語；2026-10-09 第一輪風險複審修改
 1124	1123	reveal	revealed	She finally revealed her secret.	她終於說出了她的秘密。	B1	social	ngsl_2809_1123	ngsl_2809_0498|ngsl_2809_1275		
 1125	1124	percentage	percentage	What percentage of the class passed the test?	班上有多少比例的人考試及格？	B1	study	ngsl_2809_1124	ngsl_2809_0361|ngsl_2809_0415|ngsl_2809_0331		
 1126	1125	peace	peace	I just want some peace and quiet.	我只想要清靜一下。	B1	daily	ngsl_2809_1125	ngsl_2809_0063|ngsl_2809_0075|ngsl_2809_1312	peace and quiet	
@@ -96,6 +96,6 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1195	1194	quick	quick	I have a quick question.	我有個小問題想問一下。	A1	work	ngsl_2809_1194	ngsl_2809_0180		
 1196	1195	cook	cook	My dad loves to cook on weekends.	我爸週末很愛下廚。	A1	food	ngsl_2809_1195	ngsl_2809_1631|ngsl_2809_0228|ngsl_2809_0933		
 1197	1196	spread	Spread	Spread the butter evenly on the bread.	把奶油均勻抹在麵包上。	B1	food	ngsl_2809_1196	ngsl_2809_2261		spread 在此為「塗抹」
-1198	1197	nuclear	nuclear	There's a nuclear power plant near the town.	小鎮附近有一座核電廠。	B2	news	ngsl_2809_1197	ngsl_2809_0330|ngsl_2809_0670|ngsl_2809_0426|ngsl_2809_0363	nuclear power plant	
+1198	1197	nuclear	nuclear	There's a nuclear power plant near the town.	小鎮附近有一座核電廠。	B2	news	ngsl_2809_1197	ngsl_2809_0330|ngsl_2809_0670|ngsl_2809_0426|ngsl_2809_0363	nuclear power plant	2026-10-09 第一輪風險複審保留；主題：基礎設施
 1199	1198	scale	scale	On a scale of one to ten, how was the movie?	如果滿分十分，這部電影你給幾分？	B1	social	ngsl_2809_1198	ngsl_2809_0034|ngsl_spoken_720_0209|ngsl_2809_0761	on a scale of ... to ...	scale 在此為「評分等級」
 1200	1199	driver	driver	The bus driver was very friendly.	公車司機很友善。	A1	travel	ngsl_2809_1199	ngsl_2809_0809|ngsl_2809_1537		

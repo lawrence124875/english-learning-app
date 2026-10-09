@@ -33,7 +33,7 @@
 431|activities|What activities do you enjoy?|你喜歡做哪些活動？|A2|social|enjoy||activities 為複數
 432|film|Have you seen this film?|你看過這部電影嗎？|A2|daily|see<seen||
 433|morning|I go jogging every morning.|我每天早上去慢跑。|A2|health|go,every|go jogging|
-434|war|We watched a movie about the war.|我們看了一部關於那場戰爭的電影。|B1|daily|watch<watched,movie||
+434|war|We watched a movie about the war.|我們看了一部關於那場戰爭的電影。|B1|daily|watch<watched,movie||2026-10-09 第一輪風險複審保留；主題：影視（戰爭題材）
 435|account|I'd like to open a bank account.|我想開一個銀行帳戶。|A2|official|like,open,bank|open an account|
 436|shop|The shop closes at nine.|那家店九點關門。|A1|shopping|close<closes,nine||
 437|major|There were no major problems.|沒有出什麼大問題。|B1|work|problem<problems||major 在此為「重大的」
@@ -80,7 +80,7 @@
 478|phone|My phone battery is almost dead.|我的手機快沒電了。|A2|phone|almost,dead||battery 不在詞表
 479|themselves|The kids made breakfast themselves.|孩子們自己做了早餐。|A2|food|kid<kids,make<made,breakfast||
 480|draw|My daughter loves to draw.|我女兒很愛畫畫。|A1|daily|daughter,love<loves||
-481|white|Red or white wine?|紅酒還是白酒？|A1|food|red,wine||
+481|white|Red or white wine?|紅酒還是白酒？|A1|food|red,wine||2026-10-09 第一輪風險複審保留；主題：酒類
 482|date|We need to set a date for the meeting.|我們得定個開會日期。|B1|work|need,set|set a date|
 483|practice|I practice the piano every day.|我每天練鋼琴。|A2|daily|piano,every,day||
 484|model|Which model is the newest?|哪個型號是最新的？|B1|shopping|new<newest||model 在此為「型號」

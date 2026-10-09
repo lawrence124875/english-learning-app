@@ -65,7 +65,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1264	1263	connect	connect	I can't connect to the internet.	我連不上網路。	A2	daily	ngsl_2809_1263		connect to ...	
 1265	1264	cultural	cultural	There are many cultural differences between our countries.	我們兩國之間有很多文化差異。	B1	travel	ngsl_2809_1264	ngsl_2809_0098|ngsl_2809_0472|ngsl_2809_0142		
 1266	1265	arrange	arrange	I'll arrange a meeting for next week.	我會安排下週開個會。	B1	work	ngsl_2809_1265	ngsl_2809_0150|ngsl_2809_0156		
-1267	1266	scheme	scheme	The city started a new recycling scheme.	市政府推出了新的資源回收計畫。	B2	news	ngsl_2809_1266	ngsl_2809_0268|ngsl_2809_0135|ngsl_2809_0078		英式用法
+1267	1266	scheme	scheme	The city started a new recycling scheme.	市政府推出了新的資源回收計畫。	B2	news	ngsl_2809_1266	ngsl_2809_0268|ngsl_2809_0135|ngsl_2809_0078		英式用法；2026-10-09 第一輪風險複審保留；語域：英式
 1268	1267	payment	payment	We accept payment by credit card.	我們接受信用卡付款。	B1	shopping	ngsl_2809_1267	ngsl_2809_0560|ngsl_2809_0943|ngsl_2809_0780	credit card	
 1269	1268	unfortunately	Unfortunately	Unfortunately, the store is closed today.	很可惜，店今天沒開。	A2	shopping	ngsl_2809_1268	ngsl_2809_0616|ngsl_2809_0238|ngsl_2809_0245		
 1270	1269	brief	brief	Let's keep the meeting brief.	會議就簡短一點吧。	B1	work	ngsl_2809_1269	ngsl_2809_0176		

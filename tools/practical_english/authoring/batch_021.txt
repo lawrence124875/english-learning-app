@@ -38,7 +38,7 @@
 2036|retail|She has worked in retail for ten years.|她在零售業工作十年了。|B2|work|work<worked,ten,year<years|work in retail|
 2037|wire|Be careful, that wire is loose.|小心，那條電線鬆了。|B1|daily|careful,loose||
 2038|unlikely|It's unlikely to rain today.|今天不太可能下雨。|B1|daily|rain,today||
-2039|gay|My best friend is gay.|我最好的朋友是同志。|B1|social|friend||
+2039|gay|My best friend is gay.|我最好的朋友是同志。|B1|social|friend||2026-10-09 第一輪風險複審保留；主題：多元認同
 2040|publication|The publication date has been moved to May.|出版日期已經延到五月了。|B2|work|date,move<moved,May||
 2041|slight|I have a slight fever.|我有點發燒。|B1|health|||
 2042|unknown|The cause of the fire is still unknown.|火災的原因目前仍不明。|B1|news|cause,fire,still||

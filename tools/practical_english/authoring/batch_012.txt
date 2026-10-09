@@ -21,7 +21,7 @@
 1119|physical|This job requires a lot of physical work.|這份工作需要大量體力活。|B1|work|job,require<requires,lot,work||
 1120|apart|The two towns are about ten miles apart.|這兩個小鎮相距大約十英里。|B1|travel|two,town<towns,ten,mile<miles||apart 在此為「相距」
 1121|suit|He wore a dark suit to the interview.|他穿深色西裝去面試。|A2|work|wear<wore,dark,interview||
-1122|federal|The post office is closed on federal holidays.|郵局在聯邦假日不營業。|B2|official|post,office,close<closed,holiday<holidays|federal holiday|美國用語
+1122|Federal|Federal holidays are observed in the United States.|美國會在聯邦假日放假。|B2|official|holiday<holidays,observe<observed||美國制度用語；2026-10-09 第一輪風險複審修改
 1123|revealed|She finally revealed her secret.|她終於說出了她的秘密。|B1|social|finally,secret||
 1124|percentage|What percentage of the class passed the test?|班上有多少比例的人考試及格？|B1|study|class,pass<passed,test||
 1125|peace|I just want some peace and quiet.|我只想要清靜一下。|B1|daily|just,want,quiet|peace and quiet|
@@ -96,6 +96,6 @@
 1194|quick|I have a quick question.|我有個小問題想問一下。|A1|work|question||
 1195|cook|My dad loves to cook on weekends.|我爸週末很愛下廚。|A1|food|dad,love<loves,weekend<weekends||
 1196|Spread|Spread the butter evenly on the bread.|把奶油均勻抹在麵包上。|B1|food|bread||spread 在此為「塗抹」
-1197|nuclear|There's a nuclear power plant near the town.|小鎮附近有一座核電廠。|B2|news|power,plant,near,town|nuclear power plant|
+1197|nuclear|There's a nuclear power plant near the town.|小鎮附近有一座核電廠。|B2|news|power,plant,near,town|nuclear power plant|2026-10-09 第一輪風險複審保留；主題：基礎設施
 1198|scale|On a scale of one to ten, how was the movie?|如果滿分十分，這部電影你給幾分？|B1|social|one,ten,movie|on a scale of ... to ...|scale 在此為「評分等級」
 1199|driver|The bus driver was very friendly.|公車司機很友善。|A1|travel|bus,friendly||

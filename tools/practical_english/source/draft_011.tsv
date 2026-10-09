@@ -61,13 +61,13 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1060	1059	chair	chair	Please pull up a chair.	請拉張椅子過來坐。	A2	social	ngsl_2809_1059	ngsl_2809_0470|ngsl_2809_0798	pull up a chair	
 1061	1060	expensive	expensive	That's too expensive for me.	那對我來說太貴了。	A1	shopping	ngsl_2809_1060	ngsl_2809_0117		
 1062	1061	sample	sample	Can I try a sample?	我可以試吃一下嗎？	A2	food	ngsl_2809_1061	ngsl_2809_0124		sample 在此為「試吃品」
-1063	1062	sex	sex	Do you know the baby's sex yet?	你們知道寶寶的性別了嗎？	B1	health	ngsl_2809_1062	ngsl_2809_0040|ngsl_2809_0870|ngsl_2809_0310		sex 在此為「性別」
+1063	1062	sex	sex	The form asks for the baby's sex.	這份表格會詢問寶寶的生理性別。	B1	health	ngsl_2809_1062	ngsl_2809_0256|ngsl_2809_0870		sex 在此為「生理性別」；2026-10-09 第一輪風險複審修改
 1064	1063	deliver	deliver	Do you deliver to this area?	你們有外送到這一區嗎？	A2	food	ngsl_2809_1063	ngsl_2809_0203		deliver 在此為「外送、配送」
 1065	1064	video	video	He sent me a funny video.	他傳了一支好笑的影片給我。	A1	phone	ngsl_2809_1064	ngsl_2809_0322|ngsl_2809_1236		
 1066	1065	connection	connection	The internet connection here is slow.	這裡的網路連線很慢。	A2	daily	ngsl_2809_1065	ngsl_2809_0097|ngsl_2809_1117		
 1067	1066	primary	primary	Safety is our primary concern.	安全是我們最主要的考量。	B2	work	ngsl_2809_1066	ngsl_2809_1310|ngsl_2809_0302		
 1068	1067	weather	weather	What's the weather like tomorrow?	明天天氣怎麼樣？	A1	daily	ngsl_2809_1067	ngsl_2809_0725		
-1069	1068	collect	collect	I'll collect you from the airport.	我會去機場接你。	B1	travel	ngsl_2809_1068			collect 在此為英式用法「接人」，NGSL 中文為「收集」
+1069	1068	collect	collect	I'll collect you from the airport.	我會去機場接你。	B1	travel	ngsl_2809_1068			collect 在此為英式用法「接人」，NGSL 中文為「收集」；2026-10-09 第一輪風險複審保留；語域：英式
 1070	1069	inform	inform	Please inform us of any changes.	如有任何變動請通知我們。	B2	official	ngsl_2809_1069	ngsl_2809_0470|ngsl_2809_0112	inform someone of	
 1071	1070	principle	principle	It's a matter of principle.	這是原則問題。	B2	social	ngsl_2809_1070	ngsl_2809_0339	a matter of principle	
 1072	1071	straight	straight	Go straight and turn left.	直走然後左轉。	A1	travel	ngsl_2809_1071	ngsl_2809_0030|ngsl_2809_0193|ngsl_2809_1219	turn left	straight 在此為副詞「直直地」

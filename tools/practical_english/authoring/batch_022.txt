@@ -19,7 +19,7 @@
 2117|pace|Walk at your own pace.|按照你自己的步調走就好。|B1|health|walk,own|at your own pace|
 2118|heavily|It's raining heavily outside.|外面雨下得很大。|B1|daily|rain<raining,outside||heavily 在此為「（雨）很大地」
 2119|devotes|She devotes her weekends to her kids.|她把週末都奉獻給孩子。|B2|daily|weekend<weekends,kid<kids|devote ... to ...|
-2120|terrorist|The airport increased security after the terrorist threat.|在恐怖攻擊威脅之後，機場加強了安檢。|B2|news|increase<increased,security,threat||
+2120|terrorist|The airport increased security after the terrorist threat.|在恐怖攻擊威脅之後，機場加強了安檢。|B2|news|increase<increased,security,threat||2026-10-09 第一輪風險複審保留；主題：新聞／安檢
 2121|justify|How can you justify spending so much?|你怎麼能說花這麼多錢是合理的？|B2|shopping|spend<spending,much||
 2122|vital|Water is vital on a hot day.|大熱天裡水非常重要。|B2|health|water,hot,day||
 2123|fascinated|Old maps have always fascinated me.|我一直對古地圖很著迷。|B2|daily|old,map<maps,always||

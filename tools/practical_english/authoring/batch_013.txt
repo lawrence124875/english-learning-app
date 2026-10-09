@@ -65,7 +65,7 @@
 1263|connect|I can't connect to the internet.|我連不上網路。|A2|daily||connect to ...|
 1264|cultural|There are many cultural differences between our countries.|我們兩國之間有很多文化差異。|B1|travel|many,difference<differences,country<countries||
 1265|arrange|I'll arrange a meeting for next week.|我會安排下週開個會。|B1|work|next,week||
-1266|scheme|The city started a new recycling scheme.|市政府推出了新的資源回收計畫。|B2|news|city,start<started,new||英式用法
+1266|scheme|The city started a new recycling scheme.|市政府推出了新的資源回收計畫。|B2|news|city,start<started,new||英式用法；2026-10-09 第一輪風險複審保留；語域：英式
 1267|payment|We accept payment by credit card.|我們接受信用卡付款。|B1|shopping|accept,credit,card|credit card|
 1268|Unfortunately|Unfortunately, the store is closed today.|很可惜，店今天沒開。|A2|shopping|store,close<closed,today||
 1269|brief|Let's keep the meeting brief.|會議就簡短一點吧。|B1|work|keep||

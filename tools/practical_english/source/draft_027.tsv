@@ -11,7 +11,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2610	2609	regardless	regardless	We'll go regardless of the weather.	不管天氣怎樣，我們都會去。	B1	travel	ngsl_2809_2609	ngsl_2809_0030|ngsl_2809_1067	regardless of ...	
 2611	2610	scan	scan	Please scan the QR code to order.	請掃描 QR code 點餐。	A2	food	ngsl_2809_2610	ngsl_2809_0470|ngsl_2809_1345|ngsl_2809_0214		
 2612	2611	bunch	bunch	He bought her a bunch of flowers.	他買了一束花送她。	A2	social	ngsl_2809_2611	ngsl_2809_0241|ngsl_2809_1300	a bunch of ...	
-2613	2612	racial	racial	The school welcomes students of all racial backgrounds.	這所學校歡迎各種族背景的學生。	B2	study	ngsl_2809_2612	ngsl_2809_0145|ngsl_2809_0988|ngsl_2809_0247|ngsl_2809_1222		
+2613	2612	racial	racial	The school welcomes students of all racial backgrounds.	這所學校歡迎各種族背景的學生。	B2	study	ngsl_2809_2612	ngsl_2809_0145|ngsl_2809_0988|ngsl_2809_0247|ngsl_2809_1222		2026-10-09 第一輪風險複審保留；主題：包容性教育
 2614	2613	greet	greeted	She greeted us at the door with a smile.	她在門口笑著迎接我們。	B1	social	ngsl_2809_2613	ngsl_2809_0489|ngsl_2809_0989	with a smile	greet 在此為「迎接」
 2615	2614	hopefully	Hopefully	Hopefully it won't rain tomorrow.	希望明天不會下雨。	A2	daily	ngsl_2809_2614	ngsl_2809_1231|ngsl_2809_0725		hopefully 在此為句首副詞「但願」
 2616	2615	sanction	sanctions	The new sanctions will affect oil prices.	新的制裁措施會影響油價。	B2	news	ngsl_2809_2615	ngsl_2809_0078|ngsl_2809_0638|ngsl_2809_0897|ngsl_2809_0295		
@@ -72,7 +72,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2671	2670	ocean	ocean	Our room has an ocean view.	我們的房間看得到海景。	A2	travel	ngsl_2809_2670	ngsl_2809_0253|ngsl_2809_0292	ocean view	
 2672	2671	quietly	quietly	Please speak quietly in the library.	圖書館裡請小聲說話。	A2	study	ngsl_2809_2671	ngsl_2809_0470|ngsl_2809_0283|ngsl_2809_1161		
 2673	2672	castle	castle	We visited an old castle on the hill.	我們參觀了山丘上的一座古堡。	A2	travel	ngsl_2809_2672	ngsl_2809_0332|ngsl_2809_0143|ngsl_2809_1669		
-2674	2673	veteran	veteran	My grandfather is a war veteran.	我爺爺是退伍軍人。	B1	social	ngsl_2809_2673	ngsl_2809_0434		
+2674	2673	veteran	veteran	My grandfather is a war veteran.	我爺爺是退伍軍人。	B1	social	ngsl_2809_2673	ngsl_2809_0434		2026-10-09 第一輪風險複審保留；主題：退伍軍人
 2675	2674	reflection	reflection	This trip gave me time for reflection.	這趟旅行讓我有時間反思。	B2	travel	ngsl_2809_2674	ngsl_2809_0824|ngsl_2809_0076|ngsl_2809_0048		
 2676	2675	nerve	nerves	Loud noise really gets on my nerves.	吵雜的聲音真的讓我很煩。	B1	daily	ngsl_2809_2675	ngsl_2809_2248|ngsl_2809_1439|ngsl_2809_0103|ngsl_2809_0042	get on one's nerves	nerve 在此用於片語 get on one's nerves「惹人心煩」，非字面「神經」
 2677	2676	determination	determination	Her determination helped her pass the exam.	她的決心幫她通過了考試。	B1	study	ngsl_2809_2676	ngsl_2809_0132|ngsl_2809_0415|ngsl_2809_2243		

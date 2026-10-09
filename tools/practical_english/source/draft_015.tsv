@@ -15,7 +15,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1414	1413	tonight	tonight	What are you doing tonight?	你今晚要做什麼？	A1	social	ngsl_2809_1413	ngsl_2809_0020		
 1415	1414	fashion	fashion	She works in the fashion industry.	她在時尚業工作。	B1	work	ngsl_2809_1414	ngsl_2809_0066|ngsl_2809_0529		
 1416	1415	danger	danger	The doctor says he's out of danger.	醫生說他已經脫離險境了。	B1	health	ngsl_2809_1415	ngsl_2809_0762|ngsl_2809_0029	out of danger	
-1417	1416	bomb	bomb	I bought a bath bomb for my sister.	我買了一顆泡澡球給我妹妹。	B1	shopping	ngsl_2809_1416	ngsl_2809_0241|ngsl_2809_2293|ngsl_2809_0963	bath bomb	bomb 在此為 bath bomb「泡澡球」，避開暴力義
+1417	1416	bomb	bomb	I bought a bath bomb for my sister.	我買了一顆泡澡球給我妹妹。	B1	shopping	ngsl_2809_1416	ngsl_2809_0241|ngsl_2809_2293|ngsl_2809_0963	bath bomb	bomb 在此為 bath bomb「泡澡球」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：生活用品（bath bomb）
 1418	1417	army	army	My cousin joined the army last year.	我表哥去年從軍了。	B1	daily	ngsl_2809_1417	ngsl_2809_2360|ngsl_2809_0468|ngsl_2809_0100|ngsl_2809_0057		
 1419	1418	dangerous	dangerous	It's dangerous to cross the street here.	從這裡過馬路很危險。	A2	travel	ngsl_2809_1418	ngsl_2809_0974|ngsl_2809_0597|ngsl_2809_0097		
 1420	1419	decrease	decreased	The number of visitors decreased this year.	今年遊客人數減少了。	B1	news	ngsl_2809_1419	ngsl_2809_0126|ngsl_2809_1397|ngsl_2809_0057		
@@ -34,13 +34,13 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1433	1432	quote	quoted	She quoted a line from her favorite movie.	她引用了她最愛的電影裡的一句台詞。	B1	social	ngsl_2809_1432	ngsl_2809_0273|ngsl_2809_0999|ngsl_2809_0761		
 1434	1433	climb	climb	Let's climb to the top of the hill.	我們爬到山頂吧。	A2	travel	ngsl_2809_1433	ngsl_2809_0374|ngsl_2809_1669		
 1435	1434	basically	Basically	Basically, the job is done.	基本上，工作已經完成了。	B1	work	ngsl_2809_1434	ngsl_2809_0230|ngsl_2809_0020		
-1436	1435	violence	violence	This movie has too much violence for kids.	這部電影的暴力內容太多，不適合小孩看。	B1	social	ngsl_2809_1435	ngsl_2809_0761|ngsl_2809_0090|ngsl_2809_0528		
+1436	1435	violence	violence	This movie has too much violence for kids.	這部電影的暴力內容太多，不適合小孩看。	B1	social	ngsl_2809_1435	ngsl_2809_0761|ngsl_2809_0090|ngsl_2809_0528		2026-10-09 第一輪風險複審保留；主題：媒體評價
 1437	1436	minister	minister	The minister will visit the school tomorrow.	部長明天會來學校參訪。	B2	news	ngsl_2809_1436	ngsl_2809_0332|ngsl_2809_0145|ngsl_2809_0725		
 1438	1437	mainly	mainly	Our customers are mainly young people.	我們的客人主要是年輕人。	B1	work	ngsl_2809_1437	ngsl_2809_0486|ngsl_2809_0237|ngsl_2809_0056		
 1439	1438	mouth	mouth	Don't talk with your mouth full.	嘴巴裡有東西時不要說話。	A2	food	ngsl_2809_1438	ngsl_2809_0136|ngsl_2809_0409		
 1440	1439	noise	noise	The noise from the street kept me awake.	街上的噪音吵得我睡不著。	B1	daily	ngsl_2809_1439	ngsl_2809_0597|ngsl_2809_0176		
 1441	1440	manner	manner	She spoke in a friendly manner.	她說話的態度很友善。	B2	social	ngsl_2809_1440	ngsl_2809_0283|ngsl_2809_1537		
-1442	1441	gun	guns	The kids are having fun with water guns.	孩子們玩水槍玩得很開心。	A2	daily	ngsl_2809_1441	ngsl_2809_0528|ngsl_2809_0007|ngsl_2809_0901|ngsl_2809_0321	water gun	gun 在此為「水槍」，避開暴力義
+1442	1441	gun	guns	The kids are having fun with water guns.	孩子們玩水槍玩得很開心。	A2	daily	ngsl_2809_1441	ngsl_2809_0528|ngsl_2809_0007|ngsl_2809_0901|ngsl_2809_0321	water gun	gun 在此為「水槍」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：玩具（水槍）
 1443	1442	square	square	Let's meet in the main square.	我們在主廣場碰面吧。	A2	travel	ngsl_2809_1442	ngsl_2809_0134|ngsl_2809_0452		
 1444	1443	occasion	occasion	This dress is perfect for any occasion.	這件洋裝適合任何場合。	B1	shopping	ngsl_2809_1443	ngsl_2809_0898|ngsl_2809_1110		
 1445	1444	familiar	familiar	Your face looks familiar.	你看起來很面熟。	B1	social	ngsl_2809_1444	ngsl_2809_0248|ngsl_2809_0074		
@@ -60,7 +60,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1459	1458	remind	Remind	Remind me to call my mom.	提醒我打電話給我媽。	A2	daily	ngsl_2809_1458	ngsl_2809_0104|ngsl_2809_2130		
 1460	1459	arrangement	arrangements	We made arrangements to meet at noon.	我們約好中午見面。	B1	work	ngsl_2809_1459	ngsl_2809_0047|ngsl_2809_0134	make arrangements	
 1461	1460	skin	skin	This cream is good for dry skin.	這款乳霜很適合乾性肌膚。	B1	health	ngsl_2809_1460	ngsl_2809_2387|ngsl_2809_0055|ngsl_2809_1134		
-1462	1461	prison	prison	The old prison is now a museum.	那座舊監獄現在是博物館了。	B1	travel	ngsl_2809_1461	ngsl_2809_0143|ngsl_2809_0069|ngsl_2809_1396		
+1462	1461	prison	prison	The old prison is now a museum.	那座舊監獄現在是博物館了。	B1	travel	ngsl_2809_1461	ngsl_2809_0143|ngsl_2809_0069|ngsl_2809_1396		2026-10-09 第一輪風險複審保留；主題：建築
 1463	1462	switch	switch	Can we switch seats?	我們可以換座位嗎？	A2	travel	ngsl_2809_1462	ngsl_2809_0851		
 1464	1463	acquire	acquired	I've acquired a taste for spicy food.	我漸漸愛上吃辣了。	C1	food	ngsl_2809_1463	ngsl_2809_1412|ngsl_2809_0366	acquire a taste for ...	acquire 在此為「逐漸養成（喜好）」
 1465	1464	corporate	corporate	He left his corporate job to open a bakery.	他辭掉了公司的工作，開了一家麵包店。	B2	work	ngsl_2809_1464	ngsl_2809_0125|ngsl_2809_0230|ngsl_2809_0213		

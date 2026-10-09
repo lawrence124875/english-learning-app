@@ -38,7 +38,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2037	2036	retail	retail	She has worked in retail for ten years.	她在零售業工作十年了。	B2	work	ngsl_2809_2036	ngsl_2809_0066|ngsl_spoken_720_0209|ngsl_2809_0057	work in retail	
 2038	2037	wire	wire	Be careful, that wire is loose.	小心，那條電線鬆了。	B1	daily	ngsl_2809_2037	ngsl_2809_1636|ngsl_2809_2184		
 2039	2038	unlikely	unlikely	It's unlikely to rain today.	今天不太可能下雨。	B1	daily	ngsl_2809_2038	ngsl_2809_1231|ngsl_2809_0245		
-2040	2039	gay	gay	My best friend is gay.	我最好的朋友是同志。	B1	social	ngsl_2809_2039	ngsl_2809_0207		
+2040	2039	gay	gay	My best friend is gay.	我最好的朋友是同志。	B1	social	ngsl_2809_2039	ngsl_2809_0207		2026-10-09 第一輪風險複審保留；主題：多元認同
 2041	2040	publication	publication	The publication date has been moved to May.	出版日期已經延到五月了。	B2	work	ngsl_2809_2040	ngsl_2809_0482|ngsl_2809_0199|ngsl_2809_0096		
 2042	2041	slight	slight	I have a slight fever.	我有點發燒。	B1	health	ngsl_2809_2041			
 2043	2042	unknown	unknown	The cause of the fire is still unknown.	火災的原因目前仍不明。	B1	news	ngsl_2809_2042	ngsl_2809_0318|ngsl_2809_0612|ngsl_2809_0118		

@@ -61,7 +61,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2360	2359	historian	historian	The historian gave a talk at the museum.	那位歷史學家在博物館演講。	B2	study	ngsl_2809_2359	ngsl_2809_0076|ngsl_2809_0136|ngsl_2809_1396	give a talk	
 2361	2360	cousin	cousin	My cousin is visiting next week.	我表妹下週要來玩。	A2	social	ngsl_2809_2360	ngsl_2809_0332|ngsl_2809_0150|ngsl_2809_0156		cousin 泛指堂／表兄弟姊妹
 2362	2361	visual	visual	I'm a visual learner.	我是視覺型學習者。	B2	study	ngsl_2809_2361			
-2363	2362	stupid	stupid	I made a stupid mistake.	我犯了一個很蠢的錯。	A2	daily	ngsl_2809_2362	ngsl_2809_0047|ngsl_2809_1151	make a mistake	
+2363	2362	stupid	stupid	It was a stupid idea to go out in the rain.	冒雨出門真是個蠢主意。	A2	daily	ngsl_2809_2362	ngsl_2809_0250|ngsl_2809_1231		stupid 用來檢討事情，不針對人；2026-10-09 第一輪風險複審修改
 2364	2363	keen	keen	She's keen on learning Japanese.	她很熱衷學日文。	B2	study	ngsl_2809_2363	ngsl_2809_0260	be keen on ...	
 2365	2364	ethnic	ethnic	This city has many ethnic restaurants.	這個城市有很多異國料理餐廳。	B2	food	ngsl_2809_2364	ngsl_2809_0268|ngsl_2809_0098|ngsl_2809_0918		ethnic 在此為「具民族特色的」
 2366	2365	twin	twin	Lisa has a twin brother.	Lisa 有一個雙胞胎兄弟。	A2	social	ngsl_2809_2365	ngsl_2809_0820		

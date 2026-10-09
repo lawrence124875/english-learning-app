@@ -23,7 +23,7 @@
 2421|evolution|We learned about evolution in biology class.|我們在生物課學到了演化。|B2|study|learn<learned,class||evolution 在此為「演化」
 2422|awareness|The event raises awareness of mental health.|這個活動提升了大眾對心理健康的意識。|B2|news|event,raise<raises,mental,health|raise awareness|
 2423|violent|This movie is too violent for kids.|這部電影對小孩來說太暴力了。|B1|daily|movie,kid<kids||
-2424|slave|I'm not your slave, so do it yourself!|我又不是你的奴隸，你自己做！|B1|social|||slave 在此為口語抱怨用法
+2424|slave|The history book describes the life of a slave in ancient Rome.|這本歷史書描述了古羅馬一名奴隸的生活。|B1|social|history,book,describe<describes,life,ancient||歷史描述；2026-10-09 第一輪風險複審修改
 2425|wealthy|They live in a wealthy neighborhood.|他們住在一個富裕的社區。|B2|daily|live,neighborhood||
 2426|architecture|I love the architecture in this old town.|我很喜歡這個老城區的建築。|B1|travel|love,old,town||
 2427|acceptable|Is it acceptable to wear jeans to work?|穿牛仔褲上班可以嗎？|B1|work|wear,work||

@@ -15,7 +15,7 @@
 1413|tonight|What are you doing tonight?|你今晚要做什麼？|A1|social|do<doing||
 1414|fashion|She works in the fashion industry.|她在時尚業工作。|B1|work|work<works,industry||
 1415|danger|The doctor says he's out of danger.|醫生說他已經脫離險境了。|B1|health|doctor,say<says|out of danger|
-1416|bomb|I bought a bath bomb for my sister.|我買了一顆泡澡球給我妹妹。|B1|shopping|buy<bought,bath,sister|bath bomb|bomb 在此為 bath bomb「泡澡球」，避開暴力義
+1416|bomb|I bought a bath bomb for my sister.|我買了一顆泡澡球給我妹妹。|B1|shopping|buy<bought,bath,sister|bath bomb|bomb 在此為 bath bomb「泡澡球」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：生活用品（bath bomb）
 1417|army|My cousin joined the army last year.|我表哥去年從軍了。|B1|daily|cousin,join<joined,last,year||
 1418|dangerous|It's dangerous to cross the street here.|從這裡過馬路很危險。|A2|travel|cross,street,here||
 1419|decreased|The number of visitors decreased this year.|今年遊客人數減少了。|B1|news|number,visitor<visitors,year||
@@ -34,13 +34,13 @@
 1432|quoted|She quoted a line from her favorite movie.|她引用了她最愛的電影裡的一句台詞。|B1|social|line,favorite,movie||
 1433|climb|Let's climb to the top of the hill.|我們爬到山頂吧。|A2|travel|top,hill||
 1434|Basically|Basically, the job is done.|基本上，工作已經完成了。|B1|work|job,do<done||
-1435|violence|This movie has too much violence for kids.|這部電影的暴力內容太多，不適合小孩看。|B1|social|movie,much,kid<kids||
+1435|violence|This movie has too much violence for kids.|這部電影的暴力內容太多，不適合小孩看。|B1|social|movie,much,kid<kids||2026-10-09 第一輪風險複審保留；主題：媒體評價
 1436|minister|The minister will visit the school tomorrow.|部長明天會來學校參訪。|B2|news|visit,school,tomorrow||
 1437|mainly|Our customers are mainly young people.|我們的客人主要是年輕人。|B1|work|customer<customers,young,people||
 1438|mouth|Don't talk with your mouth full.|嘴巴裡有東西時不要說話。|A2|food|talk,full||
 1439|noise|The noise from the street kept me awake.|街上的噪音吵得我睡不著。|B1|daily|street,keep<kept||
 1440|manner|She spoke in a friendly manner.|她說話的態度很友善。|B2|social|speak<spoke,friendly||
-1441|guns|The kids are having fun with water guns.|孩子們玩水槍玩得很開心。|A2|daily|kid<kids,have<having,fun,water|water gun|gun 在此為「水槍」，避開暴力義
+1441|guns|The kids are having fun with water guns.|孩子們玩水槍玩得很開心。|A2|daily|kid<kids,have<having,fun,water|water gun|gun 在此為「水槍」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：玩具（水槍）
 1442|square|Let's meet in the main square.|我們在主廣場碰面吧。|A2|travel|meet,main||
 1443|occasion|This dress is perfect for any occasion.|這件洋裝適合任何場合。|B1|shopping|dress,perfect||
 1444|familiar|Your face looks familiar.|你看起來很面熟。|B1|social|face,look<looks||
@@ -60,7 +60,7 @@
 1458|Remind|Remind me to call my mom.|提醒我打電話給我媽。|A2|daily|call,mom||
 1459|arrangements|We made arrangements to meet at noon.|我們約好中午見面。|B1|work|make<made,meet|make arrangements|
 1460|skin|This cream is good for dry skin.|這款乳霜很適合乾性肌膚。|B1|health|cream,good,dry||
-1461|prison|The old prison is now a museum.|那座舊監獄現在是博物館了。|B1|travel|old,now,museum||
+1461|prison|The old prison is now a museum.|那座舊監獄現在是博物館了。|B1|travel|old,now,museum||2026-10-09 第一輪風險複審保留；主題：建築
 1462|switch|Can we switch seats?|我們可以換座位嗎？|A2|travel|seat<seats||
 1463|acquired|I've acquired a taste for spicy food.|我漸漸愛上吃辣了。|C1|food|taste,food|acquire a taste for ...|acquire 在此為「逐漸養成（喜好）」
 1464|corporate|He left his corporate job to open a bakery.|他辭掉了公司的工作，開了一家麵包店。|B2|work|leave<left,job,open||

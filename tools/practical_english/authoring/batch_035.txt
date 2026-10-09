@@ -11,11 +11,11 @@ phrase_list_506_0408|a question of|It's just a question of time.|這只是時間
 phrase_list_506_0409|for life|They became friends for life.|他們成了一輩子的朋友。|B1|social|become<became,friend<friends||
 phrase_list_506_0410|get away|I need to get away for a few days.|我需要出去走走幾天。|B1|travel|need,few,day<days||get away 在此為「離開；擺脫（日常）」
 phrase_list_506_0411|in the meantime|Dinner's almost ready. In the meantime, set the table.|晚餐快好了，你先擺一下餐具。|B1|food|dinner,almost,ready,set,table||
-phrase_list_506_0412|something of an|She's something of an expert on wine.|她算是個葡萄酒專家。|C1|food|expert,wine||句中為 something of an（母音前）
-phrase_list_506_0413|the odd|I have the odd glass of wine on weekends.|我週末偶爾會喝杯葡萄酒。|C1|food|glass,wine,weekend<weekends||
+phrase_list_506_0412|something of an|She's something of an expert on wine.|她算是個葡萄酒專家。|C1|food|expert,wine||句中為 something of an（母音前）；2026-10-09 第一輪風險複審保留；主題：酒類
+phrase_list_506_0413|the odd|I have the odd glass of wine on weekends.|我週末偶爾會喝杯葡萄酒。|C1|food|glass,wine,weekend<weekends||2026-10-09 第一輪風險複審保留；主題：酒類
 phrase_list_506_0414|little more than|The village is little more than a few houses.|那個村子不過就是幾間房子而已。|C1|travel|village,few,house<houses||
 phrase_list_506_0415|would you like|Would you like some help with that?|需要我幫你嗎？|A1|social|help||
-phrase_list_506_0416|in need|We collect clothes for families in need.|我們為有需要的家庭募集衣物。|B1|social|collect,clothes,family<families||
+phrase_list_506_0416|in need|We collect clothes for families in need.|我們為有需要的家庭募集衣物。|B1|social|collect,clothes,family<families||2026-10-09 第一輪風險複審保留；語域：一般
 phrase_list_506_0417|take for granted|Good health is something we often take for granted.|健康常常被我們視為理所當然。|B2|health|good,health,often||
 phrase_list_506_0418|in this respect|In this respect, the two phones are the same.|在這方面，兩支手機是一樣的。|C1|shopping|two,phone<phones,same||
 phrase_list_506_0419|provided that|You can borrow my car, provided that you drive carefully.|只要你小心開車，就可以借我的車。|B2|daily|borrow,car,drive,carefully||

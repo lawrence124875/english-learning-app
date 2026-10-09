@@ -92,7 +92,7 @@ phrase_list_506_0089|after all|Don't worry, it's only a game after all.|別擔�
 phrase_list_506_0090|in front of|I'll meet you in front of the station.|我在車站前面跟你碰面。|A2|travel|meet,station||
 phrase_list_506_0091|to do with|This has nothing to do with you.|這跟你無關。|B1|social|nothing||
 phrase_list_506_0092|go out|Do you want to go out for dinner?|你想出去吃晚餐嗎？|A1|food|want,dinner||
-phrase_list_506_0093|a great deal|She knows a great deal about wine.|她對葡萄酒懂得很多。|B2|food|know<knows,wine||
+phrase_list_506_0093|a great deal|She knows a great deal about wine.|她對葡萄酒懂得很多。|B2|food|know<knows,wine||2026-10-09 第一輪風險複審保留；主題：酒類
 phrase_list_506_0094|on the way|We can stop for gas on the way.|我們可以在路上停下來加油。|A2|travel|stop,gas||
 phrase_list_506_0095|as long as|You can borrow my car as long as you're careful.|只要你小心，就可以借我的車。|B1|daily|borrow,car,careful||
 phrase_list_506_0096|so far|How do you like the city so far?|到目前為止，你覺得這座城市怎麼樣？|A2|travel|like,city||

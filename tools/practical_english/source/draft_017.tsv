@@ -7,7 +7,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1606	1605	expectation	expectations	The hotel was beyond our expectations.	這家飯店超乎我們的預期。	B1	travel	ngsl_2809_1605	ngsl_2809_0758|ngsl_2809_0825	beyond expectations	
 1607	1606	employment	employment	She's looking for full-time employment.	她正在找全職工作。	B2	work	ngsl_2809_1606	ngsl_2809_0074|ngsl_2809_0409|ngsl_2809_0048	look for	
 1608	1607	celebrate	celebrate	Let's celebrate your birthday tonight.	我們今晚來幫你慶生吧。	A2	social	ngsl_2809_1607	ngsl_2809_0173|ngsl_2809_1413		
-1609	1608	sexual	sexual	The company has a clear policy on sexual harassment.	公司對性騷擾有明確的規定。	B2	work	ngsl_2809_1608	ngsl_2809_0106|ngsl_2809_0368|ngsl_2809_0398	sexual harassment	職場規範用語
+1609	1608	sexual	sexual	The company has a clear policy on sexual harassment.	公司對性騷擾有明確的規定。	B2	work	ngsl_2809_1608	ngsl_2809_0106|ngsl_2809_0368|ngsl_2809_0398	sexual harassment	職場規範用語；2026-10-09 第一輪風險複審保留；主題：職場規範
 1610	1609	shoulder	shoulder	My shoulder hurts after the gym.	上完健身房後我的肩膀好痛。	A2	health	ngsl_2809_1609	ngsl_2809_1420		
 1611	1610	breath	breath	Take a deep breath and relax.	深呼吸，放輕鬆。	A2	health	ngsl_2809_1610	ngsl_2809_0058|ngsl_2809_0839|ngsl_2809_1484	take a deep breath	
 1612	1611	increasingly	increasingly	It's increasingly hard to find a cheap apartment.	要找到便宜的公寓越來越難了。	B2	daily	ngsl_2809_1611	ngsl_2809_0297|ngsl_2809_0080|ngsl_2809_1094|ngsl_2809_2167		
@@ -45,7 +45,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1644	1643	terrible	terrible	The traffic was terrible this morning.	今天早上塞車塞得好嚴重。	A2	daily	ngsl_2809_1643	ngsl_2809_1224|ngsl_2809_0433		
 1645	1644	researcher	researcher	She works as a researcher at a hospital.	她在一家醫院當研究員。	B1	work	ngsl_2809_1644	ngsl_2809_0066|ngsl_2809_0781		
 1646	1645	ordinary	ordinary	It was just an ordinary day.	那只是平凡的一天。	B1	daily	ngsl_2809_1645	ngsl_2809_0063|ngsl_2809_0084		
-1647	1646	selection	selection	The shop has a good selection of wine.	這家店的葡萄酒選擇很多。	B1	shopping	ngsl_2809_1646	ngsl_2809_0436|ngsl_2809_0055|ngsl_2809_1388		
+1647	1646	selection	selection	The shop has a good selection of wine.	這家店的葡萄酒選擇很多。	B1	shopping	ngsl_2809_1646	ngsl_2809_0436|ngsl_2809_0055|ngsl_2809_1388		2026-10-09 第一輪風險複審保留；主題：酒類
 1648	1647	anywhere	anywhere	You can sit anywhere you like.	你想坐哪裡都可以。	A2	food	ngsl_2809_1647	ngsl_2809_0355|ngsl_2809_0044		
 1649	1648	mental	mental	Exercise is good for your mental health.	運動對心理健康很好。	B1	health	ngsl_2809_1648	ngsl_2809_0916|ngsl_2809_0055|ngsl_2809_0474	mental health	
 1650	1649	participant	participant	Each participant will get a free T-shirt.	每位參加者都會拿到一件免費 T 恤。	B1	social	ngsl_2809_1649	ngsl_2809_0042|ngsl_2809_0394	T-shirt	

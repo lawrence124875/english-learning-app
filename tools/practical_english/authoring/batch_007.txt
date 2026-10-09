@@ -17,7 +17,7 @@
 615|police|Call the police!|快報警！|A2|official|call|call the police|
 616|store|Is there a convenience store nearby?|附近有便利商店嗎？|A2|shopping|nearby|convenience store|
 617|poor|They help poor families in the area.|他們幫助這一區的貧困家庭。|B1|social|help,family<families,area||
-618|knowledge|She has a good knowledge of wine.|她對葡萄酒很有研究。|B2|food|good,wine||
+618|knowledge|She has a good knowledge of wine.|她對葡萄酒很有研究。|B2|food|good,wine||2026-10-09 第一輪風險複審保留；主題：酒類
 619|laugh|Don't make me laugh.|別逗我笑了。|A2|social|make||
 620|arm|I hurt my arm at the gym.|我在健身房弄傷了手臂。|A2|health|hurt||
 621|heart|Thank you from the bottom of my heart.|打從心底謝謝你。|B1|social|thank,bottom|from the bottom of my heart|

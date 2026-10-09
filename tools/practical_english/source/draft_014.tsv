@@ -55,7 +55,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1354	1353	active	active	My grandma is still very active.	我奶奶還是很活躍。	A2	health	ngsl_2809_1353	ngsl_2809_0118		
 1355	1354	conclude	concluded	We concluded that the plan wouldn't work.	我們的結論是這個計畫行不通。	B2	work	ngsl_2809_1354	ngsl_2809_0231|ngsl_2809_0066		
 1356	1355	religious	religious	It's a religious holiday here.	這天在當地是宗教節日。	B1	travel	ngsl_2809_1355	ngsl_2809_0741|ngsl_2809_0097		
-1357	1356	cancer	cancer	Smoking increases the risk of cancer.	吸菸會增加罹癌風險。	B1	health	ngsl_2809_1356	ngsl_2809_1229|ngsl_2809_0229|ngsl_2809_0544		
+1357	1356	cancer	cancer	Smoking increases the risk of cancer.	吸菸會增加罹癌風險。	B1	health	ngsl_2809_1356	ngsl_2809_1229|ngsl_2809_0229|ngsl_2809_0544		2026-10-09 第一輪風險複審保留；主題：衛教常識
 1358	1357	convince	convinced	She convinced me to come.	她說服我來了。	B1	social	ngsl_2809_1357	ngsl_2809_0064	convince someone to ...	
 1359	1358	vary	vary	Prices vary from shop to shop.	每家店的價格都不一樣。	B1	shopping	ngsl_2809_1358	ngsl_2809_0295|ngsl_2809_0436		
 1360	1359	environmental	environmental	Plastic bags cause serious environmental problems.	塑膠袋造成嚴重的環境問題。	B1	news	ngsl_2809_1359	ngsl_2809_1849|ngsl_2809_1251|ngsl_2809_0318|ngsl_2809_0795|ngsl_2809_0119		
@@ -74,7 +74,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1373	1372	opposite	opposite	They have opposite opinions on this.	他們對這件事的意見完全相反。	B1	social	ngsl_2809_1372	ngsl_2809_0655		
 1374	1373	stone	stone	The old bridge is made of stone.	那座舊橋是用石頭蓋的。	A2	travel	ngsl_2809_1373	ngsl_2809_0143|ngsl_2809_1545	be made of	
 1375	1374	sum	sum	We paid a large sum of money for the house.	我們買這間房子花了一大筆錢。	B2	daily	ngsl_2809_1374	ngsl_2809_0219|ngsl_2809_0209|ngsl_2809_0200|ngsl_2809_0164	a sum of money	sum 在此為「金額」
-1376	1375	murder	murder	I love reading murder mysteries.	我很愛看推理謀殺小說。	B1	daily	ngsl_2809_1375	ngsl_2809_0228|ngsl_2809_0206|ngsl_2809_2592	murder mystery	指推理小說類型，避開暴力描寫
+1376	1375	murder	murder	I love reading murder mysteries.	我很愛看推理謀殺小說。	B1	daily	ngsl_2809_1375	ngsl_2809_0228|ngsl_2809_0206|ngsl_2809_2592	murder mystery	指推理小說類型，避開暴力描寫；2026-10-09 第一輪風險複審保留；主題：文學類型
 1377	1376	monitor	monitor	We monitor the temperature every hour.	我們每小時監測一次溫度。	B2	work	ngsl_2809_1376	ngsl_2809_1451|ngsl_2809_0246		
 1378	1377	soldier	soldier	My grandfather was a soldier.	我爺爺以前是軍人。	A2	daily	ngsl_2809_1377			
 1379	1378	finance	finance	She works in finance.	她在金融業工作。	B2	work	ngsl_2809_1378	ngsl_2809_0066		finance 在此為「金融業」
@@ -87,7 +87,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 1386	1385	carefully	carefully	Please listen carefully.	請仔細聽。	A2	study	ngsl_2809_1385	ngsl_2809_0470|ngsl_2809_0572		
 1387	1386	pack	packed	Have you packed for the trip yet?	你旅行的行李收好了嗎？	A2	travel	ngsl_2809_1386	ngsl_2809_0824|ngsl_2809_0310		
 1388	1387	recall	recall	I can't recall his name.	我想不起他的名字。	B1	social	ngsl_2809_1387	ngsl_2809_0205		
-1389	1388	wine	wine	Would you like red or white wine?	你要紅酒還是白酒？	A2	food	ngsl_2809_1388	ngsl_2809_0044|ngsl_2809_0799|ngsl_2809_0481		
+1389	1388	wine	wine	Would you like red or white wine?	你要紅酒還是白酒？	A2	food	ngsl_2809_1388	ngsl_2809_0044|ngsl_2809_0799|ngsl_2809_0481		2026-10-09 第一輪風險複審保留；主題：酒類
 1390	1389	camera	camera	My phone has a really good camera.	我的手機相機很好。	A1	phone	ngsl_2809_1389	ngsl_2809_0478|ngsl_2809_0103|ngsl_2809_0055		
 1391	1390	swim	swim	I learned to swim when I was five.	我五歲學會游泳。	A1	health	ngsl_2809_1390	ngsl_2809_0260|ngsl_spoken_720_0115		
 1392	1391	manufacture	manufactures	This company manufactures car parts.	這家公司製造汽車零件。	B2	work	ngsl_2809_1391	ngsl_2809_0106|ngsl_2809_0259|ngsl_2809_0129		

@@ -26,7 +26,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2225	2224	entrance	entrance	Let's meet at the main entrance.	我們在大門口碰面吧。	A2	travel	ngsl_2809_2224	ngsl_2809_0134|ngsl_2809_0452		
 2226	2225	log	log	Please log your hours every Friday.	請在每週五登記你的工時。	B2	work	ngsl_2809_2225	ngsl_2809_0470|ngsl_2809_0246		log 在此為動詞「記錄」
 2227	2226	giant	giant	The kids loved the giant panda.	孩子們很喜歡那隻大貓熊。	B1	travel	ngsl_2809_2226	ngsl_2809_0528|ngsl_2809_0228		giant 在此為形容詞「巨大的」
-2228	2227	god	god	Oh my God, look at that view!	天啊，你看那個景色！	A2	travel	ngsl_2809_2227	ngsl_2809_0074|ngsl_2809_0292	Oh my God!	
+2228	2227	god	god	Oh my God, look at that view!	天啊，你看那個景色！	A2	travel	ngsl_2809_2227	ngsl_2809_0074|ngsl_2809_0292	Oh my God!	2026-10-09 第一輪風險複審保留；語域：口語驚嘆
 2229	2228	portion	portions	The portions at this restaurant are huge.	這家餐廳的份量很大。	B1	food	ngsl_2809_2228	ngsl_2809_0918|ngsl_2809_0861		portion 在此為「（食物的）一份」
 2230	2229	substance	substance	This substance is harmful to children.	這種物質對孩童有害。	B2	health	ngsl_2809_2229	ngsl_2809_0101		
 2231	2230	extensive	extensive	The hotel has an extensive breakfast menu.	這間飯店的早餐菜色很豐富。	B2	travel	ngsl_2809_2230	ngsl_2809_0758|ngsl_2809_1818|ngsl_2809_2596		
@@ -63,7 +63,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2262	2261	bread	bread	Would you like some bread?	你要來點麵包嗎？	A1	food	ngsl_2809_2261	ngsl_2809_0044		
 2263	2262	blind	blind	The dog helps a blind man cross the street.	那隻狗幫助一位盲人過馬路。	B1	daily	ngsl_2809_2262	ngsl_2809_0894|ngsl_2809_0132|ngsl_2809_0111|ngsl_2809_0974|ngsl_2809_0597		blind 在此為「失明的」，與詞表解釋「盲目的」不同
 2264	2263	pure	pure	This juice is pure orange.	這杯果汁是純柳橙汁。	B1	food	ngsl_2809_2263	ngsl_2809_2498		
-2265	2264	bloody	bloody	The movie was too bloody for me.	那部電影對我來說太血腥了。	B2	daily	ngsl_2809_2264	ngsl_2809_0761|ngsl_2809_0117		
+2265	2264	bloody	bloody	The movie was too bloody for me.	那部電影對我來說太血腥了。	B2	daily	ngsl_2809_2264	ngsl_2809_0761|ngsl_2809_0117		2026-10-09 第一輪風險複審保留；主題：影視評價
 2266	2265	ally	ally	She's been my ally at work.	她一直是我工作上的盟友。	C1	work	ngsl_2809_2265	ngsl_2809_0066		
 2267	2266	quantity	quantities	We sell in large quantities.	我們大量出售。	B2	shopping	ngsl_2809_2266	ngsl_2809_0417|ngsl_2809_0209	in large quantities	
 2268	2267	bend	bend	Bend your knees when you lift something heavy.	搬重物時要彎曲膝蓋。	B1	health	ngsl_2809_2267	ngsl_2809_2220|ngsl_2809_1166|ngsl_2809_0137|ngsl_2809_1051		
@@ -74,7 +74,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2273	2272	sustain	sustain	It's hard to sustain this pace.	這個步調很難維持下去。	C1	work	ngsl_2809_2272	ngsl_2809_0297|ngsl_2809_2117		
 2274	2273	flood	floods	The street floods every time it rains.	每次下雨這條街就淹水。	B1	news	ngsl_2809_2273	ngsl_2809_0597|ngsl_2809_0048|ngsl_2809_1231	every time ...	flood 在此為動詞「淹水」
 2275	2274	poverty	poverty	Many families still live in poverty.	很多家庭仍然生活貧困。	B2	news	ngsl_2809_2274	ngsl_2809_0098|ngsl_2809_0171|ngsl_2809_0118|ngsl_2809_0152	live in poverty	
-2276	2275	crazy	crazy	This weather is crazy!	這天氣太誇張了！	A2	daily	ngsl_2809_2275	ngsl_2809_1067		
+2276	2275	crazy	crazy	This weather is crazy!	這天氣太誇張了！	A2	daily	ngsl_2809_2275	ngsl_2809_1067		2026-10-09 第一輪風險複審保留；語域：口語
 2277	2276	cite	cite	Remember to cite your sources.	記得註明你的資料來源。	C1	study	ngsl_2809_2276	ngsl_2809_0350|ngsl_2809_0622		
 2278	2277	newly	newly	We just moved into a newly built apartment.	我們剛搬進一間新蓋好的公寓。	B2	daily	ngsl_2809_2277	ngsl_2809_0199|ngsl_2809_0220|ngsl_2809_2167	move into ...	
 2279	2278	parallel	parallel	The road runs parallel to the river.	這條路和河流平行。	B2	travel	ngsl_2809_2278	ngsl_2809_0520|ngsl_2809_0191|ngsl_2809_1175		
@@ -86,7 +86,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2285	2284	button	button	Press the red button to stop.	按紅色按鈕停止。	A2	daily	ngsl_2809_2284	ngsl_2809_0673|ngsl_2809_0799|ngsl_2809_0346		
 2286	2285	burden	burden	I don't want to be a burden to you.	我不想成為你的負擔。	B2	social	ngsl_2809_2285	ngsl_2809_0075		
 2287	2286	desert	desert	We rode camels in the desert.	我們在沙漠裡騎駱駝。	B1	travel	ngsl_2809_2286	ngsl_2809_1049		
-2288	2287	mate	mate	He's my best mate from school.	他是我學校最好的朋友。	B1	social	ngsl_2809_2287	ngsl_2809_0145		mate 在此為英式口語「朋友、哥兒們」
+2288	2287	mate	mate	He's my best mate from school.	他是我學校最好的朋友。	B1	social	ngsl_2809_2287	ngsl_2809_0145		mate 在此為英式口語「朋友、哥兒們」；2026-10-09 第一輪風險複審保留；語域：英式口語
 2289	2288	occasionally	occasionally	I occasionally work from home.	我偶爾在家工作。	B1	work	ngsl_2809_2288	ngsl_2809_0066|ngsl_2809_0160	work from home	
 2290	2289	shareholder	shareholders	The shareholders will meet next week.	股東們下週會開會。	C1	work	ngsl_2809_2289	ngsl_2809_0134|ngsl_2809_0150|ngsl_2809_0156		
 2291	2290	bowl	bowl	Can I have another bowl of rice?	我可以再來一碗飯嗎？	A1	food	ngsl_2809_2290	ngsl_2809_0139|ngsl_2809_2694	a bowl of ...	

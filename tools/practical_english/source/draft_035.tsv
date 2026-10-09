@@ -11,11 +11,11 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 3243		For Life	for life	They became friends for life.	他們成了一輩子的朋友。	B1	social	phrase_list_506_0409	ngsl_2809_0140|ngsl_2809_0207		
 3244		Get Away	get away	I need to get away for a few days.	我需要出去走走幾天。	B1	travel	phrase_list_506_0410	ngsl_2809_0089|ngsl_2809_0194|ngsl_2809_0084		get away 在此為「離開；擺脫（日常）」
 3245		In The Meantime	in the meantime	Dinner's almost ready. In the meantime, set the table.	晚餐快好了，你先擺一下餐具。	B1	food	phrase_list_506_0411	ngsl_2809_1116|ngsl_2809_0306|ngsl_2809_0773|ngsl_2809_0184|ngsl_2809_0449		
-3246		Something Of A	something of an	She's something of an expert on wine.	她算是個葡萄酒專家。	C1	food	phrase_list_506_0412	ngsl_2809_1156|ngsl_2809_1388		句中為 something of an（母音前）
-3247		The Odd	the odd	I have the odd glass of wine on weekends.	我週末偶爾會喝杯葡萄酒。	C1	food	phrase_list_506_0413	ngsl_2809_1041|ngsl_2809_1388|ngsl_2809_0933		
+3246		Something Of A	something of an	She's something of an expert on wine.	她算是個葡萄酒專家。	C1	food	phrase_list_506_0412	ngsl_2809_1156|ngsl_2809_1388		句中為 something of an（母音前）；2026-10-09 第一輪風險複審保留；主題：酒類
+3247		The Odd	the odd	I have the odd glass of wine on weekends.	我週末偶爾會喝杯葡萄酒。	C1	food	phrase_list_506_0413	ngsl_2809_1041|ngsl_2809_1388|ngsl_2809_0933		2026-10-09 第一輪風險複審保留；主題：酒類
 3248		Little More Than	little more than	The village is little more than a few houses.	那個村子不過就是幾間房子而已。	C1	travel	phrase_list_506_0414	ngsl_2809_0814|ngsl_2809_0194|ngsl_2809_0164		
 3249		Would You Like	would you like	Would you like some help with that?	需要我幫你嗎？	A1	social	phrase_list_506_0415	ngsl_2809_0132		
-3250		In Need	in need	We collect clothes for families in need.	我們為有需要的家庭募集衣物。	B1	social	phrase_list_506_0416	ngsl_2809_1068|ngsl_2809_0955|ngsl_2809_0171		
+3250		In Need	in need	We collect clothes for families in need.	我們為有需要的家庭募集衣物。	B1	social	phrase_list_506_0416	ngsl_2809_1068|ngsl_2809_0955|ngsl_2809_0171		2026-10-09 第一輪風險複審保留；語域：一般
 3251		Take For Granted	take for granted	Good health is something we often take for granted.	健康常常被我們視為理所當然。	B2	health	phrase_list_506_0417	ngsl_2809_0055|ngsl_2809_0474|ngsl_2809_0287		
 3252		In This Respect	in this respect	In this respect, the two phones are the same.	在這方面，兩支手機是一樣的。	C1	shopping	phrase_list_506_0418	ngsl_spoken_720_0070|ngsl_2809_0478|ngsl_2809_0121		
 3253		Provided That	provided that	You can borrow my car, provided that you drive carefully.	只要你小心開車，就可以借我的車。	B2	daily	phrase_list_506_0419	ngsl_2809_1879|ngsl_2809_0259|ngsl_2809_0386|ngsl_2809_1385		

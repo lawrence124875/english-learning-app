@@ -41,7 +41,7 @@
 1739|implement|We'll implement the new system next month.|我們下個月會實施新系統。|B2|work|new,system,next,month||
 1740|chart|The chart shows our sales this year.|這張圖表顯示我們今年的業績。|B1|work|show<shows,sale<sales,year||
 1741|attached|I've attached the file to the email.|我已經把檔案附在電子郵件裡了。|B1|work|file,email||
-1742|hell|It's been a hell of a week.|這個星期真是累翻了。|B2|daily|week|a hell of a ...|口語強調用法，語氣隨便，正式場合避免
+1742|hell|It's been a hell of a week.|這個星期真是累翻了。|B2|daily|week|a hell of a ...|口語強調用法，語氣隨便，正式場合避免；2026-10-09 第一輪風險複審保留；語域：非正式（Informal）
 1743|everywhere|I looked everywhere for my keys.|我到處找我的鑰匙。|A2|daily|look<looked,key<keys|look for|
 1744|advise|I'd advise you to book early.|我建議你早點訂。|B1|travel|book,early||
 1745|household|We share the household chores.|我們分攤家事。|B1|daily|share||

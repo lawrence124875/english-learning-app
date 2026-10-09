@@ -33,7 +33,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 432	431	activity	activities	What activities do you enjoy?	你喜歡做哪些活動？	A2	social	ngsl_2809_0431	ngsl_2809_0503		activities 為複數
 433	432	film	film	Have you seen this film?	你看過這部電影嗎？	A2	daily	ngsl_2809_0432	ngsl_2809_0049		
 434	433	morning	morning	I go jogging every morning.	我每天早上去慢跑。	A2	health	ngsl_2809_0433	ngsl_2809_0030|ngsl_2809_0179	go jogging	
-435	434	war	war	We watched a movie about the war.	我們看了一部關於那場戰爭的電影。	B1	daily	ngsl_2809_0434	ngsl_2809_0325|ngsl_2809_0761		
+435	434	war	war	We watched a movie about the war.	我們看了一部關於那場戰爭的電影。	B1	daily	ngsl_2809_0434	ngsl_2809_0325|ngsl_2809_0761		2026-10-09 第一輪風險複審保留；主題：影視（戰爭題材）
 436	435	account	account	I'd like to open a bank account.	我想開一個銀行帳戶。	A2	official	ngsl_2809_0435	ngsl_2809_0044|ngsl_2809_0213|ngsl_2809_0626	open an account	
 437	436	shop	shop	The shop closes at nine.	那家店九點關門。	A1	shopping	ngsl_2809_0436	ngsl_2809_0238|ngsl_spoken_720_0250		
 438	437	major	major	There were no major problems.	沒有出什麼大問題。	B1	work	ngsl_2809_0437	ngsl_2809_0119		major 在此為「重大的」
@@ -80,7 +80,7 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 479	478	phone	phone	My phone battery is almost dead.	我的手機快沒電了。	A2	phone	ngsl_2809_0478	ngsl_2809_0306|ngsl_2809_0946		battery 不在詞表
 480	479	themselves	themselves	The kids made breakfast themselves.	孩子們自己做了早餐。	A2	food	ngsl_2809_0479	ngsl_2809_0528|ngsl_2809_0047|ngsl_2809_1818		
 481	480	draw	draw	My daughter loves to draw.	我女兒很愛畫畫。	A1	daily	ngsl_2809_0480	ngsl_2809_0926|ngsl_2809_0228		
-482	481	white	white	Red or white wine?	紅酒還是白酒？	A1	food	ngsl_2809_0481	ngsl_2809_0799|ngsl_2809_1388		
+482	481	white	white	Red or white wine?	紅酒還是白酒？	A1	food	ngsl_2809_0481	ngsl_2809_0799|ngsl_2809_1388		2026-10-09 第一輪風險複審保留；主題：酒類
 483	482	date	date	We need to set a date for the meeting.	我們得定個開會日期。	B1	work	ngsl_2809_0482	ngsl_2809_0089|ngsl_2809_0184	set a date	
 484	483	practice	practice	I practice the piano every day.	我每天練鋼琴。	A2	daily	ngsl_2809_0483	ngsl_2809_2590|ngsl_2809_0179|ngsl_2809_0084		
 485	484	model	model	Which model is the newest?	哪個型號是最新的？	B1	shopping	ngsl_2809_0484	ngsl_2809_0078		model 在此為「型號」
