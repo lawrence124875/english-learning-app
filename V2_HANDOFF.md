@@ -72,3 +72,12 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - 字串：12 個 key（`menuWhatsNew`、`peWhatsNew*`），11 語系。
 - 測試：`test/practical_english/whats_new_test.dart`（11 個，含真的 OnboardingScreen 與 HomeScreen 選單）。
 - 本機環境無法連到 dl.google.com，沒有 Android SDK，無法建置 APK；實機驗證留到 Phase 7。
+
+## 內建句庫（pe_core）
+
+- 負責 thread：「V2 句庫開發」；分支 `claude/v2-sentence-library-iagowl`（接在 `feature/practical-english-v2` 之上）。
+- 品質流程（Lawrence 2026-10-09）：Claude 製作 → ChatGPT 初審 → Gemini 複核 → ChatGPT 整合 → CSV Format B。Lawrence 不逐句校對英文。審核結果回來、經批准前不寫入 `pe_core.json`。
+- 草稿：`tools/practical_english/source/draft_001.tsv`（100 句，NGSL index 0–99，每句 1 個目標詞彙，**尚未經 AI 交叉審核**）。審核材料在專案資料夾 `v2/sentence_library/`。
+- 產生工具：`tools/practical_english/build_pe_core.py` 只讀審核通過的 `batch_*.tsv` → `pe_core.json`；檢查 index／拼字、目標字出現、重複句、append-only。
+- `pe_core.json` 目前仍是空清單。
+- 免費版規則 A（Lawrence 2026-10-09 正式）：句中每個目標詞彙只要任一個 WordRef 已解鎖就算解鎖；同一詞彙只在該句 `wordIds` 內以「同原文語言＋同拼字」判斷。已改 `SentenceAccess`、SPEC §12，測試 `test/practical_english/sentence_access_test.dart`。第一批 100 句：免費 100／鎖 0。
