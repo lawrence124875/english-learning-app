@@ -367,7 +367,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   /// 已查過的語音結果（每種語言一次 session 只查、只提示一次）。
   final Map<String, PeVoiceStatus> _voiceStatus = {};
 
-  Future<PeVoiceStatus> _checkVoice(String ttsCode) async {
+  /// 手機有沒有這個語言的語音（每種語言只查一次）。
+  Future<PeVoiceStatus> checkVoice(String ttsCode) async {
     final cached = _voiceStatus[ttsCode];
     if (cached != null) return cached;
     PeVoiceStatus status;
@@ -397,7 +398,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     if (translation == null || language == null) {
       return TranslationSpeechResult.noTranslation;
     }
-    final voice = await _checkVoice(language.ttsCode);
+    final voice = await checkVoice(language.ttsCode);
     if (voice == PeVoiceStatus.unavailable) {
       return TranslationSpeechResult.voiceUnavailable;
     }
