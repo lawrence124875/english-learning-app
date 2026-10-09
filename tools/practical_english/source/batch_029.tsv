@@ -1,0 +1,10 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2801	2800	alright	alright	Is everything alright?	一切都還好嗎？	A1	social	ngsl_2809_2800	ngsl_2809_0421		
+2802	2801	lazy	lazy	I always feel lazy on Sundays.	我星期天總是懶洋洋的。	A2	daily	ngsl_2809_2801	ngsl_2809_0182|ngsl_2809_0116		
+2803	2802	hello	hello	Say hello to your mom for me.	幫我跟你媽媽問好。	A1	social	ngsl_2809_2802	ngsl_2809_0029|ngsl_2809_2130	say hello to ...	
+2804	2803	hunger	Hunger	Hunger makes it hard to focus.	肚子餓的時候很難專心。	B1	health	ngsl_2809_2803	ngsl_2809_0047|ngsl_2809_0297|ngsl_2809_0549		
+2805	2804	insure	insured	Is the car insured?	這輛車有保險嗎？	B1	official	ngsl_2809_2804	ngsl_2809_0259		
+2806	2805	ashamed	ashamed	I'm ashamed of what I said.	我對我說過的話感到羞愧。	B1	social	ngsl_2809_2805	ngsl_2809_0029	be ashamed of ...	
+2807	2806	found	founded	The company was founded in 1990.	這家公司成立於 1990 年。	B1	work	ngsl_2809_2806	ngsl_2809_0106		found 在此為「創立」，非 find 的過去式
+2808	2807	blog	blog	She writes a travel blog.	她在寫旅遊部落格。	A2	travel	ngsl_2809_2807	ngsl_2809_0120|ngsl_2809_0502		
+2809	2808	thirst	thirst	I woke up with a terrible thirst.	我醒來時渴得要命。	B1	health	ngsl_2809_2808	ngsl_2809_1507|ngsl_2809_1643		

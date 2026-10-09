@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1501	1500	asset	asset	Her language skills are a real asset to the team.	她的語言能力是團隊的一大資產。	B2	work	ngsl_2809_1500	ngsl_2809_0359|ngsl_2809_0684|ngsl_2809_0353|ngsl_2809_0406		asset 在此為「有價值的人或特質」
+1502	1501	signal	signal	I can't get a signal here.	我在這裡收不到訊號。	A2	phone	ngsl_2809_1501	ngsl_2809_0042|ngsl_2809_0097	get a signal	
+1503	1502	finger	finger	I cut my finger while cooking.	我做菜時割傷了手指。	A2	health	ngsl_2809_1502	ngsl_2809_0455|ngsl_2809_1195		
+1504	1503	relevant	relevant	Please only include relevant information.	請只放相關的資訊。	B1	work	ngsl_2809_1503	ngsl_2809_0470|ngsl_2809_0162|ngsl_2809_0212		
+1505	1504	explore	exploring	We spent the day exploring the old town.	我們花了一整天探索老城區。	B1	travel	ngsl_2809_1504	ngsl_2809_0257|ngsl_2809_0084|ngsl_2809_0143|ngsl_2809_0363	spend the day ...ing	
+1506	1505	leadership	leadership	She showed great leadership on the project.	她在這個專案上展現了很強的領導力。	B2	work	ngsl_2809_1505	ngsl_2809_0109|ngsl_2809_0123|ngsl_2809_0517		
+1507	1506	commitment	commitment	Learning a language takes time and commitment.	學一門語言需要時間和投入。	B2	study	ngsl_2809_1506	ngsl_2809_0260|ngsl_2809_0359|ngsl_2809_0058|ngsl_2809_0048		commitment 在此為「投入、決心」
+1508	1507	wake	wake	Please wake me up at seven.	請在七點叫我起床。	A1	daily	ngsl_2809_1507	ngsl_2809_0470|ngsl_spoken_720_0233	wake someone up	
+1509	1508	necessarily	necessarily	Expensive food isn't necessarily better.	貴的食物不一定比較好吃。	B1	food	ngsl_2809_1508	ngsl_2809_1060|ngsl_2809_0366	not necessarily	necessarily 常用於否定「不一定」
+1510	1509	bright	bright	The room is bright and clean.	這個房間明亮又乾淨。	A2	travel	ngsl_2809_1509	ngsl_2809_0253|ngsl_2809_0841		
+1511	1510	frame	frame	I bought a frame for this photo.	我買了一個相框來放這張照片。	A2	shopping	ngsl_2809_1510	ngsl_2809_0241|ngsl_2809_1207		frame 在此為「框、相框」
+1512	1511	slowly	slowly	Could you speak more slowly, please?	可以請你說慢一點嗎？	A1	social	ngsl_2809_1511	ngsl_2809_0283|ngsl_2809_0470	speak slowly	
+1513	1512	bond	bond	The trip helped us build a strong bond.	這趟旅行讓我們建立了深厚的感情。	B2	social	ngsl_2809_1512	ngsl_2809_0824|ngsl_2809_0132|ngsl_2809_0220|ngsl_2809_0460		bond 在此為「情感連結」，非 NGSL 解釋的「債券」
+1514	1513	hire	hiring	We're hiring two new staff members.	我們正在招募兩位新員工。	B1	work	ngsl_2809_1513	ngsl_spoken_720_0070|ngsl_2809_0078|ngsl_2809_0430|ngsl_2809_0265		
+1515	1514	hole	hole	There's a hole in my sock.	我的襪子破了一個洞。	A2	daily	ngsl_2809_1514			
+1516	1515	tie	tie	He wore a tie to the interview.	他打領帶去面試。	A2	work	ngsl_2809_1515	ngsl_2809_0525|ngsl_2809_0783		
+1517	1516	internal	internal	This report is for internal use only.	這份報告僅供內部使用。	B2	work	ngsl_2809_1516	ngsl_2809_0165|ngsl_2809_0067|ngsl_2809_0073	for internal use only	
+1518	1517	chain	chain	It's a coffee chain from Japan.	那是一家來自日本的咖啡連鎖店。	B1	food	ngsl_2809_1517	ngsl_2809_1394		chain 在此為「連鎖店」
+1519	1518	literature	literature	She studied English literature in college.	她大學念英國文學。	B1	study	ngsl_2809_1518	ngsl_2809_0186|ngsl_2809_0738		
+1520	1519	victim	victim	He was the victim of a phone scam.	他是電話詐騙的受害者。	B2	phone	ngsl_2809_1519	ngsl_2809_0478		
+1521	1520	threaten	threatened	Heavy rain threatened to ruin our picnic.	大雨差點毀了我們的野餐。	B2	daily	ngsl_2809_1520	ngsl_2809_1051|ngsl_2809_1231|ngsl_2809_2404		threaten 在此為「有…的危險」
+1522	1521	division	division	She works in the sales division.	她在業務部門工作。	B2	work	ngsl_2809_1521	ngsl_2809_0066|ngsl_2809_0397		
+1523	1522	secure	secure	Keep your passport in a secure place.	把護照放在安全的地方。	B1	travel	ngsl_2809_1522	ngsl_2809_0176|ngsl_2809_0113		
+1524	1523	amaze	amaze	The view will amaze you.	那裡的景色會讓你驚嘆。	B1	travel	ngsl_2809_1523	ngsl_2809_0292		
+1525	1524	device	devices	Please turn off all electronic devices.	請關閉所有電子裝置。	B1	travel	ngsl_2809_1524	ngsl_2809_0470|ngsl_2809_0193|ngsl_2809_1721	turn off	
+1526	1525	birth	birth	What's your date of birth?	你的出生日期是什麼時候？	A2	official	ngsl_2809_1525	ngsl_2809_0482	date of birth	
+1527	1526	forest	forest	We went for a walk in the forest.	我們去森林裡散步。	A2	travel	ngsl_2809_1526	ngsl_2809_0338	go for a walk	
+1528	1527	label	label	Always read the label before you buy.	買之前一定要看標籤。	A2	shopping	ngsl_2809_1527	ngsl_2809_0182|ngsl_2809_0206|ngsl_2809_0241		
+1529	1528	root	root	We need to find the root of the problem.	我們需要找出問題的根源。	B2	work	ngsl_2809_1528	ngsl_2809_0089|ngsl_2809_0080|ngsl_2809_0119	the root of the problem	root 在此為「根源」
+1530	1529	factory	factory	My uncle works at a car factory.	我叔叔在汽車工廠上班。	A2	work	ngsl_2809_1529	ngsl_2809_2693|ngsl_2809_0066|ngsl_2809_0259		
+1531	1530	expense	expenses	Keep your receipts for travel expenses.	出差費用的收據要留著。	B1	work	ngsl_2809_1530	ngsl_2809_0176|ngsl_2809_0502		
+1532	1531	channel	channel	What channel is the game on?	那場比賽在哪一台播？	A2	daily	ngsl_2809_1531	ngsl_2809_0392		
+1533	1532	investigate	investigating	The airline is investigating the delay.	航空公司正在調查這次延誤。	B2	travel	ngsl_2809_1532	ngsl_2809_2601|ngsl_2809_1309		
+1534	1533	recommendation	recommendations	Do you have any recommendations for dinner?	晚餐你有什麼推薦的嗎？	B1	food	ngsl_2809_1533	ngsl_2809_1116		
+1535	1534	rank	ranks	The city ranks high for safety.	這個城市的安全性排名很高。	B2	travel	ngsl_2809_1534	ngsl_2809_0268|ngsl_2809_0147|ngsl_2809_1310	rank high	rank 在此為動詞「排名」
+1536	1535	typical	typical	This is a typical breakfast here.	這是這裡典型的早餐。	B1	food	ngsl_2809_1535	ngsl_2809_1818|ngsl_2809_0097		
+1537	1536	west	west	The sun sets in the west.	太陽從西邊落下。	A2	daily	ngsl_2809_1536	ngsl_2809_1360|ngsl_2809_0184		
+1538	1537	friendly	friendly	The staff were very friendly.	工作人員都很親切。	A2	travel	ngsl_2809_1537	ngsl_2809_0430		
+1539	1538	resident	residents	Parking is for residents only.	停車位僅供住戶使用。	B1	daily	ngsl_2809_1538	ngsl_2809_0073		
+1540	1539	provision	provision	The company made provision for staff training.	公司為員工訓練預先做了安排。	C1	work	ngsl_2809_1539	ngsl_2809_0106|ngsl_2809_0047|ngsl_2809_0430	make provision for	provision 在此為「預備、安排」，非「規定」
+1541	1540	concentrate	concentrate	I can't concentrate with all this noise.	這麼吵我沒辦法專心。	B1	study	ngsl_2809_1540	ngsl_2809_1439		concentrate 在此為「專心」
+1542	1541	plenty	plenty	Don't worry, we have plenty of time.	別擔心，我們時間很充裕。	A2	daily	ngsl_2809_1541	ngsl_2809_0652|ngsl_2809_0048	plenty of	
+1543	1542	export	exports	The country exports a lot of rice.	這個國家出口大量稻米。	B1	news	ngsl_2809_1542	ngsl_2809_0142|ngsl_2809_0122|ngsl_2809_2694		
+1544	1543	entirely	entirely	I entirely agree with you.	我完全同意你的看法。	B1	social	ngsl_2809_1543	ngsl_2809_0419		
+1545	1544	strongly	strongly	I strongly recommend this restaurant.	我強力推薦這家餐廳。	B1	food	ngsl_2809_1544	ngsl_2809_1006|ngsl_2809_0918		
+1546	1545	bridge	bridge	Walk across the bridge and turn left.	走過橋之後左轉。	A2	travel	ngsl_2809_1545	ngsl_2809_0338|ngsl_2809_0382|ngsl_2809_0193|ngsl_2809_1219		
+1547	1546	consist	consists	The meal consists of soup and rice.	這份餐點包括湯和飯。	B1	food	ngsl_2809_1546	ngsl_2809_1249|ngsl_2809_2694	consist of	
+1548	1547	graduate	graduated	She graduated from university last year.	她去年大學畢業。	B1	study	ngsl_2809_1547	ngsl_2809_0967|ngsl_2809_0100|ngsl_2809_0057	graduate from	
+1549	1548	brand	brand	Which brand do you usually buy?	你通常買哪個牌子？	A2	shopping	ngsl_2809_1548	ngsl_2809_0554|ngsl_2809_0241		
+1550	1549	moral	moral	The story has a simple moral.	這個故事有個簡單的寓意。	B2	study	ngsl_2809_1549	ngsl_2809_0305|ngsl_2809_0687		moral 在此為名詞「寓意」，非形容詞「道德的」
+1551	1550	insist	insisted	He insisted on paying for dinner.	他堅持要請吃晚餐。	B1	social	ngsl_2809_1550	ngsl_2809_0219|ngsl_2809_1116	insist on	
+1552	1551	combination	combination	I love the combination of salt and sugar.	我很愛鹹甜的組合。	B1	food	ngsl_2809_1551	ngsl_2809_0228|ngsl_2809_2458|ngsl_2809_2233		
+1553	1552	abuse	abuse	Some people abuse their sick leave.	有些人會濫用病假。	B2	work	ngsl_2809_1552	ngsl_2809_0056|ngsl_2809_1715|ngsl_2809_0125		abuse 在此為「濫用」
+1554	1553	ice	ice	Can I get water with no ice?	可以給我一杯去冰的水嗎？	A1	food	ngsl_2809_1553	ngsl_2809_0042|ngsl_2809_0321	no ice	
+1555	1554	principal	principal	The principal gave a speech at graduation.	校長在畢業典禮上致詞。	B1	study	ngsl_2809_1554	ngsl_2809_0076|ngsl_2809_0893	give a speech	
+1556	1555	master	master	It takes years to master a language.	要精通一門語言得花好幾年。	B2	study	ngsl_2809_1555	ngsl_2809_0058|ngsl_2809_0057|ngsl_2809_0359		master 在此為動詞「精通」，非「主人」
+1557	1556	definitely	definitely	I'll definitely come to your party.	我一定會去你的派對。	A2	social	ngsl_2809_1556	ngsl_2809_0064|ngsl_2809_0298		
+1558	1557	session	session	The training session starts at nine.	訓練課程九點開始。	B1	work	ngsl_2809_1557	ngsl_2809_0135|ngsl_spoken_720_0250		session 在此為「一段活動時間、課程」
+1559	1558	grade	grades	He got good grades this term.	他這學期成績很好。	A2	study	ngsl_2809_1558	ngsl_2809_0042|ngsl_2809_0055|ngsl_2809_0279		
+1560	1559	nevertheless	nevertheless	It was raining. Nevertheless, we went out.	那時在下雨，但我們還是出門了。	B2	daily	ngsl_2809_1559	ngsl_2809_1231|ngsl_2809_0030		
+1561	1560	predict	predict	It's hard to predict the weather here.	這裡的天氣很難預測。	B1	daily	ngsl_2809_1560	ngsl_2809_0297|ngsl_2809_1067|ngsl_2809_0097		
+1562	1561	previously	previously	I previously worked as a teacher.	我之前當過老師。	B1	work	ngsl_2809_1561	ngsl_2809_0066|ngsl_2809_0495		
+1563	1562	protection	protection	Wear sunglasses for eye protection.	戴太陽眼鏡保護眼睛。	B1	health	ngsl_2809_1562	ngsl_2809_0525|ngsl_2809_0390		
+1564	1563	largely	largely	The success was largely due to her hard work.	這次成功主要歸功於她的努力。	B2	work	ngsl_2809_1563	ngsl_2809_0724|ngsl_2809_0573|ngsl_2809_0297|ngsl_2809_0066	due to	
+1565	1564	wed	wed	They plan to wed next spring.	他們打算明年春天結婚。	B2	social	ngsl_2809_1564	ngsl_2809_0231|ngsl_2809_0150|ngsl_2809_1331		wed 為較正式／新聞用語，口語多用 get married
+1566	1565	rent	rent	The rent is due on the first of the month.	房租每個月一號要繳。	A2	daily	ngsl_2809_1565	ngsl_2809_0573|ngsl_2809_0077|ngsl_2809_0208		
+1567	1566	shot	shot	I need to get a flu shot.	我需要去打流感疫苗。	B1	health	ngsl_2809_1566	ngsl_2809_0089|ngsl_2809_0042	flu shot	shot 在此為「打針」，非「射擊」
+1568	1567	appearance	appearance	He cares a lot about his appearance.	他很在意自己的外表。	B1	social	ngsl_2809_1567	ngsl_2809_0312|ngsl_2809_0122	care about	
+1569	1568	reasonable	reasonable	The prices here are very reasonable.	這裡的價格很合理。	B1	shopping	ngsl_2809_1568	ngsl_2809_0295|ngsl_2809_0097		
+1570	1569	guarantee	guarantee	This watch comes with a two-year guarantee.	這支手錶有兩年保固。	B1	shopping	ngsl_2809_1569	ngsl_2809_0325|ngsl_2809_0064|ngsl_spoken_720_0070|ngsl_2809_0057		guarantee 在此為名詞「保固」
+1571	1570	till	till	The shop is open till ten.	這家店開到十點。	A2	shopping	ngsl_2809_1570	ngsl_2809_0436|ngsl_2809_0213|ngsl_spoken_720_0209		
+1572	1571	theme	theme	The party has a nineties theme.	這場派對的主題是九〇年代。	B1	social	ngsl_2809_1571	ngsl_2809_0298		
+1573	1572	judgment	judgment	I trust your judgment.	我相信你的判斷。	B2	work	ngsl_2809_1572	ngsl_2809_1074		
+1574	1573	odd	odd	That's odd. The door was locked.	好奇怪，門剛剛是鎖著的。	B1	daily	ngsl_2809_1573	ngsl_2809_0489|ngsl_2809_1603		
+1575	1574	approve	approved	My manager approved my leave.	我的主管批准了我的假。	B1	work	ngsl_2809_1574	ngsl_2809_0660|ngsl_2809_0125		
+1576	1575	loan	loan	We took out a loan to buy the house.	我們貸款買了這間房子。	B1	official	ngsl_2809_1575	ngsl_2809_0058|ngsl_2809_0241|ngsl_2809_0164	take out a loan	
+1577	1576	definition	definition	Look up the definition in a dictionary.	查字典看這個字的定義。	B1	study	ngsl_2809_1576	ngsl_2809_0074	look up	
+1578	1577	elect	elected	She was elected class leader.	她被選為班長。	B1	study	ngsl_2809_1577	ngsl_2809_0361|ngsl_2809_0595		
+1579	1578	atmosphere	atmosphere	I love the atmosphere of this café.	我很喜歡這家咖啡店的氣氛。	B1	food	ngsl_2809_1578	ngsl_2809_0228		
+1580	1579	farmer	farmer	We buy eggs from a local farmer.	我們跟當地農夫買雞蛋。	A2	food	ngsl_2809_1579	ngsl_2809_0241|ngsl_2809_1380|ngsl_2809_0299		
+1581	1580	comparison	comparison	In comparison, this one is much cheaper.	相比之下，這個便宜多了。	B1	shopping	ngsl_2809_1580	ngsl_2809_1094	in comparison	
+1582	1581	characteristic	characteristic	Patience is a characteristic of a good teacher.	耐心是好老師的特質之一。	B2	study	ngsl_2809_1581	ngsl_2809_0055|ngsl_2809_0495		
+1583	1582	license	license	Can I see your driver's license?	可以看一下你的駕照嗎？	A2	official	ngsl_2809_1582	ngsl_2809_0049|ngsl_2809_1199	driver's license	
+1584	1583	rely	rely	You can always rely on me.	你隨時都可以依靠我。	B1	social	ngsl_2809_1583	ngsl_2809_0182	rely on	
+1585	1584	narrow	narrow	The streets in the old town are narrow.	老城區的街道很窄。	B1	travel	ngsl_2809_1584	ngsl_2809_0597|ngsl_2809_0143|ngsl_2809_0363		
+1586	1585	succeed	succeed	I hope you succeed in your new job.	祝你新工作順利成功。	B1	work	ngsl_2809_1585	ngsl_2809_0249|ngsl_2809_0078|ngsl_2809_0230	succeed in	
+1587	1586	identity	identity	Please bring proof of identity.	請攜帶身分證明。	B1	official	ngsl_2809_1586	ngsl_2809_0470|ngsl_2809_0195|ngsl_2809_2020	proof of identity	
+1588	1587	desk	desk	Your keys are on the desk.	你的鑰匙在桌上。	A1	daily	ngsl_2809_1587	ngsl_2809_0658		
+1589	1588	permit	permit	You need a permit to park here.	在這裡停車需要許可證。	B1	official	ngsl_2809_1588	ngsl_2809_0089|ngsl_2809_0656|ngsl_2809_0097		permit 在此為名詞「許可證」
+1590	1589	seriously	seriously	Are you seriously going out in this rain?	你真的要冒著這種雨出門嗎？	B1	daily	ngsl_2809_1589	ngsl_2809_1231		seriously 在此為「認真地、真的」，非「嚴重地」
+1591	1590	wild	wild	We saw wild horses on the beach.	我們在海灘上看到野馬。	B1	travel	ngsl_2809_1590	ngsl_2809_0049|ngsl_2809_1138|ngsl_2809_1296		
+1592	1591	empty	empty	The fridge is empty again.	冰箱又空了。	A2	daily	ngsl_2809_1591	ngsl_2809_0174		
+1593	1592	commission	commission	He earns a commission on every sale.	他每做成一筆生意就有佣金。	B2	work	ngsl_2809_1592	ngsl_2809_0925|ngsl_2809_0179|ngsl_2809_0397		commission 在此為「佣金」，非「委員會」
+1594	1593	unique	unique	Each piece is handmade and unique.	每一件都是手工製作，獨一無二。	B1	shopping	ngsl_2809_1593	ngsl_2809_0607		
+1595	1594	association	association	She's a member of the parents' association.	她是家長會的成員。	B2	study	ngsl_2809_1594	ngsl_2809_0265|ngsl_2809_0296		
+1596	1595	instrument	instruments	Do you play any musical instruments?	你會演奏什麼樂器嗎？	A2	social	ngsl_2809_1595	ngsl_2809_0157|ngsl_2809_1629	musical instrument	
+1597	1596	investor	investors	The company is looking for new investors.	公司正在尋找新的投資人。	B2	work	ngsl_2809_1596	ngsl_2809_0106|ngsl_2809_0074|ngsl_2809_0078	look for	
+1598	1597	practical	practical	That's a practical gift.	那是個很實用的禮物。	B1	shopping	ngsl_2809_1597	ngsl_2809_1426		practical 在此為「實用的」
+1599	1598	tea	tea	Would you like some tea?	你想喝點茶嗎？	A1	food	ngsl_2809_1598	ngsl_2809_0044		
+1600	1599	lovely	lovely	What a lovely day!	天氣真好！	A2	social	ngsl_2809_1599	ngsl_2809_0084		lovely 在此為「美好的、宜人的」

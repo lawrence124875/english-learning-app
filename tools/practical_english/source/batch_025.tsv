@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2401	2400	dare	dare	I didn't dare to ask her.	我不敢問她。	B1	social	ngsl_2809_2400	ngsl_2809_0133		
+2402	2401	barrier	barrier	Language can be a barrier when traveling.	旅行時語言可能會是一種障礙。	B2	travel	ngsl_2809_2401	ngsl_2809_0359|ngsl_2809_0502	language barrier	
+2403	2402	rid	rid	I need to get rid of these old boxes.	我得把這些舊箱子處理掉。	B1	daily	ngsl_2809_2402	ngsl_2809_0089|ngsl_2809_0143|ngsl_2809_0860	get rid of ...	
+2404	2403	divorce	divorced	Her parents got divorced when she was ten.	她十歲時父母離婚了。	B1	social	ngsl_2809_2403	ngsl_2809_0296|ngsl_spoken_720_0209	get divorced	
+2405	2404	ruin	ruined	The rain ruined our picnic.	這場雨毀了我們的野餐。	B1	daily	ngsl_2809_2404	ngsl_2809_1231		ruin 在此為「毀掉、破壞」
+2406	2405	bury	buried	The dog buried its bone in the yard.	狗把骨頭埋在院子裡。	B1	daily	ngsl_2809_2405	ngsl_2809_0894|ngsl_2809_1835|ngsl_2809_1666		
+2407	2406	counsel	counseled	My teacher counseled me to choose a different major.	老師勸我選別的主修。	C1	study	ngsl_2809_2406	ngsl_2809_0495|ngsl_2809_0446|ngsl_2809_0148|ngsl_2809_0437		counsel 在此為動詞「勸告、建議」
+2408	2407	tendency	tendency	I have a tendency to talk too fast.	我說話常常太快。	B2	social	ngsl_2809_2407	ngsl_2809_0136|ngsl_2809_0630	have a tendency to ...	
+2409	2408	frequent	frequent	There are frequent buses to the airport.	往機場的公車班次很密集。	B1	travel	ngsl_2809_2408	ngsl_2809_0809		
+2410	2409	motor	motor	The motor is making a strange noise.	馬達發出奇怪的聲音。	B1	daily	ngsl_2809_2409	ngsl_2809_0047|ngsl_2809_1344|ngsl_2809_1439		
+2411	2410	survival	survival	Learn some survival skills before you go camping.	去露營前先學一些求生技能。	B2	travel	ngsl_2809_2410	ngsl_2809_0260|ngsl_2809_0684|ngsl_2809_1164	survival skills	
+2412	2411	counter	counter	Please pay at the counter.	請到櫃台付款。	A2	shopping	ngsl_2809_2411	ngsl_2809_0470|ngsl_2809_0219		counter 在此為「櫃台」，非 NGSL 解釋的「計數器」
+2413	2412	possess	possesses	She possesses a great sense of humor.	她很有幽默感。	C1	social	ngsl_2809_2412	ngsl_2809_0123|ngsl_2809_0411|ngsl_2809_2572	sense of humor	
+2414	2413	permission	permission	You need permission to take photos here.	在這裡拍照需要經過許可。	B1	official	ngsl_2809_2413	ngsl_2809_0089|ngsl_2809_0058|ngsl_2809_1207|ngsl_2809_0097		
+2415	2414	valley	valley	The village is in a beautiful valley.	那個村子位在一座美麗的山谷裡。	B1	travel	ngsl_2809_2414	ngsl_2809_0814|ngsl_2809_0791		
+2416	2415	float	floating	Leaves were floating on the water.	葉子漂浮在水面上。	B1	daily	ngsl_2809_2415	ngsl_2809_0321		
+2417	2416	mad	mad	You must be mad to swim in this cold water!	你一定是瘋了才會在這麼冷的水裡游泳！	B1	social	ngsl_2809_2416	ngsl_2809_0159|ngsl_2809_1390|ngsl_2809_0866|ngsl_2809_0321		mad 在此為「瘋狂的」；美式口語常作「生氣的」
+2418	2417	greatly	greatly	Your help is greatly appreciated.	非常感謝你的幫忙。	B2	social	ngsl_2809_2417	ngsl_2809_0132|ngsl_2809_1273		
+2419	2418	visible	visible	The mountain is visible from my window.	從我的窗戶看得到那座山。	B1	daily	ngsl_2809_2418	ngsl_2809_1244|ngsl_2809_0733		
+2420	2419	electric	electric	I want to buy an electric car.	我想買一台電動車。	A2	shopping	ngsl_2809_2419	ngsl_2809_0075|ngsl_2809_0241|ngsl_2809_0259	electric car	
+2421	2420	impressive	impressive	Your English is impressive!	你的英文真厲害！	B1	study	ngsl_2809_2420			
+2422	2421	evolution	evolution	We learned about evolution in biology class.	我們在生物課學到了演化。	B2	study	ngsl_2809_2421	ngsl_2809_0260|ngsl_2809_0361		evolution 在此為「演化」
+2423	2422	awareness	awareness	The event raises awareness of mental health.	這個活動提升了大眾對心理健康的意識。	B2	news	ngsl_2809_2422	ngsl_2809_0441|ngsl_2809_0485|ngsl_2809_1648|ngsl_2809_0474	raise awareness	
+2424	2423	violent	violent	This movie is too violent for kids.	這部電影對小孩來說太暴力了。	B1	daily	ngsl_2809_2423	ngsl_2809_0761|ngsl_2809_0528		
+2425	2424	slave	slave	The history book describes the life of a slave in ancient Rome.	這本歷史書描述了古羅馬一名奴隸的生活。	B1	social	ngsl_2809_2424	ngsl_2809_0384|ngsl_2809_0170|ngsl_2809_0456|ngsl_2809_0110|ngsl_2809_1726		歷史描述；2026-10-09 第一輪風險複審修改
+2426	2425	wealthy	wealthy	They live in a wealthy neighborhood.	他們住在一個富裕的社區。	B2	daily	ngsl_2809_2425	ngsl_2809_0152|ngsl_2809_1693		
+2427	2426	architecture	architecture	I love the architecture in this old town.	我很喜歡這個老城區的建築。	B1	travel	ngsl_2809_2426	ngsl_2809_0228|ngsl_2809_0143|ngsl_2809_0363		
+2428	2427	acceptable	acceptable	Is it acceptable to wear jeans to work?	穿牛仔褲上班可以嗎？	B1	work	ngsl_2809_2427	ngsl_2809_0525|ngsl_2809_0066		
+2429	2428	journal	journal	I write in my journal every night.	我每天晚上寫日記。	B1	daily	ngsl_2809_2428	ngsl_2809_0120|ngsl_2809_0179|ngsl_2809_0269		
+2430	2429	coal	coal	The town used to be famous for coal mining.	這個小鎮以前以採煤聞名。	B2	news	ngsl_2809_2429	ngsl_2809_0363|ngsl_2809_1016|ngsl_2809_0936	used to ...	
+2431	2430	measurement	measurements	Let me take your measurements for the suit.	我來幫你量一下做西裝的尺寸。	B1	shopping	ngsl_2809_2430	ngsl_2809_0173|ngsl_2809_0058|ngsl_2809_1121	take measurements	measurement 在此為「尺寸」
+2432	2431	random	random	A random stranger helped me with my bags.	一個陌生路人幫我提行李。	B1	travel	ngsl_2809_2431	ngsl_2809_2724|ngsl_2809_0132|ngsl_2809_1251		random 在此為口語「隨便某個、不認識的」
+2433	2432	successfully	successfully	Your payment was successfully processed.	您的付款已成功完成。	B2	shopping	ngsl_2809_2432	ngsl_2809_1267|ngsl_2809_0285		
+2434	2433	depress	depress	Rainy days always depress me.	下雨天總是讓我心情低落。	B2	daily	ngsl_2809_2433	ngsl_2809_0084|ngsl_2809_0182		
+2435	2434	illustration	illustrations	The illustrations in this book are beautiful.	這本書裡的插圖很漂亮。	B2	study	ngsl_2809_2434	ngsl_2809_0170|ngsl_2809_0791		
+2436	2435	burst	burst	The balloon burst with a loud bang.	氣球砰的一聲爆了。	B1	daily	ngsl_2809_2435	ngsl_2809_2248		
+2437	2436	privilege	privilege	It's a privilege to work with you.	能和你共事是我的榮幸。	B2	work	ngsl_2809_2436	ngsl_2809_0066		privilege 在此為「榮幸」
+2438	2437	buyer	buyer	We found a buyer for our old car.	我們找到了舊車的買家。	B1	shopping	ngsl_2809_2437	ngsl_2809_0080|ngsl_2809_0143|ngsl_2809_0259		
+2439	2438	mutual	mutual	We met through a mutual friend.	我們是透過共同朋友認識的。	B2	social	ngsl_2809_2438	ngsl_2809_0134|ngsl_2809_0107|ngsl_2809_0207	mutual friend	mutual 在此為「共同的」
+2440	2439	rail	rail	Traveling by rail is relaxing.	搭火車旅行很放鬆。	B2	travel	ngsl_2809_2439	ngsl_2809_0502	by rail	
+2441	2440	motivate	motivates	What motivates you to study English?	是什麼激勵你學英文的？	B1	study	ngsl_2809_2440	ngsl_2809_0186		
+2442	2441	laboratory	laboratory	She works in a laboratory.	她在實驗室工作。	B1	work	ngsl_2809_2441	ngsl_2809_0066		
+2443	2442	mortgage	mortgage	We pay our mortgage every month.	我們每個月繳房貸。	B2	official	ngsl_2809_2442	ngsl_2809_0219|ngsl_2809_0179|ngsl_2809_0208		mortgage 在此為「房貸」
+2444	2443	promotion	promotion	Congratulations on your promotion!	恭喜你升職了！	B1	work	ngsl_2809_2443		Congratulations on ...	
+2445	2444	passion	passion	Cooking is her passion.	做菜是她的最愛。	B1	daily	ngsl_2809_2444	ngsl_2809_1195		
+2446	2445	champion	champion	He's the national tennis champion.	他是全國網球冠軍。	B1	social	ngsl_2809_2445	ngsl_2809_0536|ngsl_2809_1916		
+2447	2446	fulfill	fulfilled	I finally fulfilled my dream of living abroad.	我終於實現了出國生活的夢想。	B2	daily	ngsl_2809_2446	ngsl_2809_0498|ngsl_2809_0965|ngsl_2809_0152|ngsl_2809_1882		fulfill 在此為「實現」
+2448	2447	dust	dust	The old books are covered in dust.	那些舊書上都是灰塵。	B1	daily	ngsl_2809_2447	ngsl_2809_0143|ngsl_2809_0170|ngsl_2809_0423	covered in dust	
+2449	2448	dedicate	dedicated	She dedicated her life to helping others.	她一生致力於幫助別人。	B2	social	ngsl_2809_2448	ngsl_2809_0110|ngsl_2809_0132|ngsl_2809_0053	dedicate ... to ...	
+2450	2449	roughly	roughly	The trip takes roughly two hours.	這趟路程大約要兩個小時。	B1	travel	ngsl_2809_2449	ngsl_2809_0824|ngsl_2809_0058|ngsl_spoken_720_0070|ngsl_2809_0246		
+2451	2450	skirt	skirt	I bought a new skirt for the party.	我買了一條新裙子要穿去派對。	A2	shopping	ngsl_2809_2450	ngsl_2809_0241|ngsl_2809_0078|ngsl_2809_0298		
+2452	2451	province	province	Which province are you from?	你是哪一省的人？	B1	social	ngsl_2809_2451			
+2453	2452	march	marched	The band marched down the street.	樂隊沿著街道行進。	B2	news	ngsl_2809_2452	ngsl_2809_1086|ngsl_2809_0597		march 在此為「行進」
+2454	2453	evaluation	evaluation	We have our yearly evaluation next week.	我們下週要做年度考核。	B2	work	ngsl_2809_2453	ngsl_2809_0150|ngsl_2809_0156		
+2455	2454	compromise	compromise	Let's find a compromise.	我們找個折衷的辦法吧。	B2	work	ngsl_2809_2454	ngsl_2809_0080		
+2456	2455	accomplish	accomplished	We accomplished a lot today.	我們今天完成了很多事。	B1	work	ngsl_2809_2455	ngsl_2809_0122|ngsl_2809_0245		
+2457	2456	weakness	weakness	What's your biggest weakness?	你最大的缺點是什麼？	B1	work	ngsl_2809_2456	ngsl_2809_0183		weakness 在此為「缺點」
+2458	2457	announcement	announcement	Please listen to the following announcement.	請注意以下廣播。	B1	travel	ngsl_2809_2457	ngsl_2809_0470|ngsl_2809_0572		announcement 在此為「廣播、公告」
+2459	2458	salt	salt	Could you pass the salt?	可以把鹽遞給我嗎？	A1	food	ngsl_2809_2458	ngsl_2809_0415		
+2460	2459	glance	glanced	She glanced at her watch.	她瞄了一眼手錶。	B2	daily	ngsl_2809_2459	ngsl_2809_0325	glance at ...	
+2461	2460	opera	opera	We're going to the opera on Saturday.	我們星期六要去看歌劇。	B1	social	ngsl_2809_2460	ngsl_2809_0030		
+2462	2461	contest	contest	She won first prize in a singing contest.	她在歌唱比賽中得了第一名。	B1	social	ngsl_2809_2461	ngsl_2809_0376|ngsl_2809_0077|ngsl_2809_2004|ngsl_2809_0872		
+2463	2462	brush	brush	Clean the brush after painting.	畫完後要把刷子洗乾淨。	A2	daily	ngsl_2809_2462	ngsl_2809_0841|ngsl_2809_0671		
+2464	2463	embarrass	embarrass	Please don't embarrass me in front of my friends.	拜託別在我朋友面前讓我丟臉。	B1	social	ngsl_2809_2463	ngsl_2809_0470|ngsl_2809_0487|ngsl_2809_0207	in front of ...	
+2465	2464	gallery	gallery	The gallery is free on Sundays.	那間畫廊週日免費入場。	B1	travel	ngsl_2809_2464	ngsl_2809_0394		
+2466	2465	genetic	genetic	Eye color is genetic.	眼睛的顏色是遺傳的。	B2	health	ngsl_2809_2465	ngsl_2809_0390|ngsl_2809_0377		
+2467	2466	aggressive	aggressive	Our boss set some aggressive sales goals.	老闆訂了一些很積極的業績目標。	C1	work	ngsl_2809_2466	ngsl_2809_1853|ngsl_2809_0184|ngsl_2809_0397|ngsl_2809_0855		aggressive 在此為「積極進取的」
+2468	2467	chest	chest	I have a pain in my chest.	我胸口會痛。	B1	health	ngsl_2809_2467	ngsl_2809_1149		
+2469	2468	format	format	What format should the file be in?	檔案應該存成什麼格式？	B1	work	ngsl_2809_2468	ngsl_2809_0834		
+2470	2469	literary	literary	She won a literary prize last year.	她去年得了一個文學獎。	C1	news	ngsl_2809_2469	ngsl_2809_0376|ngsl_2809_2004|ngsl_2809_0100|ngsl_2809_0057		
+2471	2470	govern	govern	These rules govern how we use the meeting rooms.	這些規定規範了我們怎麼使用會議室。	C1	work	ngsl_2809_2470	ngsl_2809_0414|ngsl_2809_0067|ngsl_2809_0253		govern 在此為「規範、管理」
+2472	2471	embrace	embraced	She embraced her son at the airport.	她在機場擁抱了兒子。	B2	travel	ngsl_2809_2471	ngsl_2809_0686		
+2473	2472	praise	praised	The teacher praised him for his hard work.	老師稱讚他很努力。	B1	study	ngsl_2809_2472	ngsl_2809_0495|ngsl_2809_0297|ngsl_2809_0066	hard work	
+2474	2473	silent	silent	Everyone was silent during the movie.	看電影時大家都很安靜。	B1	daily	ngsl_2809_2473	ngsl_2809_0649|ngsl_2809_0761		
+2475	2474	pump	pump	I need to pump up my bike tires.	我得幫腳踏車輪胎打氣。	B1	daily	ngsl_2809_2474	ngsl_2809_0089|ngsl_2809_1978|ngsl_2809_1330	pump up（打氣）	
+2476	2475	publisher	publisher	She sent her book to a publisher.	她把書稿寄給了一家出版社。	B2	work	ngsl_2809_2475	ngsl_2809_0322|ngsl_2809_0170		
+2477	2476	celebration	celebration	We're having a small celebration for her birthday.	我們要幫她辦個小小的慶生會。	B1	social	ngsl_2809_2476	ngsl_2809_0185		
+2478	2477	golf	golf	My dad plays golf on weekends.	我爸週末會打高爾夫球。	A2	daily	ngsl_2809_2477	ngsl_2809_1631|ngsl_2809_0157|ngsl_2809_0933		
+2479	2478	compensation	compensation	The airline offered us compensation for the delay.	航空公司因延誤提供我們補償。	C1	travel	ngsl_2809_2478	ngsl_2809_2601|ngsl_2809_0236|ngsl_2809_1309		
+2480	2479	classical	classical	I listen to classical music when I study.	我讀書的時候會聽古典音樂。	B1	study	ngsl_2809_2479	ngsl_2809_0572|ngsl_2809_0391|ngsl_2809_0186	classical music	
+2481	2480	weigh	weigh	How much does this bag weigh?	這個袋子有多重？	A2	travel	ngsl_2809_2480	ngsl_2809_1251		
+2482	2481	versus	versus	We compared the cost of driving versus taking the train.	我們比較了開車和搭火車的花費。	B2	travel	ngsl_2809_2481	ngsl_2809_0613|ngsl_2809_0251|ngsl_2809_0386|ngsl_2809_0058|ngsl_2809_0288		
+2483	2482	deficit	deficit	The company has a budget deficit this year.	公司今年預算出現赤字。	C1	work	ngsl_2809_2482	ngsl_2809_0106|ngsl_2809_1015|ngsl_2809_0057		
+2484	2483	modify	modify	You can modify your order before it ships.	商品出貨前你都可以修改訂單。	B2	shopping	ngsl_2809_2483	ngsl_2809_0214|ngsl_2809_1092		
+2485	2484	flash	flash	Please turn off your flash in the museum.	在博物館裡請關掉閃光燈。	B1	travel	ngsl_2809_2484	ngsl_2809_0470|ngsl_2809_0193|ngsl_2809_1396	turn off	flash 在此為「閃光燈」
+2486	2485	friendship	friendship	Our friendship means a lot to me.	我們的友誼對我來說很重要。	B1	social	ngsl_2809_2485	ngsl_2809_0094|ngsl_2809_0122		
+2487	2486	profession	profession	Teaching is a rewarding profession.	教書是一份很有成就感的職業。	B2	work	ngsl_2809_2486	ngsl_2809_0538		
+2488	2487	literally	literally	I literally ran all the way here.	我真的是一路跑過來的。	B2	social	ngsl_2809_2487	ngsl_2809_0191|ngsl_2809_0079|ngsl_2809_0097	all the way	literally 在此為口語「真的、簡直」
+2489	2488	equation	equation	Can you solve this equation?	你會解這個方程式嗎？	B2	study	ngsl_2809_2488	ngsl_2809_1220		
+2490	2489	gesture	gesture	He made a gesture for me to come in.	他做了個手勢叫我進來。	B2	social	ngsl_2809_2489	ngsl_2809_0047|ngsl_2809_0064		
+2491	2490	entertain	entertained	A clown entertained the kids at the party.	一個小丑在派對上逗孩子們開心。	B1	social	ngsl_2809_2490	ngsl_2809_0528|ngsl_2809_0298		entertain 在此為「娛樂、逗樂」
+2492	2491	fantastic	fantastic	The food was fantastic!	食物超棒的！	A2	food	ngsl_2809_2491	ngsl_2809_0366		
+2493	2492	assign	assigned	The teacher assigned us a lot of homework.	老師出了很多作業給我們。	B1	study	ngsl_2809_2492	ngsl_2809_0495|ngsl_2809_0122		
+2494	2493	inflation	Inflation	Inflation has made everything more expensive.	通貨膨脹讓所有東西都變貴了。	B2	news	ngsl_2809_2493	ngsl_2809_0047|ngsl_2809_0421|ngsl_2809_1060		
+2495	2494	historic	historic	This is a historic building.	這是一棟歷史建築。	B1	travel	ngsl_2809_2494			
+2496	2495	injure	injured	He injured his leg playing soccer.	他踢足球時傷到了腿。	B1	health	ngsl_2809_2495	ngsl_2809_1096|ngsl_2809_0157		
+2497	2496	remote	remote	They live in a remote village.	他們住在一個偏遠的村莊。	B2	travel	ngsl_2809_2496	ngsl_2809_0152|ngsl_2809_0814		remote 在此為「偏遠的」
+2498	2497	therapy	therapy	She goes to physical therapy twice a week.	她每週去做兩次物理治療。	B2	health	ngsl_2809_2497	ngsl_2809_1119|ngsl_2809_1307|ngsl_2809_0156	physical therapy	
+2499	2498	orange	orange	She's wearing an orange dress.	她穿著一件橘色洋裝。	A1	shopping	ngsl_2809_2498	ngsl_2809_0525|ngsl_2809_0898		orange 在此為「橘色的」
+2500	2499	twist	Twist	Twist the cap to open the bottle.	轉開瓶蓋就能打開瓶子。	A2	daily	ngsl_2809_2499	ngsl_2809_2373|ngsl_2809_0213|ngsl_2809_1613		

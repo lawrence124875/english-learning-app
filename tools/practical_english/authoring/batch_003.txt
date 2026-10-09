@@ -1,0 +1,101 @@
+# NGSL index 200–299
+200|money|I don't have enough money with me.|我身上的錢不夠。|A1|shopping|enough||
+201|fact|In fact, I've never been there.|事實上，我從來沒去過那裡。|A2|social|never,there|in fact|
+202|However|It was expensive. However, the food was great.|很貴。不過，食物很棒。|B1|food|expensive,food,great||
+203|area|Is there a parking area nearby?|附近有停車區嗎？|A2|travel|park<parking,nearby||
+204|provides|The hotel provides free breakfast.|飯店提供免費早餐。|B1|travel|hotel,free,breakfast||free 在此為「免費」
+205|name|My name is Lisa.|我的名字是 Lisa。|A1|social|||
+206|read|I like to read before bed.|我喜歡睡前看書。|A1|daily|like,bed|before bed|
+207|friend|She is my best friend.|她是我最好的朋友。|A1|social||best friend|best 不在詞表
+208|month|I visit my parents once a month.|我每個月去看我爸媽一次。|A1|daily|visit,parent<parents,once|once a month|
+209|large|Can I get a large coffee?|我可以點一杯大杯咖啡嗎？|A1|food|get,coffee||
+210|business|I'm here on business.|我是來出差的。|A2|travel|here|on business|
+211|without|I can't live without my phone.|沒有手機我活不下去。|A2|daily|live,phone||
+212|information|Where can I get more information?|我可以在哪裡得到更多資訊？|A2|travel|where,get,more||
+213|open|Is the museum open today?|博物館今天有開嗎？|A1|travel|museum,today||
+214|order|Are you ready to order?|您準備好點餐了嗎？|A1|food|ready||order 在此為動詞「點餐」
+215|government|The government will build a new bridge.|政府將蓋一座新橋。|B1|news|build,new,bridge||
+216|word|I don't know this word.|我不認識這個字。|A1|study|know||
+217|issue|We have an issue with the payment.|付款方面有點問題。|B1|work|payment||
+218|market|We buy fruit at the night market.|我們在夜市買水果。|A1|shopping|buy,fruit,night|night market|
+219|pay|Can I pay by credit card?|我可以用信用卡付款嗎？|A1|shopping|credit,card|pay by card|
+220|build|They want to build a new school here.|他們想在這裡蓋一所新學校。|A2|news|want,new,school,here||
+221|hold|Can you hold my bag for a second?|你可以幫我拿一下包包嗎？|A2|daily|bag,second||hold 在此為「拿著」
+222|service|The service here is excellent.|這裡的服務非常好。|B1|food|here,excellent||
+223|against|Lean your bike against the wall.|把腳踏車靠在牆上。|B1|daily|bike,wall||
+224|believe|I can't believe it!|我真不敢相信！|A2|social|||
+225|second|Wait a second, please.|請稍等一下。|A1|daily|wait,please|Wait a second.|second 在此為「片刻」
+226|though|It was cold. I enjoyed the walk, though.|天氣很冷，不過我散步散得很開心。|B1|daily|cold,enjoy<enjoyed,walk||though 在句尾作副詞
+227|Yes|Yes, I'd love to.|好啊，我很樂意。|A1|social|love|I'd love to.|
+228|love|I love this city.|我好愛這座城市。|A1|travel|city||
+229|increase|The price will increase next year.|明年價格會上漲。|B1|shopping|price,next,year||
+230|job|She found a new job.|她找到一份新工作。|A1|work|find<found,new||
+231|plans|What are your plans for the weekend?|你週末有什麼計畫？|A1|social|weekend||plans 為複數
+232|results|The test results will be ready tomorrow.|檢查結果明天會出來。|B1|health|test,ready,tomorrow||results 為複數
+233|away|Please don't go away.|請不要走開。|A1|daily|please,go|go away|
+234|example|Can you give me an example?|你可以舉個例子嗎？|A2|study|give|for example|
+235|happened|What happened?|發生了什麼事？|A1|daily|what||
+236|offered|They offered me a job.|他們給了我一份工作。|B1|work|job||
+237|young|She looks young for her age.|以她的年紀來說，她看起來很年輕。|A2|social|look<looks,age|for her age|
+238|close|What time do you close?|你們幾點打烊？|A1|shopping|time||close 在此為「打烊」
+239|program|I watch this TV program every week.|我每週都看這個電視節目。|A2|daily|watch,every,week||program 在此為「節目」，NGSL 中文為「程式」
+240|leads|This road leads to the beach.|這條路通往海灘。|B1|travel|road,beach||lead 在此為「通往」
+241|buy|I want to buy a gift for my mom.|我想買一份禮物給我媽媽。|A1|shopping|want,gift|buy ... for ...|mom 不在詞表
+242|understand|I don't understand the question.|我不懂這個問題。|A1|study|question||
+243|Thank|Thank you for coming.|謝謝你來。|A1|social|come<coming|Thank you for ...|
+244|far|Is it far from here?|離這裡很遠嗎？|A1|travel|here|far from|
+245|today|What's the date today?|今天幾月幾號？|A1|daily|date||
+246|hours|The flight takes two hours.|飛行時間是兩小時。|A2|travel|flight,take<takes||
+247|student|I'm a student at this university.|我是這所大學的學生。|A1|study|university||
+248|face|Wash your face before bed.|睡前要洗臉。|A1|daily|wash,bed||
+249|hope|I hope you feel better soon.|希望你早日康復。|A2|health|feel,soon||
+250|idea|I have no idea.|我完全不知道。|A2|social||I have no idea.|
+251|cost|The trip will cost about five hundred dollars.|這趟旅行大約要花五百美元。|A2|travel|trip,about,five,hundred,dollar<dollars||
+252|less|I want to spend less money this month.|我這個月想少花點錢。|A2|daily|want,spend,money,month||
+253|room|Do you have a room for tonight?|今晚有空房嗎？|A1|travel|tonight||
+254|until|The store is open until ten.|那家店開到十點。|A1|shopping|store,open,ten||
+255|reason|Is there a reason for the delay?|延誤有什麼原因嗎？|B1|travel|delay||
+256|form|Please fill out this form.|請填寫這張表格。|A2|official|please,fill out|fill out a form|
+257|spend|How do you spend your weekends?|你週末都怎麼過？|A2|social|how,weekend<weekends||
+258|head|My head hurts.|我頭痛。|A1|health|hurt<hurts||
+259|car|Where did you park your car?|你把車停在哪裡？|A1|travel|where,park||
+260|learning|I'm learning to cook.|我正在學做菜。|A1|daily|cook||
+261|level|What's your English level?|你的英文程度如何？|A2|study|||English 不在詞表
+262|person|She is a very kind person.|她是個很親切的人。|A1|social|very,kind||kind 在此為「親切」
+263|experience|Do you have any work experience?|你有任何工作經驗嗎？|B1|work|any,work||
+264|once|I've been to Japan once.|我去過日本一次。|A2|travel|||Japan 不在詞表
+265|member|Are you a member?|你是會員嗎？|A2|shopping|||
+266|enough|Is that enough for everyone?|那樣夠大家用嗎？|A2|daily|everyone||
+267|bad|The weather is bad today.|今天天氣很糟。|A1|daily|weather,today||
+268|city|Taipei is a busy city.|台北是個繁忙的城市。|A1|travel|busy||Taipei 不在詞表
+269|night|Good night, sleep well.|晚安，睡個好覺。|A1|daily|good,sleep,well|Good night.|
+270|able|Will you be able to come?|你能來嗎？|A2|social|come|be able to|
+271|support|Thank you for your support.|謝謝你的支持。|A2|social|thank||
+272|whether|I don't know whether he is coming.|我不知道他會不會來。|B1|social|know,come<coming||
+273|line|There's a long line at the counter.|櫃台前大排長龍。|A2|shopping|long,counter||line 在此為「隊伍」，NGSL 中文為「線」
+274|present|I bought a present for you.|我買了一份禮物給你。|A1|social|buy<bought||present 在此為「禮物」
+275|side|The bathroom is on the left side.|洗手間在左手邊。|A2|travel|left||bathroom 不在詞表
+276|quite|The food was quite good.|食物相當不錯。|A2|food|food,good||
+277|Although|Although it was raining, we went out.|雖然在下雨，我們還是出門了。|B1|daily|rain<raining,go<went|go out|
+278|sure|Are you sure?|你確定嗎？|A1|social|||
+279|term|What does this term mean?|這個術語是什麼意思？|B1|study|mean||
+280|least|You should sleep at least seven hours.|你應該至少睡七個小時。|A2|health|should,sleep,seven,hour<hours|at least|
+281|age|What age do kids start school here?|這裡的小孩幾歲開始上學？|A2|study|kid<kids,start,school,here||
+282|low|The prices are low here.|這裡的價格很低。|A2|shopping|price<prices,here||
+283|speak|Do you speak Chinese?|你會說中文嗎？|A1|social|||Chinese 不在詞表
+284|within|We will reply within two days.|我們會在兩天內回覆。|B1|work|reply,day<days||
+285|process|The process takes about a week.|這個流程大約需要一週。|B1|work|take<takes,about,week||
+286|public|Is there public transport to the airport?|有大眾運輸可以到機場嗎？|B1|travel|transport||airport 不在詞表
+287|often|How often do you exercise?|你多久運動一次？|A2|health|how,exercise|How often ...?|
+288|train|The train is late again.|火車又誤點了。|A1|travel|late,again||train 用「火車」詞義
+289|possible|Is it possible to change the date?|可以改日期嗎？|A2|travel|change,date|Is it possible to ...?|
+290|actually|Actually, I changed my mind.|其實我改變主意了。|B1|social|change<changed,mind|change my mind|
+291|rather|I'd rather stay home tonight.|我今晚寧願待在家。|B1|daily|stay,home,tonight|would rather|
+292|view|The view from the top is amazing.|從上面看出去的景色很棒。|A2|travel|top||view 在此為「景色」，NGSL 中文為「觀點」
+293|together|Let's have lunch together.|我們一起吃午餐吧。|A1|food|let<Let's,have,lunch||
+294|consider|We will consider your idea.|我們會考慮你的想法。|B1|work|idea||
+295|price|What is the price of this bag?|這個包包多少錢？|A1|shopping|bag||
+296|parents|My parents live in the country.|我爸媽住在鄉下。|A2|daily|live,country||parents 為 parent 複數；country 在此為「鄉下」
+297|hard|She works very hard.|她工作非常努力。|A1|work|work<works,very||
+298|party|Are you coming to the party?|你會來參加派對嗎？|A1|social|come<coming||
+299|local|Try the local food.|試試當地的食物。|A2|food|try,food||

@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1801	1800	injury	injury	He missed the game because of an injury.	他因為受傷錯過了比賽。	B1	health	ngsl_2809_1800	ngsl_2809_0644|ngsl_2809_0392	because of	
+1802	1801	vast	vast	The park is vast. Bring good shoes.	公園非常大，要穿好走的鞋。	B2	travel	ngsl_2809_1801	ngsl_2809_0656|ngsl_2809_0195|ngsl_2809_0055|ngsl_2809_1475		
+1803	1802	exhibition	exhibition	There's a photo exhibition at the museum.	博物館有一個攝影展。	B1	travel	ngsl_2809_1802	ngsl_2809_1207|ngsl_2809_1396		
+1804	1803	producer	producer	He works as a TV producer.	他是電視節目製作人。	B1	work	ngsl_2809_1803	ngsl_2809_0066		
+1805	1804	regional	regional	Try the regional dishes while you're here.	你在這裡的時候試試當地的菜。	B2	food	ngsl_2809_1804	ngsl_2809_0124|ngsl_2809_1881|ngsl_2809_0097		
+1806	1805	immediate	immediate	We need an immediate answer.	我們需要立即的答覆。	B1	work	ngsl_2809_1805	ngsl_2809_0089|ngsl_2809_0354		
+1807	1806	incident	incident	The incident was reported to the manager.	這起事件已經呈報給經理了。	B2	work	ngsl_2809_1806	ngsl_2809_0165|ngsl_2809_0660		
+1808	1807	childhood	childhood	I spent my childhood by the sea.	我的童年是在海邊度過的。	B1	daily	ngsl_2809_1807	ngsl_2809_0257|ngsl_2809_0986		
+1809	1808	draft	draft	Can you check my first draft?	你可以幫我看一下初稿嗎？	B1	work	ngsl_2809_1808	ngsl_2809_0579|ngsl_2809_0077	first draft	
+1810	1809	slip	slip	Be careful not to slip on the ice.	小心別在冰上滑倒。	B1	daily	ngsl_2809_1809	ngsl_2809_1636|ngsl_2809_1553		
+1811	1810	accompany	accompanied	Children must be accompanied by an adult.	兒童須由成人陪同。	B2	official	ngsl_2809_1810	ngsl_2809_0101|ngsl_2809_0879		
+1812	1811	politician	politician	The politician visited our school.	那位政治人物來參訪我們學校。	B1	news	ngsl_2809_1811	ngsl_2809_0332|ngsl_2809_0145		
+1813	1812	angry	angry	Are you angry with me?	你在生我的氣嗎？	A1	social	ngsl_2809_1812		be angry with	
+1814	1813	knock	knock	Please knock before you come in.	進來前請先敲門。	A2	daily	ngsl_2809_1813	ngsl_2809_0470|ngsl_2809_0064	come in	
+1815	1814	seed	seeds	Remove the seeds before cooking.	煮之前先把籽去掉。	B1	food	ngsl_2809_1814	ngsl_2809_1052|ngsl_2809_1195		seed 在此指蔬果的「籽」
+1816	1815	salary	salary	The salary is better than my last job.	薪水比我上一份工作好。	B1	work	ngsl_2809_1815	ngsl_2809_0055|ngsl_2809_0100|ngsl_2809_0230		
+1817	1816	illustrate	illustrate	Let me illustrate with an example.	我舉個例子說明。	B2	study	ngsl_2809_1816	ngsl_2809_0173|ngsl_2809_0234		
+1818	1817	imply	implying	Are you implying that I'm wrong?	你是在暗示我錯了嗎？	B2	social	ngsl_2809_1817	ngsl_2809_0574		
+1819	1818	breakfast	breakfast	Breakfast is served from seven to ten.	早餐供應時間是七點到十點。	A1	travel	ngsl_2809_1818	ngsl_2809_0533|ngsl_spoken_720_0233|ngsl_spoken_720_0209		
+1820	1819	temporary	temporary	This is only a temporary solution.	這只是暫時的解決辦法。	B1	work	ngsl_2809_1819	ngsl_2809_0073|ngsl_2809_0787		
+1821	1820	liberal	liberal	She has very liberal views on parenting.	她對教養孩子的觀念很開明。	C1	social	ngsl_2809_1820	ngsl_2809_0292		liberal 在此為「開明的、不拘泥的」
+1822	1821	lake	lake	Let's go swimming in the lake.	我們去湖裡游泳吧。	A1	travel	ngsl_2809_1821	ngsl_2809_0030|ngsl_2809_1390	go swimming	
+1823	1822	qualify	qualified	She qualified for the final round.	她晉級決賽了。	B2	social	ngsl_2809_1822	ngsl_2809_0697|ngsl_2809_0518	qualify for	qualify 在此為「取得資格」
+1824	1823	competitive	competitive	The job market is very competitive.	就業市場競爭非常激烈。	B2	work	ngsl_2809_1823	ngsl_2809_0230|ngsl_2809_0218		
+1825	1824	truly	truly	I'm truly sorry for the trouble.	造成你的困擾，我真的很抱歉。	B1	social	ngsl_2809_1824	ngsl_2809_0764|ngsl_2809_0831		
+1826	1825	hi	hi	Hi, how are you doing?	嗨，你最近好嗎？	A1	social	ngsl_2809_1825		How are you doing?	
+1827	1826	yellow	yellow	I'll take the yellow one.	我要黃色那個。	A1	shopping	ngsl_2809_1826	ngsl_2809_0058		
+1828	1827	habit	habit	Biting your nails is a bad habit.	咬指甲是個壞習慣。	B1	health	ngsl_2809_1827	ngsl_2809_2662|ngsl_2809_0267		
+1829	1828	disk	disk	Save the file to the hard disk.	把檔案存到硬碟裡。	B1	work	ngsl_2809_1828	ngsl_2809_0565|ngsl_2809_0834|ngsl_2809_0297	hard disk	
+1830	1829	core	core	Teamwork is one of our core values.	團隊合作是我們的核心價值之一。	B2	work	ngsl_2809_1829	ngsl_2809_0341	core values	
+1831	1830	emotional	emotional	The movie ending was very emotional.	電影的結局很感人。	B1	social	ngsl_2809_1830	ngsl_2809_0761		emotional 在此為「感人的、令人動容的」
+1832	1831	aircraft	aircraft	Please stay seated until the aircraft stops.	飛機停妥前請留在座位上。	B2	travel	ngsl_2809_1831	ngsl_2809_0470|ngsl_2809_0344|ngsl_2809_0851|ngsl_2809_0346		
+1833	1832	self	self	Just be your true self.	做真實的自己就好。	B2	social	ngsl_2809_1832	ngsl_2809_0063|ngsl_2809_0477		
+1834	1833	metal	metal	Remove any metal items before the scan.	掃描前請取下所有金屬物品。	B1	travel	ngsl_2809_1833	ngsl_2809_1052|ngsl_2809_0746|ngsl_2809_2610		
+1835	1834	existence	existence	I didn't know about the existence of this café.	我之前不知道有這家咖啡店。	C1	food	ngsl_2809_1834	ngsl_2809_0040		
+1836	1835	bone	bones	Be careful, this fish has bones.	小心，這條魚有刺。	A2	food	ngsl_2809_1835	ngsl_2809_1636|ngsl_2809_0827		bone 在此指魚刺
+1837	1836	panel	panel	Press the button on the control panel.	按下控制面板上的按鈕。	B2	daily	ngsl_2809_1836	ngsl_2809_0673|ngsl_2809_2284|ngsl_2809_0300	control panel	
+1838	1837	prime	prime	This apartment is in a prime location.	這間公寓的地段絕佳。	C1	daily	ngsl_2809_1837	ngsl_2809_2167|ngsl_2809_1364	prime location	prime 在此為「最好的、首要的」
+1839	1838	appointment	appointment	I have a dentist appointment at three.	我三點要去看牙醫。	A2	health	ngsl_2809_1838	ngsl_spoken_720_0094		
+1840	1839	emphasize	emphasized	The teacher emphasized the importance of practice.	老師強調練習的重要。	B2	study	ngsl_2809_1839	ngsl_2809_0495|ngsl_2809_1143|ngsl_2809_0483		
+1841	1840	maximum	maximum	The maximum stay is two hours.	最多可以停留兩小時。	B1	travel	ngsl_2809_1840	ngsl_2809_0344|ngsl_spoken_720_0070|ngsl_2809_0246		
+1842	1841	effectively	effectively	We need to use our time more effectively.	我們需要更有效地利用時間。	B2	work	ngsl_2809_1841	ngsl_2809_0089|ngsl_2809_0067|ngsl_2809_0048		
+1843	1842	elsewhere	elsewhere	This shop is full. Let's eat elsewhere.	這家店客滿了，我們去別的地方吃吧。	B1	food	ngsl_2809_1842	ngsl_2809_0436|ngsl_2809_0409|ngsl_2809_0173|ngsl_2809_0475		
+1844	1843	bother	bother	Sorry to bother you, but can I ask something?	抱歉打擾你，我可以問個問題嗎？	A2	social	ngsl_2809_1843	ngsl_2809_0764|ngsl_2809_0133|ngsl_2809_0137		
+1845	1844	initiative	initiative	She took the initiative and fixed the problem.	她主動把問題解決了。	B2	work	ngsl_2809_1844	ngsl_2809_0058|ngsl_2809_0972|ngsl_2809_0119	take the initiative	
+1846	1845	sharp	sharp	Be careful, the knife is sharp.	小心，刀子很利。	A2	daily	ngsl_2809_1845	ngsl_2809_1636|ngsl_2809_2656		
+1847	1846	diet	diet	I'm on a diet this month.	我這個月在節食。	A2	health	ngsl_2809_1846	ngsl_2809_0208	on a diet	diet 在此為「節食」
+1848	1847	motion	motion	I get motion sickness on buses.	我坐公車會暈車。	B2	travel	ngsl_2809_1847	ngsl_2809_0042|ngsl_2809_0809	motion sickness	
+1849	1848	gray	gray	Do you have this in gray?	這件有灰色的嗎？	A1	shopping	ngsl_2809_1848			
+1850	1849	plastic	plastic	Can I get a paper bag instead of plastic?	可以給我紙袋，不要塑膠袋嗎？	A2	shopping	ngsl_2809_1849	ngsl_2809_0042|ngsl_2809_0424|ngsl_2809_1251|ngsl_2809_0552	instead of	
+1851	1850	complicate	complicate	Let's not complicate things.	我們別把事情搞複雜。	B2	social	ngsl_2809_1850	ngsl_2809_0173|ngsl_2809_0086		
+1852	1851	discipline	discipline	Learning to play the piano takes discipline.	學鋼琴需要自律。	B2	study	ngsl_2809_1851	ngsl_2809_0260|ngsl_2809_0157|ngsl_2809_2590|ngsl_2809_0058		discipline 在此為「自律」
+1853	1852	disappoint	disappoint	The food didn't disappoint.	食物果然沒讓人失望。	B1	food	ngsl_2809_1852	ngsl_2809_0366		
+1854	1853	boss	boss	My boss is on vacation this week.	我老闆這週在休假。	A2	work	ngsl_2809_1853	ngsl_2809_0156	on vacation	
+1855	1854	assumption	assumptions	Don't make assumptions about people.	不要對別人妄下定論。	B2	social	ngsl_2809_1854	ngsl_2809_0047|ngsl_2809_0056	make assumptions	
+1856	1855	freeze	freeze	You can freeze the leftovers.	剩菜可以拿去冷凍。	B1	food	ngsl_2809_1855			
+1857	1856	extreme	extreme	The heat here can be extreme in summer.	這裡夏天可能熱得很誇張。	B2	travel	ngsl_2809_1856	ngsl_2809_1140|ngsl_2809_0097|ngsl_2809_0653		
+1858	1857	passage	passage	Read the passage and answer the questions.	閱讀這篇短文並回答問題。	B1	study	ngsl_2809_1857	ngsl_2809_0206|ngsl_2809_0354|ngsl_2809_0180		passage 在此為「（文章）段落」，非「通道」
+1859	1858	reputation	reputation	This restaurant has a great reputation.	這家餐廳的口碑很好。	B1	food	ngsl_2809_1858	ngsl_2809_0918|ngsl_2809_0123		
+1860	1859	forth	forth	We talked back and forth for an hour.	我們來來回回談了一個小時。	B2	social	ngsl_2809_1859	ngsl_2809_0136|ngsl_2809_0093|ngsl_2809_0246	back and forth	
+1861	1860	negotiation	negotiations	The negotiations went well.	談判進行得很順利。	B2	work	ngsl_2809_1860	ngsl_2809_0030|ngsl_2809_0060		
+1862	1861	mechanism	mechanism	The lock has a simple mechanism.	這個鎖的構造很簡單。	C1	daily	ngsl_2809_1861	ngsl_2809_1603|ngsl_2809_0687		mechanism 在此為「機械構造」
+1863	1862	coat	coat	Take your coat. It's cold outside.	帶件外套，外面很冷。	A1	daily	ngsl_2809_1862	ngsl_2809_0058|ngsl_2809_0866|ngsl_2809_0490		
+1864	1863	democracy	democracy	Students learn about democracy in school.	學生在學校學習民主。	B2	study	ngsl_2809_1863	ngsl_2809_0247|ngsl_2809_0260|ngsl_2809_0145		
+1865	1864	pocket	pocket	My phone is in my pocket.	我的手機在口袋裡。	A1	daily	ngsl_2809_1864	ngsl_2809_0478		
+1866	1865	lucky	lucky	You're so lucky!	你真幸運！	A1	social	ngsl_2809_1865			
+1867	1866	crash	crashing	My computer keeps crashing.	我的電腦一直當機。	B1	work	ngsl_2809_1866	ngsl_2809_0428|ngsl_2809_0176	keep ...ing	crash 在此為「當機」，非「墜毀」
+1868	1867	observation	observation	That's an interesting observation.	那是個很有意思的觀察。	B2	study	ngsl_2809_1867			
+1869	1868	meat	meat	I don't eat red meat.	我不吃紅肉。	A1	food	ngsl_2809_1868	ngsl_2809_0475|ngsl_2809_0799	red meat	
+1870	1869	concentration	concentration	This job requires a lot of concentration.	這份工作需要高度專注。	B2	work	ngsl_2809_1869	ngsl_2809_0230|ngsl_2809_0401|ngsl_2809_0122		concentration 在此為「專注力」，非「濃度」
+1871	1870	implication	implications	Think about the implications before you decide.	做決定前先想想可能的後果。	C1	work	ngsl_2809_1870	ngsl_2809_0046|ngsl_2809_0358		implication 在此為「可能的影響、後果」
+1872	1871	deserve	deserve	You deserve a break.	你應該好好休息一下。	B1	work	ngsl_2809_1871	ngsl_2809_0367		
+1873	1872	unusual	unusual	It's unusual for him to be late.	他遲到很少見。	B1	daily	ngsl_2809_1872	ngsl_2809_0146		
+1874	1873	defend	defends	She always defends her little brother.	她總是護著她弟弟。	B2	social	ngsl_2809_1873	ngsl_2809_0182|ngsl_2809_0131|ngsl_2809_0820		defend 在此為「保護、袒護」
+1875	1874	classic	classic	This is a classic movie.	這是一部經典電影。	B1	social	ngsl_2809_1874	ngsl_2809_0761		
+1876	1875	king	king	The lion is the king of the jungle.	獅子是叢林之王。	A2	daily	ngsl_2809_1875			
+1877	1876	interaction	interaction	The class has lots of interaction.	這門課互動很多。	B2	study	ngsl_2809_1876	ngsl_2809_0361|ngsl_2809_0122		
+1878	1877	repair	repair	How much will the repair cost?	修理要多少錢？	A2	shopping	ngsl_2809_1877	ngsl_2809_0251		
+1879	1878	collapse	collapsed	The old bridge collapsed last year.	那座舊橋去年塌了。	B2	news	ngsl_2809_1878	ngsl_2809_0143|ngsl_2809_1545|ngsl_2809_0100|ngsl_2809_0057		
+1880	1879	borrow	borrow	Can I borrow your pen?	我可以借你的筆嗎？	A1	study	ngsl_2809_1879	ngsl_2809_2319		
+1881	1880	fundamental	fundamental	Grammar is fundamental to learning a language.	文法是學語言的基礎。	C1	study	ngsl_2809_1880	ngsl_2809_2686|ngsl_2809_0260|ngsl_2809_0359		
+1882	1881	dish	dish	What's your favorite dish?	你最喜歡的菜是什麼？	A2	food	ngsl_2809_1881	ngsl_2809_0999		
+1883	1882	abroad	abroad	Have you ever studied abroad?	你有出國留學過嗎？	B1	study	ngsl_2809_1882	ngsl_2809_0316|ngsl_2809_0186	study abroad	
+1884	1883	soul	soul	She puts her heart and soul into her work.	她全心全意投入工作。	B2	work	ngsl_2809_1883	ngsl_2809_0138|ngsl_2809_0621|ngsl_2809_0066	heart and soul	
+1885	1884	capable	capable	He's capable of handling the job.	他有能力處理這份工作。	B2	work	ngsl_2809_1884	ngsl_2809_1040|ngsl_2809_0230	be capable of	
+1886	1885	defeat	defeated	Our team was defeated in the final.	我們的隊伍在決賽輸了。	B2	social	ngsl_2809_1885	ngsl_2809_0406|ngsl_2809_0697		
+1887	1886	presidential	presidential	The presidential debate is on TV tonight.	總統辯論今晚會在電視上播出。	B2	news	ngsl_2809_1886	ngsl_2809_0937|ngsl_2809_1413		
+1888	1887	perfectly	perfectly	The shoes fit perfectly.	這雙鞋穿起來剛剛好。	B1	shopping	ngsl_2809_1887	ngsl_2809_1475|ngsl_2809_0699		
+1889	1888	enhance	enhance	Good lighting can enhance your photos.	好的光線可以讓照片更出色。	C1	daily	ngsl_2809_1888	ngsl_2809_0055|ngsl_2809_1207		
+1890	1889	proud	proud	I'm so proud of you.	我真為你感到驕傲。	A2	social	ngsl_2809_1889		be proud of	
+1891	1890	emergency	emergency	In an emergency, call this number.	發生緊急情況時，請撥這個號碼。	B1	phone	ngsl_2809_1890	ngsl_2809_0104|ngsl_2809_0126	in an emergency	
+1892	1891	educational	educational	The museum is fun and educational.	這座博物館既好玩又有教育意義。	B1	travel	ngsl_2809_1891	ngsl_2809_1396|ngsl_2809_0901		
+1893	1892	distinguish	distinguish	I can't distinguish the twins.	我分不出這對雙胞胎誰是誰。	B2	social	ngsl_2809_1892	ngsl_2809_2365		
+1894	1893	substantial	substantial	We received a substantial discount.	我們拿到了相當大的折扣。	C1	shopping	ngsl_2809_1893	ngsl_2809_0395|ngsl_2809_1659		
+1895	1894	nearby	nearby	Is there a pharmacy nearby?	附近有藥局嗎？	A2	travel	ngsl_2809_1894			
+1896	1895	manufacturer	manufacturer	Contact the manufacturer for repairs.	維修請聯絡製造商。	B2	shopping	ngsl_2809_1895	ngsl_2809_0599|ngsl_2809_1877		
+1897	1896	slide	slides	The door slides open.	這扇門是往旁邊滑開的。	B1	daily	ngsl_2809_1896	ngsl_2809_0489|ngsl_2809_0213		
+1898	1897	valuable	valuable	Don't leave valuable items in the car.	不要把貴重物品留在車上。	B1	travel	ngsl_2809_1897	ngsl_2809_0125|ngsl_2809_0746|ngsl_2809_0259		
+1899	1898	personally	personally	Personally, I prefer the blue one.	我個人比較喜歡藍色那個。	B1	shopping	ngsl_2809_1898	ngsl_2809_0948|ngsl_2809_0857		
+1900	1899	breast	breast	I'll have the grilled chicken breast.	我要烤雞胸肉。	A2	food	ngsl_2809_1899	ngsl_2809_2338	chicken breast	breast 在此指「雞胸肉」

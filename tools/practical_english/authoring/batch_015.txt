@@ -1,0 +1,101 @@
+# NGSL index 1400–1499
+1400|dear|She's a dear friend of mine.|她是我很珍惜的好朋友。|B1|social|friend||dear 在此為「親愛的、珍貴的」
+1401|objective|What's the main objective of this meeting?|這次會議的主要目標是什麼？|B2|work|main||
+1402|Moreover|The hotel is cheap. Moreover, it's close to the beach.|這家飯店很便宜，而且離海灘很近。|B2|travel|hotel,cheap,close,beach||
+1403|onto|The cat jumped onto the table.|貓跳到桌子上。|A2|daily|cat,jump<jumped,table||
+1404|historical|The town has many historical buildings.|這個小鎮有很多歷史建築。|B1|travel|town,many||
+1405|oppose|Many residents oppose the new road.|許多居民反對蓋那條新路。|B2|news|many,resident<residents,new,road||
+1406|branch|The bank has a branch near my office.|這家銀行在我公司附近有分行。|B1|official|bank,near,office||branch 在此為「分行」
+1407|vehicle|Please do not leave your vehicle here.|請勿將車輛停放在此。|B1|official|please,leave,here||
+1408|scientist|She wants to be a scientist.|她想當科學家。|A2|study|want<wants||
+1409|route|Which route is faster?|哪條路線比較快？|A2|travel|fast<faster||
+1410|Bind|Bind the old newspapers together with string.|用繩子把舊報紙綁在一起。|B2|daily|old,newspaper<newspapers,together,string||bind 在此為「捆、綁」
+1411|belong|Does this bag belong to you?|這個包包是你的嗎？|A2|daily|bag|belong to ...|
+1412|taste|This soup has a strange taste.|這湯的味道怪怪的。|A2|food|strange||taste 在此為「味道」
+1413|tonight|What are you doing tonight?|你今晚要做什麼？|A1|social|do<doing||
+1414|fashion|She works in the fashion industry.|她在時尚業工作。|B1|work|work<works,industry||
+1415|danger|The doctor says he's out of danger.|醫生說他已經脫離險境了。|B1|health|doctor,say<says|out of danger|
+1416|bomb|I bought a bath bomb for my sister.|我買了一顆泡澡球給我妹妹。|B1|shopping|buy<bought,bath,sister|bath bomb|bomb 在此為 bath bomb「泡澡球」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：生活用品（bath bomb）
+1417|army|My cousin joined the army last year.|我表哥去年從軍了。|B1|daily|cousin,join<joined,last,year||
+1418|dangerous|It's dangerous to cross the street here.|從這裡過馬路很危險。|A2|travel|cross,street,here||
+1419|decreased|The number of visitors decreased this year.|今年遊客人數減少了。|B1|news|number,visitor<visitors,year||
+1420|hurt|Did you hurt yourself?|你有受傷嗎？|A2|health|||
+1421|council|The city council approved the plan.|市議會通過了這項計畫。|B2|news|city,approve<approved,plan|city council|
+1422|editor|The editor asked me to cut the article.|編輯要我刪減這篇文章。|B1|work|ask<asked,cut,article||
+1423|normally|I normally get up at seven.|我通常七點起床。|A2|daily|get,seven|get up|
+1424|sight|The beach is finally in sight.|終於看到海灘了。|B1|travel|beach,finally|in sight|sight 在此為「視線範圍」
+1425|generate|Solar panels generate electricity.|太陽能板會產生電力。|B2|news|solar,panel<panels,electricity||
+1426|gift|This is a small gift for you.|這是給你的小禮物。|A1|social|small||
+1427|delivery|Is delivery free?|外送免費嗎？|A2|shopping|free||delivery 在此為「外送、配送」
+1428|denied|He denied eating the last cookie.|他否認吃了最後一塊餅乾。|B1|daily|eat<eating,last||
+1429|guests|We're having guests for dinner tonight.|我們今晚有客人要來吃晚餐。|A2|social|have<having,dinner,tonight||
+1430|anybody|Is anybody home?|有人在家嗎？|A1|daily|home||
+1431|bedrooms|The apartment has two bedrooms.|這間公寓有兩間臥室。|A1|daily|apartment,two||
+1432|quoted|She quoted a line from her favorite movie.|她引用了她最愛的電影裡的一句台詞。|B1|social|line,favorite,movie||
+1433|climb|Let's climb to the top of the hill.|我們爬到山頂吧。|A2|travel|top,hill||
+1434|Basically|Basically, the job is done.|基本上，工作已經完成了。|B1|work|job,do<done||
+1435|violence|This movie has too much violence for kids.|這部電影的暴力內容太多，不適合小孩看。|B1|social|movie,much,kid<kids||2026-10-09 第一輪風險複審保留；主題：媒體評價
+1436|minister|The minister will visit the school tomorrow.|部長明天會來學校參訪。|B2|news|visit,school,tomorrow||
+1437|mainly|Our customers are mainly young people.|我們的客人主要是年輕人。|B1|work|customer<customers,young,people||
+1438|mouth|Don't talk with your mouth full.|嘴巴裡有東西時不要說話。|A2|food|talk,full||
+1439|noise|The noise from the street kept me awake.|街上的噪音吵得我睡不著。|B1|daily|street,keep<kept||
+1440|manner|She spoke in a friendly manner.|她說話的態度很友善。|B2|social|speak<spoke,friendly||
+1441|guns|The kids are having fun with water guns.|孩子們玩水槍玩得很開心。|A2|daily|kid<kids,have<having,fun,water|water gun|gun 在此為「水槍」，避開暴力義；2026-10-09 第一輪風險複審保留；主題：玩具（水槍）
+1442|square|Let's meet in the main square.|我們在主廣場碰面吧。|A2|travel|meet,main||
+1443|occasion|This dress is perfect for any occasion.|這件洋裝適合任何場合。|B1|shopping|dress,perfect||
+1444|familiar|Your face looks familiar.|你看起來很面熟。|B1|social|face,look<looks||
+1445|ignored|He ignored my advice.|他沒聽我的勸告。|B1|social|advice||
+1446|destroyed|The storm destroyed several houses.|暴風雨摧毀了好幾間房子。|B1|news|storm,several,house<houses||
+1447|affair|The wedding was a small family affair.|婚禮是只有家人參加的小型聚會。|B2|social|small,family|family affair|affair 在此為「活動、場合」
+1448|civil|My dad is a civil engineer.|我爸是土木工程師。|B1|work|dad,engineer|civil engineer|civil 在此為「土木的」（civil engineer）
+1449|located|The office is located downtown.|辦公室位於市中心。|B1|work|office|be located|
+1450|citizens|Senior citizens get a discount.|年長者有優惠。|B1|shopping|senior,get,discount|senior citizen|
+1451|temperature|What's the temperature today?|今天氣溫幾度？|A2|daily|today||
+1452|gold|She wore a gold necklace.|她戴了一條金項鍊。|A2|shopping|wear<wore||
+1453|Domestic|Domestic flights leave from Terminal 1.|國內線航班從第一航廈出發。|B1|travel|flight<flights,leave|domestic flight|
+1454|load|This page is taking forever to load.|這個網頁一直載入不出來。|B1|phone|page,take<taking,forever|take forever|
+1455|belief|It's a common belief that carrots are good for your eyes.|很多人相信紅蘿蔔對眼睛很好。|B2|health|common,good,eye<eyes||
+1456|troops|The troops came home for the holidays.|部隊官兵回家過節了。|B2|news|come<came,home,holiday<holidays||
+1457|technical|We're having technical problems.|我們遇到了一些技術問題。|B1|work|have<having,problem<problems||
+1458|Remind|Remind me to call my mom.|提醒我打電話給我媽。|A2|daily|call,mom||
+1459|arrangements|We made arrangements to meet at noon.|我們約好中午見面。|B1|work|make<made,meet|make arrangements|
+1460|skin|This cream is good for dry skin.|這款乳霜很適合乾性肌膚。|B1|health|cream,good,dry||
+1461|prison|The old prison is now a museum.|那座舊監獄現在是博物館了。|B1|travel|old,now,museum||2026-10-09 第一輪風險複審保留；主題：建築
+1462|switch|Can we switch seats?|我們可以換座位嗎？|A2|travel|seat<seats||
+1463|acquired|I've acquired a taste for spicy food.|我漸漸愛上吃辣了。|C1|food|taste,food|acquire a taste for ...|acquire 在此為「逐漸養成（喜好）」
+1464|corporate|He left his corporate job to open a bakery.|他辭掉了公司的工作，開了一家麵包店。|B2|work|leave<left,job,open||
+1465|fairly|I'm fairly sure he's coming.|我相當確定他會來。|B1|social|sure,come<coming||
+1466|wood|We need more wood for the fire.|我們需要更多木柴來生火。|A2|travel|need,more,fire||wood 在此為「木柴」
+1467|participate|Everyone can participate in the game.|每個人都可以參加這個遊戲。|B1|social|everyone,game|participate in|
+1468|tough|It's been a tough week.|這週真是辛苦。|A2|work|week||
+1469|tears|She had tears in her eyes.|她眼眶含著淚水。|B1|social|eye<eyes||
+1470|representative|Please hold for a customer service representative.|請稍候，客服人員將為您服務。|B2|phone|please,hold,customer,service|customer service|
+1471|capacity|The hall has a capacity of five hundred people.|這個大廳可容納五百人。|B2|official|hall,five,hundred,people||
+1472|border|We crossed the border by bus.|我們搭巴士越過邊境。|B1|travel|cross<crossed,bus||
+1473|Shake|Shake the bottle before use.|使用前請先搖勻。|A2|health|bottle,use||
+1474|assessment|We'll do a risk assessment first.|我們會先做風險評估。|B2|work|do,risk,first|risk assessment|
+1475|shoes|I need a new pair of shoes.|我需要一雙新鞋。|A1|shopping|need,new,pair|a pair of|
+1476|ought|We ought to leave now.|我們現在應該出發了。|B1|daily|leave,now|ought to|
+1477|ad|I saw an ad for this job online.|我在網路上看到這份工作的廣告。|A2|work|see<saw,job,online||
+1478|fee|Is there a fee for parking?|停車要收費嗎？|B1|travel|||
+1479|hall|The bathroom is down the hall.|洗手間在走廊那頭。|A2|daily||down the hall|hall 在此為「走廊」
+1480|regulations|Safety regulations must be followed.|必須遵守安全規定。|B2|official|safety,must,follow<followed||
+1481|escape|We went to the beach to escape the heat.|我們去海邊避暑。|B1|travel|go<went,beach,heat||escape 在此為「躲避、逃離」
+1482|studio|She rents a small studio downtown.|她在市中心租了一間小套房。|B1|daily|rent<rents,small||studio 在此為「套房」（studio apartment）
+1483|proper|You need proper shoes for hiking.|健行要穿合適的鞋子。|B1|travel|need,shoe<shoes||
+1484|relax|Just relax and enjoy the view.|放輕鬆，好好欣賞風景吧。|A2|travel|just,enjoy,view||
+1485|tourists|This area is full of tourists in summer.|這一區夏天到處都是遊客。|A2|travel|area,full,summer|be full of|
+1486|component|We need to replace one component.|我們需要更換一個零件。|B2|work|need,replace||
+1487|afford|I can't afford a new car right now.|我現在買不起新車。|B1|shopping|new,car,right,now|can't afford|
+1488|lawyer|Her husband works as a lawyer.|她先生是律師。|A2|work|husband,work<works||
+1489|suspect|The police caught the suspect.|警方抓到了嫌犯。|B1|news|police,catch<caught||
+1490|cup|Would you like a cup of tea?|你要喝杯茶嗎？|A1|food|like,tea|a cup of|
+1491|description|The hotel looked nothing like the description.|那家飯店跟網站上描述的完全不一樣。|B1|travel|hotel,look<looked,nothing|look nothing like|
+1492|confidence|She speaks with confidence.|她說話很有自信。|B1|social|speak<speaks||
+1493|industrial|This used to be an industrial area.|這裡以前是工業區。|B1|news|area|used to|
+1494|complains|He always complains about the food.|他總是在抱怨食物。|A2|food|always,food|complain about|
+1495|perspective|Try to see it from my perspective.|試著從我的角度想想看。|B2|social|try,see||
+1496|error|I keep getting an error message.|我一直收到錯誤訊息。|B1|phone|keep,get<getting,message|error message|
+1497|arrested|The man was arrested for drunk driving.|那名男子因酒駕被逮捕。|B1|news|man,drive<driving|drunk driving|
+1498|assess|We need to assess the damage first.|我們得先評估損失。|B2|work|need,damage,first||
+1499|register|Where do I register for the class?|我要去哪裡報名這門課？|A2|study|class||register 在此為「報名」

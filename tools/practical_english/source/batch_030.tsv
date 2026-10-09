@@ -1,0 +1,25 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2810		two	two	Can I get two coffees, please?	請給我兩杯咖啡好嗎？	A1	food	ngsl_spoken_720_0070	ngsl_2809_0042|ngsl_2809_1394|ngsl_2809_0470		
+2811		three	three	We're staying for three nights.	我們要住三晚。	A1	travel	ngsl_spoken_720_0094	ngsl_2809_0344|ngsl_2809_0269		
+2812		five	five	The station is five minutes away.	車站在五分鐘路程外。	A1	travel	ngsl_spoken_720_0115	ngsl_2809_0708|ngsl_2809_0365|ngsl_2809_0233		
+2813		four	four	There are four people in my family.	我家有四個人。	A1	daily	ngsl_spoken_720_0118	ngsl_2809_0056|ngsl_2809_0171	there are	
+2814		hundred	hundred	This jacket costs a hundred dollars.	這件外套要一百美元。	A1	shopping	ngsl_spoken_720_0153	ngsl_2809_2252|ngsl_2809_0251|ngsl_2809_0970		
+2815		six	six	I usually get up at six.	我通常六點起床。	A1	daily	ngsl_spoken_720_0164	ngsl_2809_0554|phrase_list_506_0131		
+2816		twenty	twenty	The bus comes every twenty minutes.	公車每二十分鐘來一班。	A1	travel	ngsl_spoken_720_0187	ngsl_2809_0809|ngsl_2809_0064|ngsl_2809_0179|ngsl_2809_0365		
+2817		eight	eight	The store opens at eight.	那家店八點開門。	A1	shopping	ngsl_spoken_720_0207	ngsl_2809_0616|ngsl_2809_0213		
+2818		ten	ten	I'll be there in ten minutes.	我十分鐘後到。	A1	daily	ngsl_spoken_720_0209	ngsl_2809_0039|ngsl_2809_0365		
+2819		seven	seven	We usually have dinner at seven.	我們通常七點吃晚餐。	A1	daily	ngsl_spoken_720_0233	ngsl_2809_0554|ngsl_2809_1116		
+2820		thousand	thousand	The concert had over a thousand people.	那場音樂會有超過一千人。	A2	social	ngsl_spoken_720_0246	ngsl_2809_1381|ngsl_2809_0081|ngsl_2809_0056		
+2821		nine	nine	My class starts at nine tomorrow.	我明天的課九點開始。	A1	study	ngsl_spoken_720_0250	ngsl_2809_0361|ngsl_2809_0135|ngsl_2809_0725		
+2822		thirty	thirty	The movie starts in thirty minutes.	電影三十分鐘後開始。	A1	social	ngsl_spoken_720_0255	ngsl_2809_0761|ngsl_2809_0135|ngsl_2809_0365		
+2823		fifty	fifty	I paid fifty dollars for these shoes.	這雙鞋我付了五十美元。	A1	shopping	ngsl_spoken_720_0277	ngsl_2809_0219|ngsl_2809_0970|ngsl_2809_1475		
+2824		forty	forty	It takes about forty minutes by train.	搭火車大約要四十分鐘。	A2	travel	ngsl_spoken_720_0371	ngsl_2809_0058|ngsl_2809_0036|ngsl_2809_0365|ngsl_2809_0288		take 在此為「花費（時間）」
+2825		nineteen	nineteen	My sister is nineteen this year.	我妹妹今年十九歲。	A1	social	ngsl_spoken_720_0378	ngsl_2809_0963|ngsl_2809_0057		
+2826		twelve	twelve	We need a table for twelve.	我們需要一張十二人的桌子。	A2	food	ngsl_spoken_720_0399	ngsl_2809_0089|ngsl_2809_0449		
+2827		ninety	ninety	My grandmother is almost ninety.	我奶奶快九十歲了。	A2	social	ngsl_spoken_720_0427	ngsl_2809_2603|ngsl_2809_0306		
+2828		eighty	eighty	The speed limit here is eighty.	這裡的速限是八十。	A2	travel	ngsl_spoken_720_0448	ngsl_2809_1105|ngsl_2809_0571|ngsl_2809_0097		
+2829		sixty	sixty	There are sixty students in this course.	這門課有六十個學生。	A2	study	ngsl_spoken_720_0466	ngsl_2809_0247|ngsl_2809_0163	there are	
+2830		fifteen	fifteen	Let's take a fifteen-minute break.	我們休息十五分鐘吧。	A2	work	ngsl_spoken_720_0482	ngsl_2809_0058|ngsl_2809_0365|ngsl_2809_0367	take a break	
+2831		million	million	The city has over two million people.	這座城市有超過兩百萬人口。	B1	news	ngsl_spoken_720_0536	ngsl_2809_0268|ngsl_2809_0081|ngsl_spoken_720_0070|ngsl_2809_0056		
+2832		seventy	seventy	The museum has about seventy paintings.	這間博物館大約有七十幅畫。	A2	travel	ngsl_spoken_720_0537	ngsl_2809_1396|ngsl_2809_0036		
+2833		eleven	eleven	The kids go to bed at eleven on weekends.	週末孩子們十一點睡覺。	A2	daily	ngsl_spoken_720_0579	ngsl_2809_0528|ngsl_2809_0693|ngsl_2809_0933		
