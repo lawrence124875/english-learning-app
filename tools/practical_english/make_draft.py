@@ -14,6 +14,7 @@ sense_review.tsv：主要詞在其他清單有同拼字、翻譯不同的項目�
 既有列的 decision／status／note 保留不動，新列預設 include／proposed。
 
 用法：python3 tools/practical_english/make_draft.py 002
+      python3 tools/practical_english/make_draft.py --check 002   只檢查，不寫任何檔案
 """
 import csv, glob, json, os, re, sys
 
@@ -48,9 +49,12 @@ def read_tsv(path, header):
 
 
 def main():
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
+    args = sys.argv[1:]
+    check_only = '--check' in args
+    args = [a for a in args if a != '--check']
+    if len(args) != 1 or not args[0].isdigit():
         sys.exit(__doc__)
-    batch = int(sys.argv[1])
+    batch = int(args[0])
     src = os.path.join(HERE, 'authoring', f'batch_{batch:03d}.txt')
     out = os.path.join(HERE, 'source', f'draft_{batch:03d}.tsv')
 
@@ -109,10 +113,14 @@ def main():
             sec_ids.append(ids[0])
         rows.append([str(first_idx + n + 1), idx, word, form, sent, zh, level, cat, pid,
                      '|'.join(sec_ids), phrase, notes])
-    if len(rows) != BATCH_SIZE:
-        errors.append(f'句數 {len(rows)}，應為 {BATCH_SIZE}')
+    expected = min(BATCH_SIZE, len(ngsl) - first_idx)
+    if len(rows) != expected:
+        errors.append(f'句數 {len(rows)}，應為 {expected}')
     if errors:
         sys.exit('\n'.join(errors) + f'\n{len(errors)} 個錯誤，未輸出')
+    if check_only:
+        print(f'檢查通過：{len(rows)} 句（未寫入）')
+        return
 
     with open(out, 'w', encoding='utf-8', newline='') as fo:
         fo.write('\t'.join(HEADER) + '\n')
