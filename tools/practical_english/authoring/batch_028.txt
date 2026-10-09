@@ -97,5 +97,5 @@
 2795|solar|Our house uses solar power.|我們家用太陽能。|B1|daily|house,use<uses,power|solar power|
 2796|grinned|He grinned when he heard the news.|他聽到消息時咧嘴笑了。|B1|social|hear<heard,news||
 2797|roses|These roses smell lovely.|這些玫瑰好香。|A2|daily|smell,lovely||
-2798|noun|'Happiness' is a noun.|'Happiness' 是名詞。|A2|study|happiness||
+2798|noun|Is this word a noun or a verb?|這個字是名詞還是動詞？|A2|study|word,verb||
 2799|fortunate|We were fortunate to get good seats.|我們很幸運拿到好位子。|B1|social|get,good,seat<seats||

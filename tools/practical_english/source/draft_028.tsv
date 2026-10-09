@@ -97,5 +97,5 @@ id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_
 2796	2795	solar	solar	Our house uses solar power.	我們家用太陽能。	B1	daily	ngsl_2809_2795	ngsl_2809_0164|ngsl_2809_0067|ngsl_2809_0330	solar power	
 2797	2796	grin	grinned	He grinned when he heard the news.	他聽到消息時咧嘴笑了。	B1	social	ngsl_2809_2796	ngsl_2809_0177|ngsl_2809_0545		
 2798	2797	rose	roses	These roses smell lovely.	這些玫瑰好香。	A2	daily	ngsl_2809_2797	ngsl_2809_1790|ngsl_2809_1599		
-2799	2798	noun	noun	'Happiness' is a noun.	'Happiness' 是名詞。	A2	study	ngsl_2809_2798	ngsl_2809_2696		
+2799	2798	noun	noun	Is this word a noun or a verb?	這個字是名詞還是動詞？	A2	study	ngsl_2809_2798	ngsl_2809_0216|ngsl_2809_2699		
 2800	2799	fortunate	fortunate	We were fortunate to get good seats.	我們很幸運拿到好位子。	B1	social	ngsl_2809_2799	ngsl_2809_0042|ngsl_2809_0055|ngsl_2809_0851		
