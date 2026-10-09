@@ -45,7 +45,7 @@ SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'source')
 FILES = ['ngsl_2809', 'ngsl_spoken_720', 'phrase_list_506', 'phave_list_150']
 HEADER = ['id', 'ngsl_index', 'word', 'form', 'sentence', 'zh-TW', 'level', 'category',
           'primary_word_id', 'secondary_word_ids', 'phrase_candidate', 'tagging_notes']
-OPTIONAL = {'secondary_word_ids', 'phrase_candidate', 'tagging_notes'}
+OPTIONAL = {'ngsl_index', 'secondary_word_ids', 'phrase_candidate', 'tagging_notes'}
 SENSE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sense_review.tsv')
 SENSE_HEADER = ['sentence_id', 'primary_word_id', 'candidate_id', 'primary_zh', 'candidate_zh',
                 'decision', 'status', 'note']
