@@ -1,0 +1,72 @@
+sentence_id	primary_word_id	candidate_id	primary_zh	candidate_zh	decision	status	note
+1	ngsl_2809_0000	ngsl_spoken_720_0001	（定冠詞）	這(個)；那(個) (定冠詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+2	ngsl_2809_0001	ngsl_spoken_720_0000	是／存在	是；存在	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+3	ngsl_2809_0002	ngsl_spoken_720_0003	和／與	和；而且	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+4	ngsl_2809_0003	ngsl_spoken_720_0008	的	……的；關於	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+5	ngsl_2809_0004	ngsl_spoken_720_0005	到／為了	到；向；給；去 (不定詞/介詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+6	ngsl_2809_0005	ngsl_spoken_720_0006	（不定冠詞）	一個 (不定冠詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+7	ngsl_2809_0006	ngsl_spoken_720_0014	在…裡	在……裡面；在……期間	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+8	ngsl_2809_0007	ngsl_spoken_720_0007	有	有；擁有；已經 (助動詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+9	ngsl_2809_0008	ngsl_spoken_720_0004	它	它；這	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+10	ngsl_2809_0009	ngsl_spoken_720_0002	你	你；你們	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+12	ngsl_2809_0011	ngsl_spoken_720_0026	為了	為了；對於；給；因為	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+13	ngsl_2809_0012	ngsl_spoken_720_0012	他們	他們；它們	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+14	ngsl_2809_0013	ngsl_spoken_720_0010	不	不；未	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+15	ngsl_2809_0014	ngsl_spoken_720_0011	那個	那個；那；(引導詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+17	ngsl_2809_0016	ngsl_spoken_720_0022	在…上	在……上面；關於；開著	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+18	ngsl_2809_0017	ngsl_spoken_720_0037	和／用	和……一起；用；帶有	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+19	ngsl_2809_0018	ngsl_spoken_720_0020	這個	這個；這	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+21	ngsl_2809_0020	ngsl_spoken_720_0009	做	做；幹；(助動詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+22	ngsl_2809_0021	ngsl_spoken_720_0043	作為	如同；作為；當……時	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+23	ngsl_2809_0022	ngsl_spoken_720_0039	在	在 (地點/時間)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+25	ngsl_2809_0024	ngsl_spoken_720_0021	但是	但是；可是	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+26	ngsl_2809_0025	ngsl_spoken_720_0063	從	來自；從……起	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+27	ngsl_2809_0026	ngsl_spoken_720_0086	由	被；經由；在……旁	include	proposed	句中 by bus＝經由，口語清單含「經由」
+28	ngsl_2809_0027	ngsl_spoken_720_0030	將會	將要；會；意志；遺囑	include	proposed	口語清單含「意志；遺囑」另一詞義，但首義「將要；會」與句意相同
+29	ngsl_2809_0028	ngsl_spoken_720_0042	或者	或者；還是	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+31	ngsl_2809_0030	ngsl_spoken_720_0018	去	去；走；進行	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+32	ngsl_2809_0031	ngsl_spoken_720_0019	所以	所以；如此	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+33	ngsl_2809_0032	ngsl_spoken_720_0040	所有	全部	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+34	ngsl_2809_0033	ngsl_spoken_720_0038	如果	如果；是否	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+35	ngsl_2809_0034	ngsl_spoken_720_0036	一個	一；一個 (代詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+36	ngsl_2809_0035	ngsl_spoken_720_0044	會	會；將要；想要 (will的過去式)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+37	ngsl_2809_0036	ngsl_spoken_720_0041	關於	關於；大約	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+38	ngsl_2809_0037	ngsl_spoken_720_0048	能夠	能；可以；罐頭	include	proposed	口語清單含「罐頭」另一詞義，但首義「能；可以」與句意相同
+39	ngsl_2809_0038	ngsl_spoken_720_0073	哪個	哪一個；(關係代詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+40	ngsl_2809_0039	ngsl_spoken_720_0029	那裡	那裡；存在 (there is)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+41	ngsl_2809_0040	ngsl_spoken_720_0016	知道	知道；了解；認識	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+42	ngsl_2809_0041	ngsl_spoken_720_0076	更多	更多；更	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+43	ngsl_2809_0042	ngsl_spoken_720_0017	得到	得到；獲得；變成；到達	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+44	ngsl_2809_0043	ngsl_spoken_720_0077	誰	誰；(關係代詞)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+46	ngsl_2809_0045	ngsl_spoken_720_0056	當…時	當……時；什麼時候	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+47	ngsl_2809_0046	ngsl_spoken_720_0027	思考	想；認為	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+48	ngsl_2809_0047	ngsl_spoken_720_0068	製作	做；製造；使得	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+49	ngsl_2809_0048	ngsl_spoken_720_0064	時間	時間；次數	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+51	ngsl_2809_0050	ngsl_spoken_720_0033	什麼	什麼；……的事物	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+52	ngsl_2809_0051	ngsl_spoken_720_0050	向上	向上；起來；完全	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+54	ngsl_2809_0053	ngsl_spoken_720_0078	其他的	其他的；另外的	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+55	ngsl_2809_0054	ngsl_spoken_720_0052	出去	出來；在外；向外	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+56	ngsl_2809_0055	ngsl_spoken_720_0062	好的	好的；善良的；好處	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+60	ngsl_2809_0059	ngsl_spoken_720_0049	不	沒有	include	proposed	句中 No 是回絕用語；口語清單譯「沒有」偏限定詞用法，但同一個字，建議連結
+61	ngsl_2809_0060	ngsl_spoken_720_0035	好	健康的；很好	include	proposed	句中 well＝很好（副詞），口語清單含「很好」
+64	ngsl_2809_0063	ngsl_spoken_720_0034	剛才	剛剛；只是	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+65	ngsl_2809_0064	ngsl_spoken_720_0059	來	來；來到	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+66	ngsl_2809_0065	ngsl_spoken_720_0074	能夠	能；可以 (can的過去式)	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+67	ngsl_2809_0066	ngsl_spoken_720_0075	工作	工作；作品	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+71	ngsl_2809_0070	ngsl_spoken_720_0045	然後	那時；然後	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+72	ngsl_2809_0071	ngsl_spoken_720_0141	也	也；此外	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+73	ngsl_2809_0072	ngsl_spoken_720_0106	進入	進入；到……裡面	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+74	ngsl_2809_0073	ngsl_spoken_720_0101	只有	只有；僅僅；唯一的	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+77	ngsl_2809_0076	ngsl_spoken_720_0092	給	給予	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+78	ngsl_2809_0077	ngsl_spoken_720_0112	第一	第一；首先	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+80	ngsl_2809_0079	ngsl_spoken_720_0089	方式	路；方法	include	proposed	句中 way＝路，口語清單「路；方法」更貼近句意
+82	ngsl_2809_0081	ngsl_spoken_720_0103	超過	在……上方；超過；結束	include	proposed	句中 over＝結束，口語清單翻譯含「結束」，比 NGSL「超過」更貼近句意
+84	ngsl_2809_0083	ngsl_spoken_720_0156	之後	在……之後	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+85	ngsl_2809_0084	ngsl_spoken_720_0105	天	天；白天	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+86	ngsl_2809_0085	ngsl_spoken_720_0080	哪裡	在哪裡；在……的地方	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+87	ngsl_2809_0086	ngsl_spoken_720_0054	事情	事物；東西；事情	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+88	ngsl_2809_0087	ngsl_spoken_720_0183	最多	最多的；大部分	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+93	ngsl_2809_0092	ngsl_spoken_720_0083	如何	如何；怎樣；多麼	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+95	ngsl_2809_0094	ngsl_spoken_720_0051	意思是	意味著	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
+96	ngsl_2809_0095	ngsl_spoken_720_0125	甚至	甚至；連；平坦的	include	proposed	口語清單含「平坦的」另一詞義，但首義「甚至」與句意相同
+100	ngsl_2809_0099	ngsl_spoken_720_0317	如此	這樣的；如此的	include	proposed	同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋
