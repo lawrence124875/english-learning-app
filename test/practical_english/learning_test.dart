@@ -10,6 +10,7 @@ import 'package:english_learning_app/l10n/app_localizations.dart';
 import 'package:english_learning_app/practical_english/data/sentence_repository.dart';
 import 'package:english_learning_app/practical_english/data/v1_legacy_gateway.dart';
 import 'package:english_learning_app/practical_english/domain/services/legacy_migration.dart';
+import 'package:english_learning_app/practical_english/domain/services/playback_coordinator.dart';
 import 'package:english_learning_app/practical_english/domain/services/sentence_selector.dart';
 import 'package:english_learning_app/practical_english/presentation/providers/practical_english_state.dart';
 import 'package:english_learning_app/practical_english/presentation/screens/practical_english_screen.dart';
@@ -450,6 +451,8 @@ void main() {
       final tts = _RecordingTts();
       final app = _app();
       final s = await enter(app, tts: tts);
+      // V1 巡航中（擁有者 v1）
+      await app.playbackCoordinator.claim(PlaybackOwner.v1);
       app.isPlaying = true;
       expect(await s.speak(s.sentences.first), isTrue);
       expect(app.isPlaying, isFalse);

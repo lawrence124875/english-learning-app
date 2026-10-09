@@ -17,6 +17,7 @@ import '../../domain/models/sentence.dart';
 import '../../domain/models/word_learning_state.dart';
 import '../../domain/services/coverage_calculator.dart';
 import '../../domain/services/legacy_migration.dart';
+import '../../domain/services/playback_coordinator.dart';
 import '../../domain/services/sentence_access.dart';
 import '../../domain/services/sentence_selector.dart';
 import '../../domain/services/weak_word_sync.dart';
@@ -42,6 +43,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   final JsonStoreErrorReporter _onError;
   final DateTime Function() _now;
   final String Function() _translationKey;
+  final PlaybackCoordinator _playback;
 
   PracticalEnglishState({
     required AppState appState,
@@ -53,7 +55,9 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     JsonStoreErrorReporter? onError,
     DateTime Function()? now,
     String Function()? translationKey,
+    PlaybackCoordinator? playbackCoordinator,
   })  : _appState = appState,
+        _playback = playbackCoordinator ?? appState.playbackCoordinator,
         _tts = tts,
         _onError = onError ?? _reportToCrashlytics,
         _baseDir = baseDir,
@@ -109,6 +113,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
       _rebuildIndex(datasets);
       _lastPremium = _appState.isPremium;
       _appState.addListener(_onAppStateChanged);
+      _playback.registerStopper(PlaybackOwner.v2, _stopForOtherOwner);
       WidgetsBinding.instance.addObserver(this);
       status = PracticalEnglishLoadStatus.ready;
     } catch (e, st) {
@@ -240,26 +245,55 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     notifyListeners();
   }
 
-  /// 朗讀句子。Phase 4 先用既有公開介面：V1 巡航播放中就先停止，
-  /// 再用同一個 TTS 引擎朗讀（完整的 PlaybackCoordinator 在 Phase 5）。
-  /// TTS 失敗不影響畫面，回傳 false。
+  /// 目前這一次朗讀的所有權（[PlaybackCoordinator]）。
+  PlaybackLease? _speechLease;
+
+  bool get isSpeaking => _playback.isCurrent(_speechLease);
+
+  /// 朗讀句子：先向 [PlaybackCoordinator] 取得所有權（V1 巡航中會先被停止），
+  /// 再用同一個 TTS 引擎朗讀。快速連點或換句時，較新的一次會取代舊的；
+  /// 被取代的那次不會再開口，也不會清掉新的所有權。
+  /// 只有 TTS 真的出錯才回傳 false（被取代不算失敗）。
   Future<bool> speak(Sentence sentence) async {
+    final lease = await _playback.claim(PlaybackOwner.v2);
+    if (!_playback.isCurrent(lease)) return true;
+    _speechLease = lease;
     try {
-      if (_appState.isPlaying) _appState.stopCruise();
-      await _tts.stop();
+      await _tts.stop(); // 停掉自己上一句
+      if (!_playback.isCurrent(lease)) return true;
       await _tts.speak(sentence.sentenceText,
           languageCode: sentence.targetLanguage);
       return true;
     } catch (e, st) {
       _onError(e, st);
       return false;
+    } finally {
+      _releaseSpeech(lease);
     }
   }
 
+  void _releaseSpeech(PlaybackLease lease) {
+    _playback.release(lease);
+    if (identical(_speechLease, lease)) _speechLease = null;
+  }
+
+  /// 換句、離開句子頁、App 進背景時停止朗讀。只有 V2 仍是擁有者才停 TTS，
+  /// 避免 V1 已經接手播放時被這裡誤停。
   Future<void> stopSpeaking() async {
+    final lease = _speechLease;
+    if (!_playback.isCurrent(lease)) return;
+    _releaseSpeech(lease!);
     try {
       await _tts.stop();
-    } catch (_) {}
+    } catch (e, st) {
+      _onError(e, st);
+    }
+  }
+
+  /// V1 claim 時由 coordinator 呼叫：停止 V2 朗讀。所有權已由 coordinator 轉移。
+  Future<void> _stopForOtherOwner() async {
+    _speechLease = null;
+    await _tts.stop();
   }
 
   /// 匯入句子 CSV（Phase 3 importer）。檔案層級錯誤會丟 SentenceCsvFileException。
@@ -284,6 +318,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.detached) {
+      // V2.0 沒有背景朗讀。
+      stopSpeaking();
       flush().catchError((Object e, StackTrace st) => _onError(e, st));
     }
   }
@@ -291,6 +327,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   @override
   void dispose() {
     _appState.removeListener(_onAppStateChanged);
+    _playback.unregisterStopper(PlaybackOwner.v2, _stopForOtherOwner);
+    stopSpeaking();
     WidgetsBinding.instance.removeObserver(this);
     flush().catchError((Object e, StackTrace st) => _onError(e, st));
     super.dispose();

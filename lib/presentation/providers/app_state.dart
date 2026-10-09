@@ -15,6 +15,7 @@ import '../../data/sources/notification_service.dart';
 import '../../data/sources/background_l10n.dart';
 import '../../data/sources/cover_art.dart';
 import '../../data/repositories/custom_dataset_repository.dart';
+import '../../practical_english/domain/services/playback_coordinator.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
@@ -47,6 +48,19 @@ class AppState extends ChangeNotifier {
       onSkipPrevious: () => previous(),
     );
     NotificationService.startRequests.addListener(_onStartRequest);
+    // V2：Practical English 開始朗讀時停止 V1（SPEC §10）。
+    playbackCoordinator.registerStopper(
+        PlaybackOwner.v1, () async => stopCruise());
+  }
+
+  /// V1／V2 共用 TTS 的朗讀擁有者（SPEC §10）。V1 只在 [_speakCurrent]
+  /// 開頭 claim、在朗讀結束與 [stopCruise] 時歸還，其餘播放邏輯不變。
+  final PlaybackCoordinator playbackCoordinator = PlaybackCoordinator();
+  PlaybackLease? _v1Lease;
+
+  void _releaseV1Playback() {
+    playbackCoordinator.release(_v1Lease);
+    _v1Lease = null;
   }
 
   // --- 0.3.0：每日提醒的「▶ 開始朗讀」與提醒內文 ---
@@ -663,6 +677,13 @@ class AppState extends ChangeNotifier {
 
   Future<void> _speakCurrent() async {
     final gen = ++_speakGen;
+    // V2 正在朗讀時先停止 V2；V1 已是擁有者時不等待（時序與原本相同）。
+    if (!playbackCoordinator.isCurrent(_v1Lease)) {
+      final lease = await playbackCoordinator.claim(PlaybackOwner.v1);
+      if (!playbackCoordinator.isCurrent(lease)) return;
+      _v1Lease = lease;
+      if (gen != _speakGen) return;
+    }
     // 上一個單字還在念（手動快速切換）：先確實停止，再念新的。
     if (_speechActive) {
       await _ttsService.stop();
@@ -674,7 +695,10 @@ class AppState extends ChangeNotifier {
     try {
       await _speakWord(word, gen);
     } finally {
-      if (gen == _speakGen) _speechActive = false;
+      if (gen == _speakGen) {
+        _speechActive = false;
+        if (!isPlaying) _releaseV1Playback();
+      }
     }
   }
 
@@ -731,6 +755,7 @@ class AppState extends ChangeNotifier {
     _speechActive = false;
     _cruiseTimer?.cancel();
     _ttsService.stop();
+    _releaseV1Playback();
     _updateNowPlaying();
     notifyListeners();
   }

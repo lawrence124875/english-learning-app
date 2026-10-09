@@ -20,7 +20,7 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 | 2 | V1 相容：Migration Layer、fingerprint／reconciliation、★ ↔ Weak | ✅ 2026-10-08 |
 | 3 | CSV Format B 匯入 | ✅ 2026-10-08 |
 | 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾、匯入畫面 | ✅ 2026-10-08 |
-| 5 | PlaybackCoordinator | ○ |
+| 5 | PlaybackCoordinator | ✅ 2026-10-09 |
 | 6 | What's New | ○ |
 | 7 | 整體測試 | ○ |
 
@@ -53,3 +53,12 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - 播放：暫用既有介面（V1 巡航中先 `stopCruise()`，再用同一個 TTS 朗讀）。V1 播放搶回、鎖屏等交給 Phase 5 PlaybackCoordinator。
 - 字串：42 個 `pe*` key，11 語系都有。
 - 測試：`test/practical_english/learning_test.dart`（23 個，含 widget test；I/O 用 `tester.runAsync`）。
+
+## Phase 5 備註
+
+- `PlaybackCoordinator`（`lib/practical_english/domain/services/playback_coordinator.dart`）：擁有者 none／v1／v2。`claim` 先換擁有者、再等對方停止函式完成才回傳；每次 claim 發一張 `PlaybackLease`，只有目前那張能 `release`，過期 callback、重複 stop 都是 no-op。開口前一律用 `isCurrent(lease)` 確認。
+- 實例放在 `AppState.playbackCoordinator`（App 存活期間只有一個）；V1 登記 `stopCruise` 為停止函式。
+- V1 接入點只有 `_speakCurrent()` 開頭（巡航、鎖屏 ▶、通知「開始朗讀」、下一個／上一個／重播／跳號全部經過這裡）與 `stopCruise()`／單次朗讀結束時歸還。V1 已是擁有者時不多一個 await，時序與原本相同。SPEC §10 寫「startCruise 開頭與手動朗讀前」，實作放在兩者共用的 `_speakCurrent`，效果相同。
+- V2：`PracticalEnglishState.speak` claim v2；`stopSpeaking`（換句、離開頁面、App 進背景、dispose）只有 V2 仍是擁有者才停 TTS，不會誤停已接手的 V1。
+- 未改：audio_service／TtsAudioHandler、鎖屏、通知、播放清單。V1 `stopCruise()` 本來就會呼叫 `tts.stop()`（例如鎖屏 ⏸），維持原樣。設定頁「試聽聲音」直接用 TTS、不經 coordinator（V1 原行為）。
+- 測試：`test/practical_english/playback_test.dart`（19 個；fake TTS 模擬 awaitSpeakCompletion）。
