@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../l10n/app_localizations.dart';
+import '../../practical_english/practical_english_release.dart';
 
 /// 特色介紹（滑動導覽）。
 /// - 第一次開啟 App 時自動顯示一次（舊使用者更新後也會看到一次）。
@@ -61,6 +62,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _IntroPage(Icons.star_outline, l.introTitle4, l.introBody4),
         _IntroPage(Icons.upload_file, l.introTitle5, l.introBody5),
         _IntroPage(Icons.menu_book_outlined, l.introTitle6, l.introBody6),
+        // V2：實用英文介紹頁，只在就緒開關打開時出現；關閉時跟原本 6 頁完全一樣。
+        if (PracticalEnglishRelease.enabled)
+          _IntroPage(Icons.chat_bubble_outline, l.introTitle7, l.introBody7),
       ];
 
   void _close() => Navigator.of(context).pop();

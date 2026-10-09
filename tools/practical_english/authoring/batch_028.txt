@@ -1,0 +1,101 @@
+# NGSL index 2700–2799
+2700|reckon|I reckon it'll rain later.|我覺得等一下會下雨。|B1|daily|rain||reckon 在此為口語「認為、覺得」
+2701|silly|That was a silly mistake.|那是個很蠢的錯誤。|A2|work|mistake||
+2702|transportation|Public transportation here is very convenient.|這裡的大眾運輸很方便。|B1|travel|public,here|public transportation|
+2703|harbor|The boats are back in the harbor.|船都回港了。|B1|travel|boat<boats,back||
+2704|comedy|Let's watch a comedy tonight.|我們今晚看喜劇吧。|A2|social|watch,tonight||
+2705|chased|The kids chased each other around the park.|孩子們在公園裡互相追逐。|A2|daily|kid<kids,around,park|each other|
+2706|storage|Is there any storage space in the room?|房間裡有收納空間嗎？|B1|travel|space,room|storage space|
+2707|universe|How big is the universe?|宇宙有多大？|B1|study|big||
+2708|horrible|The weather was horrible yesterday.|昨天天氣糟透了。|A2|daily|weather,yesterday||horrible 在此為「糟糕的」
+2709|sheep|There are lots of sheep on the farm.|農場上有好多羊。|A2|travel|lot<lots,farm|lots of ...|sheep 單複數同形
+2710|lover|She's a real music lover.|她是個真正的音樂愛好者。|B1|social|real,music|music lover|lover 在此為「愛好者」，非「戀人」
+2711|rat|I saw a rat in the kitchen!|我在廚房看到一隻老鼠！|A2|daily|see<saw,kitchen||
+2712|portrait|She painted a portrait of her dog.|她畫了一幅她家狗狗的肖像。|B1|daily|paint<painted,dog||
+2713|innocent|He looked so innocent.|他看起來好無辜。|B1|social|look<looked||
+2714|substitute|Can I substitute salad for the fries?|我可以把薯條換成沙拉嗎？|B1|food||substitute A for B|substitute A for B 指「用 A 代替 B」
+2715|supplements|Do you take any vitamin supplements?|你有吃什麼維他命補充品嗎？|B1|health|take||supplement 在此為名詞「補充品」
+2716|adjustment|I made a small adjustment to the plan.|我對計畫做了一點小調整。|B1|work|make<made,small,plan|make an adjustment|
+2717|reasonably|The hotel is reasonably priced.|這家飯店價格合理。|B1|travel|hotel,price<priced|reasonably priced|
+2718|filter|Change the water filter every three months.|濾水器每三個月要換一次。|B1|daily|change,water,every,three,month<months|water filter|filter 在此為名詞「濾網、過濾器」
+2719|flexible|My work hours are flexible.|我的工作時間很彈性。|B1|work|work,hour<hours||
+2720|abstract|I don't really understand abstract art.|我不太懂抽象藝術。|B1|social|really,understand,art|abstract art|
+2721|tent|We put up the tent by the lake.|我們在湖邊搭了帳篷。|A2|travel|put,lake|put up|
+2722|precise|Can you be more precise?|你可以說得更精確一點嗎？|B1|work|more||
+2723|distant|I can see distant mountains from my window.|從我的窗戶可以看到遠方的山。|B1|daily|see,mountain<mountains,window||
+2724|strangers|Don't talk to strangers.|不要跟陌生人說話。|A2|daily|talk||
+2725|shade|Let's sit in the shade.|我們坐在陰涼處吧。|A2|daily|sit|in the shade|shade 在此為「陰涼處」
+2726|grains|This bread is made from whole grains.|這種麵包是用全穀做的。|B1|food|bread,make<made,whole|whole grains|
+2727|situated|The hotel is situated near the beach.|飯店位於海灘附近。|B2|travel|hotel,near,beach|be situated ...|
+2728|summarize|Please summarize the main points.|請總結一下重點。|B1|work|please,main,point<points|main points|
+2729|leap|Prices took a big leap this year.|今年物價大幅跳漲。|B2|news|price<Prices,take<took,big,year||leap 在此為名詞「躍升、大漲」
+2730|snap|Let me snap a quick photo.|讓我快速拍張照。|B1|travel|quick,photo||snap 在此為動詞「快速拍照」
+2731|probability|What's the probability of rain tomorrow?|明天下雨的機率是多少？|B2|daily|rain,tomorrow||
+2732|leather|I bought a leather jacket.|我買了一件皮夾克。|A2|shopping|buy<bought,jacket||
+2733|uncertainty|There's a lot of uncertainty about the future.|未來有很多不確定性。|B2|news|lot,future||
+2734|swear|I swear I didn't tell anyone.|我發誓我沒告訴任何人。|B1|social|tell,anyone||
+2735|refugees|The charity helps refugees find homes.|這個慈善機構幫助難民找到住處。|B2|news|charity,help<helps,find,home<homes||
+2736|shore|We walked along the shore.|我們沿著岸邊散步。|B1|travel|walk<walked,along||
+2737|monthly|How much is the monthly rent?|每個月房租多少？|A2|daily|much,rent||
+2738|comprises|The course comprises ten lessons.|這門課包含十堂課。|B2|study|course,ten,lesson<lessons||
+2739|Stir|Stir the soup slowly.|慢慢攪拌湯。|A2|food|slowly||
+2740|excitement|The kids couldn't hide their excitement.|孩子們藏不住興奮的心情。|B1|social|kid<kids,hide||
+2741|sigh|She gave a sigh of relief.|她鬆了一口氣。|B1|social|give<gave,relief|a sigh of relief|
+2742|pregnancy|She felt tired during her pregnancy.|她懷孕期間常覺得很累。|B1|health|feel<felt,during||
+2743|experimental|The band's new album sounds experimental.|這個樂團的新專輯聽起來很有實驗性。|B2|social|band,new,album,sound<sounds||
+2744|institutional|The project needs institutional support.|這個計畫需要機構的支持。|C1|work|project,need<needs,support||
+2745|slice|Would you like another slice of pizza?|你要再來一片披薩嗎？|A2|food|like,another|a slice of ...|
+2746|wandered|We wandered around the old town.|我們在老城區四處閒逛。|B1|travel|around,old,town|wander around|
+2747|empire|This museum tells the story of an ancient empire.|這座博物館講述一個古老帝國的故事。|B1|travel|museum,tell<tells,story,ancient||
+2748|subsequently|He missed the bus and subsequently arrived late.|他錯過了公車，之後就遲到了。|B2|work|miss<missed,bus,arrive<arrived,late||
+2749|gentle|Be gentle with the baby.|對寶寶要溫柔一點。|A2|daily|baby|be gentle with ...|
+2750|Attendance|Attendance is required for all classes.|所有的課都必須出席。|B1|study|require<required,class<classes||
+2751|ownership|The restaurant is under new ownership.|這家餐廳換了新老闆。|B2|food|restaurant,new|under new ownership|
+2752|qualifications|What qualifications do you need for this job?|這份工作需要什麼資格？|B1|work|need,job||
+2753|suspended|Train service is suspended due to the storm.|因為暴風雨，火車暫停行駛。|B1|travel|train,service,due,storm|due to ...|
+2754|functional|The kitchen is small but functional.|廚房雖小但很實用。|B2|daily|kitchen,small||functional 在此為「實用的」
+2755|voluntary|Joining the club is voluntary.|參加社團是自願的。|B1|study|join<Joining,club||
+2756|pale|You look pale. Are you okay?|你臉色好蒼白，還好嗎？|A2|health|look,okay||
+2757|stain|How do I get this stain out?|我要怎麼把這塊污漬弄掉？|B1|daily|get|get ... out|
+2758|athlete|She's a professional athlete.|她是職業運動員。|B1|social|professional||
+2759|organic|Do you sell organic vegetables?|你們有賣有機蔬菜嗎？|B1|shopping|sell,vegetable<vegetables||
+2760|tongue|I burned my tongue on the hot soup.|我被熱湯燙到舌頭了。|A2|food|burn<burned,hot||
+2761|server|The server is down again.|伺服器又當機了。|B1|work|down,again||down 在此為「當機」
+2762|structural|The building has some structural problems.|這棟建築有一些結構上的問題。|B2|news|problem<problems||
+2763|website|You can book tickets on our website.|您可以在我們的網站上訂票。|A2|travel|book,ticket<tickets||book 在此為動詞「預訂」
+2764|fool|I felt like a fool.|我覺得自己像個傻瓜。|B1|social|feel<felt,like|feel like ...|
+2765|alongside|A small path runs alongside the river.|一條小路沿著河邊延伸。|B2|travel|small,path,run<runs,river||
+2766|united|The game united the whole town.|這場比賽讓全鎮團結在一起。|B2|news|game,whole,town||unite 在此為「使團結」
+2767|gently|Please close the door gently.|請輕輕關門。|A2|daily|please,close,door||
+2768|computes|The app computes your total cost.|這個 app 會幫你算出總費用。|B2|shopping|total,cost||
+2769|wipe|Could you wipe the table?|可以擦一下桌子嗎？|A2|daily|table||
+2770|weird|That's weird. It was here a minute ago.|好奇怪，剛剛還在這裡的。|A2|daily|here,minute,ago||
+2771|gazed|She gazed out of the window.|她凝視著窗外。|B2|daily|window|out of the window|
+2772|faded|The colors faded after one wash.|才洗一次就褪色了。|B1|shopping|color<colors,wash||
+2773|cough|I've had a cough for a week.|我咳嗽一個星期了。|A2|health|week|have a cough|
+2774|hypothesis|Our hypothesis turned out to be wrong.|我們的假設結果是錯的。|C1|study|turn<turned,wrong|turn out|
+2775|royal|We visited the royal palace.|我們參觀了皇宮。|B1|travel|visit<visited|royal palace|
+2776|theoretical|The course is too theoretical for me.|這門課對我來說太偏理論了。|B2|study|course||
+2777|curtains|Could you close the curtains?|你可以把窗簾拉上嗎？|A2|daily|close||
+2778|mayor|The mayor opened the new library.|市長為新圖書館揭幕。|B1|news|open<opened,new,library||
+2779|darkness|The room was in complete darkness.|房間裡一片漆黑。|B1|daily|room,complete||
+2780|aunt|My aunt is coming to visit this weekend.|我阿姨這週末要來看我們。|A1|social|come<coming,visit,weekend||
+2781|tournament|Our school is hosting a chess tournament.|我們學校要主辦一場西洋棋比賽。|B1|study|school,host<hosting||
+2782|Registration|Registration closes on Friday.|報名星期五截止。|B1|official|close<closes||registration 在此為「報名」
+2783|fragments|I only remember fragments of the dream.|我只記得夢的片段。|B2|daily|only,remember,dream||
+2784|listener|She's a good listener.|她是個很好的傾聽者。|B1|social|good|a good listener|listener 在此為「傾聽者」
+2785|immigration|We waited an hour at immigration.|我們在入境審查處等了一小時。|B1|travel|wait<waited,hour||immigration 在此為機場「入境審查」
+2786|tender|She gave her son a tender hug.|她溫柔地抱了抱兒子。|B1|social|son||
+2787|density|This city has a high population density.|這座城市人口密度很高。|B2|news|city,high,population|population density|
+2788|ugly|That sweater is so ugly!|那件毛衣好醜！|A2|shopping|||
+2789|module|Each module takes two weeks.|每個單元要上兩週。|B2|study|each,take<takes,two,week<weeks||module 在此為課程「單元」
+2790|faithfully|He faithfully visits his mother every Sunday.|他每個星期天都固定去看他母親。|B2|social|visit<visits,mother,every||faithfully 在此為「始終如一地」
+2791|Autumn|Autumn is my favorite season.|秋天是我最喜歡的季節。|A1|daily|favorite,season||
+2792|cheek|She kissed him on the cheek.|她親了他的臉頰。|A2|social|kiss<kissed||
+2793|attachment|Please see the attachment for details.|詳情請見附件。|B1|work|please,see,detail<details||
+2794|holders|Ticket holders can enter first.|持票者可以先進場。|B1|travel|ticket,enter,first|ticket holder|
+2795|solar|Our house uses solar power.|我們家用太陽能。|B1|daily|house,use<uses,power|solar power|
+2796|grinned|He grinned when he heard the news.|他聽到消息時咧嘴笑了。|B1|social|hear<heard,news||
+2797|roses|These roses smell lovely.|這些玫瑰好香。|A2|daily|smell,lovely||
+2798|noun|Is this word a noun or a verb?|這個字是名詞還是動詞？|A2|study|word,verb||
+2799|fortunate|We were fortunate to get good seats.|我們很幸運拿到好位子。|B1|social|get,good,seat<seats||

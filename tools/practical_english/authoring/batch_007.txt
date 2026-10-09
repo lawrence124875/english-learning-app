@@ -1,0 +1,101 @@
+# NGSL index 600–699
+600|particularly|I'm not particularly hungry.|我沒有特別餓。|B1|food|||
+601|wife|This is my wife, Lisa.|這是我太太，Lisa。|A1|social|||
+602|sports|What sports do you play?|你有在做什麼運動？|A1|health|play||sports 為複數
+603|prepare|I need to prepare for the interview.|我得準備面試。|B1|work|need,interview|prepare for|
+604|discuss|Let's discuss it tomorrow.|我們明天再討論吧。|B1|work|let<Let's,tomorrow||
+605|response|Thanks for your quick response.|謝謝你這麼快回覆。|B1|work|thank<Thanks,quick||
+606|voice|You have a lovely voice.|你的聲音很好聽。|A2|social|lovely||
+607|piece|Would you like a piece of cake?|你要來一塊蛋糕嗎？|A2|food|like,cake|a piece of|
+608|finish|What time do you finish work?|你幾點下班？|A2|work|time,work|finish work|
+609|suppose|I suppose you're right.|我想你說得對。|B1|social|right||suppose 在此為「猜想、認為」
+610|apply|How do I apply for a visa?|我要怎麼申請簽證？|B1|official||apply for|apply 在此為「申請」，NGSL 中文為「應用」
+611|president|She's the president of our club.|她是我們社團的社長。|B1|social|club||president 在此為「社長」，NGSL 中文為「總統」
+612|fire|We sat around the fire and told stories.|我們圍著火堆講故事。|B1|social|sit<sat,around,tell<told,story<stories||
+613|compare|I always compare prices before I buy.|我買東西前都會比價。|B1|shopping|always,price<prices,before,buy|compare prices|
+614|court|The hotel has a tennis court.|飯店有網球場。|B1|travel|hotel,tennis||court 在此為「球場」，NGSL 中文為「法院」
+615|police|Call the police!|快報警！|A2|official|call|call the police|
+616|store|Is there a convenience store nearby?|附近有便利商店嗎？|A2|shopping|nearby|convenience store|
+617|poor|They help poor families in the area.|他們幫助這一區的貧困家庭。|B1|social|help,family<families,area||
+618|knowledge|She has a good knowledge of wine.|她對葡萄酒很有研究。|B2|food|good,wine||2026-10-09 第一輪風險複審保留；主題：酒類
+619|laugh|Don't make me laugh.|別逗我笑了。|A2|social|make||
+620|arm|I hurt my arm at the gym.|我在健身房弄傷了手臂。|A2|health|hurt||
+621|heart|Thank you from the bottom of my heart.|打從心底謝謝你。|B1|social|thank,bottom|from the bottom of my heart|
+622|source|What's the source of this information?|這個資訊的來源是什麼？|B1|news|information||
+623|employees|All employees must wear a badge.|所有員工都必須配戴識別證。|B1|work|all,must,wear||employees 為複數
+624|manages|She manages a small team.|她管理一個小團隊。|B1|work|small,team||
+625|simply|I simply don't have time.|我就是沒時間。|B1|daily|time||
+626|bank|I need to go to the bank.|我得去一趟銀行。|A1|daily|need,go||
+627|firm|He works at a law firm.|他在律師事務所上班。|B1|work|work<works,law|law firm|
+628|cell|What's your cell phone number?|你的手機號碼幾號？|A2|phone|phone,number|cell phone|cell 在此為「手機（cell phone）」，NGSL 中文為「細胞」
+629|article|I read an interesting article today.|我今天讀到一篇有趣的文章。|B1|news|read,today||
+630|fast|You walk too fast.|你走太快了。|A1|daily|walk,too||
+631|attacked|The team attacked hard in the second half.|那支球隊下半場猛烈進攻。|B2|social|team,hard,second,half||attack 在此為球賽中的「進攻」
+632|foreign|Do you speak any foreign languages?|你會說外語嗎？|A2|study|speak,any,language<languages|foreign language|
+633|surprise|What a nice surprise!|真是個驚喜！|A2|social|nice||surprise 在此為名詞「驚喜」
+634|features|This phone has some great features.|這支手機有一些很棒的功能。|B1|shopping|phone,some,great||feature 在此為「功能」
+635|factor|Price is an important factor.|價格是重要的考量因素。|B1|shopping|price,important||
+636|pretty|What a pretty dress!|好漂亮的洋裝！|A1|shopping|dress||
+637|recently|Have you seen Tom recently?|你最近有見到Tom嗎？|A2|social|see<seen||
+638|affect|Will the weather affect our flight?|天氣會影響我們的班機嗎？|B1|travel|weather,flight||
+639|dropped|I dropped my phone.|我的手機掉了。|A2|daily|phone||drop 在此為「掉落」
+640|recent|Please send a recent photo.|請寄一張近照。|B1|official|please,send,photo||
+641|relate|I can totally relate to that.|我完全能體會。|B2|social|totally|relate to|relate 在此為「有同感」
+642|official|What's the official language here?|這裡的官方語言是什麼？|B1|travel|language,here|official language|
+643|financial|She works as a financial advisor.|她是理財顧問。|B2|work|work<works|financial advisor|
+644|miss|I miss you so much.|我好想你。|A1|social|much||
+645|art|She studies art in college.|她在大學念藝術。|A2|study|study<studies,college||
+646|campaign|The new ad campaign starts next week.|新的廣告活動下週開始。|B2|work|new,ad,start<starts,next,week||
+647|private|Is this a private beach?|這是私人海灘嗎？|B1|travel|beach||
+648|pause|Can you pause the movie?|你可以把電影暫停一下嗎？|A2|daily|movie||
+649|everyone|Hi everyone, welcome!|大家好，歡迎！|A1|social|hi,welcome||
+650|forget|Don't forget your umbrella.|別忘了帶雨傘。|A1|daily|||
+651|page|Please turn to page ten.|請翻到第十頁。|A2|study|please,turn,ten||
+652|worry|There's nothing to worry about.|沒什麼好擔心的。|A2|social|nothing|worry about|
+653|summer|We go camping every summer.|我們每年夏天都去露營。|A2|travel|go,camp<camping,every|go camping|
+654|drink|Can I get you a drink?|要不要幫你拿杯飲料？|A2|food|get||
+655|opinion|In my opinion, it's too expensive.|依我看，這太貴了。|B1|shopping|too,expensive|in my opinion|
+656|park|We had a picnic in the park.|我們在公園野餐。|A2|daily|have<had||park 在此為「公園」
+657|represent|She will represent our company at the meeting.|她將代表我們公司出席會議。|B2|work|company||
+658|key|I left my key in the room.|我把鑰匙忘在房間裡了。|A2|travel|leave<left,room||
+659|inside|It's warmer inside.|裡面比較暖和。|A2|daily|warm<warmer||
+660|manager|Can I speak to the manager?|我可以跟經理談談嗎？|A2|shopping|speak||
+661|international|Where's the international terminal?|國際航廈在哪裡？|B1|travel|||
+662|contain|Does this contain nuts?|這裡面有堅果嗎？|B1|food|||
+663|notice|Did you notice anything strange?|你有注意到什麼奇怪的地方嗎？|B1|daily|anything,strange||
+664|wonder|I wonder what time it is.|不知道現在幾點了。|B1|daily|time||
+665|nature|I love being in nature.|我喜歡待在大自然裡。|B1|travel|love||
+666|structure|The structure of the essay is clear.|這篇文章的架構很清楚。|B2|study|essay,clear||
+667|section|Which section is your seat in?|你的座位在哪一區？|B1|travel|seat||
+668|myself|I made it myself.|這是我自己做的。|A2|daily|make<made||
+669|exactly|That's exactly what I need.|那正是我需要的。|B1|shopping|need||
+670|plants|I water my plants every morning.|我每天早上給植物澆水。|A2|daily|water,every,morning||plants 為複數
+671|paint|Careful, wet paint!|小心，油漆未乾！|A2|daily|careful,wet|wet paint|
+672|worker|He's a hard worker.|他工作很認真。|B1|work|hard||
+673|Press|Press the button to start.|按這個按鈕開始。|A2|daily|button,start||
+674|whatever|Order whatever you like.|想點什麼就點什麼。|B1|food|order,like||
+675|necessary|Is it necessary to book in advance?|需要事先預訂嗎？|B1|travel|book,advance|in advance|
+676|region|This region is famous for its tea.|這個地區以茶聞名。|B1|travel|famous,tea|be famous for|
+677|growth|The company has seen rapid growth.|公司成長得很快。|B2|work|company,see<seen,rapid||
+678|evening|Good evening, everyone.|各位晚上好。|A1|social|good,everyone|Good evening.|
+679|influence|My parents had a big influence on me.|我爸媽對我影響很大。|B1|social|parent<parents,big|have an influence on|
+680|respect|We should respect each other.|我們應該互相尊重。|B1|social|should,each,other|each other|
+681|various|We offer various payment options.|我們提供多種付款方式。|B1|shopping|offer,payment,option<options||
+682|catch|I need to catch the last bus.|我得趕上末班公車。|A2|travel|need,last,bus|catch the bus|catch 在此為「趕上」
+683|thus|The flight was delayed, and thus we missed our connection.|班機延誤，因此我們錯過了轉機。|C1|travel|flight,delay<delayed,miss<missed,connection||thus 多用於書面語
+684|skills|Communication skills are very important.|溝通技巧非常重要。|B1|work|communication,very,important||skills 為複數
+685|attempt|This is my second attempt at the test.|這是我第二次挑戰這個考試。|B1|study|second,test||
+686|son|Our son just started school.|我們兒子剛開始上學。|A1|daily|just,start<started,school||
+687|simple|Keep it simple.|簡單就好。|A2|work|keep|Keep it simple.|
+688|Medium|Medium or large?|中杯還是大杯？|A1|food|large||medium 在此指飲料「中杯」
+689|average|The average price is about fifty dollars.|平均價格大約五十美元。|B1|shopping|price,about,fifty,dollar<dollars||
+690|stock|Do you have this in stock?|這個有現貨嗎？|B1|shopping||in stock|
+691|management|The hotel is under new management.|這家飯店換了新的經營團隊。|B2|travel|hotel,under,new|under new management|
+692|character|Who's your favorite character in the movie?|電影裡你最喜歡哪個角色？|A2|daily|favorite,movie||character 在此為「角色」，NGSL 中文為「性格」
+693|bed|I'm going to bed.|我要去睡了。|A1|daily|go<going|go to bed|
+694|hit|He hit his head on the door.|他的頭撞到門了。|A2|health|head,door||hit 在此為「撞到」
+695|established|The school was established in 1990.|這所學校成立於1990年。|B2|study|school||
+696|indeed|It was indeed a great trip.|那確實是一趟很棒的旅行。|B1|travel|great,trip||
+697|final|This is our final offer.|這是我們最後的報價。|B1|work|offer||
+698|economy|The economy is growing slowly.|經濟成長緩慢。|B2|news|grow<growing,slowly||
+699|fit|These shoes don't fit me.|這雙鞋我穿不合腳。|A2|shopping|shoe<shoes||fit 在此為動詞「合身」

@@ -1,0 +1,101 @@
+# phrase_list_506 index 400–499
+phrase_list_506_0400|on the whole|On the whole, I enjoyed the trip.|整體來說，我很喜歡這趟旅行。|B1|travel|enjoy<enjoyed,trip||
+phrase_list_506_0401|care to|Would you care to join us for dinner?|你想跟我們一起吃晚餐嗎？|B2|social|join,dinner||
+phrase_list_506_0402|takes account of|The plan takes account of everyone's needs.|這個計畫考慮到了每個人的需求。|C1|work|plan,everyone,need<needs||
+phrase_list_506_0403|something like that|He said he was sick, or something like that.|他說他生病了，之類的。|A2|social|say<said,sick||
+phrase_list_506_0404|make use of|Make use of the free time you have.|好好利用你的空閒時間。|B1|daily|free,time||
+phrase_list_506_0405|when it comes to|When it comes to cooking, Tom is the best.|說到做菜，Tom 是最厲害的。|B2|food|cook<cooking||
+phrase_list_506_0406|fill in|Please fill in this form.|請填寫這張表格。|A2|official|please,form||fill in 在此為「填寫」
+phrase_list_506_0407|for all|For all its problems, I love this city.|儘管有種種問題，我還是愛這座城市。|C1|daily|problem<problems,love,city||for all 在此為「儘管」
+phrase_list_506_0408|a question of|It's just a question of time.|這只是時間的問題。|B1|daily|just,time||
+phrase_list_506_0409|for life|They became friends for life.|他們成了一輩子的朋友。|B1|social|become<became,friend<friends||
+phrase_list_506_0410|get away|I need to get away for a few days.|我需要出去走走幾天。|B1|travel|need,few,day<days||get away 在此為「離開；擺脫（日常）」
+phrase_list_506_0411|in the meantime|Dinner's almost ready. In the meantime, set the table.|晚餐快好了，你先擺一下餐具。|B1|food|dinner,almost,ready,set,table||
+phrase_list_506_0412|something of an|She's something of an expert on wine.|她算是個葡萄酒專家。|C1|food|expert,wine||句中為 something of an（母音前）；2026-10-09 第一輪風險複審保留；主題：酒類
+phrase_list_506_0413|the odd|I have the odd glass of wine on weekends.|我週末偶爾會喝杯葡萄酒。|C1|food|glass,wine,weekend<weekends||2026-10-09 第一輪風險複審保留；主題：酒類
+phrase_list_506_0414|little more than|The village is little more than a few houses.|那個村子不過就是幾間房子而已。|C1|travel|village,few,house<houses||
+phrase_list_506_0415|would you like|Would you like some help with that?|需要我幫你嗎？|A1|social|help||
+phrase_list_506_0416|in need|We collect clothes for families in need.|我們為有需要的家庭募集衣物。|B1|social|collect,clothes,family<families||2026-10-09 第一輪風險複審保留；語域：一般
+phrase_list_506_0417|take for granted|Good health is something we often take for granted.|健康常常被我們視為理所當然。|B2|health|good,health,often||
+phrase_list_506_0418|in this respect|In this respect, the two phones are the same.|在這方面，兩支手機是一樣的。|C1|shopping|two,phone<phones,same||
+phrase_list_506_0419|provided that|You can borrow my car, provided that you drive carefully.|只要你小心開車，就可以借我的車。|B2|daily|borrow,car,drive,carefully||
+phrase_list_506_0420|allow for|Allow for an extra hour in traffic.|要多預留一小時給塞車。|B2|travel|extra,hour,traffic||allow for 在此為「將…考慮在內」
+phrase_list_506_0421|catch up|You go ahead. I'll catch up later.|你先走，我等一下跟上。|A2|social|ahead||
+phrase_list_506_0422|a go|Can I have a go on your bike?|我可以試騎一下你的腳踏車嗎？|B1|daily|bike||a go 在此為「嘗試一下」
+phrase_list_506_0423|for the moment|For the moment, we'll stay at a hotel.|我們暫時先住飯店。|B1|travel|stay,hotel||
+phrase_list_506_0424|at the expense of|Don't work at the expense of your health.|別犧牲健康去工作。|C1|health|work,health||
+phrase_list_506_0425|put together|It took an hour to put together the shelf.|組裝這個架子花了一個小時。|B1|daily|take<took,hour,shelf||put together 在此為「組合；組裝」
+phrase_list_506_0426|things like that|I like hiking, camping and things like that.|我喜歡健行、露營之類的活動。|A2|daily|like,camp<camping||
+phrase_list_506_0427|of little|The old map was of little use.|那張舊地圖沒什麼用處。|C1|travel|old,map,use||
+phrase_list_506_0428|shut up|Shut up and listen for a second.|安靜一下，聽我說。|A2|social|listen,second||口語，語氣強烈，對熟人使用
+phrase_list_506_0429|as of|As of Monday, the office opens at nine.|從週一起，辦公室九點開門。|B2|work|office,open<opens,nine||
+phrase_list_506_0430|over time|Your English will improve over time.|你的英文會隨著時間進步。|B1|study|improve||
+phrase_list_506_0431|would appear|It would appear that we're lost.|看來我們好像迷路了。|C1|travel|||
+phrase_list_506_0432|the other day|I saw your brother the other day.|我前幾天看到你哥哥。|A2|social|see<saw,brother||
+phrase_list_506_0433|in theory|In theory, the trip takes two hours.|理論上，這趟車程要兩小時。|B2|travel|trip,take<takes,two,hour<hours||
+phrase_list_506_0434|thought of as|She's thought of as the best teacher here.|她被認為是這裡最好的老師。|B2|study|teacher||
+phrase_list_506_0435|for good|He's moving to Canada for good.|他要永久搬去加拿大了。|B1|travel|move<moving||
+phrase_list_506_0436|opposed to|Many people are opposed to the new rule.|很多人反對新規定。|B2|news|many,people,new,rule||
+phrase_list_506_0437|common sense|Use your common sense.|用你的常識判斷一下。|B1|daily|use||
+phrase_list_506_0438|bother to|He didn't even bother to say goodbye.|他連再見都懶得說。|B1|social|even,say||
+phrase_list_506_0439|as good as|The car is as good as new.|這台車跟新的差不多。|B1|shopping|car,new||as good as 在此為「幾乎等於；就像」
+phrase_list_506_0440|back up|Always back up your files.|一定要備份你的檔案。|B1|work|always,file<files||back up 在此為「備份」
+phrase_list_506_0441|take care of|Can you take care of my cat this weekend?|這個週末你可以幫我照顧貓嗎？|A2|daily|cat,weekend||
+phrase_list_506_0442|the sight of|I can't stand the sight of blood.|我看到血就受不了。|B2|health|stand,blood|can't stand|
+phrase_list_506_0443|go round|Is there enough cake to go round?|蛋糕夠大家分嗎？|B2|food|enough,cake||go round 在此為「足夠分配」
+phrase_list_506_0444|the whole thing|I forgot the whole thing.|我把整件事都忘了。|A2|daily|forget<forgot||
+phrase_list_506_0445|at one time|At one time, this street was full of shops.|這條街曾經到處都是商店。|B2|travel|street,full,shop<shops||
+phrase_list_506_0446|heading to|We're heading to the airport now.|我們現在正要去機場。|B1|travel|now||句中為 heading to
+phrase_list_506_0447|in a sense|In a sense, you're right.|從某種意義上說，你是對的。|B2|social|right||
+phrase_list_506_0448|on average|On average, I sleep seven hours a night.|我平均每晚睡七小時。|B1|health|sleep,seven,hour<hours,night||
+phrase_list_506_0449|way round|You're holding the map the wrong way round.|你把地圖拿反了。|B2|travel|hold<holding,map,wrong||way round 在此為「方向」
+phrase_list_506_0450|can tell|I can tell you're tired.|我看得出來你累了。|A2|health|||
+phrase_list_506_0451|free from|This food is free from nuts.|這種食物不含堅果。|B2|food|food||
+phrase_list_506_0452|and all that|We talked about school, work and all that.|我們聊了學校、工作之類的事。|B2|social|talk<talked,school,work||
+phrase_list_506_0453|as it were|He's the boss of the house, as it were.|他可以說是家裡的老大。|C1|daily|boss,house||
+phrase_list_506_0454|what if|What if it rains tomorrow?|如果明天下雨怎麼辦？|A2|daily|rain<rains,tomorrow||
+phrase_list_506_0455|touch of|Add a touch of salt.|加一點點鹽。|B1|food|add,salt||
+phrase_list_506_0456|better off|You'd be better off taking the train.|你搭火車會比較好。|B2|travel|take<taking,train||
+phrase_list_506_0457|stand for|What does this sign stand for?|這個標誌代表什麼？|B1|travel|sign||
+phrase_list_506_0458|to blame|Nobody is to blame for the accident.|這場意外不能怪任何人。|B2|news|nobody,accident||
+phrase_list_506_0459|the bulk of|The bulk of my salary goes on rent.|我大部分的薪水都花在房租上。|C1|daily|salary,rent||
+phrase_list_506_0460|a handful of|Only a handful of people came.|只有少數幾個人來。|B2|social|only,people,come<came||
+phrase_list_506_0461|at the outset|Make the rules clear at the outset.|一開始就把規則講清楚。|C1|work|rule<rules,clear||
+phrase_list_506_0462|by virtue of|She got the job by virtue of her experience.|她憑藉經驗得到這份工作。|C1|work|job,experience||
+phrase_list_506_0463|turned down|She turned down the job offer.|她拒絕了那份工作邀約。|B1|work|job,offer||turn down 在此為「拒絕」
+phrase_list_506_0464|get on|I get on well with my roommate.|我跟室友處得很好。|B1|social|well||get on 在此為「相處」
+phrase_list_506_0465|under way|Work on the new station is under way.|新車站的工程正在進行中。|B2|news|work,new,station||
+phrase_list_506_0466|in the interest of|In the interest of safety, please stay seated.|為了安全起見，請保持就座。|C1|travel|safety,please,stay,seat<seated||
+phrase_list_506_0467|on the market|Their house has been on the market for months.|他們的房子已經掛牌出售好幾個月了。|B2|shopping|house,month<months||
+phrase_list_506_0468|by far|This is by far the best cafe in town.|這絕對是城裡最棒的咖啡店。|B1|food|town||
+phrase_list_506_0469|a degree of|The job requires a degree of patience.|這份工作需要一定程度的耐心。|C1|work|job,require<requires||
+phrase_list_506_0470|never mind|Never mind, I'll do it myself.|沒關係，我自己來。|A2|social|myself||
+phrase_list_506_0471|up and down|He walked up and down the hall.|他在走廊上走來走去。|B1|daily|walk<walked,hall||
+phrase_list_506_0472|in her own right|She's a famous singer in her own right.|她本身就是知名歌手。|C1|news|famous,singer||
+phrase_list_506_0473|a case of|It's a case of too much work and too little sleep.|這是工作太多、睡眠太少的情況。|B2|health|much,work,little,sleep||
+phrase_list_506_0474|more so|The test was hard, and more so for beginners.|考試很難，對初學者來說更是如此。|C1|study|test,hard||
+phrase_list_506_0475|come up to|The food didn't come up to our expectations.|食物沒有達到我們的期望。|C1|food|food,expectation<expectations||
+phrase_list_506_0476|in which case|It may rain, in which case we'll stay home.|可能會下雨，那樣的話我們就待在家。|B2|daily|rain,stay,home||
+phrase_list_506_0477|no sign of|There's still no sign of the bus.|公車還是不見蹤影。|B1|travel|still,bus||
+phrase_list_506_0478|just as|The phone rang just as I was leaving.|我正要出門時電話響了。|B1|phone|phone,ring<rang,leave<leaving||just as 在此為「正當…時」
+phrase_list_506_0479|for the sake of|Let's stay calm for the sake of the kids.|為了孩子，我們保持冷靜吧。|B2|social|stay,calm,kid<kids||
+phrase_list_506_0480|in a position to|I'm not in a position to decide.|我沒有權限做決定。|C1|work|decide||
+phrase_list_506_0481|to come|We'll remember this trip for years to come.|未來好幾年我們都會記得這趟旅行。|B2|travel|remember,trip,year<years||to come 在此為「未來的」
+phrase_list_506_0482|backed by|The plan is backed by the whole team.|這個計畫得到全隊的支持。|B2|work|plan,whole,team||
+phrase_list_506_0483|at best|The food was average at best.|那裡的食物充其量只算普通。|B2|food|food,average||
+phrase_list_506_0484|wealth of|She has a wealth of experience.|她有豐富的經驗。|C1|work|experience||
+phrase_list_506_0485|that sort of thing|I like reading, painting, that sort of thing.|我喜歡閱讀、畫畫那類的事。|B1|daily|like,read<reading,paint<painting||
+phrase_list_506_0486|make out|I can't make out what the sign says.|我看不清楚那個標誌寫什麼。|B2|travel|sign,say<says||make out 在此為「辨認出」
+phrase_list_506_0487|come to terms with|He's still trying to come to terms with the news.|他還在努力接受這個消息。|C1|social|still,try<trying,news||
+phrase_list_506_0488|fond of|I'm very fond of my grandmother.|我非常喜歡我的奶奶。|B1|social|very,grandmother||
+phrase_list_506_0489|with a view to|He's saving money with a view to buying a car.|他在存錢，打算買車。|C1|shopping|save<saving,money,buy<buying,car||
+phrase_list_506_0490|turn back|It's getting dark. Let's turn back.|天快黑了，我們回頭吧。|B1|travel|dark||
+phrase_list_506_0491|get away with|You won't get away with lying to me.|你騙我是騙不過去的。|B2|social|lie<lying||
+phrase_list_506_0492|no wonder|No wonder you're tired. You didn't sleep!|難怪你累了，你都沒睡！|B1|health|sleep||
+phrase_list_506_0493|well-being|Exercise is good for your well-being.|運動對你的身心健康有益。|C1|health|exercise,good||
+phrase_list_506_0494|how about|How about going out for lunch?|出去吃午餐怎麼樣？|A1|food|go<going,lunch||
+phrase_list_506_0495|to go|We have two days to go before the trip.|離出發還剩兩天。|B1|travel|two,day<days,trip||to go 在此為「剩下的」
+phrase_list_506_0496|straight away|I'll call you back straight away.|我馬上回電給你。|B1|phone|call||
+phrase_list_506_0497|owing to|The flight was delayed owing to bad weather.|班機因天氣不佳而延誤。|B2|travel|flight,delay<delayed,bad,weather||
+phrase_list_506_0498|held up|Sorry I'm late. I was held up in traffic.|抱歉我遲到了，我被塞車耽擱了。|B1|travel|sorry,late,traffic||hold up 在此為「耽擱」
+phrase_list_506_0499|look to|Kids look to their parents for help.|孩子會指望父母幫忙。|B2|social|kid<kids,parent<parents,help||look to 在此為「指望」

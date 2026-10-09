@@ -1,0 +1,101 @@
+# NGSL index 100–199
+100|last|I missed the last train home.|我錯過了回家的末班車。|A2|travel|miss<missed,train,home|the last train|
+101|child|Their child is three years old.|他們的孩子三歲了。|A1|daily|three,year<years,old||
+102|tell|Please tell me if you need anything.|如果你需要什麼，請告訴我。|A1|social|please,need,anything||
+103|really|I really like this song.|我真的很喜歡這首歌。|A1|social|like,song||
+104|call|I'll call you back in ten minutes.|我十分鐘後回電給你。|A2|phone|back,ten,minute<minutes|call someone back|
+105|before|Please wash your hands before dinner.|晚餐前請洗手。|A1|daily|please,wash,hand<hands,dinner||
+106|company|She works for a small company.|她在一家小公司上班。|A1|work|work<works,small|work for ...|
+107|through|We drove through the city at night.|我們晚上開車穿過市區。|A2|travel|drive<drove,city,night||
+108|down|Please sit down and relax.|請坐下來放輕鬆。|A1|daily|please,sit,relax|sit down|
+109|show|Can you show me how it works?|你可以示範給我看怎麼用嗎？|A1|daily|work<works|show me how ...|
+110|life|Life is busy, but I'm happy.|生活很忙，但我很快樂。|A2|daily|busy,happy||
+111|man|The man at the front desk was very helpful.|櫃台的那位先生幫了很多忙。|A2|travel|front,desk|front desk|
+112|change|Can I change my seat?|我可以換座位嗎？|A1|travel|seat||
+113|place|This is a nice place to eat.|這是個吃飯的好地方。|A1|food|nice,eat||
+114|long|How long does it take to get there?|到那裡要多久？|A1|travel|take,get|How long does it take ...?|
+115|between|The bank is between the hotel and the station.|銀行在飯店和車站中間。|A1|travel|bank,hotel,station||
+116|feel|I don't feel well today.|我今天不太舒服。|A1|health|well,today|feel well|
+117|too|I like tea, too.|我也喜歡茶。|A1|food|like,tea||too 在此為「也」
+118|still|Are you still at work?|你還在上班嗎？|A1|work|work|at work|
+119|problem|No problem, I can help.|沒問題，我可以幫忙。|A1|social|help|No problem.|
+120|write|Please write your name here.|請在這裡寫上你的名字。|A1|daily|please,name,here||
+121|same|We have the same phone.|我們的手機一樣。|A1|daily|phone|the same ...|
+122|lot|Thanks a lot for your help.|非常感謝你的幫忙。|A1|social|thank<Thanks,help|Thanks a lot.|
+123|great|That's a great idea!|這是個好主意！|A1|social|idea||
+124|try|Can I try this on?|我可以試穿這件嗎？|A1|shopping||try on（試穿）|
+125|leave|What time does the train leave?|火車幾點出發？|A1|travel|time,train||
+126|number|What's your phone number?|你的電話號碼是幾號？|A1|phone|phone|phone number|
+127|both|Both rooms have a view of the sea.|兩個房間都看得到海。|A2|travel|room<rooms,view,sea||
+128|own|I want my own room.|我想要有自己的房間。|A1|daily|want,room|my own ...|
+129|part|This is the best part of the trip.|這是這趟旅行最棒的部分。|A2|travel|trip||
+130|point|That's a good point.|你說得有道理。|A2|work|good|That's a good point.|
+131|little|My little brother is ten.|我弟弟十歲。|A1|daily|brother,ten|little brother|
+132|help|Do you need any help?|你需要幫忙嗎？|A1|shopping|need,any||
+133|ask|Can I ask you a question?|我可以問你一個問題嗎？|A1|social|question||
+134|meet|Nice to meet you.|很高興認識你。|A1|social|nice|Nice to meet you.|
+135|starts|The movie starts at eight.|電影八點開始。|A1|daily|movie,eight||
+136|talk|Can we talk for a minute?|我們可以談一下嗎？|A1|work|minute|for a minute|
+137|something|I want to eat something sweet.|我想吃點甜的。|A1|food|want,eat,sweet||
+138|put|Put your bag on the chair.|把你的包包放在椅子上。|A1|daily|bag,chair||
+139|another|Can I have another cup of tea?|可以再給我一杯茶嗎？|A1|food|cup,tea|a cup of|
+140|become|She wants to become a teacher.|她想成為老師。|A2|work|want<wants,teacher||
+141|interest|I have no interest in sports.|我對運動沒興趣。|A2|social|sport<sports|interest in ...|
+142|country|Which country are you from?|你是哪個國家的人？|A1|social|which||
+143|old|How old is your son?|你兒子幾歲？|A1|social|son|How old ...?|
+144|each|The tickets are ten dollars each.|票每張十美元。|A2|shopping|ticket<tickets,ten,dollar<dollars||
+145|school|My kids walk to school.|我的孩子走路上學。|A1|daily|kid<kids,walk|walk to school|
+146|late|Sorry, I'm late.|抱歉，我遲到了。|A1|social|sorry||
+147|high|The price is too high.|價格太高了。|A2|shopping|price||
+148|different|This shirt comes in different sizes.|這件襯衫有不同尺寸。|A2|shopping|shirt,come<comes,size<sizes|come in ...（有…款式）|
+149|off|Please turn off your phone.|請把手機關機。|A1|daily|please,turn off,phone||turn off 是 PhaVE 正式項目
+150|next|Let's meet again next week.|我們下週再見面吧。|A1|social|let<Let's,meet,again,week|next week|
+151|end|The store is at the end of the street.|那家店在這條街的盡頭。|A2|travel|store,street|at the end of|
+152|live|Where do you live?|你住在哪裡？|A1|social|where||
+153|why|Why are you so tired?|你為什麼這麼累？|A1|daily|so||tired 不在詞表
+154|while|Please wait here while I check.|我確認一下，請在這裡稍等。|A2|work|please,wait,here,check||
+155|world|It's a small world!|世界真小！|A2|social|small|It's a small world.|
+156|week|I go to the gym twice a week.|我一週去健身房兩次。|A2|health|go,twice|twice a week|
+157|playing|The kids are playing in the park.|孩子們在公園玩。|A1|daily|kid<kids,park||
+158|might|It might rain this afternoon.|今天下午可能會下雨。|A2|daily|rain,afternoon||
+159|must|You must wear a seat belt.|你一定要繫安全帶。|A2|travel|wear,seat,belt|seat belt|
+160|home|I usually stay home on Sundays.|我週日通常待在家。|A1|daily|usually,stay|stay home|Sundays 不在詞表
+161|never|I never drink coffee at night.|我晚上從不喝咖啡。|A1|food|drink,coffee,night|at night|
+162|include|Does the price include breakfast?|價格有含早餐嗎？|A2|travel|price,breakfast||
+163|course|I'm taking an English course.|我正在上一門英文課。|A2|study|take<taking|take a course|English 不在詞表；course 用「課程」詞義
+164|house|Their house is near the river.|他們家在河邊附近。|A1|daily|near,river||
+165|report|I need to finish this report today.|我今天必須完成這份報告。|A2|work|need,finish,today||
+166|group|We're traveling in a group of six.|我們是六人團體旅行。|A2|travel|travel<traveling,six|a group of|
+167|case|Take an umbrella, just in case.|帶把傘，以防萬一。|A2|daily|take|just in case（以防萬一）|
+168|woman|That woman is my boss.|那位女士是我的老闆。|A1|work|boss||
+169|around|Let's walk around the lake.|我們繞著湖散步吧。|A1|travel|let<Let's,walk,lake|walk around|
+170|book|I'm reading a good book.|我在讀一本好書。|A1|daily|read<reading,good||book 用「書」詞義
+171|family|I live with my family.|我和家人住在一起。|A1|daily|live||
+172|seem|You seem tired.|你看起來很累。|A2|social|||tired 不在詞表
+173|let|Let me help you.|我來幫你。|A1|social|help|Let me ...|
+174|again|Could you say that again?|可以請你再說一次嗎？|A1|social|could,say||
+175|kind|What kind of music do you like?|你喜歡哪種音樂？|A1|social|music,like|What kind of ...?|
+176|keep|Please keep the change.|不用找零了。|A2|shopping|please,change|Keep the change.|change 在此為「零錢」
+177|hear|Can you hear me?|你聽得到我嗎？|A1|phone|||
+178|system|The computer system is down.|電腦系統當機了。|B1|work|computer,down|be down（故障）|
+179|every|I check my email every morning.|我每天早上收電子郵件。|A1|work|check,email,morning|every morning|
+180|question|That's a good question.|這是個好問題。|A1|work|good||
+181|during|I fell asleep during the movie.|我看電影時睡著了。|A2|daily|fall<fell,movie|fall asleep|
+182|always|She always arrives on time.|她總是準時到。|A1|work|arrive<arrives,time|on time|
+183|big|This box is too big.|這個箱子太大了。|A1|shopping|box||
+184|set|I set my alarm for six.|我把鬧鐘設在六點。|A2|daily|alarm,six|set an alarm|
+185|small|Do you have a small size?|有小號的嗎？|A1|shopping|size||
+186|study|I study English every night.|我每天晚上讀英文。|A1|study|every,night||English 不在詞表
+187|follow|Please follow me.|請跟我來。|A1|travel|please||
+188|begins|The class begins at nine.|課九點開始。|A1|study|class,nine||
+189|important|This meeting is very important.|這場會議很重要。|A1|work|very||meeting 不在詞表
+190|since|I've lived here since 2015.|我從 2015 年就住在這裡。|A2|daily|live<lived,here||數字年份請確認 TTS 念法
+191|run|I run in the park every morning.|我每天早上在公園跑步。|A1|health|park,every,morning||
+192|under|The cat is under the bed.|貓在床底下。|A1|daily|cat,bed||
+193|turn|It's your turn.|輪到你了。|A1|social|||turn 用「輪到」詞義
+194|few|I'll be there in a few minutes.|我幾分鐘後就到。|A1|daily|there,minute<minutes|in a few minutes|
+195|bring|Can you bring me the menu?|可以給我菜單嗎？|A1|food|menu||
+196|early|I have to get up early tomorrow.|我明天得早起。|A1|daily|get up,tomorrow|have to|
+197|hand|Raise your hand if you have a question.|有問題請舉手。|A1|study|raise,question|raise your hand|
+198|state|Please state your name and date of birth.|請說出你的姓名和出生日期。|B1|official|please,name,date,birth|date of birth|state 用「陳述」詞義，語氣正式
+199|moving|We're moving to a new apartment next month.|我們下個月要搬到新公寓。|A2|daily|new,apartment,next,month|move to ...|

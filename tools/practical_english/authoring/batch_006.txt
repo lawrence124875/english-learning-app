@@ -1,0 +1,101 @@
+# NGSL index 500–599
+500|claims|He claims he never got my message.|他堅稱從沒收到我的訊息。|B1|social|never,get<got,message||
+501|relationship|They have a good relationship.|他們的關係很好。|B1|social|good||
+502|travel|I love to travel alone.|我喜歡一個人旅行。|A2|travel|love,alone||
+503|Enjoy|Enjoy your meal!|請慢用！|A2|food|meal|Enjoy your meal.|
+504|death|We were sad to hear about his death.|聽到他過世的消息，我們很難過。|B2|social|sad,hear||
+505|nice|It's nice to see you again.|很高興再見到你。|A1|social|see,again||
+506|amount|That's a large amount of money.|那是一大筆錢。|B1|daily|large,money|a large amount of|
+507|improve|I want to improve my English.|我想加強我的英文。|A2|study|want||English 不在詞表
+508|picture|Could you take a picture of us?|可以幫我們拍張照嗎？|A2|travel|take|take a picture|
+509|boy|The boy is playing with his dog.|那個男孩正在跟他的狗玩。|A1|daily|play<playing,dog||
+510|regards|Please give my regards to your family.|請代我向你的家人問好。|B1|social|please,give,family|give my regards to|regards 在此為「問候」，NGSL 中文為「考慮」
+511|organization|She works for a nonprofit organization.|她在一個非營利組織工作。|B1|work|work<works||nonprofit 不在詞表
+512|happy|I'm happy to help.|我很樂意幫忙。|A2|social|help||
+513|couple|I'll be there in a couple of minutes.|我再幾分鐘就到。|A2|daily|there,minute<minutes|a couple of|couple 在此為「幾個」
+514|acting|Stop acting like a child.|別再像個小孩一樣了。|B1|social|stop,child||act 在此為動詞「表現、舉止」
+515|range|We have a wide range of sizes.|我們有各種尺寸。|B1|shopping|wide,size<sizes|a wide range of|
+516|quality|The quality is excellent.|品質非常好。|B1|shopping|excellent||
+517|project|We finished the project on time.|我們準時完成了專案。|B1|work|finish<finished,time|on time|
+518|round|I'd like a round table by the window.|我想要靠窗的圓桌。|A2|food|like,table,window||
+519|opportunity|Thank you for this opportunity.|謝謝你給我這個機會。|B1|work|thank||
+520|road|The road is closed today.|這條路今天封閉。|A2|travel|close<closed,today||
+521|accord|He left of his own accord.|他是自願離開的。|C1|work|leave<left,own|of one's own accord|accord 在此只用於片語 of one's own accord「自願」
+522|list|Let me make a shopping list.|我來列個購物清單。|A2|shopping|let,make,shop<shopping|shopping list|
+523|wish|I wish I could stay longer.|真希望我能待久一點。|B1|travel|stay,long<longer||
+524|therefore|The flight was canceled; therefore, we stayed another night.|航班取消了，因此我們多住了一晚。|B2|travel|flight,cancel<canceled,stay<stayed,another,night||
+525|wear|What should I wear tonight?|我今晚該穿什麼？|A2|daily|should,tonight||
+526|funds|We're raising funds for the school.|我們正在為學校募款。|B2|study|raise<raising,school|raise funds|funds 為複數，fund 在此為「資金」
+527|rest|You should get some rest.|你應該休息一下。|A2|health|should,get,some|get some rest|rest 在此為「休息」
+528|kids|Do you have any kids?|你有小孩嗎？|A1|social|any||kids 為複數
+529|industry|She works in the travel industry.|她在旅遊業工作。|B1|work|work<works,travel||
+530|Education|Education is very important.|教育非常重要。|B1|study|very,important||
+531|measure|Let me measure the room first.|我先量一下房間。|B1|daily|let,room,first||
+532|kill|I have an hour to kill.|我有一個小時要打發。|B2|daily|hour|kill time|kill 在此為「打發（時間）」
+533|served|Lunch is served at noon.|午餐中午開始供應。|B1|travel|lunch||serve 在此為「供應（餐點）」
+534|likely|It's likely to rain this afternoon.|今天下午很可能會下雨。|B1|daily|rain,afternoon|be likely to|
+535|certainly|I'll certainly be there.|我一定會到。|B1|social|there||
+536|national|Today is a national holiday.|今天是國定假日。|B1|official|today,holiday|national holiday|
+537|itself|The town itself is quite small.|小鎮本身相當小。|B1|travel|town,quite,small||
+538|teach|Can you teach me how to swim?|你可以教我游泳嗎？|A2|health|swim|teach someone how to|
+539|field|What field do you work in?|你從事哪個領域的工作？|B1|work|work||
+540|security|We have to go through security.|我們得過安檢。|B1|travel|go,through|go through security|security 在此為「安檢」
+541|air|I need some fresh air.|我需要呼吸點新鮮空氣。|A2|health|need,some,fresh|fresh air|
+542|benefits|What are the benefits of this job?|這份工作有什麼福利？|B1|work|job||benefit 在此為「福利」
+543|trade|Would you like to trade seats?|你想跟我換位子嗎？|B1|travel|like,seat<seats||trade 在此為「交換」
+544|risk|It's not worth the risk.|不值得冒這個險。|B1|social|worth||
+545|news|Did you hear the news?|你聽說那個消息了嗎？|A2|news|hear||
+546|Standard|Standard shipping takes five days.|一般運送需要五天。|B1|shopping|ship<shipping,take<takes,five,day<days||standard 在此為「標準的、一般的」
+547|vote|Let's vote on where to eat.|我們投票決定去哪裡吃吧。|B1|social|let<Let's,eat||
+548|percent|Everything is twenty percent off.|全部打八折。|B1|shopping|everything,twenty,off||
+549|focus|I can't focus on my work.|我沒辦法專心工作。|B1|work|work|focus on|focus 在此為動詞「專注」
+550|stages|We're still in the early stages.|我們還在初期階段。|B1|work|still,early||stages 為複數
+551|space|Is there space for one more?|還有空間再多一個人嗎？|A2|social|one,more||
+552|instead|Can I have tea instead?|我可以改點茶嗎？|A2|food|have,tea||
+553|realize|I didn't realize it was so late.|我沒發現已經這麼晚了。|B1|daily|late||
+554|usually|I usually get up at seven.|我通常七點起床。|A1|daily|get,up,seven|get up|
+555|data|All the data is saved online.|所有資料都存在網路上。|B1|work|all,save<saved,online||
+556|single|I'd like a single room, please.|我想要一間單人房。|A2|travel|like,room,please|single room|
+557|address|What's your email address?|你的電子郵件地址是什麼？|A2|official|email|email address|
+558|performance|Your performance this year was excellent.|你今年的表現很出色。|B1|work|year,excellent||
+559|chance|Give me a chance.|給我一次機會。|A2|social|give||
+560|accept|Do you accept credit cards?|你們收信用卡嗎？|A2|shopping|credit,card<cards|credit card|
+561|society|Older people play an important role in society.|長者在社會上扮演重要的角色。|B2|news|old<Older,people,play,important,role|play a role|
+562|Technology|Technology changes so fast.|科技變化得好快。|B1|news|change<changes,fast||
+563|mention|Did she mention where she was going?|她有提到她要去哪裡嗎？|B1|social|go<going||
+564|choice|Good choice!|選得好！|A2|food|good||
+565|save|I'm trying to save money.|我正在努力存錢。|A2|daily|try<trying,money|save money|save 在此為「存（錢）」
+566|common|This is a common mistake.|這是常見的錯誤。|B1|study|mistake||
+567|cultures|I love learning about other cultures.|我喜歡了解其他文化。|B1|travel|love,learn<learning,other||cultures 為複數
+568|total|What's the total?|總共多少錢？|A2|shopping|||
+569|demand|There's a high demand for nurses.|護理師的需求很高。|B2|work|high,nurse<nurses||
+570|material|What material is this made of?|這是用什麼材質做的？|B1|shopping|make<made|be made of|
+571|limit|The speed limit here is fifty.|這裡速限五十。|B1|travel|speed,here,fifty|speed limit|
+572|listening|Are you listening to me?|你有在聽我說話嗎？|A1|social|||
+573|due|The rent is due on Friday.|房租星期五要繳。|B1|daily|rent||due 在此為「到期應付」
+574|wrong|Sorry, wrong number.|抱歉，打錯了。|A2|phone|sorry,number|wrong number|
+575|foot|My left foot hurts.|我的左腳痛。|A1|health|left,hurt<hurts||
+576|effort|Thanks for all your effort.|謝謝你的努力付出。|B1|work|thank<Thanks,all||
+577|attention|May I have your attention, please?|請大家注意一下。|B1|official|please|May I have your attention?|
+578|upon|Payment is due upon arrival.|抵達時付款。|C1|travel|payment,due,arrival||upon 在此為「在……時」
+579|check|Can I check in now?|我現在可以辦理入住嗎？|A2|travel|now|check in|
+580|complete|Please complete this form.|請填完這張表格。|B1|official|please,form||
+581|lie|Don't lie to me.|不要對我說謊。|A2|social|||
+582|Pick|Pick any seat you like.|隨便挑你喜歡的位子。|A2|travel|any,seat,like||
+583|reduce|We need to reduce costs.|我們必須降低成本。|B1|work|need,cost<costs||
+584|personal|Can I ask you a personal question?|我可以問你一個私人問題嗎？|B1|social|ask,question||
+585|ground|The ground is wet.|地面是濕的。|A2|daily|wet||
+586|animal|What's your favorite animal?|你最喜歡什麼動物？|A1|social|favorite||
+587|arrive|When will the package arrive?|包裹什麼時候會到？|A2|shopping|package||
+588|patient|The doctor will see the next patient.|醫生要看下一位病人了。|B1|health|doctor,see,next||
+589|current|What's your current address?|你現在的地址是哪裡？|B1|official|address||
+590|century|This building is over a century old.|這棟建築有一百多年歷史了。|B1|travel|over,old||
+591|evidence|There's no evidence that it works.|沒有證據顯示它有效。|B2|news|work<works||
+592|exist|Does that place really exist?|那個地方真的存在嗎？|B1|daily|place,really||
+593|similar|Our tastes are very similar.|我們的品味很相似。|B1|social|taste<tastes,very||
+594|fight|My kids fight all the time.|我家小孩老是吵架。|A2|daily|kid<kids,all,time|all the time|fight 在此為「吵架」
+595|leader|She's a natural leader.|她是天生的領導者。|B1|work|natural||
+596|fine|Don't worry, it's fine.|別擔心，沒事的。|A1|social|worry||
+597|street|Go straight down this street.|沿著這條街直走。|A2|travel|go,straight,down|go straight|
+598|former|He's a former teacher.|他以前當過老師。|B1|work|teacher||
+599|contact|Please contact me if you have any questions.|如果有任何問題，請聯絡我。|B1|work|please,any,question<questions||

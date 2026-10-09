@@ -1,0 +1,101 @@
+# phrase_list_506 index 100–199
+phrase_list_506_0100|came to|Over time, I came to love this city.|隨著時間過去，我漸漸愛上了這座城市。|B1|daily|time,love,city|over time|come to 在此為「逐漸變得」
+phrase_list_506_0101|along with|I ordered a burger along with some fries.|我點了一個漢堡，還有一些薯條。|A2|food|order<ordered||
+phrase_list_506_0102|may well|It may well rain later, so take an umbrella.|晚一點很可能會下雨，帶把傘吧。|B1|daily|rain,take||
+phrase_list_506_0103|Get out|Get out of the car and stretch your legs.|下車伸展一下雙腿吧。|A2|travel|car,stretch,leg<legs||
+phrase_list_506_0104|followed by|We had lunch, followed by a walk in the park.|我們吃了午餐，接著去公園散步。|B1|daily|lunch,walk,park||
+phrase_list_506_0105|in that|I'm lucky in that my office is close to home.|我很幸運，因為我的辦公室離家很近。|B2|work|lucky,office,close,home|close to|in that 在此為「就…而言；因為」
+phrase_list_506_0106|the case|If that's the case, we should leave now.|如果真是那樣，我們應該現在就走。|B1|social|leave|if that's the case|the case 在此為「事實；實情」
+phrase_list_506_0107|took up|My dad took up golf after he retired.|我爸退休後開始打高爾夫球。|B1|daily|dad,golf,retire<retired||take up 在此為「開始從事」
+phrase_list_506_0108|account for|Rent and food account for most of my spending.|房租和食物佔了我大部分的開銷。|B2|shopping|rent,food||account for 在此為「佔（比例）」
+phrase_list_506_0109|set out|We set out early to avoid the traffic.|我們很早出發，以避開車潮。|B1|travel|early,avoid,traffic||set out 在此為「出發」
+phrase_list_506_0110|As far as|As far as I know, the store opens at ten.|據我所知，那家店十點開門。|B1|shopping|know,store,open<opens|as far as I know|as far as 在此為「就…而言」
+phrase_list_506_0111|concerned with|This class is concerned with basic writing skills.|這門課的重點在基本寫作技巧。|B2|study|class,basic,skill<skills||
+phrase_list_506_0112|about to|I was about to call you.|我正要打電話給你。|A2|phone|call||
+phrase_list_506_0113|supposed to|We're supposed to check out by noon.|我們應該在中午前退房。|A2|travel|check out||supposed to 在此為「應該」
+phrase_list_506_0114|and so on|Bring a towel, sunscreen, water, and so on.|帶毛巾、防曬乳、水等等。|B1|travel|bring,water||
+phrase_list_506_0115|Come on|Come on, we're going to be late!|快點，我們要遲到了！|A1|daily|late|going to|come on 在此為「快點」
+phrase_list_506_0116|take on|I can't take on any more work this week.|這星期我沒辦法再接更多工作了。|B1|work|work,week||take on 在此為「承擔」
+phrase_list_506_0117|worked out|Don't worry, everything worked out fine.|別擔心，一切都順利解決了。|B1|social|worry,everything,fine||work out 在此為「結果變成（順利）」
+phrase_list_506_0118|all over|There were toys all over the floor.|地上到處都是玩具。|A2|daily|toy<toys,floor||all over 在此為「到處」
+phrase_list_506_0119|other than|I don't eat meat other than chicken.|除了雞肉，我不吃其他肉。|B1|food|eat,meat,chicken||
+phrase_list_506_0120|out of|Nine out of ten people liked the new design.|十個人裡有九個喜歡新設計。|B1|work|people,like<liked,new,design||out of 在此為「在…之中」
+phrase_list_506_0121|turned out|The weather turned out to be perfect.|結果天氣好得不得了。|B1|travel|weather,perfect||turn out 在此為「結果是」
+phrase_list_506_0122|look after|Can you look after my cat this weekend?|你這個週末可以幫我照顧貓嗎？|A2|daily|cat,weekend||
+phrase_list_506_0123|At last|At last, the bus is here!|公車終於來了！|A2|travel|bus||
+phrase_list_506_0124|a variety of|The café offers a variety of cakes.|這家咖啡店提供各式各樣的蛋糕。|B1|food|offer<offers,cake<cakes||
+phrase_list_506_0125|At first|At first, I didn't like my new job.|一開始，我不喜歡我的新工作。|A2|work|like,new,job||
+phrase_list_506_0126|or so|The train leaves in ten minutes or so.|火車大約十分鐘後開。|B1|travel|train,leave<leaves,minute<minutes||
+phrase_list_506_0127|in favour|Most of us are in favour of the plan.|我們大多數人都贊成這個計畫。|B2|work|most,plan|in favour of|
+phrase_list_506_0128|give up|Don't give up, you're almost there.|別放棄，你快成功了。|A2|social|almost||
+phrase_list_506_0129|get to|How do I get to the train station?|請問火車站怎麼去？|A1|travel|train,station||get to 在此為「到達」
+phrase_list_506_0130|found myself|I found myself smiling at the message.|看到那則訊息，我發現自己在微笑。|B2|social|smile<smiling,message||find oneself 用過去式 found myself
+phrase_list_506_0131|get up|What time do you usually get up?|你通常幾點起床？|A1|daily|time,usually||
+phrase_list_506_0132|Carry on|Carry on, I'm listening.|繼續說，我在聽。|B1|social|listen<listening||
+phrase_list_506_0133|go back|I want to go back to Japan someday.|我想要有一天再回日本。|A2|travel|want||
+phrase_list_506_0134|focus on|I need to focus on my exams this month.|這個月我需要專心準備考試。|B1|study|need,exam<exams,month||
+phrase_list_506_0135|at once|Please call me at once if anything changes.|如果有任何變化，請馬上打給我。|B1|phone|please,call,anything,change<changes||at once 在此為「立刻」
+phrase_list_506_0136|It takes|It takes about an hour to get there by train.|搭火車去那裡大約要一個小時。|A2|travel|hour,train||
+phrase_list_506_0137|get off|We need to get off at the next stop.|我們要在下一站下車。|A1|travel|need,next,stop||詞表為 get on/off，此句用 get off
+phrase_list_506_0138|as a whole|The team as a whole did a great job.|團隊整體表現得很好。|B2|work|team,great,job||
+phrase_list_506_0139|In practice|In practice, the rule is rarely followed.|實際上，這條規定很少人遵守。|B2|work|rule,rarely,follow<followed||
+phrase_list_506_0140|By the time|By the time we arrived, the movie had started.|我們到的時候，電影已經開始了。|B1|daily|arrive<arrived,movie,start<started||
+phrase_list_506_0141|lots of|There are lots of good restaurants around here.|這附近有很多好餐廳。|A1|food|good,restaurant<restaurants,around||
+phrase_list_506_0142|said to be|This place is said to be the best in town.|據說這家店是鎮上最好的。|B1|food|place,town||
+phrase_list_506_0143|in time|We got to the airport just in time.|我們剛好及時趕到機場。|A2|travel||just in time|
+phrase_list_506_0144|in turn|Each student will speak in turn.|每個學生會輪流發言。|B2|study|student,speak||in turn 在此為「依次」
+phrase_list_506_0145|once again|Thank you once again for your help.|再次感謝你的幫忙。|A2|social|thank,help||
+phrase_list_506_0146|all the time|My little brother asks questions all the time.|我弟弟一天到晚都在問問題。|A2|daily|little,brother,ask<asks,question<questions||
+phrase_list_506_0147|on the basis of|Seats are given on the basis of arrival time.|座位依照抵達時間分配。|B2|official|seat<seats,give<given,arrival,time||
+phrase_list_506_0148|kind of|I'm kind of tired today.|我今天有點累。|A2|daily|today||kind of 在此為「有點」
+phrase_list_506_0149|get into|I don't want to get into the habit of snacking late.|我不想養成很晚吃零食的習慣。|B1|health|want,habit,late||get into 在此為「養成（習慣）」
+phrase_list_506_0150|rely on|You can always rely on Lisa.|你永遠可以依靠 Lisa。|B1|social|always||
+phrase_list_506_0151|go for|I think I'll go for the fish.|我想我要點魚。|A2|food|think,fish||go for 在此為「選擇」
+phrase_list_506_0152|aim to|We aim to reply within 24 hours.|我們的目標是在 24 小時內回覆。|B1|work|reply,within,hour<hours||
+phrase_list_506_0153|make up|Women make up half of our staff.|我們的員工有一半是女性。|B2|work|woman<women,half,staff||make up 在此為「組成」
+phrase_list_506_0154|appeal to|This game should appeal to young kids.|這款遊戲應該會吸引年紀小的孩子。|B1|shopping|game,young,kid<kids||appeal to 在此為「吸引」
+phrase_list_506_0155|ended up|We ended up eating at home.|我們最後在家吃飯。|B1|food|eat<eating,home||
+phrase_list_506_0156|shook his head|He just shook his head and smiled.|他只是搖搖頭，笑了笑。|B1|social|smile<smiled||shake one's head 用過去式 shook his head
+phrase_list_506_0157|no more than|The walk takes no more than ten minutes.|走路只要十分鐘以內。|B2|travel|walk,take<takes,minute<minutes||no more than 在此為「僅僅；不超過」
+phrase_list_506_0158|get back|What time will you get back tonight?|你今晚幾點回來？|A2|daily|time,tonight||get back 在此為「回來」
+phrase_list_506_0159|What about|What about Friday? Are you free then?|星期五怎麼樣？你那時有空嗎？|A1|social|free||
+phrase_list_506_0160|In other words|In other words, we need more time.|換句話說，我們需要更多時間。|B1|work|need,more,time||
+phrase_list_506_0161|As for|As for dessert, I'll skip it tonight.|至於甜點，我今晚就不吃了。|B1|food|tonight||
+phrase_list_506_0162|not even|I'm not even hungry.|我根本就不餓。|A2|food|||
+phrase_list_506_0163|entitled to|You're entitled to a full refund.|你有權獲得全額退款。|B2|shopping|full||
+phrase_list_506_0164|Prior to|Prior to the meeting, please read this report.|開會前，請先看這份報告。|B2|work|please,read,report||
+phrase_list_506_0165|chose to|She chose to study abroad.|她選擇出國念書。|B1|study|study,abroad||
+phrase_list_506_0166|something like|The tickets cost something like fifty dollars.|票價大概五十美元左右。|B1|shopping|ticket<tickets,cost,dollar<dollars||something like 在此為「大約」
+phrase_list_506_0167|known to|This road is known to flood in heavy rain.|大家都知道這條路下大雨就會淹水。|B2|travel|road,flood,heavy,rain||
+phrase_list_506_0168|in touch|Let's keep in touch after graduation.|畢業後我們保持聯絡吧。|A2|social|keep|keep in touch|
+phrase_list_506_0169|In the end|In the end, we decided to stay home.|最後，我們決定待在家。|A2|daily|decide<decided,stay,home||
+phrase_list_506_0170|in the way|Sorry, am I in the way?|抱歉，我擋到你了嗎？|A2|social|sorry||
+phrase_list_506_0171|care for|Would you care for some tea?|你想喝點茶嗎？|B1|food|tea||care for 在此為「喜歡；想要」
+phrase_list_506_0172|In the event of|In the event of a fire, use the stairs.|萬一發生火災，請走樓梯。|B2|official|fire,use,stair<stairs||
+phrase_list_506_0173|they say|They say this winter will be very cold.|聽說今年冬天會很冷。|A2|daily|winter,very,cold||
+phrase_list_506_0174|so-called|This so-called sale isn't really cheaper.|這個所謂的特價其實沒有比較便宜。|B2|shopping|sale,really,cheap<cheaper||句中寫作 so-called
+phrase_list_506_0175|take into account|We need to take into account the travel time.|我們需要把交通時間考慮進去。|B2|travel|need,travel,time||
+phrase_list_506_0176|in respect of|There is no charge in respect of children under five.|五歲以下兒童不收費。|C1|official|charge,child<children,under||
+phrase_list_506_0177|out of|This bag is made out of old jeans.|這個包包是用舊牛仔褲做的。|B1|shopping|bag,make<made,old||out of 在此為「用…製成」
+phrase_list_506_0178|At the same time|It's a great job. At the same time, the hours are long.|這是份好工作，但同時工時也很長。|B2|work|great,job,hour<hours,long||at the same time 在此為「然而」
+phrase_list_506_0179|next to|The bank is next to the post office.|銀行在郵局旁邊。|A1|travel|bank||
+phrase_list_506_0180|turned up|Only five people turned up to the party.|只有五個人來參加派對。|B1|social|only,people,party||turn up 在此為「出現；到場」
+phrase_list_506_0181|point of view|I understand your point of view.|我了解你的觀點。|B1|social|understand||
+phrase_list_506_0182|At present|At present, the shop is closed for repairs.|目前這家店因整修而暫停營業。|B2|shopping|shop,close<closed,repair<repairs||
+phrase_list_506_0183|used to|I'm not used to spicy food yet.|我還不習慣吃辣。|B1|food|food,yet||used to 在此為「習慣於」
+phrase_list_506_0184|whether or not|I'm not sure whether or not he's coming.|我不確定他會不會來。|B1|social|sure,come<coming||
+phrase_list_506_0185|in place|Everything is in place for the event.|活動的一切都準備就緒了。|B2|work|everything,event||
+phrase_list_506_0186|No doubt|No doubt you'll do well on the test.|你考試肯定會考得很好。|B1|study|well,test||no doubt 在此為「無疑；肯定」
+phrase_list_506_0187|full time|My sister works full time at a hospital.|我姊姊在醫院做全職工作。|A2|work|sister,work<works,hospital||
+phrase_list_506_0188|sort out|Let me sort out these papers first.|我先把這些文件整理好。|B1|work|let,paper<papers,first||sort out 在此為「整理」
+phrase_list_506_0189|In a way|In a way, I'm glad it happened.|在某種程度上，我很慶幸這件事發生了。|B1|social|glad,happen<happened||
+phrase_list_506_0190|or something|Let's grab a coffee or something.|我們去喝杯咖啡什麼的吧。|A2|social|grab,coffee||
+phrase_list_506_0191|on behalf of|I'm calling on behalf of my manager.|我代表我的經理打電話來。|B2|phone|call<calling,manager||
+phrase_list_506_0192|over there|The restrooms are over there.|洗手間在那邊。|A1|travel|||
+phrase_list_506_0193|In spite of|In spite of the rain, we had fun.|儘管下雨，我們還是玩得很開心。|B1|travel|rain,fun||
+phrase_list_506_0194|That's it|That's it for today, see you tomorrow.|今天就到這裡，明天見。|A2|study|today,see,tomorrow||
+phrase_list_506_0195|in part|The delay was in part due to the weather.|延誤部分是因為天氣。|B2|travel|delay,due to,weather||
+phrase_list_506_0196|Oh no|Oh no, I left my phone at home!|噢不，我把手機忘在家裡了！|A1|phone|leave<left,phone,home||
+phrase_list_506_0197|in mind|Do you have any place in mind for dinner?|晚餐你有想去的地方嗎？|A2|food|place,dinner|have ... in mind|
+phrase_list_506_0198|with regard to|I'm writing with regard to my order.|我來信是關於我的訂單。|B2|shopping|write<writing,order||
+phrase_list_506_0199|one another|The neighbors help one another a lot.|鄰居們經常互相幫忙。|B1|social|neighbor<neighbors,help,a lot||

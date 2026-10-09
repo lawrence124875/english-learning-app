@@ -1,0 +1,7 @@
+# phrase_list_506 index 500–505
+phrase_list_506_0500|laid out|She laid out the plan for next week.|她把下週的計畫規劃好了。|B1|work|plan,next,week||lay out 在此為「規劃、詳細說明」
+phrase_list_506_0501|the lot|I bought the lot for ten dollars.|我花十塊錢把全部都買下了。|B1|shopping|buy<bought,ten,dollar<dollars||英式口語，the lot 指「全部」；2026-10-09 第一輪風險複審保留；語域：英式口語
+phrase_list_506_0502|keep on|Just keep on walking until you see the bank.|一直往前走，直到看到銀行就是了。|A2|travel|just,walk<walking,until,see,bank||keep on 接 V-ing 表「繼續」
+phrase_list_506_0503|made up my mind|I've made up my mind to quit sugar.|我已經下定決心要戒糖了。|B1|health|sugar||make up one's mind 中 one's 依主詞換成 my
+phrase_list_506_0504|at work|Sorry, I'm still at work.|抱歉，我還在上班。|A2|phone|sorry,still||at work 在此為「在工作、上班中」
+phrase_list_506_0505|come about|How did this change come about?|這個改變是怎麼發生的？|B2|work|change||

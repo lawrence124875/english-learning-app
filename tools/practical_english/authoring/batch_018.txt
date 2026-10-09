@@ -1,0 +1,101 @@
+# NGSL index 1700–1799
+1700|religions|We learned about different religions in class.|我們在課堂上認識了不同的宗教。|B1|study|learn<learned,different,class||
+1701|employer|My employer pays for my lunch.|我的雇主會幫我出午餐錢。|B1|work|pay<pays,lunch|pay for|
+1702|rejected|My card was rejected at the store.|我的卡在店裡被拒刷了。|B1|shopping|card,store||reject 在此為「拒絕（刷卡）」
+1703|latter|Coffee or tea? I'll have the latter.|咖啡還是茶？我要後者。|B2|food|coffee,tea|the latter|
+1704|plate|Can I get a clean plate?|可以給我一個乾淨的盤子嗎？|A2|food|get,clean||
+1705|banned|Smoking is banned in all restaurants.|所有餐廳都禁止吸菸。|B1|food|smoke<Smoking,restaurant<restaurants||
+1706|stole|Someone stole my bike last night.|昨晚有人偷了我的腳踏車。|A2|daily|someone,bike,last,night||
+1707|protested|Customers protested about the price increase.|顧客對漲價提出抗議。|B2|news|customer<Customers,price,increase||
+1708|index|Check the index at the back of the book.|看一下書後面的索引。|B2|study|check,back,book||
+1709|sad|I'm sad that you're leaving.|你要走了，我很難過。|A1|social|leave<leaving||
+1710|frequently|This bus runs frequently.|這班公車班次很密集。|B1|travel|bus,run<runs||
+1711|circle|Please circle the correct answer.|請把正確答案圈起來。|A2|study|please,correct,answer||circle 在此為動詞「圈起來」
+1712|helpful|Thanks, that's very helpful.|謝謝，這很有幫助。|A2|social|thank<Thanks||
+1713|command|She has a good command of English.|她的英文能力很好。|C1|study|good|a good command of|command 在此為「掌握、運用能力」，非「命令」
+1714|attractive|The offer sounds very attractive.|這個方案聽起來很吸引人。|B1|work|offer,sound<sounds||
+1715|sick|I called in sick today.|我今天請病假。|A2|work|call<called,today|call in sick|
+1716|impression|He made a good impression at the interview.|他在面試時給人留下好印象。|B1|work|make<made,good,interview|make a good impression|
+1717|unable|I'm unable to come to the meeting.|我沒辦法參加會議。|B1|work|come|be unable to|
+1718|joking|I was only joking.|我只是開玩笑的。|A2|social|only||joke 在此為動詞「開玩笑」
+1719|sky|The sky is so clear today.|今天天空好晴朗。|A1|daily|clear,today||
+1720|column|Add the numbers in this column.|把這一欄的數字加總。|B1|work|add,number<numbers||
+1721|electronic|We sell electronic goods.|我們販售電子產品。|B1|shopping|sell|electronic goods|
+1722|impose|I don't want to impose on you.|我不想給你添麻煩。|C1|social|want|impose on|impose 在此為「打擾、給人添麻煩」
+1723|criminal|Shoplifting is a criminal offense.|在商店順手牽羊是刑事犯罪。|B2|official|offense||criminal 在此為形容詞「刑事的」
+1724|besides|Who else is coming besides Tom?|除了 Tom，還有誰要來？|B1|social|else,come<coming||besides 在此為介系詞「除了」
+1725|properly|Make sure the door is properly closed.|確定門有關好。|B1|daily|make,sure,door,close<closed|make sure|
+1726|ancient|We visited an ancient temple.|我們參觀了一座古老的寺廟。|B1|travel|visit<visited||
+1727|coast|We drove along the coast.|我們沿著海岸開車。|B1|travel|drive<drove,along||
+1728|ill|She's been ill for a week.|她已經病了一個星期。|B1|health|week||
+1729|kicked|He kicked the ball over the fence.|他把球踢過了圍籬。|A2|social|ball,fence||
+1730|closely|Listen closely to the instructions.|仔細聽指示。|B1|study|listen,instruction<instructions||
+1731|multiple|You can choose multiple answers.|你可以選多個答案。|B1|study|choose,answer<answers||
+1732|yielded|The new method yielded good results.|新方法得到了很好的成果。|C1|work|new,method,good,result<results||
+1733|via|I'll send it to you via email.|我會用電子郵件寄給你。|B1|work|send,email||
+1734|legislation|New legislation will protect online shoppers.|新法規將會保障網購消費者。|C1|news|new,protect,online||
+1735|county|She grew up in a small county.|她在一個小縣城長大。|B2|daily|grow<grew,small|grow up|
+1736|unlike|Unlike me, my sister loves spicy food.|跟我不一樣，我妹妹很愛吃辣。|B1|food|sister,love<loves,food||
+1737|mobile|What's your mobile number?|你的手機號碼是多少？|A2|phone|number|mobile number|
+1738|assistant|Ask the shop assistant for help.|請店員幫忙。|A2|shopping|ask,shop,help|shop assistant|
+1739|implement|We'll implement the new system next month.|我們下個月會實施新系統。|B2|work|new,system,next,month||
+1740|chart|The chart shows our sales this year.|這張圖表顯示我們今年的業績。|B1|work|show<shows,sale<sales,year||
+1741|attached|I've attached the file to the email.|我已經把檔案附在電子郵件裡了。|B1|work|file,email||
+1742|hell|It's been a hell of a week.|這個星期真是累翻了。|B2|daily|week|a hell of a ...|口語強調用法，語氣隨便，正式場合避免；2026-10-09 第一輪風險複審保留；語域：非正式（Informal）
+1743|everywhere|I looked everywhere for my keys.|我到處找我的鑰匙。|A2|daily|look<looked,key<keys|look for|
+1744|advise|I'd advise you to book early.|我建議你早點訂。|B1|travel|book,early||
+1745|household|We share the household chores.|我們分攤家事。|B1|daily|share||
+1746|acknowledge|Please acknowledge receipt of this email.|收到這封郵件請回覆確認。|C1|work|please,email||acknowledge 在此為「確認收到」
+1747|reward|You deserve a reward for all your hard work.|你這麼努力，應該好好犒賞自己。|B1|work|deserve,hard,work||
+1748|east|The hotel is east of the station.|飯店在車站的東邊。|A2|travel|hotel,station||
+1749|hat|Don't forget your hat. It's sunny.|別忘了帽子，外面太陽很大。|A1|daily|forget||
+1750|academic|The academic year starts in September.|學年從九月開始。|B2|study|year,start<starts|academic year|
+1751|voters|Young voters care about housing prices.|年輕選民很在乎房價。|B2|news|young,care,price<prices|care about|
+1752|meanwhile|I'll cook. Meanwhile, you can set the table.|我來煮飯，你可以同時擺餐具。|B1|daily|cook,set,table|set the table|
+1753|furthermore|The room was clean. Furthermore, the staff were kind.|房間很乾淨，而且工作人員也很親切。|B2|travel|room,clean,staff,kind||
+1754|accused|She accused me of lying.|她指控我說謊。|B2|social|lie<lying|accuse someone of|
+1755|scientific|There's no scientific proof for that.|那沒有科學根據。|B2|study|proof||
+1756|wage|The minimum wage went up this year.|今年基本工資調漲了。|B1|work|minimum,go<went,year|minimum wage|
+1757|absence|Who will cover during her absence?|她不在的時候誰來代班？|B2|work|cover||
+1758|construct|They plan to construct a new bridge.|他們計畫蓋一座新橋。|B2|news|plan,new,bridge||
+1759|remark|That was a rude remark.|那句話很沒禮貌。|B2|social|||
+1760|medicine|Take this medicine after meals.|這個藥飯後吃。|A2|health|take,meal<meals||
+1761|professor|My professor gave me some good advice.|我的教授給了我一些好建議。|B1|study|give<gave,good,advice||
+1762|rare|I like my steak rare.|我的牛排要三分熟。|B1|food|like||rare 在此為「（牛排）三分熟」，非「罕見的」
+1763|intention|I had no intention of upsetting you.|我完全沒有要惹你不高興的意思。|B2|social|upset<upsetting|have no intention of|
+1764|dozen|I'd like a dozen eggs, please.|請給我一打雞蛋。|A2|shopping|like,egg<eggs,please|a dozen|
+1765|settlement|Both sides reached a settlement.|雙方達成了和解。|C1|news|side<sides,reach<reached||settlement 在此為「和解、協議」
+1766|gap|Mind the gap between the train and the platform.|請注意列車與月台間的空隙。|B1|travel|mind,train,platform|Mind the gap.|gap 在此為「空隙」
+1767|widely|English is widely spoken here.|這裡英語很普遍。|B2|travel|speak<spoken,here||
+1768|minimum|There's a minimum order of two dishes.|最低消費是點兩道菜。|B1|food|order,two,dish<dishes||
+1769|northern|We're traveling in northern Italy.|我們正在義大利北部旅行。|B1|travel|travel<traveling||
+1770|estate|She works for a real estate agent.|她在房仲公司上班。|B2|work|work<works,real,agent|real estate|
+1771|equally|Let's split the bill equally.|我們平分帳單吧。|B1|food|split,bill|split the bill|
+1772|expose|Don't expose your skin to the sun too long.|皮膚不要曬太陽太久。|B2|health|skin,sun,long||
+1773|alive|The fish is still alive!|這條魚還活著！|A2|food|fish,still||
+1774|shut|Please shut the window.|請把窗戶關上。|A2|daily|please,window||
+1775|victory|The team celebrated their victory.|球隊慶祝他們的勝利。|B1|social|team,celebrate<celebrated||
+1776|resolved|We resolved the issue quickly.|我們很快就解決了問題。|B2|work|issue,quickly||resolve 在此為動詞「解決」，非「決心」
+1777|Critics|Critics loved the new movie.|影評很喜歡這部新電影。|B2|social|love<loved,new,movie||
+1778|variable|The weather here is very variable.|這裡的天氣變化很大。|C1|daily|weather,here||variable 在此為形容詞「多變的」，非「變數」
+1779|enormous|The portions here are enormous.|這裡的份量超大。|B1|food|portion<portions,here||
+1780|sweet|This cake is too sweet for me.|這個蛋糕對我來說太甜了。|A1|food|cake||
+1781|permanent|Is this a permanent job?|這是正職工作嗎？|B1|work|job||
+1782|emotions|She doesn't show her emotions.|她不會表露情緒。|B1|social|show||
+1783|pursue|He left his job to pursue his dream.|他辭掉工作去追求夢想。|B2|work|leave<left,job,dream||
+1784|tall|How tall are you?|你多高？|A1|social|||
+1785|urge|I urge you to see a doctor.|我強烈建議你去看醫生。|B2|health|see,doctor||
+1786|enemy|Stress is the enemy of good sleep.|壓力是好睡眠的大敵。|B2|health|stress,good,sleep||enemy 在此為比喻用法
+1787|appointed|She was appointed team leader.|她被任命為組長。|B2|work|team,leader||
+1788|milk|Do you take milk in your coffee?|你的咖啡要加牛奶嗎？|A1|food|take,coffee||
+1789|talent|She has a real talent for music.|她很有音樂天分。|B1|social|real,music|a talent for|
+1790|smell|I love the smell of fresh bread.|我很愛剛出爐麵包的香味。|A2|food|love,fresh,bread||
+1791|prior|Do I need prior experience for this job?|這份工作需要相關經驗嗎？|B2|work|need,experience,job|prior experience|
+1792|priority|Your safety is our top priority.|您的安全是我們的首要考量。|B2|travel|safety,top|top priority|
+1793|online|I bought these shoes online.|這雙鞋是我在網路上買的。|A2|shopping|buy<bought,shoe<shoes||online 在此為副詞「在網路上」
+1794|phrase|What does this phrase mean?|這個片語是什麼意思？|A2|study|mean||
+1795|pilot|The pilot said we're landing soon.|機長說我們快要降落了。|A2|travel|say<said,land<landing,soon||
+1796|stable|His condition is stable now.|他的狀況現在很穩定。|B2|health|condition,now||
+1797|merely|It was merely a suggestion.|那只是個建議而已。|B2|social|suggestion||
+1798|resolution|My New Year's resolution is to exercise more.|我的新年新希望是多運動。|B1|daily|new,year,exercise|New Year's resolution|
+1799|communicate|We communicate mostly by email.|我們大多用電子郵件溝通。|B1|work|mostly,email||

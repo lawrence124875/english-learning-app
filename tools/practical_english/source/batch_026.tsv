@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2501	2500	personnel	personnel	Only authorized personnel may enter.	非相關人員禁止進入。	C1	official	ngsl_2809_2500	ngsl_2809_0073|ngsl_2809_0716		
+2502	2501	imagination	imagination	Kids have a great imagination.	小孩的想像力很豐富。	B1	daily	ngsl_2809_2501	ngsl_2809_0528|ngsl_2809_0123		
+2503	2502	disagree	disagree	I disagree with you on that.	那一點我不同意你的看法。	A2	social	ngsl_2809_2502		disagree with ...	
+2504	2503	throat	throat	I have a sore throat.	我喉嚨痛。	A2	health	ngsl_2809_2503		sore throat	
+2505	2504	insight	insights	Her talk gave me some useful insights.	她的演講給了我一些很有用的啟發。	C1	work	ngsl_2809_2504	ngsl_2809_0136|ngsl_2809_0076|ngsl_2809_0917		insight 在此為「見解、啟發」
+2506	2505	tackle	tackle	Let's tackle this problem together.	我們一起來解決這個問題吧。	B2	work	ngsl_2809_2505	ngsl_2809_0119|ngsl_2809_0293		
+2507	2506	forever	forever	I could stay here forever.	我可以永遠待在這裡。	A2	travel	ngsl_2809_2506	ngsl_2809_0344|ngsl_2809_0097		
+2508	2507	exceed	exceeds	Your bag exceeds the weight limit.	你的行李超重了。	B2	travel	ngsl_2809_2507	ngsl_2809_1251|ngsl_2809_0977|ngsl_2809_0571	weight limit	
+2509	2508	expenditure	expenditure	We need to cut our expenditure this month.	我們這個月得減少開支。	C1	work	ngsl_2809_2508	ngsl_2809_0089|ngsl_2809_0455|ngsl_2809_0208		
+2510	2509	joy	joy	The baby brings us so much joy.	寶寶帶給我們好多快樂。	B1	daily	ngsl_2809_2509	ngsl_2809_0870|ngsl_2809_0195|ngsl_2809_0090		
+2511	2510	pregnant	pregnant	My sister is pregnant with her second child.	我姊姊懷了第二胎。	B1	health	ngsl_2809_2510	ngsl_2809_0963|ngsl_2809_0225|ngsl_2809_0101		
+2512	2511	reliable	reliable	Is this car reliable?	這台車可靠嗎？	B1	shopping	ngsl_2809_2511	ngsl_2809_0259		
+2513	2512	gear	gears	My bike has seven gears.	我的腳踏車有七段變速。	B2	daily	ngsl_2809_2512	ngsl_2809_1978|ngsl_spoken_720_0233		gear 在此為「變速檔（齒輪組）」
+2514	2513	click	Click	Click here to download the file.	點這裡下載檔案。	A2	daily	ngsl_2809_2513	ngsl_2809_0097|ngsl_2809_0834		
+2515	2514	poet	poet	She's a famous poet in her country.	她在她的國家是一位知名詩人。	B1	study	ngsl_2809_2514	ngsl_2809_1016|ngsl_2809_0142		
+2516	2515	fortune	fortune	That watch must have cost a fortune.	那支手錶一定花了一大筆錢。	B1	shopping	ngsl_2809_2515	ngsl_2809_0325|ngsl_2809_0159|ngsl_2809_0251	cost a fortune	fortune 在此為「一大筆錢」
+2517	2516	ceremony	ceremony	The wedding ceremony starts at two.	婚禮儀式兩點開始。	B1	social	ngsl_2809_2516	ngsl_2809_0135|ngsl_spoken_720_0070		
+2518	2517	pile	pile	There's a pile of laundry on my bed.	我床上有一堆要洗的衣服。	B1	daily	ngsl_2809_2517	ngsl_2809_0693	a pile of ...	
+2519	2518	pig	pigs	Kids love feeding the pigs at the farm.	小朋友很喜歡在農場餵豬。	A2	travel	ngsl_2809_2518	ngsl_2809_0528|ngsl_2809_0228|ngsl_2809_1148|ngsl_2809_1082		
+2520	2519	mixture	mixture	Pour the mixture into the pan.	把混合好的材料倒進鍋子裡。	B1	food	ngsl_2809_2519	ngsl_2809_2134		
+2521	2520	automatically	automatically	The door opens automatically.	門會自動打開。	B1	daily	ngsl_2809_2520	ngsl_2809_0489|ngsl_2809_0213		
+2522	2521	scholar	scholar	He's a respected scholar of history.	他是一位受人敬重的歷史學者。	C1	study	ngsl_2809_2521	ngsl_2809_0680|ngsl_2809_0384		
+2523	2522	psychological	psychological	The movie is a psychological thriller.	這部電影是心理驚悚片。	B2	daily	ngsl_2809_2522	ngsl_2809_0761	psychological thriller	
+2524	2523	dramatically	dramatically	Prices have risen dramatically.	物價大幅上漲。	B2	news	ngsl_2809_2523	ngsl_2809_0295|ngsl_2809_0461		dramatically 在此為「大幅地」
+2525	2524	stake	stake	He owns a stake in the company.	他擁有這家公司的部分股份。	C1	work	ngsl_2809_2524	ngsl_2809_0128|ngsl_2809_0106		
+2526	2525	creature	creatures	The ocean is full of strange creatures.	海洋裡充滿了奇怪的生物。	B1	travel	ngsl_2809_2525	ngsl_2809_2670|ngsl_2809_0409|ngsl_2809_1344		
+2527	2526	partnership	partnership	The two companies formed a partnership.	這兩家公司建立了合作關係。	B2	work	ngsl_2809_2526	ngsl_spoken_720_0070|ngsl_2809_0106|ngsl_2809_0256		partnership 在此為「合作關係、合夥」
+2528	2527	participation	participation	Thank you for your participation.	感謝您的參與。	B2	official	ngsl_2809_2527	ngsl_2809_0243		
+2529	2528	clause	clause	Please read this clause in the contract carefully.	請仔細閱讀合約裡的這一條款。	C1	official	ngsl_2809_2528	ngsl_2809_0470|ngsl_2809_0206|ngsl_2809_0713|ngsl_2809_1385		
+2530	2529	penalty	penalty	There's a penalty for returning books late.	圖書逾期歸還會被罰款。	B2	official	ngsl_2809_2529	ngsl_2809_0336|ngsl_2809_0170|ngsl_2809_0146		
+2531	2530	chamber	chamber	We enjoyed a chamber music concert last night.	我們昨晚去聽了一場室內樂音樂會，很享受。	C1	social	ngsl_2809_2530	ngsl_2809_0503|ngsl_2809_0391|ngsl_2809_1381|ngsl_2809_0100|ngsl_2809_0269	chamber music	chamber 在此為「室內樂」用法，非 NGSL 解釋的「議院」
+2532	2531	fancy	fancy	Do you fancy a cup of tea?	你想喝杯茶嗎？	B1	food	ngsl_2809_2531	ngsl_2809_1490|ngsl_2809_1598		fancy 在此為英式口語「想要」；2026-10-09 第一輪風險複審保留；語域：英式口語
+2533	2532	poetry	poetry	She writes poetry in her free time.	她有空的時候會寫詩。	B1	daily	ngsl_2809_2532	ngsl_2809_0120|ngsl_2809_0394|ngsl_2809_0048	free time	
+2534	2533	chat	chat	Let's chat over lunch.	我們午餐時邊吃邊聊吧。	A2	social	ngsl_2809_2533	ngsl_2809_1333		
+2535	2534	clothing	clothing	This store sells children's clothing.	這家店賣童裝。	B1	shopping	ngsl_2809_2534	ngsl_2809_0616|ngsl_2809_0417|ngsl_2809_0101		
+2536	2535	evolve	evolved	The city has evolved a lot over the years.	這些年來這座城市變了很多。	B2	news	ngsl_2809_2535	ngsl_2809_0268|ngsl_2809_0122|ngsl_2809_0057		evolve 在此為「演變、發展」
+2537	2536	sake	sake	Let's keep it simple for the sake of time.	為了節省時間，我們就簡單點吧。	B2	work	ngsl_2809_2536	ngsl_2809_0176|ngsl_2809_0687|ngsl_2809_0048	for the sake of ...	
+2538	2537	shelf	shelf	Put the books back on the shelf.	把書放回架子上。	A2	daily	ngsl_2809_2537	ngsl_2809_0138|ngsl_2809_0170|ngsl_2809_0093		
+2539	2538	boost	boost	A cup of coffee gives me a quick boost.	一杯咖啡能讓我馬上提振精神。	B2	food	ngsl_2809_2538	ngsl_2809_1490|ngsl_2809_1394|ngsl_2809_0076|ngsl_2809_1194		boost 在此為名詞「提振」
+2540	2539	tail	tail	The dog wags its tail when it's happy.	狗開心的時候會搖尾巴。	A2	daily	ngsl_2809_2539	ngsl_2809_0894|ngsl_2809_0512		
+2541	2540	possession	possessions	Please keep your possessions with you at all times.	請隨時看好您的隨身物品。	B2	travel	ngsl_2809_2540	ngsl_2809_0470|ngsl_2809_0176|ngsl_2809_0048	at all times	possession 在此為「隨身物品」
+2542	2541	abortion	Abortion	Abortion is a sensitive topic for many people.	墮胎對很多人來說是個敏感的話題。	C1	news	ngsl_2809_2541	ngsl_2809_2076|ngsl_2809_1295|ngsl_2809_0098|ngsl_2809_0056		2026-10-09 第一輪風險複審保留；主題：社會議題
+2543	2542	curious	curious	I'm curious about how this works.	我很好奇這是怎麼運作的。	B1	daily	ngsl_2809_2542	ngsl_2809_0066	be curious about ...	
+2544	2543	wooden	wooden	We have a wooden table in the kitchen.	我們廚房裡有一張木頭桌子。	A2	daily	ngsl_2809_2543	ngsl_2809_0449|ngsl_2809_1306		
+2545	2544	boom	boom	There's been a boom in online shopping.	網購最近大幅成長。	B2	news	ngsl_2809_2544	ngsl_2809_1793|ngsl_2809_0436		boom 在此為「激增、繁榮」
+2546	2545	tale	tales	Kids love fairy tales.	小朋友很喜歡童話故事。	A2	study	ngsl_2809_2545	ngsl_2809_0528|ngsl_2809_0228	fairy tale	
+2547	2546	democratic	democratic	Our club makes decisions in a democratic way.	我們社團用民主的方式做決定。	B2	social	ngsl_2809_2546	ngsl_2809_0759|ngsl_2809_0047|ngsl_2809_0448|ngsl_2809_0079		
+2548	2547	maintenance	maintenance	The elevator is under maintenance.	電梯正在維修中。	B1	daily	ngsl_2809_2547		under maintenance	
+2549	2548	consequently	consequently	I missed the bus and consequently was late for work.	我錯過了公車，因此上班遲到了。	B2	work	ngsl_2809_2548	ngsl_2809_0644|ngsl_2809_0809|ngsl_2809_0146|ngsl_2809_0066		
+2550	2549	pot	pot	Let me make a pot of coffee.	我來煮一壺咖啡。	A2	food	ngsl_2809_2549	ngsl_2809_0173|ngsl_2809_0047|ngsl_2809_1394	a pot of ...	pot 在此為「壺」
+2551	2550	cow	cows	The cows are eating grass in the field.	牛在草地上吃草。	A1	travel	ngsl_2809_2550	ngsl_2809_0475|ngsl_2809_2192|ngsl_2809_0539		
+2552	2551	strengthen	strengthened	This trip strengthened our friendship.	這趟旅行讓我們的友誼更深厚了。	B2	travel	ngsl_2809_2551	ngsl_2809_0824|ngsl_2809_2485		
+2553	2552	whilst	whilst	She read a book whilst waiting for the train.	她等火車的時候在看書。	B2	travel	ngsl_2809_2552	ngsl_2809_0206|ngsl_2809_0170|ngsl_2809_0402|ngsl_2809_0288		whilst 為英式用法，同 while；2026-10-09 第一輪風險複審保留；語域：英式
+2554	2553	constraint	constraints	We're working under time constraints.	我們的時間很緊迫。	C1	work	ngsl_2809_2553	ngsl_2809_0066|ngsl_2809_0048	time constraints	
+2555	2554	fold	fold	Can you help me fold the laundry?	你可以幫我摺衣服嗎？	A2	daily	ngsl_2809_2554	ngsl_2809_0132		
+2556	2555	bin	bin	Please throw it in the bin.	請把它丟進垃圾桶。	A2	daily	ngsl_2809_2555	ngsl_2809_0470|ngsl_2809_0852		
+2557	2556	undergo	undergo	The building will undergo repairs next month.	這棟大樓下個月要進行整修。	C1	official	ngsl_2809_2556	ngsl_2809_1877|ngsl_2809_0150|ngsl_2809_0208		
+2558	2557	potentially	potentially	This could potentially save us a lot of money.	這可能會幫我們省下很多錢。	B2	work	ngsl_2809_2557	ngsl_2809_0565|ngsl_2809_0122|ngsl_2809_0200		
+2559	2558	scope	scope	That's outside the scope of this project.	那不在這個專案的範圍內。	C1	work	ngsl_2809_2558	ngsl_2809_0490|ngsl_2809_0517		
+2560	2559	pretend	pretended	He pretended not to hear me.	他假裝沒聽到我說話。	B1	social	ngsl_2809_2559	ngsl_2809_0177		
+2561	2560	diversity	diversity	I love the diversity of food in this city.	我很喜歡這座城市多元的美食。	B2	food	ngsl_2809_2560	ngsl_2809_0228|ngsl_2809_0366|ngsl_2809_0268		
+2562	2561	allege	alleged	The man alleged that the store overcharged him.	那名男子聲稱店家多收了他的錢。	C1	news	ngsl_2809_2561	ngsl_2809_0111|ngsl_2809_0616		
+2563	2562	pride	pride	He takes pride in his work.	他對自己的工作很自豪。	B2	work	ngsl_2809_2562	ngsl_2809_0058|ngsl_2809_0066	take pride in ...	
+2564	2563	intense	intense	The heat today is intense.	今天熱得很誇張。	B2	daily	ngsl_2809_2563	ngsl_2809_1140|ngsl_2809_0245		
+2565	2564	inquiry	inquiry	Thank you for your inquiry.	感謝您的詢問。	B2	official	ngsl_2809_2564	ngsl_2809_0243		
+2566	2565	resign	resigned	My manager resigned last week.	我的主管上週辭職了。	B2	work	ngsl_2809_2565	ngsl_2809_0660|ngsl_2809_0100|ngsl_2809_0156		
+2567	2566	craft	crafts	The market sells local crafts.	這個市集賣當地的手工藝品。	B1	shopping	ngsl_2809_2566	ngsl_2809_0218|ngsl_2809_0417|ngsl_2809_0299		craft 在此為「手工藝品」
+2568	2567	strict	strict	My parents were very strict.	我爸媽以前很嚴格。	B1	daily	ngsl_2809_2567	ngsl_2809_0296		
+2569	2568	concrete	concrete	Can you give me a concrete example?	你可以給我一個具體的例子嗎？	B2	work	ngsl_2809_2568	ngsl_2809_0076|ngsl_2809_0234		
+2570	2569	shell	shells	We collected shells on the beach.	我們在海灘上撿貝殼。	A2	travel	ngsl_2809_2569	ngsl_2809_1068|ngsl_2809_1296		shell 在此為「貝殼」
+2571	2570	damn	Damn	Damn, I left my keys at home!	糟了，我把鑰匙忘在家裡了！	B1	daily	ngsl_2809_2570	ngsl_2809_0125|ngsl_2809_0658|ngsl_2809_0160		Damn 為輕微粗話，表懊惱；2026-10-09 第一輪風險複審保留；語域：非正式（Informal），輕微粗話
+2572	2571	distinct	distinct	There's a distinct smell of smoke in here.	這裡有一股明顯的煙味。	B2	daily	ngsl_2809_2571	ngsl_2809_1790|ngsl_2809_1229|ngsl_2809_0097		
+2573	2572	humor	humor	He has a great sense of humor.	他很有幽默感。	B1	social	ngsl_2809_2572	ngsl_2809_0123|ngsl_2809_0411	sense of humor	
+2574	2573	limitation	limitations	Everyone has their limitations.	每個人都有自己的極限。	B2	social	ngsl_2809_2573	ngsl_2809_0649		
+2575	2574	indication	indication	He gave no indication that he was unhappy.	他完全沒表現出不開心的樣子。	C1	social	ngsl_2809_2574	ngsl_2809_0076		indication 在此為「跡象」
+2576	2575	stability	stability	This job offers stability.	這份工作很穩定。	B2	work	ngsl_2809_2575	ngsl_2809_0230|ngsl_2809_0236		
+2577	2576	wise	wise	That was a wise decision.	那是個明智的決定。	B1	social	ngsl_2809_2576	ngsl_2809_0448		
+2578	2577	neglect	neglected	The garden has been neglected for years.	這座花園已經荒廢好幾年了。	B2	daily	ngsl_2809_2577	ngsl_2809_0971|ngsl_2809_0057		
+2579	2578	compose	composed	The team is composed of five people.	這個團隊由五個人組成。	B2	work	ngsl_2809_2578	ngsl_2809_0406|ngsl_spoken_720_0115|ngsl_2809_0056	be composed of ...	
+2580	2579	jail	jail	He spent a night in jail.	他在牢裡待了一晚。	B1	news	ngsl_2809_2579	ngsl_2809_0257|ngsl_2809_0269		jail 在此為「拘留所、監獄」；2026-10-09 第一輪風險複審保留；主題：司法
+2581	2580	shelter	shelter	We took shelter from the rain under a tree.	我們在樹下躲雨。	B1	travel	ngsl_2809_2580	ngsl_2809_0058|ngsl_2809_1231|ngsl_2809_0737	take shelter	shelter 在此為「遮蔽處」
+2582	2581	mere	mere	It costs a mere ten dollars.	它只要十塊錢而已。	B2	shopping	ngsl_2809_2581	ngsl_2809_0251|ngsl_spoken_720_0209|ngsl_2809_0970		
+2583	2582	carbon	carbon	We want to reduce our carbon footprint.	我們想減少碳足跡。	B2	news	ngsl_2809_2582	ngsl_2809_0075|ngsl_2809_0583	carbon footprint	
+2584	2583	regulate	regulates	This device regulates the room temperature.	這個裝置會調節室內溫度。	C1	daily	ngsl_2809_2583	ngsl_2809_1524|ngsl_2809_0253|ngsl_2809_1451		regulate 在此為「調節」
+2585	2584	cheese	cheese	Would you like extra cheese on your pizza?	你的披薩要加起司嗎？	A1	food	ngsl_2809_2584	ngsl_2809_0044|ngsl_2809_1057		
+2586	2585	trigger	triggered	The smoke triggered the fire alarm.	煙霧觸發了火災警報器。	B2	daily	ngsl_2809_2585	ngsl_2809_1229|ngsl_2809_0612|ngsl_2809_2270	fire alarm	
+2587	2586	pipe	pipe	The kitchen pipe is leaking.	廚房的水管在漏水。	B1	daily	ngsl_2809_2586	ngsl_2809_1306		
+2588	2587	destruction	destruction	The storm caused a lot of destruction.	暴風雨造成了嚴重的破壞。	B2	news	ngsl_2809_2587	ngsl_2809_1998|ngsl_2809_0318|ngsl_2809_0122		
+2589	2588	guitar	guitar	He's learning to play the guitar.	他正在學彈吉他。	A1	study	ngsl_2809_2588	ngsl_2809_0260|ngsl_2809_0157		
+2590	2589	flag	flags	Kids waved flags at the parade.	小朋友在遊行中揮舞旗子。	A2	social	ngsl_2809_2589	ngsl_2809_0528|ngsl_2809_1157		
+2591	2590	piano	piano	She's been playing the piano since she was five.	她從五歲就開始彈鋼琴。	A2	study	ngsl_2809_2590	ngsl_2809_0157|ngsl_spoken_720_0115		
+2592	2591	magic	magic	The kids loved the magic show.	小朋友很喜歡那場魔術表演。	A2	social	ngsl_2809_2591	ngsl_2809_0528|ngsl_2809_0228|ngsl_2809_0109	magic show	magic 在此為「魔術」
+2593	2592	mystery	mystery	It's a mystery to me how he does it.	他是怎麼辦到的，我實在想不通。	B1	social	ngsl_2809_2592		It's a mystery to me ...	
+2594	2593	ski	skiing	We go skiing every winter.	我們每年冬天都去滑雪。	A2	travel	ngsl_2809_2593	ngsl_2809_0030|ngsl_2809_0179|ngsl_2809_1327	go skiing	
+2595	2594	whisper	whispered	She whispered something in my ear.	她在我耳邊說悄悄話。	B1	social	ngsl_2809_2594	ngsl_2809_0137|ngsl_2809_1663		
+2596	2595	rear	rear	Please exit through the rear door.	請從後門下車。	B1	travel	ngsl_2809_2595	ngsl_2809_0470|ngsl_2809_0107|ngsl_2809_0489		
+2597	2596	menu	menu	Could we see the menu, please?	可以給我們看一下菜單嗎？	A1	food	ngsl_2809_2596	ngsl_2809_0049|ngsl_2809_0470		
+2598	2597	species	species	This park has over 100 species of birds.	這座公園有超過一百種鳥類。	B2	travel	ngsl_2809_2597	ngsl_2809_0656|ngsl_2809_1270		
+2599	2598	moon	moon	The moon is so bright tonight.	今晚的月亮好亮。	A1	daily	ngsl_2809_2598	ngsl_2809_1509|ngsl_2809_1413		
+2600	2599	presumably	presumably	He's not here, so presumably he's still at work.	他不在，所以大概還在上班吧。	C1	work	ngsl_2809_2599	ngsl_2809_0097|ngsl_2809_0118|ngsl_2809_0066	at work	

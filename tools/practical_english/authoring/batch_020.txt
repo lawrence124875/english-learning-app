@@ -1,0 +1,101 @@
+# NGSL index 1900–1999
+1900|cope|How do you cope with stress at work?|你怎麼應對工作上的壓力？|B1|work|stress,work|cope with ...|
+1901|approximately|The flight takes approximately three hours.|這班飛機大約要飛三個小時。|B1|travel|flight,take<takes,three,hour<hours||
+1902|accommodation|We still need to book accommodation for the trip.|我們還需要訂這趟旅行的住宿。|B1|travel|still,need,book,trip||book 在此為動詞「預訂」
+1903|highlight|The highlight of our trip was the night market.|這趟旅行的亮點是夜市。|B1|travel|trip,night,market|the highlight of ...|highlight 在此為名詞「最精彩的部分」，與詞表解釋「強調」不同
+1904|reporter|A reporter asked me a few questions on the street.|有位記者在街上問了我幾個問題。|B1|news|ask<asked,few,question<questions,street||
+1905|climate|I'm not used to the climate here yet.|我還不習慣這裡的氣候。|B1|travel|here,yet|be used to ...|
+1906|shirt|This shirt is too small for me.|這件襯衫我穿太小了。|A1|shopping|too,small||
+1907|exception|Everyone has to pay, with no exception.|每個人都要付錢，沒有例外。|B1|official|everyone,pay|with no exception|
+1908|corporation|She works for a large corporation in the city.|她在市區一家大公司上班。|B1|work|work<works,large,city||
+1909|chip|This phone has a faster chip.|這支手機的晶片比較快。|B1|shopping|phone,fast<faster||
+1910|winner|The winner will get a free trip.|得獎者會獲得一趟免費旅行。|A2|daily|get,free,trip||
+1911|encountered|We encountered a few problems on the way.|我們在路上遇到了一些問題。|B2|travel|few,problem<problems,way|on the way|
+1912|brown|I'm looking for brown shoes.|我在找棕色的鞋子。|A1|shopping|look<looking,shoe<shoes|look for ...|
+1913|breathe|Take a deep breath and breathe slowly.|深吸一口氣，然後慢慢呼吸。|A2|health|deep,breath,slowly|take a deep breath|
+1914|excuse|That's not a good excuse for being late.|那不是遲到的好藉口。|B1|social|good,late||excuse 在此為名詞「藉口」
+1915|partly|It was partly my fault.|這有一部分是我的錯。|B1|social|fault||
+1916|tennis|Do you want to play tennis this weekend?|這週末要不要去打網球？|A1|social|want,play,weekend||
+1917|urban|Urban life can be very stressful.|都市生活可能壓力很大。|B2|daily|life||
+1918|confuse|These two buttons always confuse me.|這兩個按鈕總是讓我搞混。|B1|daily|two,button<buttons,always||
+1919|southern|It's warmer in the southern part of the island.|島的南部比較暖和。|B1|travel|warm<warmer,part,island||
+1920|output|Our team's output has doubled this year.|我們團隊今年的產出增加了一倍。|B2|work|team,double<doubled,year||output 在此為「產出、產量」
+1921|beauty|The beauty of this place is its quiet.|這個地方的美在於它的寧靜。|B1|travel|place,quiet||
+1922|massive|There was a massive line outside the store.|店外排了一條超長的隊。|B1|shopping|line,outside,store||
+1923|install|I need to install this app first.|我得先安裝這個應用程式。|A2|phone|need,first||
+1924|calculate|Can you calculate how much we each owe?|你可以算一下我們每個人要付多少嗎？|B1|daily|much,each,owe||
+1925|mouse|My computer mouse stopped working.|我的電腦滑鼠壞了。|A2|work|computer,stop<stopped,work<working||
+1926|mathematics|Mathematics was my favorite subject at school.|數學是我在學校最喜歡的科目。|B1|study|favorite,subject,school||
+1927|upper|Please put your bag in the upper compartment.|請把包包放在上方的置物櫃。|B1|travel|please,put,bag||
+1928|creation|This dish is the chef's own creation.|這道菜是主廚自己的創作。|B2|food|dish,own||
+1929|occupied|Is this seat occupied?|這個位子有人坐嗎？|B1|travel|seat||occupy 在此為「佔用（座位）」，非「佔領」
+1930|outline|Can you send me a short outline of the plan?|你可以寄給我計畫的簡短大綱嗎？|B1|work|send,short,plan||
+1931|sufficient|Two days should be sufficient to see the city.|兩天應該足夠逛完這座城市。|B2|travel|two,day<days,see,city||
+1932|update|Please update the app to the latest version.|請把應用程式更新到最新版本。|A2|phone|please,version||
+1933|luck|Good luck with your exam tomorrow!|祝你明天考試順利！|A1|study|good,exam,tomorrow|Good luck with ...|
+1934|preserve|Salt helps preserve the meat.|鹽有助於保存肉類。|B2|food|salt,help<helps,meat||
+1935|split|Let's split the bill.|我們分攤帳單吧。|A2|food|bill|split the bill|split 在此為「分攤」
+1936|swings|The kids are playing on the swings.|孩子們在盪鞦韆。|A2|daily|kid<kids,play<playing||swing 在此為名詞「鞦韆」，與詞表解釋「擺動」相關
+1937|illness|He missed a week of work because of illness.|他因為生病請了一個星期的假。|B1|health|miss<missed,week,work|because of ...|
+1938|journalist|My sister is a journalist for a local paper.|我姊姊是地方報紙的記者。|B1|work|sister,local,paper||
+1939|sudden|There was a sudden change in the weather.|天氣突然變了。|B1|daily|change,weather||
+1940|advertisement|I saw an advertisement for this sale online.|我在網路上看到這個特賣的廣告。|B1|shopping|see<saw,sale,online||
+1941|consistent|Try to be consistent with your study time.|讀書時間盡量要固定。|B2|study|try,study,time||consistent 在此為「一致的、持續穩定的」
+1942|originally|I'm originally from a small town.|我原本是從一個小鎮來的。|B1|social|small,town||
+1943|aside|Can you put this aside for me?|你可以幫我把這個留起來嗎？|B1|shopping|put|put ... aside|put aside 在此為「保留、留著」
+1944|comfort|She tried to comfort her crying friend.|她試著安慰她哭泣的朋友。|B1|social|try<tried,cry<crying,friend||comfort 在此為動詞「安慰」，與詞表解釋「舒適」不同
+1945|secondly|Firstly, it's cheap. Secondly, it's close.|第一，它很便宜。第二，它很近。|B1|study|firstly,cheap,close||
+1946|severe|She has a severe headache.|她頭痛得很厲害。|B1|health|||
+1947|genes|Eye color is passed down through genes.|眼睛的顏色是透過基因遺傳的。|B2|study|eye,color,pass<passed|pass down|
+1948|prospects|The job has good prospects.|這份工作很有前景。|B2|work|job,good||
+1949|snowed|It snowed all night.|雪下了一整夜。|A1|daily|night|all night|snow 在此為動詞「下雪」
+1950|plot|The movie has a really interesting plot.|這部電影的情節很有趣。|B1|daily|movie,really||
+1951|neck|My neck hurts from sleeping wrong.|我睡姿不對，脖子很痛。|A2|health|hurt<hurts,sleep<sleeping,wrong||
+1952|criteria|What are the criteria for this scholarship?|這個獎學金的申請標準是什麼？|B2|study|||
+1953|primarily|The course is primarily for beginners.|這門課主要是給初學者的。|B2|study|course||
+1954|integrate|The new system is easy to integrate with our software.|新系統很容易和我們的軟體整合。|C1|work|new,system,easy,software||
+1955|criticism|He doesn't handle criticism very well.|他不太能接受批評。|B2|work|handle,well||
+1956|convention|There's a big convention in town this week.|這週鎮上有一場大型會議。|B2|work|big,town,week||convention 在此為「大型會議、大會」，與詞表解釋「慣例」不同
+1957|bet|I bet you'll love this place.|我敢說你一定會愛上這個地方。|A2|social|love,place|I bet ...|bet 在此為口語「敢說、肯定」
+1958|retain|Please retain your receipt.|請保留您的收據。|B2|shopping|please||
+1959|sequence|Put the pictures in the right sequence.|把這些圖片按正確的順序排好。|B2|study|put,picture<pictures,right||sequence 在此為「順序」
+1960|plain|I'd like a plain T-shirt with no logo.|我想要一件沒有圖案的素色 T 恤。|B1|shopping|like||plain 在此為形容詞「素的、樸素的」，與詞表解釋「平原」不同
+1961|volunteers|She volunteers at the animal shelter.|她在動物收容所當志工。|B1|social|animal,shelter||volunteer 在此為動詞「當志工」
+1962|rural|They moved to a quiet rural area.|他們搬到一個安靜的鄉下地方。|B2|daily|move<moved,quiet,area||
+1963|calm|Please stay calm and wait here.|請保持冷靜，在這裡等候。|A2|daily|please,stay,wait,here|stay calm|
+1964|abandon|We had to abandon our plans because of the rain.|因為下雨，我們只好放棄原本的計畫。|B2|travel|plan<plans,rain|because of ...|
+1965|examination|The doctor will do a quick examination.|醫生會做個簡單的檢查。|B1|health|doctor,quick||examination 在此為「（身體）檢查」，與詞表解釋「考試」不同
+1966|silence|There was an awkward silence after he spoke.|他說完後出現一陣尷尬的沉默。|B1|social|speak<spoke||
+1967|rapidly|Prices are rising rapidly.|物價正在快速上漲。|B1|news|price<Prices,rise<rising||
+1968|efficient|This new heater is very efficient.|這台新的暖氣機很有效率。|B1|shopping|new||
+1969|revolution|Smartphones started a revolution in how we talk.|智慧型手機掀起了我們溝通方式的革命。|B2|news|start<started,talk||
+1970|delight|To my delight, the shop was still open.|讓我高興的是，那家店還開著。|B2|shopping|shop,still,open|to my delight|
+1971|spell|How do you spell your last name?|你的姓怎麼拼？|A1|official|last,name|last name|
+1972|premise|The movie's premise is simple but clever.|這部電影的前提設定簡單又巧妙。|C1|daily|movie,simple||
+1973|lean|Don't lean against the door.|請勿倚靠車門。|B1|travel|door|lean against ...|lean 在此為「倚靠」
+1974|dramatic|There was a dramatic drop in sales.|銷售額大幅下滑。|B2|work|drop,sale<sales||dramatic 在此為「劇烈的、大幅的」
+1975|differ|Prices differ from store to store.|每家店的價格都不一樣。|B2|shopping|price<Prices,store|from ... to ...|
+1976|grateful|I'm really grateful for your help.|我真的很感謝你的幫忙。|B1|social|really,help|be grateful for ...|
+1977|protein|Eggs are a good source of protein.|蛋是很好的蛋白質來源。|B1|health|egg<Eggs,good,source||
+1978|bike|I ride my bike to work.|我騎腳踏車上班。|A1|daily|ride,work||
+1979|distribute|We'll distribute the flyers this afternoon.|我們今天下午會發傳單。|B2|work|afternoon||
+1980|intellectual|He enjoys intellectual conversations.|他喜歡有深度的知性對話。|C1|social|enjoy<enjoys,conversation<conversations||
+1981|derived|Many English words are derived from Latin.|很多英文單字源自拉丁文。|C1|study|many,word<words||derive from 在此為「源自」
+1982|crucial|Sleep is crucial for good health.|睡眠對健康至關重要。|B2|health|sleep,good,health||
+1983|unemployment|Unemployment went down last year.|去年的失業率下降了。|B2|news|last,year|go down|
+1984|wheels|One of the wheels on my suitcase is broken.|我行李箱的一個輪子壞了。|A2|travel|||
+1985|crops|The rain was good for the crops this year.|今年的雨水對農作物很有幫助。|B2|news|rain,good,year||
+1986|minority|Only a minority of students passed the test.|只有少數學生通過了考試。|B2|study|only,student<students,pass<passed,test||
+1987|origin|What's the origin of this tradition?|這個傳統的起源是什麼？|B2|study|tradition||
+1988|interpretation|That's an interesting interpretation of the story.|那是對這個故事很有意思的解讀。|C1|study|story||
+1989|gentleman|The gentleman by the window is waiting for you.|窗邊那位先生在等你。|B1|work|window,wait<waiting||
+1990|drama|I've been watching a Korean drama lately.|我最近在看一部韓劇。|A2|daily|watch<watching||drama 在此為「影集」
+1991|landscape|The landscape here is breathtaking.|這裡的風景美得令人屏息。|B2|travel|here||
+1992|educate|We need to educate kids about online safety.|我們需要教育孩子網路安全的知識。|B2|study|need,kid<kids,online,safety||
+1993|toy|My son wants a new toy for his birthday.|我兒子生日想要一個新玩具。|A1|shopping|son,want<wants,new||
+1994|fault|Don't worry, it's not your fault.|別擔心，這不是你的錯。|A2|social|worry|It's not your fault.|
+1995|exhibit|The museum has a new photography exhibit.|博物館有一個新的攝影展。|B2|travel|museum,new||exhibit 在此為名詞「展覽」
+1996|minor|It's only a minor problem.|這只是個小問題。|B1|work|only,problem||
+1997|hunting|I spent the whole day hunting for a gift.|我花了一整天找禮物。|B1|shopping|spend<spent,whole,day,gift|hunt for ...|hunt 在此為口語「到處尋找」，與詞表解釋「狩獵」不同
+1998|storm|The storm delayed our flight.|暴風雨讓我們的班機延誤了。|A2|travel|delay<delayed,flight||
+1999|thick|It's cold, so wear a thick coat.|天氣很冷，穿件厚外套吧。|A2|daily|cold,wear,coat||

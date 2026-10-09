@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../data/sources/background_l10n.dart';
+import '../../../data/sources/tts_audio_handler.dart';
 import '../../../data/sources/tts_service.dart';
 import '../../../domain/models/word_item.dart';
 import '../../../presentation/providers/app_state.dart';
@@ -188,6 +189,16 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
 
   bool get isPremium => _appState.isPremium;
 
+  /// 句子播放器（[SentencePlayer]）用：共用的 TTS、朗讀擁有者與鎖屏服務。
+  TtsService get tts => _tts;
+  PlaybackCoordinator get playbackCoordinator => _playback;
+  TtsAudioHandler? get audioHandler => _appState.audioHandler;
+
+  /// V1 的朗讀語速（兩邊共用同一個 TTS 引擎）。
+  double get speechRate => _appState.settings.speechRate;
+  Future<void> setSpeechRate(double rate) => _appState
+      .updateSettings(_appState.settings.copyWith(speechRate: rate));
+
   /// 目前模式下可學的句子（已套用免費／Premium 規則並排序）。
   List<Sentence> get sentences {
     return _ordered ??= SentenceSelector.order(
@@ -367,7 +378,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   /// 已查過的語音結果（每種語言一次 session 只查、只提示一次）。
   final Map<String, PeVoiceStatus> _voiceStatus = {};
 
-  Future<PeVoiceStatus> _checkVoice(String ttsCode) async {
+  /// 手機有沒有這個語言的語音（每種語言只查一次）。
+  Future<PeVoiceStatus> checkVoice(String ttsCode) async {
     final cached = _voiceStatus[ttsCode];
     if (cached != null) return cached;
     PeVoiceStatus status;
@@ -397,7 +409,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     if (translation == null || language == null) {
       return TranslationSpeechResult.noTranslation;
     }
-    final voice = await _checkVoice(language.ttsCode);
+    final voice = await checkVoice(language.ttsCode);
     if (voice == PeVoiceStatus.unavailable) {
       return TranslationSpeechResult.voiceUnavailable;
     }
@@ -487,7 +499,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.detached) {
-      // V2.0 沒有背景朗讀。
+      // 句子頁單句朗讀在背景停止；連續播放（SentencePlayer）由鎖屏服務維持，不在這裡停。
       stopSpeaking();
       flush().catchError((Object e, StackTrace st) => _onError(e, st));
     }

@@ -48,6 +48,15 @@ class PlaybackCoordinator {
     if (_stoppers[who] == stop) _stoppers.remove(who);
   }
 
+  final List<void Function(PlaybackOwner who)> _claimListeners = [];
+
+  /// 每次有人 claim 時通知（例如 V1 開始朗讀時，V2 交還鎖屏）。
+  void addClaimListener(void Function(PlaybackOwner who) listener) =>
+      _claimListeners.add(listener);
+
+  void removeClaimListener(void Function(PlaybackOwner who) listener) =>
+      _claimListeners.remove(listener);
+
   bool isCurrent(PlaybackLease? lease) =>
       lease != null && identical(lease, _current);
 
@@ -57,6 +66,13 @@ class PlaybackCoordinator {
     final lease = PlaybackLease._(who, ++_generation);
     // 先換擁有者再等待停止：等待期間的其他 claim 會看到最新狀態。
     _current = lease;
+    for (final l in List.of(_claimListeners)) {
+      try {
+        l(who);
+      } catch (e, st) {
+        _onError?.call(e, st);
+      }
+    }
     if (previous != PlaybackOwner.none && previous != who) {
       final stop = _stoppers[previous];
       if (stop != null) {

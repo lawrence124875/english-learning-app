@@ -35,6 +35,37 @@ class TtsAudioHandler extends BaseAudioHandler {
     required int totalCount,
     Uri? artUri,
   }) {
+    // V2：實用英文接管鎖屏時，V1 的更新只記下來，交還時再套用。
+    _v1NowPlaying = () => updateNowPlaying(
+          word: word,
+          meaning: meaning,
+          playing: playing,
+          currentIndex: currentIndex,
+          totalCount: totalCount,
+          artUri: artUri,
+        );
+    if (_override != null) return;
+    _publish(
+      id: word,
+      title: word,
+      artist: meaning,
+      playing: playing,
+      currentIndex: currentIndex,
+      totalCount: totalCount,
+      artUri: artUri,
+    );
+  }
+
+  /// 送出鎖屏／通知列內容（V1 與 V2 共用）。
+  void _publish({
+    required String id,
+    required String title,
+    required String artist,
+    required bool playing,
+    required int currentIndex,
+    required int totalCount,
+    Uri? artUri,
+  }) {
     // 0.3.1：已 stop()（App 被滑掉）就不再更新。封面圖是非同步取得，
     // 停止過程中觸發的更新會晚於 idle 送出，把狀態改回 ready，
     // 前景服務與卡片就收不掉（0.3.0 起紅米實機：滑掉 App 通知沒消失）。
@@ -42,10 +73,11 @@ class TtsAudioHandler extends BaseAudioHandler {
     if (_stopped && !playing) return;
     _stopped = false;
     mediaItem.add(MediaItem(
-      id: word,
-      title: word,
-      artist: meaning,
-      album: '${BackgroundL10n.current().appTitle} ($currentIndex / $totalCount)',
+      id: id,
+      title: title,
+      artist: artist,
+      album:
+          '${BackgroundL10n.current().appTitle} ($currentIndex / $totalCount)',
       // 0.3.0：大字封面圖（設定可關閉；null＝一般小字卡片）。
       artUri: artUri,
     ));
@@ -70,26 +102,89 @@ class TtsAudioHandler extends BaseAudioHandler {
 
   bool _stopped = false;
 
-  @override
-  Future<void> play() async {
-    _stopped = false;
-    await onPlay?.call();
+  // ---------------- V2：實用英文暫時接管鎖屏 ----------------
+
+  NowPlayingOverride? _override;
+  void Function()? _v1NowPlaying;
+
+  /// 目前是否由 [owner] 接管鎖屏。
+  bool isOverriddenBy(Object owner) => _override?.owner == owner;
+
+  /// 實用英文句子播放時接管鎖屏按鈕與顯示內容。V1 的顯示更新會先記下，
+  /// [releaseOverride] 時再套回；沒有接管時 V1 行為完全不變。
+  void setOverride(NowPlayingOverride value) => _override = value;
+
+  /// 顯示接管者的目前句子；不是目前接管者就忽略（晚到的更新）。
+  void updateOverrideNowPlaying(
+    Object owner, {
+    required String id,
+    required String title,
+    required String subtitle,
+    required bool playing,
+    required int currentIndex,
+    required int totalCount,
+    Uri? artUri,
+  }) {
+    if (_override?.owner != owner) return;
+    _publish(
+      id: id,
+      title: title,
+      artist: subtitle,
+      playing: playing,
+      currentIndex: currentIndex,
+      totalCount: totalCount,
+      artUri: artUri,
+    );
+  }
+
+  /// 交還鎖屏給 V1：套回 V1 最後一次的內容；V1 從沒顯示過就收掉卡片。
+  void releaseOverride(Object owner) {
+    if (_override?.owner != owner) return;
+    _override = null;
+    final v1 = _v1NowPlaying;
+    if (v1 != null) {
+      v1();
+    } else {
+      playbackState.add(playbackState.value.copyWith(
+        playing: false,
+        processingState: AudioProcessingState.idle,
+      ));
+    }
   }
 
   @override
-  Future<void> pause() async => onPause?.call();
+  Future<void> play() async {
+    _stopped = false;
+    final o = _override;
+    await (o != null ? o.onPlay() : onPlay?.call());
+  }
 
   @override
-  Future<void> skipToNext() async => onSkipNext?.call();
+  Future<void> pause() async {
+    final o = _override;
+    await (o != null ? o.onPause() : onPause?.call());
+  }
 
   @override
-  Future<void> skipToPrevious() async => onSkipPrevious?.call();
+  Future<void> skipToNext() async {
+    final o = _override;
+    await (o != null ? o.onSkipNext() : onSkipNext?.call());
+  }
+
+  @override
+  Future<void> skipToPrevious() async {
+    final o = _override;
+    await (o != null ? o.onSkipPrevious() : onSkipPrevious?.call());
+  }
 
   @override
   Future<void> stop() async {
     _stopped = true;
     // 第十七版：停止朗讀若出錯或卡住，也一定要送出 idle，
     // 否則原生端不會結束服務、收掉通知與鎖屏卡片。
+    try {
+      await _override?.onPause().timeout(const Duration(seconds: 2));
+    } catch (_) {}
     try {
       await onPause?.call().timeout(const Duration(seconds: 2));
     } catch (_) {}
@@ -108,4 +203,21 @@ class TtsAudioHandler extends BaseAudioHandler {
   Future<void> onTaskRemoved() async {
     await stop();
   }
+}
+
+/// 接管鎖屏時的按鈕處理（V2 實用英文句子播放）。
+class NowPlayingOverride {
+  final Object owner;
+  final Future<void> Function() onPlay;
+  final Future<void> Function() onPause;
+  final Future<void> Function() onSkipNext;
+  final Future<void> Function() onSkipPrevious;
+
+  const NowPlayingOverride({
+    required this.owner,
+    required this.onPlay,
+    required this.onPause,
+    required this.onSkipNext,
+    required this.onSkipPrevious,
+  });
 }

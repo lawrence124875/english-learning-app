@@ -10,9 +10,14 @@ class TranslationText extends StatelessWidget {
   final PracticalEnglishState state;
   final Sentence sentence;
   final TextStyle? style;
+  final TextAlign textAlign;
 
   const TranslationText(
-      {super.key, required this.state, required this.sentence, this.style});
+      {super.key,
+      required this.state,
+      required this.sentence,
+      this.style,
+      this.textAlign = TextAlign.start});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +26,7 @@ class TranslationText extends StatelessWidget {
     if (translation == null) {
       return Text(
         AppLocalizations.of(context)!.peNoTranslation,
+        textAlign: textAlign,
         key: ValueKey('pe_no_translation_${sentence.id}'),
         style: (style ?? const TextStyle()).copyWith(
             color: Theme.of(context).colorScheme.onSurfaceVariant,
@@ -35,7 +41,7 @@ class TranslationText extends StatelessWidget {
         key: ValueKey('pe_translation_${sentence.id}'),
         style: style,
         textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
-        textAlign: TextAlign.start,
+        textAlign: textAlign,
       ),
     );
   }

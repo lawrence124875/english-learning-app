@@ -1,0 +1,101 @@
+# NGSL index 900–999
+900|guess|Guess who I saw today!|你猜我今天遇到誰！|A2|social|see<saw,today||
+901|fun|Have fun at the party!|派對玩得開心點！|A1|social|party|have fun|
+902|protect|Wear a hat to protect your skin from the sun.|戴頂帽子保護皮膚，免得曬傷。|B1|health|wear,hat,skin,sun|protect ... from ...|
+903|resources|The library has a lot of online resources.|圖書館有很多線上資源。|B1|study|library,lot,online|a lot of|resources 為複數
+904|science|Science was my favorite subject in school.|自然科學是我在學校最喜歡的科目。|A2|study|favorite,subject,school||
+905|disease|Heart disease is very common.|心臟病很常見。|B1|health|heart,common|heart disease|
+906|balance|It's hard to find a balance between work and family.|要在工作和家庭之間取得平衡很難。|B1|work|hard,find,work,family|work-life balance|
+907|damage|The storm caused a lot of damage.|暴風雨造成了很大的損害。|B1|news|storm,cause<caused,lot||
+908|basis|We meet on a weekly basis.|我們每週開一次會。|B2|work|meet,weekly|on a weekly basis|
+909|author|Who's the author of this book?|這本書的作者是誰？|A2|study|book||
+910|basic|I only know some basic Spanish.|我只會一點基本的西班牙文。|A2|study|only,know||
+911|encouraged|My parents always encouraged me to read.|我爸媽一直鼓勵我多看書。|B1|daily|parent<parents,always,read|encourage someone to|
+912|hair|I need to get my hair cut.|我得去剪頭髮了。|A2|daily|need,get,cut|get a haircut|
+913|male|Is the nurse male or female?|那位護理師是男的還是女的？|B1|health|nurse,female||
+914|operate|Do you know how to operate this machine?|你知道怎麼操作這台機器嗎？|B1|work|know,machine||
+915|reflects|The price reflects the quality.|價格反映出品質。|B2|shopping|price,quality||reflects 為第三人稱單數
+916|exercise|I try to exercise three times a week.|我盡量一週運動三次。|A2|health|try,three,time<times,week||
+917|useful|This app is really useful.|這個應用程式真的很好用。|A2|daily|really||
+918|restaurant|Can you recommend a good restaurant nearby?|你可以推薦附近一家好餐廳嗎？|A2|food|recommend,good,nearby||
+919|income|Rent takes up half of my income.|房租就佔了我收入的一半。|B1|daily|rent,take<takes,half|take up|
+920|property|Please don't leave your property unattended.|請勿將個人物品留置無人看管。|B2|travel|please,leave||property 在此為「財物」，NGSL 中文為「財產」
+921|previous|I liked the previous version better.|我比較喜歡上一個版本。|B1|work|like<liked,version||
+922|dark|It gets dark early in winter.|冬天天黑得早。|A2|daily|get<gets,early,winter|get dark|
+923|imagine|I can't imagine living without my phone.|我無法想像沒有手機的生活。|B1|daily|live<living,without,phone||
+924|okay|Is it okay if I sit here?|我坐這裡可以嗎？|A1|social|sit,here|Is it okay if ...?|
+925|earns|She earns more than I do.|她賺得比我多。|B1|work|more||earns 為第三人稱單數
+926|daughter|Their daughter just started school.|他們的女兒剛開始上學。|A1|daily|just,start<started,school||
+927|post|I saw your post about the trip.|我看到你那篇旅行的貼文了。|A2|social|see<saw,trip||
+928|newspaper|I read about it in the newspaper.|我在報紙上看到這件事。|A2|news|read||
+929|define|How would you define success?|你會怎麼定義成功？|B2|study|success||
+930|conclusion|What's your conclusion?|你的結論是什麼？|B1|work|||
+931|clock|The clock on the wall is five minutes fast.|牆上的時鐘快了五分鐘。|A2|daily|wall,five,minute<minutes,fast||
+932|everybody|Good morning, everybody!|大家早安！|A1|social|good,morning||
+933|weekend|Have a good weekend!|週末愉快！|A1|social|good|Have a good weekend!|
+934|perform|The band will perform at nine.|樂團九點會上台表演。|B1|social|band,nine||perform 在此為「表演」，NGSL 中文為「執行」
+935|professional|You should get professional help.|你應該找專業人士幫忙。|B1|daily|get,help||
+936|mine|Is this bag yours or mine?|這個包包是你的還是我的？|A1|daily|bag||
+937|debate|There's been a lot of debate about the new rule.|新規定引起了很多爭論。|B2|news|lot,new,rule||debate 在此為「爭論」
+938|memory|I have a terrible memory for names.|我很不會記人名。|B1|social|terrible,name<names||
+939|green|The light is green. You can go.|綠燈了，可以走了。|A1|travel|light,go||
+940|song|What's your favorite song?|你最喜歡的歌是哪首？|A1|social|favorite||
+941|objects|Don't leave any sharp objects in your bag.|包包裡不要放任何尖銳物品。|B2|travel|leave,sharp,bag||objects 為複數
+942|maintain|It's important to maintain a healthy weight.|維持健康的體重很重要。|B1|health|important,healthy,weight||
+943|credit|Do you take credit cards?|你們收信用卡嗎？|A2|shopping|take,card<cards|credit card|
+944|ring|What a beautiful ring!|好漂亮的戒指！|A1|shopping|beautiful||
+945|discovered|We discovered a great little coffee shop.|我們發現了一間很棒的小咖啡店。|B1|food|great,little,coffee,shop||discovered 為過去式
+946|dead|My phone is dead.|我的手機沒電了。|A2|phone|phone||dead 在此為「沒電的」，NGSL 中文為「死的」
+947|afternoon|Are you free this afternoon?|你今天下午有空嗎？|A1|social|free||
+948|prefer|I prefer tea to coffee.|比起咖啡，我比較喜歡茶。|A2|food|tea,coffee|prefer A to B|
+949|extend|Can I extend my stay for two more nights?|我可以再多住兩晚嗎？|B1|travel|stay,two,more,night<nights||extend 在此為「延長」
+950|possibility|Is there any possibility of a refund?|有沒有可能退款？|B2|shopping|||
+951|direction|Am I going in the right direction?|我走的方向對嗎？|A2|travel|go<going,right||
+952|facilities|The hotel has great sports facilities.|這間飯店的運動設施很棒。|B1|travel|hotel,great,sport<sports||facilities 為複數
+953|variety|They sell a wide variety of snacks.|他們賣各式各樣的零食。|B1|shopping|sell,wide|a wide variety of|
+954|daily|Take this medicine twice daily.|這個藥一天吃兩次。|B1|health|take,medicine,twice||daily 在此為副詞「每天」
+955|clothes|I need to wash my clothes.|我得洗衣服了。|A1|daily|need,wash||
+956|screen|My phone screen is cracked.|我的手機螢幕裂了。|A2|phone|phone,crack<cracked||
+957|track|You can track your package online.|你可以在網路上追蹤包裹。|B1|shopping|package,online||
+958|dance|Do you want to dance?|你想跳舞嗎？|A1|social|want||dance 在此為動詞「跳舞」
+959|completely|I completely forgot about it.|我完全忘了這件事。|B1|daily|forget<forgot||
+960|female|We're looking for a female roommate.|我們在找一位女性室友。|B1|daily|look<looking|look for|
+961|responsibility|It's your responsibility to lock the door.|鎖門是你的責任。|B1|daily|lock,door||
+962|original|Is this the original price?|這是原價嗎？|B1|shopping|price||
+963|sister|My little sister is ten.|我妹妹十歲。|A1|daily|little,ten|little sister|
+964|rocks|Be careful, the rocks are slippery.|小心，石頭很滑。|A2|travel|careful||rocks 為複數
+965|dream|I had a strange dream last night.|我昨晚做了一個奇怪的夢。|A2|daily|strange,last,night|have a dream|dream 在此為「夢」，NGSL 中文為「夢想」
+966|nor|I don't eat meat, nor does my wife.|我不吃肉，我太太也不吃。|B2|food|eat,meat,wife||
+967|university|Which university did you go to?|你讀哪一所大學？|A2|study|go||
+968|easily|You can easily get there by bus.|搭公車很容易就能到那裡。|A2|travel|get,bus|by bus|
+969|agency|I booked the trip through a travel agency.|我透過旅行社訂了這趟旅行。|B1|travel|book<booked,trip,travel|travel agency|
+970|dollars|Can you lend me ten dollars?|你可以借我十美元嗎？|A2|daily|lend,ten||dollars 為複數
+971|garden|We grow tomatoes in our garden.|我們在花園裡種番茄。|A2|daily|grow||
+972|fix|Can you fix my bike?|你可以幫我修腳踏車嗎？|A2|daily|bike||
+973|ahead|Go straight ahead.|直走就到了。|A2|travel|go,straight|straight ahead|
+974|cross|Be careful when you cross the street.|過馬路要小心。|A2|travel|careful,street|cross the street|
+975|yeah|Yeah, that sounds good.|好啊，聽起來不錯。|A1|social|sound<sounds,good||yeah 為口語
+976|candidate|She's the best candidate for the job.|她是這份工作最適合的人選。|B2|work|job||candidate 在此為「應徵者、人選」，NGSL 中文為「候選人」
+977|weight|I'm trying to lose weight.|我正在努力減肥。|A2|health|try<trying,lose|lose weight|
+978|legal|Is it legal to park here?|這裡可以合法停車嗎？|B1|travel|park,here||
+979|proposal|Did they accept our proposal?|他們接受我們的提案了嗎？|B1|work|accept||
+980|version|Is there an English version of the menu?|菜單有英文版嗎？|A2|food|menu||
+981|conversation|We had a nice conversation over coffee.|我們邊喝咖啡邊聊得很愉快。|B1|social|nice,coffee|have a conversation|
+982|somebody|Somebody left their umbrella here.|有人把雨傘忘在這裡了。|A2|daily|leave<left,here||
+983|pounds|It costs ten pounds.|這個要十英鎊。|A2|shopping|cost<costs,ten||pounds 為複數
+984|magazine|I was reading a magazine at the dentist's.|我在牙醫診所看雜誌。|A2|daily|read<reading||
+985|shape|I want to get in shape this summer.|我今年夏天想把身材練好。|B1|health|want,get,summer|get in shape|shape 在此為片語「身材好、體態健康」
+986|sea|The hotel is right next to the sea.|飯店就在海邊。|A1|travel|hotel,right,next|next to|
+987|immediately|Please call me immediately if anything happens.|如果發生任何事，請馬上打給我。|B1|phone|please,call,anything,happen<happens||
+988|welcome|You're welcome.|不客氣。|A1|social||You're welcome.|welcome 在此為「不客氣」
+989|smile|She has a lovely smile.|她的笑容很迷人。|A2|social|lovely||
+990|communication|Good communication is the key to teamwork.|良好的溝通是團隊合作的關鍵。|B1|work|good,key||
+991|agent|Please contact our customer service agent.|請聯絡我們的客服人員。|B1|phone|please,contact,customer,service||agent 在此為「服務人員」
+992|traditional|I'd like to try some traditional food.|我想嚐嚐一些傳統美食。|A2|food|like,try,food||
+993|replace|I need to replace my phone battery.|我得換手機電池了。|B1|phone|need,phone||replace 在此為「更換」
+994|judge|Don't judge people by their looks.|不要以貌取人。|B1|social|people,look<looks||judge 在此為動詞「評斷」，NGSL 中文為「法官」
+995|herself|She made the cake herself.|蛋糕是她自己做的。|A2|food|make<made,cake||
+996|suddenly|Suddenly, the lights went out.|突然間燈全熄了。|B1|daily|light<lights,go<went,out|go out|
+997|generations|Three generations live in this house.|這棟房子裡住了三代人。|B1|daily|three,live,house||generations 為複數
+998|estimate|Can you give me an estimate for the repair?|你可以給我修理費用的估價嗎？|B1|shopping|give,repair||estimate 在此為名詞「估價」
+999|favorite|What's your favorite food?|你最喜歡的食物是什麼？|A1|food|food||

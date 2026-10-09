@@ -172,6 +172,8 @@
   "introBody5": "教科書の単語、仕事の表現、試験範囲などをCSVファイルで取り込めば、同じように聞き流しや苦手登録ができます。英語だけでなく、韓国語・中国語・フランス語・ドイツ語・スペイン語・タイ語・アラビア語など14言語の読み上げに対応し、訳も使い慣れた言語を選べます。（一部の言語は端末で音声データのダウンロードが必要です）",
   "introTitle6": "4つの学術教材、無料で始められる",
   "introBody6": "核心単語NGSL 2809、話し言葉の頻出語720、頻出フレーズ506、句動詞150。すべて公開された学術研究に基づいています。各教材に無料で使える内容があるので、まずは試してみてください。",
+  "introTitle7": "実用英語：文で単語を覚える",
+  "introBody7": "4つの教材の全単語を含む、数千の日常フレーズ。どの文にも訳があり、連続で自動読み上げでき、画面を消しても聞き続けられます。苦手に登録した単語は自動で同期され、その単語を含む文が先に出ます。",
   "importWordLangLabel": "1列目の言語は？（読み上げ音声に使います）",
   "importVoiceMissing": "この端末には「{language}」の読み上げ音声がないため、読み上げできません。端末の「設定 → テキスト読み上げ」で音声データをインストールしてください。",
   "menuShare": "友だちに共有",
@@ -263,5 +265,18 @@
   "pePlayTranslation": "翻訳を読み上げる",
   "peVoiceUnavailable": "この言語の音声が端末にありません。翻訳は読むことができます。",
   "peStatusDiffers": "リストごとに状態が異なります",
-  "peOtherWords": "この例文のほかの単語"
+  "peOtherWords": "この例文のほかの単語",
+  "peAutoPlay": "連続再生",
+  "pePause": "一時停止",
+  "peReplay": "もう一度",
+  "peAutoStopped": "連続再生を止めました。タップごとに1文読みます。",
+  "pePlaybackSettings": "再生設定",
+  "peReadContent": "読み上げ内容",
+  "peEnglishOnly": "英語のみ",
+  "peEnglishAndTranslation": "英語＋訳",
+  "peRepeatCount": "1文の回数",
+  "peInterval": "文の間隔",
+  "peSecondsValue": "{seconds} 秒",
+  "peRateShared": "速度は単語クルーズと共通です。他の設定は実用英語だけに適用されます。画面を消しても再生が続きます。",
+  "peSettingsSummary": "{content}・{count}回・間隔 {seconds} 秒"
 }
