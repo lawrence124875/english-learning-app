@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2301	2300	apologize	apologize	I apologize for being late.	很抱歉我遲到了。	A2	social	ngsl_2809_2300	ngsl_2809_0146		
+2302	2301	approval	approval	We need the manager's approval first.	我們得先取得經理的批准。	B1	work	ngsl_2809_2301	ngsl_2809_0089|ngsl_2809_0660|ngsl_2809_0077		
+2303	2302	grab	Grab	Grab the handle so you don't fall.	抓好把手，才不會跌倒。	A2	travel	ngsl_2809_2302	ngsl_2809_1040|ngsl_2809_0319		
+2304	2303	entitle	entitled	Members are entitled to a free drink.	會員可以免費享用一杯飲料。	B2	shopping	ngsl_2809_2303	ngsl_2809_0265|ngsl_2809_0394|ngsl_2809_0654	be entitled to ...	entitle 在此為「使有權享有」
+2305	2304	lend	lend	Could you lend me your umbrella?	你可以借我雨傘嗎？	A2	daily	ngsl_2809_2304		lend someone something	
+2306	2305	involvement	involvement	Thanks for your involvement in the project.	謝謝你參與這個專案。	B2	work	ngsl_2809_2305	ngsl_2809_0243|ngsl_2809_0517		
+2307	2306	exposure	exposure	Too much sun exposure is bad for your skin.	曬太多太陽對皮膚不好。	B2	health	ngsl_2809_2306	ngsl_2809_1360|ngsl_2809_0267|ngsl_2809_1460	sun exposure	exposure 在此為「曝曬、暴露」
+2308	2307	conventional	conventional	Her ideas aren't very conventional.	她的想法不太傳統。	B2	social	ngsl_2809_2307	ngsl_2809_0250		
+2309	2308	digital	digital	Do you have a digital copy of the ticket?	你有這張票的電子檔嗎？	B1	travel	ngsl_2809_2308	ngsl_2809_1036|ngsl_2809_1248	digital copy	
+2310	2309	translate	translate	Can you translate this sign for me?	你可以幫我翻譯這個標示嗎？	A2	travel	ngsl_2809_2309	ngsl_2809_0499		
+2311	2310	edit	edit	I need to edit this video tonight.	我今晚得剪輯這支影片。	B1	work	ngsl_2809_2310	ngsl_2809_0089|ngsl_2809_1064|ngsl_2809_1413		edit 在此為「剪輯、編輯」
+2312	2311	formation	formation	We're discussing the formation of a new team.	我們正在討論成立新團隊的事。	C1	work	ngsl_2809_2311	ngsl_2809_0604|ngsl_2809_0078|ngsl_2809_0406		formation 在此為「成立、組成」
+2313	2312	deposit	deposit	I'd like to make a deposit, please.	我想要存款，麻煩你。	B1	official	ngsl_2809_2312	ngsl_2809_0044|ngsl_2809_0047|ngsl_2809_0470	make a deposit	
+2314	2313	pleasant	pleasant	We had a pleasant evening together.	我們一起度過了愉快的夜晚。	B1	social	ngsl_2809_2313	ngsl_2809_0678|ngsl_2809_0293		
+2315	2314	overseas	overseas	We get a lot of overseas visitors.	我們有很多海外遊客。	B1	travel	ngsl_2809_2314	ngsl_2809_0042|ngsl_2809_1397		
+2316	2315	advocate	advocates	Our teacher advocates reading every day.	我們老師提倡每天閱讀。	C1	study	ngsl_2809_2315	ngsl_2809_0495|ngsl_2809_0206|ngsl_2809_0179|ngsl_2809_0084		
+2317	2316	establishment	establishment	This establishment does not allow smoking.	本店禁止吸菸。	C1	official	ngsl_2809_2316	ngsl_2809_0323|ngsl_2809_1229		establishment 在此為「店家、場所」
+2318	2317	summary	summary	Please send me a short summary of the meeting.	請寄給我一份簡短的會議摘要。	B1	work	ngsl_2809_2317	ngsl_2809_0470|ngsl_2809_0322|ngsl_2809_0418		
+2319	2318	rough	rough	My hands feel rough from washing dishes.	洗碗洗到我的手摸起來很粗糙。	B1	daily	ngsl_2809_2318	ngsl_2809_0197|ngsl_2809_0116|ngsl_2809_1367|ngsl_2809_1881		
+2320	2319	pen	pen	May I borrow your pen?	我可以借你的筆嗎？	A1	study	ngsl_2809_2319	ngsl_2809_1879		
+2321	2320	recovery	recovery	I wish you a quick recovery.	祝你早日康復。	B1	health	ngsl_2809_2320	ngsl_2809_0523|ngsl_2809_1194		
+2322	2321	seal	seal	Please seal the envelope before mailing it.	寄出前請把信封封好。	B1	official	ngsl_2809_2321	ngsl_2809_0470|ngsl_2809_2655|ngsl_2809_1642		seal 在此為「封住、密封」
+2323	2322	tube	tube	We need a new tube of toothpaste.	我們需要買一條新牙膏。	A2	shopping	ngsl_2809_2322	ngsl_2809_0089|ngsl_2809_0078	a tube of ...	tube 在此為「軟管（條）」
+2324	2323	tower	tower	You can see the whole city from the tower.	從塔上可以看到整個城市。	A2	travel	ngsl_2809_2323	ngsl_2809_0049|ngsl_2809_0309|ngsl_2809_0268		
+2325	2324	characterize	characterize	How would you characterize the new boss?	你會怎麼形容新老闆？	C1	work	ngsl_2809_2324	ngsl_2809_0078|ngsl_2809_1853		characterize 在此為「描述、形容」
+2326	2325	specify	specify	Please specify your size when ordering.	訂購時請註明您的尺寸。	B2	shopping	ngsl_2809_2325	ngsl_2809_0470|ngsl_2809_0704|ngsl_2809_0214		
+2327	2326	exact	exact	Do you know the exact address?	你知道確切的地址嗎？	B1	travel	ngsl_2809_2326	ngsl_2809_0040|ngsl_2809_0557		
+2328	2327	spin	Spin	Spin the wheel to win a prize!	轉動轉盤贏大獎！	B1	shopping	ngsl_2809_2327	ngsl_2809_1984|ngsl_2809_0376|ngsl_2809_2004		
+2329	2328	operator	operator	I'll connect you to an operator.	我幫您轉接給接線人員。	B1	phone	ngsl_2809_2328	ngsl_2809_1263		operator 在此為「（電話）接線員」
+2330	2329	infant	Infants	Infants under two fly free.	兩歲以下的嬰兒免費搭機。	B1	travel	ngsl_2809_2329	ngsl_spoken_720_0070|ngsl_2809_0880|ngsl_2809_0394		
+2331	2330	dig	digging	The dog is digging in the garden.	狗在花園裡挖土。	A2	daily	ngsl_2809_2330	ngsl_2809_0894|ngsl_2809_0971		
+2332	2331	drag	drag	Just drag the file into this folder.	只要把檔案拖進這個資料夾就好。	B1	work	ngsl_2809_2331	ngsl_2809_0834		drag 在此為「拖曳」
+2333	2332	mount	mount	The bills are starting to mount up.	帳單開始越積越多了。	C1	daily	ngsl_2809_2332	ngsl_2809_0887|ngsl_2809_0135	mount up（越積越多）	mount 在此為「增加、上升」
+2334	2333	wrap	wrap	Could you wrap this as a gift?	可以幫我把這個包成禮物嗎？	A2	shopping	ngsl_2809_2333	ngsl_2809_1426	gift wrap	
+2335	2334	anticipate	anticipate	We don't anticipate any delays.	我們預計不會有任何延誤。	B2	work	ngsl_2809_2334	ngsl_2809_1309		
+2336	2335	dependent	dependent	Our plans are dependent on the weather.	我們的計畫要看天氣而定。	B2	travel	ngsl_2809_2335	ngsl_2809_0231|ngsl_2809_1067	be dependent on ...	dependent 在此為「取決於（on）」
+2337	2336	specialize	specializes	This shop specializes in handmade shoes.	這家店專門做手工鞋。	B2	shopping	ngsl_2809_2336	ngsl_2809_0436|ngsl_2809_1475	specialize in ...	
+2338	2337	angle	angle	Try taking the photo from a different angle.	試著從不同角度拍這張照片。	B1	daily	ngsl_2809_2337	ngsl_2809_0124|ngsl_2809_0058|ngsl_2809_1207|ngsl_2809_0148		
+2339	2338	chicken	chicken	I'll have the chicken salad.	我要雞肉沙拉。	A1	food	ngsl_2809_2338			chicken 在此為「雞肉」
+2340	2339	anxiety	anxiety	She felt a lot of anxiety before the interview.	她面試前非常焦慮。	B2	work	ngsl_2809_2339	ngsl_2809_0116|ngsl_2809_0783		
+2341	2340	virus	virus	I think my computer has a virus.	我覺得我的電腦中毒了。	B1	daily	ngsl_2809_2340	ngsl_2809_0046|ngsl_2809_0428		virus 在此為「電腦病毒」
+2342	2341	precisely	precisely	The train left at precisely nine o'clock.	火車在九點整準時開走。	B2	travel	ngsl_2809_2341	ngsl_2809_0288|ngsl_2809_0125|ngsl_spoken_720_0250		
+2343	2342	rival	rivals	The two cafes on this street are rivals.	這條街上的兩家咖啡店是競爭對手。	B2	food	ngsl_2809_2342	ngsl_spoken_720_0070|ngsl_2809_0597		
+2344	2343	offense	offense	No offense, but I don't like this color.	無意冒犯，但我不喜歡這個顏色。	B1	social	ngsl_2809_2343	ngsl_2809_0044|ngsl_2809_0377	No offense, but ...	
+2345	2344	detect	detects	The alarm detects smoke right away.	警報器能立刻偵測到煙霧。	B2	daily	ngsl_2809_2344	ngsl_2809_2270|ngsl_2809_1229|ngsl_2809_0091|ngsl_2809_0233	right away	
+2346	2345	teenager	teenager	My son is a teenager now.	我兒子現在是青少年了。	A2	daily	ngsl_2809_2345	ngsl_2809_0686|ngsl_2809_0069		
+2347	2346	admire	admire	I really admire your patience.	我真的很佩服你的耐心。	B1	social	ngsl_2809_2346	ngsl_2809_0103		
+2348	2347	moderate	moderate	The hotel has moderate prices.	這間飯店價格適中。	B2	travel	ngsl_2809_2347	ngsl_2809_0758|ngsl_2809_0295		moderate 在此為「適中的」
+2349	2348	surgery	surgery	My dad had knee surgery last month.	我爸上個月動了膝蓋手術。	B1	health	ngsl_2809_2348	ngsl_2809_1631|ngsl_2809_2220|ngsl_2809_0100|ngsl_2809_0208		
+2350	2349	musician	musician	He's a musician in a local band.	他是當地一個樂團的樂手。	A2	social	ngsl_2809_2349	ngsl_2809_0299|ngsl_2809_1086		
+2351	2350	significance	significance	What's the significance of this festival?	這個節日有什麼意義？	C1	study	ngsl_2809_2350	ngsl_2809_2214		significance 在此為「意義」
+2352	2351	shower	shower	I usually take a shower in the morning.	我通常早上洗澡。	A1	daily	ngsl_2809_2351	ngsl_2809_0554|ngsl_2809_0058|ngsl_2809_0433	take a shower	
+2353	2352	illegal	illegal	It's illegal to park here.	在這裡停車是違法的。	B1	official	ngsl_2809_2352	ngsl_2809_0656|ngsl_2809_0097		
+2354	2353	charity	charity	We gave our old clothes to charity.	我們把舊衣服捐給慈善機構了。	B1	social	ngsl_2809_2353	ngsl_2809_0076|ngsl_2809_0143|ngsl_2809_0955		
+2355	2354	universal	universal	Music is a universal language.	音樂是全世界共通的語言。	B2	study	ngsl_2809_2354	ngsl_2809_0391|ngsl_2809_0359		
+2356	2355	cigarette	cigarette	Please put out your cigarette.	請把菸熄掉。	A2	official	ngsl_2809_2355	ngsl_2809_0470|ngsl_2809_0138	put out（熄滅）	
+2357	2356	constitute	constitute	Women constitute half of our staff.	女性佔我們員工的一半。	C1	work	ngsl_2809_2356	ngsl_2809_0168|ngsl_2809_0364|ngsl_2809_0430		constitute 在此為「構成、佔」
+2358	2357	adequate	adequate	The hotel was adequate, but nothing special.	飯店還算可以，但沒什麼特別的。	B2	travel	ngsl_2809_2357	ngsl_2809_0758|ngsl_2809_0335|ngsl_2809_0442		adequate 在此為「還算可以、尚可」
+2359	2358	consultant	consultant	We hired a consultant to help us.	我們請了一位顧問來幫忙。	B2	work	ngsl_2809_2358	ngsl_2809_1513|ngsl_2809_0132		
+2360	2359	historian	historian	The historian gave a talk at the museum.	那位歷史學家在博物館演講。	B2	study	ngsl_2809_2359	ngsl_2809_0076|ngsl_2809_0136|ngsl_2809_1396	give a talk	
+2361	2360	cousin	cousin	My cousin is visiting next week.	我表妹下週要來玩。	A2	social	ngsl_2809_2360	ngsl_2809_0332|ngsl_2809_0150|ngsl_2809_0156		cousin 泛指堂／表兄弟姊妹
+2362	2361	visual	visual	I'm a visual learner.	我是視覺型學習者。	B2	study	ngsl_2809_2361			
+2363	2362	stupid	stupid	I made a stupid mistake.	我犯了一個很蠢的錯。	A2	daily	ngsl_2809_2362	ngsl_2809_0047|ngsl_2809_1151	make a mistake	
+2364	2363	keen	keen	She's keen on learning Japanese.	她很熱衷學日文。	B2	study	ngsl_2809_2363	ngsl_2809_0260	be keen on ...	
+2365	2364	ethnic	ethnic	This city has many ethnic restaurants.	這個城市有很多異國料理餐廳。	B2	food	ngsl_2809_2364	ngsl_2809_0268|ngsl_2809_0098|ngsl_2809_0918		ethnic 在此為「具民族特色的」
+2366	2365	twin	twin	Lisa has a twin brother.	Lisa 有一個雙胞胎兄弟。	A2	social	ngsl_2809_2365	ngsl_2809_0820		
+2367	2366	clinical	clinical	She works in clinical research.	她從事臨床研究。	C1	work	ngsl_2809_2366	ngsl_2809_0066|ngsl_2809_0422		
+2368	2367	eastern	eastern	The hotel is in the eastern part of the city.	飯店在城市的東區。	B1	travel	ngsl_2809_2367	ngsl_2809_0758|ngsl_2809_0129|ngsl_2809_0268		
+2369	2368	forecast	forecast	The forecast says it will rain tomorrow.	天氣預報說明天會下雨。	B1	daily	ngsl_2809_2368	ngsl_2809_0029|ngsl_2809_1231|ngsl_2809_0725	weather forecast	forecast 在此為名詞「預報」
+2370	2369	segment	segments	Divide the orange into segments.	把柳橙剝成一瓣一瓣。	B2	food	ngsl_2809_2369	ngsl_2809_1315|ngsl_2809_2498		segment 在此為「（柳橙的）瓣」
+2371	2370	custom	custom	It's a custom here to take off your shoes.	這裡的習俗是要脫鞋。	B1	travel	ngsl_2809_2370	ngsl_2809_0097|ngsl_2809_0058|ngsl_2809_1475	take off	
+2372	2371	adapt	adapt	It took me a while to adapt to the new job.	我花了一段時間才適應新工作。	B1	work	ngsl_2809_2371	ngsl_2809_0058|ngsl_2809_0154|ngsl_2809_0078|ngsl_2809_0230	adapt to ...	
+2373	2372	sand	sand	The sand is too hot to walk on.	沙子燙到沒辦法走。	A2	travel	ngsl_2809_2372	ngsl_2809_0884|ngsl_2809_0338		
+2374	2373	cap	cap	Don't forget your cap; it's sunny today.	別忘了帶帽子，今天出大太陽。	A2	daily	ngsl_2809_2373	ngsl_2809_0650|ngsl_2809_0245		
+2375	2374	prompt	prompts	Follow the prompts on the screen.	請依照螢幕上的提示操作。	B2	daily	ngsl_2809_2374	ngsl_2809_0187|ngsl_2809_0956		
+2376	2375	charm	charm	The old town has a lot of charm.	這個老城區很有魅力。	B1	travel	ngsl_2809_2375	ngsl_2809_0143|ngsl_2809_0363		
+2377	2376	react	react	How did she react to the news?	她聽到消息後有什麼反應？	B1	social	ngsl_2809_2376	ngsl_2809_0545	react to ...	
+2378	2377	lecture	lecture	The lecture starts at ten.	講座十點開始。	B1	study	ngsl_2809_2377	ngsl_2809_0135|ngsl_spoken_720_0209		lecture 在此為「講座、課堂講課」
+2379	2378	venture	venture	We didn't venture outside during the storm.	暴風雨期間我們不敢冒險出門。	C1	daily	ngsl_2809_2378	ngsl_2809_0490|ngsl_2809_1998		venture 在此為動詞「冒險前往」
+2380	2379	compound	compound	Water is a compound of hydrogen and oxygen.	水是氫和氧的化合物。	C1	study	ngsl_2809_2379	ngsl_2809_0321		
+2381	2380	rescue	rescued	Firefighters rescued the cat from the tree.	消防員把貓從樹上救下來。	B1	news	ngsl_2809_2380	ngsl_2809_1677|ngsl_2809_0737		
+2382	2381	mess	mess	Sorry about the mess.	抱歉，這裡很亂。	A2	daily	ngsl_2809_2381	ngsl_2809_0764		
+2383	2382	preference	preference	Do you have a seat preference?	您對座位有偏好嗎？	B2	travel	ngsl_2809_2382	ngsl_2809_0851		
+2384	2383	comprehensive	comprehensive	This book is a comprehensive guide to the city.	這本書是這座城市的完整指南。	C1	travel	ngsl_2809_2383	ngsl_2809_0170|ngsl_2809_1145|ngsl_2809_0268		comprehensive 在此為「完整全面的」
+2385	2384	incentive	incentives	The company offers incentives for good work.	公司會提供獎勵給表現好的員工。	B2	work	ngsl_2809_2384	ngsl_2809_0106|ngsl_2809_0236|ngsl_2809_0055|ngsl_2809_0066		incentive 在此為「獎勵、誘因」
+2386	2385	league	league	Our team is at the top of the league.	我們隊在聯賽中排名第一。	B1	social	ngsl_2809_2385	ngsl_2809_0406|ngsl_2809_0374	top of the league	
+2387	2386	dialog	dialog	Listen to the dialog and answer the questions.	聽這段對話，然後回答問題。	A2	study	ngsl_2809_2386	ngsl_2809_0572|ngsl_2809_0354|ngsl_2809_0180		
+2388	2387	cream	cream	Do you take cream in your coffee?	你的咖啡要加奶精嗎？	A2	food	ngsl_2809_2387	ngsl_2809_0058|ngsl_2809_1394		cream 在此為「奶精、鮮奶油」
+2389	2388	rapid	rapid	The city has seen rapid growth.	這座城市發展得很快。	B2	news	ngsl_2809_2388	ngsl_2809_0268|ngsl_2809_0049|ngsl_2809_0677		
+2390	2389	cancel	cancel	I need to cancel my reservation.	我需要取消我的預約。	A2	travel	ngsl_2809_2389	ngsl_2809_0089		
+2391	2390	regret	regret	I regret not studying harder.	我後悔當初沒有更用功讀書。	B1	study	ngsl_2809_2390	ngsl_2809_0186|ngsl_2809_0297		
+2392	2391	dismiss	dismissed	He was dismissed for being late too often.	他因為太常遲到被解雇了。	C1	work	ngsl_2809_2391	ngsl_2809_0146|ngsl_2809_0287		
+2393	2392	margin	margin	The profit margin on this product is small.	這個產品的利潤率很低。	C1	work	ngsl_2809_2392	ngsl_2809_0899|ngsl_2809_0303|ngsl_2809_0185	profit margin	
+2394	2393	beneath	beneath	The cat is sleeping beneath the table.	貓在桌子底下睡覺。	B2	daily	ngsl_2809_2393	ngsl_2809_1677|ngsl_2809_0826|ngsl_2809_0449		
+2395	2394	opponent	opponent	Her opponent was much taller.	她的對手高很多。	B2	social	ngsl_2809_2394	ngsl_2809_1784		
+2396	2395	resist	resist	I couldn't resist buying the cake.	我忍不住買了那個蛋糕。	B1	food	ngsl_2809_2395	ngsl_2809_0241|ngsl_2809_2172	can't resist ...	resist 在此為「抗拒（誘惑）」
+2397	2396	capability	capability	We don't have the capability to print in color.	我們沒辦法彩色列印。	C1	work	ngsl_2809_2396	ngsl_2809_1099|ngsl_2809_0377		
+2398	2397	absolute	absolute	It was an absolute disaster.	那簡直是一場災難。	B2	social	ngsl_2809_2397	ngsl_2809_2116		absolute 在此為「完全的、十足的」
+2399	2398	correspond	correspond	The numbers on the map correspond to the photos.	地圖上的數字對應那些照片。	C1	travel	ngsl_2809_2398	ngsl_2809_0126|ngsl_2809_1211|ngsl_2809_1207	correspond to ...	
+2400	2399	stroke	stroke	My grandfather had a stroke last year.	我爺爺去年中風了。	B2	health	ngsl_2809_2399	ngsl_2809_0100|ngsl_2809_0057		

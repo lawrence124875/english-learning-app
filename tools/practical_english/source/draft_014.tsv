@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1301	1300	flower	flowers	He bought her some flowers.	他買了一些花送她。	A1	shopping	ngsl_2809_1300	ngsl_2809_0241		
+1302	1301	crisis	crisis	The company is going through a crisis.	公司正在經歷一場危機。	B2	work	ngsl_2809_1301	ngsl_2809_0106|ngsl_2809_0030	go through	
+1303	1302	settle	settle	Let's settle this over coffee.	我們邊喝咖啡邊把這件事解決吧。	B2	social	ngsl_2809_1302	ngsl_2809_1394		settle 在此為「解決（爭議、問題）」
+1304	1303	boat	boat	We took a boat to the island.	我們搭船去那座島。	A2	travel	ngsl_2809_1303	ngsl_2809_0058|ngsl_2809_1213		
+1305	1304	aid	aid	Is there a first aid kit in the office?	辦公室裡有急救箱嗎？	B1	health	ngsl_2809_1304	ngsl_2809_0077|ngsl_2809_0342	first aid kit	aid 在此為「救助、急救」
+1306	1305	fan	fan	I'm a big fan of his music.	我超喜歡他的音樂。	A2	social	ngsl_2809_1305	ngsl_2809_0183|ngsl_2809_0391	a big fan of ...	
+1307	1306	kitchen	kitchen	The kitchen is a mess.	廚房一團亂。	A2	daily	ngsl_2809_1306	ngsl_2809_2381		
+1308	1307	twice	twice	I brush my teeth twice a day.	我一天刷兩次牙。	A1	daily	ngsl_2809_1307	ngsl_2809_2462|ngsl_2809_2025|ngsl_2809_0084	twice a day	
+1309	1308	fresh	fresh	These vegetables are really fresh.	這些蔬菜很新鮮。	A1	food	ngsl_2809_1308	ngsl_2809_2215|ngsl_2809_0103		
+1310	1309	delay	delay	We apologize for the delay.	造成延誤，我們深感抱歉。	B1	travel	ngsl_2809_1309	ngsl_2809_2300		
+1311	1310	safety	Safety	Safety comes first.	安全第一。	A2	work	ngsl_2809_1310	ngsl_2809_0064|ngsl_2809_0077		
+1312	1311	engineer	engineer	My brother is a software engineer.	我哥是軟體工程師。	A2	work	ngsl_2809_1311	ngsl_2809_0820|ngsl_2809_1090		
+1313	1312	quiet	quiet	Please be quiet in the library.	在圖書館裡請保持安靜。	A1	study	ngsl_2809_1312	ngsl_2809_0470|ngsl_2809_1161		
+1314	1313	insurance	insurance	Do you have travel insurance?	你有保旅遊險嗎？	B1	travel	ngsl_2809_1313	ngsl_2809_0502	travel insurance	
+1315	1314	nurse	nurse	The nurse will see you in a moment.	護理師等一下就來看你。	A2	health	ngsl_2809_1314	ngsl_2809_0049|ngsl_2809_0396	in a moment	
+1316	1315	divide	divide	Let's divide the bill between us.	我們平分帳單吧。	B1	food	ngsl_2809_1315	ngsl_2809_0887		divide 在此為「分攤」
+1317	1316	length	length	What length should the essay be?	這篇作文要寫多長？	B1	study	ngsl_2809_1316	ngsl_2809_2160		
+1318	1317	investigation	investigation	The police have started an investigation.	警方已經展開調查。	B2	news	ngsl_2809_1317	ngsl_2809_0615|ngsl_2809_0135		
+1319	1318	package	package	We booked a vacation package online.	我們在網路上訂了一個度假套裝行程。	B1	travel	ngsl_2809_1318	ngsl_2809_0170|ngsl_2809_1793	vacation package	
+1320	1319	somewhere	somewhere	Let's go somewhere quiet.	我們去個安靜的地方吧。	A2	social	ngsl_2809_1319	ngsl_2809_0030|ngsl_2809_1312		
+1321	1320	expand	expand	The store plans to expand next year.	這家店打算明年擴大營業。	B1	work	ngsl_2809_1320	ngsl_2809_0616|ngsl_2809_0231|ngsl_2809_0150|ngsl_2809_0057		
+1322	1321	commit	committed	She's very committed to her work.	她對工作非常投入。	B2	work	ngsl_2809_1321	ngsl_2809_0066	be committed to ...	commit 在此為「投入、致力於」
+1323	1322	obvious	obvious	The answer is obvious.	答案很明顯。	B1	study	ngsl_2809_1322	ngsl_2809_0354		
+1324	1323	jump	jumped	The kids jumped into the pool.	孩子們跳進游泳池。	A1	daily	ngsl_2809_1323	ngsl_2809_0528|ngsl_2809_1335		
+1325	1324	weapon	Weapons	Weapons are not allowed on the plane.	飛機上禁止攜帶武器。	B1	official	ngsl_2809_1324	ngsl_2809_0323|ngsl_2809_1258		
+1326	1325	relatively	relatively	The test was relatively easy.	這次考試相對簡單。	B2	study	ngsl_2809_1325	ngsl_2809_0331|ngsl_2809_0407		
+1327	1326	host	host	Thanks for being such a great host.	謝謝你這麼熱情的招待。	B1	social	ngsl_2809_1326	ngsl_2809_0243|ngsl_2809_0123		
+1328	1327	winter	winter	It snows a lot here in winter.	這裡冬天常下雪。	A1	daily	ngsl_2809_1327	ngsl_2809_1949|ngsl_2809_0122|ngsl_2809_0097		
+1329	1328	district	district	This district has some great restaurants.	這一區有幾家很棒的餐廳。	B1	food	ngsl_2809_1328	ngsl_2809_0123|ngsl_2809_0918		
+1330	1329	broad	broad	The store offers a broad range of products.	這家店提供各式各樣的產品。	B2	shopping	ngsl_2809_1329	ngsl_2809_0616|ngsl_2809_0236|ngsl_2809_0515|ngsl_2809_0303	a broad range of	
+1331	1330	tire	tire	We got a flat tire on the way home.	我們回家路上爆胎了。	B1	travel	ngsl_2809_1330	ngsl_2809_0042|ngsl_2809_1076|ngsl_2809_0079|ngsl_2809_0160	flat tire	
+1332	1331	spring	spring	The cherry trees bloom in spring.	櫻花樹在春天開花。	A2	daily	ngsl_2809_1331	ngsl_2809_0737		
+1333	1332	spirit	spirit	I love the team spirit here.	我很喜歡這裡的團隊精神。	B1	work	ngsl_2809_1332	ngsl_2809_0228|ngsl_2809_0406|ngsl_2809_0097	team spirit	
+1334	1333	lunch	lunch	What do you want for lunch?	你午餐想吃什麼？	A1	food	ngsl_2809_1333	ngsl_2809_0075		
+1335	1334	actual	actual	The actual price was much higher.	實際價格高很多。	B1	shopping	ngsl_2809_1334	ngsl_2809_0295|ngsl_2809_0090|ngsl_2809_0147		
+1336	1335	pool	pool	The hotel has an outdoor pool.	飯店有戶外游泳池。	A2	travel	ngsl_2809_1335	ngsl_2809_0758		
+1337	1336	battle	battle	It's a battle to get the kids to bed.	要哄孩子上床睡覺簡直是一場硬仗。	B2	daily	ngsl_2809_1336	ngsl_2809_0042|ngsl_2809_0528|ngsl_2809_0693		battle 在此為比喻「硬仗」
+1338	1337	tradition	tradition	Eating dumplings at New Year is a family tradition.	過年吃餃子是我們家的傳統。	B1	food	ngsl_2809_1337	ngsl_2809_0475|ngsl_2809_0171		
+1339	1338	cash	cash	Do you accept cash?	你們收現金嗎？	A1	shopping	ngsl_2809_1338	ngsl_2809_0560		
+1340	1339	hardly	hardly	I can hardly hear you.	我幾乎聽不到你的聲音。	B1	phone	ngsl_2809_1339	ngsl_2809_0177		
+1341	1340	award	award	She won an award for her design.	她的設計得了獎。	B1	work	ngsl_2809_1340	ngsl_2809_0376|ngsl_2809_0440		
+1342	1341	coach	coach	Our coach makes us run every morning.	教練每天早上都要我們跑步。	A2	health	ngsl_2809_1341	ngsl_2809_0047|ngsl_2809_0191|ngsl_2809_0433		
+1343	1342	experiment	experiment	We did a simple experiment in class.	我們在課堂上做了一個簡單的實驗。	B1	study	ngsl_2809_1342	ngsl_2809_0020|ngsl_2809_0687|ngsl_2809_0361		
+1344	1343	consideration	consideration	Thank you for your consideration.	謝謝您的考慮。	B1	work	ngsl_2809_1343	ngsl_2809_0243		
+1345	1344	strange	strange	I heard a strange noise last night.	我昨晚聽到奇怪的聲音。	A2	daily	ngsl_2809_1344	ngsl_2809_0177|ngsl_2809_1439|ngsl_2809_0100|ngsl_2809_0269		
+1346	1345	code	code	Enter the code to unlock the door.	輸入密碼就能開門。	A2	daily	ngsl_2809_1345	ngsl_2809_0716|ngsl_2809_0489		code 在此為「密碼」
+1347	1346	possibly	possibly	Could you possibly help me with this?	能不能麻煩你幫我一下？	B1	social	ngsl_2809_1346	ngsl_2809_0132		possibly 在此用於客氣請求
+1348	1347	threat	threat	Strong winds are the main threat today.	強風是今天最主要的威脅。	B2	news	ngsl_2809_1347	ngsl_2809_0460|ngsl_2809_1012|ngsl_2809_0452|ngsl_2809_0245		
+1349	1348	accident	accident	There was an accident on the highway.	高速公路上發生了車禍。	A2	news	ngsl_2809_1348			accident 在此為「車禍」
+1350	1349	impossible	impossible	It's impossible to find parking here.	這裡根本找不到停車位。	B1	travel	ngsl_2809_1349	ngsl_2809_0080|ngsl_2809_0097		
+1351	1350	revenue	revenue	Our revenue grew last year.	我們去年營收成長了。	B2	work	ngsl_2809_1350	ngsl_2809_0334|ngsl_2809_0100|ngsl_2809_0057		
+1352	1351	enable	Enable	Enable notifications to get the latest updates.	開啟通知以接收最新消息。	B1	phone	ngsl_2809_1351	ngsl_2809_0042|ngsl_2809_1932		enable 在此為「啟用（功能）」
+1353	1352	afraid	afraid	I'm afraid of the dark.	我怕黑。	A1	daily	ngsl_2809_1352	ngsl_2809_0922	be afraid of	
+1354	1353	active	active	My grandma is still very active.	我奶奶還是很活躍。	A2	health	ngsl_2809_1353	ngsl_2809_0118		
+1355	1354	conclude	concluded	We concluded that the plan wouldn't work.	我們的結論是這個計畫行不通。	B2	work	ngsl_2809_1354	ngsl_2809_0231|ngsl_2809_0066		
+1356	1355	religious	religious	It's a religious holiday here.	這天在當地是宗教節日。	B1	travel	ngsl_2809_1355	ngsl_2809_0741|ngsl_2809_0097		
+1357	1356	cancer	cancer	Smoking increases the risk of cancer.	吸菸會增加罹癌風險。	B1	health	ngsl_2809_1356	ngsl_2809_1229|ngsl_2809_0229|ngsl_2809_0544		
+1358	1357	convince	convinced	She convinced me to come.	她說服我來了。	B1	social	ngsl_2809_1357	ngsl_2809_0064	convince someone to ...	
+1359	1358	vary	vary	Prices vary from shop to shop.	每家店的價格都不一樣。	B1	shopping	ngsl_2809_1358	ngsl_2809_0295|ngsl_2809_0436		
+1360	1359	environmental	environmental	Plastic bags cause serious environmental problems.	塑膠袋造成嚴重的環境問題。	B1	news	ngsl_2809_1359	ngsl_2809_1849|ngsl_2809_1251|ngsl_2809_0318|ngsl_2809_0795|ngsl_2809_0119		
+1361	1360	sun	sun	Don't stay in the sun too long.	別在太陽底下待太久。	A1	health	ngsl_2809_1360	ngsl_2809_0344|ngsl_2809_0114		
+1362	1361	healthy	healthy	I'm trying to eat healthy food.	我在努力吃健康的食物。	A1	health	ngsl_2809_1361	ngsl_2809_0124|ngsl_2809_0475|ngsl_2809_0366		
+1363	1362	blow	blew	The wind blew my hat off.	風把我的帽子吹掉了。	A2	daily	ngsl_2809_1362	ngsl_2809_1012|ngsl_2809_1749		
+1364	1363	volume	volume	Can you turn down the volume?	你可以把音量調小嗎？	A2	daily	ngsl_2809_1363	ngsl_2809_0193	turn down	volume 在此為「音量」
+1365	1364	location	location	The location of this hotel is perfect.	這間飯店的位置很棒。	A2	travel	ngsl_2809_1364	ngsl_2809_0758|ngsl_2809_1110		
+1366	1365	invest	invested	He invested his savings in a small business.	他把積蓄投資在一家小公司。	B2	work	ngsl_2809_1365	ngsl_2809_0185|ngsl_2809_0210		
+1367	1366	proceed	proceed	Please proceed to gate twelve.	請前往十二號登機門。	B1	travel	ngsl_2809_1366	ngsl_2809_0470|ngsl_2809_2059|ngsl_spoken_720_0399		proceed 在此為「前往」
+1368	1367	wash	wash	I need to wash my car.	我得洗車了。	A1	daily	ngsl_2809_1367	ngsl_2809_0089|ngsl_2809_0259		
+1369	1368	actor	actor	Who's your favorite actor?	你最喜歡哪個演員？	A1	social	ngsl_2809_1368	ngsl_2809_0999		
+1370	1369	glad	glad	I'm glad you could come.	很高興你能來。	A2	social	ngsl_2809_1369	ngsl_2809_0064		
+1371	1370	tape	tape	I need some tape to fix this box.	我需要一點膠帶把這個箱子黏好。	A2	daily	ngsl_2809_1370	ngsl_2809_0089|ngsl_2809_0972|ngsl_2809_0860		
+1372	1371	whereas	whereas	I like tea, whereas my husband prefers coffee.	我喜歡茶，而我先生比較喜歡咖啡。	B2	food	ngsl_2809_1371	ngsl_2809_0044|ngsl_2809_1598|ngsl_2809_0800|ngsl_2809_0948|ngsl_2809_1394		whereas 在此為「而（表對比）」
+1373	1372	opposite	opposite	They have opposite opinions on this.	他們對這件事的意見完全相反。	B1	social	ngsl_2809_1372	ngsl_2809_0655		
+1374	1373	stone	stone	The old bridge is made of stone.	那座舊橋是用石頭蓋的。	A2	travel	ngsl_2809_1373	ngsl_2809_0143|ngsl_2809_1545	be made of	
+1375	1374	sum	sum	We paid a large sum of money for the house.	我們買這間房子花了一大筆錢。	B2	daily	ngsl_2809_1374	ngsl_2809_0219|ngsl_2809_0209|ngsl_2809_0200|ngsl_2809_0164	a sum of money	sum 在此為「金額」
+1376	1375	murder	murder	I love reading murder mysteries.	我很愛看推理謀殺小說。	B1	daily	ngsl_2809_1375	ngsl_2809_0228|ngsl_2809_0206|ngsl_2809_2592	murder mystery	指推理小說類型，避開暴力描寫
+1377	1376	monitor	monitor	We monitor the temperature every hour.	我們每小時監測一次溫度。	B2	work	ngsl_2809_1376	ngsl_2809_1451|ngsl_2809_0246		
+1378	1377	soldier	soldier	My grandfather was a soldier.	我爺爺以前是軍人。	A2	daily	ngsl_2809_1377			
+1379	1378	finance	finance	She works in finance.	她在金融業工作。	B2	work	ngsl_2809_1378	ngsl_2809_0066		finance 在此為「金融業」
+1380	1379	hate	hate	I hate waiting in line.	我討厭排隊。	A2	daily	ngsl_2809_1379	ngsl_2809_0402|ngsl_2809_0273	wait in line	hate 在此為動詞「討厭」，非名詞「仇恨」
+1381	1380	egg	eggs	How would you like your eggs?	你的蛋要怎麼料理？	A2	food	ngsl_2809_1380	ngsl_2809_0044		
+1382	1381	concert	concert	Are you going to the concert on Friday?	你週五要去聽演唱會嗎？	A1	social	ngsl_2809_1381	ngsl_2809_0030		
+1383	1382	shock	shock	The news came as a shock.	這消息令人震驚。	B1	news	ngsl_2809_1382	ngsl_2809_0545|ngsl_2809_0064	come as a shock	
+1384	1383	comfortable	comfortable	These shoes are really comfortable.	這雙鞋好舒服。	A2	shopping	ngsl_2809_1383	ngsl_2809_1475|ngsl_2809_0103		
+1385	1384	usual	usual	Let's meet at the usual place.	我們在老地方見。	A2	social	ngsl_2809_1384	ngsl_2809_0134|ngsl_2809_0113		
+1386	1385	carefully	carefully	Please listen carefully.	請仔細聽。	A2	study	ngsl_2809_1385	ngsl_2809_0470|ngsl_2809_0572		
+1387	1386	pack	packed	Have you packed for the trip yet?	你旅行的行李收好了嗎？	A2	travel	ngsl_2809_1386	ngsl_2809_0824|ngsl_2809_0310		
+1388	1387	recall	recall	I can't recall his name.	我想不起他的名字。	B1	social	ngsl_2809_1387	ngsl_2809_0205		
+1389	1388	wine	wine	Would you like red or white wine?	你要紅酒還是白酒？	A2	food	ngsl_2809_1388	ngsl_2809_0044|ngsl_2809_0799|ngsl_2809_0481		
+1390	1389	camera	camera	My phone has a really good camera.	我的手機相機很好。	A1	phone	ngsl_2809_1389	ngsl_2809_0478|ngsl_2809_0103|ngsl_2809_0055		
+1391	1390	swim	swim	I learned to swim when I was five.	我五歲學會游泳。	A1	health	ngsl_2809_1390	ngsl_2809_0260|ngsl_spoken_720_0115		
+1392	1391	manufacture	manufactures	This company manufactures car parts.	這家公司製造汽車零件。	B2	work	ngsl_2809_1391	ngsl_2809_0106|ngsl_2809_0259|ngsl_2809_0129		
+1393	1392	theater	theater	Let's meet in front of the theater.	我們在劇院前面碰面吧。	A2	social	ngsl_2809_1392	ngsl_2809_0134|ngsl_2809_0487	in front of	
+1394	1393	cycle	cycle	It's a vicious cycle.	這是個惡性循環。	B2	social	ngsl_2809_1393		vicious cycle	
+1395	1394	coffee	coffee	I'll have a coffee, please.	我要一杯咖啡，謝謝。	A1	food	ngsl_2809_1394	ngsl_2809_0007|ngsl_2809_0470		
+1396	1395	totally	totally	I totally forgot about the meeting.	我完全忘了開會的事。	B1	work	ngsl_2809_1395	ngsl_2809_0650		
+1397	1396	museum	museum	The museum is free on Sundays.	博物館週日免費參觀。	A1	travel	ngsl_2809_1396	ngsl_2809_0394		
+1398	1397	visitor	Visitors	Visitors must sign in at the front desk.	訪客必須在櫃台登記。	B1	official	ngsl_2809_1397	ngsl_2809_0159|ngsl_2809_0499|ngsl_2809_0487|ngsl_2809_1587	sign in	
+1399	1398	freedom	freedom	I love the freedom of working from home.	我很喜歡在家工作的自由。	B1	work	ngsl_2809_1398	ngsl_2809_0228|ngsl_2809_0066|ngsl_2809_0160	work from home	
+1400	1399	construction	construction	The road is under construction.	這條路正在施工。	B1	travel	ngsl_2809_1399	ngsl_2809_0520	under construction	

@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1101	1100	progress	progress	You're making good progress with your English.	你的英文進步很多。	A2	study	ngsl_2809_1100	ngsl_2809_0047|ngsl_2809_0055	make progress	
+1102	1101	truth	truth	Just tell me the truth.	跟我說實話就好。	A2	social	ngsl_2809_1101	ngsl_2809_0063|ngsl_2809_0102	tell the truth	
+1103	1102	nobody	Nobody	Nobody answered the phone.	沒有人接電話。	A2	phone	ngsl_2809_1102	ngsl_2809_0354|ngsl_2809_0478		
+1104	1103	examine	examined	The doctor examined my throat.	醫生檢查了我的喉嚨。	B1	health	ngsl_2809_1103	ngsl_2809_0762|ngsl_2809_2503		
+1105	1104	lay	Lay	Lay the towel flat on the floor.	把毛巾平放在地上。	B1	daily	ngsl_2809_1104	ngsl_2809_1076|ngsl_2809_0750		
+1106	1105	speed	speed	What's the speed limit here?	這裡的速限是多少？	A2	travel	ngsl_2809_1105	ngsl_2809_0571|ngsl_2809_0097	speed limit	
+1107	1106	politics	politics	I'm not really interested in politics.	我對政治沒什麼興趣。	B1	social	ngsl_2809_1106	ngsl_2809_0103	be interested in	
+1108	1107	reply	reply	Sorry for the late reply.	抱歉這麼晚才回覆。	A2	work	ngsl_2809_1107	ngsl_2809_0764|ngsl_2809_0146		
+1109	1108	display	displayed	The prices are displayed on the screen.	價格顯示在螢幕上。	B1	shopping	ngsl_2809_1108	ngsl_2809_0295|ngsl_2809_0956		
+1110	1109	transfer	transfer	I need to transfer some money to my sister.	我需要轉一筆錢給我妹妹。	B1	daily	ngsl_2809_1109	ngsl_2809_0089|ngsl_2809_0200|ngsl_2809_0963		transfer 在此為「轉帳」
+1111	1110	perfect	perfect	The weather is perfect for a picnic.	這天氣很適合去野餐。	A2	daily	ngsl_2809_1110	ngsl_2809_1067		
+1112	1111	slightly	slightly	I feel slightly better today.	我今天覺得好一點了。	B1	health	ngsl_2809_1111	ngsl_2809_0116|ngsl_2809_0245		
+1113	1112	overall	Overall	Overall, the trip went really well.	整體來說，這趟旅行很順利。	B1	travel	ngsl_2809_1112	ngsl_2809_0824|ngsl_2809_0030|ngsl_2809_0103|ngsl_2809_0060		
+1114	1113	intend	intend	I intend to finish this by Friday.	我打算週五前把這個做完。	B1	work	ngsl_2809_1113	ngsl_2809_0608	intend to ...	
+1115	1114	user	users	New users get a free trial for a month.	新用戶可以免費試用一個月。	B1	shopping	ngsl_2809_1114	ngsl_2809_0078|ngsl_2809_0042|ngsl_2809_0394|ngsl_2809_1042|ngsl_2809_0208	free trial	
+1116	1115	respond	responded	She hasn't responded to my message yet.	她還沒回覆我的訊息。	B1	phone	ngsl_2809_1115	ngsl_2809_0862|ngsl_2809_0310	respond to ...	
+1117	1116	dinner	dinner	Let's have dinner together tonight.	我們今晚一起吃晚餐吧。	A1	food	ngsl_2809_1116	ngsl_2809_0007|ngsl_2809_0293|ngsl_2809_1413		
+1118	1117	slow	slow	The internet is really slow today.	今天網路好慢。	A1	daily	ngsl_2809_1117	ngsl_2809_0103|ngsl_2809_0245		
+1119	1118	regular	Regular	Regular exercise helps you sleep better.	規律運動有助於睡得更好。	B1	health	ngsl_2809_1118	ngsl_2809_0916|ngsl_2809_0132|ngsl_2809_0826		
+1120	1119	physical	physical	This job requires a lot of physical work.	這份工作需要大量體力活。	B1	work	ngsl_2809_1119	ngsl_2809_0230|ngsl_2809_0401|ngsl_2809_0122|ngsl_2809_0066		
+1121	1120	apart	apart	The two towns are about ten miles apart.	這兩個小鎮相距大約十英里。	B1	travel	ngsl_2809_1120	ngsl_spoken_720_0070|ngsl_2809_0363|ngsl_spoken_720_0209|ngsl_2809_0776		apart 在此為「相距」
+1122	1121	suit	suit	He wore a dark suit to the interview.	他穿深色西裝去面試。	A2	work	ngsl_2809_1121	ngsl_2809_0525|ngsl_2809_0922|ngsl_2809_0783		
+1123	1122	federal	federal	The post office is closed on federal holidays.	郵局在聯邦假日不營業。	B2	official	ngsl_2809_1122	ngsl_2809_0927|ngsl_2809_0342|ngsl_2809_0238|ngsl_2809_0741	federal holiday	美國用語
+1124	1123	reveal	revealed	She finally revealed her secret.	她終於說出了她的秘密。	B1	social	ngsl_2809_1123	ngsl_2809_0498|ngsl_2809_1275		
+1125	1124	percentage	percentage	What percentage of the class passed the test?	班上有多少比例的人考試及格？	B1	study	ngsl_2809_1124	ngsl_2809_0361|ngsl_2809_0415|ngsl_2809_0331		
+1126	1125	peace	peace	I just want some peace and quiet.	我只想要清靜一下。	B1	daily	ngsl_2809_1125	ngsl_2809_0063|ngsl_2809_0075|ngsl_2809_1312	peace and quiet	
+1127	1126	status	status	You can check your order status online.	你可以上網查詢訂單狀態。	B1	shopping	ngsl_2809_1126	ngsl_2809_0579|ngsl_2809_0214|ngsl_2809_1793	order status	
+1128	1127	crime	Crime	Crime is low in this area.	這一區的犯罪率很低。	B1	news	ngsl_2809_1127	ngsl_2809_0282|ngsl_2809_0203		
+1129	1128	decline	declined	Sales declined last month.	上個月銷售量下滑了。	B2	work	ngsl_2809_1128	ngsl_2809_0397|ngsl_2809_0100|ngsl_2809_0208		
+1130	1129	decade	decade	I've lived here for almost a decade.	我在這裡住了快十年。	B1	daily	ngsl_2809_1129	ngsl_2809_0152|ngsl_2809_0097|ngsl_2809_0306		
+1131	1130	launch	launch	The company will launch a new app next week.	公司下週會推出一款新的應用程式。	B1	work	ngsl_2809_1130	ngsl_2809_0106|ngsl_2809_0078|ngsl_2809_0150|ngsl_2809_0156		launch 在此為「推出（產品）」
+1132	1131	warn	warned	I warned you it would rain.	我早就跟你說過會下雨了。	A2	daily	ngsl_2809_1131	ngsl_2809_1231		
+1133	1132	consumer	Consumers	Consumers are spending less this year.	消費者今年花得比較少。	B1	news	ngsl_2809_1132	ngsl_2809_0257|ngsl_2809_0252|ngsl_2809_0057		
+1134	1133	favor	favor	Most people are in favor of the plan.	大多數人都支持這個計畫。	B1	work	ngsl_2809_1133	ngsl_2809_0087|ngsl_2809_0056|ngsl_2809_0231	in favor of	
+1135	1134	dry	dry	My clothes are still not dry.	我的衣服還沒乾。	A1	daily	ngsl_2809_1134	ngsl_2809_0955|ngsl_2809_0118		
+1136	1135	partner	partner	My business partner and I opened this shop together.	我和事業夥伴一起開了這家店。	B1	work	ngsl_2809_1135	ngsl_2809_0210|ngsl_2809_0213|ngsl_2809_0436|ngsl_2809_0293	business partner	
+1137	1136	institution	institution	She works at a research institution.	她在一家研究機構工作。	B2	work	ngsl_2809_1136	ngsl_2809_0066|ngsl_2809_0422		
+1138	1137	spot	spot	We found a great spot for lunch.	我們找到一個吃午餐的好地點。	A2	food	ngsl_2809_1137	ngsl_2809_0080|ngsl_2809_0123|ngsl_2809_1333		
+1139	1138	horse	horse	Have you ever ridden a horse?	你騎過馬嗎？	A2	social	ngsl_2809_1138	ngsl_2809_0316|ngsl_2809_1049		
+1140	1139	eventually	eventually	We eventually found the hotel.	我們最後終於找到飯店了。	B1	travel	ngsl_2809_1139	ngsl_2809_0080|ngsl_2809_0758		
+1141	1140	heat	heat	I can't stand this heat.	我受不了這種炎熱。	B1	daily	ngsl_2809_1140	ngsl_2809_0308	can't stand ...	heat 在此為「炎熱、高溫」
+1142	1141	excite	excited	The news really excited the kids.	這消息讓孩子們好興奮。	B1	daily	ngsl_2809_1141	ngsl_2809_0545|ngsl_2809_0103|ngsl_2809_0528		
+1143	1142	reader	readers	This magazine has millions of readers.	這本雜誌有數百萬名讀者。	B1	news	ngsl_2809_1142	ngsl_2809_0984|ngsl_spoken_720_0536		
+1144	1143	importance	importance	My parents taught me the importance of hard work.	我爸媽教會我努力工作的重要性。	B1	work	ngsl_2809_1143	ngsl_2809_0296|ngsl_2809_0538|ngsl_2809_0297|ngsl_2809_0066		
+1145	1144	distance	distance	The hotel is within walking distance of the beach.	從飯店走路就能到海灘。	B1	travel	ngsl_2809_1144	ngsl_2809_0758|ngsl_2809_0338|ngsl_2809_1296	within walking distance	
+1146	1145	guide	guide	This guide lists all the best places to eat.	這本指南列出了所有最好吃的地方。	B1	travel	ngsl_2809_1145	ngsl_2809_0522|ngsl_2809_0113|ngsl_2809_0475		
+1147	1146	grant	granted	The school granted her a full scholarship.	學校給了她全額獎學金。	B2	study	ngsl_2809_1146	ngsl_2809_0145|ngsl_2809_0409		
+1148	1147	taxi	taxi	Let's take a taxi to the airport.	我們搭計程車去機場吧。	A1	travel	ngsl_2809_1147	ngsl_2809_0058		
+1149	1148	feed	feed	Could you feed the cat while I'm away?	我不在的時候，可以幫我餵貓嗎？	A2	daily	ngsl_2809_1148	ngsl_2809_1677|ngsl_2809_0233		
+1150	1149	pain	pain	I have a pain in my lower back.	我下背會痛。	A2	health	ngsl_2809_1149	ngsl_2809_0282|ngsl_2809_0093		
+1151	1150	sector	sector	He works in the public sector.	他在公部門工作。	B2	work	ngsl_2809_1150	ngsl_2809_0066|ngsl_2809_0286	public sector	
+1152	1151	mistake	mistake	Sorry, I made a mistake.	抱歉，我弄錯了。	A1	social	ngsl_2809_1151	ngsl_2809_0764|ngsl_2809_0047	make a mistake	
+1153	1152	ensure	ensure	Please ensure all windows are closed.	請確認所有窗戶都已關好。	B2	official	ngsl_2809_1152	ngsl_2809_0470|ngsl_2809_0733|ngsl_2809_0238		
+1154	1153	satisfy	satisfy	Nothing seems to satisfy him.	好像什麼都沒辦法讓他滿意。	B1	social	ngsl_2809_1153	ngsl_2809_0335|ngsl_2809_0172		
+1155	1154	chief	chief	She's the chief engineer on this project.	她是這個專案的首席工程師。	B1	work	ngsl_2809_1154	ngsl_2809_1311|ngsl_2809_0517		
+1156	1155	cool	cool	It's nice and cool in the evening.	傍晚很涼爽舒服。	A2	daily	ngsl_2809_1155	ngsl_2809_0505|ngsl_2809_0678		
+1157	1156	expert	expert	You should ask an expert.	你應該去問問專家。	A2	social	ngsl_2809_1156	ngsl_2809_0133		
+1158	1157	wave	waves	The waves are too big for swimming today.	今天浪太大了，不適合游泳。	A2	travel	ngsl_2809_1157	ngsl_2809_0183|ngsl_2809_1390|ngsl_2809_0245		
+1159	1158	south	south	We're driving south for the holidays.	我們要開車南下過節。	A2	travel	ngsl_2809_1158	ngsl_2809_0386|ngsl_2809_0741		
+1160	1159	labor	Labor	Labor costs keep going up.	人工成本一直在上漲。	B2	work	ngsl_2809_1159	ngsl_2809_0251|ngsl_2809_0176|ngsl_2809_0030	go up	labor 在此為「人工、勞力」
+1161	1160	surface	surface	The table has a smooth surface.	這張桌子表面很光滑。	B1	daily	ngsl_2809_1160	ngsl_2809_0449|ngsl_2809_2240		
+1162	1161	library	library	I'm returning these books to the library.	我要把這些書還給圖書館。	A1	study	ngsl_2809_1161	ngsl_2809_0336|ngsl_2809_0170		
+1163	1162	excellent	excellent	The food here is excellent.	這裡的食物很棒。	A2	food	ngsl_2809_1162	ngsl_2809_0366|ngsl_2809_0097		
+1164	1163	edge	edge	Don't put your cup so close to the edge.	杯子不要放得那麼靠邊。	B1	daily	ngsl_2809_1163	ngsl_2809_0138|ngsl_2809_1490|ngsl_2809_0238		
+1165	1164	camp	camp	We set up camp near the lake.	我們在湖邊紮營。	B1	travel	ngsl_2809_1164	ngsl_2809_0184|ngsl_2809_0426|ngsl_2809_1821	set up camp	
+1166	1165	audience	audience	The audience loved the show.	觀眾很喜歡這場表演。	B1	social	ngsl_2809_1165	ngsl_2809_0228|ngsl_2809_0109		
+1167	1166	lift	lift	Can you help me lift this box?	你可以幫我抬這個箱子嗎？	A2	daily	ngsl_2809_1166	ngsl_2809_0132|ngsl_2809_0860		
+1168	1167	procedure	procedure	What's the procedure for getting a refund?	退款的程序是什麼？	B2	shopping	ngsl_2809_1167	ngsl_2809_0042		
+1169	1168	email	email	I'll send you an email later.	我晚點寄電子郵件給你。	A1	work	ngsl_2809_1168	ngsl_2809_0322		
+1170	1169	global	global	She works for a global company.	她在一家跨國公司工作。	B1	work	ngsl_2809_1169	ngsl_2809_0066|ngsl_2809_0106		
+1171	1170	struggle	struggled	I struggled to stay awake in class.	我上課時拼命撐著不睡著。	B1	study	ngsl_2809_1170	ngsl_2809_0344|ngsl_2809_0361	struggle to ...	
+1172	1171	advertise	advertised	We advertised the job online.	我們在網路上刊登了徵才廣告。	B1	work	ngsl_2809_1171	ngsl_2809_0230|ngsl_2809_1793		advertise 在此為「刊登廣告」
+1173	1172	select	Select	Select a size from the menu.	從選單中選擇尺寸。	A2	shopping	ngsl_2809_1172	ngsl_2809_0704|ngsl_2809_2596		
+1174	1173	surround	surrounded	The house is surrounded by trees.	房子四周都是樹。	B1	daily	ngsl_2809_1173	ngsl_2809_0164|ngsl_2809_0737	be surrounded by	
+1175	1174	extent	extent	To some extent, I agree with you.	某種程度上，我同意你的看法。	B2	social	ngsl_2809_1174	ngsl_2809_0419	to some extent	
+1176	1175	river	river	Let's take a walk along the river.	我們沿著河邊散步吧。	A2	travel	ngsl_2809_1175	ngsl_2809_0058|ngsl_2809_0338|ngsl_2809_0387	take a walk	
+1177	1176	annual	annual	Our annual meeting is in March.	我們的年度會議在三月。	B1	work	ngsl_2809_1176	ngsl_2809_2452		
+1178	1177	fully	fully	The hotel is fully booked this weekend.	這個週末飯店全滿了。	B1	travel	ngsl_2809_1177	ngsl_2809_0758|ngsl_2809_0170|ngsl_2809_0933	fully booked	
+1179	1178	contrast	contrast	There's a big contrast between city and country life.	城市和鄉村生活的差別很大。	B2	daily	ngsl_2809_1178	ngsl_2809_0183|ngsl_2809_0268|ngsl_2809_0142|ngsl_2809_0110		
+1180	1179	roll	rolled	The ball rolled under the sofa.	球滾到沙發底下了。	A2	daily	ngsl_2809_1179	ngsl_2809_1200		
+1181	1180	reality	reality	The reality is that we need more time.	事實是我們需要更多時間。	B1	work	ngsl_2809_1180	ngsl_2809_0089|ngsl_2809_0048		reality 在此為「現實、實際情況」
+1182	1181	photograph	photograph	This old photograph shows my grandparents.	這張老照片裡是我的祖父母。	B1	daily	ngsl_2809_1181	ngsl_2809_0143|ngsl_2809_0109		
+1183	1182	artist	artist	My sister is a talented artist.	我妹妹是很有天分的藝術家。	A2	social	ngsl_2809_1182	ngsl_2809_0963		
+1184	1183	conflict	conflict	I have a conflict in my schedule.	我的行程有衝突。	B2	work	ngsl_2809_1183	ngsl_2809_1239		conflict 在此為「（時間）衝突」
+1185	1184	entire	entire	I spent the entire day cleaning.	我花了一整天打掃。	B1	daily	ngsl_2809_1184	ngsl_2809_0257|ngsl_2809_0084|ngsl_2809_0841		
+1186	1185	presence	presence	Her presence made everyone feel calm.	有她在，大家都安心多了。	B2	social	ngsl_2809_1185	ngsl_2809_0047|ngsl_2809_0649|ngsl_2809_0116|ngsl_2809_1963		
+1187	1186	crowd	crowd	There was a huge crowd at the concert.	演唱會上人山人海。	B1	social	ngsl_2809_1186	ngsl_2809_0861|ngsl_2809_1381		
+1188	1187	corner	corner	The bakery is just around the corner.	麵包店就在轉角。	A2	travel	ngsl_2809_1187	ngsl_2809_0063|ngsl_2809_0169	around the corner	
+1189	1188	gas	gas	We need to stop for gas soon.	我們等一下要停下來加油。	A2	travel	ngsl_2809_1188	ngsl_2809_0089|ngsl_2809_0346|ngsl_2809_0324		gas 在此為「汽油」（美式）
+1190	1189	shift	shift	I'm working the night shift this week.	這週我上夜班。	B1	work	ngsl_2809_1189	ngsl_2809_0066|ngsl_2809_0269|ngsl_2809_0156	night shift	shift 在此為「輪班」
+1191	1190	net	net	The ball hit the net.	球打到網子了。	A2	daily	ngsl_2809_1190	ngsl_2809_1200|ngsl_2809_0694		
+1192	1191	category	category	Which category does this belong to?	這屬於哪一類？	B1	study	ngsl_2809_1191	ngsl_2809_1411		
+1193	1192	secretary	secretary	Please leave a message with my secretary.	請留言給我的秘書。	B1	work	ngsl_2809_1192	ngsl_2809_0470|ngsl_2809_0125|ngsl_2809_0862	leave a message	
+1194	1193	defense	defense	Our team needs a stronger defense.	我們隊需要更強的防守。	B1	social	ngsl_2809_1193	ngsl_2809_0406|ngsl_2809_0089|ngsl_2809_0460		defense 在此為「（運動）防守」
+1195	1194	quick	quick	I have a quick question.	我有個小問題想問一下。	A1	work	ngsl_2809_1194	ngsl_2809_0180		
+1196	1195	cook	cook	My dad loves to cook on weekends.	我爸週末很愛下廚。	A1	food	ngsl_2809_1195	ngsl_2809_1631|ngsl_2809_0228|ngsl_2809_0933		
+1197	1196	spread	Spread	Spread the butter evenly on the bread.	把奶油均勻抹在麵包上。	B1	food	ngsl_2809_1196	ngsl_2809_2261		spread 在此為「塗抹」
+1198	1197	nuclear	nuclear	There's a nuclear power plant near the town.	小鎮附近有一座核電廠。	B2	news	ngsl_2809_1197	ngsl_2809_0330|ngsl_2809_0670|ngsl_2809_0426|ngsl_2809_0363	nuclear power plant	
+1199	1198	scale	scale	On a scale of one to ten, how was the movie?	如果滿分十分，這部電影你給幾分？	B1	social	ngsl_2809_1198	ngsl_2809_0034|ngsl_spoken_720_0209|ngsl_2809_0761	on a scale of ... to ...	scale 在此為「評分等級」
+1200	1199	driver	driver	The bus driver was very friendly.	公車司機很友善。	A1	travel	ngsl_2809_1199	ngsl_2809_0809|ngsl_2809_1537		

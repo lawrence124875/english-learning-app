@@ -1,0 +1,101 @@
+# phave_list_150 片語動詞（不在 NGSL／spoken／phrase_list）
+phave_list_150_0003|came up|Your name came up at the meeting today.|今天開會時有人提到你的名字。|B1|work|name,meet<meeting,today||come up 在此為「被提及」
+phave_list_150_0009|grew up|I grew up in a small town.|我在一個小鎮長大。|A2|social|small,town||
+phave_list_150_0013|come in|Come in and have a seat.|請進，坐吧。|A1|social|seat||
+phave_list_150_0016|made up|They had a fight but made up the next day.|他們吵了一架，但隔天就和好了。|B1|social|fight,next,day||make up 在此為「和好」
+phave_list_150_0019|look up|You can look up the word in a dictionary.|你可以在字典裡查這個字。|A2|study|word||look up 在此為「查閱」
+phave_list_150_0020|figure out|I can't figure out how this app works.|我搞不懂這個應用程式怎麼用。|B1|daily|work<works||
+phave_list_150_0021|sit down|Why don't we sit down over there?|我們要不要去那邊坐下？|A2|social|there|why don't we|
+phave_list_150_0023|take out|Can you take out the trash tonight?|你今晚可以把垃圾拿出去倒嗎？|A2|daily|tonight||take out 在此為「拿出去」
+phave_list_150_0025|gone down|Gas prices have gone down this month.|這個月油價下降了。|B1|news|gas,price<prices,month||go down 在此為「下降」
+phave_list_150_0026|showed up|Only five people showed up to the party.|只有五個人來參加派對。|A2|social|only,five,people,party||
+phave_list_150_0029|stand up|Everyone, please stand up.|各位，請起立。|A1|study|everyone,please||
+phave_list_150_0030|come down|The price will come down after the holidays.|假期過後價格會降下來。|B1|shopping|price,holiday<holidays||come down 在此為「降價」
+phave_list_150_0032|went up|The rent went up again this year.|今年房租又漲了。|A2|daily|rent,again,year||
+phave_list_150_0033|look back|When I look back, I don't regret anything.|回想起來，我一點都不後悔。|B1|social|regret,anything||look back 在此為「回顧」
+phave_list_150_0034|woke up|I woke up late this morning.|我今天早上睡過頭了。|A1|daily|late,morning||
+phave_list_150_0038|pulled out|The dentist pulled out my bad tooth.|牙醫把我那顆壞牙拔掉了。|B1|health|bad,tooth||pull out 在此為「拔出」
+phave_list_150_0039|turned around|He turned around and waved goodbye.|他轉過身揮手道別。|A2|social|wave<waved||turn around 在此為「轉身」
+phave_list_150_0041|look down|Don't look down when you're on the ladder.|在梯子上的時候不要往下看。|A2|daily|||look down 在此為「往下看」
+phave_list_150_0043|brings back|This song brings back so many memories.|這首歌勾起好多回憶。|B1|social|song,memory<memories||bring back 在此為「喚起（回憶）」，屬「帶回」的引申義
+phave_list_150_0045|look out|Look out! There's a car coming.|小心！有車來了。|A2|travel|car,come<coming||
+phave_list_150_0046|bring in|We need to bring in more customers.|我們需要吸引更多客人上門。|B1|work|need,more,customer<customers||bring in 在此為「帶來、引進」
+phave_list_150_0047|open up|It took him a while to open up to us.|他花了一段時間才對我們敞開心扉。|B2|social|while||open up 在此為「敞開心扉」
+phave_list_150_0048|check out|What time do we need to check out?|我們幾點要退房？|A2|travel|time,need||check out 在此為「退房」
+phave_list_150_0050|put out|They quickly put out the fire.|他們很快就把火撲滅了。|B1|news|quickly,fire||put out 在此為「熄滅」
+phave_list_150_0051|looking around|We're just looking around, thanks.|我們只是隨便看看，謝謝。|A2|shopping|just||
+phave_list_150_0053|go in|You go in first, and I'll wait here.|你先進去，我在這裡等。|A1|daily|first,wait||
+phave_list_150_0054|broke down|Our car broke down on the highway.|我們的車在高速公路上拋錨了。|B1|travel|car||break down 在此為「故障」
+phave_list_150_0055|get off|Let's get off the bus here.|我們在這裡下公車吧。|A1|travel|bus,here||get off 在此為「下車」
+phave_list_150_0057|put down|Put down your phone and eat your dinner.|把手機放下，吃你的晚餐。|A2|food|phone,eat,dinner||put down 在此為「放下」
+phave_list_150_0058|reach out|Feel free to reach out if you have questions.|有問題的話歡迎隨時聯絡我。|B1|work|feel,free,question<questions||reach out 在此為「聯繫」
+phave_list_150_0060|cut off|We got cut off in the middle of the call.|我們講到一半電話就斷了。|B1|phone|middle,call||cut off 在此為「（通話）被切斷」
+phave_list_150_0062|pulled up|A taxi pulled up in front of the hotel.|一輛計程車在飯店門口停了下來。|B1|travel|taxi,front,hotel|in front of|pull up 在此為「（車輛）停下」
+phave_list_150_0064|clean up|Let's clean up the kitchen after dinner.|晚餐後我們把廚房打掃乾淨吧。|A2|daily|kitchen,after,dinner||
+phave_list_150_0065|shutting down|My laptop keeps shutting down by itself.|我的筆電一直自己關機。|B1|daily|keep<keeps|by itself|
+phave_list_150_0066|turn over|Turn over the pancake when it's golden.|鬆餅變金黃色時就翻面。|B1|food|golden||turn over 在此為「翻轉」
+phave_list_150_0067|slow down|Slow down! You're driving too fast.|慢一點！你開太快了。|A2|travel|drive<driving,fast||
+phave_list_150_0068|wound up|We wound up eating at a small cafe.|我們最後在一家小咖啡館吃飯。|B2|food|eat<eating,small||wind up 在此為「結果、最後落得」，屬「結束」義的口語用法
+phave_list_150_0070|line up|Please line up at the door.|請在門口排隊。|A2|daily|please,door||line up 在此為「排隊」
+phave_list_150_0071|take back|I'd like to take back what I said.|我想收回我剛才說的話。|B1|social|like,say<said||take back 在此為「收回（話）」
+phave_list_150_0073|go over|Let's go over the report one more time.|我們把報告再檢查一次吧。|B1|work|report,more,time|one more time|go over 在此為「複查」
+phave_list_150_0074|hang up|Don't hang up, I'm still here.|別掛電話，我還在。|A2|phone|still||
+phave_list_150_0076|Hold on|Hold on, let me get a pen.|等一下，我拿支筆。|A2|daily|pen||hold on 在此為「稍等」
+phave_list_150_0077|pay off|It took me five years to pay off my loan.|我花了五年才還清貸款。|B1|daily|five,year<years,loan||pay off 在此為「還清」
+phave_list_150_0078|hold out|I don't know how long I can hold out.|我不知道自己還能撐多久。|B2|health|know,long||hold out 在此為「撐住」
+phave_list_150_0080|brought out|The company brought out a new phone.|這家公司推出了一款新手機。|B1|news|company,new,phone||bring out 在此為「推出」
+phave_list_150_0081|pulled back|The dog pulled back when I reached for it.|我伸手要摸那隻狗時，牠往後一縮。|B2|daily|dog,reach<reached||pull back 在此為「退縮」
+phave_list_150_0083|build up|Exercise helps you build up your strength.|運動可以幫助你增強體力。|B1|health|exercise,help<helps,strength||
+phave_list_150_0084|throw out|Can I throw out these old magazines?|我可以把這些舊雜誌丟掉嗎？|A2|daily|old,magazine<magazines||throw out 在此為「丟棄」
+phave_list_150_0085|hang out|Do you want to hang out this weekend?|你這週末想出來玩嗎？|A2|social|want,weekend||
+phave_list_150_0086|Put on|Put on a jacket. It's cold outside.|穿件外套吧，外面很冷。|A1|daily|jacket,cold,outside||put on 在此為「穿上」
+phave_list_150_0087|Get down|Get down from that chair right now!|馬上從那張椅子上下來！|A2|daily|chair|right now|get down 在此為「下來」
+phave_list_150_0088|come over|Why don't you come over for dinner?|你要不要過來吃晚餐？|A2|social|dinner|why don't you|come over 在此為「過來（拜訪）」
+phave_list_150_0089|moved in|My new neighbors moved in last week.|我的新鄰居上週搬進來了。|A2|daily|new,neighbor<neighbors,last,week||
+phave_list_150_0090|started out|She started out as a waitress.|她一開始是當服務生。|B1|work|||start out 在此為「起步、一開始」
+phave_list_150_0091|call out|The teacher will call out your name.|老師會叫你的名字。|A2|study|teacher,name||call out 在此為「點名、喊出」
+phave_list_150_0092|Sit up|Sit up straight, please.|請坐直。|A2|health|straight,please||sit up 在此為「坐直」
+phave_list_150_0095|put back|Please put back the books when you're done.|看完請把書放回去。|A2|study|please,book<books||
+phave_list_150_0096|send out|We'll send out the invitations on Monday.|我們週一會把邀請函寄出去。|B1|work|invitation<invitations||send out 在此為「發送」
+phave_list_150_0097|get in|What time does your flight get in?|你的班機幾點到？|A2|travel|time,flight||get in 在此為「到達」
+phave_list_150_0098|blew up|He blew up when he saw the bill.|他看到帳單時大發脾氣。|B2|social|see<saw,bill||blow up 在此為「發怒」
+phave_list_150_0102|run out|We've run out of milk.|我們的牛奶喝完了。|A2|food|milk|run out of|
+phave_list_150_0105|turn off|Don't forget to turn off the lights.|別忘了關燈。|A1|daily|forget,light<lights||
+phave_list_150_0107|step back|Please step back from the doors.|請從門邊往後退。|A2|travel|please,door<doors||
+phave_list_150_0108|Lay down|Lay down your bags here for now.|先把包包放在這裡吧。|B1|travel|bag<bags,here|for now|lay down 在此為「放下」
+phave_list_150_0109|bring down|The new tax will bring down prices.|新的稅制會讓物價降低。|B2|news|new,tax,price<prices||bring down 在此為「降低」
+phave_list_150_0110|stand out|Wear something bright so you stand out.|穿亮一點的衣服，你才會顯眼。|B1|daily|wear,something,bright||
+phave_list_150_0111|come along|We're going to the beach. Want to come along?|我們要去海邊，要一起來嗎？|A2|travel|beach,want||come along 在此為「一起來」
+phave_list_150_0112|play out|Let's wait and see how things play out.|我們先等著看事情怎麼發展吧。|B2|work|wait,see,thing<things||play out 在此為「展開、發展」
+phave_list_150_0113|broke out|A fire broke out in the building last night.|昨晚那棟大樓發生火災。|B1|news|fire,build<building,last,night||
+phave_list_150_0114|going around|There's a cold going around the office.|辦公室裡正在流行感冒。|B1|health|cold,office||go around 在此為「流傳」，指疾病傳染
+phave_list_150_0115|walked out|Half the audience walked out before the end.|一半的觀眾在結束前就離場了。|B2|social|half,audience,before,end||walk out 在此為「退場」
+phave_list_150_0116|get through|We'll get through this together.|我們會一起度過這一關的。|B1|social|together||get through 在此為「撐過、度過」，接近「通過」義
+phave_list_150_0117|hold back|I couldn't hold back my tears.|我忍不住流下眼淚。|B2|social|tear<tears||hold back 在此為「抑制」
+phave_list_150_0118|write down|Let me write down your number.|我把你的號碼寫下來。|A1|phone|number||
+phave_list_150_0119|move back|Can you move back a little?|你可以往後退一點嗎？|A2|daily|little|a little|move back 在此為「後退」
+phave_list_150_0120|fill out|You need to fill out a form first.|你得先填一張表。|A2|official|need,form,first||
+phave_list_150_0121|sit back|Just sit back and enjoy the show.|你就坐著好好欣賞表演吧。|B1|social|just,enjoy,show||sit back 在此為「放鬆」
+phave_list_150_0122|rule out|The doctor wants to rule out an allergy.|醫生想先排除過敏的可能。|B2|health|doctor,want<wants||
+phave_list_150_0123|moved up|Our meeting has been moved up to two o'clock.|我們的會議提前到兩點了。|B1|work|meet<meeting,two||move up 在此為「提前、往上移」
+phave_list_150_0124|pick out|Help me pick out a gift for my mom.|幫我挑一份禮物給我媽。|A2|shopping|help,gift,mom||
+phave_list_150_0125|take down|Let me take down your address.|我記一下你的地址。|B1|phone|address||take down 在此為「記下」
+phave_list_150_0126|get on|Which bus should I get on?|我應該搭哪一班公車？|A2|travel|bus||get on 在此為「上車」
+phave_list_150_0127|give back|I'll give back your umbrella tomorrow.|我明天把傘還你。|A2|daily|tomorrow||
+phave_list_150_0129|sum up|To sum up, the trip was a success.|總而言之，這趟旅行很成功。|B1|travel|trip,success||
+phave_list_150_0130|moving out|My roommate is moving out next month.|我室友下個月要搬出去。|A2|daily|next,month||
+phave_list_150_0131|came off|A button came off my shirt.|我襯衫的一顆鈕扣掉了。|A2|daily|button,shirt||come off 在此為「脫落」
+phave_list_150_0132|pass on|Could you pass on this message to Tom?|你可以把這個訊息轉告 Tom 嗎？|B1|work|message||pass on 在此為「傳遞」
+phave_list_150_0133|take in|There was too much information to take in.|資訊太多了，一時消化不了。|B2|study|much,information||take in 在此為「理解、吸收」
+phave_list_150_0134|Set down|Set down the box gently.|輕輕把箱子放下。|B1|daily|box,gently||set down 在此為「放下」
+phave_list_150_0137|came through|She really came through for us this time.|這次她真的幫了我們大忙。|B2|social|really,time||come through 在此為「（關鍵時刻）不負所望」，與「度過難關」義相近但不同，需人工確認
+phave_list_150_0138|settled down|The kids finally settled down and went to sleep.|孩子們終於安靜下來去睡了。|B1|daily|kid<kids,finally,go<went,sleep||settle down 在此為「安靜下來」
+phave_list_150_0139|came around|He was against it at first, but he came around.|他一開始反對，後來改變主意了。|B2|social|against,first|at first|come around 在此為「改變主意」
+phave_list_150_0141|give out|They give out free samples at the store.|那家店會發免費試用品。|B1|shopping|free,sample<samples,store||give out 在此為「分發」
+phave_list_150_0142|gave in|My son kept asking, so I finally gave in.|我兒子一直問，我最後就讓步了。|B1|social|son,keep<kept,ask<asking,finally||give in 在此為「讓步、屈服」
+phave_list_150_0143|go along|I'll go along with whatever you decide.|你決定怎樣我都配合。|B1|social|whatever,decide|go along with|go along 在此為「贊同、配合」
+phave_list_150_0144|broke off|They broke off their engagement.|他們解除了婚約。|B2|social|||break off 在此為「斷絕」
+phave_list_150_0145|putting off|Stop putting off your homework.|別再拖延你的功課了。|B1|study|stop||put off 在此為「拖延、推遲」
+phave_list_150_0147|closed down|The bookstore on the corner closed down.|轉角那家書店停業了。|B1|shopping|corner||
+phave_list_150_0148|put in|She put in a lot of time on this project.|她在這個專案上投入了很多時間。|B1|work|time,project|a lot of|put in 在此為「投入（時間）」
+phave_list_150_0149|set about|We set about cleaning the house.|我們開始動手打掃房子。|B2|daily|clean<cleaning,house||set about 在此為「著手做」

@@ -1,0 +1,101 @@
+# NGSL index 1600–1699
+1600|soft|This towel is really soft.|這條毛巾好柔軟。|A2|shopping|really||
+1601|row|We sat in the front row.|我們坐在第一排。|A2|social|sit<sat,front||
+1602|youth|He played soccer in his youth.|他年輕時踢過足球。|B1|social|play<played|in one's youth|youth 在此為「青年時期」
+1603|lock|Don't forget to lock the door.|別忘了鎖門。|A2|daily|forget,door||lock 在此為動詞「鎖上」
+1604|fuel|The car is low on fuel.|車子快沒油了。|B1|travel|car,low|low on fuel|
+1605|expectations|The hotel was beyond our expectations.|這家飯店超乎我們的預期。|B1|travel|hotel,beyond|beyond expectations|
+1606|employment|She's looking for full-time employment.|她正在找全職工作。|B2|work|look<looking,full,time|look for|
+1607|celebrate|Let's celebrate your birthday tonight.|我們今晚來幫你慶生吧。|A2|social|let<Let's,tonight||
+1608|sexual|The company has a clear policy on sexual harassment.|公司對性騷擾有明確的規定。|B2|work|company,clear,policy|sexual harassment|職場規範用語
+1609|shoulder|My shoulder hurts after the gym.|上完健身房後我的肩膀好痛。|A2|health|hurt<hurts||
+1610|breath|Take a deep breath and relax.|深呼吸，放輕鬆。|A2|health|take,deep,relax|take a deep breath|
+1611|increasingly|It's increasingly hard to find a cheap apartment.|要找到便宜的公寓越來越難了。|B2|daily|hard,find,cheap,apartment||
+1612|imported|Most of our coffee is imported.|我們的咖啡大多是進口的。|B1|food|coffee||import 在此為動詞「進口」
+1613|bottle|Can I have a bottle of water?|可以給我一瓶水嗎？|A1|food|water|a bottle of|
+1614|ourselves|We made the cake ourselves.|蛋糕是我們自己做的。|A2|food|make<made,cake||
+1615|sheets|Could you change the sheets, please?|可以麻煩換一下床單嗎？|A2|travel|change,please||
+1616|engine|The engine won't start.|引擎發不動。|A2|travel|start||
+1617|cast|The movie has a great cast.|這部電影的演員陣容很強。|B1|social|movie,great||cast 在此為名詞「演員陣容」，非「投射」
+1618|notion|I don't like the notion of working on weekends.|我不喜歡週末還要工作這個想法。|C1|work|like,work<working,weekend<weekends||notion 在此為「想法、觀念」
+1619|conservative|My parents are quite conservative.|我爸媽觀念滿保守的。|B2|social|parent<parents,quite||
+1620|journey|Have a safe journey home!|回家路上小心！|B1|travel|safe,home||
+1621|opposition|The plan met strong opposition from staff.|這個計畫遭到員工強烈反對。|C1|work|plan,meet<met,strong,staff||
+1622|relief|What a relief! I found my wallet.|好險！我找到錢包了。|B1|daily|find<found|What a relief!|relief 在此為「鬆了一口氣」
+1623|debt|He's finally out of debt.|他終於還清債務了。|B1|daily|finally|out of debt|
+1624|honor|It's an honor to meet you.|很榮幸認識你。|B1|social|meet|It's an honor to ...|
+1625|outcome|We're happy with the outcome.|我們對結果很滿意。|B2|work|happy||
+1626|blame|Don't blame yourself.|別怪你自己。|B1|social|yourself||
+1627|explanation|Thanks for the clear explanation.|謝謝你清楚的說明。|B1|study|thank<Thanks,clear||
+1628|arise|Call me if any problems arise.|有任何問題發生就打給我。|B2|work|call,problem<problems||
+1629|musical|She comes from a musical family.|她來自一個音樂世家。|B1|social|come<comes,family||
+1630|recovering|He's recovering from a cold.|他感冒正在恢復中。|B1|health|cold|recover from|
+1631|dad|My dad is a great cook.|我爸很會做菜。|A1|daily|great,cook||
+1632|stretch|Stretch before you go running.|跑步前先伸展一下。|B1|health|run<running|go running|stretch 在此為「伸展身體」
+1633|declare|Do you have anything to declare?|你有任何需要申報的物品嗎？|B1|travel|anything||declare 在此為海關「申報」
+1634|retired|My mom retired last year.|我媽媽去年退休了。|B1|work|mom,last,year||
+1635|tiny|Our hotel room was tiny.|我們的飯店房間超小。|A2|travel|hotel,room||
+1636|careful|Be careful, the floor is wet.|小心，地板很濕。|A1|daily|floor,wet||
+1637|suitable|Is this movie suitable for kids?|這部電影適合小孩看嗎？|B1|social|movie,kid<kids|suitable for|
+1638|native|She's a native speaker of English.|她的母語是英文。|B1|study|speaker|native speaker|native 在此為「母語的、土生的」
+1639|fruit|I eat fruit every morning.|我每天早上都吃水果。|A1|food|eat,every,morning||
+1640|analyze|We need to analyze the sales data.|我們需要分析銷售資料。|B2|work|need,sale<sales,data||
+1641|witness|Did anyone witness the accident?|有人目擊這場意外嗎？|B2|news|anyone,accident||witness 在此為動詞「目擊」
+1642|mail|Did any mail come for me?|有我的信嗎？|A2|daily|come||
+1643|terrible|The traffic was terrible this morning.|今天早上塞車塞得好嚴重。|A2|daily|traffic,morning||
+1644|researcher|She works as a researcher at a hospital.|她在一家醫院當研究員。|B1|work|work<works,hospital||
+1645|ordinary|It was just an ordinary day.|那只是平凡的一天。|B1|daily|just,day||
+1646|selection|The shop has a good selection of wine.|這家店的葡萄酒選擇很多。|B1|shopping|shop,good,wine||
+1647|anywhere|You can sit anywhere you like.|你想坐哪裡都可以。|A2|food|sit,like||
+1648|mental|Exercise is good for your mental health.|運動對心理健康很好。|B1|health|exercise,good,health|mental health|
+1649|participant|Each participant will get a free T-shirt.|每位參加者都會拿到一件免費 T 恤。|B1|social|get,free|T-shirt|
+1650|vision|My vision is getting worse.|我的視力越來越差了。|B1|health|get<getting,bad<worse||
+1651|personality|She has a great personality.|她的個性很好。|B1|social|great||
+1652|specifically|I specifically asked for no onions.|我有特別說不要洋蔥。|B2|food|ask<asked|ask for|
+1653|fat|This milk is low in fat.|這種牛奶脂肪含量很低。|A2|food|milk,low|low in fat|
+1654|entry|Entry is free for children.|兒童免費入場。|B1|travel|free,child<children||entry 在此為「入場」
+1655|fellow|He's popular with his fellow students.|他在同學之間很受歡迎。|B2|study|popular,student<students|fellow students|fellow 在此為形容詞「同伴的、同…的」
+1656|chemicals|This cleaner has strong chemicals.|這款清潔劑含有強烈的化學物質。|B1|daily|strong||chemical 在此為名詞「化學物質」
+1657|captures|The photo captures the moment perfectly.|這張照片完美捕捉了那一刻。|B2|social|photo,moment,perfectly||
+1658|tip|Is the tip included in the bill?|小費有含在帳單裡嗎？|A2|food|include<included,bill||
+1659|discount|Do you have a student discount?|你們有學生折扣嗎？|A2|shopping|student|student discount|
+1660|peak|Trains are crowded at peak hours.|尖峰時段的火車很擠。|B1|travel|train<Trains,hour<hours|peak hours|peak 在此為形容詞「尖峰的」
+1661|chairman|The chairman opened the meeting.|主席宣布會議開始。|B2|work|open<opened||
+1662|proportion|A large proportion of our customers are young.|我們有很大比例的顧客是年輕人。|C1|work|large,customer<customers,young||
+1663|ears|My ears hurt on the plane.|我在飛機上耳朵好痛。|A1|health|hurt,plane||
+1664|disappeared|My phone just disappeared!|我的手機就這樣不見了！|B1|daily|phone,just||
+1665|shout|There's no need to shout.|不用大吼大叫。|A2|social|need||
+1666|yard|The kids are playing in the yard.|孩子們在院子裡玩。|A2|daily|kid<kids,play<playing||
+1667|constant|The baby needs constant care.|嬰兒需要時時照顧。|B2|daily|baby,need<needs,care||
+1668|significantly|Prices have gone up significantly.|價格大幅上漲了。|B2|shopping|price<Prices|go up|
+1669|hill|Our hotel is on top of a hill.|我們的飯店在山丘上。|A2|travel|hotel,top||
+1670|considerable|The repairs cost a considerable amount.|修理費相當可觀。|B2|daily|repair<repairs,cost,amount||
+1671|instructions|Please follow the instructions carefully.|請仔細照著說明做。|B1|daily|please,follow,carefully||
+1672|intelligence|Dogs show a lot of intelligence.|狗展現出很高的智力。|B2|daily|dog<Dogs,show,lot||
+1673|ideal|This is an ideal place for a picnic.|這裡是野餐的理想地點。|B1|travel|place||
+1674|folk|I love traditional folk music.|我很愛傳統民謠。|B1|social|love,traditional,music|folk music|
+1675|surely|Surely you're not leaving already?|你該不會已經要走了吧？|B2|social|leave<leaving,already||
+1676|guard|A guard checked our bags at the door.|警衛在門口檢查我們的包包。|B1|travel|check<checked,bag<bags,door||
+1677|cat|Our cat sleeps all day.|我們家的貓整天都在睡。|A1|daily|sleep<sleeps,day||
+1678|somewhat|I'm somewhat tired today.|我今天有點累。|B2|daily|today||
+1679|kiss|She gave her son a goodnight kiss.|她給兒子一個晚安吻。|A2|daily|give<gave,son||
+1680|presentation|I have a presentation tomorrow morning.|我明天早上要做簡報。|B1|work|tomorrow,morning||
+1681|joint|My knee joint hurts when it rains.|下雨時我的膝關節會痛。|B2|health|knee,hurt<hurts,rain<rains||
+1682|compete|Ten teams will compete in the final.|決賽有十支隊伍參加比賽。|B1|social|ten,team<teams,final||
+1683|poll|A recent poll shows most people work from home.|最近一項調查顯示大部分人在家工作。|B2|news|recent,show<shows,people,work,home||
+1684|weak|I feel weak after being sick.|生病之後我覺得很虛弱。|A2|health|feel,sick||
+1685|faith|I have faith in you.|我對你有信心。|B2|social||have faith in|faith 在此為「信任、信心」，非「信仰」
+1686|reduction|There's a price reduction on all shoes.|所有鞋子都在降價。|B2|shopping|price,shoe<shoes||
+1687|reserve|I'd like to reserve a table for two.|我想訂兩人的位子。|A2|food|like,table,two||
+1688|complaint|I'd like to make a complaint.|我想投訴。|B1|shopping|like,make|make a complaint|
+1689|bore|I won't bore you with the details.|細節就不跟你說了，免得你覺得無聊。|B2|social|detail<details||
+1690|mission|Our mission is to help small businesses.|我們的使命是幫助小型企業。|B2|work|help,small,business<businesses||mission 在此為「使命」
+1691|somehow|Somehow we got there on time.|不知怎麼的，我們準時到了。|B1|travel|get<got,there,time|on time|
+1692|tone|Don't talk to me in that tone.|別用那種語氣跟我說話。|B1|social|talk||
+1693|neighborhood|It's a quiet neighborhood.|這是個安靜的社區。|A2|daily|quiet||
+1694|passengers|All passengers please board now.|請所有乘客現在登機。|A2|travel|please,board,now||
+1695|justice|The family finally got justice.|這家人終於討回了公道。|B2|news|family,finally,get<got||justice 在此為「公道、公平對待」
+1696|phase|The project is in its final phase.|這個專案進入最後階段了。|B2|work|project,final||
+1697|thin|Can you cut the bread thin?|麵包可以切薄一點嗎？|A2|food|cut,bread||
+1698|rush|There's no rush. Take your time.|不急，慢慢來。|A2|daily|take,time|Take your time.|rush 在此為名詞「匆忙」
+1699|formal|Is it a formal dinner?|那是正式的晚宴嗎？|B1|social|dinner||

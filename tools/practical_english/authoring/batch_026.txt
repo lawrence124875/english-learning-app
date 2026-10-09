@@ -1,0 +1,101 @@
+# NGSL index 2500–2599
+2500|personnel|Only authorized personnel may enter.|非相關人員禁止進入。|C1|official|only,enter||
+2501|imagination|Kids have a great imagination.|小孩的想像力很豐富。|B1|daily|kid<Kids,great||
+2502|disagree|I disagree with you on that.|那一點我不同意你的看法。|A2|social||disagree with ...|
+2503|throat|I have a sore throat.|我喉嚨痛。|A2|health||sore throat|
+2504|insights|Her talk gave me some useful insights.|她的演講給了我一些很有用的啟發。|C1|work|talk,give<gave,useful||insight 在此為「見解、啟發」
+2505|tackle|Let's tackle this problem together.|我們一起來解決這個問題吧。|B2|work|problem,together||
+2506|forever|I could stay here forever.|我可以永遠待在這裡。|A2|travel|stay,here||
+2507|exceeds|Your bag exceeds the weight limit.|你的行李超重了。|B2|travel|bag,weight,limit|weight limit|
+2508|expenditure|We need to cut our expenditure this month.|我們這個月得減少開支。|C1|work|need,cut,month||
+2509|joy|The baby brings us so much joy.|寶寶帶給我們好多快樂。|B1|daily|baby,bring<brings,much||
+2510|pregnant|My sister is pregnant with her second child.|我姊姊懷了第二胎。|B1|health|sister,second,child||
+2511|reliable|Is this car reliable?|這台車可靠嗎？|B1|shopping|car||
+2512|gears|My bike has seven gears.|我的腳踏車有七段變速。|B2|daily|bike,seven||gear 在此為「變速檔（齒輪組）」
+2513|Click|Click here to download the file.|點這裡下載檔案。|A2|daily|here,file||
+2514|poet|She's a famous poet in her country.|她在她的國家是一位知名詩人。|B1|study|famous,country||
+2515|fortune|That watch must have cost a fortune.|那支手錶一定花了一大筆錢。|B1|shopping|watch,must,cost|cost a fortune|fortune 在此為「一大筆錢」
+2516|ceremony|The wedding ceremony starts at two.|婚禮儀式兩點開始。|B1|social|start<starts,two||
+2517|pile|There's a pile of laundry on my bed.|我床上有一堆要洗的衣服。|B1|daily|bed|a pile of ...|
+2518|pigs|Kids love feeding the pigs at the farm.|小朋友很喜歡在農場餵豬。|A2|travel|kid<Kids,love,feed<feeding,farm||
+2519|mixture|Pour the mixture into the pan.|把混合好的材料倒進鍋子裡。|B1|food|pour||
+2520|automatically|The door opens automatically.|門會自動打開。|B1|daily|door,open<opens||
+2521|scholar|He's a respected scholar of history.|他是一位受人敬重的歷史學者。|C1|study|respect<respected,history||
+2522|psychological|The movie is a psychological thriller.|這部電影是心理驚悚片。|B2|daily|movie|psychological thriller|
+2523|dramatically|Prices have risen dramatically.|物價大幅上漲。|B2|news|price<Prices,rise<risen||dramatically 在此為「大幅地」
+2524|stake|He owns a stake in the company.|他擁有這家公司的部分股份。|C1|work|own<owns,company||
+2525|creatures|The ocean is full of strange creatures.|海洋裡充滿了奇怪的生物。|B1|travel|ocean,full,strange||
+2526|partnership|The two companies formed a partnership.|這兩家公司建立了合作關係。|B2|work|two,company<companies,form<formed||partnership 在此為「合作關係、合夥」
+2527|participation|Thank you for your participation.|感謝您的參與。|B2|official|thank||
+2528|clause|Please read this clause in the contract carefully.|請仔細閱讀合約裡的這一條款。|C1|official|please,read,contract,carefully||
+2529|penalty|There's a penalty for returning books late.|圖書逾期歸還會被罰款。|B2|official|return<returning,book<books,late||
+2530|chamber|We enjoyed a chamber music concert last night.|我們昨晚去聽了一場室內樂音樂會，很享受。|C1|social|enjoy<enjoyed,music,concert,last,night|chamber music|chamber 在此為「室內樂」用法，非 NGSL 解釋的「議院」
+2531|fancy|Do you fancy a cup of tea?|你想喝杯茶嗎？|B1|food|cup,tea||fancy 在此為英式口語「想要」
+2532|poetry|She writes poetry in her free time.|她有空的時候會寫詩。|B1|daily|write<writes,free,time|free time|
+2533|chat|Let's chat over lunch.|我們午餐時邊吃邊聊吧。|A2|social|lunch||
+2534|clothing|This store sells children's clothing.|這家店賣童裝。|B1|shopping|store,sell<sells,child<children||
+2535|evolved|The city has evolved a lot over the years.|這些年來這座城市變了很多。|B2|news|city,lot,year<years||evolve 在此為「演變、發展」
+2536|sake|Let's keep it simple for the sake of time.|為了節省時間，我們就簡單點吧。|B2|work|keep,simple,time|for the sake of ...|
+2537|shelf|Put the books back on the shelf.|把書放回架子上。|A2|daily|put,book<books,back||
+2538|boost|A cup of coffee gives me a quick boost.|一杯咖啡能讓我馬上提振精神。|B2|food|cup,coffee,give<gives,quick||boost 在此為名詞「提振」
+2539|tail|The dog wags its tail when it's happy.|狗開心的時候會搖尾巴。|A2|daily|dog,happy||
+2540|possessions|Please keep your possessions with you at all times.|請隨時看好您的隨身物品。|B2|travel|please,keep,time<times|at all times|possession 在此為「隨身物品」
+2541|Abortion|Abortion is a sensitive topic for many people.|墮胎對很多人來說是個敏感的話題。|C1|news|sensitive,topic,many,people||
+2542|curious|I'm curious about how this works.|我很好奇這是怎麼運作的。|B1|daily|work<works|be curious about ...|
+2543|wooden|We have a wooden table in the kitchen.|我們廚房裡有一張木頭桌子。|A2|daily|table,kitchen||
+2544|boom|There's been a boom in online shopping.|網購最近大幅成長。|B2|news|online,shop<shopping||boom 在此為「激增、繁榮」
+2545|tales|Kids love fairy tales.|小朋友很喜歡童話故事。|A2|study|kid<Kids,love|fairy tale|
+2546|democratic|Our club makes decisions in a democratic way.|我們社團用民主的方式做決定。|B2|social|club,make<makes,decision<decisions,way||
+2547|maintenance|The elevator is under maintenance.|電梯正在維修中。|B1|daily||under maintenance|
+2548|consequently|I missed the bus and consequently was late for work.|我錯過了公車，因此上班遲到了。|B2|work|miss<missed,bus,late,work||
+2549|pot|Let me make a pot of coffee.|我來煮一壺咖啡。|A2|food|let,make,coffee|a pot of ...|pot 在此為「壺」
+2550|cows|The cows are eating grass in the field.|牛在草地上吃草。|A1|travel|eat<eating,grass,field||
+2551|strengthened|This trip strengthened our friendship.|這趟旅行讓我們的友誼更深厚了。|B2|travel|trip,friendship||
+2552|whilst|She read a book whilst waiting for the train.|她等火車的時候在看書。|B2|travel|read,book,wait<waiting,train||whilst 為英式用法，同 while
+2553|constraints|We're working under time constraints.|我們的時間很緊迫。|C1|work|work<working,time|time constraints|
+2554|fold|Can you help me fold the laundry?|你可以幫我摺衣服嗎？|A2|daily|help||
+2555|bin|Please throw it in the bin.|請把它丟進垃圾桶。|A2|daily|please,throw||
+2556|undergo|The building will undergo repairs next month.|這棟大樓下個月要進行整修。|C1|official|repair<repairs,next,month||
+2557|potentially|This could potentially save us a lot of money.|這可能會幫我們省下很多錢。|B2|work|save,lot,money||
+2558|scope|That's outside the scope of this project.|那不在這個專案的範圍內。|C1|work|outside,project||
+2559|pretended|He pretended not to hear me.|他假裝沒聽到我說話。|B1|social|hear||
+2560|diversity|I love the diversity of food in this city.|我很喜歡這座城市多元的美食。|B2|food|love,food,city||
+2561|alleged|The man alleged that the store overcharged him.|那名男子聲稱店家多收了他的錢。|C1|news|man,store||
+2562|pride|He takes pride in his work.|他對自己的工作很自豪。|B2|work|take<takes,work|take pride in ...|
+2563|intense|The heat today is intense.|今天熱得很誇張。|B2|daily|heat,today||
+2564|inquiry|Thank you for your inquiry.|感謝您的詢問。|B2|official|thank||
+2565|resigned|My manager resigned last week.|我的主管上週辭職了。|B2|work|manager,last,week||
+2566|crafts|The market sells local crafts.|這個市集賣當地的手工藝品。|B1|shopping|market,sell<sells,local||craft 在此為「手工藝品」
+2567|strict|My parents were very strict.|我爸媽以前很嚴格。|B1|daily|parent<parents||
+2568|concrete|Can you give me a concrete example?|你可以給我一個具體的例子嗎？|B2|work|give,example||
+2569|shells|We collected shells on the beach.|我們在海灘上撿貝殼。|A2|travel|collect<collected,beach||shell 在此為「貝殼」
+2570|Damn|Damn, I left my keys at home!|糟了，我把鑰匙忘在家裡了！|B1|daily|leave<left,key<keys,home||Damn 為輕微粗話，表懊惱
+2571|distinct|There's a distinct smell of smoke in here.|這裡有一股明顯的煙味。|B2|daily|smell,smoke,here||
+2572|humor|He has a great sense of humor.|他很有幽默感。|B1|social|great,sense|sense of humor|
+2573|limitations|Everyone has their limitations.|每個人都有自己的極限。|B2|social|everyone||
+2574|indication|He gave no indication that he was unhappy.|他完全沒表現出不開心的樣子。|C1|social|give<gave||indication 在此為「跡象」
+2575|stability|This job offers stability.|這份工作很穩定。|B2|work|job,offer<offers||
+2576|wise|That was a wise decision.|那是個明智的決定。|B1|social|decision||
+2577|neglected|The garden has been neglected for years.|這座花園已經荒廢好幾年了。|B2|daily|garden,year<years||
+2578|composed|The team is composed of five people.|這個團隊由五個人組成。|B2|work|team,five,people|be composed of ...|
+2579|jail|He spent a night in jail.|他在牢裡待了一晚。|B1|news|spend<spent,night||jail 在此為「拘留所、監獄」
+2580|shelter|We took shelter from the rain under a tree.|我們在樹下躲雨。|B1|travel|take<took,rain,tree|take shelter|shelter 在此為「遮蔽處」
+2581|mere|It costs a mere ten dollars.|它只要十塊錢而已。|B2|shopping|cost<costs,ten,dollar<dollars||
+2582|carbon|We want to reduce our carbon footprint.|我們想減少碳足跡。|B2|news|want,reduce|carbon footprint|
+2583|regulates|This device regulates the room temperature.|這個裝置會調節室內溫度。|C1|daily|device,room,temperature||regulate 在此為「調節」
+2584|cheese|Would you like extra cheese on your pizza?|你的披薩要加起司嗎？|A1|food|like,extra||
+2585|triggered|The smoke triggered the fire alarm.|煙霧觸發了火災警報器。|B2|daily|smoke,fire,alarm|fire alarm|
+2586|pipe|The kitchen pipe is leaking.|廚房的水管在漏水。|B1|daily|kitchen||
+2587|destruction|The storm caused a lot of destruction.|暴風雨造成了嚴重的破壞。|B2|news|storm,cause<caused,lot||
+2588|guitar|He's learning to play the guitar.|他正在學彈吉他。|A1|study|learn<learning,play||
+2589|flags|Kids waved flags at the parade.|小朋友在遊行中揮舞旗子。|A2|social|kid<Kids,wave<waved||
+2590|piano|She's been playing the piano since she was five.|她從五歲就開始彈鋼琴。|A2|study|play<playing,five||
+2591|magic|The kids loved the magic show.|小朋友很喜歡那場魔術表演。|A2|social|kid<kids,love<loved,show|magic show|magic 在此為「魔術」
+2592|mystery|It's a mystery to me how he does it.|他是怎麼辦到的，我實在想不通。|B1|social||It's a mystery to me ...|
+2593|skiing|We go skiing every winter.|我們每年冬天都去滑雪。|A2|travel|go,every,winter|go skiing|
+2594|whispered|She whispered something in my ear.|她在我耳邊說悄悄話。|B1|social|something,ear||
+2595|rear|Please exit through the rear door.|請從後門下車。|B1|travel|please,through,door||
+2596|menu|Could we see the menu, please?|可以給我們看一下菜單嗎？|A1|food|see,please||
+2597|species|This park has over 100 species of birds.|這座公園有超過一百種鳥類。|B2|travel|park,bird<birds||
+2598|moon|The moon is so bright tonight.|今晚的月亮好亮。|A1|daily|bright,tonight||
+2599|presumably|He's not here, so presumably he's still at work.|他不在，所以大概還在上班吧。|C1|work|here,still,work|at work|

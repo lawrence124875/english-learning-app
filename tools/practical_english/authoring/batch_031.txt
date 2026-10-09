@@ -1,0 +1,101 @@
+# phrase_list_506 index 0–99
+phrase_list_506_0000|have to|I have to work late tonight.|我今晚得加班。|A2|work|work,late,tonight||
+phrase_list_506_0001|There is|There is a bank across the street.|對街有一家銀行。|A1|travel|bank,across,street||
+phrase_list_506_0002|such as|We sell drinks such as tea and juice.|我們賣茶和果汁之類的飲料。|A2|shopping|sell,drink<drinks,tea||
+phrase_list_506_0003|going to|It's going to rain this afternoon.|今天下午會下雨。|A1|daily|rain,afternoon||
+phrase_list_506_0004|Of course|Of course I'll help you.|我當然會幫你。|A1|social|help||
+phrase_list_506_0005|a few|I'll be back in a few days.|我過幾天就回來。|A1|travel|back,day<days||
+phrase_list_506_0006|at least|It'll take at least an hour.|至少要一個小時。|A2|daily|take,hour||take 在此為「花費（時間）」
+phrase_list_506_0007|such a|It was such a nice day.|那天天氣真好。|A2|daily|nice,day||
+phrase_list_506_0008|I mean|I'm tired. I mean, really tired.|我好累。我是說，真的很累。|A2|social|really||
+phrase_list_506_0009|a lot|She travels a lot for work.|她常常因為工作出差。|A2|work|travel<travels,work||
+phrase_list_506_0010|rather than|Let's walk rather than take a taxi.|我們用走的吧，不要搭計程車。|B1|travel|walk,take,taxi||
+phrase_list_506_0011|so that|I left early so that I wouldn't be late.|我提早出門，這樣才不會遲到。|B1|daily|leave<left,early,late||
+phrase_list_506_0012|a little|Could you speak a little slower?|可以請你說慢一點嗎？|A2|social|speak,slow<slower||
+phrase_list_506_0013|a bit of|I need a bit of help with this.|這個我需要一點幫忙。|A2|daily|need,help||
+phrase_list_506_0014|as well as|She speaks French as well as English.|她會說英文，也會說法文。|B1|social|speak<speaks||
+phrase_list_506_0015|In fact|I don't mind. In fact, I'm happy to help.|我不介意。事實上，我很樂意幫忙。|A2|social|mind,happy,help||mind 在此為「介意」
+phrase_list_506_0016|likely to|Prices are likely to go up next year.|明年價格很可能會上漲。|B1|news|price<prices,go up,next,year||
+phrase_list_506_0017|go on|Please go on, I'm listening.|請繼續說，我在聽。|A2|social|please,listen<listening||
+phrase_list_506_0018|is to|The new manager is to arrive next week.|新經理預定下週到任。|B2|work|new,manager,arrive,next,week||
+phrase_list_506_0019|A number of|A number of people called about the job.|有一些人打電話來詢問這份工作。|B1|work|people,call<called,job||
+phrase_list_506_0020|at all|I didn't sleep at all last night.|我昨晚完全沒睡。|A2|daily|sleep,last night||
+phrase_list_506_0021|as if|You look as if you haven't slept.|你看起來好像沒睡覺。|B1|social|look,sleep<slept||
+phrase_list_506_0022|used to|I used to play the piano as a kid.|我小時候常彈鋼琴。|A2|social|play,piano,kid||
+phrase_list_506_0023|was to|The flight was to leave at noon, but it was delayed.|班機原定中午起飛，但延誤了。|B2|travel|flight,leave,delay<delayed||
+phrase_list_506_0024|not only|He's not only smart but also kind.|他不僅聰明，而且很善良。|B1|social|smart,also,kind||kind 在此為「善良的」
+phrase_list_506_0025|Those who|Those who finish early can go home.|提早做完的人可以先回家。|B1|work|finish,early,home||
+phrase_list_506_0026|deal with|I'll deal with it tomorrow.|我明天再處理。|B1|work|tomorrow||
+phrase_list_506_0027|lead to|Too much stress can lead to health problems.|壓力太大可能會導致健康問題。|B1|health|too much,stress,health,problem<problems||
+phrase_list_506_0028|sort of|I'm sort of busy right now.|我現在有點忙。|A2|social|busy,right now||
+phrase_list_506_0029|the following|Please bring the following items.|請攜帶以下物品。|B1|official|please,bring,item<items||
+phrase_list_506_0030|in order to|I got up early in order to catch the train.|為了趕上火車，我很早就起床了。|B1|travel|get up<got up,early,catch,train||
+phrase_list_506_0031|I've got|I've got two tickets for the show.|我有兩張這場表演的票。|A2|social|two,ticket<tickets,show||
+phrase_list_506_0032|You've got to|You've got to try this cake.|你一定要吃吃看這個蛋糕。|A2|food|try,cake||
+phrase_list_506_0033|set up|My friend set up her own business last year.|我朋友去年自己開了公司。|B1|work|friend,own,business,last,year||
+phrase_list_506_0034|as to|I have no idea as to why he left.|我完全不知道他為什麼離開。|B2|social|idea,leave<left||
+phrase_list_506_0035|as well|I'll have a coffee as well.|我也要一杯咖啡。|A2|food|coffee||
+phrase_list_506_0036|based on|The movie is based on a true story.|這部電影是根據真實故事改編的。|B1|social|movie,true,story||
+phrase_list_506_0037|carry out|We need to carry out a survey first.|我們得先進行一項調查。|B2|work|need,survey,first||
+phrase_list_506_0038|take place|The wedding will take place in June.|婚禮將在六月舉行。|B1|social|||
+phrase_list_506_0039|tend to|I tend to forget people's names.|我常常會忘記別人的名字。|B1|social|forget,people,name<names||
+phrase_list_506_0040|due to|The train is late due to bad weather.|由於天氣不好，火車誤點了。|B1|travel|train,late,bad,weather||
+phrase_list_506_0041|failed to|He failed to show up for the meeting.|他沒有出席會議。|B1|work|show up||
+phrase_list_506_0042|each other|We've known each other for years.|我們認識很多年了。|A2|social|know<known,year<years||
+phrase_list_506_0043|In terms of|In terms of price, this one is better.|就價格而言，這個比較好。|B2|shopping|price,good<better||
+phrase_list_506_0044|No one|No one answered the phone.|沒有人接電話。|A2|phone|answer<answered,phone||
+phrase_list_506_0045|pick up|I'll pick up the kids after school.|我放學後去接孩子。|A2|daily|kid<kids,after,school||pick up 在此為「接（人）」
+phrase_list_506_0046|up to|The car holds up to seven people.|這台車最多可以坐七個人。|B1|travel|car,hold<holds,seven,people||
+phrase_list_506_0047|a single|I didn't spend a single dollar today.|我今天一塊錢都沒花。|B1|shopping|spend,dollar,today||
+phrase_list_506_0048|no longer|This store no longer accepts cash.|這家店不再收現金了。|B1|shopping|store,accept<accepts,cash||
+phrase_list_506_0049|looking for|I'm looking for my keys.|我在找我的鑰匙。|A1|daily|key<keys||
+phrase_list_506_0050|last night|Did you sleep well last night?|你昨晚睡得好嗎？|A1|daily|sleep,well||
+phrase_list_506_0051|As a result|I missed the bus. As a result, I was late for work.|我錯過了公車，結果上班遲到了。|B1|work|miss<missed,bus,late,work||
+phrase_list_506_0052|In addition to|In addition to the hotel, we need to book a car.|除了飯店之外，我們還需要租一台車。|B1|travel|hotel,need,book,car||book 在此為「預訂」
+phrase_list_506_0053|working on|I'm working on a new project.|我正在做一個新專案。|A2|work|new,project||
+phrase_list_506_0054|think about|Let me think about it.|讓我考慮一下。|A1|social|let||
+phrase_list_506_0055|For instance|There are many ways to save money. For instance, you can cook at home.|省錢的方法很多。舉例來說，你可以在家煮飯。|B1|daily|way<ways,save,money,cook,home|there are|
+phrase_list_506_0056|too much|I ate too much at dinner.|我晚餐吃太多了。|A2|food|eat<ate,dinner||
+phrase_list_506_0057|You see|You see, I don't have a car.|你知道的，我沒有車。|A2|social|car||
+phrase_list_506_0058|in particular|Is there anything in particular you want to see?|你有特別想看什麼嗎？|B1|travel|anything,want,see||
+phrase_list_506_0059|a couple of|Can I ask you a couple of questions?|我可以問你幾個問題嗎？|A2|social|ask,question<questions||
+phrase_list_506_0060|instead of|I'd like tea instead of coffee.|我想要茶，不要咖啡。|A2|food|like,tea,coffee||
+phrase_list_506_0061|coming back|When are you coming back?|你什麼時候回來？|A1|social|when||
+phrase_list_506_0062|looks like|It looks like rain.|看起來要下雨了。|A2|daily|rain||
+phrase_list_506_0063|find out|I need to find out what time the store closes.|我得查一下那家店幾點關門。|A2|shopping|need,time,store,close<closes||
+phrase_list_506_0064|pointing out|Thanks for pointing out my mistake.|謝謝你指出我的錯誤。|B1|work|thank<thanks,mistake||
+phrase_list_506_0065|Apart from|Apart from the noise, the room was nice.|除了有點吵之外，房間還不錯。|B1|travel|noise,room,nice||
+phrase_list_506_0066|calls for|This calls for a celebration!|這值得好好慶祝一下！|B1|social|celebration||
+phrase_list_506_0067|managed to|I managed to finish the report on time.|我總算準時把報告做完了。|B1|work|finish,report,time|on time|
+phrase_list_506_0068|or two|Can you wait a minute or two?|你可以等一兩分鐘嗎？|A2|daily|wait,minute||
+phrase_list_506_0069|a further|We need a further two days to finish.|我們還需要另外兩天才能完成。|B2|work|need,two,day<days,finish||
+phrase_list_506_0070|comes out|Her new album comes out next month.|她的新專輯下個月推出。|B1|social|new,album,next,month||
+phrase_list_506_0071|is expected to|The train is expected to arrive at five.|火車預計五點抵達。|B1|travel|train,arrive,five||
+phrase_list_506_0072|seeks to|The company seeks to improve customer service.|公司力求改善客戶服務。|B2|work|company,improve,customer,service||
+phrase_list_506_0073|go through|Let's go through the plan one more time.|我們把計畫再仔細看一遍吧。|B1|work|plan,more,time||go through 在此為「仔細檢查」
+phrase_list_506_0074|long term|In the long term, this will save you money.|長遠來看，這會幫你省錢。|B1|daily|save,money||
+phrase_list_506_0075|resulted in|The mistake resulted in a big delay.|那個錯誤造成了嚴重的延誤。|B2|work|mistake,big,delay||
+phrase_list_506_0076|that is|The shop is open on weekdays, that is, Monday to Friday.|這家店平日營業，也就是星期一到星期五。|B1|shopping|shop,open||
+phrase_list_506_0077|even though|We went out even though it was raining.|雖然在下雨，我們還是出門了。|B1|daily|go out<went out,rain<raining||
+phrase_list_506_0078|a range of|The shop sells a range of phones.|這家店販售各式各樣的手機。|B1|shopping|shop,sell<sells,phone<phones||
+phrase_list_506_0079|The latter|We can take the bus or the train. The latter is faster.|我們可以搭公車或火車，後者比較快。|B2|travel|take,bus,train,fast<faster||
+phrase_list_506_0080|Make sure|Make sure you lock the door.|一定要記得鎖門。|A2|daily|lock,door||
+phrase_list_506_0081|take over|Can you take over while I'm at lunch?|我去吃午餐的時候，你可以接手嗎？|B1|work|while,lunch||
+phrase_list_506_0082|consists of|The team consists of five people.|這個團隊由五個人組成。|B1|work|team,five,people||
+phrase_list_506_0083|as soon as|Call me as soon as you arrive.|你一到就打電話給我。|A2|phone|call,arrive||
+phrase_list_506_0084|at the time|I was a student at the time.|我當時還是學生。|B1|study|student||
+phrase_list_506_0085|On the other hand|The job pays well. On the other hand, the hours are long.|這份工作薪水很好。另一方面，工時很長。|B1|work|job,pay<pays,well,hour<hours,long||
+phrase_list_506_0086|on her own|She traveled on her own.|她自己一個人去旅行。|B1|travel|travel<traveled||
+phrase_list_506_0087|all right|Is it all right if I open the window?|我開窗可以嗎？|A2|daily|open,window||
+phrase_list_506_0088|subject to|Prices are subject to change.|價格可能隨時調整。|B2|shopping|price<prices,change||
+phrase_list_506_0089|after all|Don't worry, it's only a game after all.|別擔心，畢竟只是一場遊戲。|B1|social|worry,only,game||
+phrase_list_506_0090|in front of|I'll meet you in front of the station.|我在車站前面跟你碰面。|A2|travel|meet,station||
+phrase_list_506_0091|to do with|This has nothing to do with you.|這跟你無關。|B1|social|nothing||
+phrase_list_506_0092|go out|Do you want to go out for dinner?|你想出去吃晚餐嗎？|A1|food|want,dinner||
+phrase_list_506_0093|a great deal|She knows a great deal about wine.|她對葡萄酒懂得很多。|B2|food|know<knows,wine||
+phrase_list_506_0094|on the way|We can stop for gas on the way.|我們可以在路上停下來加油。|A2|travel|stop,gas||
+phrase_list_506_0095|as long as|You can borrow my car as long as you're careful.|只要你小心，就可以借我的車。|B1|daily|borrow,car,careful||
+phrase_list_506_0096|so far|How do you like the city so far?|到目前為止，你覺得這座城市怎麼樣？|A2|travel|like,city||
+phrase_list_506_0097|ought to|You ought to try the local food.|你應該試試當地的食物。|B1|travel|try,local,food||
+phrase_list_506_0098|at the moment|She's not available at the moment.|她目前不方便接聽。|B1|phone|available||
+phrase_list_506_0099|as though|He talks as though he knows everything.|他講話的樣子好像什麼都懂。|B1|social|talk<talks,know<knows,everything||

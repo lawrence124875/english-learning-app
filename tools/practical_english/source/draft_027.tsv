@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2601	2600	bless	Bless	Bless you! Are you getting a cold?	保重！你是不是要感冒了？	A2	health	ngsl_2809_2600	ngsl_2809_0042|ngsl_2809_0866	Bless you!	Bless you 是聽到別人打噴嚏時說的話
+2602	2601	airline	airline	Which airline are you flying with?	你搭哪一家航空公司？	A2	travel	ngsl_2809_2601	ngsl_2809_0880		
+2603	2602	amendment	amendment	The amendment to the law takes effect next month.	法律修正案下個月生效。	B2	news	ngsl_2809_2602	ngsl_2809_0420|ngsl_2809_0058|ngsl_2809_0314|ngsl_2809_0150|ngsl_2809_0208	take effect	
+2604	2603	grandmother	grandmother	My grandmother lives with us.	我奶奶跟我們住在一起。	A1	daily	ngsl_2809_2603	ngsl_2809_0152	live with ...	
+2605	2604	jury	jury	The jury will decide tomorrow.	陪審團明天會做出決定。	B1	news	ngsl_2809_2604	ngsl_2809_0358|ngsl_2809_0725		
+2606	2605	cooperation	cooperation	Thank you for your cooperation.	感謝您的配合。	B1	official	ngsl_2809_2605	ngsl_2809_0243	Thank you for ...	cooperation 在此譯為「配合」
+2607	2606	civilian	civilian	He left the army and went back to civilian life.	他退伍後回到一般老百姓的生活。	B2	news	ngsl_2809_2606	ngsl_2809_0125|ngsl_2809_1417|ngsl_2809_0030|ngsl_2809_0093|ngsl_2809_0110	go back to ...	civilian 在此為形容詞「平民的」
+2608	2607	composition	composition	Our homework is to write a composition about summer.	我們的功課是寫一篇關於夏天的作文。	B1	study	ngsl_2809_2607	ngsl_2809_0120|ngsl_2809_0653		
+2609	2608	coin	coins	I need some coins for the vending machine.	我需要一些零錢投販賣機。	A2	shopping	ngsl_2809_2608	ngsl_2809_0089|ngsl_2809_0744	vending machine	coin 在此譯為「零錢（硬幣）」
+2610	2609	regardless	regardless	We'll go regardless of the weather.	不管天氣怎樣，我們都會去。	B1	travel	ngsl_2809_2609	ngsl_2809_0030|ngsl_2809_1067	regardless of ...	
+2611	2610	scan	scan	Please scan the QR code to order.	請掃描 QR code 點餐。	A2	food	ngsl_2809_2610	ngsl_2809_0470|ngsl_2809_1345|ngsl_2809_0214		
+2612	2611	bunch	bunch	He bought her a bunch of flowers.	他買了一束花送她。	A2	social	ngsl_2809_2611	ngsl_2809_0241|ngsl_2809_1300	a bunch of ...	
+2613	2612	racial	racial	The school welcomes students of all racial backgrounds.	這所學校歡迎各種族背景的學生。	B2	study	ngsl_2809_2612	ngsl_2809_0145|ngsl_2809_0988|ngsl_2809_0247|ngsl_2809_1222		
+2614	2613	greet	greeted	She greeted us at the door with a smile.	她在門口笑著迎接我們。	B1	social	ngsl_2809_2613	ngsl_2809_0489|ngsl_2809_0989	with a smile	greet 在此為「迎接」
+2615	2614	hopefully	Hopefully	Hopefully it won't rain tomorrow.	希望明天不會下雨。	A2	daily	ngsl_2809_2614	ngsl_2809_1231|ngsl_2809_0725		hopefully 在此為句首副詞「但願」
+2616	2615	sanction	sanctions	The new sanctions will affect oil prices.	新的制裁措施會影響油價。	B2	news	ngsl_2809_2615	ngsl_2809_0078|ngsl_2809_0638|ngsl_2809_0897|ngsl_2809_0295		
+2617	2616	trick	trick	Here's a simple trick to save time.	這裡有個省時間的小技巧。	B1	daily	ngsl_2809_2616	ngsl_2809_0097|ngsl_2809_0687|ngsl_2809_0565|ngsl_2809_0048	save time	
+2618	2617	paragraph	paragraph	Please read the first paragraph aloud.	請大聲念出第一段。	A2	study	ngsl_2809_2617	ngsl_2809_0470|ngsl_2809_0206|ngsl_2809_0077	read aloud	
+2619	2618	maker	maker	We bought a new coffee maker.	我們買了一台新的咖啡機。	A2	shopping	ngsl_2809_2618	ngsl_2809_0241|ngsl_2809_0078|ngsl_2809_1394	coffee maker	maker 在此為「…機（製造器具）」
+2620	2619	chocolate	chocolate	Would you like some hot chocolate?	要不要喝點熱可可？	A1	food	ngsl_2809_2619	ngsl_2809_0044|ngsl_2809_0884	hot chocolate	
+2621	2620	stimulate	stimulate	Reading can stimulate a child's imagination.	閱讀能激發孩子的想像力。	B2	study	ngsl_2809_2620	ngsl_2809_0206|ngsl_2809_0101|ngsl_2809_2501		stimulate 在此為「激發」
+2622	2621	belt	belt	Please fasten your seat belt.	請繫好安全帶。	A2	travel	ngsl_2809_2621	ngsl_2809_0470|ngsl_2809_0851	seat belt	
+2623	2622	potato	potato	I'll have the steak with a baked potato.	我要牛排配烤馬鈴薯。	A2	food	ngsl_2809_2622		baked potato	
+2624	2623	narrative	narrative	His narrative of the trip was very funny.	他講述這趟旅行的經過非常好笑。	B2	social	ngsl_2809_2623	ngsl_2809_0824|ngsl_2809_1236		
+2625	2624	tissue	tissue	The doctor took a small piece of tissue for testing.	醫生取了一小塊組織去化驗。	B2	health	ngsl_2809_2624	ngsl_2809_0762|ngsl_2809_0058|ngsl_2809_0185|ngsl_2809_0607|ngsl_2809_0331		tissue 在此為生物「組織」；日常更常見「面紙」義
+2626	2625	barely	barely	I could barely hear you.	我幾乎聽不到你說話。	B1	phone	ngsl_2809_2625	ngsl_2809_0177		barely 在此為「幾乎不」
+2627	2626	invent	invented	Who invented the telephone?	電話是誰發明的？	A2	study	ngsl_2809_2626	ngsl_2809_1035		
+2628	2627	tourism	Tourism	Tourism is important for this island.	觀光業對這座島很重要。	B1	travel	ngsl_2809_2627	ngsl_2809_0189|ngsl_2809_1213		
+2629	2628	pro	pro	She plays tennis like a pro.	她打網球打得像職業選手一樣。	B1	social	ngsl_2809_2628	ngsl_2809_0157|ngsl_2809_1916	like a pro	pro 在此為名詞「職業選手、高手」
+2630	2629	stair	stairs	Watch your step on the stairs.	走樓梯時小心腳步。	A2	daily	ngsl_2809_2629	ngsl_2809_0325|ngsl_2809_0476	Watch your step.	
+2631	2630	hesitate	hesitate	Don't hesitate to ask if you have any questions.	有任何問題的話，儘管問。	B1	work	ngsl_2809_2630	ngsl_2809_0133|ngsl_2809_0180	Don't hesitate to ...	
+2632	2631	shine	shining	The sun is shining today.	今天陽光普照。	A2	daily	ngsl_2809_2631	ngsl_2809_1360|ngsl_2809_0245		
+2633	2632	motivation	motivation	I need some motivation to exercise.	我需要一點運動的動力。	B1	health	ngsl_2809_2632	ngsl_2809_0089|ngsl_2809_0916		motivation 在此譯為「動力」
+2634	2633	romantic	romantic	We had a romantic dinner by the sea.	我們在海邊吃了一頓浪漫的晚餐。	B1	food	ngsl_2809_2633	ngsl_2809_1116|ngsl_2809_0986	by the sea	
+2635	2634	firmly	firmly	Hold the handle firmly.	緊緊抓住把手。	B1	daily	ngsl_2809_2634	ngsl_2809_0221|ngsl_2809_1040		firmly 在此為「牢牢地」
+2636	2635	interior	interior	The interior of the car is very clean.	這輛車的內部很乾淨。	B1	daily	ngsl_2809_2635	ngsl_2809_0259|ngsl_2809_0841		interior 在此為名詞「內部」
+2637	2636	stomach	stomach	I can't run on a full stomach.	我剛吃飽，沒辦法跑步。	B1	health	ngsl_2809_2636	ngsl_2809_0191|ngsl_2809_0409	on a full stomach	
+2638	2637	nowhere	nowhere	There's nowhere to park around here.	這附近沒地方停車。	B1	travel	ngsl_2809_2637	ngsl_2809_0656|ngsl_2809_0169|ngsl_2809_0097	nowhere to ...	
+2639	2638	pray	prays	She prays before every meal.	她每餐飯前都會禱告。	B1	daily	ngsl_2809_2638	ngsl_2809_0179|ngsl_2809_1249		
+2640	2639	championship	championship	Our team won the championship this year.	我們隊今年拿下了冠軍。	B1	social	ngsl_2809_2639	ngsl_2809_0406|ngsl_2809_0376|ngsl_2809_0057		
+2641	2640	servant	servants	In the old days, rich families had many servants.	以前有錢人家裡有很多僕人。	B1	daily	ngsl_2809_2640	ngsl_2809_0143|ngsl_2809_0084|ngsl_2809_1011|ngsl_2809_0171	in the old days	
+2642	2641	immigrant	immigrants	His grandparents came here as immigrants.	他的祖父母當年是移民來這裡的。	B1	social	ngsl_2809_2641	ngsl_2809_0064|ngsl_2809_0097		
+2643	2642	excess	excess	You'll have to pay extra for excess baggage.	行李超重要另外付費。	B1	travel	ngsl_2809_2642	ngsl_2809_0219|ngsl_2809_1057	excess baggage	excess 在此為形容詞「超額的」
+2644	2643	complexity	complexity	Don't underestimate the complexity of this project.	別低估了這個專案的複雜性。	B2	work	ngsl_2809_2643	ngsl_2809_0517		
+2645	2644	liability	liability	The company has no liability for lost items.	公司對遺失物品不負任何責任。	B2	official	ngsl_2809_2644	ngsl_2809_0106|ngsl_2809_0304|ngsl_2809_0746		liability 在此為法律上的「責任」
+2646	2645	surprisingly	surprisingly	The test was surprisingly easy.	這次考試出乎意料地簡單。	B1	study	ngsl_2809_2645	ngsl_2809_0331|ngsl_2809_0407		
+2647	2646	extract	extract	This app can extract text from photos.	這個 app 能從照片中擷取文字。	B2	work	ngsl_2809_2646	ngsl_2809_1047|ngsl_2809_1207		extract 在此為「擷取」
+2648	2647	implementation	implementation	The implementation of the new system will take months.	新系統的實施要花好幾個月。	B2	work	ngsl_2809_2647	ngsl_2809_0078|ngsl_2809_0178|ngsl_2809_0058|ngsl_2809_0208		
+2649	2648	bias	bias	Every news report has some bias.	每篇新聞報導多少都有些偏見。	B2	news	ngsl_2809_2648	ngsl_2809_0179|ngsl_2809_0545|ngsl_2809_0165		
+2650	2649	differently	differently	We see things differently.	我們看事情的角度不同。	B1	social	ngsl_2809_2649	ngsl_2809_0049|ngsl_2809_0086		
+2651	2650	catalog	catalog	You can order from our online catalog.	您可以從我們的線上型錄訂購。	B1	shopping	ngsl_2809_2650	ngsl_2809_0214|ngsl_2809_1793		catalog 在此為商品「型錄」
+2652	2651	continuous	continuous	We've had continuous rain all week.	整個星期雨下個不停。	B1	daily	ngsl_2809_2651	ngsl_2809_1231|ngsl_2809_0156	all week	
+2653	2652	golden	golden	The beach has soft golden sand.	海灘上是柔軟的金黃色沙子。	A2	travel	ngsl_2809_2652	ngsl_2809_1296|ngsl_2809_1600|ngsl_2809_2372		golden 在此為「金色的」
+2654	2653	stamp	stamp	I need a stamp for this letter.	我需要一張郵票寄這封信。	A1	official	ngsl_2809_2653	ngsl_2809_0089|ngsl_2809_0357		
+2655	2654	guideline	guidelines	Please follow the safety guidelines.	請遵守安全守則。	B1	work	ngsl_2809_2654	ngsl_2809_0470|ngsl_2809_0187|ngsl_2809_1310		
+2656	2655	envelope	envelope	Put the letter in the envelope.	把信放進信封裡。	A2	daily	ngsl_2809_2655	ngsl_2809_0138|ngsl_2809_0357		
+2657	2656	knife	knife	Could you pass me a knife?	可以遞一把刀給我嗎？	A1	food	ngsl_2809_2656	ngsl_2809_0415		
+2658	2657	biological	biological	My sister is studying biological sciences.	我妹妹在讀生物科學。	B2	study	ngsl_2809_2657	ngsl_2809_0963|ngsl_2809_0186|ngsl_2809_0904		
+2659	2658	consume	consumes	This old fridge consumes a lot of power.	這台舊冰箱很耗電。	B2	daily	ngsl_2809_2658	ngsl_2809_0143|ngsl_2809_0122|ngsl_2809_0330	a lot of ...	consume 在此為「消耗」
+2660	2659	luxury	luxury	Staying at that hotel was a real luxury.	住那家飯店真是一大享受。	B1	travel	ngsl_2809_2659	ngsl_2809_0344|ngsl_2809_0758|ngsl_2809_0353		luxury 在此為「奢侈的享受」
+2661	2660	weekly	weekly	We have a weekly team meeting on Mondays.	我們每週一開團隊週會。	A2	work	ngsl_2809_2660	ngsl_2809_0406		
+2662	2661	wherever	wherever	Sit wherever you like.	你想坐哪裡就坐哪裡。	A2	daily	ngsl_2809_2661	ngsl_2809_0355|ngsl_2809_0044		
+2663	2662	bite	bite	Can I have a bite of your sandwich?	可以讓我咬一口你的三明治嗎？	A2	food	ngsl_2809_2662		have a bite	bite 在此為名詞「一口」
+2664	2663	printer	printer	The printer is out of paper.	印表機沒紙了。	A2	work	ngsl_2809_2663	ngsl_2809_0424	out of ...	
+2665	2664	firstly	Firstly	Firstly, let me introduce myself.	首先，讓我自我介紹一下。	B1	work	ngsl_2809_2664	ngsl_2809_0173|ngsl_2809_0771		
+2666	2665	anxious	anxious	I always feel anxious before exams.	我考試前總是很焦慮。	B1	study	ngsl_2809_2665	ngsl_2809_0182|ngsl_2809_0116|ngsl_2809_2243		
+2667	2666	adventure	adventure	The trip was a real adventure.	這趟旅行真是一場冒險。	B1	travel	ngsl_2809_2666	ngsl_2809_0824|ngsl_2809_0353		
+2668	2667	fence	fence	The dog jumped over the fence.	狗跳過了圍欄。	A2	daily	ngsl_2809_2667	ngsl_2809_0894|ngsl_2809_1323		
+2669	2668	exhaust	exhausted	We exhausted our budget in the first week.	我們第一週就把預算花光了。	B2	travel	ngsl_2809_2668	ngsl_2809_1015|ngsl_2809_0077|ngsl_2809_0156		exhaust 在此為「耗盡、用光」
+2670	2669	attraction	attraction	What's the main tourist attraction here?	這裡主要的觀光景點是什麼？	A2	travel	ngsl_2809_2669	ngsl_2809_0452|ngsl_2809_1485|ngsl_2809_0097	tourist attraction	attraction 在此為「景點」，非「吸引力」
+2671	2670	ocean	ocean	Our room has an ocean view.	我們的房間看得到海景。	A2	travel	ngsl_2809_2670	ngsl_2809_0253|ngsl_2809_0292	ocean view	
+2672	2671	quietly	quietly	Please speak quietly in the library.	圖書館裡請小聲說話。	A2	study	ngsl_2809_2671	ngsl_2809_0470|ngsl_2809_0283|ngsl_2809_1161		
+2673	2672	castle	castle	We visited an old castle on the hill.	我們參觀了山丘上的一座古堡。	A2	travel	ngsl_2809_2672	ngsl_2809_0332|ngsl_2809_0143|ngsl_2809_1669		
+2674	2673	veteran	veteran	My grandfather is a war veteran.	我爺爺是退伍軍人。	B1	social	ngsl_2809_2673	ngsl_2809_0434		
+2675	2674	reflection	reflection	This trip gave me time for reflection.	這趟旅行讓我有時間反思。	B2	travel	ngsl_2809_2674	ngsl_2809_0824|ngsl_2809_0076|ngsl_2809_0048		
+2676	2675	nerve	nerves	Loud noise really gets on my nerves.	吵雜的聲音真的讓我很煩。	B1	daily	ngsl_2809_2675	ngsl_2809_2248|ngsl_2809_1439|ngsl_2809_0103|ngsl_2809_0042	get on one's nerves	nerve 在此用於片語 get on one's nerves「惹人心煩」，非字面「神經」
+2677	2676	determination	determination	Her determination helped her pass the exam.	她的決心幫她通過了考試。	B1	study	ngsl_2809_2676	ngsl_2809_0132|ngsl_2809_0415|ngsl_2809_2243		
+2678	2677	altogether	altogether	That's thirty dollars altogether.	總共三十元。	A2	shopping	ngsl_2809_2677	ngsl_spoken_720_0255|ngsl_2809_0970		altogether 在此為「總共」，非「完全地」
+2679	2678	fiction	fiction	I mostly read fiction.	我大多讀小說。	B1	study	ngsl_2809_2678	ngsl_2809_1286|ngsl_2809_0206		
+2680	2679	carpet	carpet	I spilled coffee on the carpet.	我把咖啡灑在地毯上了。	A2	daily	ngsl_2809_2679	ngsl_2809_1394		
+2681	2680	cluster	cluster	There's a cluster of small shops near the station.	車站附近聚集了一些小店。	B2	travel	ngsl_2809_2680	ngsl_2809_0185|ngsl_2809_0436|ngsl_2809_0426|ngsl_2809_0708	a cluster of ...	
+2682	2681	confusion	confusion	Sorry for the confusion.	抱歉造成混淆。	B1	work	ngsl_2809_2681	ngsl_2809_0764	Sorry for ...	confusion 在此為「混淆、誤會」
+2683	2682	hurry	Hurry	Hurry up, or we'll miss the bus.	快點，不然我們會錯過公車。	A1	travel	ngsl_2809_2682	ngsl_2809_0644|ngsl_2809_0809	hurry up	hurry 在此為動詞「趕快」
+2684	2683	logic	logic	I don't understand the logic behind this rule.	我不懂這條規定背後的邏輯。	B2	work	ngsl_2809_2683	ngsl_2809_0242|ngsl_2809_0491|ngsl_2809_0414		
+2685	2684	controversial	controversial	The movie's ending was controversial.	這部電影的結局很有爭議。	B2	social	ngsl_2809_2684	ngsl_2809_0761|ngsl_2809_0151		
+2686	2685	raw	raw	Is this fish raw?	這條魚是生的嗎？	A2	food	ngsl_2809_2685	ngsl_2809_0827		
+2687	2686	grammar	grammar	My grammar still isn't perfect.	我的文法還不夠完美。	A2	study	ngsl_2809_2686	ngsl_2809_0118|ngsl_2809_1110		
+2688	2687	revise	revise	Please revise the report by Friday.	請在星期五前修改報告。	B1	work	ngsl_2809_2687	ngsl_2809_0470|ngsl_2809_0165	by Friday	
+2689	2688	hint	hint	Can you give me a hint?	可以給我一點提示嗎？	A2	study	ngsl_2809_2688	ngsl_2809_0076		
+2690	2689	hook	hook	Hang your coat on the hook.	把外套掛在掛鉤上。	A2	daily	ngsl_2809_2689	ngsl_2809_1084|ngsl_2809_1862		
+2691	2690	bell	bell	Ring the bell if you need help.	需要幫忙的話請按鈴。	A2	daily	ngsl_2809_2690	ngsl_2809_0944|ngsl_2809_0089|ngsl_2809_0132	ring the bell	
+2692	2691	liquid	liquids	You can't take liquids through security.	液體不能帶過安檢。	B1	travel	ngsl_2809_2691	ngsl_2809_0058|ngsl_2809_0540		
+2693	2692	panic	panic	Don't panic, we still have time.	別慌，我們還有時間。	B1	daily	ngsl_2809_2692	ngsl_2809_0118|ngsl_2809_0048		panic 在此為動詞「驚慌」
+2694	2693	uncle	uncle	My uncle runs a small restaurant.	我叔叔開了一家小餐廳。	A2	food	ngsl_2809_2693	ngsl_2809_0191|ngsl_2809_0185|ngsl_2809_0918		run 在此為「經營」
+2695	2694	rice	rice	I'd like fried rice, please.	我要一份炒飯，謝謝。	A1	food	ngsl_2809_2694	ngsl_2809_0044|ngsl_2809_0470	fried rice	
+2696	2695	slope	slope	This ski slope is too steep for me.	這條滑雪道對我來說太陡了。	B1	travel	ngsl_2809_2695	ngsl_2809_2593		slope 在此為「斜坡」
+2697	2696	happiness	happiness	Money can't buy happiness.	金錢買不到幸福。	B1	social	ngsl_2809_2696	ngsl_2809_0200|ngsl_2809_0241		
+2698	2697	genuine	genuine	Is this genuine leather?	這是真皮嗎？	B1	shopping	ngsl_2809_2697	ngsl_2809_2732	genuine leather	genuine 在此為「真正的、非仿冒的」，非「真誠的」
+2699	2698	vessel	vessel	The ancient vessel in the museum is made of clay.	博物館裡那件古老的器皿是陶土做的。	B2	travel	ngsl_2809_2698	ngsl_2809_1726|ngsl_2809_1396|ngsl_2809_0047	be made of ...	vessel 在此為「器皿」；也常指「船隻」
+2700	2699	verb	verb	Every sentence needs a verb.	每個句子都需要一個動詞。	A2	study	ngsl_2809_2699	ngsl_2809_0179|ngsl_2809_1098|ngsl_2809_0089		

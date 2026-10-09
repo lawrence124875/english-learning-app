@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+401	400	body	body	My whole body hurts.	我全身都痛。	A2	health	ngsl_2809_0400	ngsl_2809_0309|ngsl_2809_1420		
+402	401	require	required	Is a reservation required?	需要訂位嗎？	B1	food	ngsl_2809_0401			required 為過去分詞
+403	402	wait	waiting	Sorry to keep you waiting.	抱歉讓你久等了。	A2	social	ngsl_2809_0402	ngsl_2809_0764|ngsl_2809_0176	keep someone waiting	
+404	403	general	general	In general, I go to bed early.	一般來說，我很早睡。	B1	daily	ngsl_2809_0403	ngsl_2809_0030|ngsl_2809_0693|ngsl_2809_0196	in general	
+405	404	appear	appeared	A message appeared on the screen.	螢幕上出現了一則訊息。	B1	daily	ngsl_2809_0404	ngsl_2809_0862|ngsl_2809_0956		
+406	405	toward	toward	Walk toward the train station.	朝火車站的方向走。	A2	travel	ngsl_2809_0405	ngsl_2809_0338|ngsl_2809_0288|ngsl_2809_0708		
+407	406	team	team	I work on the sales team.	我在業務團隊工作。	B1	work	ngsl_2809_0406	ngsl_2809_0066|ngsl_2809_0397		
+408	407	easy	easy	This recipe is really easy.	這個食譜真的很簡單。	A2	food	ngsl_2809_0407	ngsl_2809_0103		recipe 不在詞表
+409	408	individual	individual	Every individual learns at a different pace.	每個人學習的步調都不一樣。	B2	study	ngsl_2809_0408	ngsl_2809_0179|ngsl_2809_0260|ngsl_2809_0148|ngsl_2809_2117		
+410	409	full	full	Sorry, the restaurant is full tonight.	抱歉，餐廳今晚客滿了。	A2	food	ngsl_2809_0409	ngsl_2809_0764|ngsl_2809_0918|ngsl_2809_1413		full 在此為「客滿」
+411	410	black	black	I'll have my coffee black.	我的咖啡不加奶也不加糖。	A2	food	ngsl_2809_0410	ngsl_2809_0007|ngsl_2809_1394		black 在此指咖啡「不加奶」
+412	411	sense	sense	That makes sense.	有道理。	B1	social	ngsl_2809_0411	ngsl_2809_0047	make sense	sense 在此為「道理、意義」
+413	412	perhaps	Perhaps	Perhaps we should take a taxi.	也許我們該搭計程車。	B1	travel	ngsl_2809_0412	ngsl_2809_0088|ngsl_2809_0058|ngsl_2809_1147		
+414	413	add	add	Do you add sugar to your coffee?	你咖啡會加糖嗎？	A2	food	ngsl_2809_0413	ngsl_2809_2233|ngsl_2809_1394	add ... to ...	
+415	414	rule	rules	Please follow the rules.	請遵守規定。	A2	official	ngsl_2809_0414	ngsl_2809_0470|ngsl_2809_0187		rules 為複數
+416	415	pass	pass	Please pass me the salt.	請把鹽遞給我。	A1	food	ngsl_2809_0415	ngsl_2809_0470|ngsl_2809_2458		pass 在此為「傳遞」
+417	416	produce	produces	This factory produces cars.	這間工廠生產汽車。	B1	work	ngsl_2809_0416	ngsl_2809_1529|ngsl_2809_0259		
+418	417	sell	sell	Do you sell phone chargers?	你們有賣手機充電器嗎？	A2	shopping	ngsl_2809_0417	ngsl_2809_0478		charger 不在詞表
+419	418	short	short	She has short hair.	她留短髮。	A1	social	ngsl_2809_0418	ngsl_2809_0912		
+420	419	agree	agree	I totally agree with you.	我完全同意你的看法。	A2	social	ngsl_2809_0419	ngsl_2809_1395	agree with	
+421	420	law	law	It's against the law to smoke here.	在這裡抽菸是違法的。	B1	official	ngsl_2809_0420	ngsl_2809_0223|ngsl_2809_1229|ngsl_2809_0097	against the law	
+422	421	everything	everything	Is everything okay?	一切都還好嗎？	A1	social	ngsl_2809_0421	ngsl_2809_0924		
+423	422	research	research	I'm doing research for my report.	我正在為報告做研究。	B1	study	ngsl_2809_0422	ngsl_2809_0020|ngsl_2809_0165	do research	
+424	423	cover	Cover	Cover the pot and cook for ten minutes.	蓋上鍋蓋，煮十分鐘。	B1	food	ngsl_2809_0423	ngsl_2809_2549|ngsl_2809_1195|ngsl_spoken_720_0209|ngsl_2809_0365		
+425	424	paper	paper	Do you have a piece of paper?	你有一張紙嗎？	A1	study	ngsl_2809_0424	ngsl_2809_0607	a piece of paper	
+426	425	position	position	She applied for the manager position.	她應徵了經理的職位。	B1	work	ngsl_2809_0425	ngsl_2809_0610|ngsl_2809_0660	apply for	position 在此為「職位」
+427	426	near	near	Is there an ATM near here?	這附近有提款機嗎？	A1	travel	ngsl_2809_0426	ngsl_2809_0097	near here	ATM 不在詞表
+428	427	human	human	Can I talk to a human, please?	可以幫我轉真人客服嗎？	B1	phone	ngsl_2809_0427	ngsl_2809_0136|ngsl_2809_0470		human 在此為名詞「真人」，用於自動語音電話
+429	428	computer	computer	My computer is very slow today.	我的電腦今天很慢。	A1	work	ngsl_2809_0428	ngsl_2809_0062|ngsl_2809_1117|ngsl_2809_0245		
+430	429	situation	situation	I understand the situation.	我了解情況。	B1	work	ngsl_2809_0429	ngsl_2809_0242		
+431	430	staff	staff	The hotel staff were very friendly.	飯店的員工都很友善。	B1	travel	ngsl_2809_0430	ngsl_2809_0758|ngsl_2809_0062|ngsl_2809_1537		
+432	431	activity	activities	What activities do you enjoy?	你喜歡做哪些活動？	A2	social	ngsl_2809_0431	ngsl_2809_0503		activities 為複數
+433	432	film	film	Have you seen this film?	你看過這部電影嗎？	A2	daily	ngsl_2809_0432	ngsl_2809_0049		
+434	433	morning	morning	I go jogging every morning.	我每天早上去慢跑。	A2	health	ngsl_2809_0433	ngsl_2809_0030|ngsl_2809_0179	go jogging	
+435	434	war	war	We watched a movie about the war.	我們看了一部關於那場戰爭的電影。	B1	daily	ngsl_2809_0434	ngsl_2809_0325|ngsl_2809_0761		
+436	435	account	account	I'd like to open a bank account.	我想開一個銀行帳戶。	A2	official	ngsl_2809_0435	ngsl_2809_0044|ngsl_2809_0213|ngsl_2809_0626	open an account	
+437	436	shop	shop	The shop closes at nine.	那家店九點關門。	A1	shopping	ngsl_2809_0436	ngsl_2809_0238|ngsl_spoken_720_0250		
+438	437	major	major	There were no major problems.	沒有出什麼大問題。	B1	work	ngsl_2809_0437	ngsl_2809_0119		major 在此為「重大的」
+439	438	someone	Someone	Someone is at the door.	有人在門口。	A1	daily	ngsl_2809_0438	ngsl_2809_0489		
+440	439	above	above	My apartment is above the bakery.	我住的公寓在麵包店樓上。	A2	daily	ngsl_2809_0439	ngsl_2809_2167		bakery 不在詞表
+441	440	design	design	I love the design of this cup.	我很喜歡這個杯子的設計。	A2	shopping	ngsl_2809_0440	ngsl_2809_0228|ngsl_2809_1490		
+442	441	event	event	The event starts at seven.	活動七點開始。	A2	social	ngsl_2809_0441	ngsl_2809_0135|ngsl_spoken_720_0233		
+443	442	special	special	Is there anything special you want to do?	你有什麼特別想做的嗎？	A2	social	ngsl_2809_0442	ngsl_2809_0317|ngsl_2809_0075		
+444	443	sometimes	Sometimes	Sometimes I work from home.	我有時候在家工作。	A2	work	ngsl_2809_0443	ngsl_2809_0066|ngsl_2809_0160	work from home	
+445	444	condition	condition	The car is in good condition.	這台車狀況很好。	B1	shopping	ngsl_2809_0444	ngsl_2809_0259|ngsl_2809_0055	in good condition	condition 在此為「狀況」
+446	445	carry	carry	Let me carry that for you.	我幫你拿吧。	A2	social	ngsl_2809_0445	ngsl_2809_0173		
+447	446	choose	choose	It's hard to choose.	好難選喔。	A2	shopping	ngsl_2809_0446	ngsl_2809_0297		
+448	447	father	father	My father likes fishing.	我爸爸喜歡釣魚。	A1	daily	ngsl_2809_0447	ngsl_2809_0044|ngsl_2809_0827		
+449	448	decision	decision	It was a difficult decision.	那是個很難做的決定。	B1	social	ngsl_2809_0448	ngsl_2809_0469		
+450	449	table	table	A table for two, please.	兩位，謝謝。	A1	food	ngsl_2809_0449	ngsl_spoken_720_0070|ngsl_2809_0470	A table for two.	
+451	450	certain	certain	I'm not certain what time he'll arrive.	我不確定他幾點會到。	B1	social	ngsl_2809_0450	ngsl_2809_0048|ngsl_2809_0587		
+452	451	forward	forward	I look forward to meeting you.	期待和你見面。	B1	social	ngsl_2809_0451	ngsl_2809_0074|ngsl_2809_0134	look forward to	
+453	452	main	main	Where's the main entrance?	正門在哪裡？	A2	travel	ngsl_2809_0452	ngsl_2809_2224	main entrance	
+454	453	die	died	My plant died while I was away.	我不在的時候，植物枯死了。	A2	daily	ngsl_2809_0453	ngsl_2809_0670|ngsl_2809_0233		die 在此指植物「枯死」
+455	454	bear	bear	I can't bear this heat.	我受不了這種熱。	B1	daily	ngsl_2809_0454	ngsl_2809_1140	can't bear	bear 在此為「忍受」
+456	455	cut	cut	Could you cut the cake?	你可以切一下蛋糕嗎？	A2	food	ngsl_2809_0455	ngsl_2809_2172		
+457	456	describe	describe	Can you describe your bag?	你可以描述一下你的包包嗎？	B1	travel	ngsl_2809_0456	ngsl_2809_1251		
+458	457	himself	himself	He hurt himself playing soccer.	他踢足球時受傷了。	B1	health	ngsl_2809_0457	ngsl_2809_1420|ngsl_2809_0157	hurt oneself	
+459	458	available	available	Is this seat available?	這個位子可以坐嗎？	B1	travel	ngsl_2809_0458	ngsl_2809_0851		
+460	459	especially	especially	I love fruit, especially mangoes.	我喜歡水果，尤其是芒果。	B1	food	ngsl_2809_0459	ngsl_2809_0228|ngsl_2809_1639		mango 不在詞表
+461	460	strong	strong	This coffee is too strong.	這杯咖啡太濃了。	A2	food	ngsl_2809_0460	ngsl_2809_1394|ngsl_2809_0117		strong 在此為「（味道）濃」
+462	461	rise	rising	Prices keep rising.	物價一直上漲。	B1	news	ngsl_2809_0461	ngsl_2809_0295|ngsl_2809_0176	keep doing	
+463	462	girl	girl	The little girl is lost.	那個小女孩迷路了。	A1	daily	ngsl_2809_0462	ngsl_2809_0131		
+464	463	maybe	Maybe	Maybe next time.	也許下次吧。	A1	social	ngsl_2809_0463	ngsl_2809_0150|ngsl_2809_0048	Maybe next time.	
+465	464	community	community	She volunteers in the local community.	她在當地社區當志工。	B1	social	ngsl_2809_0464	ngsl_2809_1961|ngsl_2809_0299		
+466	465	else	else	Who else is coming?	還有誰要來？	A2	social	ngsl_2809_0465	ngsl_2809_0064		
+467	466	particular	particular	Are you looking for anything in particular?	你在找什麼特定的東西嗎？	B1	shopping	ngsl_2809_0466	ngsl_2809_0074|ngsl_2809_0317	in particular	
+468	467	role	role	What's your role in the project?	你在這個專案裡負責什麼？	B1	work	ngsl_2809_0467	ngsl_2809_0517		
+469	468	join	join	Would you like to join us?	你要不要跟我們一起？	A2	social	ngsl_2809_0468	ngsl_2809_0044		
+470	469	difficult	difficult	Is the exam difficult?	考試難嗎？	A2	study	ngsl_2809_0469	ngsl_2809_2243		
+471	470	please	Please	Please wait here for a moment.	請在這裡稍等一下。	A1	daily	ngsl_2809_0470	ngsl_2809_0402|ngsl_2809_0097|ngsl_2809_0396	for a moment	
+472	471	detail	details	I'll send you the details later.	我晚點把細節傳給你。	A2	work	ngsl_2809_0471	ngsl_2809_0322		details 為複數
+473	472	difference	difference	What's the difference between these two?	這兩個有什麼不同？	A2	shopping	ngsl_2809_0472	ngsl_2809_0115|ngsl_spoken_720_0070		
+474	473	action	action	It's time to take action.	該採取行動了。	B1	work	ngsl_2809_0473	ngsl_2809_0048|ngsl_2809_0058	take action	
+475	474	health	health	Exercise is good for your health.	運動對健康有益。	A2	health	ngsl_2809_0474	ngsl_2809_0916|ngsl_2809_0055	good for	
+476	475	eat	eat	What do you want to eat?	你想吃什麼？	A1	food	ngsl_2809_0475	ngsl_2809_0075		
+477	476	step	step	Watch your step.	小心腳步。	A2	travel	ngsl_2809_0476	ngsl_2809_0325	Watch your step.	step 在此為「腳步」，NGSL 中文為「步驟」
+478	477	True	true	Is it true?	是真的嗎？	A1	social	ngsl_2809_0477			
+479	478	phone	phone	My phone battery is almost dead.	我的手機快沒電了。	A2	phone	ngsl_2809_0478	ngsl_2809_0306|ngsl_2809_0946		battery 不在詞表
+480	479	themselves	themselves	The kids made breakfast themselves.	孩子們自己做了早餐。	A2	food	ngsl_2809_0479	ngsl_2809_0528|ngsl_2809_0047|ngsl_2809_1818		
+481	480	draw	draw	My daughter loves to draw.	我女兒很愛畫畫。	A1	daily	ngsl_2809_0480	ngsl_2809_0926|ngsl_2809_0228		
+482	481	white	white	Red or white wine?	紅酒還是白酒？	A1	food	ngsl_2809_0481	ngsl_2809_0799|ngsl_2809_1388		
+483	482	date	date	We need to set a date for the meeting.	我們得定個開會日期。	B1	work	ngsl_2809_0482	ngsl_2809_0089|ngsl_2809_0184	set a date	
+484	483	practice	practice	I practice the piano every day.	我每天練鋼琴。	A2	daily	ngsl_2809_0483	ngsl_2809_2590|ngsl_2809_0179|ngsl_2809_0084		
+485	484	model	model	Which model is the newest?	哪個型號是最新的？	B1	shopping	ngsl_2809_0484	ngsl_2809_0078		model 在此為「型號」
+486	485	raise	raised	They raised the rent again.	他們又漲房租了。	B1	daily	ngsl_2809_0485	ngsl_2809_1565|ngsl_2809_0174		raise 在此為「提高」
+487	486	customer	customer	The customer wants a refund.	那位顧客要求退款。	B1	shopping	ngsl_2809_0486	ngsl_2809_0075		refund 不在詞表
+488	487	front	front	I'd like to sit in the front.	我想坐前面。	A2	travel	ngsl_2809_0487	ngsl_2809_0044|ngsl_2809_0355	in the front	
+489	488	explain	explain	Could you explain that again?	你可以再解釋一次嗎？	A2	study	ngsl_2809_0488	ngsl_2809_0174		
+490	489	door	door	Please lock the door when you leave.	離開時請鎖門。	A2	daily	ngsl_2809_0489	ngsl_2809_0470|ngsl_2809_1603|ngsl_2809_0125		
+491	490	outside	outside	It's cold outside.	外面很冷。	A1	daily	ngsl_2809_0490	ngsl_2809_0866		
+492	491	behind	behind	The parking lot is behind the building.	停車場在大樓後面。	A2	travel	ngsl_2809_0491	ngsl_2809_0122	parking lot	
+493	492	economic	economic	The country is facing economic problems.	這個國家正面臨經濟問題。	B2	news	ngsl_2809_0492	ngsl_2809_0142|ngsl_2809_0248|ngsl_2809_0119		
+494	493	site	site	The construction site is very noisy.	工地非常吵。	B1	daily	ngsl_2809_0493	ngsl_2809_1399|ngsl_2809_0062	construction site	site 在此為「工地、場地」
+495	494	approach	approach	Let's try a different approach.	我們換個方法試試吧。	B1	work	ngsl_2809_0494	ngsl_2809_0173|ngsl_2809_0124|ngsl_2809_0148		
+496	495	teacher	teacher	My teacher gave us a lot of homework.	老師出了很多作業給我們。	A1	study	ngsl_2809_0495	ngsl_2809_0076|ngsl_2809_0122		homework 不在詞表
+497	496	land	land	The plane will land in ten minutes.	飛機再十分鐘就要降落了。	A2	travel	ngsl_2809_0496	ngsl_2809_1258|ngsl_spoken_720_0209|ngsl_2809_0365		land 在此為動詞「降落」
+498	497	charge	charge	Is there a charge for delivery?	外送要收費嗎？	B1	shopping	ngsl_2809_0497	ngsl_2809_1427		charge 在此為名詞「費用」
+499	498	finally	finally	We finally found the hotel.	我們終於找到飯店了。	A2	travel	ngsl_2809_0498	ngsl_2809_0080|ngsl_2809_0758		
+500	499	sign	signs	Follow the signs to the exit.	跟著指標走到出口。	A2	travel	ngsl_2809_0499	ngsl_2809_0187		sign 在此為「指標」，signs 為複數

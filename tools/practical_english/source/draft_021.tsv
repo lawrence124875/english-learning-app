@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2001	2000	achievement	achievement	Finishing the marathon was a big achievement for me.	跑完馬拉松對我來說是很大的成就。	B1	health	ngsl_2809_2000	ngsl_2809_0608|ngsl_2809_0183		
+2002	2001	negotiate	negotiated	We negotiated a better price with the seller.	我們跟賣家談到了更好的價格。	B2	shopping	ngsl_2809_2001	ngsl_2809_0055|ngsl_2809_0295		
+2003	2002	dominate	dominate	A few big companies dominate the market.	少數幾家大公司主導了這個市場。	B2	news	ngsl_2809_2002	ngsl_2809_0194|ngsl_2809_0183|ngsl_2809_0106|ngsl_2809_0218		
+2004	2003	supplier	supplier	We need to find a new supplier.	我們需要找新的供應商。	B2	work	ngsl_2809_2003	ngsl_2809_0089|ngsl_2809_0080|ngsl_2809_0078		
+2005	2004	prize	prize	She won first prize in the speech contest.	她在演講比賽中得了第一名。	B1	study	ngsl_2809_2004	ngsl_2809_0376|ngsl_2809_0077|ngsl_2809_0893|ngsl_2809_2461	first prize	
+2006	2005	typically	typically	I typically go to bed around eleven.	我通常十一點左右上床睡覺。	B1	daily	ngsl_2809_2005	ngsl_2809_0030|ngsl_2809_0693|ngsl_2809_0169|ngsl_spoken_720_0579	go to bed	
+2007	2006	peer	peers	Teens often care a lot about what their peers think.	青少年常常很在意同儕的看法。	B2	study	ngsl_2809_2006	ngsl_2809_0287|ngsl_2809_0312|ngsl_2809_0122|ngsl_2809_0046	care about ...	
+2008	2007	pension	pension	My dad lives on his pension now.	我爸現在靠退休金過活。	B2	daily	ngsl_2809_2007	ngsl_2809_1631|ngsl_2809_0152	live on ...	
+2009	2008	wing	wing	Can we get a seat over the wing?	我們可以坐在機翼上方的位子嗎？	B1	travel	ngsl_2809_2008	ngsl_2809_0042|ngsl_2809_0851		wing 在此為「機翼」
+2010	2009	acquisition	acquisition	The acquisition will be finished by next month.	這項收購案下個月前會完成。	C1	work	ngsl_2809_2009	ngsl_2809_0608|ngsl_2809_0150|ngsl_2809_0208		
+2011	2010	laughter	laughter	The room was full of laughter.	房間裡充滿了笑聲。	B1	social	ngsl_2809_2010	ngsl_2809_0253|ngsl_2809_0409	be full of ...	
+2012	2011	deeply	deeply	I'm deeply sorry for the trouble.	造成您的困擾，我深感抱歉。	B1	social	ngsl_2809_2011	ngsl_2809_0764|ngsl_2809_0831		
+2013	2012	recognition	recognition	She got recognition for her hard work.	她的努力得到了肯定。	B2	work	ngsl_2809_2012	ngsl_2809_0042|ngsl_2809_0297|ngsl_2809_0066	hard work	
+2014	2013	electricity	electricity	The electricity went out during the storm.	暴風雨的時候停電了。	B1	daily	ngsl_2809_2013	ngsl_2809_1998	go out	
+2015	2014	assistance	assistance	Do you need any assistance with your bags?	您的行李需要幫忙嗎？	B1	travel	ngsl_2809_2014	ngsl_2809_0089|ngsl_2809_1251		
+2016	2015	roof	roof	Our roof leaks when it rains.	我們家的屋頂下雨時會漏水。	A2	daily	ngsl_2809_2015	ngsl_2809_1231		
+2017	2016	retirement	retirement	My parents are enjoying their retirement.	我爸媽正在享受退休生活。	B1	daily	ngsl_2809_2016	ngsl_2809_0296|ngsl_2809_0503		
+2018	2017	respectively	respectively	Tom and Lisa are 25 and 28, respectively.	Tom 和 Lisa 分別是 25 歲和 28 歲。	C1	social	ngsl_2809_2017			
+2019	2018	variation	variation	There's a lot of variation in prices between shops.	各家店的價格差異很大。	B2	shopping	ngsl_2809_2018	ngsl_2809_0122|ngsl_2809_0295|ngsl_2809_0436		
+2020	2019	ultimately	ultimately	Ultimately, it's your decision.	最終還是由你決定。	B2	social	ngsl_2809_2019	ngsl_2809_0448		
+2021	2020	proof	proof	Do you have proof of address?	你有地址證明嗎？	B1	official	ngsl_2809_2020	ngsl_2809_0557	proof of ...	
+2022	2021	soil	soil	These plants need wet soil.	這些植物需要濕潤的土壤。	B1	daily	ngsl_2809_2021	ngsl_2809_0670|ngsl_2809_0089|ngsl_2809_2083		
+2023	2022	smart	smart	That was a smart move.	那一步走得很聰明。	A2	social	ngsl_2809_2022	ngsl_2809_0199		
+2024	2023	layer	layers	Wear a few layers because it gets cold at night.	多穿幾層，因為晚上會變冷。	B1	travel	ngsl_2809_2023	ngsl_2809_0525|ngsl_2809_0194|ngsl_2809_0866|ngsl_2809_0269		
+2025	2024	upset	upset	She was upset that nobody called her.	沒人打電話給她，她很難過。	B1	social	ngsl_2809_2024	ngsl_2809_1102|ngsl_2809_0104		
+2026	2025	tooth	tooth	I chipped a tooth on a hard candy.	我吃硬糖時把一顆牙咬缺了。	B1	health	ngsl_2809_2025	ngsl_2809_0297		
+2027	2026	representation	representation	Women need better representation in management.	女性在管理階層需要更多代表。	C1	work	ngsl_2809_2026	ngsl_2809_0168|ngsl_2809_0089|ngsl_2809_0055|ngsl_2809_0691		
+2028	2027	preparation	preparation	The trip took a lot of preparation.	這趟旅行花了很多時間準備。	B1	travel	ngsl_2809_2027	ngsl_2809_0824|ngsl_2809_0058|ngsl_2809_0122		
+2029	2028	dispute	dispute	They had a dispute over the bill.	他們為了帳單起了爭執。	B2	shopping	ngsl_2809_2028	ngsl_2809_0887		
+2030	2029	agenda	agenda	What's on the agenda for today's meeting?	今天開會的議程有哪些？	B1	work	ngsl_2809_2029	ngsl_2809_0245		
+2031	2030	emphasis	emphasis	The course puts emphasis on speaking.	這門課著重在口說。	B2	study	ngsl_2809_2030	ngsl_2809_0163|ngsl_2809_0138|ngsl_2809_0283	put emphasis on ...	
+2032	2031	edition	edition	Is this the latest edition of the book?	這是這本書的最新版嗎？	B1	study	ngsl_2809_2031	ngsl_2809_0170		
+2033	2032	silver	silver	I'd like the silver one, please.	我要銀色的那個，謝謝。	A2	shopping	ngsl_2809_2032	ngsl_2809_0044|ngsl_2809_0470		silver 在此為「銀色的」
+2034	2033	entertainment	entertainment	What do you do for entertainment here?	你們在這裡都做什麼娛樂？	B1	social	ngsl_2809_2033	ngsl_2809_0097		
+2035	2034	honest	honest	To be honest, I didn't like the food.	老實說，我不喜歡那裡的食物。	A2	food	ngsl_2809_2034	ngsl_2809_0044|ngsl_2809_0366	to be honest	
+2036	2035	undertake	undertake	The city will undertake a big cleanup project.	市政府將進行一項大型清潔計畫。	C1	news	ngsl_2809_2035	ngsl_2809_0268|ngsl_2809_0183|ngsl_2809_0517		undertake 在此為「著手進行」
+2037	2036	retail	retail	She has worked in retail for ten years.	她在零售業工作十年了。	B2	work	ngsl_2809_2036	ngsl_2809_0066|ngsl_spoken_720_0209|ngsl_2809_0057	work in retail	
+2038	2037	wire	wire	Be careful, that wire is loose.	小心，那條電線鬆了。	B1	daily	ngsl_2809_2037	ngsl_2809_1636|ngsl_2809_2184		
+2039	2038	unlikely	unlikely	It's unlikely to rain today.	今天不太可能下雨。	B1	daily	ngsl_2809_2038	ngsl_2809_1231|ngsl_2809_0245		
+2040	2039	gay	gay	My best friend is gay.	我最好的朋友是同志。	B1	social	ngsl_2809_2039	ngsl_2809_0207		
+2041	2040	publication	publication	The publication date has been moved to May.	出版日期已經延到五月了。	B2	work	ngsl_2809_2040	ngsl_2809_0482|ngsl_2809_0199|ngsl_2809_0096		
+2042	2041	slight	slight	I have a slight fever.	我有點發燒。	B1	health	ngsl_2809_2041			
+2043	2042	unknown	unknown	The cause of the fire is still unknown.	火災的原因目前仍不明。	B1	news	ngsl_2809_2042	ngsl_2809_0318|ngsl_2809_0612|ngsl_2809_0118		
+2044	2043	framework	framework	We need a clear framework for the project.	我們需要一個明確的專案框架。	C1	work	ngsl_2809_2043	ngsl_2809_0089|ngsl_2809_0368|ngsl_2809_0517		
+2045	2044	zone	zone	This is a no-parking zone.	這裡是禁止停車區。	B1	travel	ngsl_2809_2044	ngsl_2809_0656		
+2046	2045	restrict	restrict	Please restrict your bags to one per person.	每人限帶一件行李。	B2	travel	ngsl_2809_2045	ngsl_2809_0470|ngsl_2809_1251|ngsl_2809_0034|ngsl_2809_0262		
+2047	2046	trace	trace	The bank couldn't trace the payment.	銀行查不到這筆款項的去向。	B2	official	ngsl_2809_2046	ngsl_2809_0626|ngsl_2809_1267		
+2048	2047	inch	inches	The screen is about six inches wide.	螢幕大約六吋寬。	A2	shopping	ngsl_2809_2047	ngsl_2809_0956|ngsl_spoken_720_0164|ngsl_2809_0752		
+2049	2048	equivalent	equivalent	Is there an equivalent word in Chinese?	中文有對應的詞嗎？	B2	study	ngsl_2809_2048	ngsl_2809_0216		
+2050	2049	solid	solid	The table is made of solid wood.	這張桌子是實木做的。	B1	shopping	ngsl_2809_2049	ngsl_2809_0449|ngsl_2809_1466	be made of ...	solid 在此為形容詞「實心的、堅固的」
+2051	2050	enterprise	enterprises	Small enterprises are getting more support this year.	小型企業今年得到更多支持。	C1	news	ngsl_2809_2050	ngsl_2809_0185|ngsl_2809_0042|ngsl_2809_0271|ngsl_2809_0057		
+2052	2051	elderly	elderly	Please give your seat to the elderly.	請把座位讓給長者。	B1	travel	ngsl_2809_2051	ngsl_2809_0470|ngsl_2809_0076|ngsl_2809_0851		
+2053	2052	owe	owe	How much do I owe you?	我欠你多少錢？	A2	shopping	ngsl_2809_2052	ngsl_2809_0090		
+2054	2053	governor	governor	The governor visited the flooded town.	州長視察了淹水的城鎮。	B2	news	ngsl_2809_2053	ngsl_2809_0332|ngsl_2809_2273|ngsl_2809_0363		
+2055	2054	uniform	uniform	Students have to wear a uniform.	學生必須穿制服。	A2	study	ngsl_2809_2054	ngsl_2809_0247|ngsl_2809_0525		
+2056	2055	port	port	The ship leaves the port at noon.	這艘船中午離港。	B1	travel	ngsl_2809_2055	ngsl_2809_1092|ngsl_2809_0125		
+2057	2056	pitch	pitch	Her voice has a high pitch.	她的聲音音調很高。	B2	daily	ngsl_2809_2056	ngsl_2809_0606|ngsl_2809_0147		
+2058	2057	arrival	arrival	Please check the arrival time of the flight.	請確認班機的抵達時間。	B1	travel	ngsl_2809_2057	ngsl_2809_0470|ngsl_2809_0579|ngsl_2809_0048|ngsl_2809_1218		
+2059	2058	contemporary	contemporary	The museum focuses on contemporary art.	這間博物館以當代藝術為主。	B2	travel	ngsl_2809_2058	ngsl_2809_1396|ngsl_2809_0549|ngsl_2809_0645	focus on ...	
+2060	2059	gate	gate	Your flight leaves from gate 12.	您的班機在 12 號登機門出發。	A2	travel	ngsl_2809_2059	ngsl_2809_1218|ngsl_2809_0125		gate 在此為「登機門」
+2061	2060	ease	ease	She passed the test with ease.	她輕鬆通過了考試。	B2	study	ngsl_2809_2060	ngsl_2809_0415|ngsl_2809_0331	with ease	
+2062	2061	beer	beers	Two beers, please.	請給我兩杯啤酒。	A1	food	ngsl_2809_2061	ngsl_spoken_720_0070|ngsl_2809_0470		
+2063	2062	specialist	specialist	The doctor sent me to a specialist.	醫生把我轉介給專科醫師。	B1	health	ngsl_2809_2062	ngsl_2809_0762|ngsl_2809_0322		
+2064	2063	assure	assure	I can assure you it's safe.	我可以向你保證這是安全的。	B2	social	ngsl_2809_2063	ngsl_2809_1026		
+2065	2064	profile	profile	Don't forget to update your profile picture.	別忘了更新你的大頭貼。	B1	phone	ngsl_2809_2064	ngsl_2809_0650|ngsl_2809_1932|ngsl_2809_0508	profile picture	
+2066	2065	mood	mood	I'm in a good mood today.	我今天心情很好。	A2	social	ngsl_2809_2065	ngsl_2809_0055|ngsl_2809_0245	in a good mood	
+2067	2066	episode	episodes	I watched three episodes last night.	我昨晚看了三集。	A2	daily	ngsl_2809_2066	ngsl_2809_0325|ngsl_spoken_720_0094|ngsl_2809_0100|ngsl_2809_0269		
+2068	2067	crack	crack	There's a crack in my phone screen.	我手機螢幕有一道裂痕。	B1	phone	ngsl_2809_2067	ngsl_2809_0478|ngsl_2809_0956		
+2069	2068	numerous	numerous	I've called them numerous times.	我已經打給他們很多次了。	B2	phone	ngsl_2809_2068	ngsl_2809_0104|ngsl_2809_0048		
+2070	2069	submit	submit	Please submit the form by Friday.	請在週五前提交表格。	B1	official	ngsl_2809_2069	ngsl_2809_0470|ngsl_2809_0256		
+2071	2070	symptom	symptoms	What are your symptoms?	你有哪些症狀？	B1	health	ngsl_2809_2070			
+2072	2071	virtually	virtually	The store was virtually empty.	店裡幾乎空無一人。	B2	shopping	ngsl_2809_2071	ngsl_2809_0616|ngsl_2809_1591		
+2073	2072	era	era	The house was built in the Victorian era.	這棟房子建於維多利亞時代。	B2	travel	ngsl_2809_2072	ngsl_2809_0164|ngsl_2809_0220		
+2074	2073	coverage	coverage	My phone has poor coverage in the mountains.	我的手機在山上收訊很差。	B2	phone	ngsl_2809_2073	ngsl_2809_0478|ngsl_2809_0617|ngsl_2809_1244		coverage 在此為「（訊號）涵蓋範圍」，與詞表解釋「報導」不同
+2075	2074	tension	tension	You could feel the tension in the room.	你可以感覺到房間裡的緊張氣氛。	B2	social	ngsl_2809_2074	ngsl_2809_0116|ngsl_2809_0253		
+2076	2075	cable	cable	Do you have a charging cable I can borrow?	你有充電線可以借我嗎？	A2	phone	ngsl_2809_2075	ngsl_2809_0497|ngsl_2809_1879		cable 在此為「傳輸線」
+2077	2076	sensitive	sensitive	I have sensitive skin.	我的皮膚很敏感。	B1	health	ngsl_2809_2076	ngsl_2809_1460		
+2078	2077	nervous	nervous	I always get nervous before an interview.	我面試前總是很緊張。	A2	work	ngsl_2809_2077	ngsl_2809_0182|ngsl_2809_0042|ngsl_2809_0783		
+2079	2078	input	input	Thanks for your input on the report.	謝謝你對報告提供的意見。	B2	work	ngsl_2809_2078	ngsl_2809_0243|ngsl_2809_0165		input 在此為「意見、建議」，與詞表解釋「輸入」不同
+2080	2079	isolate	isolate	Try not to isolate yourself when you're stressed.	有壓力時，盡量不要把自己孤立起來。	B2	health	ngsl_2809_2079	ngsl_2809_0124|ngsl_2809_1043		
+2081	2080	prisoner	prisoner	The prisoner was released after ten years.	那名囚犯在十年後獲釋。	B2	news	ngsl_2809_2080	ngsl_2809_0785|ngsl_spoken_720_0209|ngsl_2809_0057		
+2082	2081	eliminate	eliminate	Try to eliminate sugar from your diet.	試著從飲食中去掉糖。	B2	health	ngsl_2809_2081	ngsl_2809_0124|ngsl_2809_2233|ngsl_2809_1846		
+2083	2082	tight	tight	These jeans are too tight.	這條牛仔褲太緊了。	A2	shopping	ngsl_2809_2082	ngsl_2809_0117		
+2084	2083	wet	wet	My shoes got wet in the rain.	我的鞋子被雨淋濕了。	A1	daily	ngsl_2809_2083	ngsl_2809_1475|ngsl_2809_0042|ngsl_2809_1231		
+2085	2084	secondary	secondary	My son starts secondary school next year.	我兒子明年上中學。	B1	study	ngsl_2809_2084	ngsl_2809_0686|ngsl_2809_0135|ngsl_2809_0145|ngsl_2809_0150|ngsl_2809_0057	secondary school	
+2086	2085	welfare	welfare	The school cares about student welfare.	學校很關心學生的福利。	B2	study	ngsl_2809_2085	ngsl_2809_0145|ngsl_2809_0312|ngsl_2809_0247	care about ...	
+2087	2086	recruit	recruiting	We're recruiting new staff this month.	我們這個月在招募新員工。	B2	work	ngsl_2809_2086	ngsl_2809_0078|ngsl_2809_0430|ngsl_2809_0208		
+2088	2087	exclude	excludes	The price excludes tax.	這個價格不含稅。	B2	shopping	ngsl_2809_2087	ngsl_2809_0295|ngsl_2809_0786		
+2089	2088	string	string	The string on my guitar broke.	我吉他的弦斷了。	B1	daily	ngsl_2809_2088	ngsl_2809_2588|ngsl_2809_0367		string 在此為「（樂器的）弦」，與詞表解釋「字串」不同
+2090	2089	cloud	cloud	There isn't a cloud in the sky.	天空中一朵雲也沒有。	A1	daily	ngsl_2809_2089	ngsl_2809_1719		
+2091	2090	persuade	persuaded	I persuaded him to see a doctor.	我說服他去看醫生。	B1	health	ngsl_2809_2090	ngsl_2809_0049|ngsl_2809_0762	persuade someone to ...	
+2092	2091	inspire	inspired	Her story really inspired me.	她的故事真的激勵了我。	B1	social	ngsl_2809_2091	ngsl_2809_0305|ngsl_2809_0103		
+2093	2092	grand	grand	The hotel has a grand entrance.	這間飯店的入口很氣派。	B1	travel	ngsl_2809_2092	ngsl_2809_0758|ngsl_2809_2224		
+2094	2093	hence	hence	The road was closed, hence the delay.	那條路封了，因此才延誤。	C1	travel	ngsl_2809_2093	ngsl_2809_0520|ngsl_2809_0238|ngsl_2809_1309		
+2095	2094	crew	crew	The crew were very friendly.	機組人員都很友善。	B1	travel	ngsl_2809_2094	ngsl_2809_1537		crew 在此為「（機組或船上）全體人員」
+2096	2095	phenomenon	phenomenon	Online shopping is a global phenomenon.	網路購物是全球性的現象。	C1	news	ngsl_2809_2095	ngsl_2809_1793|ngsl_2809_0436|ngsl_2809_1169		
+2097	2096	pupil	pupils	The teacher has thirty pupils in her class.	這位老師班上有三十個學生。	B1	study	ngsl_2809_2096	ngsl_2809_0495|ngsl_spoken_720_0255|ngsl_2809_0361		
+2098	2097	False	false	Is this statement true or false?	這個敘述是對還是錯？	A2	study	ngsl_2809_2097	ngsl_2809_0768|ngsl_2809_0477		
+2099	2098	assist	assist	Our staff will assist you at the counter.	我們的員工會在櫃台協助您。	B2	travel	ngsl_2809_2098	ngsl_2809_0430|ngsl_2809_2411		
+2100	2099	restore	restored	The power was restored after an hour.	一小時後電力恢復了。	B2	daily	ngsl_2809_2099	ngsl_2809_0330|ngsl_2809_0246		

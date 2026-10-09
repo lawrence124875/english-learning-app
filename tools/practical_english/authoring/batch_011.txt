@@ -1,0 +1,101 @@
+# NGSL index 1000–1099
+1000|difficulty|I had some difficulty finding the hotel.|我找飯店的時候遇到了一些困難。|B1|travel|find<finding,hotel|have difficulty doing|
+1001|purchase|Keep the receipt as proof of purchase.|請保留收據作為購買證明。|B2|shopping|keep,proof|proof of purchase|
+1002|shot|We shot the whole video in one day.|我們一天就把整支影片拍完了。|B1|work|whole,video,one,day||shoot 在此為「拍攝」，NGSL 中文為「射擊」
+1003|announced|They just announced that the flight is delayed.|他們剛宣布班機延誤。|B1|travel|just,flight,delay<delayed||announced 為過去式
+1004|unless|We'll eat outside unless it rains.|除非下雨，否則我們會在外面吃。|B1|food|eat,outside,rain<rains||
+1005|independent|She's very independent for her age.|以她的年紀來說，她很獨立。|B1|social|age||
+1006|recommend|What do you recommend?|你推薦什麼？|A2|food|||
+1007|survey|Could you fill out a short survey?|可以請你填一份簡短的問卷嗎？|B1|shopping|fill out,short|fill out|survey 在此為「問卷調查」
+1008|majority|The majority of our customers are students.|我們大部分的顧客都是學生。|B2|work|customer<customers,student<students|the majority of|
+1009|stick|Stick the note on the fridge.|把便條貼在冰箱上。|A2|daily|note||stick 在此為動詞「貼」
+1010|request|I'd like to request a window seat.|我想要求靠窗的座位。|B1|travel|like,window,seat|window seat|
+1011|rich|This cake is too rich for me.|這個蛋糕對我來說太膩了。|B1|food|cake,too||rich 在此為「（食物）濃郁、油膩」，NGSL 中文為「富有的」
+1012|wind|The wind is really strong today.|今天風好大。|A1|daily|really,strong,today||
+1013|none|None of my friends can come.|我的朋友都沒辦法來。|B1|social|friend<friends,come|none of|
+1014|exchange|Where can I exchange money?|我可以在哪裡換錢？|A2|travel|money|exchange money|
+1015|budget|What's your budget?|你的預算是多少？|B1|shopping|||
+1016|famous|This street is famous for its night market.|這條街以夜市聞名。|A2|travel|street,night,market|famous for|
+1017|blood|I need to get a blood test.|我得去驗血。|B1|health|need,get,test|blood test|
+1018|appropriate|Is this outfit appropriate for the interview?|這套衣服適合穿去面試嗎？|B1|work|interview||outfit 不在詞表
+1019|blocked|The road is blocked because of the snow.|因為下雪，道路封閉了。|B1|travel|road,snow|because of|blocked 為過去分詞
+1020|warm|Bring a warm jacket.|帶一件保暖的外套。|A1|travel|bring,jacket||
+1021|count|Can you count the chairs for me?|你可以幫我數一下椅子嗎？|A1|work|chair<chairs||
+1022|scene|This is my favorite scene in the movie.|這是我在這部電影裡最喜歡的一幕。|B1|social|favorite,movie||
+1023|writer|He's a writer for a travel magazine.|他是一本旅遊雜誌的作家。|A2|work|travel,magazine||
+1024|content|We create content for social media.|我們為社群媒體製作內容。|B1|work|create,social|social media|
+1025|prevent|Washing your hands helps prevent colds.|洗手有助於預防感冒。|B1|health|wash<Washing,hand<hands,help<helps,cold<colds||
+1026|safe|Is it safe to walk here at night?|晚上在這裡走路安全嗎？|A2|travel|walk,here,night||
+1027|inviting|Thanks for inviting me.|謝謝你邀請我。|A2|social|thank<Thanks||inviting 為動名詞
+1028|mix|Mix the flour and the eggs.|把麵粉和蛋混在一起。|A2|food|egg<eggs||
+1029|element|Trust is a key element of any team.|信任是任何團隊的關鍵要素。|B2|work|trust,key,team||element 在此為「要素」
+1030|effective|This medicine is very effective.|這種藥非常有效。|B1|health|medicine||
+1031|correct|Is this the correct address?|這是正確的地址嗎？|A2|official|address||
+1032|medical|Do you have medical insurance?|你有醫療保險嗎？|B1|health|insurance|medical insurance|
+1033|admit|I admit I was wrong.|我承認是我錯了。|B1|social|wrong||
+1034|beat|Our team beat them easily.|我們隊輕鬆打敗了他們。|B1|social|team,easily||beat 為過去式
+1035|telephone|May I use your telephone?|我可以借用你的電話嗎？|A2|phone|may,use||
+1036|copy|Can I get a copy of this?|可以給我一份這個的影本嗎？|A2|work|get||copy 在此為名詞「影本、副本」
+1037|committee|The committee will decide next month.|委員會下個月會做決定。|B2|work|decide,next,month||
+1038|aware|Are you aware of the risks?|你知道有哪些風險嗎？|B1|work|risk<risks|be aware of|
+1039|advice|Can I ask for your advice?|我可以請教你的意見嗎？|A2|social|ask|ask for advice|
+1040|handle|Don't worry, I'll handle it.|別擔心，我來處理。|B1|work|worry||
+1041|glass|This table is made of glass.|這張桌子是玻璃做的。|A2|daily|table,make<made|made of|
+1042|trial|The app has a free trial for a month.|這個應用程式有一個月的免費試用。|B1|shopping|free,month|free trial|trial 在此為「試用」
+1043|stress|Exercise is good for stress.|運動有助於紓壓。|B1|health|exercise,good||
+1044|radio|I heard the song on the radio.|我在收音機上聽到這首歌。|A2|daily|hear<heard,song|on the radio|
+1045|administration|Please contact the administration office.|請聯絡行政辦公室。|B2|official|please,contact,office||
+1046|complex|The problem is more complex than we thought.|這個問題比我們想的還要複雜。|B1|work|problem,more,think<thought||
+1047|text|Text me when you get home.|到家後傳個訊息給我。|A2|phone|get,home|get home|text 在此為動詞「傳簡訊」，NGSL 中文為「文本」
+1048|context|Can you guess the meaning from the context?|你能從上下文猜出意思嗎？|B1|study|guess||
+1049|ride|Can you give me a ride to the station?|你可以載我去車站嗎？|A2|travel|give,station|give someone a ride|ride 在此為名詞「搭便車」
+1050|directly|You can pay the driver directly.|你可以直接付錢給司機。|B1|travel|pay,driver||
+1051|heavy|This suitcase is too heavy.|這個行李箱太重了。|A1|travel|too||
+1052|remove|Please remove your shoes.|請脫鞋。|B1|daily|please,shoe<shoes||remove 在此為「脫掉」
+1053|conduct|The company has a strict code of conduct.|公司有嚴格的行為準則。|B2|work|company,strict,code|code of conduct|
+1054|equipment|We rented all the equipment for the camping trip.|露營的裝備我們全都是租來的。|B1|travel|rent<rented,trip||
+1055|otherwise|Hurry up, otherwise we'll miss the bus.|快一點，不然我們會錯過公車。|B1|travel|hurry,miss,bus|hurry up|
+1056|title|What's the title of the book?|這本書的書名是什麼？|A2|study|book||
+1057|extra|Is there an extra charge for breakfast?|早餐要另外收費嗎？|A2|travel|charge,breakfast|extra charge|
+1058|executive|She's a senior executive at a bank.|她是一家銀行的高階主管。|B2|work|senior,bank||
+1059|chair|Please pull up a chair.|請拉張椅子過來坐。|A2|social|please,pull|pull up a chair|
+1060|expensive|That's too expensive for me.|那對我來說太貴了。|A1|shopping|too||
+1061|sample|Can I try a sample?|我可以試吃一下嗎？|A2|food|try||sample 在此為「試吃品」
+1062|sex|Do you know the baby's sex yet?|你們知道寶寶的性別了嗎？|B1|health|know,baby,yet||sex 在此為「性別」
+1063|deliver|Do you deliver to this area?|你們有外送到這一區嗎？|A2|food|area||deliver 在此為「外送、配送」
+1064|video|He sent me a funny video.|他傳了一支好笑的影片給我。|A1|phone|send<sent,funny||
+1065|connection|The internet connection here is slow.|這裡的網路連線很慢。|A2|daily|here,slow||
+1066|primary|Safety is our primary concern.|安全是我們最主要的考量。|B2|work|safety,concern||
+1067|weather|What's the weather like tomorrow?|明天天氣怎麼樣？|A1|daily|tomorrow||
+1068|collect|I'll collect you from the airport.|我會去機場接你。|B1|travel|||collect 在此為英式用法「接人」，NGSL 中文為「收集」
+1069|inform|Please inform us of any changes.|如有任何變動請通知我們。|B2|official|please,change<changes|inform someone of|
+1070|principle|It's a matter of principle.|這是原則問題。|B2|social|matter|a matter of principle|
+1071|straight|Go straight and turn left.|直走然後左轉。|A1|travel|go,turn,left|turn left|straight 在此為副詞「直直地」
+1072|appeal|He decided to appeal the decision.|他決定對這個判決提出上訴。|C1|news|decide<decided,decision||
+1073|highly|I highly recommend this place.|我強力推薦這個地方。|B1|food|recommend,place||
+1074|trust|I trust you.|我相信你。|A2|social|||
+1075|wonderful|We had a wonderful time.|我們玩得很開心。|A2|social|time|have a wonderful time|
+1076|flat|I've got a flat tire.|我的輪胎沒氣了。|B1|travel|tire|flat tire|flat 在此為「（輪胎）洩了氣的」
+1077|absolutely|You're absolutely right.|你說得完全正確。|B1|social|right||
+1078|flowing|The traffic is flowing smoothly now.|現在車流很順暢。|B2|travel|traffic,now||flowing 為進行式
+1079|fair|That's not fair!|這樣不公平！|A2|social|||
+1080|additional|Additional towels are in the closet.|額外的毛巾放在衣櫃裡。|B1|travel|||
+1081|responsible|Who's responsible for this project?|誰負責這個專案？|B1|work|project|responsible for|
+1082|farm|We visited a strawberry farm.|我們去了一座草莓農場。|A2|travel|visit<visited||
+1083|collection|The museum has a huge collection of paintings.|博物館收藏了大量畫作。|B1|travel|museum,huge||
+1084|hang|You can hang your coat here.|你可以把外套掛在這裡。|A2|daily|coat,here||
+1085|negative|The test result was negative.|檢驗結果是陰性。|B1|health|test,result||negative 在此為「陰性的」，NGSL 中文為「負面的」
+1086|band|My favorite band is playing tonight.|我最喜歡的樂團今晚有演出。|A2|social|favorite,play<playing,tonight||
+1087|relatives|We're visiting relatives this weekend.|我們這個週末要去拜訪親戚。|B1|social|visit<visiting,weekend||relative 在此為名詞「親戚」，NGSL 中文為「相對的」
+1088|tour|Is there a guided tour of the castle?|城堡有導覽行程嗎？|B1|travel|castle|guided tour|
+1089|alternative|Is there an alternative route?|有其他替代路線嗎？|B1|travel|route||
+1090|software|You need to update the software.|你需要更新軟體。|B1|work|need,update||
+1091|pair|I bought a new pair of shoes.|我買了一雙新鞋。|A1|shopping|buy<bought,new,shoe<shoes|a pair of|
+1092|ship|The ship leaves at noon.|船中午開。|A2|travel|leave<leaves||
+1093|attitude|She always has a positive attitude.|她總是抱持正面的態度。|B1|work|always,positive||
+1094|cheap|Do you know any cheap hotels around here?|你知道這附近有便宜的飯店嗎？|A2|travel|know,hotel<hotels,around,here||
+1095|double|I'd like a double room, please.|我要一間雙人房，謝謝。|A2|travel|like,room,please|double room|
+1096|legs|My legs are sore from hiking.|爬山爬到腿好痠。|A2|health|||legs 為複數
+1097|observed|We observed the birds from a distance.|我們從遠處觀察那些鳥。|B2|travel|bird<birds,distance|from a distance|
+1098|sentence|Can you read this sentence again?|你可以再唸一次這個句子嗎？|A1|study|read,again||
+1099|print|Can you print this for me?|你可以幫我印這個嗎？|A2|work|||

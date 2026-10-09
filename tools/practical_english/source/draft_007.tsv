@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+601	600	particularly	particularly	I'm not particularly hungry.	我沒有特別餓。	B1	food	ngsl_2809_0600			
+602	601	wife	wife	This is my wife, Lisa.	這是我太太，Lisa。	A1	social	ngsl_2809_0601			
+603	602	sport	sports	What sports do you play?	你有在做什麼運動？	A1	health	ngsl_2809_0602	ngsl_2809_0157		sports 為複數
+604	603	prepare	prepare	I need to prepare for the interview.	我得準備面試。	B1	work	ngsl_2809_0603	ngsl_2809_0089|ngsl_2809_0783	prepare for	
+605	604	discuss	discuss	Let's discuss it tomorrow.	我們明天再討論吧。	B1	work	ngsl_2809_0604	ngsl_2809_0173|ngsl_2809_0725		
+606	605	response	response	Thanks for your quick response.	謝謝你這麼快回覆。	B1	work	ngsl_2809_0605	ngsl_2809_0243|ngsl_2809_1194		
+607	606	voice	voice	You have a lovely voice.	你的聲音很好聽。	A2	social	ngsl_2809_0606	ngsl_2809_1599		
+608	607	piece	piece	Would you like a piece of cake?	你要來一塊蛋糕嗎？	A2	food	ngsl_2809_0607	ngsl_2809_0044|ngsl_2809_2172	a piece of	
+609	608	finish	finish	What time do you finish work?	你幾點下班？	A2	work	ngsl_2809_0608	ngsl_2809_0048|ngsl_2809_0066	finish work	
+610	609	suppose	suppose	I suppose you're right.	我想你說得對。	B1	social	ngsl_2809_0609	ngsl_2809_0091		suppose 在此為「猜想、認為」
+611	610	apply	apply	How do I apply for a visa?	我要怎麼申請簽證？	B1	official	ngsl_2809_0610		apply for	apply 在此為「申請」，NGSL 中文為「應用」
+612	611	president	president	She's the president of our club.	她是我們社團的社長。	B1	social	ngsl_2809_0611	ngsl_2809_0759		president 在此為「社長」，NGSL 中文為「總統」
+613	612	fire	fire	We sat around the fire and told stories.	我們圍著火堆講故事。	B1	social	ngsl_2809_0612	ngsl_2809_0355|ngsl_2809_0169|ngsl_2809_0102|ngsl_2809_0305		
+614	613	compare	compare	I always compare prices before I buy.	我買東西前都會比價。	B1	shopping	ngsl_2809_0613	ngsl_2809_0182|ngsl_2809_0295|ngsl_2809_0105|ngsl_2809_0241	compare prices	
+615	614	court	court	The hotel has a tennis court.	飯店有網球場。	B1	travel	ngsl_2809_0614	ngsl_2809_0758|ngsl_2809_1916		court 在此為「球場」，NGSL 中文為「法院」
+616	615	police	police	Call the police!	快報警！	A2	official	ngsl_2809_0615	ngsl_2809_0104	call the police	
+617	616	store	store	Is there a convenience store nearby?	附近有便利商店嗎？	A2	shopping	ngsl_2809_0616	ngsl_2809_1894	convenience store	
+618	617	poor	poor	They help poor families in the area.	他們幫助這一區的貧困家庭。	B1	social	ngsl_2809_0617	ngsl_2809_0132|ngsl_2809_0171|ngsl_2809_0203		
+619	618	knowledge	knowledge	She has a good knowledge of wine.	她對葡萄酒很有研究。	B2	food	ngsl_2809_0618	ngsl_2809_0055|ngsl_2809_1388		
+620	619	laugh	laugh	Don't make me laugh.	別逗我笑了。	A2	social	ngsl_2809_0619	ngsl_2809_0047		
+621	620	arm	arm	I hurt my arm at the gym.	我在健身房弄傷了手臂。	A2	health	ngsl_2809_0620	ngsl_2809_1420		
+622	621	heart	heart	Thank you from the bottom of my heart.	打從心底謝謝你。	B1	social	ngsl_2809_0621	ngsl_2809_0243|ngsl_2809_1241	from the bottom of my heart	
+623	622	source	source	What's the source of this information?	這個資訊的來源是什麼？	B1	news	ngsl_2809_0622	ngsl_2809_0212		
+624	623	employee	employees	All employees must wear a badge.	所有員工都必須配戴識別證。	B1	work	ngsl_2809_0623	ngsl_2809_0032|ngsl_2809_0159|ngsl_2809_0525		employees 為複數
+625	624	manage	manages	She manages a small team.	她管理一個小團隊。	B1	work	ngsl_2809_0624	ngsl_2809_0185|ngsl_2809_0406		
+626	625	simply	simply	I simply don't have time.	我就是沒時間。	B1	daily	ngsl_2809_0625	ngsl_2809_0048		
+627	626	bank	bank	I need to go to the bank.	我得去一趟銀行。	A1	daily	ngsl_2809_0626	ngsl_2809_0089|ngsl_2809_0030		
+628	627	firm	firm	He works at a law firm.	他在律師事務所上班。	B1	work	ngsl_2809_0627	ngsl_2809_0066|ngsl_2809_0420	law firm	
+629	628	cell	cell	What's your cell phone number?	你的手機號碼幾號？	A2	phone	ngsl_2809_0628	ngsl_2809_0478|ngsl_2809_0126	cell phone	cell 在此為「手機（cell phone）」，NGSL 中文為「細胞」
+630	629	article	article	I read an interesting article today.	我今天讀到一篇有趣的文章。	B1	news	ngsl_2809_0629	ngsl_2809_0206|ngsl_2809_0245		
+631	630	fast	fast	You walk too fast.	你走太快了。	A1	daily	ngsl_2809_0630	ngsl_2809_0338|ngsl_2809_0117		
+632	631	attack	attacked	The team attacked hard in the second half.	那支球隊下半場猛烈進攻。	B2	social	ngsl_2809_0631	ngsl_2809_0406|ngsl_2809_0297|ngsl_2809_0225|ngsl_2809_0364		attack 在此為球賽中的「進攻」
+633	632	foreign	foreign	Do you speak any foreign languages?	你會說外語嗎？	A2	study	ngsl_2809_0632	ngsl_2809_0283|ngsl_2809_0082|ngsl_2809_0359	foreign language	
+634	633	surprise	surprise	What a nice surprise!	真是個驚喜！	A2	social	ngsl_2809_0633	ngsl_2809_0505		surprise 在此為名詞「驚喜」
+635	634	feature	features	This phone has some great features.	這支手機有一些很棒的功能。	B1	shopping	ngsl_2809_0634	ngsl_2809_0478|ngsl_2809_0052|ngsl_2809_0123		feature 在此為「功能」
+636	635	factor	factor	Price is an important factor.	價格是重要的考量因素。	B1	shopping	ngsl_2809_0635	ngsl_2809_0295|ngsl_2809_0189		
+637	636	pretty	pretty	What a pretty dress!	好漂亮的洋裝！	A1	shopping	ngsl_2809_0636	ngsl_2809_0898		
+638	637	recently	recently	Have you seen Tom recently?	你最近有見到Tom嗎？	A2	social	ngsl_2809_0637	ngsl_2809_0049		
+639	638	affect	affect	Will the weather affect our flight?	天氣會影響我們的班機嗎？	B1	travel	ngsl_2809_0638	ngsl_2809_1067|ngsl_2809_1218		
+640	639	drop	dropped	I dropped my phone.	我的手機掉了。	A2	daily	ngsl_2809_0639	ngsl_2809_0478		drop 在此為「掉落」
+641	640	recent	recent	Please send a recent photo.	請寄一張近照。	B1	official	ngsl_2809_0640	ngsl_2809_0470|ngsl_2809_0322|ngsl_2809_1207		
+642	641	relate	relate	I can totally relate to that.	我完全能體會。	B2	social	ngsl_2809_0641	ngsl_2809_1395	relate to	relate 在此為「有同感」
+643	642	official	official	What's the official language here?	這裡的官方語言是什麼？	B1	travel	ngsl_2809_0642	ngsl_2809_0359|ngsl_2809_0097	official language	
+644	643	financial	financial	She works as a financial advisor.	她是理財顧問。	B2	work	ngsl_2809_0643	ngsl_2809_0066	financial advisor	
+645	644	miss	miss	I miss you so much.	我好想你。	A1	social	ngsl_2809_0644	ngsl_2809_0090		
+646	645	art	art	She studies art in college.	她在大學念藝術。	A2	study	ngsl_2809_0645	ngsl_2809_0186|ngsl_2809_0738		
+647	646	campaign	campaign	The new ad campaign starts next week.	新的廣告活動下週開始。	B2	work	ngsl_2809_0646	ngsl_2809_0078|ngsl_2809_1477|ngsl_2809_0135|ngsl_2809_0150|ngsl_2809_0156		
+648	647	private	private	Is this a private beach?	這是私人海灘嗎？	B1	travel	ngsl_2809_0647	ngsl_2809_1296		
+649	648	pause	pause	Can you pause the movie?	你可以把電影暫停一下嗎？	A2	daily	ngsl_2809_0648	ngsl_2809_0761		
+650	649	everyone	everyone	Hi everyone, welcome!	大家好，歡迎！	A1	social	ngsl_2809_0649	ngsl_2809_1825|ngsl_2809_0988		
+651	650	forget	forget	Don't forget your umbrella.	別忘了帶雨傘。	A1	daily	ngsl_2809_0650			
+652	651	page	page	Please turn to page ten.	請翻到第十頁。	A2	study	ngsl_2809_0651	ngsl_2809_0470|ngsl_2809_0193|ngsl_spoken_720_0209		
+653	652	worry	worry	There's nothing to worry about.	沒什麼好擔心的。	A2	social	ngsl_2809_0652	ngsl_2809_0335	worry about	
+654	653	summer	summer	We go camping every summer.	我們每年夏天都去露營。	A2	travel	ngsl_2809_0653	ngsl_2809_0030|ngsl_2809_1164|ngsl_2809_0179	go camping	
+655	654	drink	drink	Can I get you a drink?	要不要幫你拿杯飲料？	A2	food	ngsl_2809_0654	ngsl_2809_0042		
+656	655	opinion	opinion	In my opinion, it's too expensive.	依我看，這太貴了。	B1	shopping	ngsl_2809_0655	ngsl_2809_0117|ngsl_2809_1060	in my opinion	
+657	656	park	park	We had a picnic in the park.	我們在公園野餐。	A2	daily	ngsl_2809_0656	ngsl_2809_0007		park 在此為「公園」
+658	657	represent	represent	She will represent our company at the meeting.	她將代表我們公司出席會議。	B2	work	ngsl_2809_0657	ngsl_2809_0106		
+659	658	key	key	I left my key in the room.	我把鑰匙忘在房間裡了。	A2	travel	ngsl_2809_0658	ngsl_2809_0125|ngsl_2809_0253		
+660	659	inside	inside	It's warmer inside.	裡面比較暖和。	A2	daily	ngsl_2809_0659	ngsl_2809_1020		
+661	660	manager	manager	Can I speak to the manager?	我可以跟經理談談嗎？	A2	shopping	ngsl_2809_0660	ngsl_2809_0283		
+662	661	international	international	Where's the international terminal?	國際航廈在哪裡？	B1	travel	ngsl_2809_0661			
+663	662	contain	contain	Does this contain nuts?	這裡面有堅果嗎？	B1	food	ngsl_2809_0662			
+664	663	notice	notice	Did you notice anything strange?	你有注意到什麼奇怪的地方嗎？	B1	daily	ngsl_2809_0663	ngsl_2809_0317|ngsl_2809_1344		
+665	664	wonder	wonder	I wonder what time it is.	不知道現在幾點了。	B1	daily	ngsl_2809_0664	ngsl_2809_0048		
+666	665	nature	nature	I love being in nature.	我喜歡待在大自然裡。	B1	travel	ngsl_2809_0665	ngsl_2809_0228		
+667	666	structure	structure	The structure of the essay is clear.	這篇文章的架構很清楚。	B2	study	ngsl_2809_0666	ngsl_2809_2160|ngsl_2809_0368		
+668	667	section	section	Which section is your seat in?	你的座位在哪一區？	B1	travel	ngsl_2809_0667	ngsl_2809_0851		
+669	668	myself	myself	I made it myself.	這是我自己做的。	A2	daily	ngsl_2809_0668	ngsl_2809_0047		
+670	669	exactly	exactly	That's exactly what I need.	那正是我需要的。	B1	shopping	ngsl_2809_0669	ngsl_2809_0089		
+671	670	plant	plants	I water my plants every morning.	我每天早上給植物澆水。	A2	daily	ngsl_2809_0670	ngsl_2809_0321|ngsl_2809_0179|ngsl_2809_0433		plants 為複數
+672	671	paint	paint	Careful, wet paint!	小心，油漆未乾！	A2	daily	ngsl_2809_0671	ngsl_2809_1636|ngsl_2809_2083	wet paint	
+673	672	worker	worker	He's a hard worker.	他工作很認真。	B1	work	ngsl_2809_0672	ngsl_2809_0297		
+674	673	press	Press	Press the button to start.	按這個按鈕開始。	A2	daily	ngsl_2809_0673	ngsl_2809_2284|ngsl_2809_0135		
+675	674	whatever	whatever	Order whatever you like.	想點什麼就點什麼。	B1	food	ngsl_2809_0674	ngsl_2809_0214|ngsl_2809_0044		
+676	675	necessary	necessary	Is it necessary to book in advance?	需要事先預訂嗎？	B1	travel	ngsl_2809_0675	ngsl_2809_0170|ngsl_2809_0843	in advance	
+677	676	region	region	This region is famous for its tea.	這個地區以茶聞名。	B1	travel	ngsl_2809_0676	ngsl_2809_1016|ngsl_2809_1598	be famous for	
+678	677	growth	growth	The company has seen rapid growth.	公司成長得很快。	B2	work	ngsl_2809_0677	ngsl_2809_0106|ngsl_2809_0049|ngsl_2809_2388		
+679	678	evening	evening	Good evening, everyone.	各位晚上好。	A1	social	ngsl_2809_0678	ngsl_2809_0055|ngsl_2809_0649	Good evening.	
+680	679	influence	influence	My parents had a big influence on me.	我爸媽對我影響很大。	B1	social	ngsl_2809_0679	ngsl_2809_0296|ngsl_2809_0183	have an influence on	
+681	680	respect	respect	We should respect each other.	我們應該互相尊重。	B1	social	ngsl_2809_0680	ngsl_2809_0088|ngsl_2809_0144|ngsl_2809_0053	each other	
+682	681	various	various	We offer various payment options.	我們提供多種付款方式。	B1	shopping	ngsl_2809_0681	ngsl_2809_0236|ngsl_2809_1267|ngsl_2809_0859		
+683	682	catch	catch	I need to catch the last bus.	我得趕上末班公車。	A2	travel	ngsl_2809_0682	ngsl_2809_0089|ngsl_2809_0100|ngsl_2809_0809	catch the bus	catch 在此為「趕上」
+684	683	thus	thus	The flight was delayed, and thus we missed our connection.	班機延誤，因此我們錯過了轉機。	C1	travel	ngsl_2809_0683	ngsl_2809_1218|ngsl_2809_1309|ngsl_2809_0644|ngsl_2809_1065		thus 多用於書面語
+685	684	skill	skills	Communication skills are very important.	溝通技巧非常重要。	B1	work	ngsl_2809_0684	ngsl_2809_0990|ngsl_2809_0062|ngsl_2809_0189		skills 為複數
+686	685	attempt	attempt	This is my second attempt at the test.	這是我第二次挑戰這個考試。	B1	study	ngsl_2809_0685	ngsl_2809_0225|ngsl_2809_0331		
+687	686	son	son	Our son just started school.	我們兒子剛開始上學。	A1	daily	ngsl_2809_0686	ngsl_2809_0063|ngsl_2809_0135|ngsl_2809_0145		
+688	687	simple	simple	Keep it simple.	簡單就好。	A2	work	ngsl_2809_0687	ngsl_2809_0176	Keep it simple.	
+689	688	medium	Medium	Medium or large?	中杯還是大杯？	A1	food	ngsl_2809_0688	ngsl_2809_0209		medium 在此指飲料「中杯」
+690	689	average	average	The average price is about fifty dollars.	平均價格大約五十美元。	B1	shopping	ngsl_2809_0689	ngsl_2809_0295|ngsl_2809_0036|ngsl_spoken_720_0277|ngsl_2809_0970		
+691	690	stock	stock	Do you have this in stock?	這個有現貨嗎？	B1	shopping	ngsl_2809_0690		in stock	
+692	691	management	management	The hotel is under new management.	這家飯店換了新的經營團隊。	B2	travel	ngsl_2809_0691	ngsl_2809_0758|ngsl_2809_0192|ngsl_2809_0078	under new management	
+693	692	character	character	Who's your favorite character in the movie?	電影裡你最喜歡哪個角色？	A2	daily	ngsl_2809_0692	ngsl_2809_0999|ngsl_2809_0761		character 在此為「角色」，NGSL 中文為「性格」
+694	693	bed	bed	I'm going to bed.	我要去睡了。	A1	daily	ngsl_2809_0693	ngsl_2809_0030	go to bed	
+695	694	hit	hit	He hit his head on the door.	他的頭撞到門了。	A2	health	ngsl_2809_0694	ngsl_2809_0258|ngsl_2809_0489		hit 在此為「撞到」
+696	695	establish	established	The school was established in 1990.	這所學校成立於1990年。	B2	study	ngsl_2809_0695	ngsl_2809_0145		
+697	696	indeed	indeed	It was indeed a great trip.	那確實是一趟很棒的旅行。	B1	travel	ngsl_2809_0696	ngsl_2809_0123|ngsl_2809_0824		
+698	697	final	final	This is our final offer.	這是我們最後的報價。	B1	work	ngsl_2809_0697	ngsl_2809_0236		
+699	698	economy	economy	The economy is growing slowly.	經濟成長緩慢。	B2	news	ngsl_2809_0698	ngsl_2809_0334|ngsl_2809_1511		
+700	699	fit	fit	These shoes don't fit me.	這雙鞋我穿不合腳。	A2	shopping	ngsl_2809_0699	ngsl_2809_1475		fit 在此為動詞「合身」

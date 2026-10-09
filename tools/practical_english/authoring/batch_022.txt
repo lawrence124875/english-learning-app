@@ -1,0 +1,101 @@
+# NGSL index 2100–2199
+2100|formula|Do you remember the formula for this?|你記得這個的公式嗎？|B1|study|remember||
+2101|alter|Can you alter these pants for me?|你可以幫我修改這條褲子嗎？|B2|shopping|||alter 在此為「修改（衣服）」
+2102|perceive|How do others perceive you at work?|同事們怎麼看你？|C1|work|other<others,work||perceive 在此為「看待、認為」
+2103|routine|Exercise is part of my morning routine.|運動是我每天早上的例行活動之一。|B1|health|exercise,part,morning|morning routine|
+2104|sink|The sink in the bathroom is blocked.|浴室的洗手台塞住了。|B1|daily|block<blocked||sink 在此為名詞「水槽、洗手台」，與詞表解釋「下沉」不同
+2105|stare|It's rude to stare at people.|一直盯著別人看很沒禮貌。|B1|social|people|stare at ...|
+2106|anymore|I don't live there anymore.|我已經不住那裡了。|A2|daily|live,there|not ... anymore|
+2107|hero|My dad is my hero.|我爸是我的英雄。|A2|social|dad||
+2108|supporter|He's a big supporter of the local team.|他是當地球隊的忠實支持者。|B2|social|big,local,team||
+2109|convert|Can you convert dollars to euros here?|這裡可以把美元換成歐元嗎？|B2|travel|dollar<dollars,here|convert ... to ...|
+2110|steady|She has a steady job now.|她現在有一份穩定的工作。|B1|work|job||
+2111|meters|The station is about 500 meters away.|車站大約在 500 公尺外。|A2|travel|station,away||
+2112|truck|A big truck is blocking the road.|一台大卡車擋住了路。|A2|travel|big,block<blocking,road||
+2113|nose|My nose is running.|我在流鼻水。|A2|health|run<running||
+2114|beside|Come and sit beside me.|過來坐我旁邊。|A2|social|come,sit||
+2115|sailed|We sailed around the island.|我們乘船繞著島航行。|B1|travel|around,island||
+2116|disaster|The party was a total disaster.|那場派對簡直是一場災難。|B1|social|party,total||disaster 在此為口語「徹底失敗」
+2117|pace|Walk at your own pace.|按照你自己的步調走就好。|B1|health|walk,own|at your own pace|
+2118|heavily|It's raining heavily outside.|外面雨下得很大。|B1|daily|rain<raining,outside||heavily 在此為「（雨）很大地」
+2119|devotes|She devotes her weekends to her kids.|她把週末都奉獻給孩子。|B2|daily|weekend<weekends,kid<kids|devote ... to ...|
+2120|terrorist|The airport increased security after the terrorist threat.|在恐怖攻擊威脅之後，機場加強了安檢。|B2|news|increase<increased,security,threat||
+2121|justify|How can you justify spending so much?|你怎麼能說花這麼多錢是合理的？|B2|shopping|spend<spending,much||
+2122|vital|Water is vital on a hot day.|大熱天裡水非常重要。|B2|health|water,hot,day||
+2123|fascinated|Old maps have always fascinated me.|我一直對古地圖很著迷。|B2|daily|old,map<maps,always||
+2124|external|Please use an external hard drive for backups.|請用外接硬碟做備份。|B2|work|please,use,hard,drive||
+2125|spare|Do you have a spare key?|你有備用鑰匙嗎？|B1|daily|key|spare key|
+2126|whenever|Call me whenever you're free.|你有空的時候隨時打給我。|B1|phone|call,free||
+2127|depression|Depression is more common than many people think.|憂鬱症比很多人想的還常見。|B2|health|common,many,people,think||
+2128|guilty|I feel guilty about eating so much cake.|吃了那麼多蛋糕，我覺得有罪惡感。|B1|food|feel,eat<eating,much,cake|feel guilty about ...|guilty 在此為「有罪惡感的」
+2129|underlie|Stress may underlie many health problems.|壓力可能是許多健康問題的根源。|C1|health|stress,many,health,problem<problems||
+2130|mom|I'll ask my mom first.|我先問我媽。|A1|daily|ask,first||
+2131|distinction|What's the distinction between these two words?|這兩個字有什麼區別？|B2|study|two,word<words||
+2132|satisfaction|Customer satisfaction is our top priority.|顧客滿意度是我們的首要任務。|B2|work|customer,top,priority||
+2133|incorporate|We'll incorporate your ideas into the plan.|我們會把你的想法納入計畫中。|C1|work|idea<ideas,plan|incorporate ... into ...|
+2134|pour|Could you pour me some water?|你可以幫我倒點水嗎？|A2|food|water||
+2135|sweep|Can you sweep the kitchen floor?|你可以掃一下廚房地板嗎？|A2|daily|kitchen,floor||
+2136|obligation|You're under no obligation to buy.|您沒有義務一定要購買。|B2|shopping|buy|under no obligation|
+2137|sir|Excuse me, sir, is this your bag?|先生，不好意思，這是您的包包嗎？|A1|travel|excuse,bag|Excuse me.|
+2138|evaluate|We need to evaluate the results first.|我們得先評估結果。|B2|work|need,result<results,first||
+2139|anger|He couldn't hide his anger.|他藏不住怒氣。|B1|social|hide||
+2140|pub|Let's meet at the pub after work.|下班後我們在酒吧碰面吧。|A2|social|meet,work|after work|
+2141|perception|Travel changed my perception of the world.|旅行改變了我對世界的看法。|C1|travel|travel,change<changed,world||
+2142|naturally|Just act naturally.|表現自然一點就好。|B1|social|act||
+2143|currency|What currency do they use in Japan?|日本用什麼貨幣？|B1|travel|use||
+2144|database|All customer details are stored in the database.|所有客戶資料都存在資料庫裡。|B2|work|customer,detail<details,store<stored||
+2145|initially|Initially, I didn't like the city.|一開始我並不喜歡這座城市。|B2|travel|like,city||
+2146|territory|The cat doesn't like strangers in its territory.|那隻貓不喜歡陌生人進入牠的地盤。|B2|daily|cat,like,stranger<strangers||territory 在此為「地盤」
+2147|stream|We had lunch by a small stream.|我們在一條小溪旁吃午餐。|B1|travel|lunch,small||
+2148|rarely|I rarely eat fast food.|我很少吃速食。|B1|food|eat,fast,food|fast food|
+2149|height|What's your height and weight?|你的身高和體重是多少？|A2|health|weight||
+2150|apparent|It soon became apparent that we were lost.|我們很快就發現自己迷路了。|C1|travel|soon,become<became||
+2151|western|I'm not used to western food.|我不習慣吃西式食物。|B1|food|food|be used to ...|
+2152|expansion|The company is planning an expansion overseas.|公司正計畫向海外擴張。|B2|work|company,plan<planning,overseas||
+2153|constantly|My phone is constantly buzzing.|我的手機一直響個不停。|B2|phone|phone||
+2154|muscles|My muscles are sore after the gym.|上完健身房，我的肌肉很痠。|B1|health|||
+2155|scared|You scared me!|你嚇到我了！|A2|social|||
+2156|badly|I slept badly last night.|我昨晚睡得很不好。|A2|health|sleep<slept,last,night||badly 在此為「很差地」
+2157|everyday|These are everyday items you'll need.|這些是你會需要的日常用品。|B1|shopping|item<items,need||
+2158|boundaries|It's important to set boundaries at work.|在職場設立界線很重要。|B2|work|important,set,work|set boundaries|boundary 在此為「（人際）界線」
+2159|ratio|The ratio of students to teachers is ten to one.|師生比是十比一。|B2|study|student<students,teacher<teachers,ten,one||
+2160|essay|I have to finish my essay tonight.|我今晚得寫完報告。|B1|study|finish,tonight||
+2161|screamed|The kids screamed on the roller coaster.|孩子們在雲霄飛車上尖叫。|B1|travel|kid<kids||
+2162|withdraw|I need to withdraw some cash.|我需要領一些現金。|B1|shopping|need,cash||withdraw 在此為「提領（錢）」
+2163|pollution|Air pollution is bad today.|今天空氣污染很嚴重。|B1|health|air,bad,today||
+2164|disorder|She was diagnosed with an eating disorder.|她被診斷出有飲食障礙。|C1|health|eat<eating||disorder 在此為「（身心）失調、障礙」
+2165|furniture|We need some new furniture for the living room.|我們客廳需要一些新家具。|A2|shopping|need,new,room|living room|
+2166|symbol|The heart is a symbol of love.|愛心是愛的象徵。|B1|daily|heart,love||
+2167|apartment|We're looking for a two-bedroom apartment.|我們在找兩房的公寓。|A2|daily|look<looking|look for ...|
+2168|demonstration|He gave us a demonstration of the new app.|他向我們示範了新的應用程式。|B2|work|give<gave,new||demonstration 在此為「示範、展示」，與詞表解釋「示威」不同
+2169|analyst|She works as a data analyst.|她是一名資料分析師。|B2|work|work<works,data||
+2170|platform|The train leaves from platform 3.|火車從第 3 月台出發。|A2|travel|train,leave<leaves||platform 在此為「月台」
+2171|steel|The bridge is made of steel.|這座橋是用鋼建造的。|B1|daily|bridge|be made of ...|
+2172|cake|Who wants a piece of cake?|誰想吃塊蛋糕？|A1|food|want<wants,piece|a piece of cake|
+2173|transformed|They transformed the old factory into a café.|他們把舊工廠改造成咖啡館。|B2|daily|old,factory|transform ... into ...|
+2174|wound|Clean the wound before putting on a bandage.|先把傷口清乾淨再貼繃帶。|B1|health|clean,put<putting|put on ...|
+2175|restrictions|There are no age restrictions for this tour.|這個行程沒有年齡限制。|B2|travel|age,tour||
+2176|foundation|A good education is a strong foundation.|良好的教育是穩固的基礎。|B2|study|good,education,strong||
+2177|designer|She wants to be a fashion designer.|她想成為時裝設計師。|B1|work|want<wants,fashion||
+2178|strain|Looking at screens all day puts a strain on your eyes.|整天看螢幕會讓眼睛很吃力。|B2|health|look<Looking,screen<screens,day,put<puts,eye<eyes||
+2179|innovation|The company is known for innovation.|這家公司以創新聞名。|B2|work|company,know<known|be known for ...|
+2180|album|Have you heard their new album?|你聽過他們的新專輯了嗎？|A2|social|hear<heard,new||
+2181|singer|She's my favorite singer.|她是我最喜歡的歌手。|A1|social|favorite||
+2182|trail|This trail leads to a waterfall.|這條步道通往一座瀑布。|B1|travel|lead<leads|lead to ...|
+2183|trap|Don't fall into the trap of buying things you don't need.|別掉進買不需要東西的陷阱。|B2|shopping|fall,buy<buying,thing<things,need|fall into the trap of ...|
+2184|loose|This shirt is a little loose.|這件襯衫有點鬆。|A2|shopping|shirt,little||
+2185|extension|Can I get an extension on the deadline?|截止日期可以延後嗎？|B2|work|get||extension 在此為「延期」
+2186|wealth|Health is more important than wealth.|健康比財富更重要。|B1|health|health,important||
+2187|gradually|The pain is gradually getting better.|疼痛漸漸好轉了。|B1|health|pain,get<getting,good<better||
+2188|tank|Please fill up the tank.|請幫我把油箱加滿。|B1|travel|please,fill|fill up|tank 在此為「油箱」，與詞表解釋「坦克」不同
+2189|evil|The villain in the movie is pure evil.|電影裡的反派壞透了。|B2|daily|movie,pure||evil 在此為名詞「邪惡」
+2190|remarkable|She made remarkable progress this year.|她今年進步得很驚人。|B2|study|make<made,progress,year||
+2191|tune|I can't get this tune out of my head.|這首曲子一直在我腦中揮之不去。|B1|daily|get,head||
+2192|grass|Please keep off the grass.|請勿踐踏草皮。|A2|travel|please,keep|keep off ...|
+2193|invitation|Thanks for the invitation!|謝謝你的邀請！|A2|social|thank<Thanks||
+2194|transition|The transition to the new system went smoothly.|轉換到新系統的過程很順利。|B2|work|new,system||
+2195|frighten|Loud noises frighten my dog.|大聲的噪音會嚇到我的狗。|B1|daily|loud,noise<noises,dog||
+2196|bid|I placed a bid on a used camera online.|我在網路上對一台二手相機出了價。|B2|shopping|place<placed,camera,online||
+2197|breed|What breed is your dog?|你的狗是什麼品種？|B1|daily|dog||breed 在此為名詞「品種」，與詞表解釋「繁殖」不同
+2198|extraordinary|The view from the top was extraordinary.|從山頂看出去的景色非凡。|B2|travel|view,top||
+2199|brilliant|That's a brilliant idea!|這主意太棒了！|B1|social|idea||

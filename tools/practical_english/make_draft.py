@@ -93,6 +93,8 @@ def main():
         for b in range(NGSL_BATCHES + 1, batch):
             prev = os.path.join(HERE, 'source', f'draft_{b:03d}.tsv')
             if not os.path.exists(prev):
+                if check_only:
+                    continue  # 只檢查時句子 ID 不重要
                 sys.exit(f'缺少 {os.path.relpath(prev, ROOT)}，請依序產生')
             first_id += len(read_tsv(prev, HEADER))
     else:

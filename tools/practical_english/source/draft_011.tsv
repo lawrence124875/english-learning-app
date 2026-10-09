@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1001	1000	difficulty	difficulty	I had some difficulty finding the hotel.	我找飯店的時候遇到了一些困難。	B1	travel	ngsl_2809_1000	ngsl_2809_0080|ngsl_2809_0758	have difficulty doing	
+1002	1001	purchase	purchase	Keep the receipt as proof of purchase.	請保留收據作為購買證明。	B2	shopping	ngsl_2809_1001	ngsl_2809_0176|ngsl_2809_2020	proof of purchase	
+1003	1002	shoot	shot	We shot the whole video in one day.	我們一天就把整支影片拍完了。	B1	work	ngsl_2809_1002	ngsl_2809_0309|ngsl_2809_1064|ngsl_2809_0034|ngsl_2809_0084		shoot 在此為「拍攝」，NGSL 中文為「射擊」
+1004	1003	announce	announced	They just announced that the flight is delayed.	他們剛宣布班機延誤。	B1	travel	ngsl_2809_1003	ngsl_2809_0063|ngsl_2809_1218|ngsl_2809_1309		announced 為過去式
+1005	1004	unless	unless	We'll eat outside unless it rains.	除非下雨，否則我們會在外面吃。	B1	food	ngsl_2809_1004	ngsl_2809_0475|ngsl_2809_0490|ngsl_2809_1231		
+1006	1005	independent	independent	She's very independent for her age.	以她的年紀來說，她很獨立。	B1	social	ngsl_2809_1005	ngsl_2809_0281		
+1007	1006	recommend	recommend	What do you recommend?	你推薦什麼？	A2	food	ngsl_2809_1006			
+1008	1007	survey	survey	Could you fill out a short survey?	可以請你填一份簡短的問卷嗎？	B1	shopping	ngsl_2809_1007	phave_list_150_0120|ngsl_2809_0418	fill out	survey 在此為「問卷調查」
+1009	1008	majority	majority	The majority of our customers are students.	我們大部分的顧客都是學生。	B2	work	ngsl_2809_1008	ngsl_2809_0486|ngsl_2809_0247	the majority of	
+1010	1009	stick	stick	Stick the note on the fridge.	把便條貼在冰箱上。	A2	daily	ngsl_2809_1009	ngsl_2809_0383		stick 在此為動詞「貼」
+1011	1010	request	request	I'd like to request a window seat.	我想要求靠窗的座位。	B1	travel	ngsl_2809_1010	ngsl_2809_0044|ngsl_2809_0733|ngsl_2809_0851	window seat	
+1012	1011	rich	rich	This cake is too rich for me.	這個蛋糕對我來說太膩了。	B1	food	ngsl_2809_1011	ngsl_2809_2172|ngsl_2809_0117		rich 在此為「（食物）濃郁、油膩」，NGSL 中文為「富有的」
+1013	1012	wind	wind	The wind is really strong today.	今天風好大。	A1	daily	ngsl_2809_1012	ngsl_2809_0103|ngsl_2809_0460|ngsl_2809_0245		
+1014	1013	none	none	None of my friends can come.	我的朋友都沒辦法來。	B1	social	ngsl_2809_1013	ngsl_2809_0207|ngsl_2809_0064	none of	
+1015	1014	exchange	exchange	Where can I exchange money?	我可以在哪裡換錢？	A2	travel	ngsl_2809_1014	ngsl_2809_0200	exchange money	
+1016	1015	budget	budget	What's your budget?	你的預算是多少？	B1	shopping	ngsl_2809_1015			
+1017	1016	famous	famous	This street is famous for its night market.	這條街以夜市聞名。	A2	travel	ngsl_2809_1016	ngsl_2809_0597|ngsl_2809_0269|ngsl_2809_0218	famous for	
+1018	1017	blood	blood	I need to get a blood test.	我得去驗血。	B1	health	ngsl_2809_1017	ngsl_2809_0089|ngsl_2809_0042|ngsl_2809_0331	blood test	
+1019	1018	appropriate	appropriate	Is this outfit appropriate for the interview?	這套衣服適合穿去面試嗎？	B1	work	ngsl_2809_1018	ngsl_2809_0783		outfit 不在詞表
+1020	1019	block	blocked	The road is blocked because of the snow.	因為下雪，道路封閉了。	B1	travel	ngsl_2809_1019	ngsl_2809_0520|ngsl_2809_1949	because of	blocked 為過去分詞
+1021	1020	warm	warm	Bring a warm jacket.	帶一件保暖的外套。	A1	travel	ngsl_2809_1020	ngsl_2809_0195|ngsl_2809_2252		
+1022	1021	count	count	Can you count the chairs for me?	你可以幫我數一下椅子嗎？	A1	work	ngsl_2809_1021	ngsl_2809_1059		
+1023	1022	scene	scene	This is my favorite scene in the movie.	這是我在這部電影裡最喜歡的一幕。	B1	social	ngsl_2809_1022	ngsl_2809_0999|ngsl_2809_0761		
+1024	1023	writer	writer	He's a writer for a travel magazine.	他是一本旅遊雜誌的作家。	A2	work	ngsl_2809_1023	ngsl_2809_0502|ngsl_2809_0984		
+1025	1024	content	content	We create content for social media.	我們為社群媒體製作內容。	B1	work	ngsl_2809_1024	ngsl_2809_0385|ngsl_2809_0380	social media	
+1026	1025	prevent	prevent	Washing your hands helps prevent colds.	洗手有助於預防感冒。	B1	health	ngsl_2809_1025	ngsl_2809_1367|ngsl_2809_0197|ngsl_2809_0132|ngsl_2809_0866		
+1027	1026	safe	safe	Is it safe to walk here at night?	晚上在這裡走路安全嗎？	A2	travel	ngsl_2809_1026	ngsl_2809_0338|ngsl_2809_0097|ngsl_2809_0269		
+1028	1027	invite	inviting	Thanks for inviting me.	謝謝你邀請我。	A2	social	ngsl_2809_1027	ngsl_2809_0243		inviting 為動名詞
+1029	1028	mix	mix	Mix the flour and the eggs.	把麵粉和蛋混在一起。	A2	food	ngsl_2809_1028	ngsl_2809_1380		
+1030	1029	element	element	Trust is a key element of any team.	信任是任何團隊的關鍵要素。	B2	work	ngsl_2809_1029	ngsl_2809_1074|ngsl_2809_0658|ngsl_2809_0406		element 在此為「要素」
+1031	1030	effective	effective	This medicine is very effective.	這種藥非常有效。	B1	health	ngsl_2809_1030	ngsl_2809_1760		
+1032	1031	correct	correct	Is this the correct address?	這是正確的地址嗎？	A2	official	ngsl_2809_1031	ngsl_2809_0557		
+1033	1032	medical	medical	Do you have medical insurance?	你有醫療保險嗎？	B1	health	ngsl_2809_1032	ngsl_2809_1313	medical insurance	
+1034	1033	admit	admit	I admit I was wrong.	我承認是我錯了。	B1	social	ngsl_2809_1033	ngsl_2809_0574		
+1035	1034	beat	beat	Our team beat them easily.	我們隊輕鬆打敗了他們。	B1	social	ngsl_2809_1034	ngsl_2809_0406|ngsl_2809_0968		beat 為過去式
+1036	1035	telephone	telephone	May I use your telephone?	我可以借用你的電話嗎？	A2	phone	ngsl_2809_1035	ngsl_2809_0096|ngsl_2809_0067		
+1037	1036	copy	copy	Can I get a copy of this?	可以給我一份這個的影本嗎？	A2	work	ngsl_2809_1036	ngsl_2809_0042		copy 在此為名詞「影本、副本」
+1038	1037	committee	committee	The committee will decide next month.	委員會下個月會做決定。	B2	work	ngsl_2809_1037	ngsl_2809_0358|ngsl_2809_0150|ngsl_2809_0208		
+1039	1038	aware	aware	Are you aware of the risks?	你知道有哪些風險嗎？	B1	work	ngsl_2809_1038	ngsl_2809_0544	be aware of	
+1040	1039	advice	advice	Can I ask for your advice?	我可以請教你的意見嗎？	A2	social	ngsl_2809_1039	ngsl_2809_0133	ask for advice	
+1041	1040	handle	handle	Don't worry, I'll handle it.	別擔心，我來處理。	B1	work	ngsl_2809_1040	ngsl_2809_0652		
+1042	1041	glass	glass	This table is made of glass.	這張桌子是玻璃做的。	A2	daily	ngsl_2809_1041	ngsl_2809_0449|ngsl_2809_0047	made of	
+1043	1042	trial	trial	The app has a free trial for a month.	這個應用程式有一個月的免費試用。	B1	shopping	ngsl_2809_1042	ngsl_2809_0394|ngsl_2809_0208	free trial	trial 在此為「試用」
+1044	1043	stress	stress	Exercise is good for stress.	運動有助於紓壓。	B1	health	ngsl_2809_1043	ngsl_2809_0916|ngsl_2809_0055		
+1045	1044	radio	radio	I heard the song on the radio.	我在收音機上聽到這首歌。	A2	daily	ngsl_2809_1044	ngsl_2809_0177|ngsl_2809_0940	on the radio	
+1046	1045	administration	administration	Please contact the administration office.	請聯絡行政辦公室。	B2	official	ngsl_2809_1045	ngsl_2809_0470|ngsl_2809_0599|ngsl_2809_0342		
+1047	1046	complex	complex	The problem is more complex than we thought.	這個問題比我們想的還要複雜。	B1	work	ngsl_2809_1046	ngsl_2809_0119|ngsl_2809_0041|ngsl_2809_0046		
+1048	1047	text	text	Text me when you get home.	到家後傳個訊息給我。	A2	phone	ngsl_2809_1047	ngsl_2809_0042|ngsl_2809_0160	get home	text 在此為動詞「傳簡訊」，NGSL 中文為「文本」
+1049	1048	context	context	Can you guess the meaning from the context?	你能從上下文猜出意思嗎？	B1	study	ngsl_2809_1048	ngsl_2809_0900		
+1050	1049	ride	ride	Can you give me a ride to the station?	你可以載我去車站嗎？	A2	travel	ngsl_2809_1049	ngsl_2809_0076|ngsl_2809_0708	give someone a ride	ride 在此為名詞「搭便車」
+1051	1050	directly	directly	You can pay the driver directly.	你可以直接付錢給司機。	B1	travel	ngsl_2809_1050	ngsl_2809_0219|ngsl_2809_1199		
+1052	1051	heavy	heavy	This suitcase is too heavy.	這個行李箱太重了。	A1	travel	ngsl_2809_1051	ngsl_2809_0117		
+1053	1052	remove	remove	Please remove your shoes.	請脫鞋。	B1	daily	ngsl_2809_1052	ngsl_2809_0470|ngsl_2809_1475		remove 在此為「脫掉」
+1054	1053	conduct	conduct	The company has a strict code of conduct.	公司有嚴格的行為準則。	B2	work	ngsl_2809_1053	ngsl_2809_0106|ngsl_2809_2567|ngsl_2809_1345	code of conduct	
+1055	1054	equipment	equipment	We rented all the equipment for the camping trip.	露營的裝備我們全都是租來的。	B1	travel	ngsl_2809_1054	ngsl_2809_1565|ngsl_2809_0824		
+1056	1055	otherwise	otherwise	Hurry up, otherwise we'll miss the bus.	快一點，不然我們會錯過公車。	B1	travel	ngsl_2809_1055	ngsl_2809_2682|ngsl_2809_0644|ngsl_2809_0809	hurry up	
+1057	1056	title	title	What's the title of the book?	這本書的書名是什麼？	A2	study	ngsl_2809_1056	ngsl_2809_0170		
+1058	1057	extra	extra	Is there an extra charge for breakfast?	早餐要另外收費嗎？	A2	travel	ngsl_2809_1057	ngsl_2809_0497|ngsl_2809_1818	extra charge	
+1059	1058	executive	executive	She's a senior executive at a bank.	她是一家銀行的高階主管。	B2	work	ngsl_2809_1058	ngsl_2809_1206|ngsl_2809_0626		
+1060	1059	chair	chair	Please pull up a chair.	請拉張椅子過來坐。	A2	social	ngsl_2809_1059	ngsl_2809_0470|ngsl_2809_0798	pull up a chair	
+1061	1060	expensive	expensive	That's too expensive for me.	那對我來說太貴了。	A1	shopping	ngsl_2809_1060	ngsl_2809_0117		
+1062	1061	sample	sample	Can I try a sample?	我可以試吃一下嗎？	A2	food	ngsl_2809_1061	ngsl_2809_0124		sample 在此為「試吃品」
+1063	1062	sex	sex	Do you know the baby's sex yet?	你們知道寶寶的性別了嗎？	B1	health	ngsl_2809_1062	ngsl_2809_0040|ngsl_2809_0870|ngsl_2809_0310		sex 在此為「性別」
+1064	1063	deliver	deliver	Do you deliver to this area?	你們有外送到這一區嗎？	A2	food	ngsl_2809_1063	ngsl_2809_0203		deliver 在此為「外送、配送」
+1065	1064	video	video	He sent me a funny video.	他傳了一支好笑的影片給我。	A1	phone	ngsl_2809_1064	ngsl_2809_0322|ngsl_2809_1236		
+1066	1065	connection	connection	The internet connection here is slow.	這裡的網路連線很慢。	A2	daily	ngsl_2809_1065	ngsl_2809_0097|ngsl_2809_1117		
+1067	1066	primary	primary	Safety is our primary concern.	安全是我們最主要的考量。	B2	work	ngsl_2809_1066	ngsl_2809_1310|ngsl_2809_0302		
+1068	1067	weather	weather	What's the weather like tomorrow?	明天天氣怎麼樣？	A1	daily	ngsl_2809_1067	ngsl_2809_0725		
+1069	1068	collect	collect	I'll collect you from the airport.	我會去機場接你。	B1	travel	ngsl_2809_1068			collect 在此為英式用法「接人」，NGSL 中文為「收集」
+1070	1069	inform	inform	Please inform us of any changes.	如有任何變動請通知我們。	B2	official	ngsl_2809_1069	ngsl_2809_0470|ngsl_2809_0112	inform someone of	
+1071	1070	principle	principle	It's a matter of principle.	這是原則問題。	B2	social	ngsl_2809_1070	ngsl_2809_0339	a matter of principle	
+1072	1071	straight	straight	Go straight and turn left.	直走然後左轉。	A1	travel	ngsl_2809_1071	ngsl_2809_0030|ngsl_2809_0193|ngsl_2809_1219	turn left	straight 在此為副詞「直直地」
+1073	1072	appeal	appeal	He decided to appeal the decision.	他決定對這個判決提出上訴。	C1	news	ngsl_2809_1072	ngsl_2809_0358|ngsl_2809_0448		
+1074	1073	highly	highly	I highly recommend this place.	我強力推薦這個地方。	B1	food	ngsl_2809_1073	ngsl_2809_1006|ngsl_2809_0113		
+1075	1074	trust	trust	I trust you.	我相信你。	A2	social	ngsl_2809_1074			
+1076	1075	wonderful	wonderful	We had a wonderful time.	我們玩得很開心。	A2	social	ngsl_2809_1075	ngsl_2809_0048	have a wonderful time	
+1077	1076	flat	flat	I've got a flat tire.	我的輪胎沒氣了。	B1	travel	ngsl_2809_1076	ngsl_2809_1330	flat tire	flat 在此為「（輪胎）洩了氣的」
+1078	1077	absolutely	absolutely	You're absolutely right.	你說得完全正確。	B1	social	ngsl_2809_1077	ngsl_2809_0091		
+1079	1078	flow	flowing	The traffic is flowing smoothly now.	現在車流很順暢。	B2	travel	ngsl_2809_1078	ngsl_2809_1224|ngsl_2809_0069		flowing 為進行式
+1080	1079	fair	fair	That's not fair!	這樣不公平！	A2	social	ngsl_2809_1079			
+1081	1080	additional	additional	Additional towels are in the closet.	額外的毛巾放在衣櫃裡。	B1	travel	ngsl_2809_1080			
+1082	1081	responsible	responsible	Who's responsible for this project?	誰負責這個專案？	B1	work	ngsl_2809_1081	ngsl_2809_0517	responsible for	
+1083	1082	farm	farm	We visited a strawberry farm.	我們去了一座草莓農場。	A2	travel	ngsl_2809_1082	ngsl_2809_0332		
+1084	1083	collection	collection	The museum has a huge collection of paintings.	博物館收藏了大量畫作。	B1	travel	ngsl_2809_1083	ngsl_2809_1396|ngsl_2809_0861		
+1085	1084	hang	hang	You can hang your coat here.	你可以把外套掛在這裡。	A2	daily	ngsl_2809_1084	ngsl_2809_1862|ngsl_2809_0097		
+1086	1085	negative	negative	The test result was negative.	檢驗結果是陰性。	B1	health	ngsl_2809_1085	ngsl_2809_0331|ngsl_2809_0232		negative 在此為「陰性的」，NGSL 中文為「負面的」
+1087	1086	band	band	My favorite band is playing tonight.	我最喜歡的樂團今晚有演出。	A2	social	ngsl_2809_1086	ngsl_2809_0999|ngsl_2809_0157|ngsl_2809_1413		
+1088	1087	relative	relatives	We're visiting relatives this weekend.	我們這個週末要去拜訪親戚。	B1	social	ngsl_2809_1087	ngsl_2809_0332|ngsl_2809_0933		relative 在此為名詞「親戚」，NGSL 中文為「相對的」
+1089	1088	tour	tour	Is there a guided tour of the castle?	城堡有導覽行程嗎？	B1	travel	ngsl_2809_1088	ngsl_2809_2672	guided tour	
+1090	1089	alternative	alternative	Is there an alternative route?	有其他替代路線嗎？	B1	travel	ngsl_2809_1089	ngsl_2809_1409		
+1091	1090	software	software	You need to update the software.	你需要更新軟體。	B1	work	ngsl_2809_1090	ngsl_2809_0089|ngsl_2809_1932		
+1092	1091	pair	pair	I bought a new pair of shoes.	我買了一雙新鞋。	A1	shopping	ngsl_2809_1091	ngsl_2809_0241|ngsl_2809_0078|ngsl_2809_1475	a pair of	
+1093	1092	ship	ship	The ship leaves at noon.	船中午開。	A2	travel	ngsl_2809_1092	ngsl_2809_0125		
+1094	1093	attitude	attitude	She always has a positive attitude.	她總是抱持正面的態度。	B1	work	ngsl_2809_1093	ngsl_2809_0182|ngsl_2809_0858		
+1095	1094	cheap	cheap	Do you know any cheap hotels around here?	你知道這附近有便宜的飯店嗎？	A2	travel	ngsl_2809_1094	ngsl_2809_0040|ngsl_2809_0758|ngsl_2809_0169|ngsl_2809_0097		
+1096	1095	double	double	I'd like a double room, please.	我要一間雙人房，謝謝。	A2	travel	ngsl_2809_1095	ngsl_2809_0044|ngsl_2809_0253|ngsl_2809_0470	double room	
+1097	1096	leg	legs	My legs are sore from hiking.	爬山爬到腿好痠。	A2	health	ngsl_2809_1096			legs 為複數
+1098	1097	observe	observed	We observed the birds from a distance.	我們從遠處觀察那些鳥。	B2	travel	ngsl_2809_1097	ngsl_2809_1270|ngsl_2809_1144	from a distance	
+1099	1098	sentence	sentence	Can you read this sentence again?	你可以再唸一次這個句子嗎？	A1	study	ngsl_2809_1098	ngsl_2809_0206|ngsl_2809_0174		
+1100	1099	print	print	Can you print this for me?	你可以幫我印這個嗎？	A2	work	ngsl_2809_1099			

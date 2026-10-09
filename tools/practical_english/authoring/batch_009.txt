@@ -1,0 +1,101 @@
+# NGSL index 800–899
+800|husband|My husband is cooking dinner tonight.|今晚我老公煮晚餐。|A1|daily|cook<cooking,dinner,tonight||
+801|access|Do guests have access to the gym?|房客可以使用健身房嗎？|B1|travel|guest<guests|have access to|access 在此為「使用權」
+802|movements|Slow movements help me relax.|緩慢的動作能幫我放鬆。|B1|health|slow,help,relax||movement 在此為「動作」，NGSL 中文為「運動」
+803|treat|Lunch is on me. It's my treat.|午餐我付，我請客。|A2|food|lunch|It's my treat.|treat 在此為名詞「請客」，NGSL 中文為「對待」
+804|identify|Can you identify the man in this photo?|你認得出這張照片裡的男人嗎？|B1|daily|man,photo||identify 在此為「認出」
+805|loss|Sorry for your loss.|請節哀。|B1|social|sorry|Sorry for your loss.|loss 在此為「失去（親人）」
+806|shall|Shall we go now?|我們現在走好嗎？|A2|social|go,now|Shall we ...?|
+807|modern|The hotel has a very modern design.|這間飯店的設計很現代。|B1|travel|hotel,design||
+808|pressure|I'm under a lot of pressure at work.|我工作壓力很大。|B1|work|lot,work|under pressure|
+809|bus|The bus is running late.|公車誤點了。|A2|travel|run<running,late||
+810|treatment|The treatment takes about two weeks.|療程大約要兩週。|B1|health|take<takes,about,two,week<weeks||
+811|conference|She's at a conference in Singapore.|她在新加坡參加研討會。|B1|work|||conference 在此為「研討會、大型會議」
+812|yourself|Help yourself to some cake.|請自己拿蛋糕吃。|A2|food|help,cake|help yourself|
+813|supplies|We're running low on office supplies.|我們的辦公用品快用完了。|B1|work|run<running,low,office|run low on|supplies 為複數，在此為「用品」
+814|village|My grandparents live in a small village.|我的祖父母住在一個小村莊。|A2|daily|live,small||
+815|worth|The museum is worth a visit.|那間博物館值得去看看。|B1|travel|museum,visit|worth a visit|
+816|natural|This juice is made from natural fruit.|這杯果汁是用天然水果做的。|B1|food|make<made,fruit|made from|
+817|express|It's hard to express my feelings in English.|用英文表達我的感受很難。|B1|study|hard||
+818|indicates|The red light indicates that the battery is low.|紅燈表示電池電量不足。|B2|daily|red,light,low||indicate 在此為「表示、顯示」
+819|attend|I can't attend the meeting today.|我今天沒辦法參加會議。|B1|work|today||
+820|brothers|Do you have any brothers or sisters?|你有兄弟姊妹嗎？|A1|social|sister<sisters||
+821|investment|Buying a good laptop is a smart investment.|買一台好的筆電是很聰明的投資。|B1|shopping|buy<Buying,good,smart||
+822|score|What's the score?|現在比數多少？|A2|social|||score 在此為「比數」
+823|organizing|Who's organizing the party?|派對是誰在籌辦的？|B1|social|party||organize 在此為「籌辦」，NGSL 中文為「組織」
+824|trip|Have a nice trip!|祝你旅途愉快！|A1|travel|nice|Have a nice trip!|
+825|beyond|The view was beyond my expectations.|那裡的景色超乎我的預期。|B2|travel|view,expectation<expectations|beyond expectations|
+826|sleep|Did you get enough sleep last night?|你昨晚睡得夠嗎？|A2|health|get,enough,last,night|get enough sleep|
+827|fish|I'll have the fish, please.|我要點魚，謝謝。|A1|food|please|I'll have ...|
+828|promise|I promise I won't be late.|我保證不會遲到。|A2|social|late||promise 在此為動詞「保證」
+829|potential|She has a lot of potential.|她很有潛力。|B2|work|lot||
+830|energy|I have no energy today.|我今天一點力氣都沒有。|A2|health|today||energy 在此為「精力」
+831|trouble|I'm having trouble with my computer.|我的電腦出了點問題。|A2|work|computer|have trouble with|
+832|relation|This has no relation to our project.|這跟我們的專案沒有關係。|B2|work|project|no relation to|
+833|touch|Please don't touch the paintings.|請勿觸摸畫作。|A2|travel|please||
+834|file|Can you send me the file by email?|你可以用電子郵件把檔案寄給我嗎？|A2|work|send,email|by email|file 在此為「（電腦）檔案」
+835|middle|I woke up in the middle of the night.|我半夜醒來。|A2|daily|wake<woke,night|in the middle of|
+836|bar|Let's meet at the bar after work.|下班後在酒吧見吧。|A2|social|meet,after,work|after work|
+837|suffers|He suffers from back pain.|他有背痛的毛病。|B1|health|back,pain|suffer from|suffers 為第三人稱單數
+838|strategy|We need a better strategy.|我們需要更好的策略。|B1|work|need||
+839|deep|Take a deep breath.|深呼吸。|A2|health|take,breath|take a deep breath|
+840|except|The shop is open every day except Monday.|那家店除了週一以外每天都有營業。|A2|shopping|shop,open,every,day||
+841|clean|Is this towel clean?|這條毛巾是乾淨的嗎？|A1|travel|||
+842|tend|I tend to eat too much when I'm stressed.|我壓力大的時候容易吃太多。|B1|health|eat,too,much|tend to|
+843|advance|Please book your tickets in advance.|請提前訂票。|B1|travel|please,book,ticket<tickets|in advance|advance 在此為片語「提前」
+844|fill|Could you fill this bottle with water?|你可以幫我把這個瓶子裝滿水嗎？|A2|daily|bottle,water|fill ... with|
+845|stars|You can see a lot of stars here at night.|晚上在這裡可以看到很多星星。|A1|travel|see,lot,here,night||stars 為複數
+846|network|The network is down again.|網路又斷了。|B1|work|down,again||
+847|generally|I generally go to bed around eleven.|我通常十一點左右睡覺。|B1|daily|go,bed,around,eleven|go to bed|generally 在此為「通常」
+848|operation|He needs an operation on his knee.|他的膝蓋需要動手術。|B1|health|need<needs,knee||operation 在此為「手術」，NGSL 中文為「運作」
+849|match|Did you watch the match last night?|你昨晚有看比賽嗎？|A2|social|watch,last,night||
+850|avoid|Try to avoid sugary drinks.|盡量避免含糖飲料。|B1|health|try,drink<drinks|try to|
+851|seat|Is this seat taken?|這個位子有人坐嗎？|A1|travel|take<taken|Is this seat taken?|
+852|throw|Don't throw that away.|那個別丟掉。|A2|daily||throw away|
+853|tasks|I have a few tasks to finish before lunch.|午餐前我有幾件工作要完成。|B1|work|few,finish,lunch||tasks 為複數
+854|normal|Is it normal to feel this way?|有這種感覺是正常的嗎？|B1|health|feel,way||
+855|goal|My goal is to run a full marathon.|我的目標是跑完一場全馬。|B1|health|run,full||
+856|associate|Many people associate summer with the beach.|很多人一想到夏天就會聯想到海灘。|B2|daily|people,summer,beach|associate ... with ...|associate 在此為「聯想」
+857|blue|She was wearing a blue dress.|她穿著一件藍色洋裝。|A1|shopping|wear<wearing,dress||
+858|positive|Try to stay positive.|試著保持樂觀。|B1|social|try,stay|stay positive|positive 在此為「樂觀的」
+859|options|What are my options?|我有哪些選擇？|B1|shopping|||options 為複數
+860|box|Can I get a box for the leftovers?|可以給我一個盒子裝剩菜嗎？|A2|food|get||
+861|huge|Their new house is huge.|他們的新房子超大的。|A2|daily|new,house||
+862|message|Can I leave a message?|我可以留言嗎？|A2|phone|leave|leave a message|
+863|instance|For instance, you could take the train.|比如說，你可以搭火車。|B1|travel|take,train|for instance|
+864|style|I love your style.|我很喜歡你的穿搭風格。|A2|social|love||
+865|refer|Please refer to page ten.|請參考第十頁。|B1|study|please,page,ten|refer to|
+866|cold|It's really cold outside.|外面真的好冷。|A1|daily|really,outside||
+867|push|Push the button to start.|按這個按鈕開始。|A1|daily|button,start||push 在此為「按」
+868|quarter|It's a quarter past three.|現在三點十五分。|A2|daily|past,three|a quarter past|
+869|assume|I assume you've already eaten.|我想你應該已經吃過了吧。|B2|food|already,eat<eaten||assume 在此為「猜想、認為」
+870|baby|What a lovely baby!|好可愛的寶寶！|A1|social|lovely||
+871|successful|The event was very successful.|這次活動非常成功。|B1|work|event||
+872|sings|She sings really well.|她唱歌唱得很好。|A1|social|really,well||sings 為第三人稱單數
+873|doubt|I doubt he'll come.|我覺得他不太會來。|B1|social|come||doubt 在此為「懷疑、不太相信」
+874|competition|She won first prize in the competition.|她在比賽中拿了第一名。|B1|social|win<won,first,prize||competition 在此為「比賽」，NGSL 中文為「競爭」
+875|theory|That's just a theory.|那只是個理論而已。|B1|study|just||
+876|propose|I propose we take a short break.|我提議我們休息一下。|B2|work|take,short,break|take a break|
+877|reference|Can I use you as a reference?|我可以請你當我的推薦人嗎？|B2|work|use||reference 在此為「推薦人、證明人」，NGSL 中文為「參考」
+878|argument|That's a good argument.|這個論點很有道理。|B1|study|good||
+879|adults|Tickets are ten dollars for adults.|成人票是十美元。|A2|travel|ticket<Tickets,ten,dollar<dollars||adults 為複數
+880|flying|We're flying to Bangkok tomorrow.|我們明天搭飛機去曼谷。|A2|travel|tomorrow||flying 為進行式
+881|document|Please sign this document.|請在這份文件上簽名。|B1|official|please,sign||
+882|pattern|I like the pattern on this shirt.|我喜歡這件襯衫上的圖案。|B1|shopping|like,shirt||pattern 在此為「圖案」，NGSL 中文為「模式」
+883|application|I sent my application last week.|我上週把申請書寄出去了。|B1|work|send<sent,last,week||
+884|hot|Be careful, the soup is hot.|小心，湯很燙。|A1|food|careful||
+885|obviously|Obviously, we need more time.|很明顯，我們需要更多時間。|B1|work|need,more,time||
+886|unclear|It's unclear when the train will arrive.|火車什麼時候會到還不清楚。|B2|travel|train,arrive||
+887|bill|Can we have the bill, please?|麻煩幫我們結帳。|A2|food|please||
+888|searching|I'm searching for a cheap flight.|我在找便宜的機票。|A2|travel|cheap,flight|search for|
+889|separate|Can we have separate bills?|我們可以分開結帳嗎？|A2|food|||separate 在此為「分開的」
+890|central|Our hotel is in central London.|我們的飯店在倫敦市中心。|B1|travel|hotel||
+891|career|She wants a career in teaching.|她想從事教職。|B1|work|want<wants,teach<teaching||
+892|anyway|Thanks anyway.|還是謝謝你。|A2|social|thank<Thanks|Thanks anyway.|
+893|speech|He gave a short speech at the wedding.|他在婚禮上簡短致詞。|B1|social|give<gave,short|give a speech|
+894|dog|Do you walk your dog every day?|你每天都會遛狗嗎？|A1|daily|walk,every,day|walk the dog|
+895|officer|Excuse me, officer, I lost my wallet.|警察先生，不好意思，我的錢包掉了。|B1|official|excuse,lose<lost||officer 在此為「警員」，NGSL 中文為「軍官」
+896|throughout|It rained throughout the day.|雨下了一整天。|B1|daily|rain<rained,day||
+897|oil|Fry the eggs in a little oil.|用一點油煎蛋。|A2|food|egg<eggs,little||oil 在此為「食用油」，NGSL 中文為「石油」
+898|dress|That dress looks great on you.|那件洋裝你穿起來很好看。|A2|shopping|look<looks,great||
+899|profit|The shop made a small profit this year.|這家店今年賺了一點小錢。|B2|work|shop,make<made,small,year|make a profit|

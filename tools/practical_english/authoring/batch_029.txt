@@ -1,0 +1,10 @@
+# NGSL index 2800–2808
+2800|alright|Is everything alright?|一切都還好嗎？|A1|social|everything||
+2801|lazy|I always feel lazy on Sundays.|我星期天總是懶洋洋的。|A2|daily|always,feel||
+2802|hello|Say hello to your mom for me.|幫我跟你媽媽問好。|A1|social|say,mom|say hello to ...|
+2803|Hunger|Hunger makes it hard to focus.|肚子餓的時候很難專心。|B1|health|make<makes,hard,focus||
+2804|insured|Is the car insured?|這輛車有保險嗎？|B1|official|car||
+2805|ashamed|I'm ashamed of what I said.|我對我說過的話感到羞愧。|B1|social|say<said|be ashamed of ...|
+2806|founded|The company was founded in 1990.|這家公司成立於 1990 年。|B1|work|company||found 在此為「創立」，非 find 的過去式
+2807|blog|She writes a travel blog.|她在寫旅遊部落格。|A2|travel|write<writes,travel||
+2808|thirst|I woke up with a terrible thirst.|我醒來時渴得要命。|B1|health|wake<woke,terrible||
