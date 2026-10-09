@@ -3,6 +3,9 @@
 
 撰寫稿：tools/practical_english/authoring/batch_NNN.txt，UTF-8，一行一句，`|` 分隔 9 欄：
   ngsl_index|form|sentence|zh-TW|level|category|secondaries|phrase_candidate|tagging_notes
+  - 第 001–029 批：第 1 欄是 NGSL index，依序 100 個一批（最後一批 9 句）。
+  - 第 030 批起（NGSL 以外的詞，以及詞義不同、要另外造句的同拼字詞）：第 1 欄改寫
+    正式 ID（例 phrase_list_506_0004），TSV 的 ngsl_index 留空；句子 ID 接在前面批次之後。
   - secondaries：逗號分隔，寫詞表裡的原形；句中形式不同時寫「原形<句中形式」，例如 key<keys。
     ID 由本工具從 assets/data 查出（同拼字取清單順序第一個），不手打。
   - 空行與 # 開頭的行略過。
@@ -29,6 +32,7 @@ SENSE_HEADER = ['sentence_id', 'primary_word_id', 'candidate_id', 'primary_zh', 
                 'decision', 'status', 'note']
 LEVELS = {'A1', 'A2', 'B1', 'B2', 'C1', 'C2'}
 BATCH_SIZE = 100
+NGSL_BATCHES = 29
 
 
 def normalize(text):
@@ -76,7 +80,23 @@ def main():
     lines = [l.rstrip('\n') for l in open(src, encoding='utf-8')]
     lines = [l for l in lines if l.strip() and not l.startswith('#')]
     errors, rows = [], []
+    extra = batch > NGSL_BATCHES
     first_idx = (batch - 1) * BATCH_SIZE
+    # 其他批次已用掉的主要詞，避免同一個 ID 當兩次主要詞
+    used = {}
+    for path in glob.glob(os.path.join(HERE, 'source', 'draft_*.tsv')):
+        if os.path.abspath(path) != os.path.abspath(out):
+            for r in read_tsv(path, HEADER):
+                used[r['primary_word_id']] = f"{os.path.basename(path)}#{r['id']}"
+    if extra:
+        first_id = len(ngsl) + 1
+        for b in range(NGSL_BATCHES + 1, batch):
+            prev = os.path.join(HERE, 'source', f'draft_{b:03d}.tsv')
+            if not os.path.exists(prev):
+                sys.exit(f'缺少 {os.path.relpath(prev, ROOT)}，請依序產生')
+            first_id += len(read_tsv(prev, HEADER))
+    else:
+        first_id = first_idx + 1
     for n, line in enumerate(lines):
         f = line.split('|')
         where = f'batch_{batch:03d}.txt 第 {n + 1} 句'
@@ -84,10 +104,21 @@ def main():
             errors.append(f'{where}: 欄位數 {len(f)}，應為 9')
             continue
         idx, form, sent, zh, level, cat, secs, phrase, notes = (x.strip() for x in f)
-        if idx != str(first_idx + n):
+        if extra:
+            if idx not in items:
+                errors.append(f'{where}: 第 1 欄應為正式 ID，「{idx}」不存在')
+                continue
+            pid, idx = idx, ''
+            word = items[pid]['w']
+        elif idx != str(first_idx + n):
             errors.append(f'{where}: ngsl_index 應為 {first_idx + n}，寫的是 {idx}')
             continue
-        word = ngsl[int(idx)]['w']
+        else:
+            pid = ngsl[int(idx)]['id']
+            word = ngsl[int(idx)]['w']
+        if pid in used:
+            errors.append(f'{where}: {pid} 已是 {used[pid]} 的主要詞')
+        used[pid] = where
         if not present(form, sent):
             errors.append(f'{where}: 主要詞形式「{form}」不在句中')
         if level not in LEVELS or not cat or not zh or not sent:
@@ -98,7 +129,6 @@ def main():
         if key in seen:
             errors.append(f'{where}: 與 {seen[key]} 重複')
         seen[key] = where
-        pid = ngsl[int(idx)]['id']
         sec_ids = []
         for spec in [s.strip() for s in secs.split(',') if s.strip()]:
             lemma, _, sform = spec.partition('<')
@@ -108,13 +138,13 @@ def main():
                 continue
             if not present(sform or lemma, sent):
                 errors.append(f'{where}: 次要詞形式「{sform or lemma}」不在句中')
-            if lemma.lower() == word.lower() or ids[0] in sec_ids:
+            if lemma.lower() == word.strip().lower() or ids[0] in sec_ids:
                 errors.append(f'{where}: 次要詞「{lemma}」與主要詞或其他次要詞重複')
             sec_ids.append(ids[0])
-        rows.append([str(first_idx + n + 1), idx, word, form, sent, zh, level, cat, pid,
+        rows.append([str(first_id + n), idx, word, form, sent, zh, level, cat, pid,
                      '|'.join(sec_ids), phrase, notes])
     expected = min(BATCH_SIZE, len(ngsl) - first_idx)
-    if len(rows) != expected:
+    if not extra and len(rows) != expected:
         errors.append(f'句數 {len(rows)}，應為 {expected}')
     if errors:
         sys.exit('\n'.join(errors) + f'\n{len(errors)} 個錯誤，未輸出')
@@ -134,13 +164,15 @@ def main():
     added = 0
     for r in rows:
         pid = r[8]
-        for cand in by_w[r[2].lower()]:
+        for cand in by_w[r[2].strip().lower()]:
             if cand == pid or items[cand]['m'].get('zh-TW') == items[pid]['m'].get('zh-TW'):
                 continue
             if (r[0], cand) not in old:
+                own = cand in used
                 old[(r[0], cand)] = dict(zip(SENSE_HEADER, [
                     r[0], pid, cand, items[pid]['m'].get('zh-TW', ''), items[cand]['m'].get('zh-TW', ''),
-                    'include', 'proposed', '同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋']))
+                    'exclude' if own else 'include', 'proposed',
+                    '詞義不同，這個 ID 另有自己的例句' if own else '同一個字，兩份清單的翻譯用字不同；句中詞義兩邊都涵蓋']))
                 added += 1
     with open(SENSE, 'w', encoding='utf-8', newline='') as fo:
         fo.write('\t'.join(SENSE_HEADER) + '\n')

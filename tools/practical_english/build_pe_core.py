@@ -3,14 +3,15 @@
 
 來源：tools/practical_english/source/batch_*.tsv（UTF-8，Tab 分隔，有表頭）
   id          句子流水號（1, 2, 3…），輸出成 pe_core_000001；全部批次接續、不可跳號
-  ngsl_index  目標字在 ngsl_2809 的 0-based index
-  word        目標字（必須等於 ngsl_2809 該 index 的 "w"，用來防打錯 index）
+  ngsl_index  目標字在 ngsl_2809 的 0-based index；主要詞不是 NGSL 時留空
+  word        目標字（必須等於 ngsl_2809 該 index 的 "w"，或主要詞 ID 的 "w"，用來防打錯）
   form        目標字在句子裡實際出現的樣子（例如 takes、Would），必須以完整單字出現
   sentence    英文句子（原創）
   zh-TW       繁中翻譯
   level       A1–C2
   category    daily、work、travel…
-  primary_word_id     主要詞 ID，必須等於 ngsl_2809 的 ngsl_index（每句恰好 1 個）
+  primary_word_id     主要詞 ID（每句恰好 1 個）：有 ngsl_index 時必須是該 NGSL 字；
+                      留空時可為 4 份詞表的任一 ID（NGSL 以外的詞、詞義不同另造句的同拼字詞）
   secondary_word_ids  次要詞 ID，`|` 分隔，可空白；只能用 4 份正式詞表裡的 ID
   phrase_candidate    片語候選（只留在來源檔，不進 App），可空白
   tagging_notes       標記備註（只留在來源檔，不進 App），可空白
@@ -118,13 +119,20 @@ def main():
     for expected, (where, r) in enumerate(rows, 1):
         if r['id'] != str(expected):
             errors.append(f'{where}: id 應為 {expected}（必須接續、不跳號）')
-        idx = int(r['ngsl_index']) if r['ngsl_index'].isdigit() else -1
-        if not 0 <= idx < len(ngsl) or ngsl[idx]['w'] != r['word']:
-            errors.append(f'{where}: ngsl_index {r["ngsl_index"]} 不是 "{r["word"]}"')
-            continue
+        if r['ngsl_index']:
+            idx = int(r['ngsl_index']) if r['ngsl_index'].isdigit() else -1
+            if not 0 <= idx < len(ngsl) or ngsl[idx]['w'] != r['word']:
+                errors.append(f'{where}: ngsl_index {r["ngsl_index"]} 不是 "{r["word"]}"')
+                continue
+            primary = ngsl[idx]['id']
+        else:
+            primary = r['primary_word_id']
+            if primary not in items or items[primary]['w'] != r['word']:
+                errors.append(f'{where}: primary_word_id {primary} 不是 "{r["word"]}"')
+                continue
         if not re.search(r"(?<![A-Za-z'])" + re.escape(r['form']) + r"(?![A-Za-z])", r['sentence'], re.I):
             errors.append(f'{where}: 句子裡找不到完整單字 "{r["form"]}"')
-        if r['form'].lower() != r['word'].lower() and r['word'].lower() not in r['form'].lower():
+        if r['ngsl_index'] and r['form'].lower() != r['word'].lower() and r['word'].lower() not in r['form'].lower():
             print(f'提醒 {where}: form "{r["form"]}" 與 word "{r["word"]}" 拼法不同，請確認是同一字的變化')
         if r['level'] not in LEVELS:
             errors.append(f'{where}: level "{r["level"]}" 不合法')
@@ -134,14 +142,13 @@ def main():
         if key in seen_text:
             errors.append(f'{where}: 與 {seen_text[key]} 重複')
         seen_text[key] = where
-        if idx in seen_target:
-            print(f'提醒 {where}: ngsl_index {idx} 已在 {seen_target[idx]} 出現過')
-        seen_target.setdefault(idx, where)
-        primary = ngsl[idx]['id']
+        if primary in seen_target:
+            errors.append(f'{where}: 主要詞 {primary} 已在 {seen_target[primary]} 當過主要詞')
+        seen_target.setdefault(primary, where)
         if r['primary_word_id'] != primary:
             errors.append(f'{where}: primary_word_id 應為 {primary}')
         refs = [primary]
-        for _, _, cand in by_surface[r['word'].lower()]:
+        for _, _, cand in by_surface[r['word'].strip().lower()]:
             if cand == primary:
                 continue
             if items[cand]['m'].get('zh-TW') == items[primary]['m'].get('zh-TW'):
@@ -158,7 +165,7 @@ def main():
         for ref in secondary:
             if ref not in items:
                 errors.append(f'{where}: 次要詞 {ref} 不在正式詞表')
-            elif ref in refs or items[ref]['w'].strip().lower() == r['word'].lower():
+            elif ref in refs or items[ref]['w'].strip().lower() == r['word'].strip().lower():
                 errors.append(f'{where}: 次要詞 {ref} 與主要詞重複')
         if len(set(secondary)) != len(secondary):
             errors.append(f'{where}: 次要詞 ID 重複')
@@ -201,9 +208,9 @@ def main():
         # 規則 A（SPEC §12）：這裡每句只有一個目標詞彙，任一 WordRef 在免費範圍內就解鎖。
         if not any(int(ref.rsplit('_', 1)[1]) < free_limit[ref.rsplit('_', 1)[0]] for ref in s['wordIds']):
             locked += 1
-    covered = len({int(r['ngsl_index']) for _, r in rows})
+    covered = {ref for s in sentences for ref in s['wordIds']}
     n_sec = sum(len(s.get('secondaryWordIds', [])) for s in sentences)
-    print(f'句子 {len(sentences)}（新增 {len(sentences) - len(old)}），涵蓋 NGSL {covered} 字；'
+    print(f'句子 {len(sentences)}（新增 {len(sentences) - len(old)}），wordIds 涵蓋 {len(covered)}／{len(items)} 個詞；'
           f'次要詞 {n_sec} 個；免費版未看廣告時鎖住 {locked} 句')
     if draft:
         for p in pending:
