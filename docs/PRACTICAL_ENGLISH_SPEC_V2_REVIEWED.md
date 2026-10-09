@@ -97,7 +97,7 @@ Facts and rules:
 - Custom `WordItem.id` values (`custom_<row>_<hash>`) can repeat across custom datasets, so custom words must always be qualified with their dataset ID.
 - `/` is reserved as the separator; built-in IDs never contain `/`.
 - Resolution: `WordRef → (dataset, WordItem)` through a map built in memory when Practical English loads. Unresolvable refs are kept in the data and counted as "unresolved". They are never deleted.
-- Deleted custom datasets (confirmed 2026-10-09): a ref whose custom dataset no longer exists is ignored. A sentence that still has at least one resolvable ref in `wordIds` is shown and judged only by its resolvable refs, so re-importing a deleted custom dataset and its sentences makes them usable again. Any other unresolvable ref (an unknown built-in ID, or a missing word in an existing dataset) still hides the sentence. During the S1a merge, the §12 sentence about unresolvable WordRefs is aligned with this rule.
+- Deleted custom datasets (confirmed 2026-10-09): a ref whose custom dataset no longer exists is ignored. A sentence that still has at least one resolvable ref in `wordIds` is shown and judged only by its resolvable refs, so re-importing a deleted custom dataset and its sentences makes them usable again. Any other unresolvable ref (an unknown built-in ID, or a missing word in an existing dataset) still hides the sentence. §12 states the same rule.
 - The same surface word can appear in several built-in lists (4,185 items, 3,439 unique forms). Each item keeps its own WordRef. The app never guesses links at runtime.
 - **Same surface ≠ same word.** The word lists carry only `id`, surface and translations (no part of speech or sense ID). Some shared surfaces clearly have different senses across lists, for example `watch` (手錶 / 觀看) and `term` (術語 / 學期).
 - Content pipeline linking:
@@ -565,7 +565,8 @@ V1 data is never reset. `settings_v1` is used only as evidence that V1 data exis
 - Same RevenueCat entitlement `premium`, same products and prices. No `sentence_pro`, `v2_pro` or second subscription system.
 - Free tier (product rule A, confirmed by Lawrence 2026-10-09): a sentence is available to a free user only if **every target word** in it is unlocked. A target word may be linked through several WordRefs in different lists (§4); it counts as unlocked if **any** of its WordRefs in the sentence's `wordIds` is within that dataset's `unlockedCount()` range.
   - "The same target word" is decided only among the sentence's own `wordIds`: WordRefs whose items have the same source language (`wordLocale`) and the same surface form (trimmed, case-insensitive). No WordRef outside `wordIds` is ever considered.
-  - Any unresolvable WordRef hides the sentence (§4), whether or not the word is unlocked elsewhere.
+  - Refs to a deleted custom dataset are ignored; any other unresolvable WordRef hides the sentence (§4), whether or not the word is unlocked elsewhere.
+  - Only `wordIds` count. `secondaryWordIds` never affects free-tier access.
   - Imported sentences follow the same rule through their linked words. Premium users have everything.
 - Ads in Practical English follow V1's conservative policy: no new ad formats or placements beyond what V1 already uses.
 - Future price changes: new subscribers may get new prices; existing subscribers may be grandfathered. That is a product decision outside V2.0.

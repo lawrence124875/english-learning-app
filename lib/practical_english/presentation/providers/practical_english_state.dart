@@ -126,8 +126,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   void _rebuildIndex(List<WordDataset> datasets) {
     _index = WordRefIndex.build(datasets);
     _access = SentenceAccess(_index, _appState.unlockedCount);
-    _sync = WeakWordSync(
-        gateway: _gateway, wordStates: _wordStates, index: _index);
+    _sync =
+        WeakWordSync(gateway: _gateway, wordStates: _wordStates, index: _index);
     _lastDatasetCount = datasets.length;
     _invalidate();
   }
@@ -166,6 +166,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
       _sentences.all.where(_access.isAccessible).toList(growable: false),
       _mode,
       stateOf,
+      isKnown: _index.contains,
     );
   }
 
@@ -180,7 +181,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
         stateOf: stateOf,
       );
 
-  int score(Sentence s) => SentenceSelector.score(s, stateOf);
+  int score(Sentence s) =>
+      SentenceSelector.score(s, stateOf, isKnown: _index.contains);
 
   /// 句子翻譯：介面語言 → zh-TW → 第一個可用（同 V1 規則）。
   String? translationFor(Sentence s) => s.translationFor(_translationKey());

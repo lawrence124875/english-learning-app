@@ -57,7 +57,8 @@ class PracticalEnglishCoverage {
       if (!access.isResolvable(s)) continue;
       total++;
       if (access.isAccessible(s)) accessible++;
-      covered.addAll(s.wordIds);
+      // 覆蓋率只算主要詞（次要詞不算，SPEC §9.5）。
+      covered.addAll(access.effectiveWordIds(s));
     }
     final counts = {for (final st in WordStatus.values) st: 0};
     var practiced = 0;

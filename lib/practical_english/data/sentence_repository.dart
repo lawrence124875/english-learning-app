@@ -15,8 +15,8 @@ import 'json_file_store.dart';
 /// - 與 V1 的 CustomDatasetRepository 完全分開。
 ///
 /// 進入 Practical English 時 [load] 一次，資料留在記憶體直到 repository 釋放；
-/// V1 啟動流程不會呼叫這裡。`Sentence.wordIds` 是唯一持久化的關聯，
-/// 「單字 → 句子」的反向索引只在記憶體建立。
+/// V1 啟動流程不會呼叫這裡。`Sentence.wordIds`／`secondaryWordIds` 是唯一
+/// 持久化的關聯，「單字 → 句子」的反向索引只在記憶體建立（含次要詞）。
 class SentenceRepository {
   static const builtInAssetPath = 'assets/practical_english/pe_core.json';
   static const importedFileName = 'imported_sentences.json';
@@ -67,14 +67,15 @@ class SentenceRepository {
 
   Sentence? byId(String id) => _byId[id];
 
-  /// 含有這個 WordRef 的句子（依載入順序：內建在前、匯入在後）。
+  /// 含有這個 WordRef（主要詞或次要詞）的句子（依載入順序：內建在前、匯入在後）。
   List<Sentence> sentencesForWord(String wordRef) {
     final ids = _sentenceIdsByWord[wordRef];
     if (ids == null) return const [];
     return ids.map((id) => _byId[id]!).toList(growable: false);
   }
 
-  /// 至少有一句句子的所有 WordRef（Coverage「Available」用）。
+  /// 至少有一句句子的所有 WordRef（主要詞或次要詞；覆蓋率請用
+  /// PracticalEnglishCoverage，它只算主要詞）。
   Iterable<String> get wordRefsWithSentences => _sentenceIdsByWord.keys;
 
   Future<JsonFileStore> _store() async {
@@ -131,7 +132,7 @@ class SentenceRepository {
         continue;
       }
       _byId[s.id] = s;
-      for (final ref in s.wordIds.toSet()) {
+      for (final ref in s.allWordIds) {
         (_sentenceIdsByWord[ref] ??= <String>[]).add(s.id);
       }
     }

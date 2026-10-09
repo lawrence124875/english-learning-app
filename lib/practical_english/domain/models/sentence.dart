@@ -1,10 +1,17 @@
 /// Practical English 句子（SPEC §6.1）。
 ///
-/// [wordIds] 是 Sentence ↔ Word 唯一持久化的關聯（WordRef 清單，見 word_ref.dart）；
-/// 反向的「單字 → 句子」只在記憶體裡由 SentenceRepository 建立，不另外存檔。
+/// [wordIds]（主要詞）與 [secondaryWordIds]（次要詞）是 Sentence ↔ Word
+/// 唯一持久化的關聯（WordRef 清單，見 word_ref.dart）；反向的「單字 → 句子」
+/// 只在記憶體裡由 SentenceRepository 建立，不另外存檔。
 class Sentence {
   final String id;
+
+  /// 主要詞：免費解鎖、覆蓋率、練習次數都只看這裡（SPEC §6.1、§12）。
   final List<String> wordIds;
+
+  /// 次要詞（選填）：只用於「單字找例句」與不熟悉模式的選句排序，
+  /// 絕不影響免費解鎖、覆蓋率與練習次數（SPEC §6.1、D19）。
+  final List<String> secondaryWordIds;
   final String datasetId;
 
   /// 與 `WordDataset.wordLocale` 相同格式（例如 `en-US`），也是朗讀用的 TTS 語言。
@@ -28,6 +35,7 @@ class Sentence {
   const Sentence({
     required this.id,
     required this.wordIds,
+    this.secondaryWordIds = const [],
     required this.datasetId,
     required this.targetLanguage,
     required this.sentenceText,
@@ -47,13 +55,28 @@ class Sentence {
     return translations.isEmpty ? null : translations.values.first;
   }
 
+  /// 主要詞＋次要詞（去重，主要詞在前）。同時出現在兩邊的只算主要詞。
+  List<String> get allWordIds => [
+        ...{...wordIds, ...secondaryWordIds}
+      ];
+
+  /// 只屬於次要詞的 WordRef（排除也在主要詞裡的）。
+  List<String> get secondaryOnlyWordIds {
+    final primary = wordIds.toSet();
+    return [
+      ...{...secondaryWordIds.where((r) => !primary.contains(r))}
+    ];
+  }
+
   Sentence copyWith({
     List<String>? wordIds,
+    List<String>? secondaryWordIds,
     Map<String, String>? translations,
   }) {
     return Sentence(
       id: id,
       wordIds: wordIds ?? this.wordIds,
+      secondaryWordIds: secondaryWordIds ?? this.secondaryWordIds,
       datasetId: datasetId,
       targetLanguage: targetLanguage,
       sentenceText: sentenceText,
@@ -91,9 +114,13 @@ class Sentence {
       });
     }
     final rawMeta = json['metadata'];
+    final rawSecondary = json['secondaryWordIds'];
     return Sentence(
       id: id,
       wordIds: rawWordIds.map((e) => e.toString()).toList(growable: false),
+      secondaryWordIds: rawSecondary is List
+          ? rawSecondary.map((e) => e.toString()).toList(growable: false)
+          : const [],
       datasetId: datasetId,
       targetLanguage: targetLanguage,
       sentenceText: text,
@@ -109,6 +136,7 @@ class Sentence {
   Map<String, dynamic> toJson() => {
         'id': id,
         'wordIds': wordIds,
+        if (secondaryWordIds.isNotEmpty) 'secondaryWordIds': secondaryWordIds,
         'datasetId': datasetId,
         'targetLanguage': targetLanguage,
         'sentenceText': sentenceText,

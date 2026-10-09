@@ -14,25 +14,38 @@ class WordLocation {
 /// 由目前載入的教材（內建＋自訂）建立，Practical English 生命週期內有效。
 class WordRefIndex {
   final Map<String, WordLocation> _byRef;
+  final Set<String> _datasetIds;
 
-  WordRefIndex._(this._byRef);
+  WordRefIndex._(this._byRef, this._datasetIds);
 
   factory WordRefIndex.build(Iterable<WordDataset> datasets) {
     final map = <String, WordLocation>{};
+    final ids = <String>{};
     for (final dataset in datasets) {
+      ids.add(dataset.id);
       for (var i = 0; i < dataset.items.length; i++) {
         final item = dataset.items[i];
         // 同一份教材內若有重複 ID（理論上不會），保留第一個。
-        map.putIfAbsent(WordRef.of(dataset, item),
-            () => WordLocation(dataset, item, i));
+        map.putIfAbsent(
+            WordRef.of(dataset, item), () => WordLocation(dataset, item, i));
       }
     }
-    return WordRefIndex._(map);
+    return WordRefIndex._(map, ids);
   }
 
   WordLocation? resolve(String ref) => _byRef[ref];
 
   bool contains(String ref) => _byRef.containsKey(ref);
+
+  /// 目前載入的教材中是否有這份教材。
+  bool hasDataset(String datasetId) => _datasetIds.contains(datasetId);
+
+  /// 指向「已不存在的自訂教材」的參照（例如使用者刪除了該教材）。
+  /// 這類參照在句子裡會被忽略（SPEC §4）；其他無法對應的參照不算。
+  bool isFromDeletedDataset(String ref) {
+    final datasetId = WordRef.datasetIdOf(ref);
+    return datasetId != null && !hasDataset(datasetId) && !contains(ref);
+  }
 
   int get length => _byRef.length;
 
