@@ -519,6 +519,10 @@ class AppState extends ChangeNotifier {
   Future<bool> isTtsLanguageAvailable(String languageCode) =>
       _ttsService.isLanguageAvailable(languageCode);
 
+  /// 匯入畫面選語言時的語音檢查（可用／沒有／無法確認）。
+  Future<TtsLanguageStatus> checkTtsLanguage(String languageCode) =>
+      _ttsService.checkLanguage(languageCode);
+
   String meaningOf(WordItem word) =>
       _hideBuiltInTranslationFor(word) ? '' : word.meaningFor(meaningLocaleFor(word));
 

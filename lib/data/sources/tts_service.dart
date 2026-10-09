@@ -1,12 +1,18 @@
 import 'dart:io' show Platform;
 import 'package:flutter_tts/flutter_tts.dart';
 
+/// 手機是否有某個語言的朗讀語音（v20 匯入畫面用）。查詢失敗或結果
+/// 無法判讀時是 [unknown]，不能當成「可用」，也不能當成「沒有」。
+enum TtsLanguageStatus { available, unavailable, unknown }
+
 /// TTS 服務抽象介面。目前是系統內建 TTS；
 /// 之後若要換成雲端 TTS，只需要新增另一個實作，不影響上層播放邏輯。
 abstract class TtsService {
   Future<void> speak(String text, {required String languageCode});
   /// 手機是否有這個語言的 TTS 語音（匯入非英文自訂教材時提醒使用者安裝）。
   Future<bool> isLanguageAvailable(String languageCode);
+  /// 同上，但分成「可用／沒有／無法確認」三種結果。
+  Future<TtsLanguageStatus> checkLanguage(String languageCode);
   Future<void> stop();
   Future<void> setRate(double rate);
   Future<List<Map<String, String>>> getVoices();
@@ -61,6 +67,20 @@ class SystemTtsService implements TtsService {
     } catch (_) {
       // 查詢失敗時不要誤報「沒有語音」。
       return true;
+    }
+  }
+
+  @override
+  Future<TtsLanguageStatus> checkLanguage(String languageCode) async {
+    try {
+      final r = await _tts
+          .isLanguageAvailable(languageCode)
+          .timeout(const Duration(seconds: 3));
+      if (r == true || r == 1) return TtsLanguageStatus.available;
+      if (r == false || r == 0) return TtsLanguageStatus.unavailable;
+      return TtsLanguageStatus.unknown;
+    } catch (_) {
+      return TtsLanguageStatus.unknown;
     }
   }
 

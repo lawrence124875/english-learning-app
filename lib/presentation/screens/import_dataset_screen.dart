@@ -5,9 +5,25 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import '../../data/sources/csv_import_service.dart';
+import '../../data/sources/tts_service.dart';
 import '../../domain/models/word_item.dart';
 import '../providers/app_state.dart';
 import '../../l10n/app_localizations.dart';
+
+/// 語音提示文字：可用或還沒查完時回傳 null（不顯示）；沒有語音、
+/// 無法確認各自顯示不同提醒。只是提醒，不會擋匯入。
+String? importVoiceNote(
+    TtsLanguageStatus? status, String language, AppLocalizations l) {
+  switch (status) {
+    case TtsLanguageStatus.unavailable:
+      return l.importVoiceMissing(language);
+    case TtsLanguageStatus.unknown:
+      return l.importVoiceUnknown(language);
+    case TtsLanguageStatus.available:
+    case null:
+      return null;
+  }
+}
 
 /// 匯入自訂教材畫面：讓使用者上傳自己準備的 CSV 檔（單字、片語，
 /// 或常用例句都可以），選擇翻譯欄位對應的語言，加進 App 裡跟
@@ -45,6 +61,17 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   bool _translationLocaleInitialized = false;
   bool _importing = false;
 
+  /// v20：選語言當下就查手機有沒有該語言的朗讀語音（key 為語言代碼）。
+  /// 還沒查完的語言不在 map 裡，畫面先不顯示提示。
+  final Map<String, TtsLanguageStatus> _voiceStatus = {};
+
+  Future<void> _checkVoice(String code) async {
+    if (_voiceStatus.containsKey(code)) return;
+    final status = await context.read<AppState>().checkTtsLanguage(code);
+    if (!mounted) return;
+    setState(() => _voiceStatus[code] = status);
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -66,6 +93,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
         }
       }
       _translationLocaleInitialized = true;
+      _checkVoice(_wordLocale);
+      _checkVoice(_translationLocale);
     }
   }
 
@@ -164,23 +193,35 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       await appState.addCustomDataset(dataset);
       // 第一欄或翻譯欄的語言在手機上沒有朗讀語音時，提醒使用者去安裝
       // （例如英文介面的人匯入泰文或德文教材，手機沒有該語音就會念不出來）。
+      // v20：查詢失敗（無法確認）不當成「有語音」，另外提醒。
       final missing = <String>[];
-      if (!await appState.isTtsLanguageAvailable(_wordLocale)) {
-        missing.add(_wordLocaleOptions[_wordLocale] ?? _wordLocale);
-      }
-      if (!await appState.isTtsLanguageAvailable(_translationLocale)) {
-        missing.add(_translationLocaleOptions[_translationLocale] ?? _translationLocale);
+      final unknown = <String>[];
+      for (final (code, name) in [
+        (_wordLocale, _wordLocaleOptions[_wordLocale] ?? _wordLocale),
+        (_translationLocale,
+            _translationLocaleOptions[_translationLocale] ?? _translationLocale),
+      ]) {
+        switch (await appState.checkTtsLanguage(code)) {
+          case TtsLanguageStatus.unavailable:
+            missing.add(name);
+          case TtsLanguageStatus.unknown:
+            unknown.add(name);
+          case TtsLanguageStatus.available:
+            break;
+        }
       }
       if (!mounted) return;
       final done = parsed.skippedRows > 0
           ? l.importDoneWithSkipped(parsed.items.length, parsed.skippedRows)
           : l.importDone(parsed.items.length);
+      final notes = [
+        if (missing.isNotEmpty) l.importVoiceMissing(missing.join(' / ')),
+        if (unknown.isNotEmpty) l.importVoiceUnknown(unknown.join(' / ')),
+      ];
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          duration: Duration(seconds: missing.isEmpty ? 4 : 10),
-          content: Text(missing.isEmpty
-              ? done
-              : '$done\n${l.importVoiceMissing(missing.join(' / '))}'),
+          duration: Duration(seconds: notes.isEmpty ? 4 : 10),
+          content: Text([done, ...notes].join('\n')),
         ),
       );
       Navigator.pop(context);
@@ -246,7 +287,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   Text(
-                    '${CsvImportService.templateHeader.join(",")}\n'
+                    '${CsvImportService.templateHeader.join(',')}\n'
                     'apple,${l.importSampleApple}\n'
                     'give up,${l.importSampleGiveUp}\n'
                     'How are you doing today?,${l.importSampleHowAreYou}',
@@ -282,12 +323,17 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
             decoration: InputDecoration(
               labelText: l.importWordLangLabel,
               border: const OutlineInputBorder(),
+              helperText: importVoiceNote(_voiceStatus[_wordLocale],
+                  _wordLocaleOptions[_wordLocale] ?? _wordLocale, l),
+              helperMaxLines: 4,
             ),
             items: _wordLocaleOptions.entries
                 .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
                 .toList(),
             onChanged: (v) {
-              if (v != null) setState(() => _wordLocale = v);
+              if (v == null) return;
+              setState(() => _wordLocale = v);
+              _checkVoice(v);
             },
           ),
           const SizedBox(height: 16),
@@ -296,12 +342,20 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
             decoration: InputDecoration(
               labelText: l.importTranslationLangLabel,
               border: const OutlineInputBorder(),
+              helperText: importVoiceNote(
+                  _voiceStatus[_translationLocale],
+                  _translationLocaleOptions[_translationLocale] ??
+                      _translationLocale,
+                  l),
+              helperMaxLines: 4,
             ),
             items: _translationLocaleOptions.entries
                 .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
                 .toList(),
             onChanged: (v) {
-              if (v != null) setState(() => _translationLocale = v);
+              if (v == null) return;
+              setState(() => _translationLocale = v);
+              _checkVoice(v);
             },
           ),
           const SizedBox(height: 20),
