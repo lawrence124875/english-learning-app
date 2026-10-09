@@ -265,5 +265,18 @@
   "pePlayTranslation": "Leer la traducción",
   "peVoiceUnavailable": "Tu teléfono no tiene voz para este idioma. Puedes seguir leyendo la traducción.",
   "peStatusDiffers": "El estado difiere entre listas",
-  "peOtherWords": "Otras palabras de la frase"
+  "peOtherWords": "Otras palabras de la frase",
+  "peAutoPlay": "Reproducir todo",
+  "pePause": "Pausa",
+  "peReplay": "Repetir",
+  "peAutoStopped": "Reproducción continua detenida. Cada toque lee una frase.",
+  "pePlaybackSettings": "Ajustes de reproducción",
+  "peReadContent": "Qué leer",
+  "peEnglishOnly": "Solo inglés",
+  "peEnglishAndTranslation": "Inglés + traducción",
+  "peRepeatCount": "Veces por frase",
+  "peInterval": "Pausa entre frases",
+  "peSecondsValue": "{seconds} s",
+  "peRateShared": "La velocidad es la misma que en las palabras; los demás ajustes solo afectan a Inglés práctico. Sigue sonando con la pantalla apagada.",
+  "peSettingsSummary": "{content} · ×{count} · pausa {seconds} s"
 }

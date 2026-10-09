@@ -265,5 +265,18 @@
   "pePlayTranslation": "번역 읽어 주기",
   "peVoiceUnavailable": "휴대폰에 이 언어의 음성이 없습니다. 번역은 계속 읽을 수 있습니다.",
   "peStatusDiffers": "목록마다 상태가 다릅니다",
-  "peOtherWords": "이 문장의 다른 단어"
+  "peOtherWords": "이 문장의 다른 단어",
+  "peAutoPlay": "연속 재생",
+  "pePause": "일시정지",
+  "peReplay": "다시 듣기",
+  "peAutoStopped": "연속 재생을 멈췄습니다. 누를 때마다 한 문장씩 읽습니다.",
+  "pePlaybackSettings": "재생 설정",
+  "peReadContent": "읽기 내용",
+  "peEnglishOnly": "영어만",
+  "peEnglishAndTranslation": "영어＋번역",
+  "peRepeatCount": "문장당 반복",
+  "peInterval": "문장 간격",
+  "peSecondsValue": "{seconds}초",
+  "peRateShared": "속도는 단어 크루즈와 공유됩니다. 다른 설정은 실용 영어에만 적용됩니다. 화면을 꺼도 계속 재생됩니다.",
+  "peSettingsSummary": "{content} · {count}회 · 간격 {seconds}초"
 }

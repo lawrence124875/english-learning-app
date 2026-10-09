@@ -265,5 +265,18 @@
   "pePlayTranslation": "Read translation aloud",
   "peVoiceUnavailable": "No voice for this language on your phone. You can still read the translation.",
   "peStatusDiffers": "Status differs between lists",
-  "peOtherWords": "Other words in this sentence"
+  "peOtherWords": "Other words in this sentence",
+  "peAutoPlay": "Play all",
+  "pePause": "Pause",
+  "peReplay": "Replay",
+  "peAutoStopped": "Continuous play stopped. Each tap plays one sentence.",
+  "pePlaybackSettings": "Playback settings",
+  "peReadContent": "Read aloud",
+  "peEnglishOnly": "English only",
+  "peEnglishAndTranslation": "English + translation",
+  "peRepeatCount": "Times per sentence",
+  "peInterval": "Gap between sentences",
+  "peSecondsValue": "{seconds} s",
+  "peRateShared": "Speed is shared with word cruise; other settings only affect Practical English. Playback continues with the screen off.",
+  "peSettingsSummary": "{content} · ×{count} · {seconds} s gap"
 }

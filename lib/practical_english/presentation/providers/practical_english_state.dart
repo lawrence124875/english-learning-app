@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../data/sources/background_l10n.dart';
+import '../../../data/sources/tts_audio_handler.dart';
 import '../../../data/sources/tts_service.dart';
 import '../../../domain/models/word_item.dart';
 import '../../../presentation/providers/app_state.dart';
@@ -187,6 +188,16 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   WordLocation? wordFor(String ref) => _index.resolve(ref);
 
   bool get isPremium => _appState.isPremium;
+
+  /// 句子播放器（[SentencePlayer]）用：共用的 TTS、朗讀擁有者與鎖屏服務。
+  TtsService get tts => _tts;
+  PlaybackCoordinator get playbackCoordinator => _playback;
+  TtsAudioHandler? get audioHandler => _appState.audioHandler;
+
+  /// V1 的朗讀語速（兩邊共用同一個 TTS 引擎）。
+  double get speechRate => _appState.settings.speechRate;
+  Future<void> setSpeechRate(double rate) => _appState
+      .updateSettings(_appState.settings.copyWith(speechRate: rate));
 
   /// 目前模式下可學的句子（已套用免費／Premium 規則並排序）。
   List<Sentence> get sentences {

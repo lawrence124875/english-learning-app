@@ -265,5 +265,18 @@
   "pePlayTranslation": "Bacakan terjemahan",
   "peVoiceUnavailable": "Tidak ada suara untuk bahasa ini di ponsel Anda. Terjemahan tetap bisa dibaca.",
   "peStatusDiffers": "Status berbeda antar daftar",
-  "peOtherWords": "Kata lain dalam kalimat ini"
+  "peOtherWords": "Kata lain dalam kalimat ini",
+  "peAutoPlay": "Putar terus",
+  "pePause": "Jeda",
+  "peReplay": "Ulangi",
+  "peAutoStopped": "Putar terus dihentikan. Setiap ketukan membacakan satu kalimat.",
+  "pePlaybackSettings": "Pengaturan pemutaran",
+  "peReadContent": "Yang dibacakan",
+  "peEnglishOnly": "Hanya Inggris",
+  "peEnglishAndTranslation": "Inggris + terjemahan",
+  "peRepeatCount": "Kali per kalimat",
+  "peInterval": "Jeda antar kalimat",
+  "peSecondsValue": "{seconds} dtk",
+  "peRateShared": "Kecepatan sama dengan pemutaran kata; pengaturan lain hanya untuk Bahasa Inggris Praktis. Tetap diputar saat layar mati.",
+  "peSettingsSummary": "{content} · {count}x · jeda {seconds} dtk"
 }

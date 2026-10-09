@@ -265,5 +265,18 @@
   "pePlayTranslation": "翻訳を読み上げる",
   "peVoiceUnavailable": "この言語の音声が端末にありません。翻訳は読むことができます。",
   "peStatusDiffers": "リストごとに状態が異なります",
-  "peOtherWords": "この例文のほかの単語"
+  "peOtherWords": "この例文のほかの単語",
+  "peAutoPlay": "連続再生",
+  "pePause": "一時停止",
+  "peReplay": "もう一度",
+  "peAutoStopped": "連続再生を止めました。タップごとに1文読みます。",
+  "pePlaybackSettings": "再生設定",
+  "peReadContent": "読み上げ内容",
+  "peEnglishOnly": "英語のみ",
+  "peEnglishAndTranslation": "英語＋訳",
+  "peRepeatCount": "1文の回数",
+  "peInterval": "文の間隔",
+  "peSecondsValue": "{seconds} 秒",
+  "peRateShared": "速度は単語クルーズと共通です。他の設定は実用英語だけに適用されます。画面を消しても再生が続きます。",
+  "peSettingsSummary": "{content}・{count}回・間隔 {seconds} 秒"
 }

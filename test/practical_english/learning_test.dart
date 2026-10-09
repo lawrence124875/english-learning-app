@@ -532,14 +532,18 @@ void main() {
       // 20. detail
       expect(find.byKey(const Key('pe_detail_sentence')), findsOneWidget);
       expect(find.text('譯:Sentence two.'), findsOneWidget);
-      expect(find.text('1 / 3'), findsOneWidget);
+      expect(find.text('No. 1 / 3'), findsOneWidget);
       expect(find.text('字1'), findsOneWidget);
       expect(s.stateOf(_id(1)).peExposureCount, 1); // 進入即記錄練習
 
-      // 21. play does not crash
+      // 21. 再讀一次：預設英文念 2 次＋翻譯（C4 播放設定）
       await tester.tap(find.byKey(const Key('pe_play')));
       await settleIo(tester);
-      expect(tts.spoken, ['en-US|Sentence two.']);
+      expect(tts.spoken, [
+        'en-US|Sentence two.',
+        'en-US|Sentence two.',
+        'zh-TW|譯:Sentence two.'
+      ]);
       expect(tester.takeException(), isNull);
 
       // 22. weak → chip + V1 ★；我會了 → mastered
@@ -556,13 +560,47 @@ void main() {
 
       await tester.tap(find.byKey(const Key('pe_next')));
       await tester.pump();
-      expect(find.text('2 / 3'), findsOneWidget);
+      expect(find.text('No. 2 / 3'), findsOneWidget);
 
       // 回列表後狀態已更新
       Navigator.of(tester.element(find.byKey(const Key('pe_detail_sentence'))))
           .pop();
       await tester.pumpAndSettle();
       expect(find.text('w1 · 已學會'), findsOneWidget);
+      await finish(tester, s);
+    });
+
+    testWidgets('22c. continuous play, manual next stops it, settings sheet',
+        (tester) async {
+      tester.view.physicalSize = const Size(1200, 3000);
+      addTearDown(tester.view.reset);
+      final tts = _RecordingTts();
+      final s = await pumpScreen(tester, tts: tts);
+      await tester.tap(find.text('Sentence two.'));
+      await tester.pumpAndSettle();
+      expect(find.text('連續播放'), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('pe_autoplay')));
+      await tester.pump();
+      await settleIo(tester);
+      expect(find.text('暫停'), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('pe_next')));
+      await settleIo(tester);
+      expect(find.text('已停止連續播放，每按一次念一句'), findsOneWidget);
+      expect(find.text('連續播放'), findsOneWidget);
+      expect(find.text('No. 2 / 3'), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('pe_playback_settings')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('只念英文'));
+      await settleIo(tester);
+      await tester.tap(find.text('3').last);
+      await settleIo(tester);
+      Navigator.of(tester.element(find.text('只念英文'))).pop();
+      await tester.pumpAndSettle();
+      expect(find.text('只念英文・讀 3 次・間隔 2 秒'), findsOneWidget);
+
       await finish(tester, s);
     });
 

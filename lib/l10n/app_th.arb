@@ -265,5 +265,18 @@
   "pePlayTranslation": "อ่านคำแปลออกเสียง",
   "peVoiceUnavailable": "โทรศัพท์ไม่มีเสียงอ่านภาษานี้ แต่ยังอ่านคำแปลได้",
   "peStatusDiffers": "สถานะต่างกันในแต่ละรายการ",
-  "peOtherWords": "คำอื่นในประโยคนี้"
+  "peOtherWords": "คำอื่นในประโยคนี้",
+  "peAutoPlay": "เล่นต่อเนื่อง",
+  "pePause": "หยุดชั่วคราว",
+  "peReplay": "ฟังอีกครั้ง",
+  "peAutoStopped": "หยุดเล่นต่อเนื่องแล้ว แตะหนึ่งครั้งอ่านหนึ่งประโยค",
+  "pePlaybackSettings": "การตั้งค่าการเล่น",
+  "peReadContent": "สิ่งที่อ่าน",
+  "peEnglishOnly": "อังกฤษอย่างเดียว",
+  "peEnglishAndTranslation": "อังกฤษ + คำแปล",
+  "peRepeatCount": "จำนวนครั้งต่อประโยค",
+  "peInterval": "ช่วงห่างระหว่างประโยค",
+  "peSecondsValue": "{seconds} วินาที",
+  "peRateShared": "ความเร็วใช้ร่วมกับการฟังคำศัพท์ การตั้งค่าอื่นใช้กับภาษาอังกฤษใช้จริงเท่านั้น ปิดหน้าจอแล้วยังเล่นต่อ",
+  "peSettingsSummary": "{content} · {count} ครั้ง · ห่าง {seconds} วินาที"
 }

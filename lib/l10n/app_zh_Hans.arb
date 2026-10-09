@@ -265,5 +265,18 @@
   "pePlayTranslation": "朗读翻译",
   "peVoiceUnavailable": "手机没有这个语言的语音，翻译仍可阅读。",
   "peStatusDiffers": "各列表状态不同",
-  "peOtherWords": "句中其他单词"
+  "peOtherWords": "句中其他单词",
+  "peAutoPlay": "连续播放",
+  "pePause": "暂停",
+  "peReplay": "再读一次",
+  "peAutoStopped": "已停止连续播放，每按一次读一句",
+  "pePlaybackSettings": "播放设置",
+  "peReadContent": "朗读内容",
+  "peEnglishOnly": "只读英文",
+  "peEnglishAndTranslation": "英文＋翻译",
+  "peRepeatCount": "每句读几次",
+  "peInterval": "句子间隔",
+  "peSecondsValue": "{seconds} 秒",
+  "peRateShared": "语速与单词巡航共用；其他设置只影响实用英语。关屏幕会继续播放。",
+  "peSettingsSummary": "{content}・读 {count} 次・间隔 {seconds} 秒"
 }

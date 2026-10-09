@@ -508,5 +508,20 @@
   "pePlayTranslation": "朗讀翻譯",
   "peVoiceUnavailable": "手機沒有這個語言的語音，翻譯仍可閱讀。",
   "peStatusDiffers": "各清單狀態不同",
-  "peOtherWords": "句中其他單字"
+  "peOtherWords": "句中其他單字",
+  "peAutoPlay": "連續播放",
+  "pePause": "暫停",
+  "peReplay": "再讀一次",
+  "peAutoStopped": "已停止連續播放，每按一次念一句",
+  "pePlaybackSettings": "播放設定",
+  "peReadContent": "朗讀內容",
+  "peEnglishOnly": "只念英文",
+  "peEnglishAndTranslation": "英文＋翻譯",
+  "peRepeatCount": "每句念幾次",
+  "peInterval": "句子間隔",
+  "peSecondsValue": "{seconds} 秒",
+  "@peSecondsValue": {"placeholders": {"seconds": {"type": "String"}}},
+  "peRateShared": "語速與單字巡航共用；其餘設定只影響實用英文。關螢幕會繼續播放。",
+  "peSettingsSummary": "{content}・讀 {count} 次・間隔 {seconds} 秒",
+  "@peSettingsSummary": {"placeholders": {"content": {"type": "String"}, "count": {"type": "int"}, "seconds": {"type": "String"}}}
 }

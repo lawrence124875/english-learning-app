@@ -265,5 +265,18 @@
   "pePlayTranslation": "Đọc bản dịch",
   "peVoiceUnavailable": "Điện thoại không có giọng đọc cho ngôn ngữ này. Bạn vẫn có thể đọc bản dịch.",
   "peStatusDiffers": "Trạng thái khác nhau giữa các danh sách",
-  "peOtherWords": "Các từ khác trong câu"
+  "peOtherWords": "Các từ khác trong câu",
+  "peAutoPlay": "Phát liên tục",
+  "pePause": "Tạm dừng",
+  "peReplay": "Đọc lại",
+  "peAutoStopped": "Đã dừng phát liên tục. Mỗi lần chạm đọc một câu.",
+  "pePlaybackSettings": "Cài đặt phát",
+  "peReadContent": "Nội dung đọc",
+  "peEnglishOnly": "Chỉ tiếng Anh",
+  "peEnglishAndTranslation": "Tiếng Anh + bản dịch",
+  "peRepeatCount": "Số lần mỗi câu",
+  "peInterval": "Khoảng cách giữa các câu",
+  "peSecondsValue": "{seconds} giây",
+  "peRateShared": "Tốc độ dùng chung với phần từ vựng; các cài đặt khác chỉ áp dụng cho Tiếng Anh thực dụng. Tắt màn hình vẫn tiếp tục phát.",
+  "peSettingsSummary": "{content} · {count} lần · cách {seconds} giây"
 }

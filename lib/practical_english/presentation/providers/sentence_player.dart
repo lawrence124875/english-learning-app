@@ -101,7 +101,7 @@ class SentencePlayer extends ChangeNotifier {
   final PracticalEnglishState _state;
   final TtsService _tts;
   final PlaybackCoordinator _playback;
-  final Future<void> Function(Duration) _delay;
+  final Future<void> Function(Duration)? _delay;
   final void Function(Object error, StackTrace stack)? _onError;
 
   /// 進入句子頁時的列表快照；標記弱字等造成的重新排序不影響這裡的順序。
@@ -123,7 +123,7 @@ class SentencePlayer extends ChangeNotifier {
         _state = state,
         _tts = tts,
         _playback = playback,
-        _delay = delay ?? Future<void>.delayed,
+        _delay = delay,
         _onError = onError,
         _index = initialIndex.clamp(0, sentences.length - 1) {
     _nowPlaying = nowPlaying?.call(this);
@@ -200,7 +200,7 @@ class SentencePlayer extends ChangeNotifier {
         _endAuto(); // V1 接手或朗讀失敗
         break;
       }
-      await _delay(
+      await _wait(
           Duration(milliseconds: (_settings.intervalSeconds * 1000).round()));
       if (!alive()) break;
       if (!isActive) {
@@ -216,6 +216,7 @@ class SentencePlayer extends ChangeNotifier {
     final wasActive = isActive;
     _autoPlaying = false;
     _loopGen++;
+    _cancelInterval();
     _speakGen++;
     _releaseLease();
     _notify();
@@ -242,6 +243,7 @@ class SentencePlayer extends ChangeNotifier {
     if (stoppedAuto) {
       _autoPlaying = false;
       _loopGen++;
+      _cancelInterval();
     }
     if (target != _index) {
       _moveTo(target);
@@ -320,8 +322,32 @@ class SentencePlayer extends ChangeNotifier {
     if (!_autoPlaying) return;
     _autoPlaying = false;
     _loopGen++;
+    _cancelInterval();
     _releaseLease();
     _notify();
+  }
+
+  Timer? _intervalTimer;
+  Completer<void>? _intervalDone;
+
+  /// 句子間隔。停止連續播放時立即取消，不留下計時器。
+  Future<void> _wait(Duration d) {
+    final custom = _delay;
+    if (custom != null) return custom(d);
+    final done = Completer<void>();
+    _intervalDone = done;
+    _intervalTimer = Timer(d, () {
+      if (!done.isCompleted) done.complete();
+    });
+    return done.future;
+  }
+
+  void _cancelInterval() {
+    _intervalTimer?.cancel();
+    _intervalTimer = null;
+    final done = _intervalDone;
+    _intervalDone = null;
+    if (done != null && !done.isCompleted) done.complete();
   }
 
   void _releaseLease() {
@@ -362,6 +388,7 @@ class SentencePlayer extends ChangeNotifier {
     if (who == PlaybackOwner.v2 || _disposed) return;
     _autoPlaying = false;
     _loopGen++;
+    _cancelInterval();
     _speakGen++;
     _lease = null;
     if (_onLockScreen) {
@@ -377,6 +404,7 @@ class SentencePlayer extends ChangeNotifier {
     _disposed = true;
     _autoPlaying = false;
     _loopGen++;
+    _cancelInterval();
     _speakGen++;
     _releaseLease();
     _playback.removeClaimListener(_onClaim);
