@@ -4,13 +4,16 @@ import '../../domain/models/word_item.dart';
 /// 解析使用者上傳的 CSV 檔案，轉換成教材資料。
 ///
 /// 匯入格式（CSV，含表頭列）：
-///   english,translation
+///   word,translation
 ///   apple,蘋果
 ///   give up,放棄
 ///   How are you doing today?,你今天過得怎麼樣？
 ///
+/// 第一欄是要學的原文（語言在匯入畫面選擇，不限英文），第二欄是翻譯。
+/// 舊範本的表頭 `english,translation` 仍可匯入（見 [_headerWords]）。
+///
 /// 每一列可以是單字、片語，或一整句常用例句——App 內部把這三種
-/// 一視同仁處理（都只是「一段要朗讀＋顯示翻譯的英文文字」），
+/// 一視同仁處理（都只是「一段要朗讀＋顯示翻譯的原文」），
 /// 不需要另外分類欄位，格式維持越簡單越好。
 /// 匯入失敗的原因代碼。錯誤訊息文字由畫面層依介面語言翻譯，
 /// 資料層只負責回報「是哪一種錯誤」。
@@ -30,6 +33,10 @@ class CsvImportResult {
 }
 
 class CsvImportService {
+  /// 範本與匯入畫面範例用的表頭（v20 起由 `english,translation` 改為中性
+  /// 寫法；兩種表頭都在 [_headerWords] 裡，舊檔案照樣能匯入）。
+  static const templateHeader = ['word', 'translation'];
+
   /// 表頭偵測字（一律小寫比對）：欄位名稱＋各語言名稱（英文寫法、
   /// 各語言自己的寫法，以及 App 各介面語言對「英文/翻譯/意思」的說法）。
   static const _headerWords = {
@@ -158,7 +165,7 @@ class CsvImportService {
     required String howAreYou,
   }) {
     final rows = [
-      ['english', 'translation'],
+      templateHeader,
       ['apple', apple],
       ['give up', giveUp],
       ['How are you doing today?', howAreYou],

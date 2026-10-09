@@ -246,7 +246,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   Text(
-                    'english,translation\n'
+                    '${CsvImportService.templateHeader.join(",")}\n'
                     'apple,${l.importSampleApple}\n'
                     'give up,${l.importSampleGiveUp}\n'
                     'How are you doing today?,${l.importSampleHowAreYou}',
