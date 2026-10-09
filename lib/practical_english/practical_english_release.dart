@@ -12,7 +12,7 @@ import 'package:flutter/foundation.dart';
 class PracticalEnglishRelease {
   PracticalEnglishRelease._();
 
-  static const bool ready = false;
+  static const bool ready = true;
 
   /// 測試用：覆寫開關。
   @visibleForTesting
