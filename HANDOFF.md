@@ -465,6 +465,7 @@ Lawrence 2026-09-24 決定以下全部在同一版完成。開新對話時他會
 3. 正式版上線後：AdMob 連結 App（正式版前平台不允許）——到 AdMob「應用程式設定 → 應用程式商店詳細資料 → 新增」連結 Play 商店，並確認 **app-ads.txt 驗證狀態**（根目錄 `https://lawrence124875.github.io/app-ads.txt`）；到 `lawrence124875.github.io` repo 的 `index.html` 把本 App 卡片的「即將推出」換成 Play 商店連結；確認廣告出現在免費版。
 
 ### D. 正式版上架後
+0a. **v20 多語體驗改善（2026-10-09 Lawrence 開工，工作分支 `claude/project-thread-sesnlg`，未進 main、未改版本號）**：①11 語文案中性化（`readModeEnglishOnly`／`readModeBilingual`／`summaryRead*`／`repeatCountLabel`／`importFormatHint`，en/th/ar 原本就中性只改 hint）；②CSV 範本表頭 `word,translation`（舊表頭仍可匯入）；③匯入畫面選語言即顯示語音狀態，`TtsService.checkLanguage` 三態（可用／沒有／無法確認），查詢失敗不當成可用、不擋匯入。新增 test/ 四個測試檔（CSV、ARB key 一致、語音三態、免費 1/3 不變）。不做：非英文語音預覽、多翻譯欄、資料格式、付費規則、V2。發布前需實機：兩種語言朗讀、刪語音包提示、11 語設定面板排版；非中文文案建議母語者校對。建 v20 前先做 C1 鎖 Flutter 版本。盤點報告 /mnt/project-files/v1_multilingual/。
 0. **公開文件去識別化（2026-10-08 Lawrence 同意，上架後做）**：HANDOFF §7 後台設定明細、§9 Firebase、測試群組搬到私人 repo english-app-builds 的文件，公開 HANDOFF 只留架構／流程／決策並加指向。V2 規格檔不動（V2 串使用中，由 V2 串自行決定）。repo 維持公開（§14b）。main 已掃過無機密。
 1. 小預算驗證（NT$1～3 萬、2～3 個市場投 Google App 廣告），看 Analytics D1/D7 留存與付費轉換。
 2. 依數據再決定：各國訂閱價格個別調整、土耳其文、iOS 是否付費上架（US$99/年）。
