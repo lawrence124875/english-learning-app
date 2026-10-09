@@ -159,6 +159,7 @@ For each dataset (built-in and custom):
 - Reconciliation:
   - **Compatible** since the last sync (§5.3): V1 ★ is authoritative. Replace that dataset's canonical `weak` set with the mapped V1 ★ set.
   - **Changed** (content order changed, §5.3): do not trust index mapping. Keep the canonical `weak` set, and write it back to `starred_v1_<datasetId>` using the new indexes (repair). Log the event.
+  - **Changed, but `word_state.json` was rebuilt from corruption** in this load (§7.4, main file and `.bak` both unreadable): the canonical `weak` set is empty and not trustworthy, so do not repair. Treat the dataset as compatible (V1 ★ is authoritative) and record it as repair-skipped. This keeps V1 ★ from being wiped.
 - Store the new fingerprint per dataset after a successful sync.
 
 ### 5.6 Unresolved items

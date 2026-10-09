@@ -39,6 +39,10 @@ class MigrationReport {
 
   /// 偵測到順序變動、改以 V2 canonical 狀態修復 V1 ★ 的教材。
   final List<String> repairedDatasets;
+
+  /// 已變更的教材，但 V2 狀態檔損毀重建、沒有可信的 weak 資料，
+  /// 所以不修復 V1 ★，改以 V1 ★ 為準（SPEC §5.5）。
+  final List<String> repairSkippedDatasets;
   final List<UnresolvedLegacyItem> unresolved;
 
   /// 失敗時為 true；不會設定 migration version，下次進入會重試。
@@ -49,6 +53,7 @@ class MigrationReport {
     this.initialMigrationDone = false,
     this.compatibleDatasets = const [],
     this.repairedDatasets = const [],
+    this.repairSkippedDatasets = const [],
     this.unresolved = const [],
     this.failed = false,
     this.error,
@@ -65,6 +70,7 @@ class MigrationReport {
 ///     → V1 ★ 為準，取代該教材的 V2 weak；同時更新 exposedInV1。
 ///   - 教材「已變更」（重排／插入／刪除）→ 不信任 index，保留 V2 weak，
 ///     用目前的 index 改寫 V1 ★（修復）。
+///     例外：V2 狀態檔損毀重建時不修復，改以 V1 ★ 為準，避免清掉 V1 ★。
 /// - 所有步驟都是集合運算，同樣輸入重跑結果相同（idempotent）。
 class LegacyMigration {
   static const migrationVersionKey = 'pe_migration_version';
@@ -120,6 +126,9 @@ class LegacyMigration {
 
     final compatible = <String>[];
     final repaired = <String>[];
+    final repairSkipped = <String>[];
+    // V2 狀態是從損毀檔重建的空狀態時，不能拿它改寫 V1 ★。
+    final v2StateTrusted = !_wordStates.rebuiltFromCorruption;
     final newFingerprints = <String, _StoredFingerprint>{};
 
     for (final dataset in datasets) {
@@ -134,9 +143,13 @@ class LegacyMigration {
         compatible.add(dataset.id);
         _syncFromV1(dataset, refs, learnedByDataset[dataset.id] ?? const {},
             unresolved);
-      } else {
+      } else if (v2StateTrusted) {
         repaired.add(dataset.id);
         await _repairV1(dataset, refs);
+      } else {
+        repairSkipped.add(dataset.id);
+        _syncFromV1(dataset, refs, learnedByDataset[dataset.id] ?? const {},
+            unresolved);
       }
       newFingerprints[dataset.id] =
           _StoredFingerprint(fingerprint(items), items.length);
@@ -156,6 +169,7 @@ class LegacyMigration {
       initialMigrationDone: initial,
       compatibleDatasets: compatible,
       repairedDatasets: repaired,
+      repairSkippedDatasets: repairSkipped,
       unresolved: unresolved,
     );
   }

@@ -16,6 +16,7 @@ class WordStateRepository {
 
   final Map<String, WordLearningState> _states = {};
   bool _loaded = false;
+  bool _rebuiltFromCorruption = false;
 
   WordStateRepository({
     Future<Directory> Function()? baseDir,
@@ -24,6 +25,10 @@ class WordStateRepository {
         _onError = onError;
 
   bool get isLoaded => _loaded;
+
+  /// 這次載入時狀態檔（含 .bak）損毀，目前是從空狀態重建的。
+  /// Migration 會據此避免用空的 weak 集合覆蓋 V1 ★（SPEC §5.5）。
+  bool get rebuiltFromCorruption => _rebuiltFromCorruption;
 
   Future<JsonFileStore> _fileStore() async {
     final existing = _store;
@@ -36,7 +41,9 @@ class WordStateRepository {
   /// 載入狀態檔；檔案不存在或損毀時從空狀態開始（損毀由 JsonFileStore 回報）。
   Future<void> load() async {
     if (_loaded) return;
-    final json = await (await _fileStore()).read();
+    final store = await _fileStore();
+    final json = await store.read();
+    _rebuiltFromCorruption = store.lastReadCorrupt;
     _states.clear();
     if (json is Map && json['words'] is Map) {
       (json['words'] as Map).forEach((key, value) {

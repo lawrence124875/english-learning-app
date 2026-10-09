@@ -24,6 +24,7 @@ class JsonFileStore {
   Object? _pending;
   bool _hasPending = false;
   Future<void> _writing = Future.value();
+  bool _lastReadCorrupt = false;
 
   JsonFileStore(
     this.file, {
@@ -34,8 +35,12 @@ class JsonFileStore {
   File get _tmp => File('${file.path}.tmp');
   File get _bak => File('${file.path}.bak');
 
+  /// 上一次 [read] 是否因主檔與備份都損毀而回傳 null（檔案不存在不算）。
+  bool get lastReadCorrupt => _lastReadCorrupt;
+
   /// 讀取 JSON。回傳 null 代表沒有檔案，或主檔與備份都無法解析。
   Future<Object?> read() async {
+    _lastReadCorrupt = false;
     final mainExists = await file.exists();
     final bakExists = await _bak.exists();
     if (!mainExists && !bakExists) return null;
@@ -60,6 +65,7 @@ class JsonFileStore {
     }
 
     // 主檔與備份都壞了：保留壞檔供診斷，回報錯誤，從空狀態開始。
+    _lastReadCorrupt = true;
     final stamp = DateTime.now().millisecondsSinceEpoch;
     try {
       if (mainExists) await file.rename('${file.path}.corrupt-$stamp');
