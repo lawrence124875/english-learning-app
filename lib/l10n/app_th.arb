@@ -235,5 +235,17 @@
   "peImportFileEmpty": "ไฟล์ว่างเปล่า",
   "peImportFileUnreadable": "อ่านไฟล์ไม่ได้ โปรดตรวจสอบว่าเป็น CSV แบบ UTF-8",
   "peImportMissingColumns": "ไม่มีคอลัมน์: {columns}",
-  "peImportNoChanges": "ไม่มีประโยคที่เพิ่มหรืออัปเดต"
+  "peImportNoChanges": "ไม่มีประโยคที่เพิ่มหรืออัปเดต",
+  "menuWhatsNew": "มีอะไรใหม่",
+  "peWhatsNewTitle": "ใหม่: ภาษาอังกฤษใช้จริง",
+  "peWhatsNewPracticalTitle": "เรียนคำศัพท์ผ่านประโยค",
+  "peWhatsNewPracticalBody": "ดูคำศัพท์ที่ใช้บ่อยที่คุณกำลังเรียนในประโยคชีวิตประจำวัน เข้าใจและฟังได้ในบริบท",
+  "peWhatsNewSentenceTitle": "เรียนทีละประโยค พร้อมเสียงอ่าน",
+  "peWhatsNewSentenceBody": "ทุกประโยคมีคำแปลและเสียงอ่าน แตะ \"รู้แล้ว\" เมื่อจำคำนั้นได้",
+  "peWhatsNewWeakTitle": "คำที่ยังไม่คล่องมาก่อน",
+  "peWhatsNewWeakBody": "คำที่คุณติดดาวไว้ในหน้าหลักจะซิงก์อัตโนมัติ และประโยคที่มีคำเหล่านั้นจะขึ้นก่อน",
+  "peWhatsNewWhereTitle": "ค้นหาได้ที่ไหน",
+  "peWhatsNewWhereBody": "หน้าหลัก เมนู \"⋮\" มุมขวาบน → \"ภาษาอังกฤษใช้จริง\" เปิดหน้านี้อีกได้จาก \"มีอะไรใหม่\" ในเมนูเดียวกัน",
+  "peWhatsNewTry": "ลองเลย",
+  "peWhatsNewDone": "เข้าใจแล้ว"
 }

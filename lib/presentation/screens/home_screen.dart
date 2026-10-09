@@ -14,6 +14,7 @@ import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import 'onboarding_screen.dart';
 import '../../practical_english/presentation/screens/practical_english_screen.dart';
+import '../../practical_english/presentation/screens/whats_new_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
@@ -39,10 +40,16 @@ class HomeScreenState extends State<HomeScreen> {
     context.read<AppState>().initialize();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 第一次開啟 App 時顯示特色介紹（看過就不再自動出現）。
-      OnboardingScreen.showIfFirstTime(context);
+      _showIntroductions();
       _checkForUpdate();
     });
   }
+
+  /// V2：What's New 要在功能介紹寫入 onboarding_seen_v1 之前判斷
+  /// 是否為 V1 舊使用者（SPEC §11）。全新安裝只看功能介紹；
+  /// V1 升級的使用者（已看過功能介紹）看一次 What's New。
+  Future<void> _showIntroductions() => WhatsNewScreen.showOnLaunch(context,
+      showOnboarding: () => OnboardingScreen.showIfFirstTime(context));
 
   /// 開啟 App 時檢查 Google Play 是否有新版本；一般更新下載完成後，
   /// 跳出提示讓使用者選擇何時重新啟動套用。
@@ -131,6 +138,8 @@ class HomeScreenState extends State<HomeScreen> {
                 _shareApp(context);
               } else if (value == 'adPrivacy') {
                 AdsService.showPrivacyOptions();
+              } else if (value == 'whatsNew') {
+                WhatsNewScreen.open(context);
               } else if (value == 'practicalEnglish') {
                 Navigator.push(
                     context,
@@ -155,6 +164,13 @@ class HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                   leading: const Icon(Icons.lightbulb_outline),
                   title: Text(AppLocalizations.of(context)!.menuIntro),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'whatsNew',
+                child: ListTile(
+                  leading: const Icon(Icons.new_releases_outlined),
+                  title: Text(AppLocalizations.of(context)!.menuWhatsNew),
                 ),
               ),
               PopupMenuItem(

@@ -235,5 +235,17 @@
   "peImportFileEmpty": "File kosong.",
   "peImportFileUnreadable": "Tidak dapat membaca file. Pastikan CSV berformat UTF-8.",
   "peImportMissingColumns": "Kolom tidak ada: {columns}",
-  "peImportNoChanges": "Tidak ada kalimat yang ditambahkan atau diperbarui."
+  "peImportNoChanges": "Tidak ada kalimat yang ditambahkan atau diperbarui.",
+  "menuWhatsNew": "Fitur baru",
+  "peWhatsNewTitle": "Baru: Bahasa Inggris Praktis",
+  "peWhatsNewPracticalTitle": "Belajar kata lewat kalimat",
+  "peWhatsNewPracticalBody": "Lihat kata-kata umum yang sedang kamu pelajari dalam kalimat sehari-hari, lengkap dengan konteks dan suaranya.",
+  "peWhatsNewSentenceTitle": "Belajar per kalimat dengan audio",
+  "peWhatsNewSentenceBody": "Setiap kalimat punya terjemahan dan audio. Ketuk \"Saya sudah tahu\" saat kamu sudah menguasai kata.",
+  "peWhatsNewWeakTitle": "Kata lemah didahulukan",
+  "peWhatsNewWeakBody": "Kata yang kamu beri bintang di layar utama otomatis tersinkron, dan kalimat yang memuatnya muncul lebih dulu.",
+  "peWhatsNewWhereTitle": "Di mana menemukannya",
+  "peWhatsNewWhereBody": "Layar utama, menu \"⋮\" kanan atas → \"Bahasa Inggris Praktis\". Halaman ini bisa dibuka lagi dari \"Fitur baru\" di menu yang sama.",
+  "peWhatsNewTry": "Coba sekarang",
+  "peWhatsNewDone": "Mengerti"
 }

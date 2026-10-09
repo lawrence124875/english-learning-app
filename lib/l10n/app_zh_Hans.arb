@@ -235,5 +235,17 @@
   "peImportFileEmpty": "文件是空的。",
   "peImportFileUnreadable": "无法读取此文件，请确认是 UTF-8 编码的 CSV。",
   "peImportMissingColumns": "缺少列：{columns}",
-  "peImportNoChanges": "没有新增或更新任何句子。"
+  "peImportNoChanges": "没有新增或更新任何句子。",
+  "menuWhatsNew": "新功能",
+  "peWhatsNewTitle": "新功能：实用英语",
+  "peWhatsNewPracticalTitle": "用句子学单词",
+  "peWhatsNewPracticalBody": "把你正在学的高频单词放进日常实用句子里，看得懂也听得懂。",
+  "peWhatsNewSentenceTitle": "逐句学习与朗读",
+  "peWhatsNewSentenceBody": "每句都有翻译和朗读，按“我会了”标记已学会的单词。",
+  "peWhatsNewWeakTitle": "不熟悉单词优先",
+  "peWhatsNewWeakBody": "你在首页加星号的不熟悉单词会自动同步，含这些单词的句子排在最前面。",
+  "peWhatsNewWhereTitle": "在哪里找到",
+  "peWhatsNewWhereBody": "首页右上角“⋮”菜单 →“实用英语”。这页之后也可以从同一个菜单的“新功能”再次打开。",
+  "peWhatsNewTry": "立即试试",
+  "peWhatsNewDone": "知道了"
 }

@@ -235,5 +235,17 @@
   "peImportFileEmpty": "ファイルが空です。",
   "peImportFileUnreadable": "このファイルを読み込めません。UTF-8 の CSV か確認してください。",
   "peImportMissingColumns": "列がありません：{columns}",
-  "peImportNoChanges": "追加・更新された例文はありません。"
+  "peImportNoChanges": "追加・更新された例文はありません。",
+  "menuWhatsNew": "新機能",
+  "peWhatsNewTitle": "新機能：実用英語",
+  "peWhatsNewPracticalTitle": "例文で単語を覚える",
+  "peWhatsNewPracticalBody": "学習中の頻出単語を日常の実用的な例文で確認でき、意味も音も文脈で覚えられます。",
+  "peWhatsNewSentenceTitle": "1文ずつ学習・読み上げ",
+  "peWhatsNewSentenceBody": "各例文に訳と読み上げ付き。覚えた単語は「覚えた」でマークできます。",
+  "peWhatsNewWeakTitle": "苦手な単語を優先",
+  "peWhatsNewWeakBody": "ホーム画面で星を付けた苦手な単語は自動で同期され、それを含む例文が先に表示されます。",
+  "peWhatsNewWhereTitle": "どこにある？",
+  "peWhatsNewWhereBody": "ホーム画面右上の「⋮」メニュー →「実用英語」。このページは同じメニューの「新機能」からいつでも開けます。",
+  "peWhatsNewTry": "今すぐ試す",
+  "peWhatsNewDone": "OK"
 }

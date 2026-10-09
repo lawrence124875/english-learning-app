@@ -235,5 +235,17 @@
   "peImportFileEmpty": "The file is empty.",
   "peImportFileUnreadable": "Couldn't read this file. Make sure it's a UTF-8 CSV.",
   "peImportMissingColumns": "Missing columns: {columns}",
-  "peImportNoChanges": "No sentences were added or updated."
+  "peImportNoChanges": "No sentences were added or updated.",
+  "menuWhatsNew": "What's new",
+  "peWhatsNewTitle": "New: Practical English",
+  "peWhatsNewPracticalTitle": "Learn words in sentences",
+  "peWhatsNewPracticalBody": "See the high-frequency words you're learning in everyday sentences, so you can read and hear them in context.",
+  "peWhatsNewSentenceTitle": "Sentence by sentence, with audio",
+  "peWhatsNewSentenceBody": "Every sentence has a translation and audio. Tap \"I know it\" when you've learned a word.",
+  "peWhatsNewWeakTitle": "Weak words first",
+  "peWhatsNewWeakBody": "Words you starred as unfamiliar on the home screen sync automatically, and sentences with them come first.",
+  "peWhatsNewWhereTitle": "Where to find it",
+  "peWhatsNewWhereBody": "Home screen, top-right \"⋮\" menu → \"Practical English\". You can reopen this page from \"What's new\" in the same menu.",
+  "peWhatsNewTry": "Try it now",
+  "peWhatsNewDone": "Got it"
 }

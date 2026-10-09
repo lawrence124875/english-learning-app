@@ -235,5 +235,17 @@
   "peImportFileEmpty": "O arquivo está vazio.",
   "peImportFileUnreadable": "Não foi possível ler o arquivo. Verifique se é um CSV UTF-8.",
   "peImportMissingColumns": "Colunas ausentes: {columns}",
-  "peImportNoChanges": "Nenhuma frase foi adicionada ou atualizada."
+  "peImportNoChanges": "Nenhuma frase foi adicionada ou atualizada.",
+  "menuWhatsNew": "Novidades",
+  "peWhatsNewTitle": "Novo: Inglês prático",
+  "peWhatsNewPracticalTitle": "Aprenda palavras em frases",
+  "peWhatsNewPracticalBody": "Veja as palavras frequentes que você está aprendendo em frases do dia a dia, para ler e ouvir no contexto.",
+  "peWhatsNewSentenceTitle": "Frase a frase, com áudio",
+  "peWhatsNewSentenceBody": "Cada frase tem tradução e áudio. Toque em \"Já sei\" quando aprender uma palavra.",
+  "peWhatsNewWeakTitle": "Palavras difíceis primeiro",
+  "peWhatsNewWeakBody": "As palavras que você marcou com estrela na tela inicial são sincronizadas e as frases com elas aparecem primeiro.",
+  "peWhatsNewWhereTitle": "Onde encontrar",
+  "peWhatsNewWhereBody": "Tela inicial, menu \"⋮\" no canto superior direito → \"Inglês prático\". Você pode reabrir esta página em \"Novidades\" no mesmo menu.",
+  "peWhatsNewTry": "Experimentar agora",
+  "peWhatsNewDone": "Entendi"
 }

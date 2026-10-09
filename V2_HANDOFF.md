@@ -21,7 +21,7 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 | 3 | CSV Format B 匯入 | ✅ 2026-10-08 |
 | 4 | Learning：PracticalEnglishState、清單／詳細頁、弱字優先、Coverage、我會了、免費／Premium 過濾、匯入畫面 | ✅ 2026-10-08 |
 | 5 | PlaybackCoordinator | ✅ 2026-10-09 |
-| 6 | What's New | ○ |
+| 6 | What's New | ✅ 2026-10-09 |
 | 7 | 整體測試 | ○ |
 
 ## Phase 1 備註
@@ -62,3 +62,13 @@ V2 的進度與固定規則只寫在這個檔案；V1 的紀錄在 HANDOFF.md（
 - V2：`PracticalEnglishState.speak` claim v2；`stopSpeaking`（換句、離開頁面、App 進背景、dispose）只有 V2 仍是擁有者才停 TTS，不會誤停已接手的 V1。
 - 未改：audio_service／TtsAudioHandler、鎖屏、通知、播放清單。V1 `stopCruise()` 本來就會呼叫 `tts.stop()`（例如鎖屏 ⏸），維持原樣。設定頁「試聽聲音」直接用 TTS、不經 coordinator（V1 原行為）。
 - 測試：`test/practical_english/playback_test.dart`（19 個；fake TTS 模擬 awaitSpeakCompletion）。
+
+## Phase 6 備註
+
+- `WhatsNewService`（`lib/practical_english/data/whats_new_service.dart`）：`app_schema_version`（int 2）＋`last_seen_whats_new_version`（`pe_2_0`），與 App 版本號無關。沒有 schema key 時：有 `onboarding_seen_v1` 或 `settings_v1` → V1 升級（顯示）；否則全新安裝（直接記成已看過）。V1 key 只讀不寫。
+- 啟動順序很重要：判斷必須在 V1 功能介紹寫入 `onboarding_seen_v1` 之前，所以首頁改呼叫 `WhatsNewScreen.showOnLaunch`（判斷 → 功能介紹 → What's New）。
+- 顯示前先記成已看過（跟 V1 功能介紹一樣），App 中途被關也不會重複跳出。
+- 重新打開：首頁 ⋮ 選單「新功能」。頁面「立即試試」直接進實用英文。
+- 字串：12 個 key（`menuWhatsNew`、`peWhatsNew*`），11 語系。
+- 測試：`test/practical_english/whats_new_test.dart`（11 個，含真的 OnboardingScreen 與 HomeScreen 選單）。
+- 本機環境無法連到 dl.google.com，沒有 Android SDK，無法建置 APK；實機驗證留到 Phase 7。

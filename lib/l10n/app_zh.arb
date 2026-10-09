@@ -463,5 +463,17 @@
       }
     }
   },
-  "peImportNoChanges": "沒有新增或更新任何句子。"
+  "peImportNoChanges": "沒有新增或更新任何句子。",
+  "menuWhatsNew": "新功能",
+  "peWhatsNewTitle": "新功能：實用英文",
+  "peWhatsNewPracticalTitle": "用句子學單字",
+  "peWhatsNewPracticalBody": "把你正在學的高頻單字放進日常實用句子裡，看得懂也聽得懂。",
+  "peWhatsNewSentenceTitle": "逐句學習與朗讀",
+  "peWhatsNewSentenceBody": "每句都有翻譯和朗讀，按「我會了」標記已學會的單字。",
+  "peWhatsNewWeakTitle": "不熟悉單字優先",
+  "peWhatsNewWeakBody": "你在首頁加星號的不熟悉單字會自動同步，含這些單字的句子排在最前面。",
+  "peWhatsNewWhereTitle": "在哪裡找到",
+  "peWhatsNewWhereBody": "首頁右上角「⋮」選單 →「實用英文」。這頁之後也可以從同一個選單的「新功能」再打開。",
+  "peWhatsNewTry": "立即試試",
+  "peWhatsNewDone": "知道了"
 }

@@ -235,5 +235,17 @@
   "peImportFileEmpty": "Tệp trống.",
   "peImportFileUnreadable": "Không đọc được tệp. Hãy dùng CSV mã hóa UTF-8.",
   "peImportMissingColumns": "Thiếu cột: {columns}",
-  "peImportNoChanges": "Không có câu nào được thêm hoặc cập nhật."
+  "peImportNoChanges": "Không có câu nào được thêm hoặc cập nhật.",
+  "menuWhatsNew": "Tính năng mới",
+  "peWhatsNewTitle": "Mới: Tiếng Anh thực dụng",
+  "peWhatsNewPracticalTitle": "Học từ qua câu",
+  "peWhatsNewPracticalBody": "Xem các từ thông dụng bạn đang học trong câu hằng ngày để hiểu và nghe trong ngữ cảnh.",
+  "peWhatsNewSentenceTitle": "Học từng câu, có đọc to",
+  "peWhatsNewSentenceBody": "Mỗi câu đều có bản dịch và giọng đọc. Nhấn \"Tôi đã biết\" khi bạn đã thuộc một từ.",
+  "peWhatsNewWeakTitle": "Ưu tiên từ yếu",
+  "peWhatsNewWeakBody": "Các từ bạn gắn sao trên màn hình chính sẽ tự đồng bộ, và câu chứa chúng được xếp lên đầu.",
+  "peWhatsNewWhereTitle": "Tìm ở đâu",
+  "peWhatsNewWhereBody": "Màn hình chính, menu \"⋮\" góc trên bên phải → \"Tiếng Anh thực dụng\". Bạn có thể mở lại trang này từ \"Tính năng mới\" trong cùng menu.",
+  "peWhatsNewTry": "Thử ngay",
+  "peWhatsNewDone": "Đã hiểu"
 }

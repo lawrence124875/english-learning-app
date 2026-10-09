@@ -235,5 +235,17 @@
   "peImportFileEmpty": "파일이 비어 있습니다.",
   "peImportFileUnreadable": "이 파일을 읽을 수 없습니다. UTF-8 CSV인지 확인하세요.",
   "peImportMissingColumns": "누락된 열: {columns}",
-  "peImportNoChanges": "추가되거나 업데이트된 문장이 없습니다."
+  "peImportNoChanges": "추가되거나 업데이트된 문장이 없습니다.",
+  "menuWhatsNew": "새로운 기능",
+  "peWhatsNewTitle": "새 기능: 실용 영어",
+  "peWhatsNewPracticalTitle": "문장으로 단어 익히기",
+  "peWhatsNewPracticalBody": "지금 배우는 고빈도 단어를 일상 문장 속에서 보고 들으며 익힐 수 있어요.",
+  "peWhatsNewSentenceTitle": "문장별 학습과 읽어 주기",
+  "peWhatsNewSentenceBody": "모든 문장에 번역과 읽어 주기가 있고, 익힌 단어는 \"알아요\"로 표시해요.",
+  "peWhatsNewWeakTitle": "약한 단어 우선",
+  "peWhatsNewWeakBody": "홈 화면에서 별표한 약한 단어가 자동으로 동기화되고, 그 단어가 들어간 문장이 먼저 나와요.",
+  "peWhatsNewWhereTitle": "어디에 있나요",
+  "peWhatsNewWhereBody": "홈 화면 오른쪽 위 \"⋮\" 메뉴 → \"실용 영어\". 이 페이지는 같은 메뉴의 \"새로운 기능\"에서 다시 열 수 있어요.",
+  "peWhatsNewTry": "지금 해 보기",
+  "peWhatsNewDone": "확인"
 }

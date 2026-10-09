@@ -235,5 +235,17 @@
   "peImportFileEmpty": "الملف فارغ.",
   "peImportFileUnreadable": "تعذر قراءة الملف. تأكد من أنه CSV بترميز UTF-8.",
   "peImportMissingColumns": "أعمدة مفقودة: {columns}",
-  "peImportNoChanges": "لم تتم إضافة أو تحديث أي جمل."
+  "peImportNoChanges": "لم تتم إضافة أو تحديث أي جمل.",
+  "menuWhatsNew": "ما الجديد",
+  "peWhatsNewTitle": "جديد: الإنجليزية العملية",
+  "peWhatsNewPracticalTitle": "تعلّم الكلمات في جمل",
+  "peWhatsNewPracticalBody": "شاهد الكلمات الشائعة التي تتعلمها في جمل يومية لتفهمها وتسمعها في سياقها.",
+  "peWhatsNewSentenceTitle": "جملة بجملة مع الصوت",
+  "peWhatsNewSentenceBody": "لكل جملة ترجمة وصوت. اضغط \"أعرفها\" عندما تتعلم كلمة.",
+  "peWhatsNewWeakTitle": "الكلمات الصعبة أولاً",
+  "peWhatsNewWeakBody": "الكلمات التي ميّزتها بنجمة في الشاشة الرئيسية تتزامن تلقائياً، وتظهر الجمل التي تحتويها أولاً.",
+  "peWhatsNewWhereTitle": "أين تجدها",
+  "peWhatsNewWhereBody": "الشاشة الرئيسية، قائمة \"⋮\" أعلى اليمين ← \"الإنجليزية العملية\". يمكنك إعادة فتح هذه الصفحة من \"ما الجديد\" في القائمة نفسها.",
+  "peWhatsNewTry": "جرّبها الآن",
+  "peWhatsNewDone": "حسناً"
 }
