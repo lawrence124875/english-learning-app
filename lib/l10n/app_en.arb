@@ -172,6 +172,8 @@
   "introBody5": "Textbook vocabulary, work phrases, exam lists: import them as a CSV file, listen in the background, and mark the hard ones. Not just English: Japanese, Korean, Chinese, French, German, Spanish, Arabic and more—14 languages in total, with translations in the language you know best. (Some languages require downloading the voice on your phone first.)",
   "introTitle6": "Four academic word lists, free to start",
   "introBody6": "NGSL 2809 core words, Spoken 720, PHRASE List 506 and PhaVE List 150, all from published academic research. Every list has free content so you can try before deciding.",
+  "introTitle7": "Practical English: learn words in sentences",
+  "introBody7": "Thousands of everyday sentences covering every word in the four lists. Each has a translation and can be read aloud one after another, even with the screen off. Words you mark as unfamiliar sync automatically, and their sentences come first.",
   "importWordLangLabel": "What language is the first column? (sets the reading voice)",
   "importVoiceMissing": "Your phone has no text-to-speech voice for \"{language}\", so it can't be read aloud. Install one in Settings → Text-to-speech.",
   "menuShare": "Share with friends",

@@ -322,6 +322,9 @@
   "introBody5": "課本單字、工作常用語、考試範圍，存成 CSV 檔就能匯入，一樣背景朗讀、標記不熟悉。不只英文——日文、韓文、法文、德文、西班牙文、泰文、阿拉伯文等 14 種語言都能朗讀，翻譯也能選你熟悉的語言。（部分語言需先在手機下載語音）",
   "introTitle6": "四大學術教材，免費開始",
   "introBody6": "核心單字 NGSL 2809、口語常用字 720、高頻語塊 506、片語動詞 150，皆來自公開學術研究。每份教材都有免費內容，可以先體驗再決定。",
+  "introTitle7": "實用英文：用句子學單字",
+  "introBody7": "上千句日常實用句子，涵蓋四份教材的全部單字。每句都有翻譯，可以連續自動朗讀，關掉螢幕也能繼續聽。你標成不熟悉的單字會自動同步，相關句子排在最前面。",
+  "@introTitle7": {"description": "Onboarding page 7 (Practical English); shown only when the V2 readiness switch is on"},
   "importWordLangLabel": "第一欄是什麼語言？（決定朗讀語音）",
   "importVoiceMissing": "手機目前沒有「{language}」的朗讀語音，會念不出來。請到手機「設定 → 文字轉語音」安裝該語言的語音包。",
   "@importVoiceMissing": {

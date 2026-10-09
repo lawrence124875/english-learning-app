@@ -172,6 +172,8 @@
   "introBody5": "Kosakata buku pelajaran, ungkapan kerja, materi ujian, dan lainnya bisa diimpor sebagai file CSV, lalu diputar di latar belakang dan ditandai seperti biasa. Bukan hanya bahasa Inggris: Jepang, Korea, Mandarin, Prancis, Jerman, Spanyol, Thai, Arab, dan lainnya—total 14 bahasa bisa dibacakan, dan terjemahannya bisa memakai bahasa yang kamu kuasai. (Beberapa bahasa perlu mengunduh data suara di ponsel terlebih dahulu)",
   "introTitle6": "4 materi akademis, mulai gratis",
   "introBody6": "Kata inti NGSL 2809, kata lisan 720, frasa umum 506, dan phrasal verb 150, semuanya dari riset akademis terbuka. Setiap materi punya konten gratis, jadi coba dulu sebelum memutuskan.",
+  "introTitle7": "Bahasa Inggris Praktis: belajar kata lewat kalimat",
+  "introBody7": "Ribuan kalimat sehari-hari yang mencakup semua kata di empat materi. Setiap kalimat punya terjemahan dan bisa dibacakan berurutan, bahkan saat layar mati. Kata yang kamu tandai belum hafal disinkronkan otomatis, dan kalimatnya ditampilkan lebih dulu.",
   "importWordLangLabel": "Bahasa apa di kolom pertama? (untuk suara pembacaan)",
   "importVoiceMissing": "Ponsel belum punya suara pembacaan \"{language}\", jadi tidak bisa dibacakan. Pasang paket suaranya di \"Setelan → Text-to-speech\".",
   "menuShare": "Bagikan ke teman",

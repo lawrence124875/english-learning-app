@@ -315,4 +315,40 @@ void main() {
       });
     }
   });
+
+  group('Onboarding page 7 (實用英文)', () {
+    tearDown(() => PracticalEnglishRelease.debugOverride = null);
+
+    Future<List<String>> titlesUntilLast(WidgetTester tester) async {
+      await tester.pumpWidget(const MaterialApp(
+        locale: Locale('zh'),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: OnboardingScreen(),
+      ));
+      await tester.pumpAndSettle();
+      var pages = 1;
+      while (find.text('開始學習').evaluate().isEmpty) {
+        await tester.tap(find.text('下一步'));
+        await tester.pumpAndSettle();
+        pages++;
+        if (pages > 10) break;
+      }
+      return [
+        '$pages',
+        if (find.text('四大學術教材，免費開始').evaluate().isNotEmpty) 'last=6',
+        if (find.text('實用英文：用句子學單字').evaluate().isNotEmpty) 'last=7',
+      ];
+    }
+
+    testWidgets('switch off: original 6 pages, no 實用英文 page', (tester) async {
+      PracticalEnglishRelease.debugOverride = false;
+      expect(await titlesUntilLast(tester), ['6', 'last=6']);
+    });
+
+    testWidgets('switch on: 7th page is 實用英文', (tester) async {
+      PracticalEnglishRelease.debugOverride = true;
+      expect(await titlesUntilLast(tester), ['7', 'last=7']);
+    });
+  });
 }
