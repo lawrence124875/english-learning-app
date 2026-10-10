@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import '../../l10n/app_localizations.dart';
 
 /// 語言判斷的單一來源：App 介面（MaterialApp）、通知、鎖屏、
@@ -26,8 +27,12 @@ class BackgroundL10n {
     return const Locale('en');
   }
 
+  /// 只給商店截圖工具用（tool/store_screenshots）：指定介面語言。
+  @visibleForTesting
+  static Locale? debugLocale;
+
   static Locale get deviceLocale =>
-      resolve(PlatformDispatcher.instance.locales);
+      debugLocale ?? resolve(PlatformDispatcher.instance.locales);
 
   static AppLocalizations current() => lookupAppLocalizations(deviceLocale);
 
