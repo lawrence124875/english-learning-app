@@ -280,5 +280,6 @@
   "peRateShared": "ความเร็วใช้ร่วมกับการฟังคำศัพท์ การตั้งค่าอื่นใช้กับภาษาอังกฤษใช้จริงเท่านั้น ปิดหน้าจอแล้วยังเล่นต่อ",
   "peSettingsSummary": "{content} · {count} ครั้ง · ห่าง {seconds} วินาที",
   "peSeeExamples": "ดูประโยคตัวอย่าง",
-  "peNoExamples": "ยังไม่มีประโยคตัวอย่างสำหรับ \"{word}\""
+  "peNoExamples": "ยังไม่มีประโยคตัวอย่างสำหรับ \"{word}\"",
+  "peExamplesNeedPremium": "ประโยคตัวอย่างของ \"{word}\" ต้องใช้ Premium"
 }

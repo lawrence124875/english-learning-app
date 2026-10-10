@@ -280,5 +280,6 @@
   "peRateShared": "속도는 단어 크루즈와 공유됩니다. 다른 설정은 실용 영어에만 적용됩니다. 화면을 꺼도 계속 재생됩니다.",
   "peSettingsSummary": "{content} · {count}회 · 간격 {seconds}초",
   "peSeeExamples": "예문 보기",
-  "peNoExamples": "\"{word}\"의 예문이 아직 없습니다."
+  "peNoExamples": "\"{word}\"의 예문이 아직 없습니다.",
+  "peExamplesNeedPremium": "\"{word}\"의 예문은 Premium에서 볼 수 있습니다."
 }

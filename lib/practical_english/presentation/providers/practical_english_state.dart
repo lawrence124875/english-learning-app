@@ -220,6 +220,13 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     ];
   }
 
+  /// 這個字有句子、但全部因免費版限制而鎖住（首頁「看例句」顯示 Premium 提示用）。
+  bool hasOnlyLockedSentencesForWord(String ref) =>
+      !isPremium &&
+      sentencesForWord(ref).isEmpty &&
+      _sentences.all.any((s) =>
+          s.wordIds.contains(ref) || s.secondaryWordIds.contains(ref));
+
   /// 因免費版限制而鎖住的句子數（不顯示內容，只提示數量）。
   int get lockedCount => coverage.lockedSentences;
 

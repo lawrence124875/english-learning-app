@@ -526,5 +526,7 @@
   "@peSettingsSummary": {"placeholders": {"content": {"type": "String"}, "count": {"type": "int"}, "seconds": {"type": "String"}}},
   "peSeeExamples": "看例句",
   "peNoExamples": "「{word}」目前沒有可看的例句。",
-  "@peNoExamples": {"placeholders": {"word": {"type": "String"}}}
+  "@peNoExamples": {"placeholders": {"word": {"type": "String"}}},
+  "peExamplesNeedPremium": "「{word}」的例句需要 Premium 才能看。",
+  "@peExamplesNeedPremium": {"placeholders": {"word": {"type": "String"}}}
 }

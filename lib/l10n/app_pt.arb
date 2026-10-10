@@ -280,5 +280,6 @@
   "peRateShared": "A velocidade é a mesma das palavras; as outras configurações só valem para Inglês prático. Continua tocando com a tela desligada.",
   "peSettingsSummary": "{content} · ×{count} · intervalo {seconds} s",
   "peSeeExamples": "Ver exemplos",
-  "peNoExamples": "Ainda não há frases de exemplo para \"{word}\"."
+  "peNoExamples": "Ainda não há frases de exemplo para \"{word}\".",
+  "peExamplesNeedPremium": "As frases de exemplo de \"{word}\" exigem o Premium."
 }
