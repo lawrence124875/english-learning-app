@@ -280,5 +280,6 @@
   "peRateShared": "Kecepatan sama dengan pemutaran kata; pengaturan lain hanya untuk Bahasa Inggris Praktis. Tetap diputar saat layar mati.",
   "peSettingsSummary": "{content} · {count}x · jeda {seconds} dtk",
   "peSeeExamples": "Lihat contoh",
-  "peNoExamples": "Belum ada contoh kalimat untuk \"{word}\"."
+  "peNoExamples": "Belum ada contoh kalimat untuk \"{word}\".",
+  "peExamplesNeedPremium": "Contoh kalimat untuk \"{word}\" memerlukan Premium."
 }

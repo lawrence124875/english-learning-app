@@ -5,6 +5,7 @@ import '../../../data/sources/tts_service.dart';
 import '../../../domain/models/word_item.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../presentation/providers/app_state.dart';
+import '../../../presentation/screens/paywall_screen.dart';
 import '../../domain/models/word_ref.dart';
 import '../providers/practical_english_state.dart';
 import 'sentence_detail_screen.dart';
@@ -66,6 +67,27 @@ class _WordSentencesView extends StatelessWidget {
         break;
     }
     final sentences = state.sentencesForWord(wordRef);
+    if (sentences.isEmpty && state.hasOnlyLockedSentencesForWord(wordRef)) {
+      return message(Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.lock_outline, size: 32),
+          const SizedBox(height: 12),
+          Text(
+            l10n.peExamplesNeedPremium(word),
+            key: const Key('pe_examples_premium'),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 16),
+          FilledButton(
+            key: const Key('pe_examples_upgrade'),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const PaywallScreen())),
+            child: Text(l10n.menuPremium),
+          ),
+        ],
+      ));
+    }
     if (sentences.isEmpty) {
       return message(Text(
         l10n.peNoExamples(word),

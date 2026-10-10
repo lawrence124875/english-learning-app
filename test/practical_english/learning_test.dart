@@ -663,6 +663,35 @@ void main() {
       await finish(tester, s);
     });
 
+    testWidgets('22f. home 看例句 (free): only locked sentences → Premium hint',
+        (tester) async {
+      final s = (await tester.runAsync(() => enter(_app())))!;
+      final ds = _builtIn();
+      expect(s.sentencesForWord(_id(5)), isEmpty);
+      expect(s.hasOnlyLockedSentencesForWord(_id(5)), isTrue);
+      expect(s.hasOnlyLockedSentencesForWord(_id(8)), isFalse);
+      Future<void> open(WordItem item) async {
+        await tester.pumpWidget(MaterialApp(
+          locale: const Locale('zh'),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: WordSentencesScreen(dataset: ds, item: item, state: s),
+        ));
+        await tester.pump();
+      }
+
+      await open(ds.items[5]);
+      expect(find.text('「w5」的例句需要 Premium 才能看。'), findsOneWidget);
+      expect(find.byKey(const Key('pe_examples_upgrade')), findsOneWidget);
+      expect(find.byKey(const Key('pe_no_examples')), findsNothing);
+
+      // 完全沒有句子的字仍是一般提示
+      await open(ds.items[8]);
+      expect(find.byKey(const Key('pe_no_examples')), findsOneWidget);
+      expect(find.byKey(const Key('pe_examples_upgrade')), findsNothing);
+      await finish(tester, s);
+    });
+
     testWidgets('22b. TTS failure shows a message instead of crashing',
         (tester) async {
       final tts = _RecordingTts()..fail = true;

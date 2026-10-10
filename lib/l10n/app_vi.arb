@@ -280,5 +280,6 @@
   "peRateShared": "Tốc độ dùng chung với phần từ vựng; các cài đặt khác chỉ áp dụng cho Tiếng Anh thực dụng. Tắt màn hình vẫn tiếp tục phát.",
   "peSettingsSummary": "{content} · {count} lần · cách {seconds} giây",
   "peSeeExamples": "Xem câu ví dụ",
-  "peNoExamples": "Chưa có câu ví dụ cho \"{word}\"."
+  "peNoExamples": "Chưa có câu ví dụ cho \"{word}\".",
+  "peExamplesNeedPremium": "Câu ví dụ cho \"{word}\" cần Premium."
 }
