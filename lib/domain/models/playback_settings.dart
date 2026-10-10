@@ -43,7 +43,7 @@ class PlaybackSettings {
     this.speechRate = 0.5,
     this.voiceId,
     this.settingsPanelExpanded = false,
-    this.wordSize = WordSize.medium,
+    this.wordSize = WordSize.small,
     this.appearance = AppearanceMode.system,
   });
 
@@ -104,7 +104,7 @@ class PlaybackSettings {
       speechRate: (json['speechRate'] as num?)?.toDouble() ?? 0.9,
       voiceId: json['voiceId'] as String?,
       settingsPanelExpanded: json['settingsPanelExpanded'] as bool? ?? false,
-      wordSize: _enumAt(WordSize.values, json['wordSize'], WordSize.medium),
+      wordSize: _enumAt(WordSize.values, json['wordSize'], WordSize.small),
       appearance: _enumAt(
           AppearanceMode.values, json['appearance'], AppearanceMode.system),
     );
