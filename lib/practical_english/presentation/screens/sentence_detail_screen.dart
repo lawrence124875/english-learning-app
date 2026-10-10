@@ -189,35 +189,54 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
                               ?.copyWith(color: palette.translation),
                         ),
                         const SizedBox(height: 36),
-                        Wrap(
-                          // 長語言（越南文等）在窄螢幕自動換行，不溢出。
-                          alignment: WrapAlignment.center,
-                          crossAxisAlignment: WrapCrossAlignment.center,
-                          spacing: 8,
-                          runSpacing: 8,
+                        Row(
+                          // 三個按鈕固定同一排；字大或語言長時，按鈕裡的字自動縮小。
                           children: [
-                            _Pill(
-                              key: const Key('pe_prev'),
-                              icon: Icons.skip_previous,
-                              label: l10n.pePrevious,
-                              onTap: () => _manual(_player.previous),
+                            Expanded(
+                              flex: 3,
+                              child: _Pill(
+                                key: const Key('pe_prev'),
+                                icon: Icons.skip_previous,
+                                label: l10n.pePrevious,
+                                onTap: () => _manual(_player.previous),
+                              ),
                             ),
-                            FilledButton.icon(
-                              key: const Key('pe_autoplay'),
-                              onPressed: _player.togglePlay,
-                              icon: Icon(_player.isAutoPlaying
-                                  ? Icons.pause
-                                  : Icons.play_arrow),
-                              label: Text(_player.isAutoPlaying
-                                  ? l10n.pePause
-                                  : l10n.peAutoPlay),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              flex: 4,
+                              child: FilledButton(
+                                key: const Key('pe_autoplay'),
+                                style: FilledButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 12)),
+                                onPressed: _player.togglePlay,
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(_player.isAutoPlaying
+                                          ? Icons.pause
+                                          : Icons.play_arrow),
+                                      const SizedBox(width: 4),
+                                      Text(_player.isAutoPlaying
+                                          ? l10n.pePause
+                                          : l10n.peAutoPlay),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ),
-                            _Pill(
-                              key: const Key('pe_next'),
-                              icon: Icons.skip_next,
-                              label: l10n.peNext,
-                              trailing: true,
-                              onTap: () => _manual(_player.next),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              flex: 3,
+                              child: _Pill(
+                                key: const Key('pe_next'),
+                                icon: Icons.skip_next,
+                                label: l10n.peNext,
+                                trailing: true,
+                                onTap: () => _manual(_player.next),
+                              ),
                             ),
                           ],
                         ),
@@ -307,12 +326,15 @@ class _Pill extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: trailing
-                ? [labelWidget, const SizedBox(width: 4), iconWidget]
-                : [iconWidget, const SizedBox(width: 4), labelWidget],
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: trailing
+                  ? [labelWidget, const SizedBox(width: 2), iconWidget]
+                  : [iconWidget, const SizedBox(width: 2), labelWidget],
+            ),
           ),
         ),
       ),

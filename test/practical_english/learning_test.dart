@@ -179,14 +179,17 @@ void main() {
   }
 
   Future<PracticalEnglishState> enter(AppState app,
-      {V1LegacyGateway? gateway, TtsService? tts, DateTime Function()? now}) async {
+      {V1LegacyGateway? gateway,
+      TtsService? tts,
+      DateTime Function()? now}) async {
     final s = newState(app, gateway: gateway, tts: tts, now: now);
     await s.load();
     expect(s.status, PracticalEnglishLoadStatus.ready);
     return s;
   }
 
-  List<String> ids(PracticalEnglishState s) => [for (final x in s.sentences) x.id];
+  List<String> ids(PracticalEnglishState s) =>
+      [for (final x in s.sentences) x.id];
 
   group('Learning state', () {
     test('1. fresh install: everything unseen, no V1 write, migration recorded',
@@ -376,7 +379,8 @@ void main() {
       created.remove(s);
       await Future<void>.delayed(const Duration(milliseconds: 50));
 
-      final again = await enter(_app()..replaceStarredFromPracticalEnglish('ngsl_2809', {1}));
+      final again = await enter(
+          _app()..replaceStarredFromPracticalEnglish('ngsl_2809', {1}));
       expect(again.statusOf(_id(1)), WordStatus.weak);
       expect(again.statusOf(_id(0)), WordStatus.mastered);
       expect(again.stateOf(_id(2)).peExposureCount, 1);
@@ -396,11 +400,13 @@ void main() {
       await s.setWeak(_id(1), true);
       await s.setMastered(_id(1), true);
       s.recordPractice(s.sentences.first);
-      await s.importCsv('word_id,sentence,sentence_translation\n${_id(0)},Imported here.,這裡\n');
+      await s.importCsv(
+          'word_id,sentence,sentence_translation\n${_id(0)},Imported here.,這裡\n');
       await s.flush();
       final prefs = await SharedPreferences.getInstance();
       expect(prefs.getString('settings_v1'), v1['settings_v1']);
-      expect(prefs.getString('progress_v1_ngsl_2809'), v1['progress_v1_ngsl_2809']);
+      expect(prefs.getString('progress_v1_ngsl_2809'),
+          v1['progress_v1_ngsl_2809']);
       expect(prefs.getStringList('stats_all_learned_v1'), ['ngsl_2809:0']);
       expect(prefs.getStringList('starred_v1_custom_100'), ['0']);
       expect(prefs.getStringList('starred_v1_ngsl_2809'), isEmpty);
@@ -420,12 +426,12 @@ void main() {
 
     test('17. imported sentence becomes learnable', () async {
       final s = await enter(_app());
-      final r = await s.importCsv(
-          'word_id,sentence,sentence_translation\n'
+      final r = await s.importCsv('word_id,sentence,sentence_translation\n'
           '${_id(2)}|custom_100/c0,Imported sentence.,匯入句\n'
           '${_id(8)},Locked import.,鎖住\n');
       expect(r.added, 2);
-      final imported = s.sentences.where((x) => x.id.startsWith('imp_')).toList();
+      final imported =
+          s.sentences.where((x) => x.id.startsWith('imp_')).toList();
       expect(imported, hasLength(1)); // w8 對免費版鎖住
       expect(imported.single.sentenceText, 'Imported sentence.');
       expect(s.translationFor(imported.single)?.text, '匯入句');
@@ -446,7 +452,8 @@ void main() {
       expect(s.sentences.length, count);
     });
 
-    test('playback: speaks with sentence language, stops V1 cruise, TTS failure → false',
+    test(
+        'playback: speaks with sentence language, stops V1 cruise, TTS failure → false',
         () async {
       final tts = _RecordingTts();
       final app = _app();
@@ -477,8 +484,8 @@ void main() {
   group('UI', () {
     Future<PracticalEnglishState> pumpScreen(WidgetTester tester,
         {AppState? app, TtsService? tts}) async {
-      final state = (await tester.runAsync(
-          () => enter(app ?? _app(), tts: tts)))!;
+      final state =
+          (await tester.runAsync(() => enter(app ?? _app(), tts: tts)))!;
       await tester.pumpWidget(MaterialApp(
         locale: const Locale('zh'),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -508,7 +515,8 @@ void main() {
       await tester.runAsync(() => s.flush());
     }
 
-    testWidgets('19. sentence list shows accessible sentences, coverage, lock hint',
+    testWidgets(
+        '19. sentence list shows accessible sentences, coverage, lock hint',
         (tester) async {
       final s = await pumpScreen(tester);
       expect(find.text('實用英文'), findsOneWidget);
@@ -601,6 +609,27 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('只念英文・讀 3 次・間隔 2 秒'), findsOneWidget);
 
+      await finish(tester, s);
+    });
+
+    testWidgets(
+        '22d. prev / play / next stay on one row (narrow phone, big font)',
+        (tester) async {
+      tester.view.physicalSize = const Size(1080, 2340);
+      tester.view.devicePixelRatio = 3; // 360 × 780 dp
+      tester.platformDispatcher.textScaleFactorTestValue = 1.4;
+      addTearDown(tester.view.reset);
+      addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+      final s = await pumpScreen(tester);
+      await tester.tap(find.text('Sentence two.'));
+      await tester.pumpAndSettle();
+      final y = [
+        for (final k in ['pe_prev', 'pe_autoplay', 'pe_next'])
+          tester.getCenter(find.byKey(Key(k))).dy
+      ];
+      expect(y[1], closeTo(y[0], 1));
+      expect(y[2], closeTo(y[0], 1));
+      expect(tester.takeException(), isNull);
       await finish(tester, s);
     });
 
