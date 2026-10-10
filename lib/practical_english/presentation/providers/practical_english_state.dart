@@ -196,8 +196,8 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
 
   /// V1 的朗讀語速（兩邊共用同一個 TTS 引擎）。
   double get speechRate => _appState.settings.speechRate;
-  Future<void> setSpeechRate(double rate) => _appState
-      .updateSettings(_appState.settings.copyWith(speechRate: rate));
+  Future<void> setSpeechRate(double rate) =>
+      _appState.updateSettings(_appState.settings.copyWith(speechRate: rate));
 
   /// 目前模式下可學的句子（已套用免費／Premium 規則並排序）。
   List<Sentence> get sentences {
@@ -207,6 +207,17 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
       stateOf,
       isKnown: _index.contains,
     );
+  }
+
+  /// 含某個字的可學句子（首頁「看例句」）：主要詞先、次要詞後，各自依句庫順序。
+  List<Sentence> sentencesForWord(String ref) {
+    final accessible =
+        _sentences.all.where(_access.isAccessible).toList(growable: false);
+    return [
+      ...accessible.where((s) => s.wordIds.contains(ref)),
+      ...accessible.where(
+          (s) => !s.wordIds.contains(ref) && s.secondaryWordIds.contains(ref)),
+    ];
   }
 
   /// 因免費版限制而鎖住的句子數（不顯示內容，只提示數量）。

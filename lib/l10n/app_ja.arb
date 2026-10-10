@@ -278,5 +278,7 @@
   "peInterval": "文の間隔",
   "peSecondsValue": "{seconds} 秒",
   "peRateShared": "速度は単語クルーズと共通です。他の設定は実用英語だけに適用されます。画面を消しても再生が続きます。",
-  "peSettingsSummary": "{content}・{count}回・間隔 {seconds} 秒"
+  "peSettingsSummary": "{content}・{count}回・間隔 {seconds} 秒",
+  "peSeeExamples": "例文",
+  "peNoExamples": "「{word}」の例文はまだありません。"
 }

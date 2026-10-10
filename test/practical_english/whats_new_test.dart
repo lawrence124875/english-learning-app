@@ -308,6 +308,10 @@ void main() {
           ),
         ));
         await tester.pump();
+        // 首頁入口：頂列圖示與單字卡「看例句」也跟著開關（關閉時跟 V1 一樣）。
+        final entry = on ? findsOneWidget : findsNothing;
+        expect(find.byKey(const Key('home_practical_english')), entry);
+        expect(find.byKey(const Key('home_see_examples')), entry);
         await tester.tap(find.byIcon(Icons.more_vert));
         await tester.pumpAndSettle();
         expect(find.text('實用英文'), on ? findsOneWidget : findsNothing);

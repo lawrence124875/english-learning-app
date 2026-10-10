@@ -523,5 +523,8 @@
   "@peSecondsValue": {"placeholders": {"seconds": {"type": "String"}}},
   "peRateShared": "語速與單字巡航共用；其餘設定只影響實用英文。關螢幕會繼續播放。",
   "peSettingsSummary": "{content}・讀 {count} 次・間隔 {seconds} 秒",
-  "@peSettingsSummary": {"placeholders": {"content": {"type": "String"}, "count": {"type": "int"}, "seconds": {"type": "String"}}}
+  "@peSettingsSummary": {"placeholders": {"content": {"type": "String"}, "count": {"type": "int"}, "seconds": {"type": "String"}}},
+  "peSeeExamples": "看例句",
+  "peNoExamples": "「{word}」目前沒有可看的例句。",
+  "@peNoExamples": {"placeholders": {"word": {"type": "String"}}}
 }

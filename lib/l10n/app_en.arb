@@ -278,5 +278,7 @@
   "peInterval": "Gap between sentences",
   "peSecondsValue": "{seconds} s",
   "peRateShared": "Speed is shared with word cruise; other settings only affect Practical English. Playback continues with the screen off.",
-  "peSettingsSummary": "{content} · ×{count} · {seconds} s gap"
+  "peSettingsSummary": "{content} · ×{count} · {seconds} s gap",
+  "peSeeExamples": "Examples",
+  "peNoExamples": "No example sentences for \"{word}\" yet."
 }
