@@ -14,6 +14,7 @@ import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import 'onboarding_screen.dart';
 import '../../practical_english/presentation/screens/practical_english_screen.dart';
+import '../../practical_english/presentation/screens/word_sentences_screen.dart';
 import '../../practical_english/presentation/screens/whats_new_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
@@ -109,6 +110,18 @@ class HomeScreenState extends State<HomeScreen> {
             ),
           ),
         actions: [
+          // V2：實用英文入口（開關打開時才出現）。
+          if (PracticalEnglishRelease.enabled)
+            IconButton(
+              key: const Key('home_practical_english'),
+              tooltip: AppLocalizations.of(context)!.peTitle,
+              icon: const Icon(Icons.chat_bubble_outline),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => const PracticalEnglishScreen()),
+              ),
+            ),
           IconButton(
             tooltip: AppLocalizations.of(context)!.statsTooltip,
             icon: const Icon(Icons.bar_chart),
@@ -497,6 +510,30 @@ class _WordCard extends StatelessWidget {
                   label: Text(l.navReplay,
                       style: const TextStyle(fontSize: 13)),
                 ),
+                // V2：看目前單字的例句（開關打開時才出現）。
+                if (PracticalEnglishRelease.enabled &&
+                    appState.currentWord != null)
+                  TextButton.icon(
+                    key: const Key('home_see_examples'),
+                    onPressed: () {
+                      final word = appState.currentWord;
+                      if (word == null) return;
+                      if (appState.isPlaying) appState.stopCruise();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => WordSentencesScreen(
+                              dataset: appState.currentDataset, item: word),
+                        ),
+                      );
+                    },
+                    style: TextButton.styleFrom(
+                        foregroundColor: Theme.of(context).colorScheme.primary,
+                        visualDensity: VisualDensity.compact),
+                    icon: const Icon(Icons.chat_bubble_outline, size: 18),
+                    label: Text(l.peSeeExamples,
+                        style: const TextStyle(fontSize: 13)),
+                  ),
               ],
             ),
           ],

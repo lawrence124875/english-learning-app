@@ -278,5 +278,7 @@
   "peInterval": "الفاصل بين الجمل",
   "peSecondsValue": "{seconds} ث",
   "peRateShared": "السرعة مشتركة مع جولة الكلمات؛ الإعدادات الأخرى للإنجليزية العملية فقط. يستمر التشغيل مع إطفاء الشاشة.",
-  "peSettingsSummary": "{content} · ×{count} · فاصل {seconds} ث"
+  "peSettingsSummary": "{content} · ×{count} · فاصل {seconds} ث",
+  "peSeeExamples": "أمثلة",
+  "peNoExamples": "لا توجد جمل أمثلة لـ \"{word}\" بعد."
 }

@@ -278,5 +278,7 @@
   "peInterval": "句子间隔",
   "peSecondsValue": "{seconds} 秒",
   "peRateShared": "语速与单词巡航共用；其他设置只影响实用英语。关屏幕会继续播放。",
-  "peSettingsSummary": "{content}・读 {count} 次・间隔 {seconds} 秒"
+  "peSettingsSummary": "{content}・读 {count} 次・间隔 {seconds} 秒",
+  "peSeeExamples": "看例句",
+  "peNoExamples": "“{word}”目前没有可看的例句。"
 }

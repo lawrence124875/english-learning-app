@@ -15,6 +15,7 @@ import 'package:english_learning_app/practical_english/domain/services/sentence_
 import 'package:english_learning_app/practical_english/presentation/providers/practical_english_state.dart';
 import 'package:english_learning_app/practical_english/presentation/screens/practical_english_screen.dart';
 import 'package:english_learning_app/practical_english/presentation/screens/sentence_import_screen.dart';
+import 'package:english_learning_app/practical_english/presentation/screens/word_sentences_screen.dart';
 import 'package:english_learning_app/presentation/providers/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -630,6 +631,35 @@ void main() {
       expect(y[1], closeTo(y[0], 1));
       expect(y[2], closeTo(y[0], 1));
       expect(tester.takeException(), isNull);
+      await finish(tester, s);
+    });
+
+    testWidgets('22e. home 看例句: sentences of that word only; none → message',
+        (tester) async {
+      final s = (await tester.runAsync(() => enter(_app(premium: true))))!;
+      final ds = _builtIn();
+      expect([for (final x in s.sentencesForWord(_id(0))) x.id],
+          ['pe_core_000001', 'pe_core_000003']);
+      Future<void> open(WordItem item) async {
+        await tester.pumpWidget(MaterialApp(
+          locale: const Locale('zh'),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: WordSentencesScreen(dataset: ds, item: item, state: s),
+        ));
+        await tester.pump();
+      }
+
+      await open(ds.items[0]);
+      expect(find.text('Sentence one.'), findsOneWidget);
+      expect(find.text('No. 1 / 2'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('pe_next')));
+      await tester.pump();
+      expect(find.text('Sentence three.'), findsOneWidget);
+
+      // w8 沒有任何句子
+      await open(ds.items[8]);
+      expect(find.text('「w8」目前沒有可看的例句。'), findsOneWidget);
       await finish(tester, s);
     });
 

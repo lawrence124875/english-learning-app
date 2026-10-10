@@ -278,5 +278,7 @@
   "peInterval": "Pausa entre frases",
   "peSecondsValue": "{seconds} s",
   "peRateShared": "La velocidad es la misma que en las palabras; los demás ajustes solo afectan a Inglés práctico. Sigue sonando con la pantalla apagada.",
-  "peSettingsSummary": "{content} · ×{count} · pausa {seconds} s"
+  "peSettingsSummary": "{content} · ×{count} · pausa {seconds} s",
+  "peSeeExamples": "Ver ejemplos",
+  "peNoExamples": "Aún no hay frases de ejemplo para \"{word}\"."
 }
