@@ -16,7 +16,7 @@ import csv, glob, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 LANGS = ['zh-CN', 'ja', 'ko', 'vi', 'id', 'es', 'pt-BR', 'th', 'ar']
 # 常見「只出現在繁體」的字；簡中翻譯不應該出現。
-TRAD_ONLY = set('們這個說來時會對沒還過學錢買賣東車開關門聽讀寫話語請問題電腦機場飛機醫院應該覺發現經濟歡雞'
+TRAD_ONLY = set('們這個說來時會對沒還過學錢買賣東車開關門聽讀寫話語請問題電腦機場飛機醫應該覺發現經濟歡雞'
                 '麼與從後裡體點樣場長書國實現認識讓給種總點單樂難頭髮護邊見專業運動氣隊農歷歲氣圖館際網壞')
 SCRIPT = {
     'ja': re.compile(r'[぀-ヿ一-鿿]'),
@@ -87,7 +87,7 @@ def main():
             warnings.append(f'id {sid} 日文沒有假名：{text}')
         if lang in LATIN and re.search(r'[一-鿿぀-ヿ]', text):
             errors.append(f'id {sid} 混入中日文字：{text}')
-        if not END.search(text):
+        if lang != 'th' and not END.search(text):  # 泰文直述句習慣不加句號
             warnings.append(f'id {sid} 結尾沒有標點：{text}')
         if en and lang in LATIN and not 0.5 <= len(text) / max(len(en), 1) <= 3.0:
             warnings.append(f'id {sid} 長度比例異常：{en} → {text}')
