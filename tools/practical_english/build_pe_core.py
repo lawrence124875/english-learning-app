@@ -16,6 +16,10 @@
   phrase_candidate    片語候選（只留在來源檔，不進 App），可空白
   tagging_notes       標記備註（只留在來源檔，不進 App），可空白
 
+翻譯：tools/practical_english/translations/<語言>.tsv（id<TAB>text，id＝句子流水號）
+  zh-TW 在來源檔裡；其他語言（zh-CN ja ko vi id es pt-BR th ar）各一個檔，
+  有檔案就必須涵蓋全部句子（先用 check_translations.py 檢查）。
+
 詞義審查：tools/practical_english/sense_review.tsv
   主要詞在其他清單有同拼字項目時，繁中翻譯相同的自動連結；翻譯不同的必須有一列
   decision=include／exclude 且 status=approved，才會寫進 wordIds（V2 架構確認版 §3.2）。
@@ -49,6 +53,8 @@ OPTIONAL = {'ngsl_index', 'secondary_word_ids', 'phrase_candidate', 'tagging_not
 SENSE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sense_review.tsv')
 SENSE_HEADER = ['sentence_id', 'primary_word_id', 'candidate_id', 'primary_zh', 'candidate_zh',
                 'decision', 'status', 'note']
+TRANSLATIONS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'translations')
+TRANSLATION_LANGS = ['zh-CN', 'ja', 'ko', 'vi', 'id', 'es', 'pt-BR', 'th', 'ar']
 EMPTY = '{"schema":1,"datasetId":"pe_core","sentences":[]}\n'
 LEVELS = {'A1', 'A2', 'B1', 'B2', 'C1', 'C2'}
 FREE_FRACTION = 1 / 3  # 與 AppState._freeUnlockFraction 相同，只用來印統計
@@ -115,6 +121,22 @@ def main():
                     continue
                 rows.append((where, dict(zip(HEADER, (c.strip() for c in row)))))
 
+    extra_tr = {}
+    for lang in TRANSLATION_LANGS:
+        path = os.path.join(TRANSLATIONS, f'{lang}.tsv')
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding='utf-8') as f:
+            reader = csv.reader(f, delimiter='\t', quoting=csv.QUOTE_NONE)
+            if next(reader, None) != ['id', 'text']:
+                errors.append(f'translations/{lang}.tsv: 表頭應為 id<TAB>text')
+                continue
+            texts = {row[0].strip(): row[1].strip() for row in reader if len(row) == 2 and row[1].strip()}
+        ids = {r['id'] for _, r in rows}
+        if set(texts) != ids:
+            errors.append(f'translations/{lang}.tsv: 缺 {len(ids - set(texts))} 句、多 {len(set(texts) - ids)} 句')
+        extra_tr[lang] = texts
+
     sentences, seen_text, seen_target = [], {}, {}
     for expected, (where, r) in enumerate(rows, 1):
         if r['id'] != str(expected):
@@ -175,7 +197,8 @@ def main():
             'datasetId': 'pe_core',
             'targetLanguage': 'en-US',
             'sentenceText': r['sentence'],
-            'translations': {'zh-TW': r['zh-TW']},
+            'translations': {'zh-TW': r['zh-TW'],
+                             **{lang: t[r['id']] for lang, t in extra_tr.items() if r['id'] in t}},
             'level': r['level'],
             'category': r['category'],
             'patternId': None,
@@ -192,7 +215,8 @@ def main():
     for o, s in zip(old, sentences):
         if o['id'] != s['id'] or o['wordIds'] != s['wordIds']:
             errors.append(f'{o["id"]}: ID 或 wordIds 與已發布版本不同（只能在尾端新增）')
-        elif o['sentenceText'] != s['sentenceText'] or o['translations'] != s['translations']:
+        elif o['sentenceText'] != s['sentenceText'] or any(
+                s['translations'].get(k) != v for k, v in o['translations'].items()):
             print(f'提醒 {o["id"]}: 文字有修改「{o["sentenceText"]}」→「{s["sentenceText"]}」')
 
     if errors:
