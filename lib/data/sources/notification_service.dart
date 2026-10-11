@@ -428,7 +428,7 @@ class NotificationService {
         package: 'com.miui.powerkeeper',
         componentName: 'com.miui.powerkeeper.ui.HiddenAppsConfigActivity',
         arguments: <String, dynamic>{
-          'package_name': 'tw.bcc.englishapp',
+          'package_name': 'tw.bcc.englishapp.personal',
           'package_label': '智慧聽覺巡航',
         },
       );
