@@ -11,6 +11,21 @@ fi
 echo "$FIREBASE_GOOGLE_SERVICES_JSON" > android/app/google-services.json
 echo "已寫入 android/app/google-services.json"
 
+# 私人完整版（personal/full 分支專用，永不合併）：套件名稱改成 tw.bcc.englishapp.personal，
+# 才能和 Play 版、V2 測試版同時裝在手機上。google-services.json 複製一份 tw.bcc.englishapp 的
+# client 設定給新套件名稱（只在建置時改，不動 Firebase 後台）。
+python3 << 'PYEOF'
+import json
+p = "android/app/google-services.json"
+d = json.load(open(p, encoding="utf-8"))
+src = next(c for c in d["client"] if c["client_info"]["android_client_info"]["package_name"] == "tw.bcc.englishapp")
+dup = json.loads(json.dumps(src))
+dup["client_info"]["android_client_info"]["package_name"] = "tw.bcc.englishapp.personal"
+d["client"].append(dup)
+json.dump(d, open(p, "w", encoding="utf-8"), indent=2)
+print("google-services.json 已加入 tw.bcc.englishapp.personal")
+PYEOF
+
 python3 << 'PYEOF'
 import re
 
@@ -24,7 +39,7 @@ for path in ["android/app/build.gradle.kts", "android/app/build.gradle"]:
         continue
     content = re.sub(
         r'applicationId\s*=?\s*"[^"]+"',
-        'applicationId = "tw.bcc.englishapp"',
+        'applicationId = "tw.bcc.englishapp.personal"',
         content,
     )
     with open(path, "w", encoding="utf-8") as f:
