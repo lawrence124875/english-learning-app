@@ -4,6 +4,11 @@ name: Test
 # 推到任何分支都會跑；commit 訊息含 [skip ci] 時不跑。
 on:
   push:
+    # 只改文件／商店素材／網頁時不跑
+    paths-ignore:
+      - '**.md'
+      - 'store_assets/**'
+      - 'docs/**'
   workflow_dispatch:
 
 jobs:
