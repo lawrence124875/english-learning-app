@@ -1,0 +1,35 @@
+name: Test
+
+# 只跑 flutter test 與 analyze，不建置、不簽署、不發布。
+# 推到任何分支都會跑；commit 訊息含 [skip ci] 時不跑。
+on:
+  push:
+    # 只改文件／商店素材／網頁時不跑
+    paths-ignore:
+      - '**.md'
+      - 'store_assets/**'
+      - 'docs/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # 與建置流程相同的固定版本。
+          flutter-version: '3.47.7'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze (errors fail; infos/warnings are reported only)
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Test
+        run: flutter test --reporter expanded
