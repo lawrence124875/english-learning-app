@@ -9,6 +9,7 @@ import '../widgets/fit_word_area.dart';
 import '../app_theme.dart';
 import 'voice_test_screen.dart';
 import 'about_screen.dart';
+import 'feedback_screen.dart';
 import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
@@ -139,6 +140,9 @@ class HomeScreenState extends State<HomeScreen> {
               } else if (value == 'voice') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const VoiceTestScreen()));
+              } else if (value == 'feedback') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const FeedbackScreen()));
               } else if (value == 'about') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const AboutScreen()));
@@ -226,6 +230,14 @@ class HomeScreenState extends State<HomeScreen> {
                     title: Text(AppLocalizations.of(context)!.menuAdPrivacy),
                   ),
                 ),
+              // 上架後：意見回饋從「關於」頁拉到選單第一層（原入口太深，找不到）。
+              PopupMenuItem(
+                value: 'feedback',
+                child: ListTile(
+                  leading: const Icon(Icons.feedback_outlined),
+                  title: Text(AppLocalizations.of(context)!.feedbackTitle),
+                ),
+              ),
               PopupMenuItem(
                 value: 'about',
                 child: ListTile(
