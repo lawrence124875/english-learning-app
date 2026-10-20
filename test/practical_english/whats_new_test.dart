@@ -236,9 +236,9 @@ void main() {
   group('Readiness switch (SPEC §16)', () {
     tearDown(() => PracticalEnglishRelease.debugOverride = null);
 
-    test('ships off', () {
-      expect(PracticalEnglishRelease.ready, isFalse);
-      expect(PracticalEnglishRelease.enabled, isFalse);
+    test('ships on (v21, Lawrence approved 2026-10-20)', () {
+      expect(PracticalEnglishRelease.ready, isTrue);
+      expect(PracticalEnglishRelease.enabled, isTrue);
     });
 
     testWidgets('off: V1 upgrade sees no What\'s New and nothing is recorded',
