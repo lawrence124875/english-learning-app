@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 /// 訂閱付費狀態管理，包裝 RevenueCat SDK。
@@ -24,7 +25,10 @@ class SubscriptionService {
   static Future<bool> isPremium() async {
     if (_forcePremium) return true;
     try {
-      final info = await Purchases.getCustomerInfo();
+      // 開機時 AppState.initialize() 會等這一步；Play 帳單服務或網路沒回應時
+      // getCustomerInfo() 可能一直不回，畫面就會卡在轉圈圈。逾時先當免費版。
+      final info = await Purchases.getCustomerInfo()
+          .timeout(const Duration(seconds: 5));
       return info.entitlements.active.containsKey(_entitlementId);
     } catch (_) {
       return false;
