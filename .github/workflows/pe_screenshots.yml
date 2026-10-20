@@ -22,7 +22,7 @@ jobs:
           for c in TC SC JP KR; do for w in Regular Medium Bold; do
             curl -fsSLo NotoSans$c-$w.otf -w "%{http_code} $c-$w\n" https://github.com/notofonts/noto-cjk/raw/main/Sans/SubsetOTF/$c/NotoSans$c-$w.otf
           done; done
-          sudo apt-get install -y -qq fonts-noto-core >/dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-core >/dev/null
           N=/usr/share/fonts/truetype/noto
           for s in Thai Arabic; do for w in Regular Medium Bold; do
             f=$N/NotoSans$s-$w.ttf; [ -f $f ] || f=$N/NotoSans$s-Regular.ttf
