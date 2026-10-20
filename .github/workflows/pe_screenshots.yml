@@ -1,0 +1,41 @@
+name: PE store screenshots (work branch only)
+
+# 只在工作分支產生實用英文商店截圖，不建置、不簽署、不發布。
+on:
+  push:
+    branches: [claude/project-thread-h8lsg0]
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.47.7'
+          cache: true
+      - name: Fonts
+        run: |
+          mkdir -p /tmp/fonts && cd /tmp/fonts
+          for c in TC SC JP KR; do for w in Regular Medium Bold; do
+            curl -fsSLo NotoSans$c-$w.otf https://github.com/notofonts/noto-cjk/raw/main/Sans/SubsetOTF/$c/NotoSans$c-$w.otf
+          done; done
+          for w in Regular Medium Bold; do
+            curl -fsSLo NotoSansThai-$w.ttf https://notofonts.github.io/thai/fonts/NotoSansThai/hinted/ttf/NotoSansThai-$w.ttf
+            curl -fsSLo NotoSansArabic-$w.ttf https://notofonts.github.io/arabic/fonts/NotoSansArabic/hinted/ttf/NotoSansArabic-$w.ttf
+          done
+          ls -la
+      - run: flutter pub get
+      - name: Render
+        run: flutter test tool/store_screenshots/pe_screenshot_test.dart --dart-define=FLUTTER_ROOT=$FLUTTER_ROOT --dart-define=FONT_DIR=/tmp/fonts
+      - name: Compose
+        run: |
+          pip install pillow
+          python3 tool/store_screenshots/compose.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pe_screenshots
+          path: store_assets/localized/
+          retention-days: 3
