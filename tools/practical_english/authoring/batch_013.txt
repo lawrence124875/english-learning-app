@@ -1,0 +1,101 @@
+# NGSL index 1200–1299
+1200|ball|The kids are playing ball in the park.|孩子們在公園玩球。|A1|daily|kid<kids,play<playing,park||
+1201|cry|The baby started to cry.|寶寶開始哭了。|A1|daily|baby,start<started||
+1202|introduction|Thanks for the introduction, Lisa.|Lisa，謝謝你的介紹。|A2|social|thank<Thanks||
+1203|requirements|What are the requirements for this job?|這份工作有哪些條件要求？|B1|work|job||
+1204|north|The hotel is just north of the station.|飯店就在車站北邊。|A2|travel|hotel,just,station||
+1205|confirm|I'm calling to confirm my reservation.|我打來確認我的訂位。|B1|phone|call<calling||
+1206|senior|She's a senior manager at the bank.|她是銀行的資深經理。|B1|work|manager,bank||senior 在此為「資深的」
+1207|photo|Could you take a photo of us?|可以幫我們拍張照嗎？|A1|travel|take|take a photo|
+1208|refused|She refused to answer my question.|她拒絕回答我的問題。|B1|social|answer,question|refuse to ...|
+1209|transport|Public transport here is cheap and fast.|這裡的大眾運輸又便宜又快。|B1|travel|public,here,cheap,fast|public transport|transport 在此為「交通運輸」
+1210|emerged|The sun emerged from behind the clouds.|太陽從雲後面露了出來。|B2|daily|sun,behind,cloud<clouds||
+1211|map|Can you show me on the map?|你可以在地圖上指給我看嗎？|A1|travel|show||
+1212|concept|The concept is simple, but it's hard to do.|概念很簡單，但做起來很難。|B1|study|simple,hard||
+1213|island|We spent a week on a small island.|我們在一座小島上待了一週。|A2|travel|spend<spent,week,small||
+1214|reforms|The school is planning major reforms.|學校正在規劃重大改革。|B2|news|school,plan<planning,major||
+1215|Neither|Neither of us knows how to cook.|我們兩個都不會煮飯。|B1|daily|know<knows,cook|neither of ...|
+1216|football|Do you want to watch the football game tonight?|你今晚要看足球比賽嗎？|A2|social|want,watch,game,tonight||
+1217|survive|How did you survive the long flight?|那麼長的飛行你是怎麼撐過來的？|B1|travel|long,flight||survive 在此為「撐過、熬過」
+1218|flight|My flight was delayed by two hours.|我的班機延誤了兩個小時。|A2|travel|delay<delayed,two,hour<hours||flight 在此為「班機」
+1219|left|Turn left at the next light.|下一個紅綠燈左轉。|A1|travel|turn,next,light|turn left|
+1220|solved|We solved the problem together.|我們一起解決了問題。|A2|work|problem,together||
+1221|neighbors|Our new neighbors are very nice.|我們的新鄰居人很好。|A1|daily|new,nice||
+1222|background|Tell me a bit about your background.|跟我說一下你的背景吧。|B1|work|tell,bit||
+1223|technique|She showed me a new cooking technique.|她教了我一種新的烹飪技巧。|B1|food|show<showed,new,cook<cooking||
+1224|traffic|Sorry I'm late. The traffic was terrible.|抱歉我遲到了，路上塞得好嚴重。|A2|travel|sorry,late,terrible||
+1225|improvement|Your writing shows a lot of improvement.|你的寫作進步很多。|B1|study|write<writing,show<shows,lot||
+1226|tools|Do you have the right tools for this job?|你有做這件事的合適工具嗎？|A2|work|right,job||
+1227|consequences|You have to accept the consequences.|你得承擔後果。|B1|social|accept||
+1228|circumstances|Under the circumstances, we did our best.|在這種情況下，我們已經盡力了。|B2|work||under the circumstances|
+1229|smoke|There's smoke coming from the kitchen!|廚房在冒煙！|A2|daily|come<coming,kitchen||
+1230|reaction|What was his reaction to the news?|他聽到消息後有什麼反應？|B1|social|news||
+1231|rain|Take an umbrella. It looks like rain.|帶把傘吧，看起來要下雨了。|A2|daily|take,look<looks|look like rain|
+1232|busy|Sorry, I'm busy right now.|抱歉，我現在在忙。|A1|work|sorry,right,now|right now|
+1233|lessons|I take piano lessons on Saturdays.|我每週六上鋼琴課。|A1|study|take,piano||
+1234|brain|My brain doesn't work before coffee.|喝咖啡之前，我的腦袋都不太靈光。|B1|daily|work,coffee||
+1235|mass|A mass of people gathered outside the station.|一大群人聚集在車站外面。|B2|news|gather<gathered,people,outside,station|a mass of ...|
+1236|funny|That movie was so funny!|那部電影超好笑！|A1|social|movie||
+1237|contributed|Everyone contributed ten dollars for the gift.|每個人出了十塊錢買禮物。|B1|social|everyone,ten,dollar<dollars,gift||contribute 在此為「出錢、分攤」
+1238|Failure|Failure is part of learning.|失敗是學習的一部分。|B1|study|part,learn<learning||
+1239|schedule|Let me check my schedule.|我看一下我的行程。|A2|work|check||schedule 在此為「行程表」
+1240|speaker|The speaker was really inspiring.|那位講者很激勵人心。|B1|work|really||
+1241|bottom|Sign your name at the bottom of the page.|在頁面底部簽上你的名字。|A2|official|sign,name,page|at the bottom of|
+1242|adopted|We adopted a dog from the shelter.|我們從收容所領養了一隻狗。|B1|daily|dog,shelter||adopt 在此為「領養」
+1243|Combine|Combine the eggs and sugar in a bowl.|把蛋和糖放進碗裡拌勻。|B1|food|egg<eggs,sugar,bowl||combine 在此為「混合」
+1244|mountain|We climbed that mountain last summer.|我們去年夏天爬了那座山。|A2|travel|climb<climbed,last,summer||
+1245|waste|Don't waste your money on that.|別把錢浪費在那上面。|A2|shopping|money|waste money on ...|
+1246|hide|Where did you hide the key?|你把鑰匙藏在哪裡？|A2|daily|key||
+1247|marriage|They have a happy marriage.|他們的婚姻很幸福。|B1|social|happy||
+1248|ticket|Where can I buy a ticket?|我在哪裡可以買票？|A1|travel|buy||
+1249|meal|Thank you for the delicious meal.|謝謝你這頓好吃的飯。|A2|food|thank||
+1250|colleague|I'm having lunch with a colleague.|我要跟同事吃午餐。|B1|work|have<having,lunch||
+1251|bag|Do you need a bag?|你需要袋子嗎？|A1|shopping|need||
+1252|repeat|Could you repeat that, please?|可以請你再說一次嗎？|A1|social|please||
+1253|equal|Cut the cake into eight equal pieces.|把蛋糕切成八等份。|B1|food|cut,cake,eight,piece<pieces||
+1254|expression|I don't understand this expression.|我不懂這個說法。|B1|study|understand||expression 在此為「說法、措辭」
+1255|plus|It costs twenty dollars plus tax.|價錢是二十美元，另外加稅。|B1|shopping|cost<costs,twenty,dollar<dollars,tax||
+1256|extremely|The test was extremely difficult.|那次考試非常難。|B1|study|test,difficult||
+1257|owner|The owner of this restaurant is very friendly.|這家餐廳的老闆很親切。|B1|food|restaurant,friendly||owner 在此為「老闆、擁有者」
+1258|plane|The plane lands at six.|飛機六點降落。|A1|travel|land<lands,six||
+1259|commercial|The commercial district is busy on weekends.|商業區週末很熱鬧。|B2|travel|district,busy,weekend<weekends||
+1260|lady|The lady at the counter was very kind.|櫃台的那位女士很親切。|A2|shopping|counter,kind||
+1261|duty|It's my duty to take care of my parents.|照顧父母是我的責任。|B1|daily|take,care,parent<parents|take care of|
+1262|strength|I don't have the strength to argue.|我沒力氣跟你吵。|B1|social|argue||
+1263|connect|I can't connect to the internet.|我連不上網路。|A2|daily||connect to ...|
+1264|cultural|There are many cultural differences between our countries.|我們兩國之間有很多文化差異。|B1|travel|many,difference<differences,country<countries||
+1265|arrange|I'll arrange a meeting for next week.|我會安排下週開個會。|B1|work|next,week||
+1266|scheme|The city started a new recycling scheme.|市政府推出了新的資源回收計畫。|B2|news|city,start<started,new||英式用法；2026-10-09 第一輪風險複審保留；語域：英式
+1267|payment|We accept payment by credit card.|我們接受信用卡付款。|B1|shopping|accept,credit,card|credit card|
+1268|Unfortunately|Unfortunately, the store is closed today.|很可惜，店今天沒開。|A2|shopping|store,close<closed,today||
+1269|brief|Let's keep the meeting brief.|會議就簡短一點吧。|B1|work|keep||
+1270|birds|The birds are singing outside.|鳥兒在外面唱歌。|A1|daily|sing<singing,outside||
+1271|demonstrate|Let me demonstrate how to use it.|我來示範一下怎麼用。|B1|work|use||
+1272|contribution|Thank you for your contribution to the team.|謝謝你對團隊的貢獻。|B1|work|thank,team||
+1273|appreciate|I really appreciate your help.|我真的很感謝你的幫忙。|A2|social|really,help||
+1274|chapter|Please read chapter three for homework.|回家作業請讀第三章。|A2|study|please,read,three||
+1275|secret|Can you keep a secret?|你能保守秘密嗎？|A2|social|keep|keep a secret|
+1276|Apparently|Apparently, the meeting has been canceled.|聽說會議取消了。|B1|work|cancel<canceled||apparently 在此為「聽說、據說」
+1277|novel|I'm reading a great novel right now.|我現在在讀一本很棒的小說。|B1|daily|read<reading,great,right,now||
+1278|union|He joined the union last year.|他去年加入了工會。|B2|work|join<joined,last,year||union 在此為「工會」
+1279|burn|Be careful not to burn your hand.|小心別燙到手。|A2|food|careful,hand||burn 在此為「燙傷」
+1280|trend|Short videos are the latest trend.|短影片是最新的潮流。|B1|news|short,video<videos||trend 在此為「潮流」
+1281|initial|My initial reaction was surprise.|我一開始的反應是很驚訝。|B2|social|reaction,surprise||
+1282|pleasure|It's a pleasure to meet you.|很高興認識你。|A2|social|meet||
+1283|suggestions|Do you have any suggestions for dinner?|晚餐你有什麼建議嗎？|A2|food|dinner||
+1284|critical|This step is critical, so don't skip it.|這個步驟很關鍵，別跳過。|B2|work|step||
+1285|gathered|The whole family gathered for dinner.|全家人聚在一起吃晚餐。|B1|daily|whole,family,dinner||
+1286|mostly|Our customers are mostly students.|我們的顧客大多是學生。|B1|work|customer<customers,student<students||
+1287|Earth|The Earth goes around the sun.|地球繞著太陽轉。|A2|study|go<goes,around,sun||
+1288|pop|I mostly listen to pop music.|我大多聽流行音樂。|A2|social|mostly,listen,music|pop music|
+1289|essential|Water is essential for life.|水是生命不可或缺的。|B1|health|water,life||
+1290|desire|She has a strong desire to travel.|她非常渴望去旅行。|B2|travel|strong,travel||
+1291|promotes|Exercise promotes good health.|運動能促進健康。|B1|health|exercise,good,health||
+1292|currently|I'm currently looking for a job.|我目前在找工作。|B1|work|look<looking,job|look for ...|
+1293|employs|The factory employs about two hundred people.|這間工廠雇用了大約兩百人。|B2|work|factory,two,hundred,people||
+1294|path|Follow this path to the lake.|沿著這條小路走就會到湖邊。|A2|travel|follow,lake||
+1295|topic|Let's change the topic.|我們換個話題吧。|A2|social|change||topic 在此為「話題」
+1296|beach|Let's go to the beach this weekend.|這週末我們去海邊吧。|A1|travel|go,weekend||
+1297|attracts|The festival attracts thousands of visitors.|這個節慶吸引了好幾千名遊客。|B1|travel|festival,thousand<thousands,visitor<visitors||
+1298|engage|Try to engage everyone in the discussion.|試著讓每個人都參與討論。|B2|work|try,everyone,discussion||
+1299|powerful|This vacuum cleaner is small but powerful.|這台吸塵器雖然小，但吸力很強。|B1|shopping|small||

@@ -14,11 +14,15 @@ import 'paywall_screen.dart';
 import 'stats_screen.dart';
 import 'import_dataset_screen.dart';
 import 'onboarding_screen.dart';
+import '../../practical_english/presentation/screens/practical_english_screen.dart';
+import '../../practical_english/presentation/screens/word_sentences_screen.dart';
+import '../../practical_english/presentation/screens/whats_new_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../dataset_labels.dart';
 import '../../data/sources/update_service.dart';
 import '../../data/sources/analytics_service.dart';
 import '../../data/sources/ads_service.dart';
+import '../../practical_english/practical_english_release.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -39,10 +43,16 @@ class HomeScreenState extends State<HomeScreen> {
     context.read<AppState>().initialize();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 第一次開啟 App 時顯示特色介紹（看過就不再自動出現）。
-      OnboardingScreen.showIfFirstTime(context);
+      _showIntroductions();
       _checkForUpdate();
     });
   }
+
+  /// V2：What's New 要在功能介紹寫入 onboarding_seen_v1 之前判斷
+  /// 是否為 V1 舊使用者（SPEC §11）。全新安裝只看功能介紹；
+  /// V1 升級的使用者（已看過功能介紹）看一次 What's New。
+  Future<void> _showIntroductions() => WhatsNewScreen.showOnLaunch(context,
+      showOnboarding: () => OnboardingScreen.showIfFirstTime(context));
 
   /// 開啟 App 時檢查 Google Play 是否有新版本；一般更新下載完成後，
   /// 跳出提示讓使用者選擇何時重新啟動套用。
@@ -101,6 +111,18 @@ class HomeScreenState extends State<HomeScreen> {
             ),
           ),
         actions: [
+          // V2：實用英文入口（開關打開時才出現）。
+          if (PracticalEnglishRelease.enabled)
+            IconButton(
+              key: const Key('home_practical_english'),
+              tooltip: AppLocalizations.of(context)!.peTitle,
+              icon: const Icon(Icons.chat_bubble_outline),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => const PracticalEnglishScreen()),
+              ),
+            ),
           IconButton(
             tooltip: AppLocalizations.of(context)!.statsTooltip,
             icon: const Icon(Icons.bar_chart),
@@ -134,6 +156,13 @@ class HomeScreenState extends State<HomeScreen> {
                 _shareApp(context);
               } else if (value == 'adPrivacy') {
                 AdsService.showPrivacyOptions();
+              } else if (value == 'whatsNew') {
+                WhatsNewScreen.open(context);
+              } else if (value == 'practicalEnglish') {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const PracticalEnglishScreen()));
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -155,6 +184,14 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuIntro),
                 ),
               ),
+              if (PracticalEnglishRelease.enabled)
+                PopupMenuItem(
+                  value: 'whatsNew',
+                  child: ListTile(
+                    leading: const Icon(Icons.new_releases_outlined),
+                    title: Text(AppLocalizations.of(context)!.menuWhatsNew),
+                  ),
+                ),
               PopupMenuItem(
                 value: 'voice',
                 child: ListTile(
@@ -162,6 +199,14 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuVoicePreview),
                 ),
               ),
+              if (PracticalEnglishRelease.enabled)
+                PopupMenuItem(
+                  value: 'practicalEnglish',
+                  child: ListTile(
+                    leading: const Icon(Icons.chat_bubble_outline),
+                    title: Text(AppLocalizations.of(context)!.peTitle),
+                  ),
+                ),
               PopupMenuItem(
                 value: 'import',
                 child: ListTile(
@@ -477,6 +522,30 @@ class _WordCard extends StatelessWidget {
                   label: Text(l.navReplay,
                       style: const TextStyle(fontSize: 13)),
                 ),
+                // V2：看目前單字的例句（開關打開時才出現）。
+                if (PracticalEnglishRelease.enabled &&
+                    appState.currentWord != null)
+                  TextButton.icon(
+                    key: const Key('home_see_examples'),
+                    onPressed: () {
+                      final word = appState.currentWord;
+                      if (word == null) return;
+                      if (appState.isPlaying) appState.stopCruise();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => WordSentencesScreen(
+                              dataset: appState.currentDataset, item: word),
+                        ),
+                      );
+                    },
+                    style: TextButton.styleFrom(
+                        foregroundColor: Theme.of(context).colorScheme.primary,
+                        visualDensity: VisualDensity.compact),
+                    icon: const Icon(Icons.chat_bubble_outline, size: 18),
+                    label: Text(l.peSeeExamples,
+                        style: const TextStyle(fontSize: 13)),
+                  ),
               ],
             ),
           ],

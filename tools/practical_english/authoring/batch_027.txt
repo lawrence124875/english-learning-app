@@ -1,0 +1,101 @@
+# NGSL index 2600–2699
+2600|Bless|Bless you! Are you getting a cold?|保重！你是不是要感冒了？|A2|health|get<getting,cold|Bless you!|Bless you 是聽到別人打噴嚏時說的話
+2601|airline|Which airline are you flying with?|你搭哪一家航空公司？|A2|travel|fly<flying||
+2602|amendment|The amendment to the law takes effect next month.|法律修正案下個月生效。|B2|news|law,take<takes,effect,next,month|take effect|
+2603|grandmother|My grandmother lives with us.|我奶奶跟我們住在一起。|A1|daily|live<lives|live with ...|
+2604|jury|The jury will decide tomorrow.|陪審團明天會做出決定。|B1|news|decide,tomorrow||
+2605|cooperation|Thank you for your cooperation.|感謝您的配合。|B1|official|thank|Thank you for ...|cooperation 在此譯為「配合」
+2606|civilian|He left the army and went back to civilian life.|他退伍後回到一般老百姓的生活。|B2|news|leave<left,army,go<went,back,life|go back to ...|civilian 在此為形容詞「平民的」
+2607|composition|Our homework is to write a composition about summer.|我們的功課是寫一篇關於夏天的作文。|B1|study|write,summer||
+2608|coins|I need some coins for the vending machine.|我需要一些零錢投販賣機。|A2|shopping|need,machine|vending machine|coin 在此譯為「零錢（硬幣）」
+2609|regardless|We'll go regardless of the weather.|不管天氣怎樣，我們都會去。|B1|travel|go,weather|regardless of ...|
+2610|scan|Please scan the QR code to order.|請掃描 QR code 點餐。|A2|food|please,code,order||
+2611|bunch|He bought her a bunch of flowers.|他買了一束花送她。|A2|social|buy<bought,flower<flowers|a bunch of ...|
+2612|racial|The school welcomes students of all racial backgrounds.|這所學校歡迎各種族背景的學生。|B2|study|school,welcome<welcomes,student<students,background<backgrounds||2026-10-09 第一輪風險複審保留；主題：包容性教育
+2613|greeted|She greeted us at the door with a smile.|她在門口笑著迎接我們。|B1|social|door,smile|with a smile|greet 在此為「迎接」
+2614|Hopefully|Hopefully it won't rain tomorrow.|希望明天不會下雨。|A2|daily|rain,tomorrow||hopefully 在此為句首副詞「但願」
+2615|sanctions|The new sanctions will affect oil prices.|新的制裁措施會影響油價。|B2|news|new,affect,oil,price<prices||
+2616|trick|Here's a simple trick to save time.|這裡有個省時間的小技巧。|B1|daily|here,simple,save,time|save time|
+2617|paragraph|Please read the first paragraph aloud.|請大聲念出第一段。|A2|study|please,read,first|read aloud|
+2618|maker|We bought a new coffee maker.|我們買了一台新的咖啡機。|A2|shopping|buy<bought,new,coffee|coffee maker|maker 在此為「…機（製造器具）」
+2619|chocolate|Would you like some hot chocolate?|要不要喝點熱可可？|A1|food|like,hot|hot chocolate|
+2620|stimulate|Reading can stimulate a child's imagination.|閱讀能激發孩子的想像力。|B2|study|read<Reading,child,imagination||stimulate 在此為「激發」
+2621|belt|Please fasten your seat belt.|請繫好安全帶。|A2|travel|please,seat|seat belt|
+2622|potato|I'll have the steak with a baked potato.|我要牛排配烤馬鈴薯。|A2|food||baked potato|
+2623|narrative|His narrative of the trip was very funny.|他講述這趟旅行的經過非常好笑。|B2|social|trip,funny||
+2624|tissue|The doctor took a small piece of tissue for testing.|醫生取了一小塊組織去化驗。|B2|health|doctor,take<took,small,piece,test<testing||tissue 在此為生物「組織」；日常更常見「面紙」義
+2625|barely|I could barely hear you.|我幾乎聽不到你說話。|B1|phone|hear||barely 在此為「幾乎不」
+2626|invented|Who invented the telephone?|電話是誰發明的？|A2|study|telephone||
+2627|Tourism|Tourism is important for this island.|觀光業對這座島很重要。|B1|travel|important,island||
+2628|pro|She plays tennis like a pro.|她打網球打得像職業選手一樣。|B1|social|play<plays,tennis|like a pro|pro 在此為名詞「職業選手、高手」
+2629|stairs|Watch your step on the stairs.|走樓梯時小心腳步。|A2|daily|watch,step|Watch your step.|
+2630|hesitate|Don't hesitate to ask if you have any questions.|有任何問題的話，儘管問。|B1|work|ask,question<questions|Don't hesitate to ...|
+2631|shining|The sun is shining today.|今天陽光普照。|A2|daily|sun,today||
+2632|motivation|I need some motivation to exercise.|我需要一點運動的動力。|B1|health|need,exercise||motivation 在此譯為「動力」
+2633|romantic|We had a romantic dinner by the sea.|我們在海邊吃了一頓浪漫的晚餐。|B1|food|dinner,sea|by the sea|
+2634|firmly|Hold the handle firmly.|緊緊抓住把手。|B1|daily|hold,handle||firmly 在此為「牢牢地」
+2635|interior|The interior of the car is very clean.|這輛車的內部很乾淨。|B1|daily|car,clean||interior 在此為名詞「內部」
+2636|stomach|I can't run on a full stomach.|我剛吃飽，沒辦法跑步。|B1|health|run,full|on a full stomach|
+2637|nowhere|There's nowhere to park around here.|這附近沒地方停車。|B1|travel|park,around,here|nowhere to ...|
+2638|prays|She prays before every meal.|她每餐飯前都會禱告。|B1|daily|every,meal||
+2639|championship|Our team won the championship this year.|我們隊今年拿下了冠軍。|B1|social|team,win<won,year||
+2640|servants|In the old days, rich families had many servants.|以前有錢人家裡有很多僕人。|B1|daily|old,day<days,rich,family<families|in the old days|
+2641|immigrants|His grandparents came here as immigrants.|他的祖父母當年是移民來這裡的。|B1|social|come<came,here||
+2642|excess|You'll have to pay extra for excess baggage.|行李超重要另外付費。|B1|travel|pay,extra|excess baggage|excess 在此為形容詞「超額的」
+2643|complexity|Don't underestimate the complexity of this project.|別低估了這個專案的複雜性。|B2|work|project||
+2644|liability|The company has no liability for lost items.|公司對遺失物品不負任何責任。|B2|official|company,lose<lost,item<items||liability 在此為法律上的「責任」
+2645|surprisingly|The test was surprisingly easy.|這次考試出乎意料地簡單。|B1|study|test,easy||
+2646|extract|This app can extract text from photos.|這個 app 能從照片中擷取文字。|B2|work|text,photo<photos||extract 在此為「擷取」
+2647|implementation|The implementation of the new system will take months.|新系統的實施要花好幾個月。|B2|work|new,system,take,month<months||
+2648|bias|Every news report has some bias.|每篇新聞報導多少都有些偏見。|B2|news|every,news,report||
+2649|differently|We see things differently.|我們看事情的角度不同。|B1|social|see,thing<things||
+2650|catalog|You can order from our online catalog.|您可以從我們的線上型錄訂購。|B1|shopping|order,online||catalog 在此為商品「型錄」
+2651|continuous|We've had continuous rain all week.|整個星期雨下個不停。|B1|daily|rain,week|all week|
+2652|golden|The beach has soft golden sand.|海灘上是柔軟的金黃色沙子。|A2|travel|beach,soft,sand||golden 在此為「金色的」
+2653|stamp|I need a stamp for this letter.|我需要一張郵票寄這封信。|A1|official|need,letter||
+2654|guidelines|Please follow the safety guidelines.|請遵守安全守則。|B1|work|please,follow,safety||
+2655|envelope|Put the letter in the envelope.|把信放進信封裡。|A2|daily|put,letter||
+2656|knife|Could you pass me a knife?|可以遞一把刀給我嗎？|A1|food|pass||
+2657|biological|My sister is studying biological sciences.|我妹妹在讀生物科學。|B2|study|sister,study<studying,science<sciences||
+2658|consumes|This old fridge consumes a lot of power.|這台舊冰箱很耗電。|B2|daily|old,lot,power|a lot of ...|consume 在此為「消耗」
+2659|luxury|Staying at that hotel was a real luxury.|住那家飯店真是一大享受。|B1|travel|stay<Staying,hotel,real||luxury 在此為「奢侈的享受」
+2660|weekly|We have a weekly team meeting on Mondays.|我們每週一開團隊週會。|A2|work|team||
+2661|wherever|Sit wherever you like.|你想坐哪裡就坐哪裡。|A2|daily|sit,like||
+2662|bite|Can I have a bite of your sandwich?|可以讓我咬一口你的三明治嗎？|A2|food||have a bite|bite 在此為名詞「一口」
+2663|printer|The printer is out of paper.|印表機沒紙了。|A2|work|paper|out of ...|
+2664|Firstly|Firstly, let me introduce myself.|首先，讓我自我介紹一下。|B1|work|let,introduce||
+2665|anxious|I always feel anxious before exams.|我考試前總是很焦慮。|B1|study|always,feel,exam<exams||
+2666|adventure|The trip was a real adventure.|這趟旅行真是一場冒險。|B1|travel|trip,real||
+2667|fence|The dog jumped over the fence.|狗跳過了圍欄。|A2|daily|dog,jump<jumped||
+2668|exhausted|We exhausted our budget in the first week.|我們第一週就把預算花光了。|B2|travel|budget,first,week||exhaust 在此為「耗盡、用光」
+2669|attraction|What's the main tourist attraction here?|這裡主要的觀光景點是什麼？|A2|travel|main,tourist,here|tourist attraction|attraction 在此為「景點」，非「吸引力」
+2670|ocean|Our room has an ocean view.|我們的房間看得到海景。|A2|travel|room,view|ocean view|
+2671|quietly|Please speak quietly in the library.|圖書館裡請小聲說話。|A2|study|please,speak,library||
+2672|castle|We visited an old castle on the hill.|我們參觀了山丘上的一座古堡。|A2|travel|visit<visited,old,hill||
+2673|veteran|My grandfather is a war veteran.|我爺爺是退伍軍人。|B1|social|war||2026-10-09 第一輪風險複審保留；主題：退伍軍人
+2674|reflection|This trip gave me time for reflection.|這趟旅行讓我有時間反思。|B2|travel|trip,give<gave,time||
+2675|nerves|Loud noise really gets on my nerves.|吵雜的聲音真的讓我很煩。|B1|daily|loud,noise,really,get<gets|get on one's nerves|nerve 在此用於片語 get on one's nerves「惹人心煩」，非字面「神經」
+2676|determination|Her determination helped her pass the exam.|她的決心幫她通過了考試。|B1|study|help<helped,pass,exam||
+2677|altogether|That's thirty dollars altogether.|總共三十元。|A2|shopping|thirty,dollar<dollars||altogether 在此為「總共」，非「完全地」
+2678|fiction|I mostly read fiction.|我大多讀小說。|B1|study|mostly,read||
+2679|carpet|I spilled coffee on the carpet.|我把咖啡灑在地毯上了。|A2|daily|coffee||
+2680|cluster|There's a cluster of small shops near the station.|車站附近聚集了一些小店。|B2|travel|small,shop<shops,near,station|a cluster of ...|
+2681|confusion|Sorry for the confusion.|抱歉造成混淆。|B1|work|sorry|Sorry for ...|confusion 在此為「混淆、誤會」
+2682|Hurry|Hurry up, or we'll miss the bus.|快點，不然我們會錯過公車。|A1|travel|miss,bus|hurry up|hurry 在此為動詞「趕快」
+2683|logic|I don't understand the logic behind this rule.|我不懂這條規定背後的邏輯。|B2|work|understand,behind,rule||
+2684|controversial|The movie's ending was controversial.|這部電影的結局很有爭議。|B2|social|movie,end<ending||
+2685|raw|Is this fish raw?|這條魚是生的嗎？|A2|food|fish||
+2686|grammar|My grammar still isn't perfect.|我的文法還不夠完美。|A2|study|still,perfect||
+2687|revise|Please revise the report by Friday.|請在星期五前修改報告。|B1|work|please,report|by Friday|
+2688|hint|Can you give me a hint?|可以給我一點提示嗎？|A2|study|give||
+2689|hook|Hang your coat on the hook.|把外套掛在掛鉤上。|A2|daily|hang,coat||
+2690|bell|Ring the bell if you need help.|需要幫忙的話請按鈴。|A2|daily|ring,need,help|ring the bell|
+2691|liquids|You can't take liquids through security.|液體不能帶過安檢。|B1|travel|take,security||
+2692|panic|Don't panic, we still have time.|別慌，我們還有時間。|B1|daily|still,time||panic 在此為動詞「驚慌」
+2693|uncle|My uncle runs a small restaurant.|我叔叔開了一家小餐廳。|A2|food|run<runs,small,restaurant||run 在此為「經營」
+2694|rice|I'd like fried rice, please.|我要一份炒飯，謝謝。|A1|food|like,please|fried rice|
+2695|slope|This ski slope is too steep for me.|這條滑雪道對我來說太陡了。|B1|travel|ski||slope 在此為「斜坡」
+2696|happiness|Money can't buy happiness.|金錢買不到幸福。|B1|social|money,buy||
+2697|genuine|Is this genuine leather?|這是真皮嗎？|B1|shopping|leather|genuine leather|genuine 在此為「真正的、非仿冒的」，非「真誠的」
+2698|vessel|The ancient vessel in the museum is made of clay.|博物館裡那件古老的器皿是陶土做的。|B2|travel|ancient,museum,make<made|be made of ...|vessel 在此為「器皿」；也常指「船隻」
+2699|verb|Every sentence needs a verb.|每個句子都需要一個動詞。|A2|study|every,sentence,need<needs||

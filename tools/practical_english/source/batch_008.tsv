@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+701	700	guy	guy	He's a really nice guy.	他人真的很好。	A2	social	ngsl_2809_0700	ngsl_2809_0103|ngsl_2809_0505		guy 為口語用法
+702	701	function	function	What's the function of this button?	這個按鈕是什麼功能？	B1	daily	ngsl_2809_0701	ngsl_2809_2284		
+703	702	yesterday	yesterday	I called you yesterday.	我昨天有打給你。	A1	phone	ngsl_2809_0702	ngsl_2809_0104		
+704	703	image	image	The image on the screen is too dark.	螢幕上的畫面太暗了。	B1	daily	ngsl_2809_0703	ngsl_2809_0956|ngsl_2809_0922		
+705	704	size	size	Do you have this in a smaller size?	這件有小一點的尺寸嗎？	A2	shopping	ngsl_2809_0704	ngsl_2809_0185		
+706	705	behavior	behavior	His behavior at the party was a bit strange.	他在派對上的舉動有點奇怪。	B1	social	ngsl_2809_0705	ngsl_2809_0298|ngsl_2809_0351|ngsl_2809_1344	a bit	
+707	706	addition	addition	In addition, we need more chairs.	另外，我們還需要更多椅子。	B1	work	ngsl_2809_0706	ngsl_2809_0089|ngsl_2809_0041|ngsl_2809_1059	in addition	addition 在此為片語「另外、此外」
+708	707	determine	determine	The weather will determine our plans.	天氣會決定我們的計畫。	B2	travel	ngsl_2809_0707	ngsl_2809_1067|ngsl_2809_0231		
+709	708	station	station	Where is the nearest train station?	最近的火車站在哪裡？	A1	travel	ngsl_2809_0708	ngsl_2809_0426|ngsl_2809_0288	train station	
+710	709	population	population	The city has a population of two million.	這座城市有兩百萬人口。	B1	travel	ngsl_2809_0709	ngsl_2809_0268|ngsl_spoken_720_0070|ngsl_spoken_720_0536		
+711	710	fail	fail	Don't worry if you fail the first time.	第一次失敗也別擔心。	B1	study	ngsl_2809_0710	ngsl_2809_0652|ngsl_2809_0077|ngsl_2809_0048	the first time	
+712	711	environment	environment	We should protect the environment.	我們應該保護環境。	B1	daily	ngsl_2809_0711	ngsl_2809_0902		
+713	712	production	production	Production will start next month.	下個月開始生產。	B2	work	ngsl_2809_0712	ngsl_2809_0135|ngsl_2809_0150|ngsl_2809_0208		
+714	713	contract	contract	Please read the contract before you sign it.	簽約前請先看過合約。	B1	work	ngsl_2809_0713	ngsl_2809_0470|ngsl_2809_0206|ngsl_2809_0499		
+715	714	player	player	He's the best player on the team.	他是隊上最好的球員。	A2	social	ngsl_2809_0714	ngsl_2809_0406		player 在此為「球員」
+716	715	comment	comments	Do you have any comments?	你有任何意見嗎？	B1	work	ngsl_2809_0715			comments 在此為「意見」
+717	716	enter	enter	Please enter your password.	請輸入你的密碼。	A2	daily	ngsl_2809_0716	ngsl_2809_0470		enter 在此為「輸入」
+718	717	occur	occur	The problem may occur again.	這個問題可能會再發生。	B2	work	ngsl_2809_0717	ngsl_2809_0119|ngsl_2809_0096|ngsl_2809_0174		
+719	718	alone	alone	I don't like eating alone.	我不喜歡一個人吃飯。	A2	food	ngsl_2809_0718	ngsl_2809_0044|ngsl_2809_0475		
+720	719	significant	significant	There has been a significant change in the price.	價格有了明顯的變動。	B2	shopping	ngsl_2809_0719	ngsl_2809_0112|ngsl_2809_0295		significant 在此為「明顯的、顯著的」
+721	720	drug	drug	This drug can make you feel sleepy.	這種藥可能會讓你想睡。	B1	health	ngsl_2809_0720	ngsl_2809_0047|ngsl_2809_0116		drug 在此為「藥物」
+722	721	wall	wall	Can I hang this picture on the wall?	我可以把這幅畫掛在牆上嗎？	A2	daily	ngsl_2809_0721	ngsl_2809_1084|ngsl_2809_0508		
+723	722	series	series	I watched the whole series in one weekend.	我一個週末就把整部影集看完了。	B1	daily	ngsl_2809_0722	ngsl_2809_0325|ngsl_2809_0309|ngsl_2809_0933		series 在此為「影集」
+724	723	direct	direct	Is there a direct flight to Tokyo?	有直飛東京的班機嗎？	A2	travel	ngsl_2809_0723	ngsl_2809_1218	direct flight	
+725	724	success	success	Thanks for making the event a success.	謝謝大家讓這次活動圓滿成功。	B1	work	ngsl_2809_0724	ngsl_2809_0243|ngsl_2809_0047|ngsl_2809_0441		
+726	725	tomorrow	tomorrow	Let's talk about it tomorrow.	我們明天再談吧。	A1	social	ngsl_2809_0725	ngsl_2809_0136		
+727	726	director	director	The director wants to see you.	主任想見你。	B1	work	ngsl_2809_0726	ngsl_2809_0075|ngsl_2809_0049		
+728	727	clearly	clearly	Please speak more clearly.	請說得更清楚一點。	A2	social	ngsl_2809_0727	ngsl_2809_0470|ngsl_2809_0283|ngsl_2809_0041		
+729	728	lack	lack	Lack of sleep makes me tired.	睡眠不足讓我很累。	B1	health	ngsl_2809_0728	ngsl_2809_0826|ngsl_2809_0047	lack of	
+730	729	review	review	Let's review the plan again.	我們再檢查一次計畫吧。	B1	work	ngsl_2809_0729	ngsl_2809_0231|ngsl_2809_0174		review 在此為「檢查、複審」
+731	730	depend	depends	It depends on the weather.	那要看天氣。	A2	daily	ngsl_2809_0730	ngsl_2809_1067	depend on	depends 為第三人稱單數
+732	731	race	race	He came second in the race.	他在比賽中拿了第二名。	A2	social	ngsl_2809_0731	ngsl_2809_0064|ngsl_2809_0225		race 在此為「賽跑、比賽」，NGSL 中文為「種族」
+733	732	recognize	recognize	I didn't recognize you with short hair.	你剪了短髮，我都認不出你了。	B1	social	ngsl_2809_0732	ngsl_2809_0418|ngsl_2809_0912		recognize 在此為「認出」
+734	733	window	window	Could you open the window?	你可以開一下窗戶嗎？	A1	daily	ngsl_2809_0733	ngsl_2809_0213		
+735	734	purpose	purpose	What's the purpose of your visit?	你此行的目的是什麼？	B1	travel	ngsl_2809_0734	ngsl_2809_0332		
+736	735	department	department	Which department do you work in?	你在哪個部門工作？	A2	work	ngsl_2809_0735	ngsl_2809_0066		
+737	736	gain	gained	I gained two kilos on vacation.	我度假時胖了兩公斤。	B1	health	ngsl_2809_0736	ngsl_spoken_720_0070		gain 在此為「增加（體重）」
+738	737	tree	tree	Let's sit under that tree.	我們坐在那棵樹下吧。	A1	daily	ngsl_2809_0737	ngsl_2809_0355|ngsl_2809_0192		
+739	738	college	college	My sister is in college now.	我姊姊現在在讀大學。	A2	study	ngsl_2809_0738	ngsl_2809_0963|ngsl_2809_0069	in college	
+740	739	argue	argue	They often argue about money.	他們常為了錢吵架。	B1	social	ngsl_2809_0739	ngsl_2809_0287|ngsl_2809_0200	argue about	argue 在此為「爭吵」
+741	740	board	board	The board will meet next week.	董事會下週要開會。	B2	work	ngsl_2809_0740	ngsl_2809_0134|ngsl_2809_0150|ngsl_2809_0156		
+742	741	holiday	holiday	Are you going anywhere for the holiday?	假期你有要去哪裡嗎？	A2	travel	ngsl_2809_0741	ngsl_2809_0030|ngsl_2809_1647		
+743	742	mark	mark	Please mark the important parts.	請把重要的部分標起來。	A2	study	ngsl_2809_0742	ngsl_2809_0470|ngsl_2809_0189|ngsl_2809_0129		
+744	743	church	church	There's an old church in the town center.	鎮中心有一座古老的教堂。	A2	travel	ngsl_2809_0743	ngsl_2809_0143|ngsl_2809_0363|ngsl_2809_0333		
+745	744	machine	machine	The coffee machine is broken.	咖啡機壞了。	A2	work	ngsl_2809_0744	ngsl_2809_1394|ngsl_2809_0367		
+746	745	achieve	achieve	You can achieve your goals if you work hard.	只要努力，你就能達成目標。	B1	study	ngsl_2809_0745	ngsl_2809_0855|ngsl_2809_0066|ngsl_2809_0297	work hard	
+747	746	item	item	You can only bring one item.	你只能帶一件物品。	A2	travel	ngsl_2809_0746	ngsl_2809_0073|ngsl_2809_0195|ngsl_2809_0034		
+748	747	prove	prove	Can you prove that you paid?	你能證明你已經付錢了嗎？	B1	shopping	ngsl_2809_0747	ngsl_2809_0219		
+749	748	cent	cents	It costs ninety-nine cents.	這個要九十九分錢。	A2	shopping	ngsl_2809_0748	ngsl_2809_0251		cents 為複數
+750	749	season	season	Summer is my favorite season.	夏天是我最喜歡的季節。	A1	daily	ngsl_2809_0749	ngsl_2809_0653|ngsl_2809_0999		
+751	750	floor	floor	My office is on the third floor.	我的辦公室在三樓。	A1	work	ngsl_2809_0750	ngsl_2809_0342		floor 在此為「樓層」，NGSL 中文為「地板」
+752	751	stuff	stuff	I need to buy some stuff for the trip.	我要買些旅行要用的東西。	A2	shopping	ngsl_2809_0751	ngsl_2809_0089|ngsl_2809_0241|ngsl_2809_0824		stuff 為口語
+753	752	wide	wide	The road isn't wide enough for two cars.	這條路不夠寬，兩台車過不去。	B1	travel	ngsl_2809_0752	ngsl_2809_0520|ngsl_2809_0266|ngsl_spoken_720_0070|ngsl_2809_0259		
+754	753	anyone	anyone	Does anyone have a pen?	有人有筆嗎？	A1	study	ngsl_2809_0753	ngsl_2809_2319		
+755	754	method	method	This method saves a lot of time.	這個方法可以省很多時間。	B1	work	ngsl_2809_0754	ngsl_2809_0565|ngsl_2809_0122|ngsl_2809_0048	a lot of	
+756	755	analysis	analysis	The analysis will take a few days.	分析需要幾天時間。	B2	work	ngsl_2809_0755	ngsl_2809_0058|ngsl_2809_0194|ngsl_2809_0084		
+757	756	election	election	Who do you think will win the election?	你覺得誰會贏得這次選舉？	B1	news	ngsl_2809_0756	ngsl_2809_0046|ngsl_2809_0376		
+758	757	military	military	My brother is doing his military service.	我哥哥正在服兵役。	B1	daily	ngsl_2809_0757	ngsl_2809_0820|ngsl_2809_0222	military service	military 在此為形容詞「軍事的」
+759	758	hotel	hotel	I booked a hotel near the beach.	我訂了一間海邊附近的飯店。	A1	travel	ngsl_2809_0758	ngsl_2809_0170|ngsl_2809_0426|ngsl_2809_1296		
+760	759	club	club	I joined a book club.	我參加了一個讀書會。	A2	social	ngsl_2809_0759	ngsl_2809_0468|ngsl_2809_0170	book club	
+761	760	below	below	Please write your answer below.	請把答案寫在下面。	A2	study	ngsl_2809_0760	ngsl_2809_0470|ngsl_2809_0120|ngsl_2809_0354		below 在此為「在下面」，NGSL 中文為「低於」
+762	761	movie	movie	Do you want to see a movie tonight?	你今晚想看電影嗎？	A1	social	ngsl_2809_0761	ngsl_2809_0075|ngsl_2809_0049|ngsl_2809_1413		
+763	762	doctor	doctor	The doctor will see you now.	醫生現在可以看你了。	A2	health	ngsl_2809_0762	ngsl_2809_0049|ngsl_2809_0069		
+764	763	discussion	discussion	We had a long discussion about it.	我們針對這件事討論了很久。	B1	work	ngsl_2809_0763	ngsl_2809_0114		
+765	764	sorry	sorry	I'm sorry to hear that.	聽到這件事我很遺憾。	A2	social	ngsl_2809_0764	ngsl_2809_0177	sorry to hear that	sorry 在此為「遺憾的」
+766	765	challenge	challenge	Learning a new language is a real challenge.	學一種新語言真的是個挑戰。	B1	study	ngsl_2809_0765	ngsl_2809_0260|ngsl_2809_0078|ngsl_2809_0359|ngsl_2809_0353		
+767	766	nation	nation	The whole nation watched the game.	全國都在看這場比賽。	B2	news	ngsl_2809_0766	ngsl_2809_0309|ngsl_2809_0325|ngsl_2809_0392		
+768	767	nearly	nearly	I nearly missed the bus.	我差點沒趕上公車。	B1	travel	ngsl_2809_0767	ngsl_2809_0644|ngsl_2809_0809		
+769	768	statement	statement	The company will make a statement tomorrow.	公司明天會發表聲明。	B2	news	ngsl_2809_0768	ngsl_2809_0106|ngsl_2809_0047|ngsl_2809_0725	make a statement	
+770	769	link	link	I'll send you the link.	我再把連結傳給你。	A2	phone	ngsl_2809_0769	ngsl_2809_0322		
+771	770	despite	despite	We went out despite the rain.	儘管下雨，我們還是出門了。	B1	daily	ngsl_2809_0770	ngsl_2809_0030|ngsl_2809_0054|ngsl_2809_1231	go out	
+772	771	introduce	introduce	Let me introduce myself.	讓我自我介紹一下。	A2	social	ngsl_2809_0771	ngsl_2809_0173	introduce myself	
+773	772	advantage	advantage	Living near work is a big advantage.	住得離公司近是一大優點。	B1	work	ngsl_2809_0772	ngsl_2809_0152|ngsl_2809_0426|ngsl_2809_0066|ngsl_2809_0183		
+774	773	ready	ready	Dinner is ready!	晚餐好了！	A1	food	ngsl_2809_0773	ngsl_2809_1116		
+775	774	marry	marry	Will you marry me?	你願意嫁給我嗎？	A2	social	ngsl_2809_0774			
+776	775	strike	strike	The bus drivers are on strike today.	公車司機今天罷工。	B1	news	ngsl_2809_0775	ngsl_2809_0809|ngsl_2809_1199|ngsl_2809_0245	on strike	
+777	776	mile	mile	The beach is about a mile from here.	海灘離這裡大約一英里。	A2	travel	ngsl_2809_0776	ngsl_2809_1296|ngsl_2809_0036|ngsl_2809_0097		
+778	777	seek	seek	You should seek advice from an expert.	你應該向專家尋求建議。	B2	work	ngsl_2809_0777	ngsl_2809_1039|ngsl_2809_1156	seek advice	
+779	778	ability	ability	She has the ability to stay calm.	她有保持冷靜的能力。	B1	work	ngsl_2809_0778	ngsl_2809_0344|ngsl_2809_1963		
+780	779	unit	unit	Each unit has two bedrooms.	每一戶都有兩間臥室。	B1	daily	ngsl_2809_0779	ngsl_2809_0144|ngsl_spoken_720_0070|ngsl_2809_1431		unit 在此為「（公寓的）一戶」
+781	780	card	card	Can I pay by card?	可以刷卡嗎？	A1	shopping	ngsl_2809_0780	ngsl_2809_0219	pay by card	
+782	781	hospital	hospital	She's still in the hospital.	她還在住院。	A2	health	ngsl_2809_0781	ngsl_2809_0118	in the hospital	
+783	782	quickly	quickly	Please reply as quickly as possible.	請盡快回覆。	A2	work	ngsl_2809_0782	ngsl_2809_0470|ngsl_2809_1107|ngsl_2809_0289	as quickly as possible	
+784	783	interview	interview	I have a job interview tomorrow.	我明天有個工作面試。	A2	work	ngsl_2809_0783	ngsl_2809_0230|ngsl_2809_0725	job interview	
+785	784	agreement	agreement	We finally reached an agreement.	我們終於達成了協議。	B1	work	ngsl_2809_0784	ngsl_2809_0498|ngsl_2809_0379	reach an agreement	
+786	785	release	released	Their new album will be released next week.	他們的新專輯下週發行。	B1	news	ngsl_2809_0785	ngsl_2809_0078|ngsl_2809_2180|ngsl_2809_0150|ngsl_2809_0156		released 為過去分詞，被動語態
+787	786	tax	tax	Does the price include tax?	這個價格有含稅嗎？	A2	shopping	ngsl_2809_0786	ngsl_2809_0295|ngsl_2809_0162		
+788	787	solution	solution	We need to find a solution quickly.	我們得趕快找到解決辦法。	B1	work	ngsl_2809_0787	ngsl_2809_0089|ngsl_2809_0080|ngsl_2809_0782		
+789	788	capital	capital	What's the capital of Japan?	日本的首都是哪裡？	A2	study	ngsl_2809_0788			
+790	789	popular	popular	This restaurant is very popular with locals.	這家餐廳很受當地人歡迎。	A2	food	ngsl_2809_0789	ngsl_2809_0918|ngsl_2809_0299	popular with	
+791	790	specific	specific	Could you be more specific?	你可以說得更具體一點嗎？	B1	work	ngsl_2809_0790	ngsl_2809_0041		
+792	791	beautiful	beautiful	What a beautiful view!	好美的景色！	A1	travel	ngsl_2809_0791	ngsl_2809_0292		
+793	792	fear	fear	She has a fear of flying.	她怕坐飛機。	B1	travel	ngsl_2809_0792	ngsl_2809_0880	a fear of	
+794	793	aim	aim	Our aim is to finish by the end of the month.	我們的目標是月底前完成。	B1	work	ngsl_2809_0793	ngsl_2809_0608|ngsl_2809_0151|ngsl_2809_0208	by the end of	
+795	794	television	television	There's nothing good on television tonight.	今晚電視沒什麼好看的。	A2	daily	ngsl_2809_0794	ngsl_2809_0335|ngsl_2809_0055|ngsl_2809_1413	on television	
+796	795	serious	serious	Don't worry, it's nothing serious.	別擔心，沒什麼大礙。	B1	health	ngsl_2809_0795	ngsl_2809_0652|ngsl_2809_0335		serious 在此為「嚴重的」
+797	796	target	target	We hit our sales target this month.	我們這個月達成了業績目標。	B1	work	ngsl_2809_0796	ngsl_2809_0694|ngsl_2809_0397|ngsl_2809_0208		
+798	797	degree	degree	She has a degree in history.	她有歷史學位。	B1	study	ngsl_2809_0797	ngsl_2809_0384		
+799	798	pull	pull	Pull the door to open it.	門要用拉的才能打開。	A1	daily	ngsl_2809_0798	ngsl_2809_0489|ngsl_2809_0213		
+800	799	red	red	I'll take the red one.	我要紅色那個。	A1	shopping	ngsl_2809_0799	ngsl_2809_0058|ngsl_2809_0034		

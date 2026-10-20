@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2701	2700	reckon	reckon	I reckon it'll rain later.	我覺得等一下會下雨。	B1	daily	ngsl_2809_2700	ngsl_2809_1231		reckon 在此為口語「認為、覺得」
+2702	2701	silly	silly	That was a silly mistake.	那是個很蠢的錯誤。	A2	work	ngsl_2809_2701	ngsl_2809_1151		
+2703	2702	transportation	transportation	Public transportation here is very convenient.	這裡的大眾運輸很方便。	B1	travel	ngsl_2809_2702	ngsl_2809_0286|ngsl_2809_0097	public transportation	
+2704	2703	harbor	harbor	The boats are back in the harbor.	船都回港了。	B1	travel	ngsl_2809_2703	ngsl_2809_1303|ngsl_2809_0093		
+2705	2704	comedy	comedy	Let's watch a comedy tonight.	我們今晚看喜劇吧。	A2	social	ngsl_2809_2704	ngsl_2809_0325|ngsl_2809_1413		
+2706	2705	chase	chased	The kids chased each other around the park.	孩子們在公園裡互相追逐。	A2	daily	ngsl_2809_2705	ngsl_2809_0528|ngsl_2809_0169|ngsl_2809_0656	each other	
+2707	2706	storage	storage	Is there any storage space in the room?	房間裡有收納空間嗎？	B1	travel	ngsl_2809_2706	ngsl_2809_0551|ngsl_2809_0253	storage space	
+2708	2707	universe	universe	How big is the universe?	宇宙有多大？	B1	study	ngsl_2809_2707	ngsl_2809_0183		
+2709	2708	horrible	horrible	The weather was horrible yesterday.	昨天天氣糟透了。	A2	daily	ngsl_2809_2708	ngsl_2809_1067|ngsl_2809_0702		horrible 在此為「糟糕的」
+2710	2709	sheep	sheep	There are lots of sheep on the farm.	農場上有好多羊。	A2	travel	ngsl_2809_2709	ngsl_2809_0122|ngsl_2809_1082	lots of ...	sheep 單複數同形
+2711	2710	lover	lover	She's a real music lover.	她是個真正的音樂愛好者。	B1	social	ngsl_2809_2710	ngsl_2809_0353|ngsl_2809_0391	music lover	lover 在此為「愛好者」，非「戀人」
+2712	2711	rat	rat	I saw a rat in the kitchen!	我在廚房看到一隻老鼠！	A2	daily	ngsl_2809_2711	ngsl_2809_0049|ngsl_2809_1306		
+2713	2712	portrait	portrait	She painted a portrait of her dog.	她畫了一幅她家狗狗的肖像。	B1	daily	ngsl_2809_2712	ngsl_2809_0671|ngsl_2809_0894		
+2714	2713	innocent	innocent	He looked so innocent.	他看起來好無辜。	B1	social	ngsl_2809_2713	ngsl_2809_0074		
+2715	2714	substitute	substitute	Can I substitute salad for the fries?	我可以把薯條換成沙拉嗎？	B1	food	ngsl_2809_2714		substitute A for B	substitute A for B 指「用 A 代替 B」
+2716	2715	supplement	supplements	Do you take any vitamin supplements?	你有吃什麼維他命補充品嗎？	B1	health	ngsl_2809_2715	ngsl_2809_0058		supplement 在此為名詞「補充品」
+2717	2716	adjustment	adjustment	I made a small adjustment to the plan.	我對計畫做了一點小調整。	B1	work	ngsl_2809_2716	ngsl_2809_0047|ngsl_2809_0185|ngsl_2809_0231	make an adjustment	
+2718	2717	reasonably	reasonably	The hotel is reasonably priced.	這家飯店價格合理。	B1	travel	ngsl_2809_2717	ngsl_2809_0758|ngsl_2809_0295	reasonably priced	
+2719	2718	filter	filter	Change the water filter every three months.	濾水器每三個月要換一次。	B1	daily	ngsl_2809_2718	ngsl_2809_0112|ngsl_2809_0321|ngsl_2809_0179|ngsl_spoken_720_0094|ngsl_2809_0208	water filter	filter 在此為名詞「濾網、過濾器」
+2720	2719	flexible	flexible	My work hours are flexible.	我的工作時間很彈性。	B1	work	ngsl_2809_2719	ngsl_2809_0066|ngsl_2809_0246		
+2721	2720	abstract	abstract	I don't really understand abstract art.	我不太懂抽象藝術。	B1	social	ngsl_2809_2720	ngsl_2809_0103|ngsl_2809_0242|ngsl_2809_0645	abstract art	
+2722	2721	tent	tent	We put up the tent by the lake.	我們在湖邊搭了帳篷。	A2	travel	ngsl_2809_2721	ngsl_2809_0138|ngsl_2809_1821	put up	
+2723	2722	precise	precise	Can you be more precise?	你可以說得更精確一點嗎？	B1	work	ngsl_2809_2722	ngsl_2809_0041		
+2724	2723	distant	distant	I can see distant mountains from my window.	從我的窗戶可以看到遠方的山。	B1	daily	ngsl_2809_2723	ngsl_2809_0049|ngsl_2809_1244|ngsl_2809_0733		
+2725	2724	stranger	strangers	Don't talk to strangers.	不要跟陌生人說話。	A2	daily	ngsl_2809_2724	ngsl_2809_0136		
+2726	2725	shade	shade	Let's sit in the shade.	我們坐在陰涼處吧。	A2	daily	ngsl_2809_2725	ngsl_2809_0355	in the shade	shade 在此為「陰涼處」
+2727	2726	grain	grains	This bread is made from whole grains.	這種麵包是用全穀做的。	B1	food	ngsl_2809_2726	ngsl_2809_2261|ngsl_2809_0047|ngsl_2809_0309	whole grains	
+2728	2727	situate	situated	The hotel is situated near the beach.	飯店位於海灘附近。	B2	travel	ngsl_2809_2727	ngsl_2809_0758|ngsl_2809_0426|ngsl_2809_1296	be situated ...	
+2729	2728	summarize	summarize	Please summarize the main points.	請總結一下重點。	B1	work	ngsl_2809_2728	ngsl_2809_0470|ngsl_2809_0452|ngsl_2809_0130	main points	
+2730	2729	leap	leap	Prices took a big leap this year.	今年物價大幅跳漲。	B2	news	ngsl_2809_2729	ngsl_2809_0295|ngsl_2809_0058|ngsl_2809_0183|ngsl_2809_0057		leap 在此為名詞「躍升、大漲」
+2731	2730	snap	snap	Let me snap a quick photo.	讓我快速拍張照。	B1	travel	ngsl_2809_2730	ngsl_2809_1194|ngsl_2809_1207		snap 在此為動詞「快速拍照」
+2732	2731	probability	probability	What's the probability of rain tomorrow?	明天下雨的機率是多少？	B2	daily	ngsl_2809_2731	ngsl_2809_1231|ngsl_2809_0725		
+2733	2732	leather	leather	I bought a leather jacket.	我買了一件皮夾克。	A2	shopping	ngsl_2809_2732	ngsl_2809_0241|ngsl_2809_2252		
+2734	2733	uncertainty	uncertainty	There's a lot of uncertainty about the future.	未來有很多不確定性。	B2	news	ngsl_2809_2733	ngsl_2809_0122|ngsl_2809_0369		
+2735	2734	swear	swear	I swear I didn't tell anyone.	我發誓我沒告訴任何人。	B1	social	ngsl_2809_2734	ngsl_2809_0102|ngsl_2809_0753		
+2736	2735	refugee	refugees	The charity helps refugees find homes.	這個慈善機構幫助難民找到住處。	B2	news	ngsl_2809_2735	ngsl_2809_2353|ngsl_2809_0132|ngsl_2809_0080|ngsl_2809_0160		
+2737	2736	shore	shore	We walked along the shore.	我們沿著岸邊散步。	B1	travel	ngsl_2809_2736	ngsl_2809_0338|ngsl_2809_0387		
+2738	2737	monthly	monthly	How much is the monthly rent?	每個月房租多少？	A2	daily	ngsl_2809_2737	ngsl_2809_0090|ngsl_2809_1565		
+2739	2738	comprise	comprises	The course comprises ten lessons.	這門課包含十堂課。	B2	study	ngsl_2809_2738	ngsl_2809_0163|ngsl_spoken_720_0209|ngsl_2809_1233		
+2740	2739	stir	Stir	Stir the soup slowly.	慢慢攪拌湯。	A2	food	ngsl_2809_2739	ngsl_2809_1511		
+2741	2740	excitement	excitement	The kids couldn't hide their excitement.	孩子們藏不住興奮的心情。	B1	social	ngsl_2809_2740	ngsl_2809_0528|ngsl_2809_1246		
+2742	2741	sigh	sigh	She gave a sigh of relief.	她鬆了一口氣。	B1	social	ngsl_2809_2741	ngsl_2809_0076|ngsl_2809_1622	a sigh of relief	
+2743	2742	pregnancy	pregnancy	She felt tired during her pregnancy.	她懷孕期間常覺得很累。	B1	health	ngsl_2809_2742	ngsl_2809_0116|ngsl_2809_0181		
+2744	2743	experimental	experimental	The band's new album sounds experimental.	這個樂團的新專輯聽起來很有實驗性。	B2	social	ngsl_2809_2743	ngsl_2809_1086|ngsl_2809_0078|ngsl_2809_2180|ngsl_2809_0389		
+2745	2744	institutional	institutional	The project needs institutional support.	這個計畫需要機構的支持。	C1	work	ngsl_2809_2744	ngsl_2809_0517|ngsl_2809_0089|ngsl_2809_0271		
+2746	2745	slice	slice	Would you like another slice of pizza?	你要再來一片披薩嗎？	A2	food	ngsl_2809_2745	ngsl_2809_0044|ngsl_2809_0139	a slice of ...	
+2747	2746	wander	wandered	We wandered around the old town.	我們在老城區四處閒逛。	B1	travel	ngsl_2809_2746	ngsl_2809_0169|ngsl_2809_0143|ngsl_2809_0363	wander around	
+2748	2747	empire	empire	This museum tells the story of an ancient empire.	這座博物館講述一個古老帝國的故事。	B1	travel	ngsl_2809_2747	ngsl_2809_1396|ngsl_2809_0102|ngsl_2809_0305|ngsl_2809_1726		
+2749	2748	subsequently	subsequently	He missed the bus and subsequently arrived late.	他錯過了公車，之後就遲到了。	B2	work	ngsl_2809_2748	ngsl_2809_0644|ngsl_2809_0809|ngsl_2809_0587|ngsl_2809_0146		
+2750	2749	gentle	gentle	Be gentle with the baby.	對寶寶要溫柔一點。	A2	daily	ngsl_2809_2749	ngsl_2809_0870	be gentle with ...	
+2751	2750	attendance	Attendance	Attendance is required for all classes.	所有的課都必須出席。	B1	study	ngsl_2809_2750	ngsl_2809_0401|ngsl_2809_0361		
+2752	2751	ownership	ownership	The restaurant is under new ownership.	這家餐廳換了新老闆。	B2	food	ngsl_2809_2751	ngsl_2809_0918|ngsl_2809_0078	under new ownership	
+2753	2752	qualification	qualifications	What qualifications do you need for this job?	這份工作需要什麼資格？	B1	work	ngsl_2809_2752	ngsl_2809_0089|ngsl_2809_0230		
+2754	2753	suspend	suspended	Train service is suspended due to the storm.	因為暴風雨，火車暫停行駛。	B1	travel	ngsl_2809_2753	ngsl_2809_0288|ngsl_2809_0222|ngsl_2809_0573|ngsl_2809_1998	due to ...	
+2755	2754	functional	functional	The kitchen is small but functional.	廚房雖小但很實用。	B2	daily	ngsl_2809_2754	ngsl_2809_1306|ngsl_2809_0185		functional 在此為「實用的」
+2756	2755	voluntary	voluntary	Joining the club is voluntary.	參加社團是自願的。	B1	study	ngsl_2809_2755	ngsl_2809_0468|ngsl_2809_0759		
+2757	2756	pale	pale	You look pale. Are you okay?	你臉色好蒼白，還好嗎？	A2	health	ngsl_2809_2756	ngsl_2809_0074|ngsl_2809_0924		
+2758	2757	stain	stain	How do I get this stain out?	我要怎麼把這塊污漬弄掉？	B1	daily	ngsl_2809_2757	ngsl_2809_0042	get ... out	
+2759	2758	athlete	athlete	She's a professional athlete.	她是職業運動員。	B1	social	ngsl_2809_2758	ngsl_2809_0935		
+2760	2759	organic	organic	Do you sell organic vegetables?	你們有賣有機蔬菜嗎？	B1	shopping	ngsl_2809_2759	ngsl_2809_0417|ngsl_2809_2215		
+2761	2760	tongue	tongue	I burned my tongue on the hot soup.	我被熱湯燙到舌頭了。	A2	food	ngsl_2809_2760	ngsl_2809_1279|ngsl_2809_0884		
+2762	2761	server	server	The server is down again.	伺服器又當機了。	B1	work	ngsl_2809_2761	ngsl_2809_0108|ngsl_2809_0174		down 在此為「當機」
+2763	2762	structural	structural	The building has some structural problems.	這棟建築有一些結構上的問題。	B2	news	ngsl_2809_2762	ngsl_2809_0119		
+2764	2763	website	website	You can book tickets on our website.	您可以在我們的網站上訂票。	A2	travel	ngsl_2809_2763	ngsl_2809_0170|ngsl_2809_1248		book 在此為動詞「預訂」
+2765	2764	fool	fool	I felt like a fool.	我覺得自己像個傻瓜。	B1	social	ngsl_2809_2764	ngsl_2809_0116|ngsl_2809_0044	feel like ...	
+2766	2765	alongside	alongside	A small path runs alongside the river.	一條小路沿著河邊延伸。	B2	travel	ngsl_2809_2765	ngsl_2809_0185|ngsl_2809_1294|ngsl_2809_0191|ngsl_2809_1175		
+2767	2766	unite	united	The game united the whole town.	這場比賽讓全鎮團結在一起。	B2	news	ngsl_2809_2766	ngsl_2809_0392|ngsl_2809_0309|ngsl_2809_0363		unite 在此為「使團結」
+2768	2767	gently	gently	Please close the door gently.	請輕輕關門。	A2	daily	ngsl_2809_2767	ngsl_2809_0470|ngsl_2809_0238|ngsl_2809_0489		
+2769	2768	compute	computes	The app computes your total cost.	這個 app 會幫你算出總費用。	B2	shopping	ngsl_2809_2768	ngsl_2809_0568|ngsl_2809_0251		
+2770	2769	wipe	wipe	Could you wipe the table?	可以擦一下桌子嗎？	A2	daily	ngsl_2809_2769	ngsl_2809_0449		
+2771	2770	weird	weird	That's weird. It was here a minute ago.	好奇怪，剛剛還在這裡的。	A2	daily	ngsl_2809_2770	ngsl_2809_0097|ngsl_2809_0365|ngsl_2809_0371		
+2772	2771	gaze	gazed	She gazed out of the window.	她凝視著窗外。	B2	daily	ngsl_2809_2771	ngsl_2809_0733	out of the window	
+2773	2772	fade	faded	The colors faded after one wash.	才洗一次就褪色了。	B1	shopping	ngsl_2809_2772	ngsl_2809_0377|ngsl_2809_1367		
+2774	2773	cough	cough	I've had a cough for a week.	我咳嗽一個星期了。	A2	health	ngsl_2809_2773	ngsl_2809_0156	have a cough	
+2775	2774	hypothesis	hypothesis	Our hypothesis turned out to be wrong.	我們的假設結果是錯的。	C1	study	ngsl_2809_2774	ngsl_2809_0193|ngsl_2809_0574	turn out	
+2776	2775	royal	royal	We visited the royal palace.	我們參觀了皇宮。	B1	travel	ngsl_2809_2775	ngsl_2809_0332	royal palace	
+2777	2776	theoretical	theoretical	The course is too theoretical for me.	這門課對我來說太偏理論了。	B2	study	ngsl_2809_2776	ngsl_2809_0163		
+2778	2777	curtain	curtains	Could you close the curtains?	你可以把窗簾拉上嗎？	A2	daily	ngsl_2809_2777	ngsl_2809_0238		
+2779	2778	mayor	mayor	The mayor opened the new library.	市長為新圖書館揭幕。	B1	news	ngsl_2809_2778	ngsl_2809_0213|ngsl_2809_0078|ngsl_2809_1161		
+2780	2779	darkness	darkness	The room was in complete darkness.	房間裡一片漆黑。	B1	daily	ngsl_2809_2779	ngsl_2809_0253|ngsl_2809_0580		
+2781	2780	aunt	aunt	My aunt is coming to visit this weekend.	我阿姨這週末要來看我們。	A1	social	ngsl_2809_2780	ngsl_2809_0064|ngsl_2809_0332|ngsl_2809_0933		
+2782	2781	tournament	tournament	Our school is hosting a chess tournament.	我們學校要主辦一場西洋棋比賽。	B1	study	ngsl_2809_2781	ngsl_2809_0145|ngsl_2809_1326		
+2783	2782	registration	Registration	Registration closes on Friday.	報名星期五截止。	B1	official	ngsl_2809_2782	ngsl_2809_0238		registration 在此為「報名」
+2784	2783	fragment	fragments	I only remember fragments of the dream.	我只記得夢的片段。	B2	daily	ngsl_2809_2783	ngsl_2809_0073|ngsl_2809_0350|ngsl_2809_0965		
+2785	2784	listener	listener	She's a good listener.	她是個很好的傾聽者。	B1	social	ngsl_2809_2784	ngsl_2809_0055	a good listener	listener 在此為「傾聽者」
+2786	2785	immigration	immigration	We waited an hour at immigration.	我們在入境審查處等了一小時。	B1	travel	ngsl_2809_2785	ngsl_2809_0402|ngsl_2809_0246		immigration 在此為機場「入境審查」
+2787	2786	tender	tender	She gave her son a tender hug.	她溫柔地抱了抱兒子。	B1	social	ngsl_2809_2786	ngsl_2809_0686		
+2788	2787	density	density	This city has a high population density.	這座城市人口密度很高。	B2	news	ngsl_2809_2787	ngsl_2809_0268|ngsl_2809_0147|ngsl_2809_0709	population density	
+2789	2788	ugly	ugly	That sweater is so ugly!	那件毛衣好醜！	A2	shopping	ngsl_2809_2788			
+2790	2789	module	module	Each module takes two weeks.	每個單元要上兩週。	B2	study	ngsl_2809_2789	ngsl_2809_0144|ngsl_2809_0058|ngsl_spoken_720_0070|ngsl_2809_0156		module 在此為課程「單元」
+2791	2790	faithfully	faithfully	He faithfully visits his mother every Sunday.	他每個星期天都固定去看他母親。	B2	social	ngsl_2809_2790	ngsl_2809_0332|ngsl_2809_0337|ngsl_2809_0179		faithfully 在此為「始終如一地」
+2792	2791	autumn	Autumn	Autumn is my favorite season.	秋天是我最喜歡的季節。	A1	daily	ngsl_2809_2791	ngsl_2809_0999|ngsl_2809_0749		
+2793	2792	cheek	cheek	She kissed him on the cheek.	她親了他的臉頰。	A2	social	ngsl_2809_2792	ngsl_2809_1679		
+2794	2793	attachment	attachment	Please see the attachment for details.	詳情請見附件。	B1	work	ngsl_2809_2793	ngsl_2809_0470|ngsl_2809_0049|ngsl_2809_0471		
+2795	2794	holder	holders	Ticket holders can enter first.	持票者可以先進場。	B1	travel	ngsl_2809_2794	ngsl_2809_1248|ngsl_2809_0716|ngsl_2809_0077	ticket holder	
+2796	2795	solar	solar	Our house uses solar power.	我們家用太陽能。	B1	daily	ngsl_2809_2795	ngsl_2809_0164|ngsl_2809_0067|ngsl_2809_0330	solar power	
+2797	2796	grin	grinned	He grinned when he heard the news.	他聽到消息時咧嘴笑了。	B1	social	ngsl_2809_2796	ngsl_2809_0177|ngsl_2809_0545		
+2798	2797	rose	roses	These roses smell lovely.	這些玫瑰好香。	A2	daily	ngsl_2809_2797	ngsl_2809_1790|ngsl_2809_1599		
+2799	2798	noun	noun	Is this word a noun or a verb?	這個字是名詞還是動詞？	A2	study	ngsl_2809_2798	ngsl_2809_0216|ngsl_2809_2699		
+2800	2799	fortunate	fortunate	We were fortunate to get good seats.	我們很幸運拿到好位子。	B1	social	ngsl_2809_2799	ngsl_2809_0042|ngsl_2809_0055|ngsl_2809_0851		

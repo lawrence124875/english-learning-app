@@ -1,0 +1,101 @@
+# NGSL index 1300–1399
+1300|flowers|He bought her some flowers.|他買了一些花送她。|A1|shopping|buy<bought||
+1301|crisis|The company is going through a crisis.|公司正在經歷一場危機。|B2|work|company,go<going|go through|
+1302|settle|Let's settle this over coffee.|我們邊喝咖啡邊把這件事解決吧。|B2|social|coffee||settle 在此為「解決（爭議、問題）」
+1303|boat|We took a boat to the island.|我們搭船去那座島。|A2|travel|take<took,island||
+1304|aid|Is there a first aid kit in the office?|辦公室裡有急救箱嗎？|B1|health|first,office|first aid kit|aid 在此為「救助、急救」
+1305|fan|I'm a big fan of his music.|我超喜歡他的音樂。|A2|social|big,music|a big fan of ...|
+1306|kitchen|The kitchen is a mess.|廚房一團亂。|A2|daily|mess||
+1307|twice|I brush my teeth twice a day.|我一天刷兩次牙。|A1|daily|brush,tooth<teeth,day|twice a day|
+1308|fresh|These vegetables are really fresh.|這些蔬菜很新鮮。|A1|food|vegetable<vegetables,really||
+1309|delay|We apologize for the delay.|造成延誤，我們深感抱歉。|B1|travel|apologize||
+1310|Safety|Safety comes first.|安全第一。|A2|work|come<comes,first||
+1311|engineer|My brother is a software engineer.|我哥是軟體工程師。|A2|work|brother,software||
+1312|quiet|Please be quiet in the library.|在圖書館裡請保持安靜。|A1|study|please,library||
+1313|insurance|Do you have travel insurance?|你有保旅遊險嗎？|B1|travel|travel|travel insurance|
+1314|nurse|The nurse will see you in a moment.|護理師等一下就來看你。|A2|health|see,moment|in a moment|
+1315|divide|Let's divide the bill between us.|我們平分帳單吧。|B1|food|bill||divide 在此為「分攤」
+1316|length|What length should the essay be?|這篇作文要寫多長？|B1|study|essay||
+1317|investigation|The police have started an investigation.|警方已經展開調查。|B2|news|police,start<started||
+1318|package|We booked a vacation package online.|我們在網路上訂了一個度假套裝行程。|B1|travel|book<booked,online|vacation package|
+1319|somewhere|Let's go somewhere quiet.|我們去個安靜的地方吧。|A2|social|go,quiet||
+1320|expand|The store plans to expand next year.|這家店打算明年擴大營業。|B1|work|store,plan<plans,next,year||
+1321|committed|She's very committed to her work.|她對工作非常投入。|B2|work|work|be committed to ...|commit 在此為「投入、致力於」
+1322|obvious|The answer is obvious.|答案很明顯。|B1|study|answer||
+1323|jumped|The kids jumped into the pool.|孩子們跳進游泳池。|A1|daily|kid<kids,pool||
+1324|Weapons|Weapons are not allowed on the plane.|飛機上禁止攜帶武器。|B1|official|allow<allowed,plane||
+1325|relatively|The test was relatively easy.|這次考試相對簡單。|B2|study|test,easy||
+1326|host|Thanks for being such a great host.|謝謝你這麼熱情的招待。|B1|social|thank<Thanks,great||
+1327|winter|It snows a lot here in winter.|這裡冬天常下雪。|A1|daily|snow<snows,lot,here||
+1328|district|This district has some great restaurants.|這一區有幾家很棒的餐廳。|B1|food|great,restaurant<restaurants||
+1329|broad|The store offers a broad range of products.|這家店提供各式各樣的產品。|B2|shopping|store,offer<offers,range,product<products|a broad range of|
+1330|tire|We got a flat tire on the way home.|我們回家路上爆胎了。|B1|travel|get<got,flat,way,home|flat tire|
+1331|spring|The cherry trees bloom in spring.|櫻花樹在春天開花。|A2|daily|tree<trees||
+1332|spirit|I love the team spirit here.|我很喜歡這裡的團隊精神。|B1|work|love,team,here|team spirit|
+1333|lunch|What do you want for lunch?|你午餐想吃什麼？|A1|food|want||
+1334|actual|The actual price was much higher.|實際價格高很多。|B1|shopping|price,much,high<higher||
+1335|pool|The hotel has an outdoor pool.|飯店有戶外游泳池。|A2|travel|hotel||
+1336|battle|It's a battle to get the kids to bed.|要哄孩子上床睡覺簡直是一場硬仗。|B2|daily|get,kid<kids,bed||battle 在此為比喻「硬仗」
+1337|tradition|Eating dumplings at New Year is a family tradition.|過年吃餃子是我們家的傳統。|B1|food|eat<Eating,family||
+1338|cash|Do you accept cash?|你們收現金嗎？|A1|shopping|accept||
+1339|hardly|I can hardly hear you.|我幾乎聽不到你的聲音。|B1|phone|hear||
+1340|award|She won an award for her design.|她的設計得了獎。|B1|work|win<won,design||
+1341|coach|Our coach makes us run every morning.|教練每天早上都要我們跑步。|A2|health|make<makes,run,morning||
+1342|experiment|We did a simple experiment in class.|我們在課堂上做了一個簡單的實驗。|B1|study|do<did,simple,class||
+1343|consideration|Thank you for your consideration.|謝謝您的考慮。|B1|work|thank||
+1344|strange|I heard a strange noise last night.|我昨晚聽到奇怪的聲音。|A2|daily|hear<heard,noise,last,night||
+1345|code|Enter the code to unlock the door.|輸入密碼就能開門。|A2|daily|enter,door||code 在此為「密碼」
+1346|possibly|Could you possibly help me with this?|能不能麻煩你幫我一下？|B1|social|help||possibly 在此用於客氣請求
+1347|threat|Strong winds are the main threat today.|強風是今天最主要的威脅。|B2|news|strong,wind<winds,main,today||
+1348|accident|There was an accident on the highway.|高速公路上發生了車禍。|A2|news|||accident 在此為「車禍」
+1349|impossible|It's impossible to find parking here.|這裡根本找不到停車位。|B1|travel|find,here||
+1350|revenue|Our revenue grew last year.|我們去年營收成長了。|B2|work|grow<grew,last,year||
+1351|Enable|Enable notifications to get the latest updates.|開啟通知以接收最新消息。|B1|phone|get,update<updates||enable 在此為「啟用（功能）」
+1352|afraid|I'm afraid of the dark.|我怕黑。|A1|daily|dark|be afraid of|
+1353|active|My grandma is still very active.|我奶奶還是很活躍。|A2|health|still||
+1354|concluded|We concluded that the plan wouldn't work.|我們的結論是這個計畫行不通。|B2|work|plan,work||
+1355|religious|It's a religious holiday here.|這天在當地是宗教節日。|B1|travel|holiday,here||
+1356|cancer|Smoking increases the risk of cancer.|吸菸會增加罹癌風險。|B1|health|smoke<Smoking,increase<increases,risk||2026-10-09 第一輪風險複審保留；主題：衛教常識
+1357|convinced|She convinced me to come.|她說服我來了。|B1|social|come|convince someone to ...|
+1358|vary|Prices vary from shop to shop.|每家店的價格都不一樣。|B1|shopping|price<Prices,shop||
+1359|environmental|Plastic bags cause serious environmental problems.|塑膠袋造成嚴重的環境問題。|B1|news|plastic,bag<bags,cause,serious,problem<problems||
+1360|sun|Don't stay in the sun too long.|別在太陽底下待太久。|A1|health|stay,long||
+1361|healthy|I'm trying to eat healthy food.|我在努力吃健康的食物。|A1|health|try<trying,eat,food||
+1362|blew|The wind blew my hat off.|風把我的帽子吹掉了。|A2|daily|wind,hat||
+1363|volume|Can you turn down the volume?|你可以把音量調小嗎？|A2|daily|turn|turn down|volume 在此為「音量」
+1364|location|The location of this hotel is perfect.|這間飯店的位置很棒。|A2|travel|hotel,perfect||
+1365|invested|He invested his savings in a small business.|他把積蓄投資在一家小公司。|B2|work|small,business||
+1366|proceed|Please proceed to gate twelve.|請前往十二號登機門。|B1|travel|please,gate,twelve||proceed 在此為「前往」
+1367|wash|I need to wash my car.|我得洗車了。|A1|daily|need,car||
+1368|actor|Who's your favorite actor?|你最喜歡哪個演員？|A1|social|favorite||
+1369|glad|I'm glad you could come.|很高興你能來。|A2|social|come||
+1370|tape|I need some tape to fix this box.|我需要一點膠帶把這個箱子黏好。|A2|daily|need,fix,box||
+1371|whereas|I like tea, whereas my husband prefers coffee.|我喜歡茶，而我先生比較喜歡咖啡。|B2|food|like,tea,husband,prefer<prefers,coffee||whereas 在此為「而（表對比）」
+1372|opposite|They have opposite opinions on this.|他們對這件事的意見完全相反。|B1|social|opinion<opinions||
+1373|stone|The old bridge is made of stone.|那座舊橋是用石頭蓋的。|A2|travel|old,bridge|be made of|
+1374|sum|We paid a large sum of money for the house.|我們買這間房子花了一大筆錢。|B2|daily|pay<paid,large,money,house|a sum of money|sum 在此為「金額」
+1375|murder|I love reading murder mysteries.|我很愛看推理謀殺小說。|B1|daily|love,read<reading,mystery<mysteries|murder mystery|指推理小說類型，避開暴力描寫；2026-10-09 第一輪風險複審保留；主題：文學類型
+1376|monitor|We monitor the temperature every hour.|我們每小時監測一次溫度。|B2|work|temperature,hour||
+1377|soldier|My grandfather was a soldier.|我爺爺以前是軍人。|A2|daily|||
+1378|finance|She works in finance.|她在金融業工作。|B2|work|work<works||finance 在此為「金融業」
+1379|hate|I hate waiting in line.|我討厭排隊。|A2|daily|wait<waiting,line|wait in line|hate 在此為動詞「討厭」，非名詞「仇恨」
+1380|eggs|How would you like your eggs?|你的蛋要怎麼料理？|A2|food|like||
+1381|concert|Are you going to the concert on Friday?|你週五要去聽演唱會嗎？|A1|social|go<going||
+1382|shock|The news came as a shock.|這消息令人震驚。|B1|news|news,come<came|come as a shock|
+1383|comfortable|These shoes are really comfortable.|這雙鞋好舒服。|A2|shopping|shoe<shoes,really||
+1384|usual|Let's meet at the usual place.|我們在老地方見。|A2|social|meet,place||
+1385|carefully|Please listen carefully.|請仔細聽。|A2|study|please,listen||
+1386|packed|Have you packed for the trip yet?|你旅行的行李收好了嗎？|A2|travel|trip,yet||
+1387|recall|I can't recall his name.|我想不起他的名字。|B1|social|name||
+1388|wine|Would you like red or white wine?|你要紅酒還是白酒？|A2|food|like,red,white||2026-10-09 第一輪風險複審保留；主題：酒類
+1389|camera|My phone has a really good camera.|我的手機相機很好。|A1|phone|phone,really,good||
+1390|swim|I learned to swim when I was five.|我五歲學會游泳。|A1|health|learn<learned,five||
+1391|manufactures|This company manufactures car parts.|這家公司製造汽車零件。|B2|work|company,car,part<parts||
+1392|theater|Let's meet in front of the theater.|我們在劇院前面碰面吧。|A2|social|meet,front|in front of|
+1393|cycle|It's a vicious cycle.|這是個惡性循環。|B2|social||vicious cycle|
+1394|coffee|I'll have a coffee, please.|我要一杯咖啡，謝謝。|A1|food|have,please||
+1395|totally|I totally forgot about the meeting.|我完全忘了開會的事。|B1|work|forget<forgot||
+1396|museum|The museum is free on Sundays.|博物館週日免費參觀。|A1|travel|free||
+1397|Visitors|Visitors must sign in at the front desk.|訪客必須在櫃台登記。|B1|official|must,sign,front,desk|sign in|
+1398|freedom|I love the freedom of working from home.|我很喜歡在家工作的自由。|B1|work|love,work<working,home|work from home|
+1399|construction|The road is under construction.|這條路正在施工。|B1|travel|road|under construction|

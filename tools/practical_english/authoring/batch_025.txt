@@ -1,0 +1,101 @@
+# NGSL index 2400–2499
+2400|dare|I didn't dare to ask her.|我不敢問她。|B1|social|ask||
+2401|barrier|Language can be a barrier when traveling.|旅行時語言可能會是一種障礙。|B2|travel|language,travel<traveling|language barrier|
+2402|rid|I need to get rid of these old boxes.|我得把這些舊箱子處理掉。|B1|daily|need,old,box<boxes|get rid of ...|
+2403|divorced|Her parents got divorced when she was ten.|她十歲時父母離婚了。|B1|social|parent<parents,ten|get divorced|
+2404|ruined|The rain ruined our picnic.|這場雨毀了我們的野餐。|B1|daily|rain||ruin 在此為「毀掉、破壞」
+2405|buried|The dog buried its bone in the yard.|狗把骨頭埋在院子裡。|B1|daily|dog,bone,yard||
+2406|counseled|My teacher counseled me to choose a different major.|老師勸我選別的主修。|C1|study|teacher,choose,different,major||counsel 在此為動詞「勸告、建議」
+2407|tendency|I have a tendency to talk too fast.|我說話常常太快。|B2|social|talk,fast|have a tendency to ...|
+2408|frequent|There are frequent buses to the airport.|往機場的公車班次很密集。|B1|travel|bus<buses||
+2409|motor|The motor is making a strange noise.|馬達發出奇怪的聲音。|B1|daily|make<making,strange,noise||
+2410|survival|Learn some survival skills before you go camping.|去露營前先學一些求生技能。|B2|travel|learn,skill<skills,camp<camping|survival skills|
+2411|counter|Please pay at the counter.|請到櫃台付款。|A2|shopping|please,pay||counter 在此為「櫃台」，非 NGSL 解釋的「計數器」
+2412|possesses|She possesses a great sense of humor.|她很有幽默感。|C1|social|great,sense,humor|sense of humor|
+2413|permission|You need permission to take photos here.|在這裡拍照需要經過許可。|B1|official|need,take,photo<photos,here||
+2414|valley|The village is in a beautiful valley.|那個村子位在一座美麗的山谷裡。|B1|travel|village,beautiful||
+2415|floating|Leaves were floating on the water.|葉子漂浮在水面上。|B1|daily|water||
+2416|mad|You must be mad to swim in this cold water!|你一定是瘋了才會在這麼冷的水裡游泳！|B1|social|must,swim,cold,water||mad 在此為「瘋狂的」；美式口語常作「生氣的」
+2417|greatly|Your help is greatly appreciated.|非常感謝你的幫忙。|B2|social|help,appreciate<appreciated||
+2418|visible|The mountain is visible from my window.|從我的窗戶看得到那座山。|B1|daily|mountain,window||
+2419|electric|I want to buy an electric car.|我想買一台電動車。|A2|shopping|want,buy,car|electric car|
+2420|impressive|Your English is impressive!|你的英文真厲害！|B1|study|||
+2421|evolution|We learned about evolution in biology class.|我們在生物課學到了演化。|B2|study|learn<learned,class||evolution 在此為「演化」
+2422|awareness|The event raises awareness of mental health.|這個活動提升了大眾對心理健康的意識。|B2|news|event,raise<raises,mental,health|raise awareness|
+2423|violent|This movie is too violent for kids.|這部電影對小孩來說太暴力了。|B1|daily|movie,kid<kids||
+2424|slave|The history book describes the life of a slave in ancient Rome.|這本歷史書描述了古羅馬一名奴隸的生活。|B1|social|history,book,describe<describes,life,ancient||歷史描述；2026-10-09 第一輪風險複審修改
+2425|wealthy|They live in a wealthy neighborhood.|他們住在一個富裕的社區。|B2|daily|live,neighborhood||
+2426|architecture|I love the architecture in this old town.|我很喜歡這個老城區的建築。|B1|travel|love,old,town||
+2427|acceptable|Is it acceptable to wear jeans to work?|穿牛仔褲上班可以嗎？|B1|work|wear,work||
+2428|journal|I write in my journal every night.|我每天晚上寫日記。|B1|daily|write,every,night||
+2429|coal|The town used to be famous for coal mining.|這個小鎮以前以採煤聞名。|B2|news|town,famous,mine<mining|used to ...|
+2430|measurements|Let me take your measurements for the suit.|我來幫你量一下做西裝的尺寸。|B1|shopping|let,take,suit|take measurements|measurement 在此為「尺寸」
+2431|random|A random stranger helped me with my bags.|一個陌生路人幫我提行李。|B1|travel|stranger,help<helped,bag<bags||random 在此為口語「隨便某個、不認識的」
+2432|successfully|Your payment was successfully processed.|您的付款已成功完成。|B2|shopping|payment,process<processed||
+2433|depress|Rainy days always depress me.|下雨天總是讓我心情低落。|B2|daily|day<days,always||
+2434|illustrations|The illustrations in this book are beautiful.|這本書裡的插圖很漂亮。|B2|study|book,beautiful||
+2435|burst|The balloon burst with a loud bang.|氣球砰的一聲爆了。|B1|daily|loud||
+2436|privilege|It's a privilege to work with you.|能和你共事是我的榮幸。|B2|work|work||privilege 在此為「榮幸」
+2437|buyer|We found a buyer for our old car.|我們找到了舊車的買家。|B1|shopping|find<found,old,car||
+2438|mutual|We met through a mutual friend.|我們是透過共同朋友認識的。|B2|social|meet<met,through,friend|mutual friend|mutual 在此為「共同的」
+2439|rail|Traveling by rail is relaxing.|搭火車旅行很放鬆。|B2|travel|travel<Traveling|by rail|
+2440|motivates|What motivates you to study English?|是什麼激勵你學英文的？|B1|study|study||
+2441|laboratory|She works in a laboratory.|她在實驗室工作。|B1|work|work<works||
+2442|mortgage|We pay our mortgage every month.|我們每個月繳房貸。|B2|official|pay,every,month||mortgage 在此為「房貸」
+2443|promotion|Congratulations on your promotion!|恭喜你升職了！|B1|work||Congratulations on ...|
+2444|passion|Cooking is her passion.|做菜是她的最愛。|B1|daily|cook<Cooking||
+2445|champion|He's the national tennis champion.|他是全國網球冠軍。|B1|social|national,tennis||
+2446|fulfilled|I finally fulfilled my dream of living abroad.|我終於實現了出國生活的夢想。|B2|daily|finally,dream,live<living,abroad||fulfill 在此為「實現」
+2447|dust|The old books are covered in dust.|那些舊書上都是灰塵。|B1|daily|old,book<books,cover<covered|covered in dust|
+2448|dedicated|She dedicated her life to helping others.|她一生致力於幫助別人。|B2|social|life,help<helping,other<others|dedicate ... to ...|
+2449|roughly|The trip takes roughly two hours.|這趟路程大約要兩個小時。|B1|travel|trip,take<takes,two,hour<hours||
+2450|skirt|I bought a new skirt for the party.|我買了一條新裙子要穿去派對。|A2|shopping|buy<bought,new,party||
+2451|province|Which province are you from?|你是哪一省的人？|B1|social|||
+2452|marched|The band marched down the street.|樂隊沿著街道行進。|B2|news|band,street||march 在此為「行進」
+2453|evaluation|We have our yearly evaluation next week.|我們下週要做年度考核。|B2|work|next,week||
+2454|compromise|Let's find a compromise.|我們找個折衷的辦法吧。|B2|work|find||
+2455|accomplished|We accomplished a lot today.|我們今天完成了很多事。|B1|work|lot,today||
+2456|weakness|What's your biggest weakness?|你最大的缺點是什麼？|B1|work|big<biggest||weakness 在此為「缺點」
+2457|announcement|Please listen to the following announcement.|請注意以下廣播。|B1|travel|please,listen||announcement 在此為「廣播、公告」
+2458|salt|Could you pass the salt?|可以把鹽遞給我嗎？|A1|food|pass||
+2459|glanced|She glanced at her watch.|她瞄了一眼手錶。|B2|daily|watch|glance at ...|
+2460|opera|We're going to the opera on Saturday.|我們星期六要去看歌劇。|B1|social|go<going||
+2461|contest|She won first prize in a singing contest.|她在歌唱比賽中得了第一名。|B1|social|win<won,first,prize,sing<singing||
+2462|brush|Clean the brush after painting.|畫完後要把刷子洗乾淨。|A2|daily|clean,paint<painting||
+2463|embarrass|Please don't embarrass me in front of my friends.|拜託別在我朋友面前讓我丟臉。|B1|social|please,front,friend<friends|in front of ...|
+2464|gallery|The gallery is free on Sundays.|那間畫廊週日免費入場。|B1|travel|free||
+2465|genetic|Eye color is genetic.|眼睛的顏色是遺傳的。|B2|health|eye,color||
+2466|aggressive|Our boss set some aggressive sales goals.|老闆訂了一些很積極的業績目標。|C1|work|boss,set,sale<sales,goal<goals||aggressive 在此為「積極進取的」
+2467|chest|I have a pain in my chest.|我胸口會痛。|B1|health|pain||
+2468|format|What format should the file be in?|檔案應該存成什麼格式？|B1|work|file||
+2469|literary|She won a literary prize last year.|她去年得了一個文學獎。|C1|news|win<won,prize,last,year||
+2470|govern|These rules govern how we use the meeting rooms.|這些規定規範了我們怎麼使用會議室。|C1|work|rule<rules,use,room<rooms||govern 在此為「規範、管理」
+2471|embraced|She embraced her son at the airport.|她在機場擁抱了兒子。|B2|travel|son||
+2472|praised|The teacher praised him for his hard work.|老師稱讚他很努力。|B1|study|teacher,hard,work|hard work|
+2473|silent|Everyone was silent during the movie.|看電影時大家都很安靜。|B1|daily|everyone,movie||
+2474|pump|I need to pump up my bike tires.|我得幫腳踏車輪胎打氣。|B1|daily|need,bike,tire<tires|pump up（打氣）|
+2475|publisher|She sent her book to a publisher.|她把書稿寄給了一家出版社。|B2|work|send<sent,book||
+2476|celebration|We're having a small celebration for her birthday.|我們要幫她辦個小小的慶生會。|B1|social|small||
+2477|golf|My dad plays golf on weekends.|我爸週末會打高爾夫球。|A2|daily|dad,play<plays,weekend<weekends||
+2478|compensation|The airline offered us compensation for the delay.|航空公司因延誤提供我們補償。|C1|travel|airline,offer<offered,delay||
+2479|classical|I listen to classical music when I study.|我讀書的時候會聽古典音樂。|B1|study|listen,music,study|classical music|
+2480|weigh|How much does this bag weigh?|這個袋子有多重？|A2|travel|bag||
+2481|versus|We compared the cost of driving versus taking the train.|我們比較了開車和搭火車的花費。|B2|travel|compare<compared,cost,drive<driving,take<taking,train||
+2482|deficit|The company has a budget deficit this year.|公司今年預算出現赤字。|C1|work|company,budget,year||
+2483|modify|You can modify your order before it ships.|商品出貨前你都可以修改訂單。|B2|shopping|order,ship<ships||
+2484|flash|Please turn off your flash in the museum.|在博物館裡請關掉閃光燈。|B1|travel|please,turn,museum|turn off|flash 在此為「閃光燈」
+2485|friendship|Our friendship means a lot to me.|我們的友誼對我來說很重要。|B1|social|mean<means,lot||
+2486|profession|Teaching is a rewarding profession.|教書是一份很有成就感的職業。|B2|work|teach<Teaching||
+2487|literally|I literally ran all the way here.|我真的是一路跑過來的。|B2|social|run<ran,way,here|all the way|literally 在此為口語「真的、簡直」
+2488|equation|Can you solve this equation?|你會解這個方程式嗎？|B2|study|solve||
+2489|gesture|He made a gesture for me to come in.|他做了個手勢叫我進來。|B2|social|make<made,come||
+2490|entertained|A clown entertained the kids at the party.|一個小丑在派對上逗孩子們開心。|B1|social|kid<kids,party||entertain 在此為「娛樂、逗樂」
+2491|fantastic|The food was fantastic!|食物超棒的！|A2|food|food||
+2492|assigned|The teacher assigned us a lot of homework.|老師出了很多作業給我們。|B1|study|teacher,lot||
+2493|Inflation|Inflation has made everything more expensive.|通貨膨脹讓所有東西都變貴了。|B2|news|make<made,everything,expensive||
+2494|historic|This is a historic building.|這是一棟歷史建築。|B1|travel|||
+2495|injured|He injured his leg playing soccer.|他踢足球時傷到了腿。|B1|health|leg,play<playing||
+2496|remote|They live in a remote village.|他們住在一個偏遠的村莊。|B2|travel|live,village||remote 在此為「偏遠的」
+2497|therapy|She goes to physical therapy twice a week.|她每週去做兩次物理治療。|B2|health|physical,twice,week|physical therapy|
+2498|orange|She's wearing an orange dress.|她穿著一件橘色洋裝。|A1|shopping|wear<wearing,dress||orange 在此為「橘色的」
+2499|Twist|Twist the cap to open the bottle.|轉開瓶蓋就能打開瓶子。|A2|daily|cap,open,bottle||

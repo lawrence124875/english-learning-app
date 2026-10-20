@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1601	1600	soft	soft	This towel is really soft.	這條毛巾好柔軟。	A2	shopping	ngsl_2809_1600	ngsl_2809_0103		
+1602	1601	row	row	We sat in the front row.	我們坐在第一排。	A2	social	ngsl_2809_1601	ngsl_2809_0355|ngsl_2809_0487		
+1603	1602	youth	youth	He played soccer in his youth.	他年輕時踢過足球。	B1	social	ngsl_2809_1602	ngsl_2809_0157	in one's youth	youth 在此為「青年時期」
+1604	1603	lock	lock	Don't forget to lock the door.	別忘了鎖門。	A2	daily	ngsl_2809_1603	ngsl_2809_0650|ngsl_2809_0489		lock 在此為動詞「鎖上」
+1605	1604	fuel	fuel	The car is low on fuel.	車子快沒油了。	B1	travel	ngsl_2809_1604	ngsl_2809_0259|ngsl_2809_0282	low on fuel	
+1606	1605	expectation	expectations	The hotel was beyond our expectations.	這家飯店超乎我們的預期。	B1	travel	ngsl_2809_1605	ngsl_2809_0758|ngsl_2809_0825	beyond expectations	
+1607	1606	employment	employment	She's looking for full-time employment.	她正在找全職工作。	B2	work	ngsl_2809_1606	ngsl_2809_0074|ngsl_2809_0409|ngsl_2809_0048	look for	
+1608	1607	celebrate	celebrate	Let's celebrate your birthday tonight.	我們今晚來幫你慶生吧。	A2	social	ngsl_2809_1607	ngsl_2809_0173|ngsl_2809_1413		
+1609	1608	sexual	sexual	The company has a clear policy on sexual harassment.	公司對性騷擾有明確的規定。	B2	work	ngsl_2809_1608	ngsl_2809_0106|ngsl_2809_0368|ngsl_2809_0398	sexual harassment	職場規範用語；2026-10-09 第一輪風險複審保留；主題：職場規範
+1610	1609	shoulder	shoulder	My shoulder hurts after the gym.	上完健身房後我的肩膀好痛。	A2	health	ngsl_2809_1609	ngsl_2809_1420		
+1611	1610	breath	breath	Take a deep breath and relax.	深呼吸，放輕鬆。	A2	health	ngsl_2809_1610	ngsl_2809_0058|ngsl_2809_0839|ngsl_2809_1484	take a deep breath	
+1612	1611	increasingly	increasingly	It's increasingly hard to find a cheap apartment.	要找到便宜的公寓越來越難了。	B2	daily	ngsl_2809_1611	ngsl_2809_0297|ngsl_2809_0080|ngsl_2809_1094|ngsl_2809_2167		
+1613	1612	import	imported	Most of our coffee is imported.	我們的咖啡大多是進口的。	B1	food	ngsl_2809_1612	ngsl_2809_1394		import 在此為動詞「進口」
+1614	1613	bottle	bottle	Can I have a bottle of water?	可以給我一瓶水嗎？	A1	food	ngsl_2809_1613	ngsl_2809_0321	a bottle of	
+1615	1614	ourselves	ourselves	We made the cake ourselves.	蛋糕是我們自己做的。	A2	food	ngsl_2809_1614	ngsl_2809_0047|ngsl_2809_2172		
+1616	1615	sheet	sheets	Could you change the sheets, please?	可以麻煩換一下床單嗎？	A2	travel	ngsl_2809_1615	ngsl_2809_0112|ngsl_2809_0470		
+1617	1616	engine	engine	The engine won't start.	引擎發不動。	A2	travel	ngsl_2809_1616	ngsl_2809_0135		
+1618	1617	cast	cast	The movie has a great cast.	這部電影的演員陣容很強。	B1	social	ngsl_2809_1617	ngsl_2809_0761|ngsl_2809_0123		cast 在此為名詞「演員陣容」，非「投射」
+1619	1618	notion	notion	I don't like the notion of working on weekends.	我不喜歡週末還要工作這個想法。	C1	work	ngsl_2809_1618	ngsl_2809_0044|ngsl_2809_0066|ngsl_2809_0933		notion 在此為「想法、觀念」
+1620	1619	conservative	conservative	My parents are quite conservative.	我爸媽觀念滿保守的。	B2	social	ngsl_2809_1619	ngsl_2809_0296|ngsl_2809_0276		
+1621	1620	journey	journey	Have a safe journey home!	回家路上小心！	B1	travel	ngsl_2809_1620	ngsl_2809_1026|ngsl_2809_0160		
+1622	1621	opposition	opposition	The plan met strong opposition from staff.	這個計畫遭到員工強烈反對。	C1	work	ngsl_2809_1621	ngsl_2809_0231|ngsl_2809_0134|ngsl_2809_0460|ngsl_2809_0430		
+1623	1622	relief	relief	What a relief! I found my wallet.	好險！我找到錢包了。	B1	daily	ngsl_2809_1622	ngsl_2809_0080	What a relief!	relief 在此為「鬆了一口氣」
+1624	1623	debt	debt	He's finally out of debt.	他終於還清債務了。	B1	daily	ngsl_2809_1623	ngsl_2809_0498	out of debt	
+1625	1624	honor	honor	It's an honor to meet you.	很榮幸認識你。	B1	social	ngsl_2809_1624	ngsl_2809_0134	It's an honor to ...	
+1626	1625	outcome	outcome	We're happy with the outcome.	我們對結果很滿意。	B2	work	ngsl_2809_1625	ngsl_2809_0512		
+1627	1626	blame	blame	Don't blame yourself.	別怪你自己。	B1	social	ngsl_2809_1626	ngsl_2809_0812		
+1628	1627	explanation	explanation	Thanks for the clear explanation.	謝謝你清楚的說明。	B1	study	ngsl_2809_1627	ngsl_2809_0243|ngsl_2809_0368		
+1629	1628	arise	arise	Call me if any problems arise.	有任何問題發生就打給我。	B2	work	ngsl_2809_1628	ngsl_2809_0104|ngsl_2809_0119		
+1630	1629	musical	musical	She comes from a musical family.	她來自一個音樂世家。	B1	social	ngsl_2809_1629	ngsl_2809_0064|ngsl_2809_0171		
+1631	1630	recover	recovering	He's recovering from a cold.	他感冒正在恢復中。	B1	health	ngsl_2809_1630	ngsl_2809_0866	recover from	
+1632	1631	dad	dad	My dad is a great cook.	我爸很會做菜。	A1	daily	ngsl_2809_1631	ngsl_2809_0123|ngsl_2809_1195		
+1633	1632	stretch	stretch	Stretch before you go running.	跑步前先伸展一下。	B1	health	ngsl_2809_1632	ngsl_2809_0191	go running	stretch 在此為「伸展身體」
+1634	1633	declare	declare	Do you have anything to declare?	你有任何需要申報的物品嗎？	B1	travel	ngsl_2809_1633	ngsl_2809_0317		declare 在此為海關「申報」
+1635	1634	retire	retired	My mom retired last year.	我媽媽去年退休了。	B1	work	ngsl_2809_1634	ngsl_2809_2130|ngsl_2809_0100|ngsl_2809_0057		
+1636	1635	tiny	tiny	Our hotel room was tiny.	我們的飯店房間超小。	A2	travel	ngsl_2809_1635	ngsl_2809_0758|ngsl_2809_0253		
+1637	1636	careful	careful	Be careful, the floor is wet.	小心，地板很濕。	A1	daily	ngsl_2809_1636	ngsl_2809_0750|ngsl_2809_2083		
+1638	1637	suitable	suitable	Is this movie suitable for kids?	這部電影適合小孩看嗎？	B1	social	ngsl_2809_1637	ngsl_2809_0761|ngsl_2809_0528	suitable for	
+1639	1638	native	native	She's a native speaker of English.	她的母語是英文。	B1	study	ngsl_2809_1638	ngsl_2809_1240	native speaker	native 在此為「母語的、土生的」
+1640	1639	fruit	fruit	I eat fruit every morning.	我每天早上都吃水果。	A1	food	ngsl_2809_1639	ngsl_2809_0475|ngsl_2809_0179|ngsl_2809_0433		
+1641	1640	analyze	analyze	We need to analyze the sales data.	我們需要分析銷售資料。	B2	work	ngsl_2809_1640	ngsl_2809_0089|ngsl_2809_0397|ngsl_2809_0555		
+1642	1641	witness	witness	Did anyone witness the accident?	有人目擊這場意外嗎？	B2	news	ngsl_2809_1641	ngsl_2809_0753|ngsl_2809_1348		witness 在此為動詞「目擊」
+1643	1642	mail	mail	Did any mail come for me?	有我的信嗎？	A2	daily	ngsl_2809_1642	ngsl_2809_0064		
+1644	1643	terrible	terrible	The traffic was terrible this morning.	今天早上塞車塞得好嚴重。	A2	daily	ngsl_2809_1643	ngsl_2809_1224|ngsl_2809_0433		
+1645	1644	researcher	researcher	She works as a researcher at a hospital.	她在一家醫院當研究員。	B1	work	ngsl_2809_1644	ngsl_2809_0066|ngsl_2809_0781		
+1646	1645	ordinary	ordinary	It was just an ordinary day.	那只是平凡的一天。	B1	daily	ngsl_2809_1645	ngsl_2809_0063|ngsl_2809_0084		
+1647	1646	selection	selection	The shop has a good selection of wine.	這家店的葡萄酒選擇很多。	B1	shopping	ngsl_2809_1646	ngsl_2809_0436|ngsl_2809_0055|ngsl_2809_1388		2026-10-09 第一輪風險複審保留；主題：酒類
+1648	1647	anywhere	anywhere	You can sit anywhere you like.	你想坐哪裡都可以。	A2	food	ngsl_2809_1647	ngsl_2809_0355|ngsl_2809_0044		
+1649	1648	mental	mental	Exercise is good for your mental health.	運動對心理健康很好。	B1	health	ngsl_2809_1648	ngsl_2809_0916|ngsl_2809_0055|ngsl_2809_0474	mental health	
+1650	1649	participant	participant	Each participant will get a free T-shirt.	每位參加者都會拿到一件免費 T 恤。	B1	social	ngsl_2809_1649	ngsl_2809_0042|ngsl_2809_0394	T-shirt	
+1651	1650	vision	vision	My vision is getting worse.	我的視力越來越差了。	B1	health	ngsl_2809_1650	ngsl_2809_0042|ngsl_2809_0267		
+1652	1651	personality	personality	She has a great personality.	她的個性很好。	B1	social	ngsl_2809_1651	ngsl_2809_0123		
+1653	1652	specifically	specifically	I specifically asked for no onions.	我有特別說不要洋蔥。	B2	food	ngsl_2809_1652	ngsl_2809_0133	ask for	
+1654	1653	fat	fat	This milk is low in fat.	這種牛奶脂肪含量很低。	A2	food	ngsl_2809_1653	ngsl_2809_1788|ngsl_2809_0282	low in fat	
+1655	1654	entry	entry	Entry is free for children.	兒童免費入場。	B1	travel	ngsl_2809_1654	ngsl_2809_0394|ngsl_2809_0101		entry 在此為「入場」
+1656	1655	fellow	fellow	He's popular with his fellow students.	他在同學之間很受歡迎。	B2	study	ngsl_2809_1655	ngsl_2809_0789|ngsl_2809_0247	fellow students	fellow 在此為形容詞「同伴的、同…的」
+1657	1656	chemical	chemicals	This cleaner has strong chemicals.	這款清潔劑含有強烈的化學物質。	B1	daily	ngsl_2809_1656	ngsl_2809_0460		chemical 在此為名詞「化學物質」
+1658	1657	capture	captures	The photo captures the moment perfectly.	這張照片完美捕捉了那一刻。	B2	social	ngsl_2809_1657	ngsl_2809_1207|ngsl_2809_0396|ngsl_2809_1887		
+1659	1658	tip	tip	Is the tip included in the bill?	小費有含在帳單裡嗎？	A2	food	ngsl_2809_1658	ngsl_2809_0162|ngsl_2809_0887		
+1660	1659	discount	discount	Do you have a student discount?	你們有學生折扣嗎？	A2	shopping	ngsl_2809_1659	ngsl_2809_0247	student discount	
+1661	1660	peak	peak	Trains are crowded at peak hours.	尖峰時段的火車很擠。	B1	travel	ngsl_2809_1660	ngsl_2809_0288|ngsl_2809_0246	peak hours	peak 在此為形容詞「尖峰的」
+1662	1661	chairman	chairman	The chairman opened the meeting.	主席宣布會議開始。	B2	work	ngsl_2809_1661	ngsl_2809_0213		
+1663	1662	proportion	proportion	A large proportion of our customers are young.	我們有很大比例的顧客是年輕人。	C1	work	ngsl_2809_1662	ngsl_2809_0209|ngsl_2809_0486|ngsl_2809_0237		
+1664	1663	ear	ears	My ears hurt on the plane.	我在飛機上耳朵好痛。	A1	health	ngsl_2809_1663	ngsl_2809_1420|ngsl_2809_1258		
+1665	1664	disappear	disappeared	My phone just disappeared!	我的手機就這樣不見了！	B1	daily	ngsl_2809_1664	ngsl_2809_0478|ngsl_2809_0063		
+1666	1665	shout	shout	There's no need to shout.	不用大吼大叫。	A2	social	ngsl_2809_1665	ngsl_2809_0089		
+1667	1666	yard	yard	The kids are playing in the yard.	孩子們在院子裡玩。	A2	daily	ngsl_2809_1666	ngsl_2809_0528|ngsl_2809_0157		
+1668	1667	constant	constant	The baby needs constant care.	嬰兒需要時時照顧。	B2	daily	ngsl_2809_1667	ngsl_2809_0870|ngsl_2809_0089|ngsl_2809_0312		
+1669	1668	significantly	significantly	Prices have gone up significantly.	價格大幅上漲了。	B2	shopping	ngsl_2809_1668	ngsl_2809_0295	go up	
+1670	1669	hill	hill	Our hotel is on top of a hill.	我們的飯店在山丘上。	A2	travel	ngsl_2809_1669	ngsl_2809_0758|ngsl_2809_0374		
+1671	1670	considerable	considerable	The repairs cost a considerable amount.	修理費相當可觀。	B2	daily	ngsl_2809_1670	ngsl_2809_1877|ngsl_2809_0251|ngsl_2809_0506		
+1672	1671	instruction	instructions	Please follow the instructions carefully.	請仔細照著說明做。	B1	daily	ngsl_2809_1671	ngsl_2809_0470|ngsl_2809_0187|ngsl_2809_1385		
+1673	1672	intelligence	intelligence	Dogs show a lot of intelligence.	狗展現出很高的智力。	B2	daily	ngsl_2809_1672	ngsl_2809_0894|ngsl_2809_0109|ngsl_2809_0122		
+1674	1673	ideal	ideal	This is an ideal place for a picnic.	這裡是野餐的理想地點。	B1	travel	ngsl_2809_1673	ngsl_2809_0113		
+1675	1674	folk	folk	I love traditional folk music.	我很愛傳統民謠。	B1	social	ngsl_2809_1674	ngsl_2809_0228|ngsl_2809_0992|ngsl_2809_0391	folk music	
+1676	1675	surely	surely	Surely you're not leaving already?	你該不會已經要走了吧？	B2	social	ngsl_2809_1675	ngsl_2809_0125|ngsl_2809_0301		
+1677	1676	guard	guard	A guard checked our bags at the door.	警衛在門口檢查我們的包包。	B1	travel	ngsl_2809_1676	ngsl_2809_0579|ngsl_2809_1251|ngsl_2809_0489		
+1678	1677	cat	cat	Our cat sleeps all day.	我們家的貓整天都在睡。	A1	daily	ngsl_2809_1677	ngsl_2809_0826|ngsl_2809_0084		
+1679	1678	somewhat	somewhat	I'm somewhat tired today.	我今天有點累。	B2	daily	ngsl_2809_1678	ngsl_2809_0245		
+1680	1679	kiss	kiss	She gave her son a goodnight kiss.	她給兒子一個晚安吻。	A2	daily	ngsl_2809_1679	ngsl_2809_0076|ngsl_2809_0686		
+1681	1680	presentation	presentation	I have a presentation tomorrow morning.	我明天早上要做簡報。	B1	work	ngsl_2809_1680	ngsl_2809_0725|ngsl_2809_0433		
+1682	1681	joint	joint	My knee joint hurts when it rains.	下雨時我的膝關節會痛。	B2	health	ngsl_2809_1681	ngsl_2809_2220|ngsl_2809_1420|ngsl_2809_1231		
+1683	1682	compete	compete	Ten teams will compete in the final.	決賽有十支隊伍參加比賽。	B1	social	ngsl_2809_1682	ngsl_spoken_720_0209|ngsl_2809_0406|ngsl_2809_0697		
+1684	1683	poll	poll	A recent poll shows most people work from home.	最近一項調查顯示大部分人在家工作。	B2	news	ngsl_2809_1683	ngsl_2809_0640|ngsl_2809_0109|ngsl_2809_0056|ngsl_2809_0066|ngsl_2809_0160		
+1685	1684	weak	weak	I feel weak after being sick.	生病之後我覺得很虛弱。	A2	health	ngsl_2809_1684	ngsl_2809_0116|ngsl_2809_1715		
+1686	1685	faith	faith	I have faith in you.	我對你有信心。	B2	social	ngsl_2809_1685		have faith in	faith 在此為「信任、信心」，非「信仰」
+1687	1686	reduction	reduction	There's a price reduction on all shoes.	所有鞋子都在降價。	B2	shopping	ngsl_2809_1686	ngsl_2809_0295|ngsl_2809_1475		
+1688	1687	reserve	reserve	I'd like to reserve a table for two.	我想訂兩人的位子。	A2	food	ngsl_2809_1687	ngsl_2809_0044|ngsl_2809_0449|ngsl_spoken_720_0070		
+1689	1688	complaint	complaint	I'd like to make a complaint.	我想投訴。	B1	shopping	ngsl_2809_1688	ngsl_2809_0044|ngsl_2809_0047	make a complaint	
+1690	1689	bore	bore	I won't bore you with the details.	細節就不跟你說了，免得你覺得無聊。	B2	social	ngsl_2809_1689	ngsl_2809_0471		
+1691	1690	mission	mission	Our mission is to help small businesses.	我們的使命是幫助小型企業。	B2	work	ngsl_2809_1690	ngsl_2809_0132|ngsl_2809_0185|ngsl_2809_0210		mission 在此為「使命」
+1692	1691	somehow	somehow	Somehow we got there on time.	不知怎麼的，我們準時到了。	B1	travel	ngsl_2809_1691	ngsl_2809_0042|ngsl_2809_0039|ngsl_2809_0048	on time	
+1693	1692	tone	tone	Don't talk to me in that tone.	別用那種語氣跟我說話。	B1	social	ngsl_2809_1692	ngsl_2809_0136		
+1694	1693	neighborhood	neighborhood	It's a quiet neighborhood.	這是個安靜的社區。	A2	daily	ngsl_2809_1693	ngsl_2809_1312		
+1695	1694	passenger	passengers	All passengers please board now.	請所有乘客現在登機。	A2	travel	ngsl_2809_1694	ngsl_2809_0470|ngsl_2809_0740|ngsl_2809_0069		
+1696	1695	justice	justice	The family finally got justice.	這家人終於討回了公道。	B2	news	ngsl_2809_1695	ngsl_2809_0171|ngsl_2809_0498|ngsl_2809_0042		justice 在此為「公道、公平對待」
+1697	1696	phase	phase	The project is in its final phase.	這個專案進入最後階段了。	B2	work	ngsl_2809_1696	ngsl_2809_0517|ngsl_2809_0697		
+1698	1697	thin	thin	Can you cut the bread thin?	麵包可以切薄一點嗎？	A2	food	ngsl_2809_1697	ngsl_2809_0455|ngsl_2809_2261		
+1699	1698	rush	rush	There's no rush. Take your time.	不急，慢慢來。	A2	daily	ngsl_2809_1698	ngsl_2809_0058|ngsl_2809_0048	Take your time.	rush 在此為名詞「匆忙」
+1700	1699	formal	formal	Is it a formal dinner?	那是正式的晚宴嗎？	B1	social	ngsl_2809_1699	ngsl_2809_1116		

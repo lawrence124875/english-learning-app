@@ -1,0 +1,18 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+3440		lead	lead	She will lead the team on this project.	這個專案由她帶領團隊。	B1	work	ngsl_spoken_720_0543	ngsl_2809_0406|ngsl_2809_0517		lead 在此為「帶領」
+3441		line	line	Draw a straight line under your name.	在你的名字下面畫一條直線。	A2	study	ngsl_spoken_720_0322	ngsl_2809_0480|ngsl_2809_1071|ngsl_2809_0205		line 在此為「線」
+3442		term	term	The new term starts in September.	新學期九月開始。	A2	study	ngsl_spoken_720_0248	ngsl_2809_0078|ngsl_2809_0135		term 在此為「學期」
+3443		care	care	I don't care what other people think.	我不在乎別人怎麼想。	A2	social	ngsl_spoken_720_0313	ngsl_2809_0056|ngsl_2809_0046		care 在此為「在乎」
+3444		watch	watched	We watched a movie last night.	我們昨晚看了一部電影。	A1	daily	ngsl_spoken_720_0274	ngsl_2809_0761|ngsl_2809_0269		watch 在此為「觀看」
+3445		mind	mind	Do you mind if I open the window?	你介意我開窗嗎？	A2	social	ngsl_spoken_720_0260	ngsl_2809_0213|ngsl_2809_0733		mind 在此為「介意」
+3446		clear	clear	The sky is clear today.	今天天空很晴朗。	A1	daily	ngsl_spoken_720_0309	ngsl_2809_1719|ngsl_2809_0245		clear 在此為「晴朗的」
+3447		free	free	Kids under six get in free.	六歲以下兒童免費入場。	A1	travel	ngsl_spoken_720_0552	ngsl_2809_0528|ngsl_spoken_720_0164		free 在此為「免費的」
+3448		sense	sense	Dogs have a good sense of smell.	狗的嗅覺很好。	B1	daily	ngsl_spoken_720_0353	ngsl_2809_0894|ngsl_2809_0055|ngsl_2809_1790		sense 在此為「感官」
+3449		land	land	They bought some land in the countryside.	他們在鄉下買了一塊地。	B1	daily	ngsl_spoken_720_0611	ngsl_2809_0241		land 在此為「土地」
+3450		trade	trade	Trade between the two countries is growing.	兩國之間的貿易正在成長。	B1	news	ngsl_spoken_720_0694	ngsl_2809_0142|ngsl_2809_0334		trade 在此為「貿易」
+3451		check	check	Please check your answers before you hand in the test.	交卷前請檢查你的答案。	A2	study	ngsl_spoken_720_0389	ngsl_2809_0354|ngsl_2809_0331	hand in	check 在此為「檢查」
+3452		relate	relates	This question relates to last week's lesson.	這個問題和上週的課有關。	B1	study	ngsl_spoken_720_0675	ngsl_2809_0180|ngsl_2809_0156|ngsl_2809_1233	relate to	relate 在此為「有關聯」
+3453		sorry	sorry	Sorry, I didn't mean to step on your foot.	對不起，我不是故意踩到你的腳。	A1	social	ngsl_spoken_720_0253	ngsl_2809_0094|ngsl_2809_0476|ngsl_2809_0575		sorry 在此為「對不起」
+3454		unclear	unclear	Sorry, your voice is unclear. Can you say that again?	抱歉，你的聲音聽不清楚，可以再說一次嗎？	A2	phone	ngsl_spoken_720_0025	ngsl_2809_0606|ngsl_2809_0029		unclear 在此為「聽不清楚」
+3455		ring	rang	The phone rang twice and then stopped.	電話響了兩聲就停了。	A2	phone	ngsl_spoken_720_0397	ngsl_2809_0478|ngsl_2809_1307|ngsl_2809_0346		ring 在此為「響」；句中形式 rang
+3456		Put up	put up	We put up posters for the school concert.	我們為學校音樂會張貼了海報。	A2	study	phave_list_150_0042	ngsl_2809_0145|ngsl_2809_1381		put up 在此為「張貼」

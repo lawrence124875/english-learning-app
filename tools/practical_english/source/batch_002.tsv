@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+101	100	last	last	I missed the last train home.	我錯過了回家的末班車。	A2	travel	ngsl_2809_0100	ngsl_2809_0644|ngsl_2809_0288|ngsl_2809_0160	the last train	
+102	101	child	child	Their child is three years old.	他們的孩子三歲了。	A1	daily	ngsl_2809_0101	ngsl_spoken_720_0094|ngsl_2809_0057|ngsl_2809_0143		
+103	102	tell	tell	Please tell me if you need anything.	如果你需要什麼，請告訴我。	A1	social	ngsl_2809_0102	ngsl_2809_0470|ngsl_2809_0089|ngsl_2809_0317		
+104	103	really	really	I really like this song.	我真的很喜歡這首歌。	A1	social	ngsl_2809_0103	ngsl_2809_0044|ngsl_2809_0940		
+105	104	call	call	I'll call you back in ten minutes.	我十分鐘後回電給你。	A2	phone	ngsl_2809_0104	ngsl_2809_0093|ngsl_spoken_720_0209|ngsl_2809_0365	call someone back	
+106	105	before	before	Please wash your hands before dinner.	晚餐前請洗手。	A1	daily	ngsl_2809_0105	ngsl_2809_0470|ngsl_2809_1367|ngsl_2809_0197|ngsl_2809_1116		
+107	106	company	company	She works for a small company.	她在一家小公司上班。	A1	work	ngsl_2809_0106	ngsl_2809_0066|ngsl_2809_0185	work for ...	
+108	107	through	through	We drove through the city at night.	我們晚上開車穿過市區。	A2	travel	ngsl_2809_0107	ngsl_2809_0386|ngsl_2809_0268|ngsl_2809_0269		
+109	108	down	down	Please sit down and relax.	請坐下來放輕鬆。	A1	daily	ngsl_2809_0108	ngsl_2809_0470|ngsl_2809_0355|ngsl_2809_1484	sit down	
+110	109	show	show	Can you show me how it works?	你可以示範給我看怎麼用嗎？	A1	daily	ngsl_2809_0109	ngsl_2809_0066	show me how ...	
+111	110	life	life	Life is busy, but I'm happy.	生活很忙，但我很快樂。	A2	daily	ngsl_2809_0110	ngsl_2809_1232|ngsl_2809_0512		
+112	111	man	man	The man at the front desk was very helpful.	櫃台的那位先生幫了很多忙。	A2	travel	ngsl_2809_0111	ngsl_2809_0487|ngsl_2809_1587	front desk	
+113	112	change	change	Can I change my seat?	我可以換座位嗎？	A1	travel	ngsl_2809_0112	ngsl_2809_0851		
+114	113	place	place	This is a nice place to eat.	這是個吃飯的好地方。	A1	food	ngsl_2809_0113	ngsl_2809_0505|ngsl_2809_0475		
+115	114	long	long	How long does it take to get there?	到那裡要多久？	A1	travel	ngsl_2809_0114	ngsl_2809_0058|ngsl_2809_0042	How long does it take ...?	
+116	115	between	between	The bank is between the hotel and the station.	銀行在飯店和車站中間。	A1	travel	ngsl_2809_0115	ngsl_2809_0626|ngsl_2809_0758|ngsl_2809_0708		
+117	116	feel	feel	I don't feel well today.	我今天不太舒服。	A1	health	ngsl_2809_0116	ngsl_2809_0060|ngsl_2809_0245	feel well	
+118	117	too	too	I like tea, too.	我也喜歡茶。	A1	food	ngsl_2809_0117	ngsl_2809_0044|ngsl_2809_1598		too 在此為「也」
+119	118	still	still	Are you still at work?	你還在上班嗎？	A1	work	ngsl_2809_0118	ngsl_2809_0066	at work	
+120	119	problem	problem	No problem, I can help.	沒問題，我可以幫忙。	A1	social	ngsl_2809_0119	ngsl_2809_0132	No problem.	
+121	120	write	write	Please write your name here.	請在這裡寫上你的名字。	A1	daily	ngsl_2809_0120	ngsl_2809_0470|ngsl_2809_0205|ngsl_2809_0097		
+122	121	same	same	We have the same phone.	我們的手機一樣。	A1	daily	ngsl_2809_0121	ngsl_2809_0478	the same ...	
+123	122	lot	lot	Thanks a lot for your help.	非常感謝你的幫忙。	A1	social	ngsl_2809_0122	ngsl_2809_0243|ngsl_2809_0132	Thanks a lot.	
+124	123	great	great	That's a great idea!	這是個好主意！	A1	social	ngsl_2809_0123	ngsl_2809_0250		
+125	124	try	try	Can I try this on?	我可以試穿這件嗎？	A1	shopping	ngsl_2809_0124		try on（試穿）	
+126	125	leave	leave	What time does the train leave?	火車幾點出發？	A1	travel	ngsl_2809_0125	ngsl_2809_0048|ngsl_2809_0288		
+127	126	number	number	What's your phone number?	你的電話號碼是幾號？	A1	phone	ngsl_2809_0126	ngsl_2809_0478	phone number	
+128	127	both	both	Both rooms have a view of the sea.	兩個房間都看得到海。	A2	travel	ngsl_2809_0127	ngsl_2809_0253|ngsl_2809_0292|ngsl_2809_0986		
+129	128	own	own	I want my own room.	我想要有自己的房間。	A1	daily	ngsl_2809_0128	ngsl_2809_0075|ngsl_2809_0253	my own ...	
+130	129	part	part	This is the best part of the trip.	這是這趟旅行最棒的部分。	A2	travel	ngsl_2809_0129	ngsl_2809_0824		
+131	130	point	point	That's a good point.	你說得有道理。	A2	work	ngsl_2809_0130	ngsl_2809_0055	That's a good point.	
+132	131	little	little	My little brother is ten.	我弟弟十歲。	A1	daily	ngsl_2809_0131	ngsl_2809_0820|ngsl_spoken_720_0209	little brother	
+133	132	help	help	Do you need any help?	你需要幫忙嗎？	A1	shopping	ngsl_2809_0132	ngsl_2809_0089|ngsl_2809_0082		
+134	133	ask	ask	Can I ask you a question?	我可以問你一個問題嗎？	A1	social	ngsl_2809_0133	ngsl_2809_0180		
+135	134	meet	meet	Nice to meet you.	很高興認識你。	A1	social	ngsl_2809_0134	ngsl_2809_0505	Nice to meet you.	
+136	135	start	starts	The movie starts at eight.	電影八點開始。	A1	daily	ngsl_2809_0135	ngsl_2809_0761|ngsl_spoken_720_0207		
+137	136	talk	talk	Can we talk for a minute?	我們可以談一下嗎？	A1	work	ngsl_2809_0136	ngsl_2809_0365	for a minute	
+138	137	something	something	I want to eat something sweet.	我想吃點甜的。	A1	food	ngsl_2809_0137	ngsl_2809_0075|ngsl_2809_0475|ngsl_2809_1780		
+139	138	put	put	Put your bag on the chair.	把你的包包放在椅子上。	A1	daily	ngsl_2809_0138	ngsl_2809_1251|ngsl_2809_1059		
+140	139	another	another	Can I have another cup of tea?	可以再給我一杯茶嗎？	A1	food	ngsl_2809_0139	ngsl_2809_1490|ngsl_2809_1598	a cup of	
+141	140	become	become	She wants to become a teacher.	她想成為老師。	A2	work	ngsl_2809_0140	ngsl_2809_0075|ngsl_2809_0495		
+142	141	interest	interest	I have no interest in sports.	我對運動沒興趣。	A2	social	ngsl_2809_0141	ngsl_2809_0602	interest in ...	
+143	142	country	country	Which country are you from?	你是哪個國家的人？	A1	social	ngsl_2809_0142	ngsl_2809_0038		
+144	143	old	old	How old is your son?	你兒子幾歲？	A1	social	ngsl_2809_0143	ngsl_2809_0686	How old ...?	
+145	144	each	each	The tickets are ten dollars each.	票每張十美元。	A2	shopping	ngsl_2809_0144	ngsl_2809_1248|ngsl_spoken_720_0209|ngsl_2809_0970		
+146	145	school	school	My kids walk to school.	我的孩子走路上學。	A1	daily	ngsl_2809_0145	ngsl_2809_0528|ngsl_2809_0338	walk to school	
+147	146	late	late	Sorry, I'm late.	抱歉，我遲到了。	A1	social	ngsl_2809_0146	ngsl_2809_0764		
+148	147	high	high	The price is too high.	價格太高了。	A2	shopping	ngsl_2809_0147	ngsl_2809_0295		
+149	148	different	different	This shirt comes in different sizes.	這件襯衫有不同尺寸。	A2	shopping	ngsl_2809_0148	ngsl_2809_1906|ngsl_2809_0064|ngsl_2809_0704	come in ...（有…款式）	
+150	149	off	off	Please turn off your phone.	請把手機關機。	A1	daily	ngsl_2809_0149	ngsl_2809_0470|phave_list_150_0105|ngsl_2809_0478		turn off 是 PhaVE 正式項目
+151	150	next	next	Let's meet again next week.	我們下週再見面吧。	A1	social	ngsl_2809_0150	ngsl_2809_0173|ngsl_2809_0134|ngsl_2809_0174|ngsl_2809_0156	next week	
+152	151	end	end	The store is at the end of the street.	那家店在這條街的盡頭。	A2	travel	ngsl_2809_0151	ngsl_2809_0616|ngsl_2809_0597	at the end of	
+153	152	live	live	Where do you live?	你住在哪裡？	A1	social	ngsl_2809_0152	ngsl_2809_0085		
+154	153	why	why	Why are you so tired?	你為什麼這麼累？	A1	daily	ngsl_2809_0153	ngsl_2809_0031		tired 不在詞表
+155	154	while	while	Please wait here while I check.	我確認一下，請在這裡稍等。	A2	work	ngsl_2809_0154	ngsl_2809_0470|ngsl_2809_0402|ngsl_2809_0097|ngsl_2809_0579		
+156	155	world	world	It's a small world!	世界真小！	A2	social	ngsl_2809_0155	ngsl_2809_0185	It's a small world.	
+157	156	week	week	I go to the gym twice a week.	我一週去健身房兩次。	A2	health	ngsl_2809_0156	ngsl_2809_0030|ngsl_2809_1307	twice a week	
+158	157	play	playing	The kids are playing in the park.	孩子們在公園玩。	A1	daily	ngsl_2809_0157	ngsl_2809_0528|ngsl_2809_0656		
+159	158	might	might	It might rain this afternoon.	今天下午可能會下雨。	A2	daily	ngsl_2809_0158	ngsl_2809_1231|ngsl_2809_0947		
+160	159	must	must	You must wear a seat belt.	你一定要繫安全帶。	A2	travel	ngsl_2809_0159	ngsl_2809_0525|ngsl_2809_0851|ngsl_2809_2621	seat belt	
+161	160	home	home	I usually stay home on Sundays.	我週日通常待在家。	A1	daily	ngsl_2809_0160	ngsl_2809_0554|ngsl_2809_0344	stay home	Sundays 不在詞表
+162	161	never	never	I never drink coffee at night.	我晚上從不喝咖啡。	A1	food	ngsl_2809_0161	ngsl_2809_0654|ngsl_2809_1394|ngsl_2809_0269	at night	
+163	162	include	include	Does the price include breakfast?	價格有含早餐嗎？	A2	travel	ngsl_2809_0162	ngsl_2809_0295|ngsl_2809_1818		
+164	163	course	course	I'm taking an English course.	我正在上一門英文課。	A2	study	ngsl_2809_0163	ngsl_2809_0058	take a course	English 不在詞表；course 用「課程」詞義
+165	164	house	house	Their house is near the river.	他們家在河邊附近。	A1	daily	ngsl_2809_0164	ngsl_2809_0426|ngsl_2809_1175		
+166	165	report	report	I need to finish this report today.	我今天必須完成這份報告。	A2	work	ngsl_2809_0165	ngsl_2809_0089|ngsl_2809_0608|ngsl_2809_0245		
+167	166	group	group	We're traveling in a group of six.	我們是六人團體旅行。	A2	travel	ngsl_2809_0166	ngsl_2809_0502|ngsl_spoken_720_0164	a group of	
+168	167	case	case	Take an umbrella, just in case.	帶把傘，以防萬一。	A2	daily	ngsl_2809_0167	ngsl_2809_0058	just in case（以防萬一）	
+169	168	woman	woman	That woman is my boss.	那位女士是我的老闆。	A1	work	ngsl_2809_0168	ngsl_2809_1853		
+170	169	around	around	Let's walk around the lake.	我們繞著湖散步吧。	A1	travel	ngsl_2809_0169	ngsl_2809_0173|ngsl_2809_0338|ngsl_2809_1821	walk around	
+171	170	book	book	I'm reading a good book.	我在讀一本好書。	A1	daily	ngsl_2809_0170	ngsl_2809_0206|ngsl_2809_0055		book 用「書」詞義
+172	171	family	family	I live with my family.	我和家人住在一起。	A1	daily	ngsl_2809_0171	ngsl_2809_0152		
+173	172	seem	seem	You seem tired.	你看起來很累。	A2	social	ngsl_2809_0172			tired 不在詞表
+174	173	let	let	Let me help you.	我來幫你。	A1	social	ngsl_2809_0173	ngsl_2809_0132	Let me ...	
+175	174	again	again	Could you say that again?	可以請你再說一次嗎？	A1	social	ngsl_2809_0174	ngsl_2809_0065|ngsl_2809_0029		
+176	175	kind	kind	What kind of music do you like?	你喜歡哪種音樂？	A1	social	ngsl_2809_0175	ngsl_2809_0391|ngsl_2809_0044	What kind of ...?	
+177	176	keep	keep	Please keep the change.	不用找零了。	A2	shopping	ngsl_2809_0176	ngsl_2809_0470|ngsl_2809_0112	Keep the change.	change 在此為「零錢」
+178	177	hear	hear	Can you hear me?	你聽得到我嗎？	A1	phone	ngsl_2809_0177			
+179	178	system	system	The computer system is down.	電腦系統當機了。	B1	work	ngsl_2809_0178	ngsl_2809_0428|ngsl_2809_0108	be down（故障）	
+180	179	every	every	I check my email every morning.	我每天早上收電子郵件。	A1	work	ngsl_2809_0179	ngsl_2809_0579|ngsl_2809_1168|ngsl_2809_0433	every morning	
+181	180	question	question	That's a good question.	這是個好問題。	A1	work	ngsl_2809_0180	ngsl_2809_0055		
+182	181	during	during	I fell asleep during the movie.	我看電影時睡著了。	A2	daily	ngsl_2809_0181	ngsl_2809_0319|ngsl_2809_0761	fall asleep	
+183	182	always	always	She always arrives on time.	她總是準時到。	A1	work	ngsl_2809_0182	ngsl_2809_0587|ngsl_2809_0048	on time	
+184	183	big	big	This box is too big.	這個箱子太大了。	A1	shopping	ngsl_2809_0183	ngsl_2809_0860		
+185	184	set	set	I set my alarm for six.	我把鬧鐘設在六點。	A2	daily	ngsl_2809_0184	ngsl_2809_2270|ngsl_spoken_720_0164	set an alarm	
+186	185	small	small	Do you have a small size?	有小號的嗎？	A1	shopping	ngsl_2809_0185	ngsl_2809_0704		
+187	186	study	study	I study English every night.	我每天晚上讀英文。	A1	study	ngsl_2809_0186	ngsl_2809_0179|ngsl_2809_0269		English 不在詞表
+188	187	follow	follow	Please follow me.	請跟我來。	A1	travel	ngsl_2809_0187	ngsl_2809_0470		
+189	188	begin	begins	The class begins at nine.	課九點開始。	A1	study	ngsl_2809_0188	ngsl_2809_0361|ngsl_spoken_720_0250		
+190	189	important	important	This meeting is very important.	這場會議很重要。	A1	work	ngsl_2809_0189	ngsl_2809_0062		meeting 不在詞表
+191	190	since	since	I've lived here since 2015.	我從 2015 年就住在這裡。	A2	daily	ngsl_2809_0190	ngsl_2809_0152|ngsl_2809_0097		數字年份請確認 TTS 念法
+192	191	run	run	I run in the park every morning.	我每天早上在公園跑步。	A1	health	ngsl_2809_0191	ngsl_2809_0656|ngsl_2809_0179|ngsl_2809_0433		
+193	192	under	under	The cat is under the bed.	貓在床底下。	A1	daily	ngsl_2809_0192	ngsl_2809_1677|ngsl_2809_0693		
+194	193	turn	turn	It's your turn.	輪到你了。	A1	social	ngsl_2809_0193			turn 用「輪到」詞義
+195	194	few	few	I'll be there in a few minutes.	我幾分鐘後就到。	A1	daily	ngsl_2809_0194	ngsl_2809_0039|ngsl_2809_0365	in a few minutes	
+196	195	bring	bring	Can you bring me the menu?	可以給我菜單嗎？	A1	food	ngsl_2809_0195	ngsl_2809_2596		
+197	196	early	early	I have to get up early tomorrow.	我明天得早起。	A1	daily	ngsl_2809_0196	phrase_list_506_0131|ngsl_2809_0725	have to	
+198	197	hand	hand	Raise your hand if you have a question.	有問題請舉手。	A1	study	ngsl_2809_0197	ngsl_2809_0485|ngsl_2809_0180	raise your hand	
+199	198	state	state	Please state your name and date of birth.	請說出你的姓名和出生日期。	B1	official	ngsl_2809_0198	ngsl_2809_0470|ngsl_2809_0205|ngsl_2809_0482|ngsl_2809_1525	date of birth	state 用「陳述」詞義，語氣正式
+200	199	move	moving	We're moving to a new apartment next month.	我們下個月要搬到新公寓。	A2	daily	ngsl_2809_0199	ngsl_2809_0078|ngsl_2809_2167|ngsl_2809_0150|ngsl_2809_0208	move to ...	

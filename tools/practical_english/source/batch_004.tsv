@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+301	300	control	controls	This switch controls the lights.	這個開關控制電燈。	A2	daily	ngsl_2809_0300	ngsl_2809_1462|ngsl_2809_0348		
+302	301	already	already	I've already eaten, thanks.	我已經吃過了，謝謝。	A1	food	ngsl_2809_0301	ngsl_2809_0475|ngsl_2809_0243		
+303	302	concern	concern	Thank you for your concern.	謝謝你的關心。	B1	social	ngsl_2809_0302	ngsl_2809_0243		
+304	303	product	product	This product is out of stock.	這項產品缺貨了。	B1	shopping	ngsl_2809_0303	ngsl_2809_0690	out of stock	
+305	304	lose	lose	I always lose my keys.	我老是弄丟鑰匙。	A2	daily	ngsl_2809_0304	ngsl_2809_0182|ngsl_2809_0658		lose 在此為「遺失」
+306	305	story	story	Tell me a story before bed.	睡前講個故事給我聽。	A1	daily	ngsl_2809_0305	ngsl_2809_0102|ngsl_2809_0693		
+307	306	almost	almost	I'm almost ready.	我快準備好了。	A2	daily	ngsl_2809_0306	ngsl_2809_0773		
+308	307	continue	continue	Please continue, I'm listening.	請繼續說，我在聽。	A2	social	ngsl_2809_0307	ngsl_2809_0470|ngsl_2809_0572		
+309	308	stand	stand	We had to stand on the bus.	我們在公車上只能站著。	A2	travel	ngsl_2809_0308	ngsl_2809_0809	have to	
+310	309	whole	whole	He ate the whole pizza by himself.	他一個人吃掉了一整個披薩。	A2	food	ngsl_2809_0309	ngsl_2809_0475|ngsl_2809_0457	by himself	
+311	310	yet	yet	I haven't finished yet.	我還沒做完。	A2	daily	ngsl_2809_0310	ngsl_2809_0608		
+312	311	rate	rate	What's the exchange rate today?	今天的匯率是多少？	B1	travel	ngsl_2809_0311	ngsl_2809_1014|ngsl_2809_0245	exchange rate	rate 在此為「匯率」
+313	312	care	care	Take care of yourself.	好好照顧自己。	A2	health	ngsl_2809_0312	ngsl_2809_0058|ngsl_2809_0812	take care of	
+314	313	expect	expect	I didn't expect to see you here!	沒想到會在這裡見到你！	A2	social	ngsl_2809_0313	ngsl_2809_0049|ngsl_2809_0097		expect 在此為「預期」
+315	314	effect	effect	The new rule had a good effect.	新規定帶來了不錯的效果。	B1	work	ngsl_2809_0314	ngsl_2809_0078|ngsl_2809_0414|ngsl_2809_0055		
+316	315	sort	sort	What sort of job are you looking for?	你在找哪一類的工作？	B1	work	ngsl_2809_0315	ngsl_2809_0230|ngsl_2809_0074	look for	sort 在此為「種類」
+317	316	ever	ever	Have you ever tried sushi?	你吃過壽司嗎？	A2	food	ngsl_2809_0316	ngsl_2809_0124	Have you ever ...?	sushi 不在詞表
+318	317	anything	anything	Is there anything I can do to help?	有什麼我能幫忙的嗎？	A2	social	ngsl_2809_0317	ngsl_2809_0132		
+319	318	cause	cause	Nobody knows the cause of the fire.	沒有人知道起火的原因。	B1	news	ngsl_2809_0318	ngsl_2809_1102|ngsl_2809_0040|ngsl_2809_0612		
+320	319	fall	fall	Be careful not to fall.	小心不要跌倒。	A2	daily	ngsl_2809_0319	ngsl_2809_1636		
+321	320	deal	deal	That's a good deal.	這很划算。	B1	shopping	ngsl_2809_0320	ngsl_2809_0055	a good deal	deal 在此為「交易、划算的買賣」
+322	321	water	water	Could I get a glass of water, please?	可以給我一杯水嗎？	A1	food	ngsl_2809_0321	ngsl_2809_0042|ngsl_2809_1041|ngsl_2809_0470	a glass of	
+323	322	send	send	I'll send you the file by email.	我會用電子郵件把檔案寄給你。	A2	work	ngsl_2809_0322	ngsl_2809_0834|ngsl_2809_1168		
+324	323	allow	allowed	Dogs are not allowed inside.	狗不能進入室內。	B1	travel	ngsl_2809_0323	ngsl_2809_0894|ngsl_2809_0659		allowed 為過去分詞
+325	324	soon	soon	See you soon!	很快再見！	A1	social	ngsl_2809_0324	ngsl_2809_0049	See you soon.	
+326	325	watch	watch	My watch stopped working.	我的手錶停了。	A2	daily	ngsl_2809_0325	ngsl_2809_0346|ngsl_2809_0066		
+327	326	base	based	The film is based on a famous novel.	這部電影改編自一本知名小說。	B1	daily	ngsl_2809_0326	ngsl_2809_0432|ngsl_2809_1016|ngsl_2809_1277	be based on	base 在此為動詞「以……為基礎」
+328	327	probably	probably	It will probably rain tomorrow.	明天可能會下雨。	A2	daily	ngsl_2809_0327	ngsl_2809_1231|ngsl_2809_0725		
+329	328	suggest	suggest	What do you suggest?	你有什麼建議？	A2	food	ngsl_2809_0328			
+330	329	past	past	In the past, this was a quiet town.	以前這裡是個安靜的小鎮。	B1	daily	ngsl_2809_0329	ngsl_2809_1312|ngsl_2809_0363	in the past	
+331	330	power	power	The power went out last night.	昨晚停電了。	B1	daily	ngsl_2809_0330	ngsl_2809_0030|ngsl_2809_0100|ngsl_2809_0269	The power went out.	power 在此為「電力」
+332	331	test	test	I have a math test tomorrow.	我明天有數學考試。	A1	study	ngsl_2809_0331	ngsl_2809_0725		math 不在詞表
+333	332	visit	visited	We visited my grandparents last weekend.	我們上週末去探望了祖父母。	A2	social	ngsl_2809_0332	ngsl_2809_0100|ngsl_2809_0933		grandparents 不在詞表
+334	333	center	center	The hotel is in the city center.	飯店在市中心。	A2	travel	ngsl_2809_0333	ngsl_2809_0758|ngsl_2809_0268	city center	
+335	334	grow	growing	My kids are growing so fast.	我的孩子們長得好快。	A2	daily	ngsl_2809_0334	ngsl_2809_0528|ngsl_2809_0630		
+336	335	nothing	nothing	There's nothing in the fridge.	冰箱裡什麼都沒有。	A1	food	ngsl_2809_0335			fridge 不在詞表
+337	336	return	return	When do you return from your trip?	你什麼時候旅行回來？	A2	travel	ngsl_2809_0336	ngsl_2809_0824		
+338	337	mother	mother	My mother is a nurse.	我媽媽是護士。	A1	daily	ngsl_2809_0337	ngsl_2809_1314		
+339	338	walk	walk	I usually walk home after work.	我通常下班後走路回家。	A2	daily	ngsl_2809_0338	ngsl_2809_0554|ngsl_2809_0160|ngsl_2809_0083|ngsl_2809_0066		
+340	339	matter	matter	It doesn't matter.	沒關係。	A2	social	ngsl_2809_0339		It doesn't matter.	matter 在此為動詞「要緊」
+341	340	mind	mind	My mind went blank during the test.	考試時我腦袋一片空白。	B1	study	ngsl_2809_0340	ngsl_2809_0030|ngsl_2809_0331	go blank	
+342	341	value	value	This restaurant is good value for money.	這家餐廳很物超所值。	B1	food	ngsl_2809_0341	ngsl_2809_0918|ngsl_2809_0055|ngsl_2809_0200	good value for money	
+343	342	office	office	I'll be in the office until six.	我六點前都會在辦公室。	A2	work	ngsl_2809_0342	ngsl_2809_0254|ngsl_spoken_720_0164		
+344	343	record	record	Please keep a record of your expenses.	請把你的開銷記錄下來。	B1	work	ngsl_2809_0343	ngsl_2809_0470|ngsl_2809_0176|ngsl_2809_1530	keep a record of	record 在此為名詞「紀錄」
+345	344	stay	staying	How long are you staying?	你要待多久？	A2	travel	ngsl_2809_0344	ngsl_2809_0114		
+346	345	force	force	Don't force yourself to eat.	不要勉強自己吃。	B1	health	ngsl_2809_0345	ngsl_2809_0812|ngsl_2809_0475		force 在此為動詞「強迫、勉強」，NGSL 中文為「力量」
+347	346	stop	stop	Does this bus stop at the station?	這班公車有停那個車站嗎？	A1	travel	ngsl_2809_0346	ngsl_2809_0809|ngsl_2809_0708		
+348	347	several	several	I've called her several times.	我已經打給她好幾次了。	A2	phone	ngsl_2809_0347	ngsl_2809_0104|ngsl_2809_0048		
+349	348	light	light	Turn off the light, please.	請關燈。	A1	daily	ngsl_2809_0348	ngsl_2809_0193|ngsl_2809_0149|ngsl_2809_0470	turn off	light 在此為「燈」
+350	349	develop	developed	The city has developed quickly.	這座城市發展得很快。	B1	news	ngsl_2809_0349	ngsl_2809_0268|ngsl_2809_0782		
+351	350	remember	remember	Do you remember my name?	你記得我的名字嗎？	A1	social	ngsl_2809_0350	ngsl_2809_0205		
+352	351	bit	bit	I'm a bit tired today.	我今天有點累。	A2	health	ngsl_2809_0351	ngsl_2809_0245	a bit	
+353	352	share	share	Let's share a taxi.	我們一起搭計程車吧。	A2	travel	ngsl_2809_0352	ngsl_2809_0173|ngsl_2809_1147		
+354	353	real	real	Is this real leather?	這是真皮嗎？	B1	shopping	ngsl_2809_0353	ngsl_2809_2732		
+355	354	answer	answered	She hasn't answered my text yet.	她還沒回我訊息。	A2	phone	ngsl_2809_0354	ngsl_2809_1047|ngsl_2809_0310		answer 在此為「回覆」
+356	355	sit	sit	Where would you like to sit?	你想坐哪裡？	A1	food	ngsl_2809_0355	ngsl_2809_0044		
+357	356	figure	figures	Sales figures are up this month.	這個月的銷售數字上升了。	B1	work	ngsl_2809_0356	ngsl_2809_0397|ngsl_2809_0208		figures 為複數
+358	357	letter	letter	I got a letter from my bank.	我收到銀行寄來的信。	A2	daily	ngsl_2809_0357	ngsl_2809_0042|ngsl_2809_0626		
+359	358	decide	decided	Have you decided what to order?	你決定好要點什麼了嗎？	A2	food	ngsl_2809_0358	ngsl_2809_0214		
+360	359	language	languages	How many languages do you speak?	你會說幾種語言？	A2	social	ngsl_2809_0359	ngsl_2809_0098|ngsl_2809_0283		languages 為複數
+361	360	subject	subject	What's your favorite subject at school?	你在學校最喜歡哪個科目？	A1	study	ngsl_2809_0360	ngsl_2809_0999|ngsl_2809_0145		subject 在此為「科目」
+362	361	class	class	My English class starts at nine.	我的英文課九點開始。	A1	study	ngsl_2809_0361	ngsl_2809_0135|ngsl_spoken_720_0250		English 不在詞表
+363	362	development	development	She works in product development.	她在產品開發部門工作。	B1	work	ngsl_2809_0362	ngsl_2809_0066|ngsl_2809_0303		
+364	363	town	town	It's a small town by the sea.	那是個海邊的小鎮。	A2	travel	ngsl_2809_0363	ngsl_2809_0185|ngsl_2809_0986		
+365	364	half	half	I'll be there in half an hour.	我半小時後到。	A2	daily	ngsl_2809_0364	ngsl_2809_0039|ngsl_2809_0246	half an hour	
+366	365	minute	minute	I'll be back in a minute.	我馬上回來。	A1	daily	ngsl_2809_0365	ngsl_2809_0093	in a minute	
+367	366	food	food	The food here is amazing.	這裡的食物超好吃。	A1	food	ngsl_2809_0366	ngsl_2809_0097		
+368	367	break	broke	Who broke the window?	誰打破了窗戶？	A2	daily	ngsl_2809_0367	ngsl_2809_0733		broke 為 break 過去式
+369	368	clear	clear	Is everything clear?	都清楚了嗎？	A2	study	ngsl_2809_0368	ngsl_2809_0421		
+370	369	future	future	I want to live abroad in the future.	我將來想住在國外。	B1	daily	ngsl_2809_0369	ngsl_2809_0075|ngsl_2809_0152|ngsl_2809_1882	in the future	
+371	370	either	Either	Either day works for me.	哪一天我都可以。	B1	social	ngsl_2809_0370	ngsl_2809_0084|ngsl_2809_0066		
+372	371	ago	ago	I moved here two years ago.	我兩年前搬來這裡。	A2	daily	ngsl_2809_0371	ngsl_2809_0199|ngsl_2809_0097|ngsl_spoken_720_0070|ngsl_2809_0057		
+373	372	per	per	It costs twenty dollars per person.	每人二十美元。	B1	shopping	ngsl_2809_0372	ngsl_2809_0251|ngsl_spoken_720_0187|ngsl_2809_0970|ngsl_2809_0262		
+374	373	remain	remain	Please remain seated.	請留在座位上。	B1	travel	ngsl_2809_0373	ngsl_2809_0470		
+375	374	top	top	The keys are on top of the fridge.	鑰匙在冰箱上面。	A2	daily	ngsl_2809_0374	ngsl_2809_0658	on top of	
+376	375	among	among	She is popular among her classmates.	她在同學之間很受歡迎。	B1	study	ngsl_2809_0375	ngsl_2809_0789		
+377	376	win	won	Our team won the game!	我們隊贏了比賽！	A2	social	ngsl_2809_0376	ngsl_2809_0406|ngsl_2809_0392		won 為 win 過去式
+378	377	color	color	What color do you want?	你要什麼顏色？	A1	shopping	ngsl_2809_0377	ngsl_2809_0075		
+379	378	involve	involves	The job involves a lot of travel.	這份工作需要經常出差。	B1	work	ngsl_2809_0378	ngsl_2809_0230|ngsl_2809_0122|ngsl_2809_0502		
+380	379	reach	reached	We reached the hotel at midnight.	我們半夜才到飯店。	B1	travel	ngsl_2809_0379	ngsl_2809_0758		
+381	380	social	social	She's very active on social media.	她在社群媒體上很活躍。	B1	social	ngsl_2809_0380	ngsl_2809_0062|ngsl_2809_1353	social media	
+382	381	period	period	The trial period is one month.	試用期是一個月。	B1	work	ngsl_2809_0381	ngsl_2809_1042|ngsl_2809_0208	trial period	
+383	382	across	across	The bank is across the street.	銀行在對街。	A2	travel	ngsl_2809_0382	ngsl_2809_0626|ngsl_2809_0597	across the street	
+384	383	note	notes	Can I borrow your notes?	我可以借你的筆記嗎？	A2	study	ngsl_2809_0383	ngsl_2809_1879		notes 為複數
+385	384	history	history	I'm interested in history.	我對歷史有興趣。	A2	study	ngsl_2809_0384		be interested in	
+386	385	create	create	Please create a new password.	請設定新密碼。	B1	official	ngsl_2809_0385	ngsl_2809_0470|ngsl_2809_0078		create 在此為「建立（密碼、帳號）」
+387	386	drive	drive	Can you drive me to the airport?	你可以開車載我去機場嗎？	A2	travel	ngsl_2809_0386			airport 不在詞表
+388	387	along	along	Walk along the river for five minutes.	沿著河走五分鐘。	A2	travel	ngsl_2809_0387	ngsl_2809_0338|ngsl_2809_1175|ngsl_spoken_720_0115|ngsl_2809_0365		
+389	388	type	type	What type of room would you like?	您想要哪一種房型？	A2	travel	ngsl_2809_0388	ngsl_2809_0253|ngsl_2809_0044		type 在此為「類型」
+390	389	sound	sounds	That sounds great!	聽起來很棒！	A1	social	ngsl_2809_0389	ngsl_2809_0123		sound 在此為「聽起來」
+391	390	eye	eye	I have something in my eye.	我眼睛裡有東西。	A2	health	ngsl_2809_0390	ngsl_2809_0137		
+392	391	music	music	I listen to music on the way to work.	我上班途中會聽音樂。	A2	daily	ngsl_2809_0391	ngsl_2809_0572|ngsl_2809_0079|ngsl_2809_0066	on the way to	
+393	392	game	game	Do you want to play a game?	你想玩個遊戲嗎？	A1	social	ngsl_2809_0392	ngsl_2809_0075|ngsl_2809_0157		
+394	393	political	political	We don't talk about political topics at work.	我們上班時不聊政治話題。	B2	work	ngsl_2809_0393	ngsl_2809_0136|ngsl_2809_1295|ngsl_2809_0066		
+395	394	free	free	Are you free this evening?	你今晚有空嗎？	A1	social	ngsl_2809_0394	ngsl_2809_0678		free 在此為「有空」
+396	395	receive	receive	Did you receive my email?	你有收到我的電子郵件嗎？	A2	work	ngsl_2809_0395	ngsl_2809_1168		
+397	396	moment	moment	Just a moment, please.	請稍候。	A2	phone	ngsl_2809_0396	ngsl_2809_0063|ngsl_2809_0470	Just a moment.	
+398	397	sale	sale	Is this jacket on sale?	這件夾克有特價嗎？	A2	shopping	ngsl_2809_0397	ngsl_2809_2252	on sale	sale 在此為「特價」
+399	398	policy	policy	What's your return policy?	你們的退貨規定是什麼？	B1	shopping	ngsl_2809_0398	ngsl_2809_0336		policy 在此為「（商店的）規定」
+400	399	further	further	Do you have any further questions?	你還有其他問題嗎？	B1	work	ngsl_2809_0399	ngsl_2809_0082|ngsl_2809_0180		

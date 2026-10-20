@@ -1,0 +1,25 @@
+# ngsl_spoken_720 numbers not in NGSL
+ngsl_spoken_720_0070|two|Can I get two coffees, please?|請給我兩杯咖啡好嗎？|A1|food|get,coffee<coffees,please||
+ngsl_spoken_720_0094|three|We're staying for three nights.|我們要住三晚。|A1|travel|stay<staying,night<nights||
+ngsl_spoken_720_0115|five|The station is five minutes away.|車站在五分鐘路程外。|A1|travel|station,minute<minutes,away||
+ngsl_spoken_720_0118|four|There are four people in my family.|我家有四個人。|A1|daily|people,family|there are|
+ngsl_spoken_720_0153|hundred|This jacket costs a hundred dollars.|這件外套要一百美元。|A1|shopping|jacket,cost<costs,dollar<dollars||
+ngsl_spoken_720_0164|six|I usually get up at six.|我通常六點起床。|A1|daily|usually,get up||
+ngsl_spoken_720_0187|twenty|The bus comes every twenty minutes.|公車每二十分鐘來一班。|A1|travel|bus,come<comes,every,minute<minutes||
+ngsl_spoken_720_0207|eight|The store opens at eight.|那家店八點開門。|A1|shopping|store,open<opens||
+ngsl_spoken_720_0209|ten|I'll be there in ten minutes.|我十分鐘後到。|A1|daily|there,minute<minutes||
+ngsl_spoken_720_0233|seven|We usually have dinner at seven.|我們通常七點吃晚餐。|A1|daily|usually,dinner||
+ngsl_spoken_720_0246|thousand|The concert had over a thousand people.|那場音樂會有超過一千人。|A2|social|concert,over,people||
+ngsl_spoken_720_0250|nine|My class starts at nine tomorrow.|我明天的課九點開始。|A1|study|class,start<starts,tomorrow||
+ngsl_spoken_720_0255|thirty|The movie starts in thirty minutes.|電影三十分鐘後開始。|A1|social|movie,start<starts,minute<minutes||
+ngsl_spoken_720_0277|fifty|I paid fifty dollars for these shoes.|這雙鞋我付了五十美元。|A1|shopping|pay<paid,dollar<dollars,shoe<shoes||
+ngsl_spoken_720_0371|forty|It takes about forty minutes by train.|搭火車大約要四十分鐘。|A2|travel|take<takes,about,minute<minutes,train||take 在此為「花費（時間）」
+ngsl_spoken_720_0378|nineteen|My sister is nineteen this year.|我妹妹今年十九歲。|A1|social|sister,year||
+ngsl_spoken_720_0399|twelve|We need a table for twelve.|我們需要一張十二人的桌子。|A2|food|need,table||
+ngsl_spoken_720_0427|ninety|My grandmother is almost ninety.|我奶奶快九十歲了。|A2|social|grandmother,almost||
+ngsl_spoken_720_0448|eighty|The speed limit here is eighty.|這裡的速限是八十。|A2|travel|speed,limit,here||
+ngsl_spoken_720_0466|sixty|There are sixty students in this course.|這門課有六十個學生。|A2|study|student<students,course|there are|
+ngsl_spoken_720_0482|fifteen|Let's take a fifteen-minute break.|我們休息十五分鐘吧。|A2|work|take,minute,break|take a break|
+ngsl_spoken_720_0536|million|The city has over two million people.|這座城市有超過兩百萬人口。|B1|news|city,over,two,people||
+ngsl_spoken_720_0537|seventy|The museum has about seventy paintings.|這間博物館大約有七十幅畫。|A2|travel|museum,about||
+ngsl_spoken_720_0579|eleven|The kids go to bed at eleven on weekends.|週末孩子們十一點睡覺。|A2|daily|kid<kids,bed,weekend<weekends||

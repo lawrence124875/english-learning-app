@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1	0	the	the	Please close the door.	請把門關上。	A1	daily	ngsl_2809_0000	ngsl_2809_0238|ngsl_2809_0489|ngsl_2809_0470		close 在此為動詞「關」
+2	1	be	be	I will be home at six.	我六點會到家。	A1	daily	ngsl_2809_0001	ngsl_2809_0027|ngsl_2809_0160|ngsl_spoken_720_0164	be home（到家）	six 只在口語 720 清單
+3	2	and	and	I'd like coffee and toast, please.	我想要咖啡和吐司，謝謝。	A1	food	ngsl_2809_0002	ngsl_2809_0044|ngsl_2809_1394|ngsl_2809_0470	I'd like ...（我想要…）	toast 不在詞表；I'd 的 would 未另標
+4	3	of	of	Can I have a glass of water?	可以給我一杯水嗎？	A1	food	ngsl_2809_0003	ngsl_2809_0037|ngsl_2809_0007|ngsl_2809_1041|ngsl_2809_0321	a glass of；Can I have ...?	
+5	4	to	to	I walk to work every day.	我每天走路去上班。	A1	daily	ngsl_2809_0004	ngsl_2809_0338|ngsl_2809_0066|ngsl_2809_0179|ngsl_2809_0084	walk to work；every day	
+6	5	a	a	I need a new phone.	我需要一支新手機。	A1	shopping	ngsl_2809_0005	ngsl_2809_0089|ngsl_2809_0078|ngsl_2809_0478		
+7	6	in	in	My keys are in my bag.	我的鑰匙在包包裡。	A1	daily	ngsl_2809_0006	ngsl_2809_0658|ngsl_2809_1251		keys 為 key 複數；are、my 不標
+8	7	have	have	Do you have a minute?	你有空嗎？	A1	social	ngsl_2809_0007	ngsl_2809_0365	Do you have a minute?（有空嗎）	整句是慣用問法
+9	8	it	it	Can you turn it off?	你可以把它關掉嗎？	A1	daily	ngsl_2809_0008	ngsl_2809_0037|phave_list_150_0105		turn off 為可拆開的片語動詞（turn it off），使用 PhaVE 正式 ID
+10	9	you	you	Thank you for your help.	謝謝你的幫忙。	A1	social	ngsl_2809_0009	ngsl_2809_0243|ngsl_2809_0011|ngsl_2809_0132	Thank you for ...	
+11	10	he	He	He works at a bank.	他在銀行工作。	A1	work	ngsl_2809_0010	ngsl_2809_0066|ngsl_2809_0626	work at ...	works 為 work 第三人稱單數
+12	11	for	for	This gift is for you.	這份禮物是給你的。	A1	social	ngsl_2809_0011	ngsl_2809_0018|ngsl_2809_1426		
+13	12	they	They	They live next door.	他們住在隔壁。	A1	daily	ngsl_2809_0012	ngsl_2809_0152|phrase_list_506_0346		next door 是 PHRASE List 正式項目
+14	13	not	not	I'm not ready yet.	我還沒準備好。	A1	daily	ngsl_2809_0013	ngsl_2809_0773|ngsl_2809_0310	not ... yet（還沒）	I'm 的 am 不標
+15	14	that	that	Is that your car?	那是你的車嗎？	A1	daily	ngsl_2809_0014	ngsl_2809_0259		your 不在詞表
+16	15	we	We	We can meet tomorrow.	我們可以明天見面。	A1	social	ngsl_2809_0015	ngsl_2809_0037|ngsl_2809_0134|ngsl_2809_0725		
+17	16	on	on	Your phone is on the table.	你的手機在桌上。	A1	daily	ngsl_2809_0016	ngsl_2809_0478|ngsl_2809_0449		
+18	17	with	with	Can I pay with a card?	我可以用卡付款嗎？	A1	shopping	ngsl_2809_0017	ngsl_2809_0037|ngsl_2809_0219|ngsl_2809_0780	pay with a card	
+19	18	this	this	Is this seat free?	這個位子有人坐嗎？	A1	travel	ngsl_2809_0018	ngsl_2809_0851|ngsl_2809_0394	Is this seat free?	free＝空著的（不是「免費」）；上一輪標記中文方向待確認
+20	19	I	I	I am a little tired today.	我今天有點累。	A1	daily	ngsl_2809_0019	phrase_list_506_0012|ngsl_2809_0245		tired 不在詞表；a little 是 PHRASE List 正式項目
+21	20	do	do	What do you do?	你是做什麼工作的？	A1	social	ngsl_2809_0020	ngsl_2809_0050	What do you do?（做什麼工作）	do 出現兩次（助動詞＋主動詞），只列一次
+22	21	as	as	I work as a nurse.	我的工作是護理師。	A2	work	ngsl_2809_0021	ngsl_2809_0066|ngsl_2809_1314	work as ...	
+23	22	at	at	Let's meet at the station.	我們在車站見面吧。	A1	travel	ngsl_2809_0022	ngsl_2809_0173|ngsl_2809_0134|ngsl_2809_0708	Let's ...	Let's 的 let
+24	23	she	She	She speaks three languages.	她會說三種語言。	A1	social	ngsl_2809_0023	ngsl_2809_0283|ngsl_spoken_720_0094|ngsl_2809_0359		three 只在口語 720 清單
+25	24	but	but	It's small, but it's very nice.	它很小，但是很棒。	A1	daily	ngsl_2809_0024	ngsl_2809_0185|ngsl_2809_0062|ngsl_2809_0505		
+26	25	from	from	Where are you from?	你是哪裡人？	A1	social	ngsl_2809_0025	ngsl_2809_0085	Where are you from?	
+27	26	by	by	I usually go to work by bus.	我通常搭公車上班。	A1	travel	ngsl_2809_0026	ngsl_2809_0554|ngsl_2809_0030|ngsl_2809_0066|ngsl_2809_0809	go to work；by bus	
+28	27	will	will	I will call you later.	我晚點會打給你。	A1	social	ngsl_2809_0027	ngsl_2809_0104	call ... later	later 不在詞表（不當成 late）
+29	28	or	or	Do you want tea or coffee?	你要茶還是咖啡？	A1	food	ngsl_2809_0028	ngsl_2809_0075|ngsl_2809_1598|ngsl_2809_1394		
+30	29	say	say	What did you say?	你剛剛說什麼？	A1	social	ngsl_2809_0029	ngsl_2809_0050	What did you say?	did 為 do 過去式，不標
+31	30	go	go	Let's go home.	我們回家吧。	A1	daily	ngsl_2809_0030	ngsl_2809_0173|ngsl_2809_0160	go home	
+32	31	so	so	It was late, so I took a taxi.	太晚了，所以我搭了計程車。	A2	travel	ngsl_2809_0031	ngsl_2809_0146|ngsl_2809_0058|ngsl_2809_1147	take a taxi	took 為 take 過去式
+33	32	all	all	That's all for today.	今天就到這裡。	A1	work	ngsl_2809_0032	ngsl_2809_0245	That's all (for today).	
+34	33	if	if	Call me if you need help.	如果你需要幫忙就打給我。	A1	social	ngsl_2809_0033	ngsl_2809_0104|ngsl_2809_0089|ngsl_2809_0132		me 不在詞表
+35	34	one	one	I'll take this one.	我要這一個。	A1	shopping	ngsl_2809_0034	ngsl_2809_0058|ngsl_2809_0018	I'll take this one.（購物：我要這個）	take 在此為「買下」
+36	35	would	Would	Would you like some water?	你想喝點水嗎？	A1	food	ngsl_2809_0035	phrase_list_506_0415|ngsl_2809_0052|ngsl_2809_0321		Would you like 是 PHRASE List 正式項目
+37	36	about	about	Tell me about your weekend.	跟我說說你的週末。	A1	social	ngsl_2809_0036	ngsl_2809_0102|ngsl_2809_0933	Tell me about ...	
+38	37	can	Can	Can you help me?	你可以幫我嗎？	A1	social	ngsl_2809_0037	ngsl_2809_0132	Can you help me?	me 不在詞表
+39	38	which	Which	Which bus goes to the airport?	哪一班公車到機場？	A1	travel	ngsl_2809_0038	ngsl_2809_0809|ngsl_2809_0030		airport 不在詞表；goes 為 go 第三人稱
+40	39	there	there	Is there a bank near here?	這附近有銀行嗎？	A1	travel	ngsl_2809_0039	ngsl_2809_0626|ngsl_2809_0426|ngsl_2809_0097	Is there ... near here?	
+41	40	know	know	I don't know the answer.	我不知道答案。	A1	daily	ngsl_2809_0040	ngsl_2809_0354		don't 不另標
+42	41	more	more	Could I have more rice, please?	可以再給我一些飯嗎？	A1	food	ngsl_2809_0041	ngsl_2809_0065|ngsl_2809_0007|ngsl_2809_2694|ngsl_2809_0470	Could I have ...?	
+43	42	get	get	Where can I get a ticket?	我可以在哪裡買票？	A1	travel	ngsl_2809_0042	ngsl_2809_0085|ngsl_2809_1248	get a ticket（買票）	
+44	43	who	Who	Who is that man?	那個男人是誰？	A1	social	ngsl_2809_0043	ngsl_2809_0111		
+45	44	like	like	I like your shirt.	我喜歡你的襯衫。	A1	social	ngsl_2809_0044	ngsl_2809_1906		
+46	45	when	When	When does the store open?	這家店幾點開門？	A1	shopping	ngsl_2809_0045	ngsl_2809_0616|ngsl_2809_0213		open 在此為動詞「開門」
+47	46	think	think	I think it will rain.	我覺得會下雨。	A1	daily	ngsl_2809_0046	ngsl_2809_1231		
+48	47	make	make	Let me make some tea.	我來泡點茶。	A1	food	ngsl_2809_0047	ngsl_2809_0173|ngsl_2809_1598	make tea（泡茶）	
+49	48	time	time	What time is it?	現在幾點？	A1	daily	ngsl_2809_0048	ngsl_2809_0050	What time is it?	
+50	49	see	See	See you tomorrow.	明天見。	A1	social	ngsl_2809_0049	ngsl_2809_0725	See you tomorrow.	
+51	50	what	What	What is your name?	你叫什麼名字？	A1	social	ngsl_2809_0050	ngsl_2809_0205		
+52	51	up	up	I get up at seven.	我七點起床。	A1	daily	ngsl_2809_0051	phrase_list_506_0131|ngsl_spoken_720_0233		get up 在 PHRASE List 與 PhaVE 都有，依清單順序取 PHRASE List ID；seven 只在口語 720
+53	52	some	some	I need some help.	我需要一些幫助。	A1	daily	ngsl_2809_0052	ngsl_2809_0089|ngsl_2809_0132		
+54	53	other	other	Do you have it in other colors?	這個有其他顏色嗎？	A1	shopping	ngsl_2809_0053	ngsl_2809_0377	in other colors	
+55	54	out	out	Let's eat out tonight.	我們今晚出去吃吧。	A1	food	ngsl_2809_0054	ngsl_2809_0173|ngsl_2809_0475|ngsl_2809_1413	eat out（外食）	eat out 不在詞表，只列為片語候選
+56	55	good	good	That sounds good.	聽起來不錯。	A1	social	ngsl_2809_0055	ngsl_2809_0389	That sounds good.	
+57	56	people	people	There are a lot of people here.	這裡人好多。	A1	daily	ngsl_2809_0056	phrase_list_506_0009|ngsl_2809_0097	a lot of	a lot 是 PHRASE List 正式項目（a lot of 不是）
+58	57	year	year	I started this job last year.	我去年開始做這份工作。	A1	work	ngsl_2809_0057	ngsl_2809_0135|ngsl_2809_0230|ngsl_2809_0100	last year	
+59	58	take	takes	It takes ten minutes to walk there.	走路到那裡要十分鐘。	A2	travel	ngsl_2809_0058	phrase_list_506_0136|ngsl_2809_0365|ngsl_2809_0338|ngsl_spoken_720_0209		takes＝花費時間，與 App 中文詞義「拿取」不同（上一輪標記）；It takes 是 PHRASE List 正式項目
+60	59	no	No	No, thank you.	不用了，謝謝。	A1	social	ngsl_2809_0059	ngsl_2809_0243	No, thank you.	
+61	60	well	well	She sings very well.	她唱歌唱得很好。	A1	social	ngsl_2809_0060	ngsl_2809_0872|ngsl_2809_0062		
+62	61	because	because	I'm late because of the traffic.	因為塞車，我遲到了。	A2	travel	ngsl_2809_0061	ngsl_2809_0146	because of	because of 不在詞表，只列為片語候選
+63	62	very	very	Thank you very much.	非常謝謝你。	A1	social	ngsl_2809_0062	ngsl_2809_0243|ngsl_2809_0090	Thank you very much.	
+64	63	just	just	I just got home.	我剛到家。	A1	daily	ngsl_2809_0063	ngsl_2809_0042|ngsl_2809_0160	get home（到家）	got 為 get 過去式
+65	64	come	come	Can you come here for a second?	你可以過來一下嗎？	A1	daily	ngsl_2809_0064	ngsl_2809_0037|ngsl_2809_0097|ngsl_2809_0225	for a second（一下）	second 在此為「片刻」
+66	65	could	Could	Could you speak more slowly?	你可以說慢一點嗎？	A1	social	ngsl_2809_0065	ngsl_2809_0283|ngsl_2809_0041|ngsl_2809_1511		
+67	66	work	work	I work from home on Fridays.	我星期五在家工作。	A1	work	ngsl_2809_0066	ngsl_2809_0160	work from home	Fridays 不在詞表
+68	67	use	use	Can I use your pen?	我可以用你的筆嗎？	A1	daily	ngsl_2809_0067	ngsl_2809_0037|ngsl_2809_2319		
+69	68	than	than	This bag is cheaper than that one.	這個包包比那個便宜。	A2	shopping	ngsl_2809_0068	ngsl_2809_1251|ngsl_2809_1094		cheaper 為 cheap 比較級
+70	69	now	now	I'm busy right now.	我現在很忙。	A1	daily	ngsl_2809_0069	ngsl_2809_1232|phrase_list_506_0337		right now 是 PHRASE List 正式項目；right 不另標
+71	70	then	then	First wash your hands, then eat.	先洗手，然後再吃。	A1	daily	ngsl_2809_0070	ngsl_2809_0077|ngsl_2809_1367|ngsl_2809_0197|ngsl_2809_0475		hands 為 hand 複數
+72	71	also	also	I also like jazz.	我也喜歡爵士樂。	A1	social	ngsl_2809_0071	ngsl_2809_0044		jazz 不在詞表
+73	72	into	into	She walked into the room.	她走進房間。	A1	daily	ngsl_2809_0072	ngsl_2809_0338|ngsl_2809_0253	walk into ...	walked 為 walk 過去式
+74	73	only	only	I only have five dollars.	我只有五塊錢。	A1	shopping	ngsl_2809_0073	ngsl_2809_0007|ngsl_spoken_720_0115|ngsl_2809_0970		five 只在口語 720 清單
+75	74	look	Look	Look at the sky!	你看天空！	A1	daily	ngsl_2809_0074	ngsl_2809_1719	look at ...	
+76	75	want	want	I want to learn English.	我想學英文。	A1	daily	ngsl_2809_0075	ngsl_2809_0260	want to ...	English 不在詞表
+77	76	give	give	Can you give me a hand?	你可以幫我一下嗎？	A2	daily	ngsl_2809_0076	ngsl_2809_0197	give someone a hand（幫忙）	hand 在此為「幫忙」慣用語
+78	77	first	first	Is this your first time here?	這是你第一次來這裡嗎？	A1	travel	ngsl_2809_0077	ngsl_2809_0048|ngsl_2809_0097	first time	
+79	78	new	New	Happy New Year!	新年快樂！	A1	social	ngsl_2809_0078	ngsl_2809_0512|ngsl_2809_0057	Happy New Year!	New 是節日名稱的一部分（上一輪標記）
+80	79	way	way	Is this the way to the station?	這是去車站的路嗎？	A1	travel	ngsl_2809_0079	ngsl_2809_0708	the way to ...	
+81	80	find	find	I can't find my wallet.	我找不到我的錢包。	A1	daily	ngsl_2809_0080		can't find ...	wallet 不在詞表；沒有適合的次要詞
+82	81	over	over	The meeting is over.	會議結束了。	A2	work	ngsl_2809_0081		be over（結束）	over＝結束，與 NGSL 中文「超過」不同，但口語 720 的中文含「結束」（上一輪標記）；meeting 不在詞表
+83	82	any	any	Do you have any questions?	你有任何問題嗎？	A1	work	ngsl_2809_0082	ngsl_2809_0180	Do you have any ...?	
+84	83	after	after	Let's talk after lunch.	我們午餐後再談。	A1	work	ngsl_2809_0083	ngsl_2809_0173|ngsl_2809_0136|ngsl_2809_1333		
+85	84	day	day	Have a nice day!	祝你有美好的一天！	A1	social	ngsl_2809_0084	ngsl_2809_0505	Have a nice day!	
+86	85	where	Where	Where is the bathroom?	洗手間在哪裡？	A1	travel	ngsl_2809_0085		Where is ...?	bathroom 不在詞表；沒有適合的次要詞
+87	86	thing	thing	I forgot one thing.	我忘了一件事。	A1	daily	ngsl_2809_0086	ngsl_2809_0650		forgot 為 forget 過去式
+88	87	most	Most	Most stores close at nine.	大部分的店九點關門。	A2	shopping	ngsl_2809_0087	ngsl_2809_0616|ngsl_2809_0238|ngsl_spoken_720_0250		close 在此為「打烊」；nine 只在口語 720
+89	88	should	should	You should see a doctor.	你應該去看醫生。	A1	health	ngsl_2809_0088	ngsl_2809_0049|ngsl_2809_0762	see a doctor（看醫生）	
+90	89	need	need	Do you need anything else?	你還需要什麼嗎？	A1	shopping	ngsl_2809_0089	ngsl_2809_0317|ngsl_2809_0465	anything else	
+91	90	much	much	How much does it cost?	這要多少錢？	A1	shopping	ngsl_2809_0090	ngsl_2809_0092|ngsl_2809_0251	How much does it cost?	
+92	91	right	right	Turn right at the corner.	在轉角右轉。	A1	travel	ngsl_2809_0091	ngsl_2809_0193|ngsl_2809_1187	turn right	right＝右邊，與 App 中文「對的」不同（上一輪標記）
+93	92	how	How	How are you today?	你今天好嗎？	A1	social	ngsl_2809_0092	ngsl_2809_0245	How are you?	
+94	93	back	back	I'll be back in five minutes.	我五分鐘後回來。	A1	daily	ngsl_2809_0093	ngsl_spoken_720_0115|ngsl_2809_0365	be back（回來）	
+95	94	mean	mean	What does this word mean?	這個字是什麼意思？	A1	daily	ngsl_2809_0094	ngsl_2809_0216	What does ... mean?	
+96	95	even	even	It's cold, even in summer.	就算是夏天也很冷。	A2	daily	ngsl_2809_0095	ngsl_2809_0866|ngsl_2809_0653		上一輪標記自然度待確認
+97	96	may	May	May I sit here?	我可以坐這裡嗎？	A1	social	ngsl_2809_0096	ngsl_2809_0355|ngsl_2809_0097	May I ...?	
+98	97	here	here	I've lived here for ten years.	我在這裡住了十年。	A2	daily	ngsl_2809_0097	ngsl_2809_0152|ngsl_spoken_720_0209|ngsl_2809_0057		I've（完成式）的 have 不標
+99	98	many	many	How many people are coming?	有多少人要來？	A1	social	ngsl_2809_0098	ngsl_2809_0056|ngsl_2809_0064	How many ...?	coming 為 come 進行式
+100	99	such	such	It was such a beautiful day.	那天天氣真好。	A2	daily	ngsl_2809_0099	ngsl_2809_0791|ngsl_2809_0084	such a ...	上一輪標記中文為意譯

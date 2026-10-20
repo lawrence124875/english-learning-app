@@ -1,7 +1,7 @@
 name: english_learning_app
 description: "智慧聽覺巡航 - 四合一英語核心學習神器"
 publish_to: 'none'
-version: 0.3.2+20
+version: 0.4.0+21
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -49,6 +49,8 @@ flutter:
     - assets/data/ngsl_spoken_720.json
     - assets/data/phrase_list_506.json
     - assets/data/phave_list_150.json
+    # V2 Practical English 內建句子（第一批內容完成前為空清單）
+    - assets/practical_english/pe_core.json
     - assets/fonts/Nunito-OFL.txt
     - assets/cover/cover_plain.png
     - assets/cover/cover_logo.png

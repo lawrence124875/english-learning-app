@@ -1,0 +1,18 @@
+# 詞義不同的同拼字詞（sense_review 判定 exclude 的候選，各自造句）
+ngsl_spoken_720_0543|lead|She will lead the team on this project.|這個專案由她帶領團隊。|B1|work|team,project||lead 在此為「帶領」
+ngsl_spoken_720_0322|line|Draw a straight line under your name.|在你的名字下面畫一條直線。|A2|study|draw,straight,name||line 在此為「線」
+ngsl_spoken_720_0248|term|The new term starts in September.|新學期九月開始。|A2|study|new,start<starts||term 在此為「學期」
+ngsl_spoken_720_0313|care|I don't care what other people think.|我不在乎別人怎麼想。|A2|social|people,think||care 在此為「在乎」
+ngsl_spoken_720_0274|watched|We watched a movie last night.|我們昨晚看了一部電影。|A1|daily|movie,night||watch 在此為「觀看」
+ngsl_spoken_720_0260|mind|Do you mind if I open the window?|你介意我開窗嗎？|A2|social|open,window||mind 在此為「介意」
+ngsl_spoken_720_0309|clear|The sky is clear today.|今天天空很晴朗。|A1|daily|sky,today||clear 在此為「晴朗的」
+ngsl_spoken_720_0552|free|Kids under six get in free.|六歲以下兒童免費入場。|A1|travel|kid<kids,six||free 在此為「免費的」
+ngsl_spoken_720_0353|sense|Dogs have a good sense of smell.|狗的嗅覺很好。|B1|daily|dog<dogs,good,smell||sense 在此為「感官」
+ngsl_spoken_720_0611|land|They bought some land in the countryside.|他們在鄉下買了一塊地。|B1|daily|buy<bought||land 在此為「土地」
+ngsl_spoken_720_0694|trade|Trade between the two countries is growing.|兩國之間的貿易正在成長。|B1|news|country<countries,grow<growing||trade 在此為「貿易」
+ngsl_spoken_720_0389|check|Please check your answers before you hand in the test.|交卷前請檢查你的答案。|A2|study|answer<answers,test|hand in|check 在此為「檢查」
+ngsl_spoken_720_0675|relates|This question relates to last week's lesson.|這個問題和上週的課有關。|B1|study|question,week,lesson|relate to|relate 在此為「有關聯」
+ngsl_spoken_720_0253|sorry|Sorry, I didn't mean to step on your foot.|對不起，我不是故意踩到你的腳。|A1|social|mean,step,foot||sorry 在此為「對不起」
+ngsl_spoken_720_0025|unclear|Sorry, your voice is unclear. Can you say that again?|抱歉，你的聲音聽不清楚，可以再說一次嗎？|A2|phone|voice,say||unclear 在此為「聽不清楚」
+ngsl_spoken_720_0397|rang|The phone rang twice and then stopped.|電話響了兩聲就停了。|A2|phone|phone,twice,stop<stopped||ring 在此為「響」；句中形式 rang
+phave_list_150_0042|put up|We put up posters for the school concert.|我們為學校音樂會張貼了海報。|A2|study|school,concert||put up 在此為「張貼」

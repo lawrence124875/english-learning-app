@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2934		Come To ('evolve To')	came to	Over time, I came to love this city.	隨著時間過去，我漸漸愛上了這座城市。	B1	daily	phrase_list_506_0100	ngsl_2809_0048|ngsl_2809_0228|ngsl_2809_0268	over time	come to 在此為「逐漸變得」
+2935		Along With	along with	I ordered a burger along with some fries.	我點了一個漢堡，還有一些薯條。	A2	food	phrase_list_506_0101	ngsl_2809_0214		
+2936		May Well ('could')	may well	It may well rain later, so take an umbrella.	晚一點很可能會下雨，帶把傘吧。	B1	daily	phrase_list_506_0102	ngsl_2809_1231|ngsl_2809_0058		
+2937		Get Out	Get out	Get out of the car and stretch your legs.	下車伸展一下雙腿吧。	A2	travel	phrase_list_506_0103	ngsl_2809_0259|ngsl_2809_1632|ngsl_2809_1096		
+2938		Followed By	followed by	We had lunch, followed by a walk in the park.	我們吃了午餐，接著去公園散步。	B1	daily	phrase_list_506_0104	ngsl_2809_1333|ngsl_2809_0338|ngsl_2809_0656		
+2939		In (The Sense) That	in that	I'm lucky in that my office is close to home.	我很幸運，因為我的辦公室離家很近。	B2	work	phrase_list_506_0105	ngsl_2809_1865|ngsl_2809_0342|ngsl_2809_0238|ngsl_2809_0160	close to	in that 在此為「就…而言；因為」
+2940		The Case ('true')	the case	If that's the case, we should leave now.	如果真是那樣，我們應該現在就走。	B1	social	phrase_list_506_0106	ngsl_2809_0125	if that's the case	the case 在此為「事實；實情」
+2941		Take Up	took up	My dad took up golf after he retired.	我爸退休後開始打高爾夫球。	B1	daily	phrase_list_506_0107	ngsl_2809_1631|ngsl_2809_2477|ngsl_2809_1634		take up 在此為「開始從事」
+2942		Account For	account for	Rent and food account for most of my spending.	房租和食物佔了我大部分的開銷。	B2	shopping	phrase_list_506_0108	ngsl_2809_1565|ngsl_2809_0366		account for 在此為「佔（比例）」
+2943		Set Out	set out	We set out early to avoid the traffic.	我們很早出發，以避開車潮。	B1	travel	phrase_list_506_0109	ngsl_2809_0196|ngsl_2809_0850|ngsl_2809_1224		set out 在此為「出發」
+2944		As Far As	As far as	As far as I know, the store opens at ten.	據我所知，那家店十點開門。	B1	shopping	phrase_list_506_0110	ngsl_2809_0040|ngsl_2809_0616|ngsl_2809_0213	as far as I know	as far as 在此為「就…而言」
+2945		Concerned With	concerned with	This class is concerned with basic writing skills.	這門課的重點在基本寫作技巧。	B2	study	phrase_list_506_0111	ngsl_2809_0361|ngsl_2809_0910|ngsl_2809_0684		
+2946		About To	about to	I was about to call you.	我正要打電話給你。	A2	phone	phrase_list_506_0112	ngsl_2809_0104		
+2947		Supposed To	supposed to	We're supposed to check out by noon.	我們應該在中午前退房。	A2	travel	phrase_list_506_0113	phave_list_150_0048		supposed to 在此為「應該」
+2948		And So On	and so on	Bring a towel, sunscreen, water, and so on.	帶毛巾、防曬乳、水等等。	B1	travel	phrase_list_506_0114	ngsl_2809_0195|ngsl_2809_0321		
+2949		Come On	Come on	Come on, we're going to be late!	快點，我們要遲到了！	A1	daily	phrase_list_506_0115	ngsl_2809_0146	going to	come on 在此為「快點」
+2950		Take On	take on	I can't take on any more work this week.	這星期我沒辦法再接更多工作了。	B1	work	phrase_list_506_0116	ngsl_2809_0066|ngsl_2809_0156		take on 在此為「承擔」
+2951		Work Out	worked out	Don't worry, everything worked out fine.	別擔心，一切都順利解決了。	B1	social	phrase_list_506_0117	ngsl_2809_0652|ngsl_2809_0421|ngsl_2809_0596		work out 在此為「結果變成（順利）」
+2952		All Over ('everywhere')	all over	There were toys all over the floor.	地上到處都是玩具。	A2	daily	phrase_list_506_0118	ngsl_2809_1993|ngsl_2809_0750		all over 在此為「到處」
+2953		Other Than	other than	I don't eat meat other than chicken.	除了雞肉，我不吃其他肉。	B1	food	phrase_list_506_0119	ngsl_2809_0475|ngsl_2809_1868|ngsl_2809_2338		
+2954		Out Of (‘In’/’from’)	out of	Nine out of ten people liked the new design.	十個人裡有九個喜歡新設計。	B1	work	phrase_list_506_0120	ngsl_2809_0056|ngsl_2809_0044|ngsl_2809_0078|ngsl_2809_0440		out of 在此為「在…之中」
+2955		Turn Out	turned out	The weather turned out to be perfect.	結果天氣好得不得了。	B1	travel	phrase_list_506_0121	ngsl_2809_1067|ngsl_2809_1110		turn out 在此為「結果是」
+2956		Look After	look after	Can you look after my cat this weekend?	你這個週末可以幫我照顧貓嗎？	A2	daily	phrase_list_506_0122	ngsl_2809_1677|ngsl_2809_0933		
+2957		At Last	At last	At last, the bus is here!	公車終於來了！	A2	travel	phrase_list_506_0123	ngsl_2809_0809		
+2958		A Variety Of	a variety of	The café offers a variety of cakes.	這家咖啡店提供各式各樣的蛋糕。	B1	food	phrase_list_506_0124	ngsl_2809_0236|ngsl_2809_2172		
+2959		At First	At first	At first, I didn't like my new job.	一開始，我不喜歡我的新工作。	A2	work	phrase_list_506_0125	ngsl_2809_0044|ngsl_2809_0078|ngsl_2809_0230		
+2960		Or So	or so	The train leaves in ten minutes or so.	火車大約十分鐘後開。	B1	travel	phrase_list_506_0126	ngsl_2809_0288|ngsl_2809_0125|ngsl_2809_0365		
+2961		In Favour	in favour	Most of us are in favour of the plan.	我們大多數人都贊成這個計畫。	B2	work	phrase_list_506_0127	ngsl_2809_0087|ngsl_2809_0231	in favour of	
+2962		Give Up	give up	Don't give up, you're almost there.	別放棄，你快成功了。	A2	social	phrase_list_506_0128	ngsl_2809_0306		
+2963		Get To ('arrive At')	get to	How do I get to the train station?	請問火車站怎麼去？	A1	travel	phrase_list_506_0129	ngsl_2809_0288|ngsl_2809_0708		get to 在此為「到達」
+2964		Find Oneself	found myself	I found myself smiling at the message.	看到那則訊息，我發現自己在微笑。	B2	social	phrase_list_506_0130	ngsl_2809_0989|ngsl_2809_0862		find oneself 用過去式 found myself
+2965		Get Up	get up	What time do you usually get up?	你通常幾點起床？	A1	daily	phrase_list_506_0131	ngsl_2809_0048|ngsl_2809_0554		
+2966		Carry On	Carry on	Carry on, I'm listening.	繼續說，我在聽。	B1	social	phrase_list_506_0132	ngsl_2809_0572		
+2967		Go Back	go back	I want to go back to Japan someday.	我想要有一天再回日本。	A2	travel	phrase_list_506_0133	ngsl_2809_0075		
+2968		Focus On	focus on	I need to focus on my exams this month.	這個月我需要專心準備考試。	B1	study	phrase_list_506_0134	ngsl_2809_0089|ngsl_2809_2243|ngsl_2809_0208		
+2969		At Once	at once	Please call me at once if anything changes.	如果有任何變化，請馬上打給我。	B1	phone	phrase_list_506_0135	ngsl_2809_0470|ngsl_2809_0104|ngsl_2809_0317|ngsl_2809_0112		at once 在此為「立刻」
+2970		It Takes	It takes	It takes about an hour to get there by train.	搭火車去那裡大約要一個小時。	A2	travel	phrase_list_506_0136	ngsl_2809_0246|ngsl_2809_0288		
+2971		Get On/off (Trans)	get off	We need to get off at the next stop.	我們要在下一站下車。	A1	travel	phrase_list_506_0137	ngsl_2809_0089|ngsl_2809_0150|ngsl_2809_0346		詞表為 get on/off，此句用 get off
+2972		As A Whole	as a whole	The team as a whole did a great job.	團隊整體表現得很好。	B2	work	phrase_list_506_0138	ngsl_2809_0406|ngsl_2809_0123|ngsl_2809_0230		
+2973		In Practice	In practice	In practice, the rule is rarely followed.	實際上，這條規定很少人遵守。	B2	work	phrase_list_506_0139	ngsl_2809_0414|ngsl_2809_2148|ngsl_2809_0187		
+2974		By The Time	By the time	By the time we arrived, the movie had started.	我們到的時候，電影已經開始了。	B1	daily	phrase_list_506_0140	ngsl_2809_0587|ngsl_2809_0761|ngsl_2809_0135		
+2975		Lots Of	lots of	There are lots of good restaurants around here.	這附近有很多好餐廳。	A1	food	phrase_list_506_0141	ngsl_2809_0055|ngsl_2809_0918|ngsl_2809_0169		
+2976		Said To Be	said to be	This place is said to be the best in town.	據說這家店是鎮上最好的。	B1	food	phrase_list_506_0142	ngsl_2809_0113|ngsl_2809_0363		
+2977		In Time	in time	We got to the airport just in time.	我們剛好及時趕到機場。	A2	travel	phrase_list_506_0143		just in time	
+2978		In Turn	in turn	Each student will speak in turn.	每個學生會輪流發言。	B2	study	phrase_list_506_0144	ngsl_2809_0247|ngsl_2809_0283		in turn 在此為「依次」
+2979		Once Again	once again	Thank you once again for your help.	再次感謝你的幫忙。	A2	social	phrase_list_506_0145	ngsl_2809_0243|ngsl_2809_0132		
+2980		All The Time	all the time	My little brother asks questions all the time.	我弟弟一天到晚都在問問題。	A2	daily	phrase_list_506_0146	ngsl_2809_0131|ngsl_2809_0820|ngsl_2809_0133|ngsl_2809_0180		
+2981		On The Basis (Of)	on the basis of	Seats are given on the basis of arrival time.	座位依照抵達時間分配。	B2	official	phrase_list_506_0147	ngsl_2809_0851|ngsl_2809_0076|ngsl_2809_2057|ngsl_2809_0048		
+2982		Kind Of	kind of	I'm kind of tired today.	我今天有點累。	A2	daily	phrase_list_506_0148	ngsl_2809_0245		kind of 在此為「有點」
+2983		Get Into	get into	I don't want to get into the habit of snacking late.	我不想養成很晚吃零食的習慣。	B1	health	phrase_list_506_0149	ngsl_2809_0075|ngsl_2809_1827|ngsl_2809_0146		get into 在此為「養成（習慣）」
+2984		Rely On	rely on	You can always rely on Lisa.	你永遠可以依靠 Lisa。	B1	social	phrase_list_506_0150	ngsl_2809_0182		
+2985		Go For	go for	I think I'll go for the fish.	我想我要點魚。	A2	food	phrase_list_506_0151	ngsl_2809_0046|ngsl_2809_0827		go for 在此為「選擇」
+2986		Aim To	aim to	We aim to reply within 24 hours.	我們的目標是在 24 小時內回覆。	B1	work	phrase_list_506_0152	ngsl_2809_1107|ngsl_2809_0284|ngsl_2809_0246		
+2987		Make Up (‘Comprise’)	make up	Women make up half of our staff.	我們的員工有一半是女性。	B2	work	phrase_list_506_0153	ngsl_2809_0168|ngsl_2809_0364|ngsl_2809_0430		make up 在此為「組成」
+2988		Appeal To	appeal to	This game should appeal to young kids.	這款遊戲應該會吸引年紀小的孩子。	B1	shopping	phrase_list_506_0154	ngsl_2809_0392|ngsl_2809_0237|ngsl_2809_0528		appeal to 在此為「吸引」
+2989		End Up	ended up	We ended up eating at home.	我們最後在家吃飯。	B1	food	phrase_list_506_0155	ngsl_2809_0475|ngsl_2809_0160		
+2990		Shake One’s Head	shook his head	He just shook his head and smiled.	他只是搖搖頭，笑了笑。	B1	social	phrase_list_506_0156	ngsl_2809_0989		shake one's head 用過去式 shook his head
+2991		No More Than (‘Only’)	no more than	The walk takes no more than ten minutes.	走路只要十分鐘以內。	B2	travel	phrase_list_506_0157	ngsl_2809_0338|ngsl_2809_0058|ngsl_2809_0365		no more than 在此為「僅僅；不超過」
+2992		Get Back	get back	What time will you get back tonight?	你今晚幾點回來？	A2	daily	phrase_list_506_0158	ngsl_2809_0048|ngsl_2809_1413		get back 在此為「回來」
+2993		What About	What about	What about Friday? Are you free then?	星期五怎麼樣？你那時有空嗎？	A1	social	phrase_list_506_0159	ngsl_2809_0394		
+2994		In Other Words	In other words	In other words, we need more time.	換句話說，我們需要更多時間。	B1	work	phrase_list_506_0160	ngsl_2809_0089|ngsl_2809_0041|ngsl_2809_0048		
+2995		As For	As for	As for dessert, I'll skip it tonight.	至於甜點，我今晚就不吃了。	B1	food	phrase_list_506_0161	ngsl_2809_1413		
+2996		Not Even	not even	I'm not even hungry.	我根本就不餓。	A2	food	phrase_list_506_0162			
+2997		Entitled To	entitled to	You're entitled to a full refund.	你有權獲得全額退款。	B2	shopping	phrase_list_506_0163	ngsl_2809_0409		
+2998		Prior To	Prior to	Prior to the meeting, please read this report.	開會前，請先看這份報告。	B2	work	phrase_list_506_0164	ngsl_2809_0470|ngsl_2809_0206|ngsl_2809_0165		
+2999		Choose To	chose to	She chose to study abroad.	她選擇出國念書。	B1	study	phrase_list_506_0165	ngsl_2809_0186|ngsl_2809_1882		
+3000		Something Like (‘Around’)	something like	The tickets cost something like fifty dollars.	票價大概五十美元左右。	B1	shopping	phrase_list_506_0166	ngsl_2809_1248|ngsl_2809_0251|ngsl_2809_0970		something like 在此為「大約」
+3001		Known To	known to	This road is known to flood in heavy rain.	大家都知道這條路下大雨就會淹水。	B2	travel	phrase_list_506_0167	ngsl_2809_0520|ngsl_2809_2273|ngsl_2809_1051|ngsl_2809_1231		
+3002		In Touch (With)	in touch	Let's keep in touch after graduation.	畢業後我們保持聯絡吧。	A2	social	phrase_list_506_0168	ngsl_2809_0176	keep in touch	
+3003		In The End	In the end	In the end, we decided to stay home.	最後，我們決定待在家。	A2	daily	phrase_list_506_0169	ngsl_2809_0358|ngsl_2809_0344|ngsl_2809_0160		
+3004		In The Way	in the way	Sorry, am I in the way?	抱歉，我擋到你了嗎？	A2	social	phrase_list_506_0170	ngsl_2809_0764		
+3005		Care For	care for	Would you care for some tea?	你想喝點茶嗎？	B1	food	phrase_list_506_0171	ngsl_2809_1598		care for 在此為「喜歡；想要」
+3006		In The Event (Of)	In the event of	In the event of a fire, use the stairs.	萬一發生火災，請走樓梯。	B2	official	phrase_list_506_0172	ngsl_2809_0612|ngsl_2809_0067|ngsl_2809_2629		
+3007		They Say	they say	They say this winter will be very cold.	聽說今年冬天會很冷。	A2	daily	phrase_list_506_0173	ngsl_2809_1327|ngsl_2809_0062|ngsl_2809_0866		
+3008		So Called	so-called	This so-called sale isn't really cheaper.	這個所謂的特價其實沒有比較便宜。	B2	shopping	phrase_list_506_0174	ngsl_2809_0397|ngsl_2809_0103|ngsl_2809_1094		句中寫作 so-called
+3009		Take Into Account	take into account	We need to take into account the travel time.	我們需要把交通時間考慮進去。	B2	travel	phrase_list_506_0175	ngsl_2809_0089|ngsl_2809_0502|ngsl_2809_0048		
+3010		In Respect Of	in respect of	There is no charge in respect of children under five.	五歲以下兒童不收費。	C1	official	phrase_list_506_0176	ngsl_2809_0497|ngsl_2809_0101|ngsl_2809_0192		
+3011		Out Of ('using')	out of	This bag is made out of old jeans.	這個包包是用舊牛仔褲做的。	B1	shopping	phrase_list_506_0177	ngsl_2809_1251|ngsl_2809_0047|ngsl_2809_0143		out of 在此為「用…製成」
+3012		At The Same Time ('conversely')	At the same time	It's a great job. At the same time, the hours are long.	這是份好工作，但同時工時也很長。	B2	work	phrase_list_506_0178	ngsl_2809_0123|ngsl_2809_0230|ngsl_2809_0246|ngsl_2809_0114		at the same time 在此為「然而」
+3013		Next To	next to	The bank is next to the post office.	銀行在郵局旁邊。	A1	travel	phrase_list_506_0179	ngsl_2809_0626		
+3014		Turn Up	turned up	Only five people turned up to the party.	只有五個人來參加派對。	B1	social	phrase_list_506_0180	ngsl_2809_0073|ngsl_2809_0056|ngsl_2809_0298		turn up 在此為「出現；到場」
+3015		Point Of View	point of view	I understand your point of view.	我了解你的觀點。	B1	social	phrase_list_506_0181	ngsl_2809_0242		
+3016		At Present	At present	At present, the shop is closed for repairs.	目前這家店因整修而暫停營業。	B2	shopping	phrase_list_506_0182	ngsl_2809_0436|ngsl_2809_0238|ngsl_2809_1877		
+3017		Used To (Accustomed)	used to	I'm not used to spicy food yet.	我還不習慣吃辣。	B1	food	phrase_list_506_0183	ngsl_2809_0366|ngsl_2809_0310		used to 在此為「習慣於」
+3018		Whether Or Not	whether or not	I'm not sure whether or not he's coming.	我不確定他會不會來。	B1	social	phrase_list_506_0184	ngsl_2809_0278|ngsl_2809_0064		
+3019		In Place	in place	Everything is in place for the event.	活動的一切都準備就緒了。	B2	work	phrase_list_506_0185	ngsl_2809_0421|ngsl_2809_0441		
+3020		No Doubt ('surely')	No doubt	No doubt you'll do well on the test.	你考試肯定會考得很好。	B1	study	phrase_list_506_0186	ngsl_2809_0060|ngsl_2809_0331		no doubt 在此為「無疑；肯定」
+3021		Full Time	full time	My sister works full time at a hospital.	我姊姊在醫院做全職工作。	A2	work	phrase_list_506_0187	ngsl_2809_0963|ngsl_2809_0066|ngsl_2809_0781		
+3022		Sort Out	sort out	Let me sort out these papers first.	我先把這些文件整理好。	B1	work	phrase_list_506_0188	ngsl_2809_0173|ngsl_2809_0424|ngsl_2809_0077		sort out 在此為「整理」
+3023		In A Way	In a way	In a way, I'm glad it happened.	在某種程度上，我很慶幸這件事發生了。	B1	social	phrase_list_506_0189	ngsl_2809_1369|ngsl_2809_0235		
+3024		Or Something ('perhaps')	or something	Let's grab a coffee or something.	我們去喝杯咖啡什麼的吧。	A2	social	phrase_list_506_0190	ngsl_2809_2302|ngsl_2809_1394		
+3025		On Behalf Of	on behalf of	I'm calling on behalf of my manager.	我代表我的經理打電話來。	B2	phone	phrase_list_506_0191	ngsl_2809_0104|ngsl_2809_0660		
+3026		Over There	over there	The restrooms are over there.	洗手間在那邊。	A1	travel	phrase_list_506_0192			
+3027		In Spite Of	In spite of	In spite of the rain, we had fun.	儘管下雨，我們還是玩得很開心。	B1	travel	phrase_list_506_0193	ngsl_2809_1231|ngsl_2809_0901		
+3028		That's It	That's it	That's it for today, see you tomorrow.	今天就到這裡，明天見。	A2	study	phrase_list_506_0194	ngsl_2809_0245|ngsl_2809_0049|ngsl_2809_0725		
+3029		In Part	in part	The delay was in part due to the weather.	延誤部分是因為天氣。	B2	travel	phrase_list_506_0195	ngsl_2809_1309|phrase_list_506_0040|ngsl_2809_1067		
+3030		Oh No	Oh no	Oh no, I left my phone at home!	噢不，我把手機忘在家裡了！	A1	phone	phrase_list_506_0196	ngsl_2809_0125|ngsl_2809_0478|ngsl_2809_0160		
+3031		In Mind	in mind	Do you have any place in mind for dinner?	晚餐你有想去的地方嗎？	A2	food	phrase_list_506_0197	ngsl_2809_0113|ngsl_2809_1116	have ... in mind	
+3032		(With) Regard To	with regard to	I'm writing with regard to my order.	我來信是關於我的訂單。	B2	shopping	phrase_list_506_0198	ngsl_2809_0120|ngsl_2809_0214		
+3033		One Another	one another	The neighbors help one another a lot.	鄰居們經常互相幫忙。	B1	social	phrase_list_506_0199	ngsl_2809_1221|ngsl_2809_0132|phrase_list_506_0009		

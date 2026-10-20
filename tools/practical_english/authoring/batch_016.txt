@@ -1,0 +1,101 @@
+# NGSL index 1500–1599
+1500|asset|Her language skills are a real asset to the team.|她的語言能力是團隊的一大資產。|B2|work|language,skill<skills,real,team||asset 在此為「有價值的人或特質」
+1501|signal|I can't get a signal here.|我在這裡收不到訊號。|A2|phone|get,here|get a signal|
+1502|finger|I cut my finger while cooking.|我做菜時割傷了手指。|A2|health|cut,cook<cooking||
+1503|relevant|Please only include relevant information.|請只放相關的資訊。|B1|work|please,include,information||
+1504|exploring|We spent the day exploring the old town.|我們花了一整天探索老城區。|B1|travel|spend<spent,day,old,town|spend the day ...ing|
+1505|leadership|She showed great leadership on the project.|她在這個專案上展現了很強的領導力。|B2|work|show<showed,great,project||
+1506|commitment|Learning a language takes time and commitment.|學一門語言需要時間和投入。|B2|study|learn<Learning,language,take<takes,time||commitment 在此為「投入、決心」
+1507|wake|Please wake me up at seven.|請在七點叫我起床。|A1|daily|please,seven|wake someone up|
+1508|necessarily|Expensive food isn't necessarily better.|貴的食物不一定比較好吃。|B1|food|expensive,food|not necessarily|necessarily 常用於否定「不一定」
+1509|bright|The room is bright and clean.|這個房間明亮又乾淨。|A2|travel|room,clean||
+1510|frame|I bought a frame for this photo.|我買了一個相框來放這張照片。|A2|shopping|buy<bought,photo||frame 在此為「框、相框」
+1511|slowly|Could you speak more slowly, please?|可以請你說慢一點嗎？|A1|social|speak,please|speak slowly|
+1512|bond|The trip helped us build a strong bond.|這趟旅行讓我們建立了深厚的感情。|B2|social|trip,help<helped,build,strong||bond 在此為「情感連結」，非 NGSL 解釋的「債券」
+1513|hiring|We're hiring two new staff members.|我們正在招募兩位新員工。|B1|work|two,new,staff,member<members||
+1514|hole|There's a hole in my sock.|我的襪子破了一個洞。|A2|daily|||
+1515|tie|He wore a tie to the interview.|他打領帶去面試。|A2|work|wear<wore,interview||
+1516|internal|This report is for internal use only.|這份報告僅供內部使用。|B2|work|report,use,only|for internal use only|
+1517|chain|It's a coffee chain from Japan.|那是一家來自日本的咖啡連鎖店。|B1|food|coffee||chain 在此為「連鎖店」
+1518|literature|She studied English literature in college.|她大學念英國文學。|B1|study|study<studied,college||
+1519|victim|He was the victim of a phone scam.|他是電話詐騙的受害者。|B2|phone|phone||
+1520|threatened|Heavy rain threatened to ruin our picnic.|大雨差點毀了我們的野餐。|B2|daily|heavy,rain,ruin||threaten 在此為「有…的危險」
+1521|division|She works in the sales division.|她在業務部門工作。|B2|work|work<works,sale<sales||
+1522|secure|Keep your passport in a secure place.|把護照放在安全的地方。|B1|travel|keep,place||
+1523|amaze|The view will amaze you.|那裡的景色會讓你驚嘆。|B1|travel|view||
+1524|devices|Please turn off all electronic devices.|請關閉所有電子裝置。|B1|travel|please,turn,electronic|turn off|
+1525|birth|What's your date of birth?|你的出生日期是什麼時候？|A2|official|date|date of birth|
+1526|forest|We went for a walk in the forest.|我們去森林裡散步。|A2|travel|walk|go for a walk|
+1527|label|Always read the label before you buy.|買之前一定要看標籤。|A2|shopping|always,read,buy||
+1528|root|We need to find the root of the problem.|我們需要找出問題的根源。|B2|work|need,find,problem|the root of the problem|root 在此為「根源」
+1529|factory|My uncle works at a car factory.|我叔叔在汽車工廠上班。|A2|work|uncle,work<works,car||
+1530|expenses|Keep your receipts for travel expenses.|出差費用的收據要留著。|B1|work|keep,travel||
+1531|channel|What channel is the game on?|那場比賽在哪一台播？|A2|daily|game||
+1532|investigating|The airline is investigating the delay.|航空公司正在調查這次延誤。|B2|travel|airline,delay||
+1533|recommendations|Do you have any recommendations for dinner?|晚餐你有什麼推薦的嗎？|B1|food|dinner||
+1534|ranks|The city ranks high for safety.|這個城市的安全性排名很高。|B2|travel|city,high,safety|rank high|rank 在此為動詞「排名」
+1535|typical|This is a typical breakfast here.|這是這裡典型的早餐。|B1|food|breakfast,here||
+1536|west|The sun sets in the west.|太陽從西邊落下。|A2|daily|sun,set<sets||
+1537|friendly|The staff were very friendly.|工作人員都很親切。|A2|travel|staff||
+1538|residents|Parking is for residents only.|停車位僅供住戶使用。|B1|daily|only||
+1539|provision|The company made provision for staff training.|公司為員工訓練預先做了安排。|C1|work|company,make<made,staff|make provision for|provision 在此為「預備、安排」，非「規定」
+1540|concentrate|I can't concentrate with all this noise.|這麼吵我沒辦法專心。|B1|study|noise||concentrate 在此為「專心」
+1541|plenty|Don't worry, we have plenty of time.|別擔心，我們時間很充裕。|A2|daily|worry,time|plenty of|
+1542|exports|The country exports a lot of rice.|這個國家出口大量稻米。|B1|news|country,lot,rice||
+1543|entirely|I entirely agree with you.|我完全同意你的看法。|B1|social|agree||
+1544|strongly|I strongly recommend this restaurant.|我強力推薦這家餐廳。|B1|food|recommend,restaurant||
+1545|bridge|Walk across the bridge and turn left.|走過橋之後左轉。|A2|travel|walk,across,turn,left||
+1546|consists|The meal consists of soup and rice.|這份餐點包括湯和飯。|B1|food|meal,rice|consist of|
+1547|graduated|She graduated from university last year.|她去年大學畢業。|B1|study|university,last,year|graduate from|
+1548|brand|Which brand do you usually buy?|你通常買哪個牌子？|A2|shopping|usually,buy||
+1549|moral|The story has a simple moral.|這個故事有個簡單的寓意。|B2|study|story,simple||moral 在此為名詞「寓意」，非形容詞「道德的」
+1550|insisted|He insisted on paying for dinner.|他堅持要請吃晚餐。|B1|social|pay<paying,dinner|insist on|
+1551|combination|I love the combination of salt and sugar.|我很愛鹹甜的組合。|B1|food|love,salt,sugar||
+1552|abuse|Some people abuse their sick leave.|有些人會濫用病假。|B2|work|people,sick,leave||abuse 在此為「濫用」
+1553|ice|Can I get water with no ice?|可以給我一杯去冰的水嗎？|A1|food|get,water|no ice|
+1554|principal|The principal gave a speech at graduation.|校長在畢業典禮上致詞。|B1|study|give<gave,speech|give a speech|
+1555|master|It takes years to master a language.|要精通一門語言得花好幾年。|B2|study|take<takes,year<years,language||master 在此為動詞「精通」，非「主人」
+1556|definitely|I'll definitely come to your party.|我一定會去你的派對。|A2|social|come,party||
+1557|session|The training session starts at nine.|訓練課程九點開始。|B1|work|start<starts,nine||session 在此為「一段活動時間、課程」
+1558|grades|He got good grades this term.|他這學期成績很好。|A2|study|get<got,good,term||
+1559|nevertheless|It was raining. Nevertheless, we went out.|那時在下雨，但我們還是出門了。|B2|daily|rain<raining,go<went||
+1560|predict|It's hard to predict the weather here.|這裡的天氣很難預測。|B1|daily|hard,weather,here||
+1561|previously|I previously worked as a teacher.|我之前當過老師。|B1|work|work<worked,teacher||
+1562|protection|Wear sunglasses for eye protection.|戴太陽眼鏡保護眼睛。|B1|health|wear,eye||
+1563|largely|The success was largely due to her hard work.|這次成功主要歸功於她的努力。|B2|work|success,due,hard,work|due to|
+1564|wed|They plan to wed next spring.|他們打算明年春天結婚。|B2|social|plan,next,spring||wed 為較正式／新聞用語，口語多用 get married
+1565|rent|The rent is due on the first of the month.|房租每個月一號要繳。|A2|daily|due,first,month||
+1566|shot|I need to get a flu shot.|我需要去打流感疫苗。|B1|health|need,get|flu shot|shot 在此為「打針」，非「射擊」
+1567|appearance|He cares a lot about his appearance.|他很在意自己的外表。|B1|social|care<cares,lot|care about|
+1568|reasonable|The prices here are very reasonable.|這裡的價格很合理。|B1|shopping|price<prices,here||
+1569|guarantee|This watch comes with a two-year guarantee.|這支手錶有兩年保固。|B1|shopping|watch,come<comes,two,year||guarantee 在此為名詞「保固」
+1570|till|The shop is open till ten.|這家店開到十點。|A2|shopping|shop,open,ten||
+1571|theme|The party has a nineties theme.|這場派對的主題是九〇年代。|B1|social|party||
+1572|judgment|I trust your judgment.|我相信你的判斷。|B2|work|trust||
+1573|odd|That's odd. The door was locked.|好奇怪，門剛剛是鎖著的。|B1|daily|door,lock<locked||
+1574|approved|My manager approved my leave.|我的主管批准了我的假。|B1|work|manager,leave||
+1575|loan|We took out a loan to buy the house.|我們貸款買了這間房子。|B1|official|take<took,buy,house|take out a loan|
+1576|definition|Look up the definition in a dictionary.|查字典看這個字的定義。|B1|study|look|look up|
+1577|elected|She was elected class leader.|她被選為班長。|B1|study|class,leader||
+1578|atmosphere|I love the atmosphere of this café.|我很喜歡這家咖啡店的氣氛。|B1|food|love||
+1579|farmer|We buy eggs from a local farmer.|我們跟當地農夫買雞蛋。|A2|food|buy,egg<eggs,local||
+1580|comparison|In comparison, this one is much cheaper.|相比之下，這個便宜多了。|B1|shopping|cheap<cheaper|in comparison|
+1581|characteristic|Patience is a characteristic of a good teacher.|耐心是好老師的特質之一。|B2|study|good,teacher||
+1582|license|Can I see your driver's license?|可以看一下你的駕照嗎？|A2|official|see,driver|driver's license|
+1583|rely|You can always rely on me.|你隨時都可以依靠我。|B1|social|always|rely on|
+1584|narrow|The streets in the old town are narrow.|老城區的街道很窄。|B1|travel|street<streets,old,town||
+1585|succeed|I hope you succeed in your new job.|祝你新工作順利成功。|B1|work|hope,new,job|succeed in|
+1586|identity|Please bring proof of identity.|請攜帶身分證明。|B1|official|please,bring,proof|proof of identity|
+1587|desk|Your keys are on the desk.|你的鑰匙在桌上。|A1|daily|key<keys||
+1588|permit|You need a permit to park here.|在這裡停車需要許可證。|B1|official|need,park,here||permit 在此為名詞「許可證」
+1589|seriously|Are you seriously going out in this rain?|你真的要冒著這種雨出門嗎？|B1|daily|rain||seriously 在此為「認真地、真的」，非「嚴重地」
+1590|wild|We saw wild horses on the beach.|我們在海灘上看到野馬。|B1|travel|see<saw,horse<horses,beach||
+1591|empty|The fridge is empty again.|冰箱又空了。|A2|daily|again||
+1592|commission|He earns a commission on every sale.|他每做成一筆生意就有佣金。|B2|work|earn<earns,every,sale||commission 在此為「佣金」，非「委員會」
+1593|unique|Each piece is handmade and unique.|每一件都是手工製作，獨一無二。|B1|shopping|piece||
+1594|association|She's a member of the parents' association.|她是家長會的成員。|B2|study|member,parent<parents||
+1595|instruments|Do you play any musical instruments?|你會演奏什麼樂器嗎？|A2|social|play,musical|musical instrument|
+1596|investors|The company is looking for new investors.|公司正在尋找新的投資人。|B2|work|company,look<looking,new|look for|
+1597|practical|That's a practical gift.|那是個很實用的禮物。|B1|shopping|gift||practical 在此為「實用的」
+1598|tea|Would you like some tea?|你想喝點茶嗎？|A1|food|like||
+1599|lovely|What a lovely day!|天氣真好！|A2|social|day||lovely 在此為「美好的、宜人的」

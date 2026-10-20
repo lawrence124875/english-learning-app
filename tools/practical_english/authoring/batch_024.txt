@@ -1,0 +1,101 @@
+# NGSL index 2300–2399
+2300|apologize|I apologize for being late.|很抱歉我遲到了。|A2|social|late||
+2301|approval|We need the manager's approval first.|我們得先取得經理的批准。|B1|work|need,manager,first||
+2302|Grab|Grab the handle so you don't fall.|抓好把手，才不會跌倒。|A2|travel|handle,fall||
+2303|entitled|Members are entitled to a free drink.|會員可以免費享用一杯飲料。|B2|shopping|member<Members,free,drink|be entitled to ...|entitle 在此為「使有權享有」
+2304|lend|Could you lend me your umbrella?|你可以借我雨傘嗎？|A2|daily||lend someone something|
+2305|involvement|Thanks for your involvement in the project.|謝謝你參與這個專案。|B2|work|thank<Thanks,project||
+2306|exposure|Too much sun exposure is bad for your skin.|曬太多太陽對皮膚不好。|B2|health|sun,bad,skin|sun exposure|exposure 在此為「曝曬、暴露」
+2307|conventional|Her ideas aren't very conventional.|她的想法不太傳統。|B2|social|idea<ideas||
+2308|digital|Do you have a digital copy of the ticket?|你有這張票的電子檔嗎？|B1|travel|copy,ticket|digital copy|
+2309|translate|Can you translate this sign for me?|你可以幫我翻譯這個標示嗎？|A2|travel|sign||
+2310|edit|I need to edit this video tonight.|我今晚得剪輯這支影片。|B1|work|need,video,tonight||edit 在此為「剪輯、編輯」
+2311|formation|We're discussing the formation of a new team.|我們正在討論成立新團隊的事。|C1|work|discuss<discussing,new,team||formation 在此為「成立、組成」
+2312|deposit|I'd like to make a deposit, please.|我想要存款，麻煩你。|B1|official|like,make,please|make a deposit|
+2313|pleasant|We had a pleasant evening together.|我們一起度過了愉快的夜晚。|B1|social|evening,together||
+2314|overseas|We get a lot of overseas visitors.|我們有很多海外遊客。|B1|travel|get,visitor<visitors||
+2315|advocates|Our teacher advocates reading every day.|我們老師提倡每天閱讀。|C1|study|teacher,read<reading,every,day||
+2316|establishment|This establishment does not allow smoking.|本店禁止吸菸。|C1|official|allow,smoke<smoking||establishment 在此為「店家、場所」
+2317|summary|Please send me a short summary of the meeting.|請寄給我一份簡短的會議摘要。|B1|work|please,send,short||
+2318|rough|My hands feel rough from washing dishes.|洗碗洗到我的手摸起來很粗糙。|B1|daily|hand<hands,feel,wash<washing,dish<dishes||
+2319|pen|May I borrow your pen?|我可以借你的筆嗎？|A1|study|borrow||
+2320|recovery|I wish you a quick recovery.|祝你早日康復。|B1|health|wish,quick||
+2321|seal|Please seal the envelope before mailing it.|寄出前請把信封封好。|B1|official|please,envelope,mail<mailing||seal 在此為「封住、密封」
+2322|tube|We need a new tube of toothpaste.|我們需要買一條新牙膏。|A2|shopping|need,new|a tube of ...|tube 在此為「軟管（條）」
+2323|tower|You can see the whole city from the tower.|從塔上可以看到整個城市。|A2|travel|see,whole,city||
+2324|characterize|How would you characterize the new boss?|你會怎麼形容新老闆？|C1|work|new,boss||characterize 在此為「描述、形容」
+2325|specify|Please specify your size when ordering.|訂購時請註明您的尺寸。|B2|shopping|please,size,order<ordering||
+2326|exact|Do you know the exact address?|你知道確切的地址嗎？|B1|travel|know,address||
+2327|Spin|Spin the wheel to win a prize!|轉動轉盤贏大獎！|B1|shopping|wheel,win,prize||
+2328|operator|I'll connect you to an operator.|我幫您轉接給接線人員。|B1|phone|connect||operator 在此為「（電話）接線員」
+2329|Infants|Infants under two fly free.|兩歲以下的嬰兒免費搭機。|B1|travel|two,fly,free||
+2330|digging|The dog is digging in the garden.|狗在花園裡挖土。|A2|daily|dog,garden||
+2331|drag|Just drag the file into this folder.|只要把檔案拖進這個資料夾就好。|B1|work|file||drag 在此為「拖曳」
+2332|mount|The bills are starting to mount up.|帳單開始越積越多了。|C1|daily|bill<bills,start<starting|mount up（越積越多）|mount 在此為「增加、上升」
+2333|wrap|Could you wrap this as a gift?|可以幫我把這個包成禮物嗎？|A2|shopping|gift|gift wrap|
+2334|anticipate|We don't anticipate any delays.|我們預計不會有任何延誤。|B2|work|delay<delays||
+2335|dependent|Our plans are dependent on the weather.|我們的計畫要看天氣而定。|B2|travel|plan<plans,weather|be dependent on ...|dependent 在此為「取決於（on）」
+2336|specializes|This shop specializes in handmade shoes.|這家店專門做手工鞋。|B2|shopping|shop,shoe<shoes|specialize in ...|
+2337|angle|Try taking the photo from a different angle.|試著從不同角度拍這張照片。|B1|daily|try,take<taking,photo,different||
+2338|chicken|I'll have the chicken salad.|我要雞肉沙拉。|A1|food|||chicken 在此為「雞肉」
+2339|anxiety|She felt a lot of anxiety before the interview.|她面試前非常焦慮。|B2|work|feel<felt,interview||
+2340|virus|I think my computer has a virus.|我覺得我的電腦中毒了。|B1|daily|think,computer||virus 在此為「電腦病毒」
+2341|precisely|The train left at precisely nine o'clock.|火車在九點整準時開走。|B2|travel|train,leave<left,nine||
+2342|rivals|The two cafes on this street are rivals.|這條街上的兩家咖啡店是競爭對手。|B2|food|two,street||
+2343|offense|No offense, but I don't like this color.|無意冒犯，但我不喜歡這個顏色。|B1|social|like,color|No offense, but ...|
+2344|detects|The alarm detects smoke right away.|警報器能立刻偵測到煙霧。|B2|daily|alarm,smoke,right,away|right away|
+2345|teenager|My son is a teenager now.|我兒子現在是青少年了。|A2|daily|son,now||
+2346|admire|I really admire your patience.|我真的很佩服你的耐心。|B1|social|really||
+2347|moderate|The hotel has moderate prices.|這間飯店價格適中。|B2|travel|hotel,price<prices||moderate 在此為「適中的」
+2348|surgery|My dad had knee surgery last month.|我爸上個月動了膝蓋手術。|B1|health|dad,knee,last,month||
+2349|musician|He's a musician in a local band.|他是當地一個樂團的樂手。|A2|social|local,band||
+2350|significance|What's the significance of this festival?|這個節日有什麼意義？|C1|study|festival||significance 在此為「意義」
+2351|shower|I usually take a shower in the morning.|我通常早上洗澡。|A1|daily|usually,take,morning|take a shower|
+2352|illegal|It's illegal to park here.|在這裡停車是違法的。|B1|official|park,here||
+2353|charity|We gave our old clothes to charity.|我們把舊衣服捐給慈善機構了。|B1|social|give<gave,old,clothes||
+2354|universal|Music is a universal language.|音樂是全世界共通的語言。|B2|study|music,language||
+2355|cigarette|Please put out your cigarette.|請把菸熄掉。|A2|official|please,put|put out（熄滅）|
+2356|constitute|Women constitute half of our staff.|女性佔我們員工的一半。|C1|work|woman<Women,half,staff||constitute 在此為「構成、佔」
+2357|adequate|The hotel was adequate, but nothing special.|飯店還算可以，但沒什麼特別的。|B2|travel|hotel,nothing,special||adequate 在此為「還算可以、尚可」
+2358|consultant|We hired a consultant to help us.|我們請了一位顧問來幫忙。|B2|work|hire<hired,help||
+2359|historian|The historian gave a talk at the museum.|那位歷史學家在博物館演講。|B2|study|give<gave,talk,museum|give a talk|
+2360|cousin|My cousin is visiting next week.|我表妹下週要來玩。|A2|social|visit<visiting,next,week||cousin 泛指堂／表兄弟姊妹
+2361|visual|I'm a visual learner.|我是視覺型學習者。|B2|study|||
+2362|stupid|It was a stupid idea to go out in the rain.|冒雨出門真是個蠢主意。|A2|daily|idea,rain||stupid 用來檢討事情，不針對人；2026-10-09 第一輪風險複審修改
+2363|keen|She's keen on learning Japanese.|她很熱衷學日文。|B2|study|learn<learning|be keen on ...|
+2364|ethnic|This city has many ethnic restaurants.|這個城市有很多異國料理餐廳。|B2|food|city,many,restaurant<restaurants||ethnic 在此為「具民族特色的」
+2365|twin|Lisa has a twin brother.|Lisa 有一個雙胞胎兄弟。|A2|social|brother||
+2366|clinical|She works in clinical research.|她從事臨床研究。|C1|work|work<works,research||
+2367|eastern|The hotel is in the eastern part of the city.|飯店在城市的東區。|B1|travel|hotel,part,city||
+2368|forecast|The forecast says it will rain tomorrow.|天氣預報說明天會下雨。|B1|daily|say<says,rain,tomorrow|weather forecast|forecast 在此為名詞「預報」
+2369|segments|Divide the orange into segments.|把柳橙剝成一瓣一瓣。|B2|food|divide,orange||segment 在此為「（柳橙的）瓣」
+2370|custom|It's a custom here to take off your shoes.|這裡的習俗是要脫鞋。|B1|travel|here,take,shoe<shoes|take off|
+2371|adapt|It took me a while to adapt to the new job.|我花了一段時間才適應新工作。|B1|work|take<took,while,new,job|adapt to ...|
+2372|sand|The sand is too hot to walk on.|沙子燙到沒辦法走。|A2|travel|hot,walk||
+2373|cap|Don't forget your cap; it's sunny today.|別忘了帶帽子，今天出大太陽。|A2|daily|forget,today||
+2374|prompts|Follow the prompts on the screen.|請依照螢幕上的提示操作。|B2|daily|follow,screen||
+2375|charm|The old town has a lot of charm.|這個老城區很有魅力。|B1|travel|old,town||
+2376|react|How did she react to the news?|她聽到消息後有什麼反應？|B1|social|news|react to ...|
+2377|lecture|The lecture starts at ten.|講座十點開始。|B1|study|start<starts,ten||lecture 在此為「講座、課堂講課」
+2378|venture|We didn't venture outside during the storm.|暴風雨期間我們不敢冒險出門。|C1|daily|outside,storm||venture 在此為動詞「冒險前往」
+2379|compound|Water is a compound of hydrogen and oxygen.|水是氫和氧的化合物。|C1|study|water||
+2380|rescued|Firefighters rescued the cat from the tree.|消防員把貓從樹上救下來。|B1|news|cat,tree||
+2381|mess|Sorry about the mess.|抱歉，這裡很亂。|A2|daily|sorry||
+2382|preference|Do you have a seat preference?|您對座位有偏好嗎？|B2|travel|seat||
+2383|comprehensive|This book is a comprehensive guide to the city.|這本書是這座城市的完整指南。|C1|travel|book,guide,city||comprehensive 在此為「完整全面的」
+2384|incentives|The company offers incentives for good work.|公司會提供獎勵給表現好的員工。|B2|work|company,offer<offers,good,work||incentive 在此為「獎勵、誘因」
+2385|league|Our team is at the top of the league.|我們隊在聯賽中排名第一。|B1|social|team,top|top of the league|
+2386|dialog|Listen to the dialog and answer the questions.|聽這段對話，然後回答問題。|A2|study|listen,answer,question<questions||
+2387|cream|Do you take cream in your coffee?|你的咖啡要加奶精嗎？|A2|food|take,coffee||cream 在此為「奶精、鮮奶油」
+2388|rapid|The city has seen rapid growth.|這座城市發展得很快。|B2|news|city,see<seen,growth||
+2389|cancel|I need to cancel my reservation.|我需要取消我的預約。|A2|travel|need||
+2390|regret|I regret not studying harder.|我後悔當初沒有更用功讀書。|B1|study|study<studying,hard<harder||
+2391|dismissed|He was dismissed for being late too often.|他因為太常遲到被解雇了。|C1|work|late,often||
+2392|margin|The profit margin on this product is small.|這個產品的利潤率很低。|C1|work|profit,product,small|profit margin|
+2393|beneath|The cat is sleeping beneath the table.|貓在桌子底下睡覺。|B2|daily|cat,sleep<sleeping,table||
+2394|opponent|Her opponent was much taller.|她的對手高很多。|B2|social|tall<taller||
+2395|resist|I couldn't resist buying the cake.|我忍不住買了那個蛋糕。|B1|food|buy<buying,cake|can't resist ...|resist 在此為「抗拒（誘惑）」
+2396|capability|We don't have the capability to print in color.|我們沒辦法彩色列印。|C1|work|print,color||
+2397|absolute|It was an absolute disaster.|那簡直是一場災難。|B2|social|disaster||absolute 在此為「完全的、十足的」
+2398|correspond|The numbers on the map correspond to the photos.|地圖上的數字對應那些照片。|C1|travel|number<numbers,map,photo<photos|correspond to ...|
+2399|stroke|My grandfather had a stroke last year.|我爺爺去年中風了。|B2|health|last,year||

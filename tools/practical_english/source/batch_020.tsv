@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+1901	1900	cope	cope	How do you cope with stress at work?	你怎麼應對工作上的壓力？	B1	work	ngsl_2809_1900	ngsl_2809_1043|ngsl_2809_0066	cope with ...	
+1902	1901	approximately	approximately	The flight takes approximately three hours.	這班飛機大約要飛三個小時。	B1	travel	ngsl_2809_1901	ngsl_2809_1218|ngsl_2809_0058|ngsl_spoken_720_0094|ngsl_2809_0246		
+1903	1902	accommodation	accommodation	We still need to book accommodation for the trip.	我們還需要訂這趟旅行的住宿。	B1	travel	ngsl_2809_1902	ngsl_2809_0118|ngsl_2809_0089|ngsl_2809_0170|ngsl_2809_0824		book 在此為動詞「預訂」
+1904	1903	highlight	highlight	The highlight of our trip was the night market.	這趟旅行的亮點是夜市。	B1	travel	ngsl_2809_1903	ngsl_2809_0824|ngsl_2809_0269|ngsl_2809_0218	the highlight of ...	highlight 在此為名詞「最精彩的部分」，與詞表解釋「強調」不同
+1905	1904	reporter	reporter	A reporter asked me a few questions on the street.	有位記者在街上問了我幾個問題。	B1	news	ngsl_2809_1904	ngsl_2809_0133|ngsl_2809_0194|ngsl_2809_0180|ngsl_2809_0597		
+1906	1905	climate	climate	I'm not used to the climate here yet.	我還不習慣這裡的氣候。	B1	travel	ngsl_2809_1905	ngsl_2809_0097|ngsl_2809_0310	be used to ...	
+1907	1906	shirt	shirt	This shirt is too small for me.	這件襯衫我穿太小了。	A1	shopping	ngsl_2809_1906	ngsl_2809_0117|ngsl_2809_0185		
+1908	1907	exception	exception	Everyone has to pay, with no exception.	每個人都要付錢，沒有例外。	B1	official	ngsl_2809_1907	ngsl_2809_0649|ngsl_2809_0219	with no exception	
+1909	1908	corporation	corporation	She works for a large corporation in the city.	她在市區一家大公司上班。	B1	work	ngsl_2809_1908	ngsl_2809_0066|ngsl_2809_0209|ngsl_2809_0268		
+1910	1909	chip	chip	This phone has a faster chip.	這支手機的晶片比較快。	B1	shopping	ngsl_2809_1909	ngsl_2809_0478|ngsl_2809_0630		
+1911	1910	winner	winner	The winner will get a free trip.	得獎者會獲得一趟免費旅行。	A2	daily	ngsl_2809_1910	ngsl_2809_0042|ngsl_2809_0394|ngsl_2809_0824		
+1912	1911	encounter	encountered	We encountered a few problems on the way.	我們在路上遇到了一些問題。	B2	travel	ngsl_2809_1911	ngsl_2809_0194|ngsl_2809_0119|ngsl_2809_0079	on the way	
+1913	1912	brown	brown	I'm looking for brown shoes.	我在找棕色的鞋子。	A1	shopping	ngsl_2809_1912	ngsl_2809_0074|ngsl_2809_1475	look for ...	
+1914	1913	breathe	breathe	Take a deep breath and breathe slowly.	深吸一口氣，然後慢慢呼吸。	A2	health	ngsl_2809_1913	ngsl_2809_0839|ngsl_2809_1610|ngsl_2809_1511	take a deep breath	
+1915	1914	excuse	excuse	That's not a good excuse for being late.	那不是遲到的好藉口。	B1	social	ngsl_2809_1914	ngsl_2809_0055|ngsl_2809_0146		excuse 在此為名詞「藉口」
+1916	1915	partly	partly	It was partly my fault.	這有一部分是我的錯。	B1	social	ngsl_2809_1915	ngsl_2809_1994		
+1917	1916	tennis	tennis	Do you want to play tennis this weekend?	這週末要不要去打網球？	A1	social	ngsl_2809_1916	ngsl_2809_0075|ngsl_2809_0157|ngsl_2809_0933		
+1918	1917	urban	urban	Urban life can be very stressful.	都市生活可能壓力很大。	B2	daily	ngsl_2809_1917	ngsl_2809_0110		
+1919	1918	confuse	confuse	These two buttons always confuse me.	這兩個按鈕總是讓我搞混。	B1	daily	ngsl_2809_1918	ngsl_spoken_720_0070|ngsl_2809_2284|ngsl_2809_0182		
+1920	1919	southern	southern	It's warmer in the southern part of the island.	島的南部比較暖和。	B1	travel	ngsl_2809_1919	ngsl_2809_1020|ngsl_2809_0129|ngsl_2809_1213		
+1921	1920	output	output	Our team's output has doubled this year.	我們團隊今年的產出增加了一倍。	B2	work	ngsl_2809_1920	ngsl_2809_0406|ngsl_2809_1095|ngsl_2809_0057		output 在此為「產出、產量」
+1922	1921	beauty	beauty	The beauty of this place is its quiet.	這個地方的美在於它的寧靜。	B1	travel	ngsl_2809_1921	ngsl_2809_0113|ngsl_2809_1312		
+1923	1922	massive	massive	There was a massive line outside the store.	店外排了一條超長的隊。	B1	shopping	ngsl_2809_1922	ngsl_2809_0273|ngsl_2809_0490|ngsl_2809_0616		
+1924	1923	install	install	I need to install this app first.	我得先安裝這個應用程式。	A2	phone	ngsl_2809_1923	ngsl_2809_0089|ngsl_2809_0077		
+1925	1924	calculate	calculate	Can you calculate how much we each owe?	你可以算一下我們每個人要付多少嗎？	B1	daily	ngsl_2809_1924	ngsl_2809_0090|ngsl_2809_0144|ngsl_2809_2052		
+1926	1925	mouse	mouse	My computer mouse stopped working.	我的電腦滑鼠壞了。	A2	work	ngsl_2809_1925	ngsl_2809_0428|ngsl_2809_0346|ngsl_2809_0066		
+1927	1926	mathematics	mathematics	Mathematics was my favorite subject at school.	數學是我在學校最喜歡的科目。	B1	study	ngsl_2809_1926	ngsl_2809_0999|ngsl_2809_0360|ngsl_2809_0145		
+1928	1927	upper	upper	Please put your bag in the upper compartment.	請把包包放在上方的置物櫃。	B1	travel	ngsl_2809_1927	ngsl_2809_0470|ngsl_2809_0138|ngsl_2809_1251		
+1929	1928	creation	creation	This dish is the chef's own creation.	這道菜是主廚自己的創作。	B2	food	ngsl_2809_1928	ngsl_2809_1881|ngsl_2809_0128		
+1930	1929	occupy	occupied	Is this seat occupied?	這個位子有人坐嗎？	B1	travel	ngsl_2809_1929	ngsl_2809_0851		occupy 在此為「佔用（座位）」，非「佔領」
+1931	1930	outline	outline	Can you send me a short outline of the plan?	你可以寄給我計畫的簡短大綱嗎？	B1	work	ngsl_2809_1930	ngsl_2809_0322|ngsl_2809_0418|ngsl_2809_0231		
+1932	1931	sufficient	sufficient	Two days should be sufficient to see the city.	兩天應該足夠逛完這座城市。	B2	travel	ngsl_2809_1931	ngsl_spoken_720_0070|ngsl_2809_0084|ngsl_2809_0049|ngsl_2809_0268		
+1933	1932	update	update	Please update the app to the latest version.	請把應用程式更新到最新版本。	A2	phone	ngsl_2809_1932	ngsl_2809_0470|ngsl_2809_0980		
+1934	1933	luck	luck	Good luck with your exam tomorrow!	祝你明天考試順利！	A1	study	ngsl_2809_1933	ngsl_2809_0055|ngsl_2809_2243|ngsl_2809_0725	Good luck with ...	
+1935	1934	preserve	preserve	Salt helps preserve the meat.	鹽有助於保存肉類。	B2	food	ngsl_2809_1934	ngsl_2809_2458|ngsl_2809_0132|ngsl_2809_1868		
+1936	1935	split	split	Let's split the bill.	我們分攤帳單吧。	A2	food	ngsl_2809_1935	ngsl_2809_0887	split the bill	split 在此為「分攤」
+1937	1936	swing	swings	The kids are playing on the swings.	孩子們在盪鞦韆。	A2	daily	ngsl_2809_1936	ngsl_2809_0528|ngsl_2809_0157		swing 在此為名詞「鞦韆」，與詞表解釋「擺動」相關
+1938	1937	illness	illness	He missed a week of work because of illness.	他因為生病請了一個星期的假。	B1	health	ngsl_2809_1937	ngsl_2809_0644|ngsl_2809_0156|ngsl_2809_0066	because of ...	
+1939	1938	journalist	journalist	My sister is a journalist for a local paper.	我姊姊是地方報紙的記者。	B1	work	ngsl_2809_1938	ngsl_2809_0963|ngsl_2809_0299|ngsl_2809_0424		
+1940	1939	sudden	sudden	There was a sudden change in the weather.	天氣突然變了。	B1	daily	ngsl_2809_1939	ngsl_2809_0112|ngsl_2809_1067		
+1941	1940	advertisement	advertisement	I saw an advertisement for this sale online.	我在網路上看到這個特賣的廣告。	B1	shopping	ngsl_2809_1940	ngsl_2809_0049|ngsl_2809_0397|ngsl_2809_1793		
+1942	1941	consistent	consistent	Try to be consistent with your study time.	讀書時間盡量要固定。	B2	study	ngsl_2809_1941	ngsl_2809_0124|ngsl_2809_0186|ngsl_2809_0048		consistent 在此為「一致的、持續穩定的」
+1943	1942	originally	originally	I'm originally from a small town.	我原本是從一個小鎮來的。	B1	social	ngsl_2809_1942	ngsl_2809_0185|ngsl_2809_0363		
+1944	1943	aside	aside	Can you put this aside for me?	你可以幫我把這個留起來嗎？	B1	shopping	ngsl_2809_1943	ngsl_2809_0138	put ... aside	put aside 在此為「保留、留著」
+1945	1944	comfort	comfort	She tried to comfort her crying friend.	她試著安慰她哭泣的朋友。	B1	social	ngsl_2809_1944	ngsl_2809_0124|ngsl_2809_1201|ngsl_2809_0207		comfort 在此為動詞「安慰」，與詞表解釋「舒適」不同
+1946	1945	secondly	secondly	Firstly, it's cheap. Secondly, it's close.	第一，它很便宜。第二，它很近。	B1	study	ngsl_2809_1945	ngsl_2809_2664|ngsl_2809_1094|ngsl_2809_0238		
+1947	1946	severe	severe	She has a severe headache.	她頭痛得很厲害。	B1	health	ngsl_2809_1946			
+1948	1947	gene	genes	Eye color is passed down through genes.	眼睛的顏色是透過基因遺傳的。	B2	study	ngsl_2809_1947	ngsl_2809_0390|ngsl_2809_0377|ngsl_2809_0415	pass down	
+1949	1948	prospect	prospects	The job has good prospects.	這份工作很有前景。	B2	work	ngsl_2809_1948	ngsl_2809_0230|ngsl_2809_0055		
+1950	1949	snow	snowed	It snowed all night.	雪下了一整夜。	A1	daily	ngsl_2809_1949	ngsl_2809_0269	all night	snow 在此為動詞「下雪」
+1951	1950	plot	plot	The movie has a really interesting plot.	這部電影的情節很有趣。	B1	daily	ngsl_2809_1950	ngsl_2809_0761|ngsl_2809_0103		
+1952	1951	neck	neck	My neck hurts from sleeping wrong.	我睡姿不對，脖子很痛。	A2	health	ngsl_2809_1951	ngsl_2809_1420|ngsl_2809_0826|ngsl_2809_0574		
+1953	1952	criteria	criteria	What are the criteria for this scholarship?	這個獎學金的申請標準是什麼？	B2	study	ngsl_2809_1952			
+1954	1953	primarily	primarily	The course is primarily for beginners.	這門課主要是給初學者的。	B2	study	ngsl_2809_1953	ngsl_2809_0163		
+1955	1954	integrate	integrate	The new system is easy to integrate with our software.	新系統很容易和我們的軟體整合。	C1	work	ngsl_2809_1954	ngsl_2809_0078|ngsl_2809_0178|ngsl_2809_0407|ngsl_2809_1090		
+1956	1955	criticism	criticism	He doesn't handle criticism very well.	他不太能接受批評。	B2	work	ngsl_2809_1955	ngsl_2809_1040|ngsl_2809_0060		
+1957	1956	convention	convention	There's a big convention in town this week.	這週鎮上有一場大型會議。	B2	work	ngsl_2809_1956	ngsl_2809_0183|ngsl_2809_0363|ngsl_2809_0156		convention 在此為「大型會議、大會」，與詞表解釋「慣例」不同
+1958	1957	bet	bet	I bet you'll love this place.	我敢說你一定會愛上這個地方。	A2	social	ngsl_2809_1957	ngsl_2809_0228|ngsl_2809_0113	I bet ...	bet 在此為口語「敢說、肯定」
+1959	1958	retain	retain	Please retain your receipt.	請保留您的收據。	B2	shopping	ngsl_2809_1958	ngsl_2809_0470		
+1960	1959	sequence	sequence	Put the pictures in the right sequence.	把這些圖片按正確的順序排好。	B2	study	ngsl_2809_1959	ngsl_2809_0138|ngsl_2809_0508|ngsl_2809_0091		sequence 在此為「順序」
+1961	1960	plain	plain	I'd like a plain T-shirt with no logo.	我想要一件沒有圖案的素色 T 恤。	B1	shopping	ngsl_2809_1960	ngsl_2809_0044		plain 在此為形容詞「素的、樸素的」，與詞表解釋「平原」不同
+1962	1961	volunteer	volunteers	She volunteers at the animal shelter.	她在動物收容所當志工。	B1	social	ngsl_2809_1961	ngsl_2809_0586|ngsl_2809_2580		volunteer 在此為動詞「當志工」
+1963	1962	rural	rural	They moved to a quiet rural area.	他們搬到一個安靜的鄉下地方。	B2	daily	ngsl_2809_1962	ngsl_2809_0199|ngsl_2809_1312|ngsl_2809_0203		
+1964	1963	calm	calm	Please stay calm and wait here.	請保持冷靜，在這裡等候。	A2	daily	ngsl_2809_1963	ngsl_2809_0470|ngsl_2809_0344|ngsl_2809_0402|ngsl_2809_0097	stay calm	
+1965	1964	abandon	abandon	We had to abandon our plans because of the rain.	因為下雨，我們只好放棄原本的計畫。	B2	travel	ngsl_2809_1964	ngsl_2809_0231|ngsl_2809_1231	because of ...	
+1966	1965	examination	examination	The doctor will do a quick examination.	醫生會做個簡單的檢查。	B1	health	ngsl_2809_1965	ngsl_2809_0762|ngsl_2809_1194		examination 在此為「（身體）檢查」，與詞表解釋「考試」不同
+1967	1966	silence	silence	There was an awkward silence after he spoke.	他說完後出現一陣尷尬的沉默。	B1	social	ngsl_2809_1966	ngsl_2809_0283		
+1968	1967	rapidly	rapidly	Prices are rising rapidly.	物價正在快速上漲。	B1	news	ngsl_2809_1967	ngsl_2809_0295|ngsl_2809_0461		
+1969	1968	efficient	efficient	This new heater is very efficient.	這台新的暖氣機很有效率。	B1	shopping	ngsl_2809_1968	ngsl_2809_0078		
+1970	1969	revolution	revolution	Smartphones started a revolution in how we talk.	智慧型手機掀起了我們溝通方式的革命。	B2	news	ngsl_2809_1969	ngsl_2809_0135|ngsl_2809_0136		
+1971	1970	delight	delight	To my delight, the shop was still open.	讓我高興的是，那家店還開著。	B2	shopping	ngsl_2809_1970	ngsl_2809_0436|ngsl_2809_0118|ngsl_2809_0213	to my delight	
+1972	1971	spell	spell	How do you spell your last name?	你的姓怎麼拼？	A1	official	ngsl_2809_1971	ngsl_2809_0100|ngsl_2809_0205	last name	
+1973	1972	premise	premise	The movie's premise is simple but clever.	這部電影的前提設定簡單又巧妙。	C1	daily	ngsl_2809_1972	ngsl_2809_0761|ngsl_2809_0687		
+1974	1973	lean	lean	Don't lean against the door.	請勿倚靠車門。	B1	travel	ngsl_2809_1973	ngsl_2809_0489	lean against ...	lean 在此為「倚靠」
+1975	1974	dramatic	dramatic	There was a dramatic drop in sales.	銷售額大幅下滑。	B2	work	ngsl_2809_1974	ngsl_2809_0639|ngsl_2809_0397		dramatic 在此為「劇烈的、大幅的」
+1976	1975	differ	differ	Prices differ from store to store.	每家店的價格都不一樣。	B2	shopping	ngsl_2809_1975	ngsl_2809_0295|ngsl_2809_0616	from ... to ...	
+1977	1976	grateful	grateful	I'm really grateful for your help.	我真的很感謝你的幫忙。	B1	social	ngsl_2809_1976	ngsl_2809_0103|ngsl_2809_0132	be grateful for ...	
+1978	1977	protein	protein	Eggs are a good source of protein.	蛋是很好的蛋白質來源。	B1	health	ngsl_2809_1977	ngsl_2809_1380|ngsl_2809_0055|ngsl_2809_0622		
+1979	1978	bike	bike	I ride my bike to work.	我騎腳踏車上班。	A1	daily	ngsl_2809_1978	ngsl_2809_1049|ngsl_2809_0066		
+1980	1979	distribute	distribute	We'll distribute the flyers this afternoon.	我們今天下午會發傳單。	B2	work	ngsl_2809_1979	ngsl_2809_0947		
+1981	1980	intellectual	intellectual	He enjoys intellectual conversations.	他喜歡有深度的知性對話。	C1	social	ngsl_2809_1980	ngsl_2809_0503|ngsl_2809_0981		
+1982	1981	derive	derived	Many English words are derived from Latin.	很多英文單字源自拉丁文。	C1	study	ngsl_2809_1981	ngsl_2809_0098|ngsl_2809_0216		derive from 在此為「源自」
+1983	1982	crucial	crucial	Sleep is crucial for good health.	睡眠對健康至關重要。	B2	health	ngsl_2809_1982	ngsl_2809_0826|ngsl_2809_0055|ngsl_2809_0474		
+1984	1983	unemployment	unemployment	Unemployment went down last year.	去年的失業率下降了。	B2	news	ngsl_2809_1983	ngsl_2809_0100|ngsl_2809_0057	go down	
+1985	1984	wheel	wheels	One of the wheels on my suitcase is broken.	我行李箱的一個輪子壞了。	A2	travel	ngsl_2809_1984			
+1986	1985	crop	crops	The rain was good for the crops this year.	今年的雨水對農作物很有幫助。	B2	news	ngsl_2809_1985	ngsl_2809_1231|ngsl_2809_0055|ngsl_2809_0057		
+1987	1986	minority	minority	Only a minority of students passed the test.	只有少數學生通過了考試。	B2	study	ngsl_2809_1986	ngsl_2809_0073|ngsl_2809_0247|ngsl_2809_0415|ngsl_2809_0331		
+1988	1987	origin	origin	What's the origin of this tradition?	這個傳統的起源是什麼？	B2	study	ngsl_2809_1987	ngsl_2809_1337		
+1989	1988	interpretation	interpretation	That's an interesting interpretation of the story.	那是對這個故事很有意思的解讀。	C1	study	ngsl_2809_1988	ngsl_2809_0305		
+1990	1989	gentleman	gentleman	The gentleman by the window is waiting for you.	窗邊那位先生在等你。	B1	work	ngsl_2809_1989	ngsl_2809_0733|ngsl_2809_0402		
+1991	1990	drama	drama	I've been watching a Korean drama lately.	我最近在看一部韓劇。	A2	daily	ngsl_2809_1990	ngsl_2809_0325		drama 在此為「影集」
+1992	1991	landscape	landscape	The landscape here is breathtaking.	這裡的風景美得令人屏息。	B2	travel	ngsl_2809_1991	ngsl_2809_0097		
+1993	1992	educate	educate	We need to educate kids about online safety.	我們需要教育孩子網路安全的知識。	B2	study	ngsl_2809_1992	ngsl_2809_0089|ngsl_2809_0528|ngsl_2809_1793|ngsl_2809_1310		
+1994	1993	toy	toy	My son wants a new toy for his birthday.	我兒子生日想要一個新玩具。	A1	shopping	ngsl_2809_1993	ngsl_2809_0686|ngsl_2809_0075|ngsl_2809_0078		
+1995	1994	fault	fault	Don't worry, it's not your fault.	別擔心，這不是你的錯。	A2	social	ngsl_2809_1994	ngsl_2809_0652	It's not your fault.	
+1996	1995	exhibit	exhibit	The museum has a new photography exhibit.	博物館有一個新的攝影展。	B2	travel	ngsl_2809_1995	ngsl_2809_1396|ngsl_2809_0078		exhibit 在此為名詞「展覽」
+1997	1996	minor	minor	It's only a minor problem.	這只是個小問題。	B1	work	ngsl_2809_1996	ngsl_2809_0073|ngsl_2809_0119		
+1998	1997	hunt	hunting	I spent the whole day hunting for a gift.	我花了一整天找禮物。	B1	shopping	ngsl_2809_1997	ngsl_2809_0257|ngsl_2809_0309|ngsl_2809_0084|ngsl_2809_1426	hunt for ...	hunt 在此為口語「到處尋找」，與詞表解釋「狩獵」不同
+1999	1998	storm	storm	The storm delayed our flight.	暴風雨讓我們的班機延誤了。	A2	travel	ngsl_2809_1998	ngsl_2809_1309|ngsl_2809_1218		
+2000	1999	thick	thick	It's cold, so wear a thick coat.	天氣很冷，穿件厚外套吧。	A2	daily	ngsl_2809_1999	ngsl_2809_0866|ngsl_2809_0525|ngsl_2809_1862		

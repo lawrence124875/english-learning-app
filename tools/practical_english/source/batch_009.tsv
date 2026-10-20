@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+801	800	husband	husband	My husband is cooking dinner tonight.	今晚我老公煮晚餐。	A1	daily	ngsl_2809_0800	ngsl_2809_1195|ngsl_2809_1116|ngsl_2809_1413		
+802	801	access	access	Do guests have access to the gym?	房客可以使用健身房嗎？	B1	travel	ngsl_2809_0801	ngsl_2809_1429	have access to	access 在此為「使用權」
+803	802	movement	movements	Slow movements help me relax.	緩慢的動作能幫我放鬆。	B1	health	ngsl_2809_0802	ngsl_2809_1117|ngsl_2809_0132|ngsl_2809_1484		movement 在此為「動作」，NGSL 中文為「運動」
+804	803	treat	treat	Lunch is on me. It's my treat.	午餐我付，我請客。	A2	food	ngsl_2809_0803	ngsl_2809_1333	It's my treat.	treat 在此為名詞「請客」，NGSL 中文為「對待」
+805	804	identify	identify	Can you identify the man in this photo?	你認得出這張照片裡的男人嗎？	B1	daily	ngsl_2809_0804	ngsl_2809_0111|ngsl_2809_1207		identify 在此為「認出」
+806	805	loss	loss	Sorry for your loss.	請節哀。	B1	social	ngsl_2809_0805	ngsl_2809_0764	Sorry for your loss.	loss 在此為「失去（親人）」
+807	806	shall	shall	Shall we go now?	我們現在走好嗎？	A2	social	ngsl_2809_0806	ngsl_2809_0030|ngsl_2809_0069	Shall we ...?	
+808	807	modern	modern	The hotel has a very modern design.	這間飯店的設計很現代。	B1	travel	ngsl_2809_0807	ngsl_2809_0758|ngsl_2809_0440		
+809	808	pressure	pressure	I'm under a lot of pressure at work.	我工作壓力很大。	B1	work	ngsl_2809_0808	ngsl_2809_0122|ngsl_2809_0066	under pressure	
+810	809	bus	bus	The bus is running late.	公車誤點了。	A2	travel	ngsl_2809_0809	ngsl_2809_0191|ngsl_2809_0146		
+811	810	treatment	treatment	The treatment takes about two weeks.	療程大約要兩週。	B1	health	ngsl_2809_0810	ngsl_2809_0058|ngsl_2809_0036|ngsl_spoken_720_0070|ngsl_2809_0156		
+812	811	conference	conference	She's at a conference in Singapore.	她在新加坡參加研討會。	B1	work	ngsl_2809_0811			conference 在此為「研討會、大型會議」
+813	812	yourself	yourself	Help yourself to some cake.	請自己拿蛋糕吃。	A2	food	ngsl_2809_0812	ngsl_2809_0132|ngsl_2809_2172	help yourself	
+814	813	supply	supplies	We're running low on office supplies.	我們的辦公用品快用完了。	B1	work	ngsl_2809_0813	ngsl_2809_0191|ngsl_2809_0282|ngsl_2809_0342	run low on	supplies 為複數，在此為「用品」
+815	814	village	village	My grandparents live in a small village.	我的祖父母住在一個小村莊。	A2	daily	ngsl_2809_0814	ngsl_2809_0152|ngsl_2809_0185		
+816	815	worth	worth	The museum is worth a visit.	那間博物館值得去看看。	B1	travel	ngsl_2809_0815	ngsl_2809_1396|ngsl_2809_0332	worth a visit	
+817	816	natural	natural	This juice is made from natural fruit.	這杯果汁是用天然水果做的。	B1	food	ngsl_2809_0816	ngsl_2809_0047|ngsl_2809_1639	made from	
+818	817	express	express	It's hard to express my feelings in English.	用英文表達我的感受很難。	B1	study	ngsl_2809_0817	ngsl_2809_0297		
+819	818	indicate	indicates	The red light indicates that the battery is low.	紅燈表示電池電量不足。	B2	daily	ngsl_2809_0818	ngsl_2809_0799|ngsl_2809_0348|ngsl_2809_0282		indicate 在此為「表示、顯示」
+820	819	attend	attend	I can't attend the meeting today.	我今天沒辦法參加會議。	B1	work	ngsl_2809_0819	ngsl_2809_0245		
+821	820	brother	brothers	Do you have any brothers or sisters?	你有兄弟姊妹嗎？	A1	social	ngsl_2809_0820	ngsl_2809_0963		
+822	821	investment	investment	Buying a good laptop is a smart investment.	買一台好的筆電是很聰明的投資。	B1	shopping	ngsl_2809_0821	ngsl_2809_0241|ngsl_2809_0055|ngsl_2809_2022		
+823	822	score	score	What's the score?	現在比數多少？	A2	social	ngsl_2809_0822			score 在此為「比數」
+824	823	organize	organizing	Who's organizing the party?	派對是誰在籌辦的？	B1	social	ngsl_2809_0823	ngsl_2809_0298		organize 在此為「籌辦」，NGSL 中文為「組織」
+825	824	trip	trip	Have a nice trip!	祝你旅途愉快！	A1	travel	ngsl_2809_0824	ngsl_2809_0505	Have a nice trip!	
+826	825	beyond	beyond	The view was beyond my expectations.	那裡的景色超乎我的預期。	B2	travel	ngsl_2809_0825	ngsl_2809_0292|ngsl_2809_1605	beyond expectations	
+827	826	sleep	sleep	Did you get enough sleep last night?	你昨晚睡得夠嗎？	A2	health	ngsl_2809_0826	ngsl_2809_0042|ngsl_2809_0266|ngsl_2809_0100|ngsl_2809_0269	get enough sleep	
+828	827	fish	fish	I'll have the fish, please.	我要點魚，謝謝。	A1	food	ngsl_2809_0827	ngsl_2809_0470	I'll have ...	
+829	828	promise	promise	I promise I won't be late.	我保證不會遲到。	A2	social	ngsl_2809_0828	ngsl_2809_0146		promise 在此為動詞「保證」
+830	829	potential	potential	She has a lot of potential.	她很有潛力。	B2	work	ngsl_2809_0829	ngsl_2809_0122		
+831	830	energy	energy	I have no energy today.	我今天一點力氣都沒有。	A2	health	ngsl_2809_0830	ngsl_2809_0245		energy 在此為「精力」
+832	831	trouble	trouble	I'm having trouble with my computer.	我的電腦出了點問題。	A2	work	ngsl_2809_0831	ngsl_2809_0428	have trouble with	
+833	832	relation	relation	This has no relation to our project.	這跟我們的專案沒有關係。	B2	work	ngsl_2809_0832	ngsl_2809_0517	no relation to	
+834	833	touch	touch	Please don't touch the paintings.	請勿觸摸畫作。	A2	travel	ngsl_2809_0833	ngsl_2809_0470		
+835	834	file	file	Can you send me the file by email?	你可以用電子郵件把檔案寄給我嗎？	A2	work	ngsl_2809_0834	ngsl_2809_0322|ngsl_2809_1168	by email	file 在此為「（電腦）檔案」
+836	835	middle	middle	I woke up in the middle of the night.	我半夜醒來。	A2	daily	ngsl_2809_0835	ngsl_2809_1507|ngsl_2809_0269	in the middle of	
+837	836	bar	bar	Let's meet at the bar after work.	下班後在酒吧見吧。	A2	social	ngsl_2809_0836	ngsl_2809_0134|ngsl_2809_0083|ngsl_2809_0066	after work	
+838	837	suffer	suffers	He suffers from back pain.	他有背痛的毛病。	B1	health	ngsl_2809_0837	ngsl_2809_0093|ngsl_2809_1149	suffer from	suffers 為第三人稱單數
+839	838	strategy	strategy	We need a better strategy.	我們需要更好的策略。	B1	work	ngsl_2809_0838	ngsl_2809_0089		
+840	839	deep	deep	Take a deep breath.	深呼吸。	A2	health	ngsl_2809_0839	ngsl_2809_0058|ngsl_2809_1610	take a deep breath	
+841	840	except	except	The shop is open every day except Monday.	那家店除了週一以外每天都有營業。	A2	shopping	ngsl_2809_0840	ngsl_2809_0436|ngsl_2809_0213|ngsl_2809_0179|ngsl_2809_0084		
+842	841	clean	clean	Is this towel clean?	這條毛巾是乾淨的嗎？	A1	travel	ngsl_2809_0841			
+843	842	tend	tend	I tend to eat too much when I'm stressed.	我壓力大的時候容易吃太多。	B1	health	ngsl_2809_0842	ngsl_2809_0475|ngsl_2809_0117|ngsl_2809_0090	tend to	
+844	843	advance	advance	Please book your tickets in advance.	請提前訂票。	B1	travel	ngsl_2809_0843	ngsl_2809_0470|ngsl_2809_0170|ngsl_2809_1248	in advance	advance 在此為片語「提前」
+845	844	fill	fill	Could you fill this bottle with water?	你可以幫我把這個瓶子裝滿水嗎？	A2	daily	ngsl_2809_0844	ngsl_2809_1613|ngsl_2809_0321	fill ... with	
+846	845	star	stars	You can see a lot of stars here at night.	晚上在這裡可以看到很多星星。	A1	travel	ngsl_2809_0845	ngsl_2809_0049|ngsl_2809_0122|ngsl_2809_0097|ngsl_2809_0269		stars 為複數
+847	846	network	network	The network is down again.	網路又斷了。	B1	work	ngsl_2809_0846	ngsl_2809_0108|ngsl_2809_0174		
+848	847	generally	generally	I generally go to bed around eleven.	我通常十一點左右睡覺。	B1	daily	ngsl_2809_0847	ngsl_2809_0030|ngsl_2809_0693|ngsl_2809_0169|ngsl_spoken_720_0579	go to bed	generally 在此為「通常」
+849	848	operation	operation	He needs an operation on his knee.	他的膝蓋需要動手術。	B1	health	ngsl_2809_0848	ngsl_2809_0089|ngsl_2809_2220		operation 在此為「手術」，NGSL 中文為「運作」
+850	849	match	match	Did you watch the match last night?	你昨晚有看比賽嗎？	A2	social	ngsl_2809_0849	ngsl_2809_0325|ngsl_2809_0100|ngsl_2809_0269		
+851	850	avoid	avoid	Try to avoid sugary drinks.	盡量避免含糖飲料。	B1	health	ngsl_2809_0850	ngsl_2809_0124|ngsl_2809_0654	try to	
+852	851	seat	seat	Is this seat taken?	這個位子有人坐嗎？	A1	travel	ngsl_2809_0851	ngsl_2809_0058	Is this seat taken?	
+853	852	throw	throw	Don't throw that away.	那個別丟掉。	A2	daily	ngsl_2809_0852		throw away	
+854	853	task	tasks	I have a few tasks to finish before lunch.	午餐前我有幾件工作要完成。	B1	work	ngsl_2809_0853	ngsl_2809_0194|ngsl_2809_0608|ngsl_2809_1333		tasks 為複數
+855	854	normal	normal	Is it normal to feel this way?	有這種感覺是正常的嗎？	B1	health	ngsl_2809_0854	ngsl_2809_0116|ngsl_2809_0079		
+856	855	goal	goal	My goal is to run a full marathon.	我的目標是跑完一場全馬。	B1	health	ngsl_2809_0855	ngsl_2809_0191|ngsl_2809_0409		
+857	856	associate	associate	Many people associate summer with the beach.	很多人一想到夏天就會聯想到海灘。	B2	daily	ngsl_2809_0856	ngsl_2809_0056|ngsl_2809_0653|ngsl_2809_1296	associate ... with ...	associate 在此為「聯想」
+858	857	blue	blue	She was wearing a blue dress.	她穿著一件藍色洋裝。	A1	shopping	ngsl_2809_0857	ngsl_2809_0525|ngsl_2809_0898		
+859	858	positive	positive	Try to stay positive.	試著保持樂觀。	B1	social	ngsl_2809_0858	ngsl_2809_0124|ngsl_2809_0344	stay positive	positive 在此為「樂觀的」
+860	859	option	options	What are my options?	我有哪些選擇？	B1	shopping	ngsl_2809_0859			options 為複數
+861	860	box	box	Can I get a box for the leftovers?	可以給我一個盒子裝剩菜嗎？	A2	food	ngsl_2809_0860	ngsl_2809_0042		
+862	861	huge	huge	Their new house is huge.	他們的新房子超大的。	A2	daily	ngsl_2809_0861	ngsl_2809_0078|ngsl_2809_0164		
+863	862	message	message	Can I leave a message?	我可以留言嗎？	A2	phone	ngsl_2809_0862	ngsl_2809_0125	leave a message	
+864	863	instance	instance	For instance, you could take the train.	比如說，你可以搭火車。	B1	travel	ngsl_2809_0863	ngsl_2809_0058|ngsl_2809_0288	for instance	
+865	864	style	style	I love your style.	我很喜歡你的穿搭風格。	A2	social	ngsl_2809_0864	ngsl_2809_0228		
+866	865	refer	refer	Please refer to page ten.	請參考第十頁。	B1	study	ngsl_2809_0865	ngsl_2809_0470|ngsl_2809_0651|ngsl_spoken_720_0209	refer to	
+867	866	cold	cold	It's really cold outside.	外面真的好冷。	A1	daily	ngsl_2809_0866	ngsl_2809_0103|ngsl_2809_0490		
+868	867	push	push	Push the button to start.	按這個按鈕開始。	A1	daily	ngsl_2809_0867	ngsl_2809_2284|ngsl_2809_0135		push 在此為「按」
+869	868	quarter	quarter	It's a quarter past three.	現在三點十五分。	A2	daily	ngsl_2809_0868	ngsl_2809_0329|ngsl_spoken_720_0094	a quarter past	
+870	869	assume	assume	I assume you've already eaten.	我想你應該已經吃過了吧。	B2	food	ngsl_2809_0869	ngsl_2809_0301|ngsl_2809_0475		assume 在此為「猜想、認為」
+871	870	baby	baby	What a lovely baby!	好可愛的寶寶！	A1	social	ngsl_2809_0870	ngsl_2809_1599		
+872	871	successful	successful	The event was very successful.	這次活動非常成功。	B1	work	ngsl_2809_0871	ngsl_2809_0441		
+873	872	sing	sings	She sings really well.	她唱歌唱得很好。	A1	social	ngsl_2809_0872	ngsl_2809_0103|ngsl_2809_0060		sings 為第三人稱單數
+874	873	doubt	doubt	I doubt he'll come.	我覺得他不太會來。	B1	social	ngsl_2809_0873	ngsl_2809_0064		doubt 在此為「懷疑、不太相信」
+875	874	competition	competition	She won first prize in the competition.	她在比賽中拿了第一名。	B1	social	ngsl_2809_0874	ngsl_2809_0376|ngsl_2809_0077|ngsl_2809_2004		competition 在此為「比賽」，NGSL 中文為「競爭」
+876	875	theory	theory	That's just a theory.	那只是個理論而已。	B1	study	ngsl_2809_0875	ngsl_2809_0063		
+877	876	propose	propose	I propose we take a short break.	我提議我們休息一下。	B2	work	ngsl_2809_0876	ngsl_2809_0058|ngsl_2809_0418|ngsl_2809_0367	take a break	
+878	877	reference	reference	Can I use you as a reference?	我可以請你當我的推薦人嗎？	B2	work	ngsl_2809_0877	ngsl_2809_0067		reference 在此為「推薦人、證明人」，NGSL 中文為「參考」
+879	878	argument	argument	That's a good argument.	這個論點很有道理。	B1	study	ngsl_2809_0878	ngsl_2809_0055		
+880	879	adult	adults	Tickets are ten dollars for adults.	成人票是十美元。	A2	travel	ngsl_2809_0879	ngsl_2809_1248|ngsl_spoken_720_0209|ngsl_2809_0970		adults 為複數
+881	880	fly	flying	We're flying to Bangkok tomorrow.	我們明天搭飛機去曼谷。	A2	travel	ngsl_2809_0880	ngsl_2809_0725		flying 為進行式
+882	881	document	document	Please sign this document.	請在這份文件上簽名。	B1	official	ngsl_2809_0881	ngsl_2809_0470|ngsl_2809_0499		
+883	882	pattern	pattern	I like the pattern on this shirt.	我喜歡這件襯衫上的圖案。	B1	shopping	ngsl_2809_0882	ngsl_2809_0044|ngsl_2809_1906		pattern 在此為「圖案」，NGSL 中文為「模式」
+884	883	application	application	I sent my application last week.	我上週把申請書寄出去了。	B1	work	ngsl_2809_0883	ngsl_2809_0322|ngsl_2809_0100|ngsl_2809_0156		
+885	884	hot	hot	Be careful, the soup is hot.	小心，湯很燙。	A1	food	ngsl_2809_0884	ngsl_2809_1636		
+886	885	obviously	obviously	Obviously, we need more time.	很明顯，我們需要更多時間。	B1	work	ngsl_2809_0885	ngsl_2809_0089|ngsl_2809_0041|ngsl_2809_0048		
+887	886	unclear	unclear	It's unclear when the train will arrive.	火車什麼時候會到還不清楚。	B2	travel	ngsl_2809_0886	ngsl_2809_0288|ngsl_2809_0587		
+888	887	bill	bill	Can we have the bill, please?	麻煩幫我們結帳。	A2	food	ngsl_2809_0887	ngsl_2809_0470		
+889	888	search	searching	I'm searching for a cheap flight.	我在找便宜的機票。	A2	travel	ngsl_2809_0888	ngsl_2809_1094|ngsl_2809_1218	search for	
+890	889	separate	separate	Can we have separate bills?	我們可以分開結帳嗎？	A2	food	ngsl_2809_0889			separate 在此為「分開的」
+891	890	central	central	Our hotel is in central London.	我們的飯店在倫敦市中心。	B1	travel	ngsl_2809_0890	ngsl_2809_0758		
+892	891	career	career	She wants a career in teaching.	她想從事教職。	B1	work	ngsl_2809_0891	ngsl_2809_0075|ngsl_2809_0538		
+893	892	anyway	anyway	Thanks anyway.	還是謝謝你。	A2	social	ngsl_2809_0892	ngsl_2809_0243	Thanks anyway.	
+894	893	speech	speech	He gave a short speech at the wedding.	他在婚禮上簡短致詞。	B1	social	ngsl_2809_0893	ngsl_2809_0076|ngsl_2809_0418	give a speech	
+895	894	dog	dog	Do you walk your dog every day?	你每天都會遛狗嗎？	A1	daily	ngsl_2809_0894	ngsl_2809_0338|ngsl_2809_0179|ngsl_2809_0084	walk the dog	
+896	895	officer	officer	Excuse me, officer, I lost my wallet.	警察先生，不好意思，我的錢包掉了。	B1	official	ngsl_2809_0895	ngsl_2809_1914|ngsl_2809_0304		officer 在此為「警員」，NGSL 中文為「軍官」
+897	896	throughout	throughout	It rained throughout the day.	雨下了一整天。	B1	daily	ngsl_2809_0896	ngsl_2809_1231|ngsl_2809_0084		
+898	897	oil	oil	Fry the eggs in a little oil.	用一點油煎蛋。	A2	food	ngsl_2809_0897	ngsl_2809_1380|ngsl_2809_0131		oil 在此為「食用油」，NGSL 中文為「石油」
+899	898	dress	dress	That dress looks great on you.	那件洋裝你穿起來很好看。	A2	shopping	ngsl_2809_0898	ngsl_2809_0074|ngsl_2809_0123		
+900	899	profit	profit	The shop made a small profit this year.	這家店今年賺了一點小錢。	B2	work	ngsl_2809_0899	ngsl_2809_0436|ngsl_2809_0047|ngsl_2809_0185|ngsl_2809_0057	make a profit	

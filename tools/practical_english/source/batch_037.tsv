@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+3340		Come up	came up	Your name came up at the meeting today.	今天開會時有人提到你的名字。	B1	work	phave_list_150_0003	ngsl_2809_0205|ngsl_2809_0134|ngsl_2809_0245		come up 在此為「被提及」
+3341		Grow up	grew up	I grew up in a small town.	我在一個小鎮長大。	A2	social	phave_list_150_0009	ngsl_2809_0185|ngsl_2809_0363		
+3342		Come in	come in	Come in and have a seat.	請進，坐吧。	A1	social	phave_list_150_0013	ngsl_2809_0851		
+3343		Make up	made up	They had a fight but made up the next day.	他們吵了一架，但隔天就和好了。	B1	social	phave_list_150_0016	ngsl_2809_0594|ngsl_2809_0150|ngsl_2809_0084		make up 在此為「和好」
+3344		Look up	look up	You can look up the word in a dictionary.	你可以在字典裡查這個字。	A2	study	phave_list_150_0019	ngsl_2809_0216		look up 在此為「查閱」
+3345		Figure out	figure out	I can't figure out how this app works.	我搞不懂這個應用程式怎麼用。	B1	daily	phave_list_150_0020	ngsl_2809_0066		
+3346		Sit down	sit down	Why don't we sit down over there?	我們要不要去那邊坐下？	A2	social	phave_list_150_0021	ngsl_2809_0039	why don't we	
+3347		Take out	take out	Can you take out the trash tonight?	你今晚可以把垃圾拿出去倒嗎？	A2	daily	phave_list_150_0023	ngsl_2809_1413		take out 在此為「拿出去」
+3348		Go down	gone down	Gas prices have gone down this month.	這個月油價下降了。	B1	news	phave_list_150_0025	ngsl_2809_1188|ngsl_2809_0295|ngsl_2809_0208		go down 在此為「下降」
+3349		Show up	showed up	Only five people showed up to the party.	只有五個人來參加派對。	A2	social	phave_list_150_0026	ngsl_2809_0073|ngsl_spoken_720_0115|ngsl_2809_0056|ngsl_2809_0298		
+3350		Stand up	stand up	Everyone, please stand up.	各位，請起立。	A1	study	phave_list_150_0029	ngsl_2809_0649|ngsl_2809_0470		
+3351		Come down	come down	The price will come down after the holidays.	假期過後價格會降下來。	B1	shopping	phave_list_150_0030	ngsl_2809_0295|ngsl_2809_0741		come down 在此為「降價」
+3352		Go up	went up	The rent went up again this year.	今年房租又漲了。	A2	daily	phave_list_150_0032	ngsl_2809_1565|ngsl_2809_0174|ngsl_2809_0057		
+3353		Look back	look back	When I look back, I don't regret anything.	回想起來，我一點都不後悔。	B1	social	phave_list_150_0033	ngsl_2809_2390|ngsl_2809_0317		look back 在此為「回顧」
+3354		Wake up	woke up	I woke up late this morning.	我今天早上睡過頭了。	A1	daily	phave_list_150_0034	ngsl_2809_0146|ngsl_2809_0433		
+3355		Pull out	pulled out	The dentist pulled out my bad tooth.	牙醫把我那顆壞牙拔掉了。	B1	health	phave_list_150_0038	ngsl_2809_0267|ngsl_2809_2025		pull out 在此為「拔出」
+3356		Turn around	turned around	He turned around and waved goodbye.	他轉過身揮手道別。	A2	social	phave_list_150_0039	ngsl_2809_1157		turn around 在此為「轉身」
+3357		Look down	look down	Don't look down when you're on the ladder.	在梯子上的時候不要往下看。	A2	daily	phave_list_150_0041			look down 在此為「往下看」
+3358		Bring back	brings back	This song brings back so many memories.	這首歌勾起好多回憶。	B1	social	phave_list_150_0043	ngsl_2809_0940|ngsl_2809_0938		bring back 在此為「喚起（回憶）」，屬「帶回」的引申義
+3359		Look out	look out	Look out! There's a car coming.	小心！有車來了。	A2	travel	phave_list_150_0045	ngsl_2809_0259|ngsl_2809_0064		
+3360		Bring in	bring in	We need to bring in more customers.	我們需要吸引更多客人上門。	B1	work	phave_list_150_0046	ngsl_2809_0089|ngsl_2809_0041|ngsl_2809_0486		bring in 在此為「帶來、引進」
+3361		Open up	open up	It took him a while to open up to us.	他花了一段時間才對我們敞開心扉。	B2	social	phave_list_150_0047	ngsl_2809_0154		open up 在此為「敞開心扉」
+3362		Check out	check out	What time do we need to check out?	我們幾點要退房？	A2	travel	phave_list_150_0048	ngsl_2809_0048|ngsl_2809_0089		check out 在此為「退房」
+3363		Put out	put out	They quickly put out the fire.	他們很快就把火撲滅了。	B1	news	phave_list_150_0050	ngsl_2809_0782|ngsl_2809_0612		put out 在此為「熄滅」
+3364		Look around	looking around	We're just looking around, thanks.	我們只是隨便看看，謝謝。	A2	shopping	phave_list_150_0051	ngsl_2809_0063		
+3365		Go in	go in	You go in first, and I'll wait here.	你先進去，我在這裡等。	A1	daily	phave_list_150_0053	ngsl_2809_0077|ngsl_2809_0402		
+3366		Break down	broke down	Our car broke down on the highway.	我們的車在高速公路上拋錨了。	B1	travel	phave_list_150_0054	ngsl_2809_0259		break down 在此為「故障」
+3367		Get off	get off	Let's get off the bus here.	我們在這裡下公車吧。	A1	travel	phave_list_150_0055	ngsl_2809_0809|ngsl_2809_0097		get off 在此為「下車」
+3368		Put down	put down	Put down your phone and eat your dinner.	把手機放下，吃你的晚餐。	A2	food	phave_list_150_0057	ngsl_2809_0478|ngsl_2809_0475|ngsl_2809_1116		put down 在此為「放下」
+3369		Reach out	reach out	Feel free to reach out if you have questions.	有問題的話歡迎隨時聯絡我。	B1	work	phave_list_150_0058	ngsl_2809_0116|ngsl_2809_0394|ngsl_2809_0180		reach out 在此為「聯繫」
+3370		Cut off	cut off	We got cut off in the middle of the call.	我們講到一半電話就斷了。	B1	phone	phave_list_150_0060	ngsl_2809_0835|ngsl_2809_0104		cut off 在此為「（通話）被切斷」
+3371		Pull up	pulled up	A taxi pulled up in front of the hotel.	一輛計程車在飯店門口停了下來。	B1	travel	phave_list_150_0062	ngsl_2809_1147|ngsl_2809_0487|ngsl_2809_0758	in front of	pull up 在此為「（車輛）停下」
+3372		Clean up	clean up	Let's clean up the kitchen after dinner.	晚餐後我們把廚房打掃乾淨吧。	A2	daily	phave_list_150_0064	ngsl_2809_1306|ngsl_2809_0083|ngsl_2809_1116		
+3373		Shut down	shutting down	My laptop keeps shutting down by itself.	我的筆電一直自己關機。	B1	daily	phave_list_150_0065	ngsl_2809_0176	by itself	
+3374		Turn over	turn over	Turn over the pancake when it's golden.	鬆餅變金黃色時就翻面。	B1	food	phave_list_150_0066	ngsl_2809_2652		turn over 在此為「翻轉」
+3375		Slow down	slow down	Slow down! You're driving too fast.	慢一點！你開太快了。	A2	travel	phave_list_150_0067	ngsl_2809_0386|ngsl_2809_0630		
+3376		Wind up	wound up	We wound up eating at a small cafe.	我們最後在一家小咖啡館吃飯。	B2	food	phave_list_150_0068	ngsl_2809_0475|ngsl_2809_0185		wind up 在此為「結果、最後落得」，屬「結束」義的口語用法
+3377		Line up	line up	Please line up at the door.	請在門口排隊。	A2	daily	phave_list_150_0070	ngsl_2809_0470|ngsl_2809_0489		line up 在此為「排隊」
+3378		Take back	take back	I'd like to take back what I said.	我想收回我剛才說的話。	B1	social	phave_list_150_0071	ngsl_2809_0044|ngsl_2809_0029		take back 在此為「收回（話）」
+3379		Go over	go over	Let's go over the report one more time.	我們把報告再檢查一次吧。	B1	work	phave_list_150_0073	ngsl_2809_0165|ngsl_2809_0041|ngsl_2809_0048	one more time	go over 在此為「複查」
+3380		Hang up	hang up	Don't hang up, I'm still here.	別掛電話，我還在。	A2	phone	phave_list_150_0074	ngsl_2809_0118		
+3381		Hold on	Hold on	Hold on, let me get a pen.	等一下，我拿支筆。	A2	daily	phave_list_150_0076	ngsl_2809_2319		hold on 在此為「稍等」
+3382		Pay off	pay off	It took me five years to pay off my loan.	我花了五年才還清貸款。	B1	daily	phave_list_150_0077	ngsl_spoken_720_0115|ngsl_2809_0057|ngsl_2809_1575		pay off 在此為「還清」
+3383		Hold out	hold out	I don't know how long I can hold out.	我不知道自己還能撐多久。	B2	health	phave_list_150_0078	ngsl_2809_0040|ngsl_2809_0114		hold out 在此為「撐住」
+3384		Bring out	brought out	The company brought out a new phone.	這家公司推出了一款新手機。	B1	news	phave_list_150_0080	ngsl_2809_0106|ngsl_2809_0078|ngsl_2809_0478		bring out 在此為「推出」
+3385		Pull back	pulled back	The dog pulled back when I reached for it.	我伸手要摸那隻狗時，牠往後一縮。	B2	daily	phave_list_150_0081	ngsl_2809_0894|ngsl_2809_0379		pull back 在此為「退縮」
+3386		Build up	build up	Exercise helps you build up your strength.	運動可以幫助你增強體力。	B1	health	phave_list_150_0083	ngsl_2809_0916|ngsl_2809_0132|ngsl_2809_1262		
+3387		Throw out	throw out	Can I throw out these old magazines?	我可以把這些舊雜誌丟掉嗎？	A2	daily	phave_list_150_0084	ngsl_2809_0143|ngsl_2809_0984		throw out 在此為「丟棄」
+3388		Hang out	hang out	Do you want to hang out this weekend?	你這週末想出來玩嗎？	A2	social	phave_list_150_0085	ngsl_2809_0075|ngsl_2809_0933		
+3389		Put on	Put on	Put on a jacket. It's cold outside.	穿件外套吧，外面很冷。	A1	daily	phave_list_150_0086	ngsl_2809_2252|ngsl_2809_0866|ngsl_2809_0490		put on 在此為「穿上」
+3390		Get down	Get down	Get down from that chair right now!	馬上從那張椅子上下來！	A2	daily	phave_list_150_0087	ngsl_2809_1059	right now	get down 在此為「下來」
+3391		Come over	come over	Why don't you come over for dinner?	你要不要過來吃晚餐？	A2	social	phave_list_150_0088	ngsl_2809_1116	why don't you	come over 在此為「過來（拜訪）」
+3392		Move in	moved in	My new neighbors moved in last week.	我的新鄰居上週搬進來了。	A2	daily	phave_list_150_0089	ngsl_2809_0078|ngsl_2809_1221|ngsl_2809_0100|ngsl_2809_0156		
+3393		Start out	started out	She started out as a waitress.	她一開始是當服務生。	B1	work	phave_list_150_0090			start out 在此為「起步、一開始」
+3394		Call out	call out	The teacher will call out your name.	老師會叫你的名字。	A2	study	phave_list_150_0091	ngsl_2809_0495|ngsl_2809_0205		call out 在此為「點名、喊出」
+3395		Sit up	Sit up	Sit up straight, please.	請坐直。	A2	health	phave_list_150_0092	ngsl_2809_1071|ngsl_2809_0470		sit up 在此為「坐直」
+3396		Put back	put back	Please put back the books when you're done.	看完請把書放回去。	A2	study	phave_list_150_0095	ngsl_2809_0470|ngsl_2809_0170		
+3397		Send out	send out	We'll send out the invitations on Monday.	我們週一會把邀請函寄出去。	B1	work	phave_list_150_0096	ngsl_2809_2193		send out 在此為「發送」
+3398		Get in	get in	What time does your flight get in?	你的班機幾點到？	A2	travel	phave_list_150_0097	ngsl_2809_0048|ngsl_2809_1218		get in 在此為「到達」
+3399		Blow up	blew up	He blew up when he saw the bill.	他看到帳單時大發脾氣。	B2	social	phave_list_150_0098	ngsl_2809_0049|ngsl_2809_0887		blow up 在此為「發怒」
+3400		Run out	run out	We've run out of milk.	我們的牛奶喝完了。	A2	food	phave_list_150_0102	ngsl_2809_1788	run out of	
+3401		Turn off	turn off	Don't forget to turn off the lights.	別忘了關燈。	A1	daily	phave_list_150_0105	ngsl_2809_0650|ngsl_2809_0348		
+3402		Step back	step back	Please step back from the doors.	請從門邊往後退。	A2	travel	phave_list_150_0107	ngsl_2809_0470|ngsl_2809_0489		
+3403		Lay down	Lay down	Lay down your bags here for now.	先把包包放在這裡吧。	B1	travel	phave_list_150_0108	ngsl_2809_1251|ngsl_2809_0097	for now	lay down 在此為「放下」
+3404		Bring down	bring down	The new tax will bring down prices.	新的稅制會讓物價降低。	B2	news	phave_list_150_0109	ngsl_2809_0078|ngsl_2809_0786|ngsl_2809_0295		bring down 在此為「降低」
+3405		Stand out	stand out	Wear something bright so you stand out.	穿亮一點的衣服，你才會顯眼。	B1	daily	phave_list_150_0110	ngsl_2809_0525|ngsl_2809_0137|ngsl_2809_1509		
+3406		Come along	come along	We're going to the beach. Want to come along?	我們要去海邊，要一起來嗎？	A2	travel	phave_list_150_0111	ngsl_2809_1296|ngsl_2809_0075		come along 在此為「一起來」
+3407		Play out	play out	Let's wait and see how things play out.	我們先等著看事情怎麼發展吧。	B2	work	phave_list_150_0112	ngsl_2809_0402|ngsl_2809_0049|ngsl_2809_0086		play out 在此為「展開、發展」
+3408		Break out	broke out	A fire broke out in the building last night.	昨晚那棟大樓發生火災。	B1	news	phave_list_150_0113	ngsl_2809_0612|ngsl_2809_0220|ngsl_2809_0100|ngsl_2809_0269		
+3409		Go around	going around	There's a cold going around the office.	辦公室裡正在流行感冒。	B1	health	phave_list_150_0114	ngsl_2809_0866|ngsl_2809_0342		go around 在此為「流傳」，指疾病傳染
+3410		Walk out	walked out	Half the audience walked out before the end.	一半的觀眾在結束前就離場了。	B2	social	phave_list_150_0115	ngsl_2809_0364|ngsl_2809_1165|ngsl_2809_0105|ngsl_2809_0151		walk out 在此為「退場」
+3411		Get through	get through	We'll get through this together.	我們會一起度過這一關的。	B1	social	phave_list_150_0116	ngsl_2809_0293		get through 在此為「撐過、度過」，接近「通過」義
+3412		Hold back	hold back	I couldn't hold back my tears.	我忍不住流下眼淚。	B2	social	phave_list_150_0117	ngsl_2809_1469		hold back 在此為「抑制」
+3413		Write down	write down	Let me write down your number.	我把你的號碼寫下來。	A1	phone	phave_list_150_0118	ngsl_2809_0126		
+3414		Move back	move back	Can you move back a little?	你可以往後退一點嗎？	A2	daily	phave_list_150_0119	ngsl_2809_0131	a little	move back 在此為「後退」
+3415		Fill out	fill out	You need to fill out a form first.	你得先填一張表。	A2	official	phave_list_150_0120	ngsl_2809_0089|ngsl_2809_0256|ngsl_2809_0077		
+3416		Sit back	sit back	Just sit back and enjoy the show.	你就坐著好好欣賞表演吧。	B1	social	phave_list_150_0121	ngsl_2809_0063|ngsl_2809_0503|ngsl_2809_0109		sit back 在此為「放鬆」
+3417		Rule out	rule out	The doctor wants to rule out an allergy.	醫生想先排除過敏的可能。	B2	health	phave_list_150_0122	ngsl_2809_0762|ngsl_2809_0075		
+3418		Move up	moved up	Our meeting has been moved up to two o'clock.	我們的會議提前到兩點了。	B1	work	phave_list_150_0123	ngsl_2809_0134|ngsl_spoken_720_0070		move up 在此為「提前、往上移」
+3419		Pick out	pick out	Help me pick out a gift for my mom.	幫我挑一份禮物給我媽。	A2	shopping	phave_list_150_0124	ngsl_2809_0132|ngsl_2809_1426|ngsl_2809_2130		
+3420		Take down	take down	Let me take down your address.	我記一下你的地址。	B1	phone	phave_list_150_0125	ngsl_2809_0557		take down 在此為「記下」
+3421		Get on	get on	Which bus should I get on?	我應該搭哪一班公車？	A2	travel	phave_list_150_0126	ngsl_2809_0809		get on 在此為「上車」
+3422		Give back	give back	I'll give back your umbrella tomorrow.	我明天把傘還你。	A2	daily	phave_list_150_0127	ngsl_2809_0725		
+3423		Sum up	sum up	To sum up, the trip was a success.	總而言之，這趟旅行很成功。	B1	travel	phave_list_150_0129	ngsl_2809_0824|ngsl_2809_0724		
+3424		Move out	moving out	My roommate is moving out next month.	我室友下個月要搬出去。	A2	daily	phave_list_150_0130	ngsl_2809_0150|ngsl_2809_0208		
+3425		Come off	came off	A button came off my shirt.	我襯衫的一顆鈕扣掉了。	A2	daily	phave_list_150_0131	ngsl_2809_2284|ngsl_2809_1906		come off 在此為「脫落」
+3426		Pass on	pass on	Could you pass on this message to Tom?	你可以把這個訊息轉告 Tom 嗎？	B1	work	phave_list_150_0132	ngsl_2809_0862		pass on 在此為「傳遞」
+3427		Take in	take in	There was too much information to take in.	資訊太多了，一時消化不了。	B2	study	phave_list_150_0133	ngsl_2809_0090|ngsl_2809_0212		take in 在此為「理解、吸收」
+3428		Set down	Set down	Set down the box gently.	輕輕把箱子放下。	B1	daily	phave_list_150_0134	ngsl_2809_0860|ngsl_2809_2767		set down 在此為「放下」
+3429		Come through	came through	She really came through for us this time.	這次她真的幫了我們大忙。	B2	social	phave_list_150_0137	ngsl_2809_0103|ngsl_2809_0048		come through 在此為「（關鍵時刻）不負所望」，與「度過難關」義相近但不同，需人工確認
+3430		Settle down	settled down	The kids finally settled down and went to sleep.	孩子們終於安靜下來去睡了。	B1	daily	phave_list_150_0138	ngsl_2809_0528|ngsl_2809_0498|ngsl_2809_0030|ngsl_2809_0826		settle down 在此為「安靜下來」
+3431		Come around	came around	He was against it at first, but he came around.	他一開始反對，後來改變主意了。	B2	social	phave_list_150_0139	ngsl_2809_0223|ngsl_2809_0077	at first	come around 在此為「改變主意」
+3432		Give out	give out	They give out free samples at the store.	那家店會發免費試用品。	B1	shopping	phave_list_150_0141	ngsl_2809_0394|ngsl_2809_1061|ngsl_2809_0616		give out 在此為「分發」
+3433		Give in	gave in	My son kept asking, so I finally gave in.	我兒子一直問，我最後就讓步了。	B1	social	phave_list_150_0142	ngsl_2809_0686|ngsl_2809_0176|ngsl_2809_0133|ngsl_2809_0498		give in 在此為「讓步、屈服」
+3434		Go along	go along	I'll go along with whatever you decide.	你決定怎樣我都配合。	B1	social	phave_list_150_0143	ngsl_2809_0674|ngsl_2809_0358	go along with	go along 在此為「贊同、配合」
+3435		Break off	broke off	They broke off their engagement.	他們解除了婚約。	B2	social	phave_list_150_0144			break off 在此為「斷絕」
+3436		Put off	putting off	Stop putting off your homework.	別再拖延你的功課了。	B1	study	phave_list_150_0145	ngsl_2809_0346		put off 在此為「拖延、推遲」
+3437		Close down	closed down	The bookstore on the corner closed down.	轉角那家書店停業了。	B1	shopping	phave_list_150_0147	ngsl_2809_1187		
+3438		Put in	put in	She put in a lot of time on this project.	她在這個專案上投入了很多時間。	B1	work	phave_list_150_0148	ngsl_2809_0048|ngsl_2809_0517	a lot of	put in 在此為「投入（時間）」
+3439		Set about	set about	We set about cleaning the house.	我們開始動手打掃房子。	B2	daily	phave_list_150_0149	ngsl_2809_0841|ngsl_2809_0164		set about 在此為「著手做」

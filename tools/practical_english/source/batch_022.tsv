@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+2101	2100	formula	formula	Do you remember the formula for this?	你記得這個的公式嗎？	B1	study	ngsl_2809_2100	ngsl_2809_0350		
+2102	2101	alter	alter	Can you alter these pants for me?	你可以幫我修改這條褲子嗎？	B2	shopping	ngsl_2809_2101			alter 在此為「修改（衣服）」
+2103	2102	perceive	perceive	How do others perceive you at work?	同事們怎麼看你？	C1	work	ngsl_2809_2102	ngsl_2809_0053|ngsl_2809_0066		perceive 在此為「看待、認為」
+2104	2103	routine	routine	Exercise is part of my morning routine.	運動是我每天早上的例行活動之一。	B1	health	ngsl_2809_2103	ngsl_2809_0916|ngsl_2809_0129|ngsl_2809_0433	morning routine	
+2105	2104	sink	sink	The sink in the bathroom is blocked.	浴室的洗手台塞住了。	B1	daily	ngsl_2809_2104	ngsl_2809_1019		sink 在此為名詞「水槽、洗手台」，與詞表解釋「下沉」不同
+2106	2105	stare	stare	It's rude to stare at people.	一直盯著別人看很沒禮貌。	B1	social	ngsl_2809_2105	ngsl_2809_0056	stare at ...	
+2107	2106	anymore	anymore	I don't live there anymore.	我已經不住那裡了。	A2	daily	ngsl_2809_2106	ngsl_2809_0152|ngsl_2809_0039	not ... anymore	
+2108	2107	hero	hero	My dad is my hero.	我爸是我的英雄。	A2	social	ngsl_2809_2107	ngsl_2809_1631		
+2109	2108	supporter	supporter	He's a big supporter of the local team.	他是當地球隊的忠實支持者。	B2	social	ngsl_2809_2108	ngsl_2809_0183|ngsl_2809_0299|ngsl_2809_0406		
+2110	2109	convert	convert	Can you convert dollars to euros here?	這裡可以把美元換成歐元嗎？	B2	travel	ngsl_2809_2109	ngsl_2809_0970|ngsl_2809_0097	convert ... to ...	
+2111	2110	steady	steady	She has a steady job now.	她現在有一份穩定的工作。	B1	work	ngsl_2809_2110	ngsl_2809_0230		
+2112	2111	meter	meters	The station is about 500 meters away.	車站大約在 500 公尺外。	A2	travel	ngsl_2809_2111	ngsl_2809_0708|ngsl_2809_0233		
+2113	2112	truck	truck	A big truck is blocking the road.	一台大卡車擋住了路。	A2	travel	ngsl_2809_2112	ngsl_2809_0183|ngsl_2809_1019|ngsl_2809_0520		
+2114	2113	nose	nose	My nose is running.	我在流鼻水。	A2	health	ngsl_2809_2113	ngsl_2809_0191		
+2115	2114	beside	beside	Come and sit beside me.	過來坐我旁邊。	A2	social	ngsl_2809_2114	ngsl_2809_0064|ngsl_2809_0355		
+2116	2115	sail	sailed	We sailed around the island.	我們乘船繞著島航行。	B1	travel	ngsl_2809_2115	ngsl_2809_0169|ngsl_2809_1213		
+2117	2116	disaster	disaster	The party was a total disaster.	那場派對簡直是一場災難。	B1	social	ngsl_2809_2116	ngsl_2809_0298|ngsl_2809_0568		disaster 在此為口語「徹底失敗」
+2118	2117	pace	pace	Walk at your own pace.	按照你自己的步調走就好。	B1	health	ngsl_2809_2117	ngsl_2809_0338|ngsl_2809_0128	at your own pace	
+2119	2118	heavily	heavily	It's raining heavily outside.	外面雨下得很大。	B1	daily	ngsl_2809_2118	ngsl_2809_1231|ngsl_2809_0490		heavily 在此為「（雨）很大地」
+2120	2119	devote	devotes	She devotes her weekends to her kids.	她把週末都奉獻給孩子。	B2	daily	ngsl_2809_2119	ngsl_2809_0933|ngsl_2809_0528	devote ... to ...	
+2121	2120	terrorist	terrorist	The airport increased security after the terrorist threat.	在恐怖攻擊威脅之後，機場加強了安檢。	B2	news	ngsl_2809_2120	ngsl_2809_0229|ngsl_2809_0540|ngsl_2809_1347		2026-10-09 第一輪風險複審保留；主題：新聞／安檢
+2122	2121	justify	justify	How can you justify spending so much?	你怎麼能說花這麼多錢是合理的？	B2	shopping	ngsl_2809_2121	ngsl_2809_0257|ngsl_2809_0090		
+2123	2122	vital	vital	Water is vital on a hot day.	大熱天裡水非常重要。	B2	health	ngsl_2809_2122	ngsl_2809_0321|ngsl_2809_0884|ngsl_2809_0084		
+2124	2123	fascinate	fascinated	Old maps have always fascinated me.	我一直對古地圖很著迷。	B2	daily	ngsl_2809_2123	ngsl_2809_0143|ngsl_2809_1211|ngsl_2809_0182		
+2125	2124	external	external	Please use an external hard drive for backups.	請用外接硬碟做備份。	B2	work	ngsl_2809_2124	ngsl_2809_0470|ngsl_2809_0067|ngsl_2809_0297|ngsl_2809_0386		
+2126	2125	spare	spare	Do you have a spare key?	你有備用鑰匙嗎？	B1	daily	ngsl_2809_2125	ngsl_2809_0658	spare key	
+2127	2126	whenever	whenever	Call me whenever you're free.	你有空的時候隨時打給我。	B1	phone	ngsl_2809_2126	ngsl_2809_0104|ngsl_2809_0394		
+2128	2127	depression	depression	Depression is more common than many people think.	憂鬱症比很多人想的還常見。	B2	health	ngsl_2809_2127	ngsl_2809_0566|ngsl_2809_0098|ngsl_2809_0056|ngsl_2809_0046		
+2129	2128	guilty	guilty	I feel guilty about eating so much cake.	吃了那麼多蛋糕，我覺得有罪惡感。	B1	food	ngsl_2809_2128	ngsl_2809_0116|ngsl_2809_0475|ngsl_2809_0090|ngsl_2809_2172	feel guilty about ...	guilty 在此為「有罪惡感的」
+2130	2129	underlie	underlie	Stress may underlie many health problems.	壓力可能是許多健康問題的根源。	C1	health	ngsl_2809_2129	ngsl_2809_1043|ngsl_2809_0098|ngsl_2809_0474|ngsl_2809_0119		
+2131	2130	mom	mom	I'll ask my mom first.	我先問我媽。	A1	daily	ngsl_2809_2130	ngsl_2809_0133|ngsl_2809_0077		
+2132	2131	distinction	distinction	What's the distinction between these two words?	這兩個字有什麼區別？	B2	study	ngsl_2809_2131	ngsl_spoken_720_0070|ngsl_2809_0216		
+2133	2132	satisfaction	satisfaction	Customer satisfaction is our top priority.	顧客滿意度是我們的首要任務。	B2	work	ngsl_2809_2132	ngsl_2809_0486|ngsl_2809_0374|ngsl_2809_1792		
+2134	2133	incorporate	incorporate	We'll incorporate your ideas into the plan.	我們會把你的想法納入計畫中。	C1	work	ngsl_2809_2133	ngsl_2809_0250|ngsl_2809_0231	incorporate ... into ...	
+2135	2134	pour	pour	Could you pour me some water?	你可以幫我倒點水嗎？	A2	food	ngsl_2809_2134	ngsl_2809_0321		
+2136	2135	sweep	sweep	Can you sweep the kitchen floor?	你可以掃一下廚房地板嗎？	A2	daily	ngsl_2809_2135	ngsl_2809_1306|ngsl_2809_0750		
+2137	2136	obligation	obligation	You're under no obligation to buy.	您沒有義務一定要購買。	B2	shopping	ngsl_2809_2136	ngsl_2809_0241	under no obligation	
+2138	2137	sir	sir	Excuse me, sir, is this your bag?	先生，不好意思，這是您的包包嗎？	A1	travel	ngsl_2809_2137	ngsl_2809_1914|ngsl_2809_1251	Excuse me.	
+2139	2138	evaluate	evaluate	We need to evaluate the results first.	我們得先評估結果。	B2	work	ngsl_2809_2138	ngsl_2809_0089|ngsl_2809_0232|ngsl_2809_0077		
+2140	2139	anger	anger	He couldn't hide his anger.	他藏不住怒氣。	B1	social	ngsl_2809_2139	ngsl_2809_1246		
+2141	2140	pub	pub	Let's meet at the pub after work.	下班後我們在酒吧碰面吧。	A2	social	ngsl_2809_2140	ngsl_2809_0134|ngsl_2809_0066	after work	
+2142	2141	perception	perception	Travel changed my perception of the world.	旅行改變了我對世界的看法。	C1	travel	ngsl_2809_2141	ngsl_2809_0502|ngsl_2809_0112|ngsl_2809_0155		
+2143	2142	naturally	naturally	Just act naturally.	表現自然一點就好。	B1	social	ngsl_2809_2142	ngsl_2809_0514		
+2144	2143	currency	currency	What currency do they use in Japan?	日本用什麼貨幣？	B1	travel	ngsl_2809_2143	ngsl_2809_0067		
+2145	2144	database	database	All customer details are stored in the database.	所有客戶資料都存在資料庫裡。	B2	work	ngsl_2809_2144	ngsl_2809_0486|ngsl_2809_0471|ngsl_2809_0616		
+2146	2145	initially	initially	Initially, I didn't like the city.	一開始我並不喜歡這座城市。	B2	travel	ngsl_2809_2145	ngsl_2809_0044|ngsl_2809_0268		
+2147	2146	territory	territory	The cat doesn't like strangers in its territory.	那隻貓不喜歡陌生人進入牠的地盤。	B2	daily	ngsl_2809_2146	ngsl_2809_1677|ngsl_2809_0044|ngsl_2809_2724		territory 在此為「地盤」
+2148	2147	stream	stream	We had lunch by a small stream.	我們在一條小溪旁吃午餐。	B1	travel	ngsl_2809_2147	ngsl_2809_1333|ngsl_2809_0185		
+2149	2148	rarely	rarely	I rarely eat fast food.	我很少吃速食。	B1	food	ngsl_2809_2148	ngsl_2809_0475|ngsl_2809_0630|ngsl_2809_0366	fast food	
+2150	2149	height	height	What's your height and weight?	你的身高和體重是多少？	A2	health	ngsl_2809_2149	ngsl_2809_0977		
+2151	2150	apparent	apparent	It soon became apparent that we were lost.	我們很快就發現自己迷路了。	C1	travel	ngsl_2809_2150	ngsl_2809_0324|ngsl_2809_0140		
+2152	2151	western	western	I'm not used to western food.	我不習慣吃西式食物。	B1	food	ngsl_2809_2151	ngsl_2809_0366	be used to ...	
+2153	2152	expansion	expansion	The company is planning an expansion overseas.	公司正計畫向海外擴張。	B2	work	ngsl_2809_2152	ngsl_2809_0106|ngsl_2809_0231|ngsl_2809_2314		
+2154	2153	constantly	constantly	My phone is constantly buzzing.	我的手機一直響個不停。	B2	phone	ngsl_2809_2153	ngsl_2809_0478		
+2155	2154	muscle	muscles	My muscles are sore after the gym.	上完健身房，我的肌肉很痠。	B1	health	ngsl_2809_2154			
+2156	2155	scare	scared	You scared me!	你嚇到我了！	A2	social	ngsl_2809_2155			
+2157	2156	badly	badly	I slept badly last night.	我昨晚睡得很不好。	A2	health	ngsl_2809_2156	ngsl_2809_0826|ngsl_2809_0100|ngsl_2809_0269		badly 在此為「很差地」
+2158	2157	everyday	everyday	These are everyday items you'll need.	這些是你會需要的日常用品。	B1	shopping	ngsl_2809_2157	ngsl_2809_0746|ngsl_2809_0089		
+2159	2158	boundary	boundaries	It's important to set boundaries at work.	在職場設立界線很重要。	B2	work	ngsl_2809_2158	ngsl_2809_0189|ngsl_2809_0184|ngsl_2809_0066	set boundaries	boundary 在此為「（人際）界線」
+2160	2159	ratio	ratio	The ratio of students to teachers is ten to one.	師生比是十比一。	B2	study	ngsl_2809_2159	ngsl_2809_0247|ngsl_2809_0495|ngsl_spoken_720_0209|ngsl_2809_0034		
+2161	2160	essay	essay	I have to finish my essay tonight.	我今晚得寫完報告。	B1	study	ngsl_2809_2160	ngsl_2809_0608|ngsl_2809_1413		
+2162	2161	scream	screamed	The kids screamed on the roller coaster.	孩子們在雲霄飛車上尖叫。	B1	travel	ngsl_2809_2161	ngsl_2809_0528		
+2163	2162	withdraw	withdraw	I need to withdraw some cash.	我需要領一些現金。	B1	shopping	ngsl_2809_2162	ngsl_2809_0089|ngsl_2809_1338		withdraw 在此為「提領（錢）」
+2164	2163	pollution	pollution	Air pollution is bad today.	今天空氣污染很嚴重。	B1	health	ngsl_2809_2163	ngsl_2809_0541|ngsl_2809_0267|ngsl_2809_0245		
+2165	2164	disorder	disorder	She was diagnosed with an eating disorder.	她被診斷出有飲食障礙。	C1	health	ngsl_2809_2164	ngsl_2809_0475		disorder 在此為「（身心）失調、障礙」
+2166	2165	furniture	furniture	We need some new furniture for the living room.	我們客廳需要一些新家具。	A2	shopping	ngsl_2809_2165	ngsl_2809_0089|ngsl_2809_0078|ngsl_2809_0253	living room	
+2167	2166	symbol	symbol	The heart is a symbol of love.	愛心是愛的象徵。	B1	daily	ngsl_2809_2166	ngsl_2809_0621|ngsl_2809_0228		
+2168	2167	apartment	apartment	We're looking for a two-bedroom apartment.	我們在找兩房的公寓。	A2	daily	ngsl_2809_2167	ngsl_2809_0074	look for ...	
+2169	2168	demonstration	demonstration	He gave us a demonstration of the new app.	他向我們示範了新的應用程式。	B2	work	ngsl_2809_2168	ngsl_2809_0076|ngsl_2809_0078		demonstration 在此為「示範、展示」，與詞表解釋「示威」不同
+2170	2169	analyst	analyst	She works as a data analyst.	她是一名資料分析師。	B2	work	ngsl_2809_2169	ngsl_2809_0066|ngsl_2809_0555		
+2171	2170	platform	platform	The train leaves from platform 3.	火車從第 3 月台出發。	A2	travel	ngsl_2809_2170	ngsl_2809_0288|ngsl_2809_0125		platform 在此為「月台」
+2172	2171	steel	steel	The bridge is made of steel.	這座橋是用鋼建造的。	B1	daily	ngsl_2809_2171	ngsl_2809_1545	be made of ...	
+2173	2172	cake	cake	Who wants a piece of cake?	誰想吃塊蛋糕？	A1	food	ngsl_2809_2172	ngsl_2809_0075|ngsl_2809_0607	a piece of cake	
+2174	2173	transform	transformed	They transformed the old factory into a café.	他們把舊工廠改造成咖啡館。	B2	daily	ngsl_2809_2173	ngsl_2809_0143|ngsl_2809_1529	transform ... into ...	
+2175	2174	wound	wound	Clean the wound before putting on a bandage.	先把傷口清乾淨再貼繃帶。	B1	health	ngsl_2809_2174	ngsl_2809_0841|ngsl_2809_0138	put on ...	
+2176	2175	restriction	restrictions	There are no age restrictions for this tour.	這個行程沒有年齡限制。	B2	travel	ngsl_2809_2175	ngsl_2809_0281|ngsl_2809_1088		
+2177	2176	foundation	foundation	A good education is a strong foundation.	良好的教育是穩固的基礎。	B2	study	ngsl_2809_2176	ngsl_2809_0055|ngsl_2809_0530|ngsl_2809_0460		
+2178	2177	designer	designer	She wants to be a fashion designer.	她想成為時裝設計師。	B1	work	ngsl_2809_2177	ngsl_2809_0075|ngsl_2809_1414		
+2179	2178	strain	strain	Looking at screens all day puts a strain on your eyes.	整天看螢幕會讓眼睛很吃力。	B2	health	ngsl_2809_2178	ngsl_2809_0074|ngsl_2809_0956|ngsl_2809_0084|ngsl_2809_0138|ngsl_2809_0390		
+2180	2179	innovation	innovation	The company is known for innovation.	這家公司以創新聞名。	B2	work	ngsl_2809_2179	ngsl_2809_0106|ngsl_2809_0040	be known for ...	
+2181	2180	album	album	Have you heard their new album?	你聽過他們的新專輯了嗎？	A2	social	ngsl_2809_2180	ngsl_2809_0177|ngsl_2809_0078		
+2182	2181	singer	singer	She's my favorite singer.	她是我最喜歡的歌手。	A1	social	ngsl_2809_2181	ngsl_2809_0999		
+2183	2182	trail	trail	This trail leads to a waterfall.	這條步道通往一座瀑布。	B1	travel	ngsl_2809_2182	ngsl_2809_0240	lead to ...	
+2184	2183	trap	trap	Don't fall into the trap of buying things you don't need.	別掉進買不需要東西的陷阱。	B2	shopping	ngsl_2809_2183	ngsl_2809_0319|ngsl_2809_0241|ngsl_2809_0086|ngsl_2809_0089	fall into the trap of ...	
+2185	2184	loose	loose	This shirt is a little loose.	這件襯衫有點鬆。	A2	shopping	ngsl_2809_2184	ngsl_2809_1906|ngsl_2809_0131		
+2186	2185	extension	extension	Can I get an extension on the deadline?	截止日期可以延後嗎？	B2	work	ngsl_2809_2185	ngsl_2809_0042		extension 在此為「延期」
+2187	2186	wealth	wealth	Health is more important than wealth.	健康比財富更重要。	B1	health	ngsl_2809_2186	ngsl_2809_0474|ngsl_2809_0189		
+2188	2187	gradually	gradually	The pain is gradually getting better.	疼痛漸漸好轉了。	B1	health	ngsl_2809_2187	ngsl_2809_1149|ngsl_2809_0042|ngsl_2809_0055		
+2189	2188	tank	tank	Please fill up the tank.	請幫我把油箱加滿。	B1	travel	ngsl_2809_2188	ngsl_2809_0470|ngsl_2809_0844	fill up	tank 在此為「油箱」，與詞表解釋「坦克」不同
+2190	2189	evil	evil	The villain in the movie is pure evil.	電影裡的反派壞透了。	B2	daily	ngsl_2809_2189	ngsl_2809_0761|ngsl_2809_2263		evil 在此為名詞「邪惡」
+2191	2190	remarkable	remarkable	She made remarkable progress this year.	她今年進步得很驚人。	B2	study	ngsl_2809_2190	ngsl_2809_0047|ngsl_2809_1100|ngsl_2809_0057		
+2192	2191	tune	tune	I can't get this tune out of my head.	這首曲子一直在我腦中揮之不去。	B1	daily	ngsl_2809_2191	ngsl_2809_0042|ngsl_2809_0258		
+2193	2192	grass	grass	Please keep off the grass.	請勿踐踏草皮。	A2	travel	ngsl_2809_2192	ngsl_2809_0470|ngsl_2809_0176	keep off ...	
+2194	2193	invitation	invitation	Thanks for the invitation!	謝謝你的邀請！	A2	social	ngsl_2809_2193	ngsl_2809_0243		
+2195	2194	transition	transition	The transition to the new system went smoothly.	轉換到新系統的過程很順利。	B2	work	ngsl_2809_2194	ngsl_2809_0078|ngsl_2809_0178		
+2196	2195	frighten	frighten	Loud noises frighten my dog.	大聲的噪音會嚇到我的狗。	B1	daily	ngsl_2809_2195	ngsl_2809_2248|ngsl_2809_1439|ngsl_2809_0894		
+2197	2196	bid	bid	I placed a bid on a used camera online.	我在網路上對一台二手相機出了價。	B2	shopping	ngsl_2809_2196	ngsl_2809_0113|ngsl_2809_1389|ngsl_2809_1793		
+2198	2197	breed	breed	What breed is your dog?	你的狗是什麼品種？	B1	daily	ngsl_2809_2197	ngsl_2809_0894		breed 在此為名詞「品種」，與詞表解釋「繁殖」不同
+2199	2198	extraordinary	extraordinary	The view from the top was extraordinary.	從山頂看出去的景色非凡。	B2	travel	ngsl_2809_2198	ngsl_2809_0292|ngsl_2809_0374		
+2200	2199	brilliant	brilliant	That's a brilliant idea!	這主意太棒了！	B1	social	ngsl_2809_2199	ngsl_2809_0250		

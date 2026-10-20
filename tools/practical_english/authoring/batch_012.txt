@@ -1,0 +1,101 @@
+# NGSL index 1100–1199
+1100|progress|You're making good progress with your English.|你的英文進步很多。|A2|study|make<making,good|make progress|
+1101|truth|Just tell me the truth.|跟我說實話就好。|A2|social|just,tell|tell the truth|
+1102|Nobody|Nobody answered the phone.|沒有人接電話。|A2|phone|answer<answered,phone||
+1103|examined|The doctor examined my throat.|醫生檢查了我的喉嚨。|B1|health|doctor,throat||
+1104|Lay|Lay the towel flat on the floor.|把毛巾平放在地上。|B1|daily|flat,floor||
+1105|speed|What's the speed limit here?|這裡的速限是多少？|A2|travel|limit,here|speed limit|
+1106|politics|I'm not really interested in politics.|我對政治沒什麼興趣。|B1|social|really|be interested in|
+1107|reply|Sorry for the late reply.|抱歉這麼晚才回覆。|A2|work|sorry,late||
+1108|displayed|The prices are displayed on the screen.|價格顯示在螢幕上。|B1|shopping|price<prices,screen||
+1109|transfer|I need to transfer some money to my sister.|我需要轉一筆錢給我妹妹。|B1|daily|need,money,sister||transfer 在此為「轉帳」
+1110|perfect|The weather is perfect for a picnic.|這天氣很適合去野餐。|A2|daily|weather||
+1111|slightly|I feel slightly better today.|我今天覺得好一點了。|B1|health|feel,today||
+1112|Overall|Overall, the trip went really well.|整體來說，這趟旅行很順利。|B1|travel|trip,go<went,really,well||
+1113|intend|I intend to finish this by Friday.|我打算週五前把這個做完。|B1|work|finish|intend to ...|
+1114|users|New users get a free trial for a month.|新用戶可以免費試用一個月。|B1|shopping|new,get,free,trial,month|free trial|
+1115|responded|She hasn't responded to my message yet.|她還沒回覆我的訊息。|B1|phone|message,yet|respond to ...|
+1116|dinner|Let's have dinner together tonight.|我們今晚一起吃晚餐吧。|A1|food|have,together,tonight||
+1117|slow|The internet is really slow today.|今天網路好慢。|A1|daily|really,today||
+1118|Regular|Regular exercise helps you sleep better.|規律運動有助於睡得更好。|B1|health|exercise,help<helps,sleep||
+1119|physical|This job requires a lot of physical work.|這份工作需要大量體力活。|B1|work|job,require<requires,lot,work||
+1120|apart|The two towns are about ten miles apart.|這兩個小鎮相距大約十英里。|B1|travel|two,town<towns,ten,mile<miles||apart 在此為「相距」
+1121|suit|He wore a dark suit to the interview.|他穿深色西裝去面試。|A2|work|wear<wore,dark,interview||
+1122|Federal|Federal holidays are observed in the United States.|美國會在聯邦假日放假。|B2|official|holiday<holidays,observe<observed||美國制度用語；2026-10-09 第一輪風險複審修改
+1123|revealed|She finally revealed her secret.|她終於說出了她的秘密。|B1|social|finally,secret||
+1124|percentage|What percentage of the class passed the test?|班上有多少比例的人考試及格？|B1|study|class,pass<passed,test||
+1125|peace|I just want some peace and quiet.|我只想要清靜一下。|B1|daily|just,want,quiet|peace and quiet|
+1126|status|You can check your order status online.|你可以上網查詢訂單狀態。|B1|shopping|check,order,online|order status|
+1127|Crime|Crime is low in this area.|這一區的犯罪率很低。|B1|news|low,area||
+1128|declined|Sales declined last month.|上個月銷售量下滑了。|B2|work|sale<Sales,last,month||
+1129|decade|I've lived here for almost a decade.|我在這裡住了快十年。|B1|daily|live<lived,here,almost||
+1130|launch|The company will launch a new app next week.|公司下週會推出一款新的應用程式。|B1|work|company,new,next,week||launch 在此為「推出（產品）」
+1131|warned|I warned you it would rain.|我早就跟你說過會下雨了。|A2|daily|rain||
+1132|Consumers|Consumers are spending less this year.|消費者今年花得比較少。|B1|news|spend<spending,less,year||
+1133|favor|Most people are in favor of the plan.|大多數人都支持這個計畫。|B1|work|most,people,plan|in favor of|
+1134|dry|My clothes are still not dry.|我的衣服還沒乾。|A1|daily|clothes,still||
+1135|partner|My business partner and I opened this shop together.|我和事業夥伴一起開了這家店。|B1|work|business,open<opened,shop,together|business partner|
+1136|institution|She works at a research institution.|她在一家研究機構工作。|B2|work|work<works,research||
+1137|spot|We found a great spot for lunch.|我們找到一個吃午餐的好地點。|A2|food|find<found,great,lunch||
+1138|horse|Have you ever ridden a horse?|你騎過馬嗎？|A2|social|ever,ride<ridden||
+1139|eventually|We eventually found the hotel.|我們最後終於找到飯店了。|B1|travel|find<found,hotel||
+1140|heat|I can't stand this heat.|我受不了這種炎熱。|B1|daily|stand|can't stand ...|heat 在此為「炎熱、高溫」
+1141|excited|The news really excited the kids.|這消息讓孩子們好興奮。|B1|daily|news,really,kid<kids||
+1142|readers|This magazine has millions of readers.|這本雜誌有數百萬名讀者。|B1|news|magazine,million<millions||
+1143|importance|My parents taught me the importance of hard work.|我爸媽教會我努力工作的重要性。|B1|work|parent<parents,teach<taught,hard,work||
+1144|distance|The hotel is within walking distance of the beach.|從飯店走路就能到海灘。|B1|travel|hotel,walk<walking,beach|within walking distance|
+1145|guide|This guide lists all the best places to eat.|這本指南列出了所有最好吃的地方。|B1|travel|list<lists,place<places,eat||
+1146|granted|The school granted her a full scholarship.|學校給了她全額獎學金。|B2|study|school,full||
+1147|taxi|Let's take a taxi to the airport.|我們搭計程車去機場吧。|A1|travel|take||
+1148|feed|Could you feed the cat while I'm away?|我不在的時候，可以幫我餵貓嗎？|A2|daily|cat,away||
+1149|pain|I have a pain in my lower back.|我下背會痛。|A2|health|low<lower,back||
+1150|sector|He works in the public sector.|他在公部門工作。|B2|work|work<works,public|public sector|
+1151|mistake|Sorry, I made a mistake.|抱歉，我弄錯了。|A1|social|sorry,make<made|make a mistake|
+1152|ensure|Please ensure all windows are closed.|請確認所有窗戶都已關好。|B2|official|please,window<windows,close<closed||
+1153|satisfy|Nothing seems to satisfy him.|好像什麼都沒辦法讓他滿意。|B1|social|nothing,seem<seems||
+1154|chief|She's the chief engineer on this project.|她是這個專案的首席工程師。|B1|work|engineer,project||
+1155|cool|It's nice and cool in the evening.|傍晚很涼爽舒服。|A2|daily|nice,evening||
+1156|expert|You should ask an expert.|你應該去問問專家。|A2|social|ask||
+1157|waves|The waves are too big for swimming today.|今天浪太大了，不適合游泳。|A2|travel|big,swim<swimming,today||
+1158|south|We're driving south for the holidays.|我們要開車南下過節。|A2|travel|drive<driving,holiday<holidays||
+1159|Labor|Labor costs keep going up.|人工成本一直在上漲。|B2|work|cost<costs,keep,go<going|go up|labor 在此為「人工、勞力」
+1160|surface|The table has a smooth surface.|這張桌子表面很光滑。|B1|daily|table,smooth||
+1161|library|I'm returning these books to the library.|我要把這些書還給圖書館。|A1|study|return<returning,book<books||
+1162|excellent|The food here is excellent.|這裡的食物很棒。|A2|food|food,here||
+1163|edge|Don't put your cup so close to the edge.|杯子不要放得那麼靠邊。|B1|daily|put,cup,close||
+1164|camp|We set up camp near the lake.|我們在湖邊紮營。|B1|travel|set,near,lake|set up camp|
+1165|audience|The audience loved the show.|觀眾很喜歡這場表演。|B1|social|love<loved,show||
+1166|lift|Can you help me lift this box?|你可以幫我抬這個箱子嗎？|A2|daily|help,box||
+1167|procedure|What's the procedure for getting a refund?|退款的程序是什麼？|B2|shopping|get<getting||
+1168|email|I'll send you an email later.|我晚點寄電子郵件給你。|A1|work|send||
+1169|global|She works for a global company.|她在一家跨國公司工作。|B1|work|work<works,company||
+1170|struggled|I struggled to stay awake in class.|我上課時拼命撐著不睡著。|B1|study|stay,class|struggle to ...|
+1171|advertised|We advertised the job online.|我們在網路上刊登了徵才廣告。|B1|work|job,online||advertise 在此為「刊登廣告」
+1172|Select|Select a size from the menu.|從選單中選擇尺寸。|A2|shopping|size,menu||
+1173|surrounded|The house is surrounded by trees.|房子四周都是樹。|B1|daily|house,tree<trees|be surrounded by|
+1174|extent|To some extent, I agree with you.|某種程度上，我同意你的看法。|B2|social|agree|to some extent|
+1175|river|Let's take a walk along the river.|我們沿著河邊散步吧。|A2|travel|take,walk,along|take a walk|
+1176|annual|Our annual meeting is in March.|我們的年度會議在三月。|B1|work|March||
+1177|fully|The hotel is fully booked this weekend.|這個週末飯店全滿了。|B1|travel|hotel,book<booked,weekend|fully booked|
+1178|contrast|There's a big contrast between city and country life.|城市和鄉村生活的差別很大。|B2|daily|big,city,country,life||
+1179|rolled|The ball rolled under the sofa.|球滾到沙發底下了。|A2|daily|ball||
+1180|reality|The reality is that we need more time.|事實是我們需要更多時間。|B1|work|need,time||reality 在此為「現實、實際情況」
+1181|photograph|This old photograph shows my grandparents.|這張老照片裡是我的祖父母。|B1|daily|old,show<shows||
+1182|artist|My sister is a talented artist.|我妹妹是很有天分的藝術家。|A2|social|sister||
+1183|conflict|I have a conflict in my schedule.|我的行程有衝突。|B2|work|schedule||conflict 在此為「（時間）衝突」
+1184|entire|I spent the entire day cleaning.|我花了一整天打掃。|B1|daily|spend<spent,day,clean<cleaning||
+1185|presence|Her presence made everyone feel calm.|有她在，大家都安心多了。|B2|social|make<made,everyone,feel,calm||
+1186|crowd|There was a huge crowd at the concert.|演唱會上人山人海。|B1|social|huge,concert||
+1187|corner|The bakery is just around the corner.|麵包店就在轉角。|A2|travel|just,around|around the corner|
+1188|gas|We need to stop for gas soon.|我們等一下要停下來加油。|A2|travel|need,stop,soon||gas 在此為「汽油」（美式）
+1189|shift|I'm working the night shift this week.|這週我上夜班。|B1|work|work<working,night,week|night shift|shift 在此為「輪班」
+1190|net|The ball hit the net.|球打到網子了。|A2|daily|ball,hit||
+1191|category|Which category does this belong to?|這屬於哪一類？|B1|study|belong||
+1192|secretary|Please leave a message with my secretary.|請留言給我的秘書。|B1|work|please,leave,message|leave a message|
+1193|defense|Our team needs a stronger defense.|我們隊需要更強的防守。|B1|social|team,need<needs,strong<stronger||defense 在此為「（運動）防守」
+1194|quick|I have a quick question.|我有個小問題想問一下。|A1|work|question||
+1195|cook|My dad loves to cook on weekends.|我爸週末很愛下廚。|A1|food|dad,love<loves,weekend<weekends||
+1196|Spread|Spread the butter evenly on the bread.|把奶油均勻抹在麵包上。|B1|food|bread||spread 在此為「塗抹」
+1197|nuclear|There's a nuclear power plant near the town.|小鎮附近有一座核電廠。|B2|news|power,plant,near,town|nuclear power plant|2026-10-09 第一輪風險複審保留；主題：基礎設施
+1198|scale|On a scale of one to ten, how was the movie?|如果滿分十分，這部電影你給幾分？|B1|social|one,ten,movie|on a scale of ... to ...|scale 在此為「評分等級」
+1199|driver|The bus driver was very friendly.|公車司機很友善。|A1|travel|bus,friendly||

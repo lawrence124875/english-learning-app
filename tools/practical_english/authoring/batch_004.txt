@@ -1,0 +1,101 @@
+# NGSL index 300–399
+300|controls|This switch controls the lights.|這個開關控制電燈。|A2|daily|switch,light<lights||
+301|already|I've already eaten, thanks.|我已經吃過了，謝謝。|A1|food|eat<eaten,thank<thanks||
+302|concern|Thank you for your concern.|謝謝你的關心。|B1|social|thank||
+303|product|This product is out of stock.|這項產品缺貨了。|B1|shopping|stock|out of stock|
+304|lose|I always lose my keys.|我老是弄丟鑰匙。|A2|daily|always,key<keys||lose 在此為「遺失」
+305|story|Tell me a story before bed.|睡前講個故事給我聽。|A1|daily|tell,bed||
+306|almost|I'm almost ready.|我快準備好了。|A2|daily|ready||
+307|continue|Please continue, I'm listening.|請繼續說，我在聽。|A2|social|please,listen<listening||
+308|stand|We had to stand on the bus.|我們在公車上只能站著。|A2|travel|bus|have to|
+309|whole|He ate the whole pizza by himself.|他一個人吃掉了一整個披薩。|A2|food|eat<ate,himself|by himself|
+310|yet|I haven't finished yet.|我還沒做完。|A2|daily|finish<finished||
+311|rate|What's the exchange rate today?|今天的匯率是多少？|B1|travel|exchange,today|exchange rate|rate 在此為「匯率」
+312|care|Take care of yourself.|好好照顧自己。|A2|health|take,yourself|take care of|
+313|expect|I didn't expect to see you here!|沒想到會在這裡見到你！|A2|social|see,here||expect 在此為「預期」
+314|effect|The new rule had a good effect.|新規定帶來了不錯的效果。|B1|work|new,rule,good||
+315|sort|What sort of job are you looking for?|你在找哪一類的工作？|B1|work|job,look<looking|look for|sort 在此為「種類」
+316|ever|Have you ever tried sushi?|你吃過壽司嗎？|A2|food|try<tried|Have you ever ...?|sushi 不在詞表
+317|anything|Is there anything I can do to help?|有什麼我能幫忙的嗎？|A2|social|help||
+318|cause|Nobody knows the cause of the fire.|沒有人知道起火的原因。|B1|news|nobody,know<knows,fire||
+319|fall|Be careful not to fall.|小心不要跌倒。|A2|daily|careful||
+320|deal|That's a good deal.|這很划算。|B1|shopping|good|a good deal|deal 在此為「交易、划算的買賣」
+321|water|Could I get a glass of water, please?|可以給我一杯水嗎？|A1|food|get,glass,please|a glass of|
+322|send|I'll send you the file by email.|我會用電子郵件把檔案寄給你。|A2|work|file,email||
+323|allowed|Dogs are not allowed inside.|狗不能進入室內。|B1|travel|dog<Dogs,inside||allowed 為過去分詞
+324|soon|See you soon!|很快再見！|A1|social|see|See you soon.|
+325|watch|My watch stopped working.|我的手錶停了。|A2|daily|stop<stopped,work<working||
+326|based|The film is based on a famous novel.|這部電影改編自一本知名小說。|B1|daily|film,famous,novel|be based on|base 在此為動詞「以……為基礎」
+327|probably|It will probably rain tomorrow.|明天可能會下雨。|A2|daily|rain,tomorrow||
+328|suggest|What do you suggest?|你有什麼建議？|A2|food|||
+329|past|In the past, this was a quiet town.|以前這裡是個安靜的小鎮。|B1|daily|quiet,town|in the past|
+330|power|The power went out last night.|昨晚停電了。|B1|daily|go<went,last,night|The power went out.|power 在此為「電力」
+331|test|I have a math test tomorrow.|我明天有數學考試。|A1|study|tomorrow||math 不在詞表
+332|visited|We visited my grandparents last weekend.|我們上週末去探望了祖父母。|A2|social|last,weekend||grandparents 不在詞表
+333|center|The hotel is in the city center.|飯店在市中心。|A2|travel|hotel,city|city center|
+334|growing|My kids are growing so fast.|我的孩子們長得好快。|A2|daily|kid<kids,fast||
+335|nothing|There's nothing in the fridge.|冰箱裡什麼都沒有。|A1|food|||fridge 不在詞表
+336|return|When do you return from your trip?|你什麼時候旅行回來？|A2|travel|trip||
+337|mother|My mother is a nurse.|我媽媽是護士。|A1|daily|nurse||
+338|walk|I usually walk home after work.|我通常下班後走路回家。|A2|daily|usually,home,after,work||
+339|matter|It doesn't matter.|沒關係。|A2|social||It doesn't matter.|matter 在此為動詞「要緊」
+340|mind|My mind went blank during the test.|考試時我腦袋一片空白。|B1|study|go<went,test|go blank|
+341|value|This restaurant is good value for money.|這家餐廳很物超所值。|B1|food|restaurant,good,money|good value for money|
+342|office|I'll be in the office until six.|我六點前都會在辦公室。|A2|work|until,six||
+343|record|Please keep a record of your expenses.|請把你的開銷記錄下來。|B1|work|please,keep,expense<expenses|keep a record of|record 在此為名詞「紀錄」
+344|staying|How long are you staying?|你要待多久？|A2|travel|long||
+345|force|Don't force yourself to eat.|不要勉強自己吃。|B1|health|yourself,eat||force 在此為動詞「強迫、勉強」，NGSL 中文為「力量」
+346|stop|Does this bus stop at the station?|這班公車有停那個車站嗎？|A1|travel|bus,station||
+347|several|I've called her several times.|我已經打給她好幾次了。|A2|phone|call<called,time<times||
+348|light|Turn off the light, please.|請關燈。|A1|daily|turn,off,please|turn off|light 在此為「燈」
+349|developed|The city has developed quickly.|這座城市發展得很快。|B1|news|city,quickly||
+350|remember|Do you remember my name?|你記得我的名字嗎？|A1|social|name||
+351|bit|I'm a bit tired today.|我今天有點累。|A2|health|today|a bit|
+352|share|Let's share a taxi.|我們一起搭計程車吧。|A2|travel|let<Let's,taxi||
+353|real|Is this real leather?|這是真皮嗎？|B1|shopping|leather||
+354|answered|She hasn't answered my text yet.|她還沒回我訊息。|A2|phone|text,yet||answer 在此為「回覆」
+355|sit|Where would you like to sit?|你想坐哪裡？|A1|food|like||
+356|figures|Sales figures are up this month.|這個月的銷售數字上升了。|B1|work|sale<Sales,month||figures 為複數
+357|letter|I got a letter from my bank.|我收到銀行寄來的信。|A2|daily|get<got,bank||
+358|decided|Have you decided what to order?|你決定好要點什麼了嗎？|A2|food|order||
+359|languages|How many languages do you speak?|你會說幾種語言？|A2|social|many,speak||languages 為複數
+360|subject|What's your favorite subject at school?|你在學校最喜歡哪個科目？|A1|study|favorite,school||subject 在此為「科目」
+361|class|My English class starts at nine.|我的英文課九點開始。|A1|study|start<starts,nine||English 不在詞表
+362|development|She works in product development.|她在產品開發部門工作。|B1|work|work<works,product||
+363|town|It's a small town by the sea.|那是個海邊的小鎮。|A2|travel|small,sea||
+364|half|I'll be there in half an hour.|我半小時後到。|A2|daily|there,hour|half an hour|
+365|minute|I'll be back in a minute.|我馬上回來。|A1|daily|back|in a minute|
+366|food|The food here is amazing.|這裡的食物超好吃。|A1|food|here||
+367|broke|Who broke the window?|誰打破了窗戶？|A2|daily|window||broke 為 break 過去式
+368|clear|Is everything clear?|都清楚了嗎？|A2|study|everything||
+369|future|I want to live abroad in the future.|我將來想住在國外。|B1|daily|want,live,abroad|in the future|
+370|Either|Either day works for me.|哪一天我都可以。|B1|social|day,work<works||
+371|ago|I moved here two years ago.|我兩年前搬來這裡。|A2|daily|move<moved,here,two,year<years||
+372|per|It costs twenty dollars per person.|每人二十美元。|B1|shopping|cost<costs,twenty,dollar<dollars,person||
+373|remain|Please remain seated.|請留在座位上。|B1|travel|please||
+374|top|The keys are on top of the fridge.|鑰匙在冰箱上面。|A2|daily|key<keys|on top of|
+375|among|She is popular among her classmates.|她在同學之間很受歡迎。|B1|study|popular||
+376|won|Our team won the game!|我們隊贏了比賽！|A2|social|team,game||won 為 win 過去式
+377|color|What color do you want?|你要什麼顏色？|A1|shopping|want||
+378|involves|The job involves a lot of travel.|這份工作需要經常出差。|B1|work|job,lot,travel||
+379|reached|We reached the hotel at midnight.|我們半夜才到飯店。|B1|travel|hotel||
+380|social|She's very active on social media.|她在社群媒體上很活躍。|B1|social|very,active|social media|
+381|period|The trial period is one month.|試用期是一個月。|B1|work|trial,month|trial period|
+382|across|The bank is across the street.|銀行在對街。|A2|travel|bank,street|across the street|
+383|notes|Can I borrow your notes?|我可以借你的筆記嗎？|A2|study|borrow||notes 為複數
+384|history|I'm interested in history.|我對歷史有興趣。|A2|study||be interested in|
+385|create|Please create a new password.|請設定新密碼。|B1|official|please,new||create 在此為「建立（密碼、帳號）」
+386|drive|Can you drive me to the airport?|你可以開車載我去機場嗎？|A2|travel|||airport 不在詞表
+387|along|Walk along the river for five minutes.|沿著河走五分鐘。|A2|travel|walk,river,five,minute<minutes||
+388|type|What type of room would you like?|您想要哪一種房型？|A2|travel|room,like||type 在此為「類型」
+389|sounds|That sounds great!|聽起來很棒！|A1|social|great||sound 在此為「聽起來」
+390|eye|I have something in my eye.|我眼睛裡有東西。|A2|health|something||
+391|music|I listen to music on the way to work.|我上班途中會聽音樂。|A2|daily|listen,way,work|on the way to|
+392|game|Do you want to play a game?|你想玩個遊戲嗎？|A1|social|want,play||
+393|political|We don't talk about political topics at work.|我們上班時不聊政治話題。|B2|work|talk,topic<topics,work||
+394|free|Are you free this evening?|你今晚有空嗎？|A1|social|evening||free 在此為「有空」
+395|receive|Did you receive my email?|你有收到我的電子郵件嗎？|A2|work|email||
+396|moment|Just a moment, please.|請稍候。|A2|phone|just,please|Just a moment.|
+397|sale|Is this jacket on sale?|這件夾克有特價嗎？|A2|shopping|jacket|on sale|sale 在此為「特價」
+398|policy|What's your return policy?|你們的退貨規定是什麼？|B1|shopping|return||policy 在此為「（商店的）規定」
+399|further|Do you have any further questions?|你還有其他問題嗎？|B1|work|any,question<questions||

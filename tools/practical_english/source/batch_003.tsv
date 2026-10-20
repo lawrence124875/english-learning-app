@@ -1,0 +1,101 @@
+id	ngsl_index	word	form	sentence	zh-TW	level	category	primary_word_id	secondary_word_ids	phrase_candidate	tagging_notes
+201	200	money	money	I don't have enough money with me.	我身上的錢不夠。	A1	shopping	ngsl_2809_0200	ngsl_2809_0266		
+202	201	fact	fact	In fact, I've never been there.	事實上，我從來沒去過那裡。	A2	social	ngsl_2809_0201	ngsl_2809_0161|ngsl_2809_0039	in fact	
+203	202	however	However	It was expensive. However, the food was great.	很貴。不過，食物很棒。	B1	food	ngsl_2809_0202	ngsl_2809_1060|ngsl_2809_0366|ngsl_2809_0123		
+204	203	area	area	Is there a parking area nearby?	附近有停車區嗎？	A2	travel	ngsl_2809_0203	ngsl_2809_0656|ngsl_2809_1894		
+205	204	provide	provides	The hotel provides free breakfast.	飯店提供免費早餐。	B1	travel	ngsl_2809_0204	ngsl_2809_0758|ngsl_2809_0394|ngsl_2809_1818		free 在此為「免費」
+206	205	name	name	My name is Lisa.	我的名字是 Lisa。	A1	social	ngsl_2809_0205			
+207	206	read	read	I like to read before bed.	我喜歡睡前看書。	A1	daily	ngsl_2809_0206	ngsl_2809_0044|ngsl_2809_0693	before bed	
+208	207	friend	friend	She is my best friend.	她是我最好的朋友。	A1	social	ngsl_2809_0207		best friend	best 不在詞表
+209	208	month	month	I visit my parents once a month.	我每個月去看我爸媽一次。	A1	daily	ngsl_2809_0208	ngsl_2809_0332|ngsl_2809_0296|ngsl_2809_0264	once a month	
+210	209	large	large	Can I get a large coffee?	我可以點一杯大杯咖啡嗎？	A1	food	ngsl_2809_0209	ngsl_2809_0042|ngsl_2809_1394		
+211	210	business	business	I'm here on business.	我是來出差的。	A2	travel	ngsl_2809_0210	ngsl_2809_0097	on business	
+212	211	without	without	I can't live without my phone.	沒有手機我活不下去。	A2	daily	ngsl_2809_0211	ngsl_2809_0152|ngsl_2809_0478		
+213	212	information	information	Where can I get more information?	我可以在哪裡得到更多資訊？	A2	travel	ngsl_2809_0212	ngsl_2809_0085|ngsl_2809_0042|ngsl_2809_0041		
+214	213	open	open	Is the museum open today?	博物館今天有開嗎？	A1	travel	ngsl_2809_0213	ngsl_2809_1396|ngsl_2809_0245		
+215	214	order	order	Are you ready to order?	您準備好點餐了嗎？	A1	food	ngsl_2809_0214	ngsl_2809_0773		order 在此為動詞「點餐」
+216	215	government	government	The government will build a new bridge.	政府將蓋一座新橋。	B1	news	ngsl_2809_0215	ngsl_2809_0220|ngsl_2809_0078|ngsl_2809_1545		
+217	216	word	word	I don't know this word.	我不認識這個字。	A1	study	ngsl_2809_0216	ngsl_2809_0040		
+218	217	issue	issue	We have an issue with the payment.	付款方面有點問題。	B1	work	ngsl_2809_0217	ngsl_2809_1267		
+219	218	market	market	We buy fruit at the night market.	我們在夜市買水果。	A1	shopping	ngsl_2809_0218	ngsl_2809_0241|ngsl_2809_1639|ngsl_2809_0269	night market	
+220	219	pay	pay	Can I pay by credit card?	我可以用信用卡付款嗎？	A1	shopping	ngsl_2809_0219	ngsl_2809_0943|ngsl_2809_0780	pay by card	
+221	220	build	build	They want to build a new school here.	他們想在這裡蓋一所新學校。	A2	news	ngsl_2809_0220	ngsl_2809_0075|ngsl_2809_0078|ngsl_2809_0145|ngsl_2809_0097		
+222	221	hold	hold	Can you hold my bag for a second?	你可以幫我拿一下包包嗎？	A2	daily	ngsl_2809_0221	ngsl_2809_1251|ngsl_2809_0225		hold 在此為「拿著」
+223	222	service	service	The service here is excellent.	這裡的服務非常好。	B1	food	ngsl_2809_0222	ngsl_2809_0097|ngsl_2809_1162		
+224	223	against	against	Lean your bike against the wall.	把腳踏車靠在牆上。	B1	daily	ngsl_2809_0223	ngsl_2809_1978|ngsl_2809_0721		
+225	224	believe	believe	I can't believe it!	我真不敢相信！	A2	social	ngsl_2809_0224			
+226	225	second	second	Wait a second, please.	請稍等一下。	A1	daily	ngsl_2809_0225	ngsl_2809_0402|ngsl_2809_0470	Wait a second.	second 在此為「片刻」
+227	226	though	though	It was cold. I enjoyed the walk, though.	天氣很冷，不過我散步散得很開心。	B1	daily	ngsl_2809_0226	ngsl_2809_0866|ngsl_2809_0503|ngsl_2809_0338		though 在句尾作副詞
+228	227	yes	Yes	Yes, I'd love to.	好啊，我很樂意。	A1	social	ngsl_2809_0227	ngsl_2809_0228	I'd love to.	
+229	228	love	love	I love this city.	我好愛這座城市。	A1	travel	ngsl_2809_0228	ngsl_2809_0268		
+230	229	increase	increase	The price will increase next year.	明年價格會上漲。	B1	shopping	ngsl_2809_0229	ngsl_2809_0295|ngsl_2809_0150|ngsl_2809_0057		
+231	230	job	job	She found a new job.	她找到一份新工作。	A1	work	ngsl_2809_0230	ngsl_2809_0080|ngsl_2809_0078		
+232	231	plan	plans	What are your plans for the weekend?	你週末有什麼計畫？	A1	social	ngsl_2809_0231	ngsl_2809_0933		plans 為複數
+233	232	result	results	The test results will be ready tomorrow.	檢查結果明天會出來。	B1	health	ngsl_2809_0232	ngsl_2809_0331|ngsl_2809_0773|ngsl_2809_0725		results 為複數
+234	233	away	away	Please don't go away.	請不要走開。	A1	daily	ngsl_2809_0233	ngsl_2809_0470|ngsl_2809_0030	go away	
+235	234	example	example	Can you give me an example?	你可以舉個例子嗎？	A2	study	ngsl_2809_0234	ngsl_2809_0076	for example	
+236	235	happen	happened	What happened?	發生了什麼事？	A1	daily	ngsl_2809_0235	ngsl_2809_0050		
+237	236	offer	offered	They offered me a job.	他們給了我一份工作。	B1	work	ngsl_2809_0236	ngsl_2809_0230		
+238	237	young	young	She looks young for her age.	以她的年紀來說，她看起來很年輕。	A2	social	ngsl_2809_0237	ngsl_2809_0074|ngsl_2809_0281	for her age	
+239	238	close	close	What time do you close?	你們幾點打烊？	A1	shopping	ngsl_2809_0238	ngsl_2809_0048		close 在此為「打烊」
+240	239	program	program	I watch this TV program every week.	我每週都看這個電視節目。	A2	daily	ngsl_2809_0239	ngsl_2809_0325|ngsl_2809_0179|ngsl_2809_0156		program 在此為「節目」，NGSL 中文為「程式」
+241	240	lead	leads	This road leads to the beach.	這條路通往海灘。	B1	travel	ngsl_2809_0240	ngsl_2809_0520|ngsl_2809_1296		lead 在此為「通往」
+242	241	buy	buy	I want to buy a gift for my mom.	我想買一份禮物給我媽媽。	A1	shopping	ngsl_2809_0241	ngsl_2809_0075|ngsl_2809_1426	buy ... for ...	mom 不在詞表
+243	242	understand	understand	I don't understand the question.	我不懂這個問題。	A1	study	ngsl_2809_0242	ngsl_2809_0180		
+244	243	thank	Thank	Thank you for coming.	謝謝你來。	A1	social	ngsl_2809_0243	ngsl_2809_0064	Thank you for ...	
+245	244	far	far	Is it far from here?	離這裡很遠嗎？	A1	travel	ngsl_2809_0244	ngsl_2809_0097	far from	
+246	245	today	today	What's the date today?	今天幾月幾號？	A1	daily	ngsl_2809_0245	ngsl_2809_0482		
+247	246	hour	hours	The flight takes two hours.	飛行時間是兩小時。	A2	travel	ngsl_2809_0246	ngsl_2809_1218|ngsl_2809_0058		
+248	247	student	student	I'm a student at this university.	我是這所大學的學生。	A1	study	ngsl_2809_0247	ngsl_2809_0967		
+249	248	face	face	Wash your face before bed.	睡前要洗臉。	A1	daily	ngsl_2809_0248	ngsl_2809_1367|ngsl_2809_0693		
+250	249	hope	hope	I hope you feel better soon.	希望你早日康復。	A2	health	ngsl_2809_0249	ngsl_2809_0116|ngsl_2809_0324		
+251	250	idea	idea	I have no idea.	我完全不知道。	A2	social	ngsl_2809_0250		I have no idea.	
+252	251	cost	cost	The trip will cost about five hundred dollars.	這趟旅行大約要花五百美元。	A2	travel	ngsl_2809_0251	ngsl_2809_0824|ngsl_2809_0036|ngsl_spoken_720_0115|ngsl_spoken_720_0153|ngsl_2809_0970		
+253	252	less	less	I want to spend less money this month.	我這個月想少花點錢。	A2	daily	ngsl_2809_0252	ngsl_2809_0075|ngsl_2809_0257|ngsl_2809_0200|ngsl_2809_0208		
+254	253	room	room	Do you have a room for tonight?	今晚有空房嗎？	A1	travel	ngsl_2809_0253	ngsl_2809_1413		
+255	254	until	until	The store is open until ten.	那家店開到十點。	A1	shopping	ngsl_2809_0254	ngsl_2809_0616|ngsl_2809_0213|ngsl_spoken_720_0209		
+256	255	reason	reason	Is there a reason for the delay?	延誤有什麼原因嗎？	B1	travel	ngsl_2809_0255	ngsl_2809_1309		
+257	256	form	form	Please fill out this form.	請填寫這張表格。	A2	official	ngsl_2809_0256	ngsl_2809_0470|phave_list_150_0120	fill out a form	
+258	257	spend	spend	How do you spend your weekends?	你週末都怎麼過？	A2	social	ngsl_2809_0257	ngsl_2809_0092|ngsl_2809_0933		
+259	258	head	head	My head hurts.	我頭痛。	A1	health	ngsl_2809_0258	ngsl_2809_1420		
+260	259	car	car	Where did you park your car?	你把車停在哪裡？	A1	travel	ngsl_2809_0259	ngsl_2809_0085|ngsl_2809_0656		
+261	260	learn	learning	I'm learning to cook.	我正在學做菜。	A1	daily	ngsl_2809_0260	ngsl_2809_1195		
+262	261	level	level	What's your English level?	你的英文程度如何？	A2	study	ngsl_2809_0261			English 不在詞表
+263	262	person	person	She is a very kind person.	她是個很親切的人。	A1	social	ngsl_2809_0262	ngsl_2809_0062|ngsl_2809_0175		kind 在此為「親切」
+264	263	experience	experience	Do you have any work experience?	你有任何工作經驗嗎？	B1	work	ngsl_2809_0263	ngsl_2809_0082|ngsl_2809_0066		
+265	264	once	once	I've been to Japan once.	我去過日本一次。	A2	travel	ngsl_2809_0264			Japan 不在詞表
+266	265	member	member	Are you a member?	你是會員嗎？	A2	shopping	ngsl_2809_0265			
+267	266	enough	enough	Is that enough for everyone?	那樣夠大家用嗎？	A2	daily	ngsl_2809_0266	ngsl_2809_0649		
+268	267	bad	bad	The weather is bad today.	今天天氣很糟。	A1	daily	ngsl_2809_0267	ngsl_2809_1067|ngsl_2809_0245		
+269	268	city	city	Taipei is a busy city.	台北是個繁忙的城市。	A1	travel	ngsl_2809_0268	ngsl_2809_1232		Taipei 不在詞表
+270	269	night	night	Good night, sleep well.	晚安，睡個好覺。	A1	daily	ngsl_2809_0269	ngsl_2809_0055|ngsl_2809_0826|ngsl_2809_0060	Good night.	
+271	270	able	able	Will you be able to come?	你能來嗎？	A2	social	ngsl_2809_0270	ngsl_2809_0064	be able to	
+272	271	support	support	Thank you for your support.	謝謝你的支持。	A2	social	ngsl_2809_0271	ngsl_2809_0243		
+273	272	whether	whether	I don't know whether he is coming.	我不知道他會不會來。	B1	social	ngsl_2809_0272	ngsl_2809_0040|ngsl_2809_0064		
+274	273	line	line	There's a long line at the counter.	櫃台前大排長龍。	A2	shopping	ngsl_2809_0273	ngsl_2809_0114|ngsl_2809_2411		line 在此為「隊伍」，NGSL 中文為「線」
+275	274	present	present	I bought a present for you.	我買了一份禮物給你。	A1	social	ngsl_2809_0274	ngsl_2809_0241		present 在此為「禮物」
+276	275	side	side	The bathroom is on the left side.	洗手間在左手邊。	A2	travel	ngsl_2809_0275	ngsl_2809_1219		bathroom 不在詞表
+277	276	quite	quite	The food was quite good.	食物相當不錯。	A2	food	ngsl_2809_0276	ngsl_2809_0366|ngsl_2809_0055		
+278	277	although	Although	Although it was raining, we went out.	雖然在下雨，我們還是出門了。	B1	daily	ngsl_2809_0277	ngsl_2809_1231|ngsl_2809_0030	go out	
+279	278	sure	sure	Are you sure?	你確定嗎？	A1	social	ngsl_2809_0278			
+280	279	term	term	What does this term mean?	這個術語是什麼意思？	B1	study	ngsl_2809_0279	ngsl_2809_0094		
+281	280	least	least	You should sleep at least seven hours.	你應該至少睡七個小時。	A2	health	ngsl_2809_0280	ngsl_2809_0088|ngsl_2809_0826|ngsl_spoken_720_0233|ngsl_2809_0246	at least	
+282	281	age	age	What age do kids start school here?	這裡的小孩幾歲開始上學？	A2	study	ngsl_2809_0281	ngsl_2809_0528|ngsl_2809_0135|ngsl_2809_0145|ngsl_2809_0097		
+283	282	low	low	The prices are low here.	這裡的價格很低。	A2	shopping	ngsl_2809_0282	ngsl_2809_0295|ngsl_2809_0097		
+284	283	speak	speak	Do you speak Chinese?	你會說中文嗎？	A1	social	ngsl_2809_0283			Chinese 不在詞表
+285	284	within	within	We will reply within two days.	我們會在兩天內回覆。	B1	work	ngsl_2809_0284	ngsl_2809_1107|ngsl_2809_0084		
+286	285	process	process	The process takes about a week.	這個流程大約需要一週。	B1	work	ngsl_2809_0285	ngsl_2809_0058|ngsl_2809_0036|ngsl_2809_0156		
+287	286	public	public	Is there public transport to the airport?	有大眾運輸可以到機場嗎？	B1	travel	ngsl_2809_0286	ngsl_2809_1209		airport 不在詞表
+288	287	often	often	How often do you exercise?	你多久運動一次？	A2	health	ngsl_2809_0287	ngsl_2809_0092|ngsl_2809_0916	How often ...?	
+289	288	train	train	The train is late again.	火車又誤點了。	A1	travel	ngsl_2809_0288	ngsl_2809_0146|ngsl_2809_0174		train 用「火車」詞義
+290	289	possible	possible	Is it possible to change the date?	可以改日期嗎？	A2	travel	ngsl_2809_0289	ngsl_2809_0112|ngsl_2809_0482	Is it possible to ...?	
+291	290	actually	actually	Actually, I changed my mind.	其實我改變主意了。	B1	social	ngsl_2809_0290	ngsl_2809_0112|ngsl_2809_0340	change my mind	
+292	291	rather	rather	I'd rather stay home tonight.	我今晚寧願待在家。	B1	daily	ngsl_2809_0291	ngsl_2809_0344|ngsl_2809_0160|ngsl_2809_1413	would rather	
+293	292	view	view	The view from the top is amazing.	從上面看出去的景色很棒。	A2	travel	ngsl_2809_0292	ngsl_2809_0374		view 在此為「景色」，NGSL 中文為「觀點」
+294	293	together	together	Let's have lunch together.	我們一起吃午餐吧。	A1	food	ngsl_2809_0293	ngsl_2809_0173|ngsl_2809_0007|ngsl_2809_1333		
+295	294	consider	consider	We will consider your idea.	我們會考慮你的想法。	B1	work	ngsl_2809_0294	ngsl_2809_0250		
+296	295	price	price	What is the price of this bag?	這個包包多少錢？	A1	shopping	ngsl_2809_0295	ngsl_2809_1251		
+297	296	parent	parents	My parents live in the country.	我爸媽住在鄉下。	A2	daily	ngsl_2809_0296	ngsl_2809_0152|ngsl_2809_0142		parents 為 parent 複數；country 在此為「鄉下」
+298	297	hard	hard	She works very hard.	她工作非常努力。	A1	work	ngsl_2809_0297	ngsl_2809_0066|ngsl_2809_0062		
+299	298	party	party	Are you coming to the party?	你會來參加派對嗎？	A1	social	ngsl_2809_0298	ngsl_2809_0064		
+300	299	local	local	Try the local food.	試試當地的食物。	A2	food	ngsl_2809_0299	ngsl_2809_0124|ngsl_2809_0366		

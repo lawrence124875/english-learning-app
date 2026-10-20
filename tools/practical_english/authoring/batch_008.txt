@@ -1,0 +1,101 @@
+# NGSL index 700–799
+700|guy|He's a really nice guy.|他人真的很好。|A2|social|really,nice||guy 為口語用法
+701|function|What's the function of this button?|這個按鈕是什麼功能？|B1|daily|button||
+702|yesterday|I called you yesterday.|我昨天有打給你。|A1|phone|call<called||
+703|image|The image on the screen is too dark.|螢幕上的畫面太暗了。|B1|daily|screen,dark||
+704|size|Do you have this in a smaller size?|這件有小一點的尺寸嗎？|A2|shopping|small<smaller||
+705|behavior|His behavior at the party was a bit strange.|他在派對上的舉動有點奇怪。|B1|social|party,bit,strange|a bit|
+706|addition|In addition, we need more chairs.|另外，我們還需要更多椅子。|B1|work|need,more,chair<chairs|in addition|addition 在此為片語「另外、此外」
+707|determine|The weather will determine our plans.|天氣會決定我們的計畫。|B2|travel|weather,plan<plans||
+708|station|Where is the nearest train station?|最近的火車站在哪裡？|A1|travel|near<nearest,train|train station|
+709|population|The city has a population of two million.|這座城市有兩百萬人口。|B1|travel|city,two,million||
+710|fail|Don't worry if you fail the first time.|第一次失敗也別擔心。|B1|study|worry,first,time|the first time|
+711|environment|We should protect the environment.|我們應該保護環境。|B1|daily|protect||
+712|production|Production will start next month.|下個月開始生產。|B2|work|start,next,month||
+713|contract|Please read the contract before you sign it.|簽約前請先看過合約。|B1|work|please,read,sign||
+714|player|He's the best player on the team.|他是隊上最好的球員。|A2|social|team||player 在此為「球員」
+715|comments|Do you have any comments?|你有任何意見嗎？|B1|work|||comments 在此為「意見」
+716|enter|Please enter your password.|請輸入你的密碼。|A2|daily|please||enter 在此為「輸入」
+717|occur|The problem may occur again.|這個問題可能會再發生。|B2|work|problem,may,again||
+718|alone|I don't like eating alone.|我不喜歡一個人吃飯。|A2|food|like,eat<eating||
+719|significant|There has been a significant change in the price.|價格有了明顯的變動。|B2|shopping|change,price||significant 在此為「明顯的、顯著的」
+720|drug|This drug can make you feel sleepy.|這種藥可能會讓你想睡。|B1|health|make,feel||drug 在此為「藥物」
+721|wall|Can I hang this picture on the wall?|我可以把這幅畫掛在牆上嗎？|A2|daily|hang,picture||
+722|series|I watched the whole series in one weekend.|我一個週末就把整部影集看完了。|B1|daily|watch<watched,whole,weekend||series 在此為「影集」
+723|direct|Is there a direct flight to Tokyo?|有直飛東京的班機嗎？|A2|travel|flight|direct flight|
+724|success|Thanks for making the event a success.|謝謝大家讓這次活動圓滿成功。|B1|work|thank<Thanks,make<making,event||
+725|tomorrow|Let's talk about it tomorrow.|我們明天再談吧。|A1|social|talk||
+726|director|The director wants to see you.|主任想見你。|B1|work|want<wants,see||
+727|clearly|Please speak more clearly.|請說得更清楚一點。|A2|social|please,speak,more||
+728|lack|Lack of sleep makes me tired.|睡眠不足讓我很累。|B1|health|sleep,make<makes|lack of|
+729|review|Let's review the plan again.|我們再檢查一次計畫吧。|B1|work|plan,again||review 在此為「檢查、複審」
+730|depends|It depends on the weather.|那要看天氣。|A2|daily|weather|depend on|depends 為第三人稱單數
+731|race|He came second in the race.|他在比賽中拿了第二名。|A2|social|come<came,second||race 在此為「賽跑、比賽」，NGSL 中文為「種族」
+732|recognize|I didn't recognize you with short hair.|你剪了短髮，我都認不出你了。|B1|social|short,hair||recognize 在此為「認出」
+733|window|Could you open the window?|你可以開一下窗戶嗎？|A1|daily|open||
+734|purpose|What's the purpose of your visit?|你此行的目的是什麼？|B1|travel|visit||
+735|department|Which department do you work in?|你在哪個部門工作？|A2|work|work||
+736|gained|I gained two kilos on vacation.|我度假時胖了兩公斤。|B1|health|two||gain 在此為「增加（體重）」
+737|tree|Let's sit under that tree.|我們坐在那棵樹下吧。|A1|daily|sit,under||
+738|college|My sister is in college now.|我姊姊現在在讀大學。|A2|study|sister,now|in college|
+739|argue|They often argue about money.|他們常為了錢吵架。|B1|social|often,money|argue about|argue 在此為「爭吵」
+740|board|The board will meet next week.|董事會下週要開會。|B2|work|meet,next,week||
+741|holiday|Are you going anywhere for the holiday?|假期你有要去哪裡嗎？|A2|travel|go<going,anywhere||
+742|mark|Please mark the important parts.|請把重要的部分標起來。|A2|study|please,important,part<parts||
+743|church|There's an old church in the town center.|鎮中心有一座古老的教堂。|A2|travel|old,town,center||
+744|machine|The coffee machine is broken.|咖啡機壞了。|A2|work|coffee,break<broken||
+745|achieve|You can achieve your goals if you work hard.|只要努力，你就能達成目標。|B1|study|goal<goals,work,hard|work hard|
+746|item|You can only bring one item.|你只能帶一件物品。|A2|travel|only,bring,one||
+747|prove|Can you prove that you paid?|你能證明你已經付錢了嗎？|B1|shopping|pay<paid||
+748|cents|It costs ninety-nine cents.|這個要九十九分錢。|A2|shopping|cost<costs||cents 為複數
+749|season|Summer is my favorite season.|夏天是我最喜歡的季節。|A1|daily|summer,favorite||
+750|floor|My office is on the third floor.|我的辦公室在三樓。|A1|work|office||floor 在此為「樓層」，NGSL 中文為「地板」
+751|stuff|I need to buy some stuff for the trip.|我要買些旅行要用的東西。|A2|shopping|need,buy,trip||stuff 為口語
+752|wide|The road isn't wide enough for two cars.|這條路不夠寬，兩台車過不去。|B1|travel|road,enough,two,car<cars||
+753|anyone|Does anyone have a pen?|有人有筆嗎？|A1|study|pen||
+754|method|This method saves a lot of time.|這個方法可以省很多時間。|B1|work|save<saves,lot,time|a lot of|
+755|analysis|The analysis will take a few days.|分析需要幾天時間。|B2|work|take,few,day<days||
+756|election|Who do you think will win the election?|你覺得誰會贏得這次選舉？|B1|news|think,win||
+757|military|My brother is doing his military service.|我哥哥正在服兵役。|B1|daily|brother,service|military service|military 在此為形容詞「軍事的」
+758|hotel|I booked a hotel near the beach.|我訂了一間海邊附近的飯店。|A1|travel|book<booked,near,beach||
+759|club|I joined a book club.|我參加了一個讀書會。|A2|social|join<joined,book|book club|
+760|below|Please write your answer below.|請把答案寫在下面。|A2|study|please,write,answer||below 在此為「在下面」，NGSL 中文為「低於」
+761|movie|Do you want to see a movie tonight?|你今晚想看電影嗎？|A1|social|want,see,tonight||
+762|doctor|The doctor will see you now.|醫生現在可以看你了。|A2|health|see,now||
+763|discussion|We had a long discussion about it.|我們針對這件事討論了很久。|B1|work|long||
+764|sorry|I'm sorry to hear that.|聽到這件事我很遺憾。|A2|social|hear|sorry to hear that|sorry 在此為「遺憾的」
+765|challenge|Learning a new language is a real challenge.|學一種新語言真的是個挑戰。|B1|study|learn<Learning,new,language,real||
+766|nation|The whole nation watched the game.|全國都在看這場比賽。|B2|news|whole,watch<watched,game||
+767|nearly|I nearly missed the bus.|我差點沒趕上公車。|B1|travel|miss<missed,bus||
+768|statement|The company will make a statement tomorrow.|公司明天會發表聲明。|B2|news|company,make,tomorrow|make a statement|
+769|link|I'll send you the link.|我再把連結傳給你。|A2|phone|send||
+770|despite|We went out despite the rain.|儘管下雨，我們還是出門了。|B1|daily|go<went,out,rain|go out|
+771|introduce|Let me introduce myself.|讓我自我介紹一下。|A2|social|let|introduce myself|
+772|advantage|Living near work is a big advantage.|住得離公司近是一大優點。|B1|work|live<Living,near,work,big||
+773|ready|Dinner is ready!|晚餐好了！|A1|food|dinner||
+774|marry|Will you marry me?|你願意嫁給我嗎？|A2|social|||
+775|strike|The bus drivers are on strike today.|公車司機今天罷工。|B1|news|bus,driver<drivers,today|on strike|
+776|mile|The beach is about a mile from here.|海灘離這裡大約一英里。|A2|travel|beach,about,here||
+777|seek|You should seek advice from an expert.|你應該向專家尋求建議。|B2|work|advice,expert|seek advice|
+778|ability|She has the ability to stay calm.|她有保持冷靜的能力。|B1|work|stay,calm||
+779|unit|Each unit has two bedrooms.|每一戶都有兩間臥室。|B1|daily|each,two,bedroom<bedrooms||unit 在此為「（公寓的）一戶」
+780|card|Can I pay by card?|可以刷卡嗎？|A1|shopping|pay|pay by card|
+781|hospital|She's still in the hospital.|她還在住院。|A2|health|still|in the hospital|
+782|quickly|Please reply as quickly as possible.|請盡快回覆。|A2|work|please,reply,possible|as quickly as possible|
+783|interview|I have a job interview tomorrow.|我明天有個工作面試。|A2|work|job,tomorrow|job interview|
+784|agreement|We finally reached an agreement.|我們終於達成了協議。|B1|work|finally,reach<reached|reach an agreement|
+785|released|Their new album will be released next week.|他們的新專輯下週發行。|B1|news|new,album,next,week||released 為過去分詞，被動語態
+786|tax|Does the price include tax?|這個價格有含稅嗎？|A2|shopping|price,include||
+787|solution|We need to find a solution quickly.|我們得趕快找到解決辦法。|B1|work|need,find,quickly||
+788|capital|What's the capital of Japan?|日本的首都是哪裡？|A2|study|||
+789|popular|This restaurant is very popular with locals.|這家餐廳很受當地人歡迎。|A2|food|restaurant,local<locals|popular with|
+790|specific|Could you be more specific?|你可以說得更具體一點嗎？|B1|work|more||
+791|beautiful|What a beautiful view!|好美的景色！|A1|travel|view||
+792|fear|She has a fear of flying.|她怕坐飛機。|B1|travel|fly<flying|a fear of|
+793|aim|Our aim is to finish by the end of the month.|我們的目標是月底前完成。|B1|work|finish,end,month|by the end of|
+794|television|There's nothing good on television tonight.|今晚電視沒什麼好看的。|A2|daily|nothing,good,tonight|on television|
+795|serious|Don't worry, it's nothing serious.|別擔心，沒什麼大礙。|B1|health|worry,nothing||serious 在此為「嚴重的」
+796|target|We hit our sales target this month.|我們這個月達成了業績目標。|B1|work|hit,sale<sales,month||
+797|degree|She has a degree in history.|她有歷史學位。|B1|study|history||
+798|pull|Pull the door to open it.|門要用拉的才能打開。|A1|daily|door,open||
+799|red|I'll take the red one.|我要紅色那個。|A1|shopping|take,one||
