@@ -447,6 +447,26 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
     }
   }
 
+  /// 句子頁單字列點一下：用單字所屬教材的語言念一次。連點時每次都先停掉前一個，
+  /// 立刻念最新點的那個，不排隊。
+  Future<void> speakWord(String wordRef) async {
+    final location = wordFor(wordRef);
+    if (location == null) return;
+    final lease = await _playback.claim(PlaybackOwner.v2);
+    if (!_playback.isCurrent(lease)) return;
+    _speechLease = lease;
+    try {
+      await _tts.stop();
+      if (!_playback.isCurrent(lease)) return;
+      await _tts.speak(location.item.word,
+          languageCode: location.dataset.wordLocale);
+    } catch (e, st) {
+      _onError(e, st);
+    } finally {
+      _releaseSpeech(lease);
+    }
+  }
+
   void _releaseSpeech(PlaybackLease lease) {
     _playback.release(lease);
     if (identical(_speechLease, lease)) _speechLease = null;
