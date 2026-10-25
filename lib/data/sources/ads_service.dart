@@ -101,25 +101,30 @@ class AdsService {
     return done.future;
   }
 
-  static const _rewardedAdUnitId = String.fromEnvironment(
-    'ADMOB_REWARDED_AD_UNIT_ID',
-    defaultValue: 'ca-app-pub-3940256099942544/5224354917',
-  );
-  static const _interstitialAdUnitId = String.fromEnvironment(
-    'ADMOB_INTERSTITIAL_AD_UNIT_ID',
-    defaultValue: 'ca-app-pub-3940256099942544/1033173712',
-  );
-  /// 開啟應用程式廣告單元。GitHub Secrets 還沒設定 ADMOB_APP_OPEN_AD_UNIT_ID
-  /// 時，CI 會傳入空字串，這時退回 Google 官方測試 ID。
+  // 四種廣告單元都有防呆：GitHub Secrets 沒設定時 CI 會傳入空字串
+  // （String.fromEnvironment 的 defaultValue 只在完全沒傳時生效），
+  // 這時退回 Google 官方測試 ID，避免廣告單元變成空字串而永遠載不出來。
+  static const _rewardedAdUnitIdFromEnv =
+      String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID');
+  static const _rewardedAdUnitId = _rewardedAdUnitIdFromEnv == ''
+      ? 'ca-app-pub-3940256099942544/5224354917'
+      : _rewardedAdUnitIdFromEnv;
+  static const _interstitialAdUnitIdFromEnv =
+      String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID');
+  static const _interstitialAdUnitId = _interstitialAdUnitIdFromEnv == ''
+      ? 'ca-app-pub-3940256099942544/1033173712'
+      : _interstitialAdUnitIdFromEnv;
+  /// 開啟應用程式廣告單元。
   static const _appOpenAdUnitIdFromEnv =
       String.fromEnvironment('ADMOB_APP_OPEN_AD_UNIT_ID');
   static const _appOpenAdUnitId = _appOpenAdUnitIdFromEnv == ''
       ? 'ca-app-pub-3940256099942544/9257395921'
       : _appOpenAdUnitIdFromEnv;
-  static const bannerAdUnitId = String.fromEnvironment(
-    'ADMOB_BANNER_AD_UNIT_ID',
-    defaultValue: 'ca-app-pub-3940256099942544/6300978111',
-  );
+  static const _bannerAdUnitIdFromEnv =
+      String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID');
+  static const bannerAdUnitId = _bannerAdUnitIdFromEnv == ''
+      ? 'ca-app-pub-3940256099942544/6300978111'
+      : _bannerAdUnitIdFromEnv;
 
   // --- 頻率控制參數 ---
   /// 任兩次「自動跳出」的全螢幕廣告之間的最短間隔。
