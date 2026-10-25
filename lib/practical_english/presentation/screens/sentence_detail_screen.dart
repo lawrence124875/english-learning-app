@@ -77,6 +77,11 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
     action();
   }
 
+  Future<void> _speakWord(String wordRef) async {
+    if (_player.isAutoPlaying) await _player.pause();
+    await _state.speakWord(wordRef);
+  }
+
   Future<void> _playTranslation() async {
     if (_player.isAutoPlaying) await _player.pause();
     final l10n = AppLocalizations.of(context)!;
@@ -283,12 +288,16 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
                 const SizedBox(height: 4),
                 for (final group in groups)
                   for (final ref in group.refs)
-                    _WordRow(wordRef: ref, showList: group.refs.length > 1),
+                    _WordRow(
+                        wordRef: ref,
+                        showList: group.refs.length > 1,
+                        onSpeak: _speakWord),
                 if (others.isNotEmpty) ...[
                   const SizedBox(height: 16),
                   Text(l10n.peOtherWords, style: text.titleSmall),
                   const SizedBox(height: 4),
-                  for (final ref in others) _WordRow(wordRef: ref),
+                  for (final ref in others)
+                    _WordRow(wordRef: ref, onSpeak: _speakWord),
                 ],
               ],
             ),
@@ -520,7 +529,11 @@ class _WordRow extends StatelessWidget {
   /// 同拼字出現在多份清單時，標出這一筆屬於哪份清單（SPEC §9.6）。
   final bool showList;
 
-  const _WordRow({required this.wordRef, this.showList = false});
+  /// 點單字：念一次英文單字。
+  final ValueChanged<String> onSpeak;
+
+  const _WordRow(
+      {required this.wordRef, required this.onSpeak, this.showList = false});
 
   @override
   Widget build(BuildContext context) {
@@ -542,11 +555,26 @@ class _WordRow extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Text(
-                      showList && location != null
-                          ? '$word · ${location.dataset.shortName}'
-                          : word,
-                      style: Theme.of(context).textTheme.titleMedium),
+                  child: InkWell(
+                    key: Key('pe_speak_$wordRef'),
+                    borderRadius: BorderRadius.circular(6),
+                    onTap: () => onSpeak(wordRef),
+                    child: Row(
+                      children: [
+                        Flexible(
+                          child: Text(
+                              showList && location != null
+                                  ? '$word · ${location.dataset.shortName}'
+                                  : word,
+                              style: Theme.of(context).textTheme.titleMedium),
+                        ),
+                        const SizedBox(width: 6),
+                        Icon(Icons.volume_up_outlined,
+                            size: 18,
+                            color: Theme.of(context).colorScheme.primary),
+                      ],
+                    ),
+                  ),
                 ),
                 WordStatusChip(word: word, status: status),
               ],

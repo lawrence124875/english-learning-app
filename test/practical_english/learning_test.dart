@@ -192,6 +192,20 @@ void main() {
   List<String> ids(PracticalEnglishState s) =>
       [for (final x in s.sentences) x.id];
 
+  group('Word tap speech', () {
+    test('speaks the word once in its list locale; each tap stops the last',
+        () async {
+      final tts = _RecordingTts();
+      final s = await enter(_app(), tts: tts);
+      await s.speakWord(_id(1));
+      await s.speakWord(_id(2));
+      expect(tts.spoken, ['en-US|w1', 'en-US|w2']);
+      expect(tts.stops, greaterThanOrEqualTo(2));
+      await s.speakWord('no_such_word');
+      expect(tts.spoken, hasLength(2));
+    });
+  });
+
   group('Learning state', () {
     test('1. fresh install: everything unseen, no V1 write, migration recorded',
         () async {
