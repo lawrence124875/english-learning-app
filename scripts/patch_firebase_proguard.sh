@@ -36,6 +36,12 @@ cat >> "$PROGUARD_FILE" << 'EOF'
 -keep class com.google.android.gms.ads.** { *; }
 -dontwarn com.google.android.gms.ads.**
 
+# --- Flutter 外掛原生類別（v21 當機修正）：shared_preferences_android 2.4.x 由
+# Dart 透過 JNI 直接呼叫 SharedPreferencesApiRegistrar.getAll 等方法，Java 端沒有
+# 呼叫者，R8 會把方法內聯後刪掉，執行期 NoSuchMethodError、App 卡在轉圈圈。
+-keep class io.flutter.plugins.** { *; }
+-dontwarn io.flutter.plugins.**
+
 # --- WorkManager / Room：避免 R8 改掉資料庫實作類別名稱，
 # 導致執行期反射查找失敗（"Failed to create an instance of
 # androidx.work.impl.WorkDatabase.canonicalName"）---
