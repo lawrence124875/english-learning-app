@@ -1,0 +1,22 @@
+name: Diag AdMob secrets
+on:
+  push:
+    branches: [claude/project-thread-ljye8x]
+    paths: [.github/workflows/diag_admob.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          APP: ${{ secrets.ADMOB_APP_ID }}
+          REW: ${{ secrets.ADMOB_REWARDED_AD_UNIT_ID }}
+          INT: ${{ secrets.ADMOB_INTERSTITIAL_AD_UNIT_ID }}
+          BAN: ${{ secrets.ADMOB_BANNER_AD_UNIT_ID }}
+          OPN: ${{ secrets.ADMOB_APP_OPEN_AD_UNIT_ID }}
+        run: |
+          chk() { v=$(printf '%s' "$2" | tr -d '[:space:]'); if [ -z "$2" ]; then r=EMPTY; elif [ "$v" = "$3" ]; then r=MATCH; else r="MISMATCH len=${#2} prefix=${v:0:20}"; fi; [ "$v" != "$2" ] && r="$r (has whitespace)"; echo "$1: $r"; }
+          chk APP_ID "$APP" "ca-app-pub-6291816733600445~8907110544"
+          chk REWARDED "$REW" "ca-app-pub-6291816733600445/6224270131"
+          chk INTERSTITIAL "$INT" "ca-app-pub-6291816733600445/6921652014"
+          chk BANNER "$BAN" "ca-app-pub-6291816733600445/1600208428"
+          chk APP_OPEN "$OPN" "ca-app-pub-6291816733600445/1120602363"
