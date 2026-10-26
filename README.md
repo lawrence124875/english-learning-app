@@ -4,6 +4,7 @@ Flutter 英語單字背景朗讀 App（Android）。內建 NGSL 2809、NGSL-Spok
 
 - 隱私權政策與 `app-ads.txt`：`docs/`（GitHub Pages）。
 - 建置：GitHub Actions（`.github/workflows/`），建置產物不公開。
+- 開發文件、句庫原始資料與工具、商店素材放在私人 repo，不公開。
 
 ## 資料授權
 
