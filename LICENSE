@@ -1,0 +1,22 @@
+Copyright (c) 2026 Lawrence (lawrence124875). All rights reserved.
+版權所有 (c) 2026 Lawrence (lawrence124875)。保留一切權利。
+
+This repository is published for transparency and build automation only.
+No license is granted. Without prior written permission from the copyright
+holder, you may not copy, modify, distribute, sublicense, publish, or use
+any part of this repository, including its source code, sentence library,
+translations, images, icons, and other content, for any purpose.
+
+本儲存庫公開僅供透明與自動建置之用，並未授予任何授權。未經著作權人事先書面同意，
+不得以任何目的複製、修改、散布、再授權、發布或使用本儲存庫的任何部分，
+包括原始碼、句庫、翻譯、圖片、圖示及其他內容。
+
+Third-party materials are excluded and remain under their own licenses
+(see README.md): NGSL 2809 / NGSL-Spoken 720 (CC BY-SA 4.0),
+PhaVE List 150 (CC BY 4.0), PHRASE List 506 (Martinez & Schmitt, 2012),
+and the Nunito font (SIL Open Font License, assets/fonts/Nunito-OFL.txt).
+
+第三方素材不在此限，依各自原授權（見 README.md）：NGSL 2809／NGSL-Spoken 720
+（CC BY-SA 4.0）、PhaVE List 150（CC BY 4.0）、PHRASE List 506
+（Martinez & Schmitt, 2012）、Nunito 字型（SIL Open Font License，
+assets/fonts/Nunito-OFL.txt）。
