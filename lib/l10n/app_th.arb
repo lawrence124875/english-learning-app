@@ -282,5 +282,18 @@
   "peSettingsSummary": "{content} · {count} ครั้ง · ห่าง {seconds} วินาที",
   "peSeeExamples": "ดูประโยคตัวอย่าง",
   "peNoExamples": "ยังไม่มีประโยคตัวอย่างสำหรับ \"{word}\"",
-  "peExamplesNeedPremium": "ประโยคตัวอย่างของ \"{word}\" ต้องใช้ Premium"
+  "peExamplesNeedPremium": "ประโยคตัวอย่างของ \"{word}\" ต้องใช้ Premium",
+  "unlockWatchAdLeft": "ดูโฆษณา +20 (วันนี้เหลือ {count} ครั้ง)",
+  "unlockDailyLimitReached": "วันนี้ใช้ครบ 3 ครั้งแล้ว กลับมาใหม่พรุ่งนี้ หรืออัปเกรดเป็น Premium เพื่อปลดล็อกทั้งหมด",
+  "unlockTodayOnly": "รายการที่ปลดล็อกด้วยโฆษณาใช้ได้เฉพาะวันนี้ และจะรีเซ็ตพรุ่งนี้",
+  "starLimitTitle": "คลังคำที่ยังไม่คุ้นเต็มแล้ว (30 คำ)",
+  "starLimitBody": "อัปเกรดเพื่อบันทึกได้ไม่จำกัด และเล่นเฉพาะคำที่ยังไม่คุ้น",
+  "peDailyLimitTitle": "ใช้ 5 ประโยคฟรีของวันนี้ครบแล้ว",
+  "peDailyLimitBody": "กลับมาใหม่พรุ่งนี้ หรืออัปเกรดเป็น Premium เพื่อฝึกทุกประโยคได้ไม่จำกัด",
+  "commonLater": "ไว้ทีหลัง",
+  "paywallTrialOffer": "ทดลองใช้ฟรี {days} วัน จากนั้น {price}",
+  "paywallTrialNote": "ยกเลิกได้ทุกเมื่อ และจะแจ้งเตือนก่อนหมดช่วงทดลองใช้",
+  "paywallAnnualPerMonth": "ประมาณ {price}/เดือน",
+  "paywallContinue": "ดำเนินการต่อ",
+  "paywallStartTrial": "เริ่มทดลองใช้ฟรี"
 }

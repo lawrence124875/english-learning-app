@@ -282,5 +282,18 @@
   "peSettingsSummary": "{content} · ×{count} · intervalo {seconds} s",
   "peSeeExamples": "Ver exemplos",
   "peNoExamples": "Ainda não há frases de exemplo para \"{word}\".",
-  "peExamplesNeedPremium": "As frases de exemplo de \"{word}\" exigem o Premium."
+  "peExamplesNeedPremium": "As frases de exemplo de \"{word}\" exigem o Premium.",
+  "unlockWatchAdLeft": "Assistir a um anúncio +20 ({count} restantes hoje)",
+  "unlockDailyLimitReached": "Você já usou as 3 de hoje. Volte amanhã ou assine o Premium para desbloquear tudo.",
+  "unlockTodayOnly": "O que você desbloqueia com anúncios vale hoje e é zerado amanhã.",
+  "starLimitTitle": "Sua lista de palavras difíceis está cheia (30)",
+  "starLimitBody": "Faça upgrade para salvar palavras sem limite e tocar só as difíceis.",
+  "peDailyLimitTitle": "Você já usou as 5 frases grátis de hoje",
+  "peDailyLimitBody": "Volte amanhã ou assine o Premium para praticar todas as frases sem limite.",
+  "commonLater": "Agora não",
+  "paywallTrialOffer": "Grátis por {days} dias, depois {price}",
+  "paywallTrialNote": "Cancele quando quiser. Avisaremos antes do fim do teste.",
+  "paywallAnnualPerMonth": "Cerca de {price}/mês",
+  "paywallContinue": "Continuar",
+  "paywallStartTrial": "Começar teste grátis"
 }

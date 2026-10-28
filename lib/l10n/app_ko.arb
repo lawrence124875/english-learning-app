@@ -282,5 +282,18 @@
   "peSettingsSummary": "{content} · {count}회 · 간격 {seconds}초",
   "peSeeExamples": "예문 보기",
   "peNoExamples": "\"{word}\"의 예문이 아직 없습니다.",
-  "peExamplesNeedPremium": "\"{word}\"의 예문은 Premium에서 볼 수 있습니다."
+  "peExamplesNeedPremium": "\"{word}\"의 예문은 Premium에서 볼 수 있습니다.",
+  "unlockWatchAdLeft": "광고 보고 +20 (오늘 {count}회 남음)",
+  "unlockDailyLimitReached": "오늘 3회를 모두 사용했어요. 내일 다시 오거나 Premium으로 업그레이드해 모두 잠금 해제하세요.",
+  "unlockTodayOnly": "광고로 잠금 해제한 항목은 당일에만 유효하며 다음 날 초기화돼요.",
+  "starLimitTitle": "낯선 단어 목록이 가득 찼어요 (30개)",
+  "starLimitBody": "업그레이드하면 무제한으로 저장하고 낯선 단어만 재생할 수 있어요.",
+  "peDailyLimitTitle": "오늘의 무료 5문장을 모두 사용했어요",
+  "peDailyLimitBody": "내일 다시 오거나 Premium으로 업그레이드해 모든 문장을 무제한으로 연습하세요.",
+  "commonLater": "나중에",
+  "paywallTrialOffer": "{days}일 무료, 이후 {price}",
+  "paywallTrialNote": "언제든지 취소할 수 있어요. 체험이 끝나기 전에 알려 드려요.",
+  "paywallAnnualPerMonth": "월 약 {price}",
+  "paywallContinue": "계속",
+  "paywallStartTrial": "무료 체험 시작"
 }

@@ -282,5 +282,18 @@
   "peSettingsSummary": "{content}・读 {count} 次・间隔 {seconds} 秒",
   "peSeeExamples": "看例句",
   "peNoExamples": "“{word}”目前没有可看的例句。",
-  "peExamplesNeedPremium": "“{word}”的例句需要 Premium 才能看。"
+  "peExamplesNeedPremium": "“{word}”的例句需要 Premium 才能看。",
+  "unlockWatchAdLeft": "看广告 +20（今天还剩 {count} 次）",
+  "unlockDailyLimitReached": "今天的 3 次都用完了，明天再来，或升级 Premium 全部解锁。",
+  "unlockTodayOnly": "看广告解锁的项目当天有效，隔天归零。",
+  "starLimitTitle": "不熟悉单词库已满 30 个",
+  "starLimitBody": "升级可无限收藏并只播不熟悉的词。",
+  "peDailyLimitTitle": "今天的 5 句免费额度用完了",
+  "peDailyLimitBody": "明天再来，或升级 Premium 无限练习所有句子。",
+  "commonLater": "以后再说",
+  "paywallTrialOffer": "免费试用 {days} 天，之后 {price}",
+  "paywallTrialNote": "可随时取消，试用到期前会通知你。",
+  "paywallAnnualPerMonth": "每月约 {price}",
+  "paywallContinue": "继续",
+  "paywallStartTrial": "开始免费试用"
 }

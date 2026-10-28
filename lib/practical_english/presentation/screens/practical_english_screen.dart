@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../data/sources/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../presentation/providers/app_state.dart';
+import '../../../presentation/widgets/free_limit_sheet.dart';
 import '../../domain/models/sentence.dart';
 import '../../domain/services/sentence_selector.dart';
 import '../providers/practical_english_state.dart';
@@ -238,16 +239,26 @@ class _SentenceTile extends StatelessWidget {
           ),
         ],
       ),
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => ChangeNotifierProvider.value(
-            value: state,
-            child: SentenceDetailScreen(
-                sentences: List.of(sentences), initialIndex: index),
+      onTap: () {
+        if (!state.canOpen(s)) {
+          final l10n = AppLocalizations.of(context)!;
+          showFreeLimitSheet(context,
+              title: l10n.peDailyLimitTitle,
+              body: l10n.peDailyLimitBody,
+              source: 'pe');
+          return;
+        }
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => ChangeNotifierProvider.value(
+              value: state,
+              child: SentenceDetailScreen(
+                  sentences: List.of(sentences), initialIndex: index),
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

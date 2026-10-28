@@ -82,7 +82,8 @@ class _WordSentencesView extends StatelessWidget {
           FilledButton(
             key: const Key('pe_examples_upgrade'),
             onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => const PaywallScreen())),
+                MaterialPageRoute(
+                    builder: (_) => const PaywallScreen(source: 'pe_word'))),
             child: Text(l10n.menuPremium),
           ),
         ],

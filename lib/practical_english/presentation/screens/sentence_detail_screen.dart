@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../../presentation/app_theme.dart';
+import '../../../presentation/widgets/free_limit_sheet.dart';
 import '../../data/sentence_now_playing.dart';
 import '../../domain/models/sentence.dart';
 import '../../domain/services/sentence_selector.dart';
@@ -49,11 +50,29 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
       nowPlaying: handler == null
           ? null
           : (p) => AudioHandlerSentenceNowPlaying(handler, p),
-    )..onVoiceUnavailable =
-        (_) => _snack(AppLocalizations.of(context)!.peVoiceUnavailable);
+    )
+      ..onVoiceUnavailable =
+          (_) => _snack(AppLocalizations.of(context)!.peVoiceUnavailable)
+      ..onFreeLimit = _showPeLimit;
     _player.loadSettings();
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => _state.recordPractice(_player.current));
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (_state.canOpen(_player.current)) {
+        _state.recordPractice(_player.current);
+        return;
+      }
+      // 免費版今天的 5 句已用完（例如從首頁「看例句」進來）。
+      await _showPeLimit();
+      if (mounted) Navigator.maybePop(context);
+    });
+  }
+
+  Future<void> _showPeLimit() async {
+    if (!mounted) return;
+    final l10n = AppLocalizations.of(context)!;
+    await showFreeLimitSheet(context,
+        title: l10n.peDailyLimitTitle,
+        body: l10n.peDailyLimitBody,
+        source: 'pe');
   }
 
   @override
@@ -586,7 +605,16 @@ class _WordRow extends StatelessWidget {
               children: [
                 OutlinedButton(
                   key: Key('pe_weak_$wordRef'),
-                  onPressed: () => state.setWeak(wordRef, !weak),
+                  onPressed: () async {
+                    if (await state.setWeak(wordRef, !weak) ||
+                        !context.mounted) {
+                      return;
+                    }
+                    await showFreeLimitSheet(context,
+                        title: l10n.starLimitTitle,
+                        body: l10n.starLimitBody,
+                        source: 'starred');
+                  },
                   child: Text(weak ? l10n.peUnmarkWeak : l10n.peMarkWeak),
                 ),
                 FilledButton.tonal(

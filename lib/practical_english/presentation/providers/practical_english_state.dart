@@ -1,9 +1,11 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../data/sources/analytics_service.dart';
 import '../../../data/sources/background_l10n.dart';
 import '../../../data/sources/tts_audio_handler.dart';
 import '../../../data/sources/tts_service.dart';
@@ -227,6 +229,20 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
       _sentences.all.any((s) =>
           s.wordIds.contains(ref) || s.secondaryWordIds.contains(ref));
 
+  /// 免費版每天最多 5 句（重看今天開過的句子不另計）；Premium 不限。
+  /// 不能開時記一次 hit_free_limit（pe），畫面顯示付費牆。
+  bool canOpen(Sentence s) {
+    if (_appState.canUsePeSentence(s.id)) return true;
+    AnalyticsService.hitFreeLimit('pe');
+    return false;
+  }
+
+  /// V2 也算「第一次播放」（first_play 只記一次）。
+  void markFirstPlay() => unawaited(_appState.markFirstPlay());
+
+  /// 標記弱字前檢查免費版 ★ 上限（30 個）。已滿回傳 false，不寫入。
+  bool get canAddWeak => _appState.canAddStar;
+
   /// 因免費版限制而鎖住的句子數（不顯示內容，只提示數量）。
   int get lockedCount => coverage.lockedSentences;
 
@@ -336,10 +352,15 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   }
 
   /// 標記／取消弱字（經相容層同步 V1 ★）。
-  Future<void> setWeak(String ref, bool weak) async {
+  /// 標記／取消弱字。免費版 ★ 已滿 30 個時不標記，回傳 false。
+  Future<bool> setWeak(String ref, bool weak) async {
+    if (weak && !stateOf(ref).weak && !canAddWeak) {
+      AnalyticsService.hitFreeLimit('starred');
+      return false;
+    }
     await _sync.setWeak(ref, weak);
     _invalidate();
-    notifyListeners();
+    notifyListeners();    return true;
   }
 
   /// 「我會了」：mastered＝true、移除弱字與 V1 ★；不刪除任何紀錄。
@@ -352,6 +373,7 @@ class PracticalEnglishState extends ChangeNotifier with WidgetsBindingObserver {
   /// 練習一句：句中每個字 peExposureCount＋1、更新 lastPracticedAt。
   /// 只算接觸，不會改變弱字或精熟狀態。
   void recordPractice(Sentence sentence) {
+    unawaited(_appState.recordPeSentence(sentence.id));
     final now = _now();
     for (final ref in sentence.wordIds.toSet()) {
       if (!_index.contains(ref)) continue;

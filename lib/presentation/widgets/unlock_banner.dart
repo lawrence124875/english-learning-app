@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../../data/sources/ads_service.dart';
+import '../../data/sources/analytics_service.dart';
 import '../screens/paywall_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../app_theme.dart';
@@ -9,6 +12,7 @@ import '../app_theme.dart';
 /// 免費版顯示：目前教材已解鎖數量 / 總數。
 /// 0.3.0 起縮成一行＋「解鎖更多」按鈕，點開再選「看廣告 +20」或
 /// 「升級 Premium」，讓首頁視覺集中在單字上。
+/// v24：看廣告每日 3 次、當天有效；廣告載入失敗或無填充時仍給該次解鎖。
 class UnlockBanner extends StatefulWidget {
   const UnlockBanner({super.key});
 
@@ -17,14 +21,17 @@ class UnlockBanner extends StatefulWidget {
 }
 
 class _UnlockBannerState extends State<UnlockBanner> {
-  bool _rewardedReady = false;
   bool _loadingRewarded = false;
+
+  /// 無填充時 AdMob 有時很久才回失敗；超過這個時間就不再等，按了直接給解鎖。
+  Timer? _loadTimeout;
 
   /// 底部選單打開時也要即時反映廣告是否載入完成。
   final _sheetRefresh = ValueNotifier<int>(0);
 
   @override
   void dispose() {
+    _loadTimeout?.cancel();
     _sheetRefresh.dispose();
     super.dispose();
   }
@@ -42,37 +49,36 @@ class _UnlockBannerState extends State<UnlockBanner> {
   }
 
   void _preloadRewarded() {
+    if (AdsService.rewardedReady) return;
     setState(() => _loadingRewarded = true);
-    AdsService.loadRewardedAd(
-      onLoaded: () {
-        if (mounted) setState(() {
-          _rewardedReady = true;
-          _loadingRewarded = false;
-        });
-      },
-      onFailed: () {
-        if (mounted) setState(() {
-          _rewardedReady = false;
-          _loadingRewarded = false;
-        });
-      },
-    );
+    void done() {
+      _loadTimeout?.cancel();
+      if (mounted) setState(() => _loadingRewarded = false);
+    }
+
+    _loadTimeout?.cancel();
+    _loadTimeout = Timer(const Duration(seconds: 8), done);
+    AdsService.loadRewardedAd(onLoaded: done, onFailed: done);
   }
 
   Future<void> _watchRewarded(AppState appState) async {
-    final earned = await AdsService.showRewardedAd();
-    if (earned) {
-      await appState.unlockMoreViaRewardedAd();
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-              content:
-                  Text(AppLocalizations.of(context)!.unlockRewardSnackbar)),
-        );
-      }
+    final result = await AdsService.showRewardedAd();
+    // 看完 → 解鎖；廣告沒載到（無填充／失敗）或播放失敗 → 仍給該次解鎖；
+    // 只有使用者自己中途關掉才不給。
+    if (result == RewardedAdResult.notReady) {
+      AnalyticsService.rewardedAdFailed('not_ready');
+    } else if (result == RewardedAdResult.failed) {
+      AnalyticsService.rewardedAdFailed('show_failed');
+    }
+    if (result != RewardedAdResult.dismissed &&
+        await appState.unlockMoreViaRewardedAd() &&
+        mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+            content: Text(AppLocalizations.of(context)!.unlockRewardSnackbar)),
+      );
     }
     if (!mounted) return;
-    setState(() => _rewardedReady = false);
     _preloadRewarded();
   }
 
@@ -137,24 +143,34 @@ class _UnlockBannerState extends State<UnlockBanner> {
                     style: const TextStyle(
                         fontWeight: FontWeight.w700, fontSize: 16)),
                 const SizedBox(height: 16),
-                OutlinedButton.icon(
-                  onPressed: _rewardedReady
-                      ? () {
-                          Navigator.pop(sheetContext);
-                          _watchRewarded(appState);
-                        }
-                      : null,
-                  icon: const Icon(Icons.play_circle_outline),
-                  label: Text(
-                      _loadingRewarded ? l.unlockAdLoading : l.unlockWatchAd),
-                ),
+                if (appState.rewardedUsesLeft > 0) ...[
+                  OutlinedButton.icon(
+                    onPressed: _loadingRewarded
+                        ? null
+                        : () {
+                            Navigator.pop(sheetContext);
+                            _watchRewarded(appState);
+                          },
+                    icon: const Icon(Icons.play_circle_outline),
+                    label: Text(_loadingRewarded
+                        ? l.unlockAdLoading
+                        : l.unlockWatchAdLeft(appState.rewardedUsesLeft)),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(l.unlockTodayOnly,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                ] else
+                  Text(l.unlockDailyLimitReached),
                 const SizedBox(height: 10),
                 FilledButton.icon(
                   onPressed: () {
                     Navigator.pop(sheetContext);
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => const PaywallScreen()),
+                      MaterialPageRoute(
+                          builder: (_) =>
+                              const PaywallScreen(source: 'unlock')),
                     );
                   },
                   icon: const Icon(Icons.workspace_premium),

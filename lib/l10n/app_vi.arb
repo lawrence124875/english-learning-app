@@ -282,5 +282,18 @@
   "peSettingsSummary": "{content} · {count} lần · cách {seconds} giây",
   "peSeeExamples": "Xem câu ví dụ",
   "peNoExamples": "Chưa có câu ví dụ cho \"{word}\".",
-  "peExamplesNeedPremium": "Câu ví dụ cho \"{word}\" cần Premium."
+  "peExamplesNeedPremium": "Câu ví dụ cho \"{word}\" cần Premium.",
+  "unlockWatchAdLeft": "Xem quảng cáo +20 (hôm nay còn {count} lượt)",
+  "unlockDailyLimitReached": "Bạn đã dùng hết 3 lượt hôm nay. Hãy quay lại vào ngày mai, hoặc nâng cấp Premium để mở khóa tất cả.",
+  "unlockTodayOnly": "Mục mở bằng quảng cáo chỉ có hiệu lực trong hôm nay, ngày mai sẽ đặt lại.",
+  "starLimitTitle": "Danh sách từ chưa thuộc đã đầy (30 từ)",
+  "starLimitBody": "Nâng cấp để lưu không giới hạn và chỉ phát những từ chưa thuộc.",
+  "peDailyLimitTitle": "Bạn đã dùng hết 5 câu miễn phí hôm nay",
+  "peDailyLimitBody": "Hãy quay lại vào ngày mai, hoặc nâng cấp Premium để luyện mọi câu không giới hạn.",
+  "commonLater": "Để sau",
+  "paywallTrialOffer": "Miễn phí {days} ngày, sau đó {price}",
+  "paywallTrialNote": "Có thể hủy bất cứ lúc nào. Bạn sẽ được nhắc trước khi hết thời gian dùng thử.",
+  "paywallAnnualPerMonth": "Khoảng {price}/tháng",
+  "paywallContinue": "Tiếp tục",
+  "paywallStartTrial": "Bắt đầu dùng thử miễn phí"
 }
