@@ -233,7 +233,10 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
                                 style: FilledButton.styleFrom(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 10, vertical: 12)),
-                                onPressed: _player.togglePlay,
+                                onPressed: () {
+                                  _state.markFirstPlay();
+                                  _player.togglePlay();
+                                },
                                 child: FittedBox(
                                   fit: BoxFit.scaleDown,
                                   child: Row(

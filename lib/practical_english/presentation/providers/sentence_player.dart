@@ -193,7 +193,6 @@ class SentencePlayer extends ChangeNotifier {
   Future<void> play() async {
     if (_autoPlaying || _disposed) return;
     _autoPlaying = true;
-    _state.markFirstPlay();
     _notify();
     final loop = ++_loopGen;
     bool alive() => _autoPlaying && loop == _loopGen && !_disposed;
