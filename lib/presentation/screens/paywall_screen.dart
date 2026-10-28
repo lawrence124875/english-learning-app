@@ -177,7 +177,10 @@ class _PaywallScreenState extends State<PaywallScreen> {
       const SizedBox(height: 4),
       if (trialDays != null) ...[
         Text(
-          l.paywallTrialOffer(trialDays, _priceWithPeriod(selected, l)),
+          (selected.packageType == PackageType.monthly
+                  ? l.paywallTrialOfferMonthly
+                  : l.paywallTrialOffer)(
+              trialDays, selected.storeProduct.priceString),
           textAlign: TextAlign.center,
           style: const TextStyle(fontWeight: FontWeight.w600),
         ),
@@ -196,9 +199,6 @@ class _PaywallScreenState extends State<PaywallScreen> {
       ),
     ];
   }
-
-  String _priceWithPeriod(Package p, AppLocalizations l) =>
-      '${p.storeProduct.priceString} (${_planLabel(p, l)})';
 
   Widget _planTile(Package p, AppLocalizations l, bool isSelected) {
     final scheme = Theme.of(context).colorScheme;

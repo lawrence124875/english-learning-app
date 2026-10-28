@@ -32,9 +32,13 @@ WordDataset _ds(String id, int n) => WordDataset(
     );
 
 StoreProduct _product(String priceString, double price, String currency,
-        {SubscriptionOption? option, IntroductoryPrice? intro}) =>
+        {SubscriptionOption? option,
+        IntroductoryPrice? intro,
+        String? perMonth}) =>
     StoreProduct('p', 'd', 't', price, priceString, currency,
-        defaultOption: option, introductoryPrice: intro);
+        defaultOption: option,
+        introductoryPrice: intro,
+        pricePerMonthString: perMonth);
 
 SubscriptionOption _optionWithFreePhase(Period? free) => SubscriptionOption(
       'o',
@@ -222,15 +226,26 @@ void main() {
           7);
     });
 
-    test('annual price per month', () {
-      expect(PaywallOffer.monthlyOfAnnual(_product('NT\$999.00', 999, 'TWD')),
-          'NT\$83');
-      expect(PaywallOffer.monthlyOfAnnual(_product('NT\$999', 999, 'TWD')),
-          'NT\$83');
+    test('annual price per month uses the store string as-is', () {
+      expect(
+          PaywallOffer.monthlyOfAnnual(
+              _product('NT\$999.00', 999, 'TWD', perMonth: 'NT\$83.25')),
+          'NT\$83.25');
       expect(PaywallOffer.monthlyOfAnnual(_product('\$39.99', 39.99, 'USD')),
-          '\$3.33');
-      expect(PaywallOffer.monthlyOfAnnual(_product('¥4,800', 4800, 'JPY')),
-          '¥400');
+          isNull);
+    });
+
+    test('annual is preselected, else the first plan', () {
+      Package pkg(String id, PackageType t) => Package(
+          id,
+          t,
+          _product('x', 1, 'USD'),
+          const PresentedOfferingContext('o', null, null));
+      final m = pkg('m', PackageType.monthly);
+      final y = pkg('y', PackageType.annual);
+      expect(PaywallOffer.defaultPackage([m, y]), y);
+      expect(PaywallOffer.defaultPackage([m]), m);
+      expect(PaywallOffer.defaultPackage([]), isNull);
     });
   });
 }

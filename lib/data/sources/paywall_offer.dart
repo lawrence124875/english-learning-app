@@ -40,27 +40,10 @@ class PaywallOffer {
     }
   }
 
-  /// 年繳換算的每月價格字串（例如 NT$999/年 → 「NT$83」）。
-  /// 以 priceString 的貨幣符號為準，整數幣別（TWD、JPY 等）不顯示小數。
+  /// 年繳換算的每月價格：直接用 RevenueCat 回傳的當地字串
+  /// （pricePerMonthString），不自行換算、不寫死幣別；沒有就不顯示。
   static String? monthlyOfAnnual(StoreProduct product) {
-    if (product.price <= 0) return null;
-    final perMonth = product.price / 12;
-    final symbol = _currencyPrefix(product.priceString);
-    final noDecimals = _zeroDecimalCurrencies.contains(product.currencyCode) ||
-        !product.priceString.contains(RegExp(r'[.,]\d{2}\b'));
-    final amount = noDecimals
-        ? perMonth.round().toString()
-        : ((perMonth * 100).floor() / 100).toStringAsFixed(2);
-    return symbol == null ? '$amount ${product.currencyCode}' : '$symbol$amount';
+    final s = product.pricePerMonthString;
+    return (s == null || s.isEmpty) ? null : s;
   }
-
-  /// priceString 數字前面的貨幣符號（例如「NT$」「$」「¥」）；在後面時回傳 null。
-  static String? _currencyPrefix(String priceString) {
-    final m = RegExp(r'^([^\d\s]+)\s?').firstMatch(priceString.trim());
-    return m?.group(1);
-  }
-
-  static const _zeroDecimalCurrencies = {
-    'TWD', 'JPY', 'KRW', 'VND', 'IDR', 'CLP', 'HUF', 'COP',
-  };
 }
