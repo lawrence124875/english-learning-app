@@ -282,5 +282,19 @@
   "peSettingsSummary": "{content}・{count}回・間隔 {seconds} 秒",
   "peSeeExamples": "例文",
   "peNoExamples": "「{word}」の例文はまだありません。",
-  "peExamplesNeedPremium": "「{word}」の例文を見るには Premium が必要です。"
+  "peExamplesNeedPremium": "「{word}」の例文を見るには Premium が必要です。",
+  "unlockWatchAdLeft": "広告を見て +20（今日はあと {count} 回）",
+  "unlockDailyLimitReached": "今日の3回をすべて使いました。また明日来るか、Premium にアップグレードしてすべて解放しましょう。",
+  "unlockTodayOnly": "広告で解放した項目は当日のみ有効で、翌日にリセットされます。",
+  "starLimitTitle": "苦手な単語リストが上限の30個です",
+  "starLimitBody": "アップグレードすると無制限に保存でき、苦手な単語だけを再生できます。",
+  "peDailyLimitTitle": "今日の無料5文を使い切りました",
+  "peDailyLimitBody": "また明日来るか、Premium にアップグレードしてすべての文を無制限に練習しましょう。",
+  "commonLater": "あとで",
+  "paywallTrialOffer": "{days}日間無料、その後 {price}/年",
+  "paywallTrialOfferMonthly": "{days}日間無料、その後 {price}/月",
+  "paywallTrialNote": "いつでもキャンセルできます。無料期間が終わる前にお知らせします。",
+  "paywallAnnualPerMonth": "月あたり約 {price}",
+  "paywallContinue": "続ける",
+  "paywallStartTrial": "無料体験を始める"
 }

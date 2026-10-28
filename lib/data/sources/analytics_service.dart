@@ -55,15 +55,37 @@ class AnalyticsService {
   static void starWord(String datasetId) =>
       _log('star_word', {'dataset_id': _datasetKey(datasetId)});
 
-  static void paywallView() => _log('paywall_view');
+  // --- 免費版轉換漏斗（v24）---
+
+  /// 第一次按播放（只記一次，見 AppState.markFirstPlay）。
+  static void firstPlay() => _log('first_play');
+
+  /// 碰到免費版限制：words（免費範圍聽完）／starred（★ 滿 30）／pe（V2 每日 5 句）。
+  static void hitFreeLimit(String type) =>
+      _log('hit_free_limit', {'type': type});
+
+  static void rewardedAdShown() => _log('rewarded_ad_shown');
+
+  /// 獎勵廣告沒播出（仍給解鎖）：reason = not_ready／show_failed。
+  static void rewardedAdFailed(String reason) =>
+      _log('rewarded_ad_failed', {'reason': reason});
+
+  /// 付費牆曝光，source = 從哪裡打開（menu、unlock、starred、pe…）。
+  static void paywallView(String source) =>
+      _log('paywall_view', {'source': source});
 
   static void purchaseStart(String packageId) =>
       _log('purchase_start', {'package_id': packageId});
 
-  static void purchaseSuccess(String packageId) =>
-      _log('purchase_success', {'package_id': packageId});
+  /// 購買成功：保留舊的 purchase_success（既有漏斗延續），另記 purchase。
+  static void purchaseSuccess(String packageId) {
+    _log('purchase_success', {'package_id': packageId});
+    _log('purchase', {'package_id': packageId});
+  }
 
-  static void rewardedAdWatch() => _log('rewarded_ad_watch');
+  /// 購買的方案帶免費試用時，購買成功即記 trial_start。
+  static void trialStart(String packageId) =>
+      _log('trial_start', {'package_id': packageId});
 
   static void importCsv(int itemCount) =>
       _log('import_csv', {'item_count': itemCount});

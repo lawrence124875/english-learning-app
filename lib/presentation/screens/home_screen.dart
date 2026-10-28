@@ -6,6 +6,8 @@ import '../widgets/settings_panel.dart';
 import '../widgets/unlock_banner.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/fit_word_area.dart';
+import '../widgets/free_limit_sheet.dart';
+import '../../domain/services/free_tier.dart';
 import '../app_theme.dart';
 import 'voice_test_screen.dart';
 import 'about_screen.dart';
@@ -136,7 +138,8 @@ class HomeScreenState extends State<HomeScreen> {
             onSelected: (value) {
               if (value == 'premium') {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const PaywallScreen()));
+                    MaterialPageRoute(
+                        builder: (_) => const PaywallScreen(source: 'menu')));
               } else if (value == 'voice') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const VoiceTestScreen()));
@@ -403,6 +406,15 @@ class _DatasetPicker extends StatelessWidget {
 
 /// 單字卡：單字是主角，按鈕刻意縮小（Lawrence 2026-10-06：以單字學習
 /// 視覺為主、要能專注）。單字大小依「播放設定 → 單字大小」。
+/// 切換 ★；免費版合計滿 30 個時改顯示付費牆提示。
+Future<void> _toggleStar(BuildContext context, AppState appState) async {
+  final result = await appState.toggleStarCurrent();
+  if (result != StarToggleResult.limitReached || !context.mounted) return;
+  final l = AppLocalizations.of(context)!;
+  await showFreeLimitSheet(context,
+      title: l.starLimitTitle, body: l.starLimitBody, source: 'starred');
+}
+
 class _WordCard extends StatelessWidget {
   final AppState appState;
   const _WordCard({required this.appState});
@@ -501,7 +513,7 @@ class _WordCard extends StatelessWidget {
               spacing: 4,
               children: [
                 TextButton.icon(
-                  onPressed: appState.toggleStarCurrent,
+                  onPressed: () => _toggleStar(context, appState),
                   style: TextButton.styleFrom(
                       foregroundColor: palette.star,
                       visualDensity: VisualDensity.compact),

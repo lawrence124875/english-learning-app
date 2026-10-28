@@ -282,5 +282,19 @@
   "peSettingsSummary": "{content} · ×{count} · {seconds} s gap",
   "peSeeExamples": "Examples",
   "peNoExamples": "No example sentences for \"{word}\" yet.",
-  "peExamplesNeedPremium": "Example sentences for \"{word}\" require Premium."
+  "peExamplesNeedPremium": "Example sentences for \"{word}\" require Premium.",
+  "unlockWatchAdLeft": "Watch an ad +20 ({count} left today)",
+  "unlockDailyLimitReached": "You've used all 3 for today. Come back tomorrow, or upgrade to Premium to unlock everything.",
+  "unlockTodayOnly": "Items unlocked with ads last for today and reset tomorrow.",
+  "starLimitTitle": "Your unfamiliar-words list is full (30)",
+  "starLimitBody": "Upgrade to save unlimited words and play only the ones you find hard.",
+  "peDailyLimitTitle": "You've used today's 5 free sentences",
+  "peDailyLimitBody": "Come back tomorrow, or upgrade to Premium to practice every sentence without limits.",
+  "commonLater": "Not now",
+  "paywallTrialOffer": "Free for {days} days, then {price}/year",
+  "paywallTrialOfferMonthly": "Free for {days} days, then {price}/month",
+  "paywallTrialNote": "Cancel anytime. We'll remind you before your trial ends.",
+  "paywallAnnualPerMonth": "About {price}/month",
+  "paywallContinue": "Continue",
+  "paywallStartTrial": "Start free trial"
 }

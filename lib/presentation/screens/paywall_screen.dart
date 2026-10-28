@@ -5,11 +5,17 @@ import 'package:url_launcher/url_launcher.dart';
 import '../providers/app_state.dart';
 import '../../data/sources/ads_service.dart';
 import '../../data/sources/analytics_service.dart';
+import '../../data/sources/paywall_offer.dart';
 import '../../l10n/app_localizations.dart';
 
 /// 訂閱付費頁面：顯示方案、目前訂閱狀態、恢復購買按鈕。
+/// v24：方案改成可選卡片＋一顆購買按鈕，年繳預設選取並標示每月約多少；
+/// RevenueCat 方案有免費試用時顯示「免費試用 N 天，之後 …」與取消說明。
 class PaywallScreen extends StatefulWidget {
-  const PaywallScreen({super.key});
+  /// 從哪裡打開（記在 paywall_view 的 source）：menu、unlock、starred、pe…
+  final String source;
+
+  const PaywallScreen({super.key, this.source = 'other'});
 
   @override
   State<PaywallScreen> createState() => _PaywallScreenState();
@@ -19,6 +25,7 @@ class _PaywallScreenState extends State<PaywallScreen> {
   Offerings? _offerings;
   bool _loading = true;
   bool _purchasing = false;
+  Package? _selected;
 
   /// Google Play 的「付款和訂閱」管理頁。使用者要取消訂閱時，
   /// 一定得在這裡操作（App 本身無法替使用者取消），
@@ -29,7 +36,7 @@ class _PaywallScreenState extends State<PaywallScreen> {
   @override
   void initState() {
     super.initState();
-    AnalyticsService.paywallView();
+    AnalyticsService.paywallView(widget.source);
     _loadOfferings();
   }
 
@@ -41,8 +48,10 @@ class _PaywallScreenState extends State<PaywallScreen> {
       // 網路異常或 RevenueCat 尚未設定好時，顯示「目前沒有可用方案」即可。
     }
     if (!mounted) return;
+    final packages = offerings?.current?.availablePackages ?? const <Package>[];
     setState(() {
       _offerings = offerings;
+      _selected = PaywallOffer.defaultPackage(packages);
       _loading = false;
     });
   }
@@ -161,21 +170,84 @@ class _PaywallScreenState extends State<PaywallScreen> {
     if (packages.isEmpty) {
       return [Text(l.paywallNoPackages)];
     }
-    return packages
-        .map(
-          (p) => Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: FilledButton(
-              onPressed: _purchasing ? null : () => _purchase(p),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                child: Text(
-                    '${_planLabel(p, l)}  ${p.storeProduct.priceString}'),
-              ),
+    final selected = _selected ?? packages.first;
+    final trialDays = PaywallOffer.trialDays(selected.storeProduct);
+    return [
+      for (final p in packages) _planTile(p, l, p == selected),
+      const SizedBox(height: 4),
+      if (trialDays != null) ...[
+        Text(
+          (selected.packageType == PackageType.monthly
+                  ? l.paywallTrialOfferMonthly
+                  : l.paywallTrialOffer)(
+              trialDays, selected.storeProduct.priceString),
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontWeight: FontWeight.w600),
+        ),
+        const SizedBox(height: 4),
+        Text(l.paywallTrialNote,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 12.5)),
+        const SizedBox(height: 8),
+      ],
+      FilledButton(
+        onPressed: _purchasing ? null : () => _purchase(selected),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          child: Text(trialDays != null ? l.paywallStartTrial : l.paywallContinue),
+        ),
+      ),
+    ];
+  }
+
+  Widget _planTile(Package p, AppLocalizations l, bool isSelected) {
+    final scheme = Theme.of(context).colorScheme;
+    final perMonth = p.packageType == PackageType.annual
+        ? PaywallOffer.monthlyOfAnnual(p.storeProduct)
+        : null;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Material(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+          side: BorderSide(
+              color: isSelected ? scheme.primary : scheme.outlineVariant,
+              width: isSelected ? 2 : 1),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: _purchasing ? null : () => setState(() => _selected = p),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            child: Row(
+              children: [
+                Icon(
+                    isSelected
+                        ? Icons.radio_button_checked
+                        : Icons.radio_button_unchecked,
+                    color: isSelected ? scheme.primary : null),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(_planLabel(p, l),
+                          style: const TextStyle(fontWeight: FontWeight.w600)),
+                      if (perMonth != null)
+                        Text(l.paywallAnnualPerMonth(perMonth),
+                            style: TextStyle(
+                                fontSize: 12.5, color: scheme.primary)),
+                    ],
+                  ),
+                ),
+                Text(p.storeProduct.priceString,
+                    style: const TextStyle(fontWeight: FontWeight.w600)),
+              ],
             ),
           ),
-        )
-        .toList();
+        ),
+      ),
+    );
   }
 }
 

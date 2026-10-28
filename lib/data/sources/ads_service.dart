@@ -207,32 +207,49 @@ class AdsService {
     );
   }
 
-  static Future<bool> showRewardedAd() async {
+  /// 目前有沒有載好的獎勵廣告。
+  static bool get rewardedReady => _rewardedAd != null;
+
+  /// 播放獎勵廣告，等到使用者看完（earned）、中途關掉（dismissed）或播放失敗
+  /// （failed）。沒有載好的廣告時回傳 notReady。
+  /// 注意 `ad.show()` 只等到廣告開始顯示，結果要等全螢幕回呼。
+  static Future<RewardedAdResult> showRewardedAd() async {
     final ad = _rewardedAd;
-    if (ad == null || _fullScreenAdShowing) return false;
+    if (ad == null || _fullScreenAdShowing) return RewardedAdResult.notReady;
+    _rewardedAd = null;
+    final done = Completer<RewardedAdResult>();
+    void finish(RewardedAdResult r) {
+      if (!done.isCompleted) done.complete(r);
+    }
+
     ad.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (ad) => _markShowing(),
+      onAdShowedFullScreenContent: (ad) {
+        _markShowing();
+        AnalyticsService.rewardedAdShown();
+      },
       onAdDismissedFullScreenContent: (ad) {
         _markDismissed();
         ad.dispose();
+        finish(RewardedAdResult.dismissed);
       },
       onAdFailedToShowFullScreenContent: (ad, error) {
         _fullScreenAdShowing = false;
         ad.dispose();
+        finish(RewardedAdResult.failed);
       },
     );
     // 在 show() 之前就標記，避免廣告畫面蓋上來造成的生命週期變化
     // 被誤判成「使用者離開 App」。
     _markShowing();
-    var earnedReward = false;
-    await ad.show(
-      onUserEarnedReward: (ad, reward) {
-        earnedReward = true;
-      },
-    );
-    _rewardedAd = null;
-    if (earnedReward) AnalyticsService.rewardedAdWatch();
-    return earnedReward;
+    try {
+      await ad.show(
+        onUserEarnedReward: (ad, reward) => finish(RewardedAdResult.earned),
+      );
+    } catch (_) {
+      _fullScreenAdShowing = false;
+      finish(RewardedAdResult.failed);
+    }
+    return done.future;
   }
 
   // ---------------- 插頁廣告 ----------------
@@ -401,3 +418,6 @@ class _AdLifecycleObserver with WidgetsBindingObserver {
     }
   }
 }
+
+/// 獎勵廣告的播放結果。
+enum RewardedAdResult { earned, dismissed, failed, notReady }

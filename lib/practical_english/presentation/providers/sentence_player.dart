@@ -110,6 +110,9 @@ class SentencePlayer extends ChangeNotifier {
   /// 手機沒有某翻譯語言的語音時呼叫（每種語言只呼叫一次）。
   void Function(String languageCode)? onVoiceUnavailable;
 
+  /// 免費版今天的 5 句用完、下一句不能開時呼叫（畫面顯示付費牆）。
+  void Function()? onFreeLimit;
+
   SentencePlayer({
     required PracticalEnglishState state,
     required TtsService tts,
@@ -207,7 +210,7 @@ class SentencePlayer extends ChangeNotifier {
         _endAuto();
         break;
       }
-      _moveTo(_index + 1);
+      if (!_moveTo(_index + 1)) break;
     }
   }
 
@@ -246,7 +249,11 @@ class SentencePlayer extends ChangeNotifier {
       _cancelInterval();
     }
     if (target != _index) {
-      _moveTo(target);
+      if (!_moveTo(target)) {
+        _releaseLease();
+        _notify();
+        return stoppedAuto;
+      }
     } else if (stoppedAuto) {
       _notify();
     }
@@ -256,12 +263,20 @@ class SentencePlayer extends ChangeNotifier {
   }
 
   /// 換句（頭尾相接）。換句即讓進行中的朗讀過期。
-  void _moveTo(int target) {
+  /// 免費版今天的句數用完時不換句、停止連續播放並回傳 false。
+  bool _moveTo(int target) {
     final n = sentences.length;
-    _index = ((target % n) + n) % n;
+    final next = ((target % n) + n) % n;
+    if (!_state.canOpen(sentences[next])) {
+      _endAuto();
+      onFreeLimit?.call();
+      return false;
+    }
+    _index = next;
     _speakGen++;
     _state.recordPractice(current);
     _notify();
+    return true;
   }
 
   // ---------------- 朗讀 ----------------

@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
+import 'package:purchases_flutter/purchases_flutter.dart' show Package;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../domain/models/word_item.dart';
 import '../../domain/models/playback_settings.dart';
 import '../../domain/services/playlist_builder.dart';
+import '../../domain/services/free_tier.dart';
 import '../../data/repositories/word_repository.dart';
 import '../../data/repositories/progress_repository.dart';
 import '../../data/sources/tts_service.dart';
@@ -10,6 +13,7 @@ import '../../data/sources/tts_audio_handler.dart';
 import '../../data/sources/subscription_service.dart';
 import '../../data/sources/ads_service.dart';
 import '../../data/sources/analytics_service.dart';
+import '../../data/sources/paywall_offer.dart';
 import '../../data/repositories/stats_repository.dart';
 import '../../data/sources/notification_service.dart';
 import '../../data/sources/background_l10n.dart';
@@ -37,7 +41,9 @@ class AppState extends ChangeNotifier {
     required ProgressRepository progressRepository,
     required TtsService ttsService,
     TtsAudioHandler? audioHandler,
-  })  : _wordRepository = wordRepository,
+    DateTime Function()? now,
+  })  : _now = now ?? DateTime.now,
+        _wordRepository = wordRepository,
         _progressRepository = progressRepository,
         _ttsService = ttsService,
         _audioHandler = audioHandler {
@@ -144,23 +150,83 @@ class AppState extends ChangeNotifier {
   /// 不會出現兩個迴圈同時推進（單字跳得比設定的間隔快）。
   int _cruiseGen = 0;
 
-  // --- 免費版 / 訂閱相關 ---
+  // --- 免費版 / 訂閱相關（規則見 FreeTierRules）---
   bool isPremium = false;
 
-  /// 每個教材各自的「本次使用階段額外解鎖」數量（看獎勵廣告換來的），
-  /// 只存在記憶體裡，重開 App 就會重置，符合「加速器」而非永久解鎖的設計。
-  final Map<String, int> _sessionExtraUnlocked = {};
+  final DateTime Function() _now;
 
-  static const _freeUnlockFraction = 1 / 3;
-  static const _rewardedAdUnlockAmount = 20;
+  /// 免費版當天的額度（獎勵廣告次數與額外解鎖、V2 今日句子）。
+  /// 存在 SharedPreferences：重開 App 仍保留，隔天歸零不累積。
+  FreeDailyState _daily = const FreeDailyState(day: '');
+
+  FreeDailyState get _today => _daily.forDay(freeTierDayKey(_now()));
+
+  @visibleForTesting
+  Future<void> loadFreeDaily() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      _daily = FreeDailyState.fromJsonString(
+          prefs.getString(FreeDailyState.prefsKey), freeTierDayKey(_now()));
+    } catch (e) {
+      debugPrint('免費版每日額度讀取失敗（當成新的一天）：$e');
+    }
+  }
+
+  Future<void> _saveDaily() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(FreeDailyState.prefsKey, _daily.toJsonString());
+    } catch (e) {
+      debugPrint('免費版每日額度寫入失敗：$e');
+    }
+  }
 
   /// 免費版使用者目前可以存取的項目數（超過這個範圍的單字不會出現在播放清單裡）。
   /// Premium 使用者永遠回傳整份教材的長度。
   int unlockedCount(WordDataset dataset) {
     if (isPremium) return dataset.items.length;
-    final base = (dataset.items.length * _freeUnlockFraction).floor();
-    final extra = _sessionExtraUnlocked[dataset.id] ?? 0;
+    final base = (dataset.items.length * FreeTierRules.unlockFraction).floor();
+    final extra = _today.extraUnlocked[dataset.id] ?? 0;
     return (base + extra).clamp(0, dataset.items.length);
+  }
+
+  /// 今天還能看幾次獎勵廣告（每日上限 3 次）。
+  int get rewardedUsesLeft => _today.rewardedLeft;
+
+  /// 所有教材合計的 ★ 數（免費版上限 30）。
+  int get totalStarredCount =>
+      _starredSets.values.fold<int>(0, (sum, s) => sum + s.length);
+
+  /// 免費版還能不能再加 ★（已超過 30 的舊使用者保留，只是不能新增）。
+  bool get canAddStar =>
+      isPremium || totalStarredCount < FreeTierRules.starredLimit;
+
+  /// V2：今天還能不能開這一句（Premium 不限；免費每天 5 句，重看不另計）。
+  bool canUsePeSentence(String sentenceId) =>
+      isPremium || _today.canUsePeSentence(sentenceId);
+
+  /// V2：記下今天用過這一句。
+  Future<void> recordPeSentence(String sentenceId) async {
+    if (isPremium) return;
+    final next = _today.withPeSentence(sentenceId);
+    if (identical(next, _daily)) return;
+    _daily = next;
+    await _saveDaily();
+  }
+
+  static const _firstPlayKey = 'analytics_first_play_v1';
+  bool _firstPlayLogged = false;
+
+  /// 第一次按播放（V1 或 V2）時記一次 first_play，之後不再記。
+  Future<void> markFirstPlay() async {
+    if (_firstPlayLogged) return;
+    _firstPlayLogged = true;
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (prefs.getBool(_firstPlayKey) ?? false) return;
+      await prefs.setBool(_firstPlayKey, true);
+      AnalyticsService.firstPlay();
+    } catch (_) {}
   }
 
   bool get currentDatasetFullyUnlocked =>
@@ -245,6 +311,7 @@ class AppState extends ChangeNotifier {
     // 第十七版：免費版才走廣告同意（UMP）流程並初始化廣告；不等它完成。
     if (!isPremium) unawaited(AdsService.startConsentAndAds());
     AnalyticsService.setUserProperties(isPremium: isPremium);
+    await loadFreeDaily();
     stats = await _statsRepository.loadStats();
     reminderEnabled = await _progressRepository.loadReminderEnabled();
     final reminderTime = await _progressRepository.loadReminderTime();
@@ -327,14 +394,18 @@ class AppState extends ChangeNotifier {
     return DatasetPlaybackState(playlist: playlist, currentStep: 0);
   }
 
-  /// 看完一次獎勵廣告後呼叫：幫目前教材多解鎖 20 個項目（僅限本次使用階段）。
-  Future<void> unlockMoreViaRewardedAd() async {
+  /// 看完一次獎勵廣告（或廣告載入失敗／無填充）後呼叫：目前教材當天多開
+  /// 20 個並計入次數。已達每日上限時不解鎖，回傳 false。
+  Future<bool> unlockMoreViaRewardedAd() async {
     final dataset = currentDataset;
-    _sessionExtraUnlocked[dataset.id] =
-        (_sessionExtraUnlocked[dataset.id] ?? 0) + _rewardedAdUnlockAmount;
+    final next = _today.withRewardedUnlock(dataset.id);
+    if (next == null) return false;
+    _daily = next;
+    await _saveDaily();
     _playbackStates[dataset.id] = _rebuildPlaylist(dataset, currentStarred);
     await _persistCurrentProgress();
     notifyListeners();
+    return true;
   }
 
   Future<bool> purchasePremiumPackage(dynamic package) async {
@@ -347,6 +418,7 @@ class AppState extends ChangeNotifier {
       isPremium = true;
       AdsService.adsEnabled = false;
       AnalyticsService.purchaseSuccess(packageId);
+      if (_hasFreeTrial(package)) AnalyticsService.trialStart(packageId);
       AnalyticsService.setUserProperties(isPremium: true);
       // 訂閱成功後，所有教材的播放清單都要重新建構成完整版（不再受限）。
       for (final dataset in datasets) {
@@ -356,6 +428,14 @@ class AppState extends ChangeNotifier {
       notifyListeners();
     }
     return success;
+  }
+
+  static bool _hasFreeTrial(dynamic package) {
+    try {
+      return PaywallOffer.trialDays((package as Package).storeProduct) != null;
+    } catch (_) {
+      return false;
+    }
   }
 
   static String _packageIdOf(dynamic package) {
@@ -473,17 +553,26 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> toggleStarCurrent() async {
+  /// 切換目前單字的 ★。免費版合計已滿 30 個時不加入，回傳
+  /// [StarToggleResult.limitReached]（畫面顯示付費牆）。
+  Future<StarToggleResult> toggleStarCurrent() async {
     final dataset = currentDataset;
     final state = currentPlaybackState;
-    if (state.playlist.isEmpty) return;
+    if (state.playlist.isEmpty) return StarToggleResult.removed;
     final idx = state.playlist[state.currentStep % state.playlist.length];
 
     final starred = Set<int>.from(currentStarred);
+    final StarToggleResult result;
     if (starred.contains(idx)) {
       starred.remove(idx);
+      result = StarToggleResult.removed;
     } else {
+      if (!canAddStar) {
+        AnalyticsService.hitFreeLimit('starred');
+        return StarToggleResult.limitReached;
+      }
       starred.add(idx);
+      result = StarToggleResult.added;
       AnalyticsService.starWord(dataset.id);
     }
     _starredSets[dataset.id] = starred;
@@ -497,6 +586,7 @@ class AppState extends ChangeNotifier {
           dataset.id, _playbackStates[dataset.id]!);
     }
     notifyListeners();
+    return result;
   }
 
   // --- V2 Practical English 相容掛勾（SPEC §3、§9.2）；不改變 V1 既有行為 ---
@@ -636,6 +726,10 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     if (cycleCompleted) {
       AnalyticsService.roundComplete(dataset.id, cycleCount);
+      if (!isPremium && !currentDatasetFullyUnlocked) {
+        // 免費範圍整輪聽完、後面還有鎖住的字。
+        AnalyticsService.hitFreeLimit('words');
+      }
       if (!isPremium) {
         // 免費版：每輪播完一次插頁廣告。App 在前景才會立刻顯示；
         // 鎖屏/背景收聽時先記下，等使用者回到 App 再顯示（AdMob 政策）。
@@ -750,6 +844,7 @@ class AppState extends ChangeNotifier {
     if (isPlaying) return;
     isPlaying = true;
     AnalyticsService.playStart(currentDataset.id);
+    unawaited(markFirstPlay());
     _updateNowPlaying();
     notifyListeners();
     await _cruiseLoop();

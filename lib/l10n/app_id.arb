@@ -282,5 +282,19 @@
   "peSettingsSummary": "{content} · {count}x · jeda {seconds} dtk",
   "peSeeExamples": "Lihat contoh",
   "peNoExamples": "Belum ada contoh kalimat untuk \"{word}\".",
-  "peExamplesNeedPremium": "Contoh kalimat untuk \"{word}\" memerlukan Premium."
+  "peExamplesNeedPremium": "Contoh kalimat untuk \"{word}\" memerlukan Premium.",
+  "unlockWatchAdLeft": "Tonton iklan +20 (sisa {count} kali hari ini)",
+  "unlockDailyLimitReached": "Kamu sudah memakai 3 kali hari ini. Kembali besok, atau upgrade ke Premium untuk membuka semuanya.",
+  "unlockTodayOnly": "Item yang dibuka lewat iklan berlaku hari ini dan direset besok.",
+  "starLimitTitle": "Daftar kata belum hafal sudah penuh (30)",
+  "starLimitBody": "Upgrade untuk menyimpan tanpa batas dan hanya memutar kata yang belum hafal.",
+  "peDailyLimitTitle": "Kamu sudah memakai 5 kalimat gratis hari ini",
+  "peDailyLimitBody": "Kembali besok, atau upgrade ke Premium untuk berlatih semua kalimat tanpa batas.",
+  "commonLater": "Nanti saja",
+  "paywallTrialOffer": "Gratis {days} hari, lalu {price}/tahun",
+  "paywallTrialOfferMonthly": "Gratis {days} hari, lalu {price}/bulan",
+  "paywallTrialNote": "Bisa dibatalkan kapan saja. Kami akan mengingatkan sebelum masa uji coba berakhir.",
+  "paywallAnnualPerMonth": "Sekitar {price}/bulan",
+  "paywallContinue": "Lanjutkan",
+  "paywallStartTrial": "Mulai uji coba gratis"
 }

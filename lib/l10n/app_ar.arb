@@ -282,5 +282,19 @@
   "peSettingsSummary": "{content} · ×{count} · فاصل {seconds} ث",
   "peSeeExamples": "أمثلة",
   "peNoExamples": "لا توجد جمل أمثلة لـ \"{word}\" بعد.",
-  "peExamplesNeedPremium": "جمل الأمثلة لـ \"{word}\" تتطلب Premium."
+  "peExamplesNeedPremium": "جمل الأمثلة لـ \"{word}\" تتطلب Premium.",
+  "unlockWatchAdLeft": "شاهد إعلانًا ‎+20 (متبقٍ اليوم: {count})",
+  "unlockDailyLimitReached": "استخدمت المرات الثلاث لليوم. عُد غدًا، أو رقِّ إلى Premium لفتح كل شيء.",
+  "unlockTodayOnly": "العناصر التي تفتحها بالإعلانات صالحة لليوم فقط وتُعاد غدًا.",
+  "starLimitTitle": "قائمة الكلمات غير المألوفة ممتلئة (30)",
+  "starLimitBody": "رقِّ لحفظ عدد غير محدود من الكلمات وتشغيل غير المألوفة فقط.",
+  "peDailyLimitTitle": "استخدمت الجمل الخمس المجانية لليوم",
+  "peDailyLimitBody": "عُد غدًا، أو رقِّ إلى Premium للتدرّب على كل الجمل بلا حدود.",
+  "commonLater": "ليس الآن",
+  "paywallTrialOffer": "مجانًا لمدة {days} أيام، ثم {price} سنويًا",
+  "paywallTrialOfferMonthly": "مجانًا لمدة {days} أيام، ثم {price} شهريًا",
+  "paywallTrialNote": "يمكنك الإلغاء في أي وقت، وسنذكّرك قبل انتهاء الفترة التجريبية.",
+  "paywallAnnualPerMonth": "نحو {price} شهريًا",
+  "paywallContinue": "متابعة",
+  "paywallStartTrial": "ابدأ التجربة المجانية"
 }
