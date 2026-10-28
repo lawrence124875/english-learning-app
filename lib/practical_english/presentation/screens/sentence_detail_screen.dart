@@ -52,7 +52,7 @@ class _SentenceDetailScreenState extends State<SentenceDetailScreen> {
           : (p) => AudioHandlerSentenceNowPlaying(handler, p),
     )
       ..onVoiceUnavailable =
-          (_) => _snack(AppLocalizations.of(context)!.peVoiceUnavailable)
+          ((_) => _snack(AppLocalizations.of(context)!.peVoiceUnavailable))
       ..onFreeLimit = _showPeLimit;
     _player.loadSettings();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
