@@ -116,6 +116,8 @@
   "aboutSourceLabel": "Obra original: {name}",
   "aboutLicenseLabel": "Licencia: {name}",
   "aboutTtsNote": "Las voces provienen del motor de texto a voz (TTS) integrado en el dispositivo.",
+  "aboutPrivacyPolicy": "Política de privacidad",
+  "aboutTermsOfService": "Términos del servicio",
   "feedbackTitle": "Comentarios",
   "feedbackCategoryLabel": "Tipo",
   "feedbackCategoryBug": "Informar un problema",

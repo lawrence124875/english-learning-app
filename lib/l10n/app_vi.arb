@@ -116,6 +116,8 @@
   "aboutSourceLabel": "Tác phẩm gốc: {name}",
   "aboutLicenseLabel": "Giấy phép: {name}",
   "aboutTtsNote": "Giọng đọc được cung cấp bởi công cụ chuyển văn bản thành giọng nói (TTS) có sẵn trên thiết bị.",
+  "aboutPrivacyPolicy": "Chính sách quyền riêng tư",
+  "aboutTermsOfService": "Điều khoản dịch vụ",
   "feedbackTitle": "Góp ý",
   "feedbackCategoryLabel": "Loại",
   "feedbackCategoryBug": "Báo lỗi",

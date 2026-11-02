@@ -116,6 +116,8 @@
   "aboutSourceLabel": "原著作物：{name}",
   "aboutLicenseLabel": "ライセンス：{name}",
   "aboutTtsNote": "読み上げ音声は端末に内蔵された音声合成（TTS）エンジンによるものです。",
+  "aboutPrivacyPolicy": "プライバシーポリシー",
+  "aboutTermsOfService": "利用規約",
   "feedbackTitle": "ご意見・ご要望",
   "feedbackCategoryLabel": "種類",
   "feedbackCategoryBug": "不具合の報告",

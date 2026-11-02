@@ -116,6 +116,8 @@
   "aboutSourceLabel": "原作品：{name}",
   "aboutLicenseLabel": "授权条款：{name}",
   "aboutTtsNote": "朗读语音由设备系统内置文本转语音引擎提供。",
+  "aboutPrivacyPolicy": "隐私政策",
+  "aboutTermsOfService": "服务条款",
   "feedbackTitle": "意见回馈",
   "feedbackCategoryLabel": "类型",
   "feedbackCategoryBug": "回报问题",

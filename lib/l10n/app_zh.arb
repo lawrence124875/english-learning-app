@@ -253,6 +253,8 @@
     }
   },
   "aboutTtsNote": "朗讀語音由裝置系統內建文字轉語音引擎提供。",
+  "aboutPrivacyPolicy": "隱私權政策",
+  "aboutTermsOfService": "服務條款",
   "feedbackTitle": "意見回饋",
   "feedbackCategoryLabel": "類型",
   "feedbackCategoryBug": "回報問題",
