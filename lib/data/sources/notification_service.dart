@@ -246,33 +246,10 @@ class NotificationService {
     } catch (_) {}
   }
 
-  /// 能用「精準鬧鐘」就用（時間到準時跳），不行才退回「非精準」
-  /// （小米等省電機制下，非精準排程可能延遲很久甚至不觸發）。
-  static Future<AndroidScheduleMode> _scheduleMode() async {
-    try {
-      final can = await _plugin
-          .resolvePlatformSpecificImplementation<
-              AndroidFlutterLocalNotificationsPlugin>()
-          ?.canScheduleExactNotifications();
-      if (can == true) return AndroidScheduleMode.exactAllowWhileIdle;
-    } catch (_) {}
-    return AndroidScheduleMode.inexactAllowWhileIdle;
-  }
-
-  /// 使用者主動設定提醒時呼叫：Android 12+ 若尚未允許「鬧鐘與提醒」
-  /// （精準鬧鐘），開系統設定頁請使用者允許。只在使用者操作時觸發，
-  /// 不在 App 啟動時自動跳出。
-  static Future<void> requestExactAlarmIfNeeded() async {
-    try {
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
-      if (android == null) return;
-      final can = await android.canScheduleExactNotifications();
-      if (can == true) return;
-      AdsService.skipNextAppOpenAd();
-      await android.requestExactAlarmsPermission();
-    } catch (_) {}
-  }
+  /// 一律用「非精準」排程（Play 精準鬧鐘政策：提醒類 App 不該要求
+  /// SCHEDULE_EXACT_ALARM，2026-11 Lawrence 決定比照塔羅移除）。
+  static Future<AndroidScheduleMode> _scheduleMode() async =>
+      AndroidScheduleMode.inexactAllowWhileIdle;
 
   /// 請求通知權限。**一律不拋例外**：
   /// Crashlytics 回報（第 9～10 版，2026-09）這裡會拋
@@ -498,11 +475,6 @@ class NotificationService {
       lines.add('通知權限（App 通知開關）：${await android?.areNotificationsEnabled()}');
     } catch (e) {
       lines.add('通知權限：查詢失敗 $e');
-    }
-    try {
-      lines.add('精準鬧鐘權限：${await android?.canScheduleExactNotifications()}');
-    } catch (e) {
-      lines.add('精準鬧鐘權限：查詢失敗 $e');
     }
     try {
       final chans = await android?.getNotificationChannels() ?? [];

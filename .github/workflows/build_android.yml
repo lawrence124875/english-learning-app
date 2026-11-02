@@ -111,6 +111,11 @@ jobs:
             --dart-define=ADMOB_BANNER_AD_UNIT_ID=$ADMOB_BANNER_AD_UNIT_ID \
             --dart-define=ADMOB_APP_OPEN_AD_UNIT_ID=$ADMOB_APP_OPEN_AD_UNIT_ID
 
+      # 2026-11-02 Lawrence 同意：權限報告只寫 Actions summary，不影響建置／發佈（升 targetSdk 37 前先看）。
+      - name: Permission report (summary only)
+        continue-on-error: true
+        run: bash scripts/permission_report.sh
+
       # 2026-10-01 Lawrence 決定：任何 APK/AAB 都不放公開 repo 的 Artifacts，
       # 一律發佈到私人 repo english-app-builds 的 Release（Secret BUILDS_REPO_TOKEN＝CI 專用權杖）。
       - name: Publish APK + AAB to private repo release
