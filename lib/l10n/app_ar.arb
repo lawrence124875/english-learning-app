@@ -116,6 +116,8 @@
   "aboutSourceLabel": "العمل الأصلي: {name}",
   "aboutLicenseLabel": "الترخيص: {name}",
   "aboutTtsNote": "النطق مقدَّم من محرك تحويل النص إلى كلام المدمج في جهازك.",
+  "aboutPrivacyPolicy": "سياسة الخصوصية",
+  "aboutTermsOfService": "شروط الخدمة",
   "feedbackTitle": "الملاحظات",
   "feedbackCategoryLabel": "النوع",
   "feedbackCategoryBug": "الإبلاغ عن مشكلة",

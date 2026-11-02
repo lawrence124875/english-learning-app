@@ -10,6 +10,11 @@ import '../../l10n/app_localizations.dart';
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
+  static const privacyPolicyUrl =
+      'https://lawrence124875.github.io/english-learning-app/';
+  static const termsOfServiceUrl =
+      'https://lawrence124875.github.io/english-learning-app/terms.html';
+
   static Future<void> _open(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
@@ -38,6 +43,19 @@ class AboutScreen extends StatelessWidget {
             ),
             icon: const Icon(Icons.feedback_outlined),
             label: Text(l.aboutFeedbackButton),
+          ),
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 16,
+            runSpacing: 4,
+            children: [
+              _LinkText(
+                  label: l.aboutPrivacyPolicy,
+                  onTap: () => _open(privacyPolicyUrl)),
+              _LinkText(
+                  label: l.aboutTermsOfService,
+                  onTap: () => _open(termsOfServiceUrl)),
+            ],
           ),
           const SizedBox(height: 24),
           Text(l.aboutAttributionIntro),

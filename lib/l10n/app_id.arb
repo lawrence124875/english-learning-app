@@ -116,6 +116,8 @@
   "aboutSourceLabel": "Karya asli: {name}",
   "aboutLicenseLabel": "Lisensi: {name}",
   "aboutTtsNote": "Suara pembacaan disediakan oleh mesin teks-ke-suara (TTS) bawaan perangkat.",
+  "aboutPrivacyPolicy": "Kebijakan Privasi",
+  "aboutTermsOfService": "Ketentuan Layanan",
   "feedbackTitle": "Masukan",
   "feedbackCategoryLabel": "Jenis",
   "feedbackCategoryBug": "Laporkan masalah",

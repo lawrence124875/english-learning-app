@@ -116,6 +116,8 @@
   "aboutSourceLabel": "원저작물: {name}",
   "aboutLicenseLabel": "라이선스: {name}",
   "aboutTtsNote": "낭독 음성은 기기에 내장된 TTS(텍스트 음성 변환) 엔진으로 제공됩니다.",
+  "aboutPrivacyPolicy": "개인정보처리방침",
+  "aboutTermsOfService": "서비스 약관",
   "feedbackTitle": "의견 보내기",
   "feedbackCategoryLabel": "유형",
   "feedbackCategoryBug": "문제 신고",

@@ -116,6 +116,8 @@
   "aboutSourceLabel": "Original work: {name}",
   "aboutLicenseLabel": "License: {name}",
   "aboutTtsNote": "Speech is provided by your device's built-in text-to-speech engine.",
+  "aboutPrivacyPolicy": "Privacy Policy",
+  "aboutTermsOfService": "Terms of Service",
   "feedbackTitle": "Feedback",
   "feedbackCategoryLabel": "Type",
   "feedbackCategoryBug": "Report a problem",

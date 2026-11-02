@@ -116,6 +116,8 @@
   "aboutSourceLabel": "ต้นฉบับ: {name}",
   "aboutLicenseLabel": "สัญญาอนุญาต: {name}",
   "aboutTtsNote": "เสียงอ่านมาจากระบบแปลงข้อความเป็นเสียงในตัวเครื่องของคุณ",
+  "aboutPrivacyPolicy": "นโยบายความเป็นส่วนตัว",
+  "aboutTermsOfService": "ข้อกำหนดการให้บริการ",
   "feedbackTitle": "ความคิดเห็น",
   "feedbackCategoryLabel": "ประเภท",
   "feedbackCategoryBug": "แจ้งปัญหา",

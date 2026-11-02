@@ -7,6 +7,7 @@ import '../../data/sources/ads_service.dart';
 import '../../data/sources/analytics_service.dart';
 import '../../data/sources/paywall_offer.dart';
 import '../../l10n/app_localizations.dart';
+import 'about_screen.dart';
 
 /// 訂閱付費頁面：顯示方案、目前訂閱狀態、恢復購買按鈕。
 /// v24：方案改成可選卡片＋一顆購買按鈕，年繳預設選取並標示每月約多少；
@@ -84,6 +85,11 @@ class _PaywallScreenState extends State<PaywallScreen> {
     if (restored) Navigator.pop(context);
   }
 
+  Future<void> _openUrl(String url) async {
+    AdsService.skipNextAppOpenAd();
+    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+  }
+
   Future<void> _openManageSubscription() async {
     final uri = Uri.parse(_manageSubscriptionUrl);
     AdsService.skipNextAppOpenAd();
@@ -137,7 +143,22 @@ class _PaywallScreenState extends State<PaywallScreen> {
                       l.paywallTermsNote,
                       style: const TextStyle(color: Colors.grey, fontSize: 12),
                     ),
-                    const SizedBox(height: 16),
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      children: [
+                        TextButton(
+                          onPressed: () =>
+                              _openUrl(AboutScreen.termsOfServiceUrl),
+                          child: Text(l.aboutTermsOfService),
+                        ),
+                        TextButton(
+                          onPressed: () =>
+                              _openUrl(AboutScreen.privacyPolicyUrl),
+                          child: Text(l.aboutPrivacyPolicy),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
                     TextButton(
                       onPressed: _restore,
                       child: Text(l.paywallRestoreButton),
