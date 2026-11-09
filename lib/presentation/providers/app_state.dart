@@ -494,6 +494,8 @@ class AppState extends ChangeNotifier {
   }
 
   /// 設定/更新每日複習提醒。enabled=false 時會取消排程。
+  /// 打開時先確認通知權限：系統會問就問；拒絕或系統已不再詢問（此時帶去
+  /// 通知設定頁）→ 開關維持關閉。
   Future<void> setReminder({
     required bool enabled,
     required int hour,
@@ -504,18 +506,31 @@ class AppState extends ChangeNotifier {
     reminderMinute = minute;
     notifyListeners(); // 先更新畫面，避免使用者覺得沒反應；儲存/排程在背景繼續處理。
 
+    if (enabled) {
+      final granted =
+          await NotificationService.ensurePermission(openSettingsIfBlocked: true);
+      if (!granted) {
+        await _turnOffReminderAfterDenied();
+        return;
+      }
+    }
+
     await _progressRepository.saveReminderSettings(
         enabled: enabled, hour: hour, minute: minute);
 
     if (enabled) {
-      // Android 13 以下沒有「通知權限」這個概念，requestPermission() 可能回傳
-      // null/false，但這不代表不能排程通知——不能用這個結果來擋排程動作，
-      // 否則舊版 Android 上提醒永遠不會生效。
-      await NotificationService.requestPermission();
       await NotificationService.scheduleDailyReminder(hour: hour, minute: minute);
     } else {
       await NotificationService.cancelReminder();
     }
+  }
+
+  Future<void> _turnOffReminderAfterDenied() async {
+    reminderEnabled = false;
+    notifyListeners();
+    await _progressRepository.saveReminderSettings(
+        enabled: false, hour: reminderHour, minute: reminderMinute);
+    await NotificationService.cancelReminder();
   }
 
   void switchDataset(int index) {
@@ -851,7 +866,7 @@ class AppState extends ChangeNotifier {
 
   /// 每日提醒預設開啟，但 Android 13+／iOS 要使用者同意通知權限才會跳出。
   /// 啟動時不問（v9～10 當機教訓），改在使用者第一次按播放（有使用者操作、
-  /// Activity 已就緒）時問一次；之後不再打擾，使用者可在統計頁自行調整。
+  /// Activity 已就緒）時問一次；拒絕 → 提醒開關變關閉，之後在統計頁再打開時會再問。
   Future<void> _askNotificationPermissionOnce() async {
     try {
       if (!reminderEnabled) return;
@@ -859,7 +874,8 @@ class AppState extends ChangeNotifier {
       const key = 'notif_permission_asked_v1';
       if (prefs.getBool(key) ?? false) return;
       await prefs.setBool(key, true);
-      await NotificationService.requestPermission();
+      final granted = await NotificationService.ensurePermission();
+      if (!granted) await _turnOffReminderAfterDenied();
     } catch (e) {
       debugPrint('通知權限詢問失敗（不影響 App）：$e');
     }
