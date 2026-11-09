@@ -9,6 +9,7 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:android_intent_plus/android_intent.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'background_l10n.dart';
 import 'cover_art.dart';
 
@@ -383,6 +384,49 @@ class NotificationService {
   /// 專屬的「省電策略」與「自啟動管理」，標準 Android API 打不開，
   /// 這裡優先嘗試跳轉到 MIUI 專屬設定頁；如果失敗（例如不是小米手機、
   /// 或該頁面在這個 MIUI 版本上不存在），才退回標準 Android 設定頁。
+  /// 確保有通知權限（Android 13+／iOS；Android 12 以下一律視為已允許）。
+  /// - 已允許 → true。
+  /// - 系統還會跳詢問 → 跳出詢問，回傳使用者的選擇。
+  /// - 系統已不再詢問（永久拒絕）且 [openSettingsIfBlocked] → 帶去本 App 的
+  ///   通知設定頁，回傳 false（使用者回來後再打開開關即可）。
+  /// 任何例外都回傳 false 並記非當機錯誤，不中斷呼叫端。
+  static Future<bool> ensurePermission({bool openSettingsIfBlocked = false}) async {
+    // iOS 走原本 flutter_local_notifications 的詢問（permission_handler 在 iOS
+    // 需要 Podfile 巨集才能查通知權限，避免誤判成永久拒絕）。
+    if (Platform.isIOS) return requestPermission();
+    try {
+      final before = await Permission.notification.status;
+      if (before.isGranted || before.isLimited || before.isProvisional) return true;
+      if (before.isPermanentlyDenied || before.isRestricted) {
+        if (openSettingsIfBlocked) await openNotificationSettings();
+        return false;
+      }
+      final after = await Permission.notification.request();
+      return after.isGranted || after.isLimited || after.isProvisional;
+    } catch (e, st) {
+      _recordNonFatal(e, st, 'ensurePermission');
+      return false;
+    }
+  }
+
+  /// 開啟本 App 的系統通知設定頁；失敗時退回 App 資訊頁。
+  static Future<void> openNotificationSettings() async {
+    AdsService.skipNextAppOpenAd();
+    if (Platform.isAndroid) {
+      try {
+        final pkg = (await PackageInfo.fromPlatform()).packageName;
+        await AndroidIntent(
+          action: 'android.settings.APP_NOTIFICATION_SETTINGS',
+          arguments: <String, dynamic>{
+            'android.provider.extra.APP_PACKAGE': pkg,
+          },
+        ).launch();
+        return;
+      } catch (_) {}
+    }
+    await openAppSettings();
+  }
+
   static Future<void> requestIgnoreBatteryOptimizations() async {
     if (!Platform.isAndroid) return;
     final openedMiui = await _tryOpenMiuiPowerSettings();
