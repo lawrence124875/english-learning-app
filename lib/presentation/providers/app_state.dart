@@ -843,9 +843,26 @@ class AppState extends ChangeNotifier {
     isPlaying = true;
     AnalyticsService.playStart(currentDataset.id);
     unawaited(markFirstPlay());
+    unawaited(_askNotificationPermissionOnce());
     _updateNowPlaying();
     notifyListeners();
     await _cruiseLoop();
+  }
+
+  /// 每日提醒預設開啟，但 Android 13+／iOS 要使用者同意通知權限才會跳出。
+  /// 啟動時不問（v9～10 當機教訓），改在使用者第一次按播放（有使用者操作、
+  /// Activity 已就緒）時問一次；之後不再打擾，使用者可在統計頁自行調整。
+  Future<void> _askNotificationPermissionOnce() async {
+    try {
+      if (!reminderEnabled) return;
+      final prefs = await SharedPreferences.getInstance();
+      const key = 'notif_permission_asked_v1';
+      if (prefs.getBool(key) ?? false) return;
+      await prefs.setBool(key, true);
+      await NotificationService.requestPermission();
+    } catch (e) {
+      debugPrint('通知權限詢問失敗（不影響 App）：$e');
+    }
   }
 
   void stopCruise() {
