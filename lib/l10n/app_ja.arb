@@ -298,5 +298,11 @@
   "paywallTrialNote": "いつでもキャンセルできます。無料期間が終わる前にお知らせします。",
   "paywallAnnualPerMonth": "月あたり約 {price}",
   "paywallContinue": "続ける",
-  "paywallStartTrial": "無料体験を始める"
+  "paywallStartTrial": "無料体験を始める",
+  "paywallHeadlineTrial": "{days}日間無料体験ですべて解放",
+  "paywallBenefitPeUnlimited": "実用英語 3,400以上の例文が無制限",
+  "paywallBenefitStarUnlimited": "苦手単語を無制限に保存",
+  "freeRangeDoneTitle": "無料範囲を1周聞き終えました！",
+  "freeRangeDoneBody": "広告を見てさらに20語解放、またはPremiumですべて解放できます。",
+  "introPlayHint": "下の ▶ を押すと再生が始まります。画面を消しても続きます。"
 }

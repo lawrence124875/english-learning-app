@@ -298,5 +298,11 @@
   "paywallTrialNote": "يمكنك الإلغاء في أي وقت، وسنذكّرك قبل انتهاء الفترة التجريبية.",
   "paywallAnnualPerMonth": "نحو {price} شهريًا",
   "paywallContinue": "متابعة",
-  "paywallStartTrial": "ابدأ التجربة المجانية"
+  "paywallStartTrial": "ابدأ التجربة المجانية",
+  "paywallHeadlineTrial": "جرّب مجانًا لمدة {days} أيام وافتح كل المحتوى",
+  "paywallBenefitPeUnlimited": "الإنجليزية العملية: أكثر من 3,400 جملة بلا حد يومي",
+  "paywallBenefitStarUnlimited": "قائمة غير محدودة للكلمات غير المألوفة",
+  "freeRangeDoneTitle": "لقد أنهيت الكلمات المجانية!",
+  "freeRangeDoneBody": "شاهد إعلانًا لفتح 20 كلمة أخرى، أو اشترك في Premium لفتحها كلها.",
+  "introPlayHint": "اضغط ▶ بالأسفل لبدء الاستماع. يستمر التشغيل والشاشة مطفأة."
 }

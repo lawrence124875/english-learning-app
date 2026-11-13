@@ -3,6 +3,26 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 /// 付費牆顯示用的方案資訊（免費試用天數、年繳換算每月價）。
 /// 只讀 RevenueCat 回傳的商品資料，不另外設定價格。
 class PaywallOffer {
+  static int? _cachedTrialDays;
+  static bool _trialLoaded = false;
+
+  /// 預設方案（年繳）的免費試用天數，給付費牆以外的按鈕文案用
+  /// （「開始免費試用」vs「升級 Premium」）。讀不到就回傳 null，結果快取。
+  static Future<int?> defaultTrialDays() async {
+    if (_trialLoaded) return _cachedTrialDays;
+    try {
+      final offerings = await Purchases.getOfferings()
+          .timeout(const Duration(seconds: 5));
+      final pkg = defaultPackage(
+          offerings.current?.availablePackages ?? const <Package>[]);
+      _cachedTrialDays = pkg == null ? null : trialDays(pkg.storeProduct);
+      _trialLoaded = true;
+    } catch (_) {
+      return null;
+    }
+    return _cachedTrialDays;
+  }
+
   /// 預設選取年繳；沒有年繳就選第一個。
   static Package? defaultPackage(List<Package> packages) {
     if (packages.isEmpty) return null;

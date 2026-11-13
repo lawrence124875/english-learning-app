@@ -298,5 +298,11 @@
   "paywallTrialNote": "Cancela cuando quieras. Te avisaremos antes de que termine la prueba.",
   "paywallAnnualPerMonth": "Unos {price}/mes",
   "paywallContinue": "Continuar",
-  "paywallStartTrial": "Empezar prueba gratis"
+  "paywallStartTrial": "Empezar prueba gratis",
+  "paywallHeadlineTrial": "Prueba {days} días gratis y desbloquea todo",
+  "paywallBenefitPeUnlimited": "Inglés práctico: más de 3.400 frases sin límite diario",
+  "paywallBenefitStarUnlimited": "Lista ilimitada de palabras difíciles",
+  "freeRangeDoneTitle": "¡Terminaste las palabras gratuitas!",
+  "freeRangeDoneBody": "Mira un anuncio para desbloquear 20 más o hazte Premium para desbloquearlas todas.",
+  "introPlayHint": "Toca ▶ abajo para empezar a escuchar. Sigue sonando con la pantalla apagada."
 }

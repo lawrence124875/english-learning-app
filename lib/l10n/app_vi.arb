@@ -298,5 +298,11 @@
   "paywallTrialNote": "Có thể hủy bất cứ lúc nào. Bạn sẽ được nhắc trước khi hết thời gian dùng thử.",
   "paywallAnnualPerMonth": "Khoảng {price}/tháng",
   "paywallContinue": "Tiếp tục",
-  "paywallStartTrial": "Bắt đầu dùng thử miễn phí"
+  "paywallStartTrial": "Bắt đầu dùng thử miễn phí",
+  "paywallHeadlineTrial": "Dùng thử miễn phí {days} ngày, mở khóa toàn bộ",
+  "paywallBenefitPeUnlimited": "Tiếng Anh thực dụng: hơn 3.400 câu, không giới hạn",
+  "paywallBenefitStarUnlimited": "Lưu từ chưa thuộc không giới hạn",
+  "freeRangeDoneTitle": "Bạn đã nghe hết phần miễn phí!",
+  "freeRangeDoneBody": "Xem quảng cáo để mở thêm 20 từ, hoặc nâng cấp Premium để mở khóa tất cả.",
+  "introPlayHint": "Nhấn ▶ bên dưới để bắt đầu nghe. Tắt màn hình vẫn tiếp tục phát."
 }

@@ -556,5 +556,12 @@
   "paywallAnnualPerMonth": "每月約 {price}",
   "@paywallAnnualPerMonth": {"placeholders": {"price": {"type": "String"}}},
   "paywallContinue": "繼續",
-  "paywallStartTrial": "開始免費試用"
+  "paywallStartTrial": "開始免費試用",
+  "paywallHeadlineTrial": "{days} 天免費試用，解鎖全部內容",
+  "@paywallHeadlineTrial": {"placeholders": {"days": {"type": "int"}}},
+  "paywallBenefitPeUnlimited": "實用英文 3,400+ 句不限句數",
+  "paywallBenefitStarUnlimited": "不熟悉單字無限收藏",
+  "freeRangeDoneTitle": "免費範圍已經聽完一輪了！",
+  "freeRangeDoneBody": "看廣告再多解鎖 20 個，或升級 Premium 一次解鎖全部。",
+  "introPlayHint": "按下方 ▶ 就能開始聽，關掉螢幕也會繼續。"
 }

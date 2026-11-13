@@ -9,7 +9,11 @@ import '../../practical_english/practical_english_release.dart';
 /// 內容比照 Google Play 商店說明：20/80 法則、目標族群的痛點、
 /// 背景朗讀、雙語朗讀與不熟悉單字庫、匯入自訂教材、四大教材與免費體驗。
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+  /// 第一次開啟時用精簡版（2 頁），讓新使用者盡快聽到聲音；
+  /// 選單「功能介紹」看完整版。
+  final bool quick;
+
+  const OnboardingScreen({super.key, this.quick = false});
 
   /// 版本號放在 key 裡：日後介紹內容大改時改成 _v2，
   /// 所有使用者就會再看到一次新的介紹。
@@ -29,9 +33,15 @@ class OnboardingScreen extends StatefulWidget {
       context,
       MaterialPageRoute(
         fullscreenDialog: true,
-        builder: (_) => const OnboardingScreen(),
+        builder: (_) => const OnboardingScreen(quick: true),
       ),
     );
+    if (!context.mounted) return;
+    // 看完介紹回到首頁：提示按 ▶ 開始聽。
+    ScaffoldMessenger.maybeOf(context)?.showSnackBar(SnackBar(
+      content: Text(AppLocalizations.of(context)!.introPlayHint),
+      duration: const Duration(seconds: 6),
+    ));
   }
 
   @override
@@ -55,7 +65,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  List<_IntroPage> _pages(AppLocalizations l) => [
+  List<_IntroPage> _pages(AppLocalizations l) => widget.quick
+      ? [
+          _IntroPage(Icons.insights, l.introTitle1, l.introBody1),
+          _IntroPage(Icons.headphones, l.introTitle3, l.introBody3),
+        ]
+      : [
         _IntroPage(Icons.insights, l.introTitle1, l.introBody1),
         _IntroPage(Icons.favorite_outline, l.introTitle2, l.introBody2),
         _IntroPage(Icons.headphones, l.introTitle3, l.introBody3),
