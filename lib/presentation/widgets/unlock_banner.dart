@@ -8,6 +8,7 @@ import '../../data/sources/analytics_service.dart';
 import '../screens/paywall_screen.dart';
 import '../../l10n/app_localizations.dart';
 import '../app_theme.dart';
+import 'premium_cta_label.dart';
 
 /// 免費版顯示：目前教材已解鎖數量 / 總數。
 /// 0.3.0 起縮成一行＋「解鎖更多」按鈕，點開再選「看廣告 +20」或
@@ -42,10 +43,29 @@ class _UnlockBannerState extends State<UnlockBanner> {
     _sheetRefresh.value++;
   }
 
+  /// 已處理過的「免費範圍聽完」次數；不同就跳一次解鎖選項。
+  int? _seenPromptTick;
+
   @override
   void initState() {
     super.initState();
     _preloadRewarded();
+  }
+
+  void _maybeShowFreeRangePrompt(AppState appState) {
+    final tick = appState.freeRangePromptTick;
+    if (_seenPromptTick == null) {
+      _seenPromptTick = tick;
+      return;
+    }
+    if (tick == _seenPromptTick) return;
+    _seenPromptTick = tick;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || !(ModalRoute.of(context)?.isCurrent ?? false)) return;
+      final unlocked = appState.unlockedCount(appState.currentDataset);
+      final total = appState.currentDataset.items.length;
+      _showOptions(appState, unlocked, total, freeRangeDone: true);
+    });
   }
 
   void _preloadRewarded() {
@@ -89,6 +109,7 @@ class _UnlockBannerState extends State<UnlockBanner> {
     if (appState.isPremium || appState.currentDatasetFullyUnlocked) {
       return const SizedBox.shrink();
     }
+    _maybeShowFreeRangePrompt(appState);
 
     final unlocked = appState.unlockedCount(appState.currentDataset);
     final total = appState.currentDataset.items.length;
@@ -125,7 +146,8 @@ class _UnlockBannerState extends State<UnlockBanner> {
     );
   }
 
-  void _showOptions(AppState appState, int unlocked, int total) {
+  void _showOptions(AppState appState, int unlocked, int total,
+      {bool freeRangeDone = false}) {
     final l = AppLocalizations.of(context)!;
     showModalBottomSheet<void>(
       context: context,
@@ -139,9 +161,16 @@ class _UnlockBannerState extends State<UnlockBanner> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(l.unlockFreeProgress(unlocked, total),
+                Text(
+                    freeRangeDone
+                        ? l.freeRangeDoneTitle
+                        : l.unlockFreeProgress(unlocked, total),
                     style: const TextStyle(
                         fontWeight: FontWeight.w700, fontSize: 16)),
+                if (freeRangeDone) ...[
+                  const SizedBox(height: 8),
+                  Text(l.freeRangeDoneBody),
+                ],
                 const SizedBox(height: 16),
                 if (appState.rewardedUsesLeft > 0) ...[
                   OutlinedButton.icon(
@@ -169,12 +198,12 @@ class _UnlockBannerState extends State<UnlockBanner> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (_) =>
-                              const PaywallScreen(source: 'unlock')),
+                          builder: (_) => PaywallScreen(
+                              source: freeRangeDone ? 'free_range' : 'unlock')),
                     );
                   },
                   icon: const Icon(Icons.workspace_premium),
-                  label: Text(l.menuPremium),
+                  label: const PremiumCtaLabel(),
                 ),
               ],
             ),

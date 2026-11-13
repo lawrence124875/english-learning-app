@@ -298,5 +298,11 @@
   "paywallTrialNote": "Bisa dibatalkan kapan saja. Kami akan mengingatkan sebelum masa uji coba berakhir.",
   "paywallAnnualPerMonth": "Sekitar {price}/bulan",
   "paywallContinue": "Lanjutkan",
-  "paywallStartTrial": "Mulai uji coba gratis"
+  "paywallStartTrial": "Mulai uji coba gratis",
+  "paywallHeadlineTrial": "Coba gratis {days} hari, buka semua konten",
+  "paywallBenefitPeUnlimited": "Bahasa Inggris Praktis: 3.400+ kalimat tanpa batas",
+  "paywallBenefitStarUnlimited": "Simpan kata yang belum dikuasai tanpa batas",
+  "freeRangeDoneTitle": "Kamu sudah mendengarkan semua kata gratis!",
+  "freeRangeDoneBody": "Tonton iklan untuk membuka 20 lagi, atau upgrade Premium untuk membuka semuanya.",
+  "introPlayHint": "Ketuk ▶ di bawah untuk mulai mendengarkan. Tetap diputar saat layar mati."
 }

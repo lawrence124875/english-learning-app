@@ -298,5 +298,11 @@
   "paywallTrialNote": "Cancel anytime. We'll remind you before your trial ends.",
   "paywallAnnualPerMonth": "About {price}/month",
   "paywallContinue": "Continue",
-  "paywallStartTrial": "Start free trial"
+  "paywallStartTrial": "Start free trial",
+  "paywallHeadlineTrial": "Try {days} days free — unlock everything",
+  "paywallBenefitPeUnlimited": "Practical English: all 3,400+ sentences, no daily limit",
+  "paywallBenefitStarUnlimited": "Unlimited unfamiliar-word list",
+  "freeRangeDoneTitle": "You've finished the free words!",
+  "freeRangeDoneBody": "Watch an ad to unlock 20 more, or go Premium to unlock them all.",
+  "introPlayHint": "Tap ▶ below to start listening. It keeps playing with the screen off."
 }

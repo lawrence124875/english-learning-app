@@ -180,6 +180,15 @@ class HomeScreenState extends State<HomeScreen> {
                     title: Text(AppLocalizations.of(context)!.menuPremium),
                   ),
                 ),
+              if (PracticalEnglishRelease.enabled)
+                PopupMenuItem(
+                  value: 'practicalEnglish',
+                  child: ListTile(
+                    leading: const Icon(Icons.chat_bubble_outline),
+                    title: Text(AppLocalizations.of(context)!.peTitle),
+                  ),
+                ),
+              const PopupMenuDivider(),
               PopupMenuItem(
                 value: 'intro',
                 child: ListTile(
@@ -202,14 +211,6 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuVoicePreview),
                 ),
               ),
-              if (PracticalEnglishRelease.enabled)
-                PopupMenuItem(
-                  value: 'practicalEnglish',
-                  child: ListTile(
-                    leading: const Icon(Icons.chat_bubble_outline),
-                    title: Text(AppLocalizations.of(context)!.peTitle),
-                  ),
-                ),
               PopupMenuItem(
                 value: 'import',
                 child: ListTile(
@@ -217,11 +218,20 @@ class HomeScreenState extends State<HomeScreen> {
                   title: Text(AppLocalizations.of(context)!.menuImport),
                 ),
               ),
+              const PopupMenuDivider(),
               PopupMenuItem(
                 value: 'share',
                 child: ListTile(
                   leading: const Icon(Icons.share),
                   title: Text(AppLocalizations.of(context)!.menuShare),
+                ),
+              ),
+              // 上架後：意見回饋從「關於」頁拉到選單第一層（原入口太深，找不到）。
+              PopupMenuItem(
+                value: 'feedback',
+                child: ListTile(
+                  leading: const Icon(Icons.feedback_outlined),
+                  title: Text(AppLocalizations.of(context)!.feedbackTitle),
                 ),
               ),
               // 第十七版：歐洲等需要同意的地區（UMP）才顯示，讓使用者修改廣告同意。
@@ -233,14 +243,6 @@ class HomeScreenState extends State<HomeScreen> {
                     title: Text(AppLocalizations.of(context)!.menuAdPrivacy),
                   ),
                 ),
-              // 上架後：意見回饋從「關於」頁拉到選單第一層（原入口太深，找不到）。
-              PopupMenuItem(
-                value: 'feedback',
-                child: ListTile(
-                  leading: const Icon(Icons.feedback_outlined),
-                  title: Text(AppLocalizations.of(context)!.feedbackTitle),
-                ),
-              ),
               PopupMenuItem(
                 value: 'about',
                 child: ListTile(
@@ -261,7 +263,8 @@ class HomeScreenState extends State<HomeScreen> {
                 child: LayoutBuilder(builder: (context, constraints) {
                   final showUnlock = !appState.isPremium &&
                       !appState.currentDatasetFullyUnlocked;
-                  final others = 4 + 16 + 50 + 14 + 12 + 72 + (showUnlock ? 62 : 0);
+                  final others = 4 + 16 + 50 + 14 + 12 + 72 + (showUnlock ? 62 : 0) +
+                      (PracticalEnglishRelease.enabled ? 58 : 0);
                   final cardHeight =
                       (constraints.maxHeight - others).clamp(360.0, 900.0);
                   return SingleChildScrollView(
@@ -276,6 +279,8 @@ class HomeScreenState extends State<HomeScreen> {
                           child: _WordCard(appState: appState),
                         ),
                         const SizedBox(height: 12),
+                        if (PracticalEnglishRelease.enabled)
+                          const _PracticalEnglishEntry(),
                         const UnlockBanner(),
                         const SettingsPanel(),
                       ],
@@ -319,6 +324,55 @@ Future<void> _shareApp(BuildContext context) async {
 
 /// 教材切換：一個下拉按鈕（取代 0.2 以前會換行的 chip），點開列出全部
 /// 教材（含自訂教材）。長語言、自訂教材多時都放得下。
+/// 首頁明顯的實用英文入口（原本只有右上角小圖示和選單）。
+class _PracticalEnglishEntry extends StatelessWidget {
+  const _PracticalEnglishEntry();
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = AppPalette.of(context);
+    final scheme = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Material(
+        color: palette.softRow,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          key: const Key('home_pe_entry'),
+          borderRadius: BorderRadius.circular(16),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const PracticalEnglishScreen()),
+          ),
+          child: SizedBox(
+            height: 48,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Icon(Icons.chat_bubble_outline,
+                      size: 20, color: scheme.primary),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      AppLocalizations.of(context)!.introTitle7,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                          fontSize: 14.5, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Icon(Icons.chevron_right, color: scheme.primary),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _DatasetPicker extends StatelessWidget {
   final AppState appState;
   const _DatasetPicker({required this.appState});

@@ -298,5 +298,11 @@
   "paywallTrialNote": "可随时取消，试用到期前会通知你。",
   "paywallAnnualPerMonth": "每月约 {price}",
   "paywallContinue": "继续",
-  "paywallStartTrial": "开始免费试用"
+  "paywallStartTrial": "开始免费试用",
+  "paywallHeadlineTrial": "{days} 天免费试用，解锁全部内容",
+  "paywallBenefitPeUnlimited": "实用英语 3,400+ 句不限句数",
+  "paywallBenefitStarUnlimited": "不熟悉单词无限收藏",
+  "freeRangeDoneTitle": "免费范围已经听完一轮了！",
+  "freeRangeDoneBody": "看广告再多解锁 20 个，或升级 Premium 一次解锁全部。",
+  "introPlayHint": "按下方 ▶ 就能开始听，关掉屏幕也会继续。"
 }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
 import '../screens/paywall_screen.dart';
+import 'premium_cta_label.dart';
 
 /// 碰到免費版限制時的提示（★ 滿 30、V2 今日 5 句用完…）：
-/// 一段說明＋「升級 Premium」（開付費牆，帶來源）＋「以後再說」。
+/// 一段說明＋「升級 Premium／開始免費試用」（開付費牆，帶來源）＋「以後再說」。
 Future<void> showFreeLimitSheet(
   BuildContext context, {
   required String title,
@@ -37,7 +38,7 @@ Future<void> showFreeLimitSheet(
                 );
               },
               icon: const Icon(Icons.workspace_premium),
-              label: Text(l.menuPremium),
+              label: const PremiumCtaLabel(),
             ),
             TextButton(
               onPressed: () => Navigator.pop(sheetContext),

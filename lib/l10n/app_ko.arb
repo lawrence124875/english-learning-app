@@ -298,5 +298,11 @@
   "paywallTrialNote": "언제든지 취소할 수 있어요. 체험이 끝나기 전에 알려 드려요.",
   "paywallAnnualPerMonth": "월 약 {price}",
   "paywallContinue": "계속",
-  "paywallStartTrial": "무료 체험 시작"
+  "paywallStartTrial": "무료 체험 시작",
+  "paywallHeadlineTrial": "{days}일 무료 체험으로 전체 잠금 해제",
+  "paywallBenefitPeUnlimited": "실용 영어 3,400+ 문장 무제한",
+  "paywallBenefitStarUnlimited": "모르는 단어 무제한 저장",
+  "freeRangeDoneTitle": "무료 범위를 한 바퀴 다 들었어요!",
+  "freeRangeDoneBody": "광고를 보고 20개 더 열거나, Premium으로 전부 잠금 해제하세요.",
+  "introPlayHint": "아래 ▶ 를 누르면 듣기가 시작돼요. 화면을 꺼도 계속 재생돼요."
 }

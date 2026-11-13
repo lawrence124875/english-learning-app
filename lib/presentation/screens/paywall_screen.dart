@@ -7,6 +7,7 @@ import '../../data/sources/ads_service.dart';
 import '../../data/sources/analytics_service.dart';
 import '../../data/sources/paywall_offer.dart';
 import '../../l10n/app_localizations.dart';
+import '../../practical_english/practical_english_release.dart';
 import 'about_screen.dart';
 
 /// 訂閱付費頁面：顯示方案、目前訂閱狀態、恢復購買按鈕。
@@ -128,14 +129,17 @@ class _PaywallScreenState extends State<PaywallScreen> {
                   padding: const EdgeInsets.all(20),
                   children: [
                     Text(
-                      l.paywallHeadline,
+                      _headline(l),
                       style: const TextStyle(
                           fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 12),
+                    // 只列免費版沒有的好處（背景播放、鎖屏免費版也有，不列）。
                     _BenefitRow(text: l.paywallBenefitAllContent),
+                    if (PracticalEnglishRelease.enabled)
+                      _BenefitRow(text: l.paywallBenefitPeUnlimited),
+                    _BenefitRow(text: l.paywallBenefitStarUnlimited),
                     _BenefitRow(text: l.paywallBenefitNoAds),
-                    _BenefitRow(text: l.paywallBenefitBackground),
                     const SizedBox(height: 24),
                     ..._buildPackages(l),
                     const SizedBox(height: 8),
@@ -170,6 +174,14 @@ class _PaywallScreenState extends State<PaywallScreen> {
                   ],
                 ),
     );
+  }
+
+  /// 預設方案（年繳）有免費試用時，標題直接寫試用天數。
+  String _headline(AppLocalizations l) {
+    final packages = _offerings?.current?.availablePackages ?? const <Package>[];
+    final pkg = PaywallOffer.defaultPackage(packages);
+    final days = pkg == null ? null : PaywallOffer.trialDays(pkg.storeProduct);
+    return days != null ? l.paywallHeadlineTrial(days) : l.paywallHeadline;
   }
 
   /// 方案名稱改用 App 自己的多語言文字，而不是直接顯示

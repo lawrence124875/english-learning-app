@@ -214,6 +214,24 @@ class AppState extends ChangeNotifier {
     await _saveDaily();
   }
 
+  static const _freeRangePromptKey = 'free_range_prompt_day_v1';
+
+  /// 免費範圍整輪聽完時遞增；首頁看到變化就跳出解鎖選項（每天最多一次）。
+  int freeRangePromptTick = 0;
+
+  /// 今天還沒提示過就記下今天並回傳 true。
+  Future<bool> _markFreeRangePromptToday() async {
+    final today = freeTierDayKey(_now());
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (prefs.getString(_freeRangePromptKey) == today) return false;
+      await prefs.setString(_freeRangePromptKey, today);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
   static const _firstPlayKey = 'analytics_first_play_v1';
   bool _firstPlayLogged = false;
 
@@ -739,11 +757,18 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     if (cycleCompleted) {
       AnalyticsService.roundComplete(dataset.id, cycleCount);
+      var promptShown = false;
       if (!isPremium && !currentDatasetFullyUnlocked) {
         // 免費範圍整輪聽完、後面還有鎖住的字。
         AnalyticsService.hitFreeLimit('words');
+        // 每天第一次：請首頁跳出「看廣告 +20／免費試用」卡片，這一輪不放插頁廣告。
+        promptShown = await _markFreeRangePromptToday();
+        if (promptShown) {
+          freeRangePromptTick++;
+          notifyListeners();
+        }
       }
-      if (!isPremium) {
+      if (!isPremium && !promptShown) {
         // 免費版：每輪播完一次插頁廣告。App 在前景才會立刻顯示；
         // 鎖屏/背景收聽時先記下，等使用者回到 App 再顯示（AdMob 政策）。
         AdsService.onRoundComplete();

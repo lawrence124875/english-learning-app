@@ -298,5 +298,11 @@
   "paywallTrialNote": "ยกเลิกได้ทุกเมื่อ และจะแจ้งเตือนก่อนหมดช่วงทดลองใช้",
   "paywallAnnualPerMonth": "ประมาณ {price}/เดือน",
   "paywallContinue": "ดำเนินการต่อ",
-  "paywallStartTrial": "เริ่มทดลองใช้ฟรี"
+  "paywallStartTrial": "เริ่มทดลองใช้ฟรี",
+  "paywallHeadlineTrial": "ทดลองใช้ฟรี {days} วัน ปลดล็อกทั้งหมด",
+  "paywallBenefitPeUnlimited": "ภาษาอังกฤษใช้จริง 3,400+ ประโยค ไม่จำกัด",
+  "paywallBenefitStarUnlimited": "บันทึกคำที่ยังไม่คุ้นเคยได้ไม่จำกัด",
+  "freeRangeDoneTitle": "ฟังคำฟรีครบหนึ่งรอบแล้ว!",
+  "freeRangeDoneBody": "ดูโฆษณาเพื่อปลดล็อกเพิ่มอีก 20 คำ หรืออัปเกรด Premium เพื่อปลดล็อกทั้งหมด",
+  "introPlayHint": "แตะ ▶ ด้านล่างเพื่อเริ่มฟัง ปิดหน้าจอก็ยังเล่นต่อ"
 }
