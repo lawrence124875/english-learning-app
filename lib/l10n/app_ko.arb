@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "모르는 단어 무제한 저장",
   "freeRangeDoneTitle": "무료 범위를 한 바퀴 다 들었어요!",
   "freeRangeDoneBody": "광고를 보고 20개 더 열거나, Premium으로 전부 잠금 해제하세요.",
-  "introPlayHint": "아래 ▶ 를 누르면 듣기가 시작돼요. 화면을 꺼도 계속 재생돼요."
+  "introPlayHint": "아래 ▶ 를 누르면 듣기가 시작돼요. 화면을 꺼도 계속 재생돼요.",
+  "lcLabAppsTitle": "LC Lab의 다른 앱",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "주역 64괘 카드, 하루 한 괘로 나를 돌아보는 도구",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "타로, 르노르망, 룬, 입문 강좌 포함"
 }

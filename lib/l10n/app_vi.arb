@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "Lưu từ chưa thuộc không giới hạn",
   "freeRangeDoneTitle": "Bạn đã nghe hết phần miễn phí!",
   "freeRangeDoneBody": "Xem quảng cáo để mở thêm 20 từ, hoặc nâng cấp Premium để mở khóa tất cả.",
-  "introPlayHint": "Nhấn ▶ bên dưới để bắt đầu nghe. Tắt màn hình vẫn tiếp tục phát."
+  "introPlayHint": "Nhấn ▶ bên dưới để bắt đầu nghe. Tắt màn hình vẫn tiếp tục phát.",
+  "lcLabAppsTitle": "Ứng dụng khác của LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "Thẻ 64 quẻ Kinh Dịch: mỗi ngày một quẻ để tự suy ngẫm",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "Tarot, Lenormand và rune, kèm khóa học nhập môn"
 }

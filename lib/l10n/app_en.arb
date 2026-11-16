@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "Unlimited unfamiliar-word list",
   "freeRangeDoneTitle": "You've finished the free words!",
   "freeRangeDoneBody": "Watch an ad to unlock 20 more, or go Premium to unlock them all.",
-  "introPlayHint": "Tap ▶ below to start listening. It keeps playing with the screen off."
+  "introPlayHint": "Tap ▶ below to start listening. It keeps playing with the screen off.",
+  "lcLabAppsTitle": "More apps from LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "I Ching 64-hexagram cards: a daily reflection tool",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "Tarot, Lenormand and runes, with beginner lessons"
 }

@@ -563,5 +563,10 @@
   "paywallBenefitStarUnlimited": "不熟悉單字無限收藏",
   "freeRangeDoneTitle": "免費範圍已經聽完一輪了！",
   "freeRangeDoneBody": "看廣告再多解鎖 20 個，或升級 Premium 一次解鎖全部。",
-  "introPlayHint": "按下方 ▶ 就能開始聽，關掉螢幕也會繼續。"
+  "introPlayHint": "按下方 ▶ 就能開始聽，關掉螢幕也會繼續。",
+  "lcLabAppsTitle": "LC Lab 其他 App",
+  "lcLabQianguaName": "謙卦 Qiangua",
+  "lcLabQianguaDesc": "易經 64 卦牌，每日一卦的自我反思工具",
+  "lcLabTarotName": "光穗塔羅 AuraSpica Tarot",
+  "lcLabTarotDesc": "塔羅、雷諾曼、符文，含入門課程"
 }

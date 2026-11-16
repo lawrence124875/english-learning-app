@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "Simpan kata yang belum dikuasai tanpa batas",
   "freeRangeDoneTitle": "Kamu sudah mendengarkan semua kata gratis!",
   "freeRangeDoneBody": "Tonton iklan untuk membuka 20 lagi, atau upgrade Premium untuk membuka semuanya.",
-  "introPlayHint": "Ketuk ▶ di bawah untuk mulai mendengarkan. Tetap diputar saat layar mati."
+  "introPlayHint": "Ketuk ▶ di bawah untuk mulai mendengarkan. Tetap diputar saat layar mati.",
+  "lcLabAppsTitle": "Aplikasi lain dari LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "Kartu 64 heksagram I Ching: alat refleksi diri harian",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "Tarot, Lenormand, dan rune, dengan kursus pemula"
 }

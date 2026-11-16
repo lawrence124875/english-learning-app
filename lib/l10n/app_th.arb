@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "บันทึกคำที่ยังไม่คุ้นเคยได้ไม่จำกัด",
   "freeRangeDoneTitle": "ฟังคำฟรีครบหนึ่งรอบแล้ว!",
   "freeRangeDoneBody": "ดูโฆษณาเพื่อปลดล็อกเพิ่มอีก 20 คำ หรืออัปเกรด Premium เพื่อปลดล็อกทั้งหมด",
-  "introPlayHint": "แตะ ▶ ด้านล่างเพื่อเริ่มฟัง ปิดหน้าจอก็ยังเล่นต่อ"
+  "introPlayHint": "แตะ ▶ ด้านล่างเพื่อเริ่มฟัง ปิดหน้าจอก็ยังเล่นต่อ",
+  "lcLabAppsTitle": "แอปอื่นจาก LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "ไพ่ 64 ฉักกะแห่งอี้จิง เครื่องมือสะท้อนตัวเองวันละหนึ่งฉักกะ",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "ไพ่ทาโรต์ เลอนอร์ม็อง และรูน พร้อมคอร์สเริ่มต้น"
 }
