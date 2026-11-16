@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' show Random;
 import 'package:flutter/foundation.dart';
 import 'package:purchases_flutter/purchases_flutter.dart' show Package;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,6 +21,13 @@ import '../../data/sources/background_l10n.dart';
 import '../../data/sources/cover_art.dart';
 import '../../data/repositories/custom_dataset_repository.dart';
 import '../../practical_english/domain/services/playback_coordinator.dart';
+import '../../practical_english/data/sentence_repository.dart';
+import '../../practical_english/domain/models/pe_language.dart';
+import '../../practical_english/domain/models/sentence.dart';
+import '../../practical_english/domain/models/word_ref.dart';
+import '../../practical_english/domain/services/sentence_access.dart';
+import '../../practical_english/domain/services/word_ref_index.dart';
+import '../../practical_english/practical_english_release.dart';
 
 /// App 的核心狀態管理，整合資料層與播放邏輯，供 UI 層使用。
 class AppState extends ChangeNotifier {
@@ -862,12 +870,72 @@ class AppState extends ChangeNotifier {
         if (gen != _speakGen) return;
       }
     }
+    if (settings.speakExample) {
+      await _speakExample(word, gen);
+      if (gen != _speakGen) return;
+    }
     final state = currentPlaybackState;
     if (state.playlist.isNotEmpty) {
       final idx = state.playlist[state.currentStep % state.playlist.length];
       stats = await _statsRepository.markLearned(currentDataset.id, idx);
       notifyListeners();
     }
+  }
+
+  // ---- v29：單字念完接著念例句（設定「朗讀例句」，預設關） ----
+  Future<SentenceRepository?>? _exampleRepo;
+  WordRefIndex? _exampleIndex;
+  List<WordDataset>? _exampleIndexSource;
+  int _exampleIndexLength = -1;
+  final Random _exampleRandom = Random();
+
+  Future<SentenceRepository?> _loadExampleRepo() async {
+    try {
+      final repo = SentenceRepository();
+      await repo.load();
+      return repo;
+    } catch (_) {
+      _exampleRepo = null; // 下次再試
+      return null;
+    }
+  }
+
+  /// 目前單字可念的例句：照實用英文的免費規則（規則 A＋每天 5 句），
+  /// 主要詞優先、隨機挑一句；沒有可用的句子就回傳 null（不跳付費牆）。
+  @visibleForTesting
+  Future<Sentence?> exampleSentenceFor(WordItem word) async {
+    if (!PracticalEnglishRelease.enabled) return null;
+    final repo = await (_exampleRepo ??= _loadExampleRepo());
+    if (repo == null) return null;
+    if (_exampleIndex == null ||
+        !identical(_exampleIndexSource, datasets) ||
+        _exampleIndexLength != datasets.length) {
+      _exampleIndex = WordRefIndex.build(datasets);
+      _exampleIndexSource = datasets;
+      _exampleIndexLength = datasets.length;
+    }
+    final access = SentenceAccess(_exampleIndex!, unlockedCount);
+    final ref = WordRef.of(currentDataset, word);
+    final accessible =
+        repo.sentencesForWord(ref).where(access.isAccessible).toList();
+    final primary = accessible.where((s) => s.wordIds.contains(ref)).toList();
+    final pool = primary.isNotEmpty ? primary : accessible;
+    final usable = pool.where((s) => canUsePeSentence(s.id)).toList();
+    if (usable.isEmpty) return null;
+    return usable[_exampleRandom.nextInt(usable.length)];
+  }
+
+  Future<void> _speakExample(WordItem word, int gen) async {
+    final sentence = await exampleSentenceFor(word);
+    if (sentence == null || gen != _speakGen) return;
+    await recordPeSentence(sentence.id);
+    await _ttsService.speak(sentence.sentenceText,
+        languageCode: sentence.targetLanguage);
+    if (gen != _speakGen || !settings.speakExampleTranslation) return;
+    final t = sentence.translationFor(BackgroundL10n.translationKey());
+    if (t == null) return;
+    final lang = PeLanguages.lookup(t.code);
+    await _ttsService.speak(t.text, languageCode: lang?.ttsCode ?? t.code);
   }
 
   Future<void> togglePlay() async {

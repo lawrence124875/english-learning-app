@@ -309,5 +309,8 @@
   "lcLabQianguaName": "Qiangua",
   "lcLabQianguaDesc": "Cartas dos 64 hexagramas do I Ching: um hexagrama por dia para refletir",
   "lcLabTarotName": "AuraSpica Tarot",
-  "lcLabTarotDesc": "Tarô, Lenormand e runas, com curso para iniciantes"
+  "lcLabTarotDesc": "Tarô, Lenormand e runas, com curso para iniciantes",
+  "speakExampleLabel": "Ler uma frase de exemplo após cada palavra",
+  "speakExampleFreeHint": "Reproduz uma frase de Inglês Prático com a palavra (grátis: 5 frases por dia)",
+  "speakExampleTranslationLabel": "Ler também a tradução da frase"
 }

@@ -309,5 +309,8 @@
   "lcLabQianguaName": "Qiangua",
   "lcLabQianguaDesc": "주역 64괘 카드, 하루 한 괘로 나를 돌아보는 도구",
   "lcLabTarotName": "AuraSpica Tarot",
-  "lcLabTarotDesc": "타로, 르노르망, 룬, 입문 강좌 포함"
+  "lcLabTarotDesc": "타로, 르노르망, 룬, 입문 강좌 포함",
+  "speakExampleLabel": "단어 다음에 예문 읽기",
+  "speakExampleFreeHint": "그 단어가 들어간 실용 영어 예문을 읽어 줍니다(무료: 하루 5문장)",
+  "speakExampleTranslationLabel": "예문 번역도 읽기"
 }

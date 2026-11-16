@@ -32,6 +32,8 @@ class PlaybackSettings {
   final bool settingsPanelExpanded; // 設定面板是否展開（記住上次狀態）
   final WordSize wordSize; // 0.3.0：首頁單字大小
   final AppearanceMode appearance; // 0.3.0：外觀（深色模式）
+  final bool speakExample; // v29：單字念完接著念一句例句（預設關）
+  final bool speakExampleTranslation; // v29：例句後念翻譯
 
   const PlaybackSettings({
     this.scopeMode = ScopeMode.allRandom,
@@ -45,6 +47,8 @@ class PlaybackSettings {
     this.settingsPanelExpanded = false,
     this.wordSize = WordSize.small,
     this.appearance = AppearanceMode.system,
+    this.speakExample = false,
+    this.speakExampleTranslation = true,
   });
 
   PlaybackSettings copyWith({
@@ -60,6 +64,8 @@ class PlaybackSettings {
     bool? settingsPanelExpanded,
     WordSize? wordSize,
     AppearanceMode? appearance,
+    bool? speakExample,
+    bool? speakExampleTranslation,
   }) {
     return PlaybackSettings(
       scopeMode: scopeMode ?? this.scopeMode,
@@ -75,6 +81,9 @@ class PlaybackSettings {
           settingsPanelExpanded ?? this.settingsPanelExpanded,
       wordSize: wordSize ?? this.wordSize,
       appearance: appearance ?? this.appearance,
+      speakExample: speakExample ?? this.speakExample,
+      speakExampleTranslation:
+          speakExampleTranslation ?? this.speakExampleTranslation,
     );
   }
 
@@ -90,6 +99,8 @@ class PlaybackSettings {
         'settingsPanelExpanded': settingsPanelExpanded,
         'wordSize': wordSize.index,
         'appearance': appearance.index,
+        'speakExample': speakExample,
+        'speakExampleTranslation': speakExampleTranslation,
       };
 
   factory PlaybackSettings.fromJson(Map<String, dynamic> json) {
@@ -107,6 +118,9 @@ class PlaybackSettings {
       wordSize: _enumAt(WordSize.values, json['wordSize'], WordSize.small),
       appearance: _enumAt(
           AppearanceMode.values, json['appearance'], AppearanceMode.system),
+      speakExample: json['speakExample'] as bool? ?? false,
+      speakExampleTranslation:
+          json['speakExampleTranslation'] as bool? ?? true,
     );
   }
 

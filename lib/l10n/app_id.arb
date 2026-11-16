@@ -309,5 +309,8 @@
   "lcLabQianguaName": "Qiangua",
   "lcLabQianguaDesc": "Kartu 64 heksagram I Ching: alat refleksi diri harian",
   "lcLabTarotName": "AuraSpica Tarot",
-  "lcLabTarotDesc": "Tarot, Lenormand, dan rune, dengan kursus pemula"
+  "lcLabTarotDesc": "Tarot, Lenormand, dan rune, dengan kursus pemula",
+  "speakExampleLabel": "Bacakan contoh kalimat setelah kata",
+  "speakExampleFreeHint": "Memutar satu kalimat Bahasa Inggris Praktis yang memuat kata itu (gratis: 5 kalimat/hari)",
+  "speakExampleTranslationLabel": "Bacakan juga terjemahan kalimat"
 }
