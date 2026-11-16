@@ -707,7 +707,16 @@ class AppState extends ChangeNotifier {
     if (word == null || _audioHandler == null) return;
     final gen = ++_nowPlayingGen;
     final state = currentPlaybackState;
-    final meaning = settings.showTranslation ? meaningOf(word) : '';
+    var title = word.word;
+    var meaning = settings.showTranslation ? meaningOf(word) : '';
+    // v30：念例句時鎖屏／通知列改顯示例句（＋翻譯），換字後回到單字。
+    final example = settings.speakExample ? currentExampleText : null;
+    if (example != null) {
+      title = example;
+      meaning = settings.showTranslation
+          ? (currentExampleTranslation ?? '')
+          : '';
+    }
     final index = state.playlist.isEmpty ? 0 : state.currentStep + 1;
     final total = state.playlist.length;
     final playing = isPlaying;
@@ -715,7 +724,7 @@ class AppState extends ChangeNotifier {
     void push(Uri? art) {
       if (gen != _nowPlayingGen) return;
       _audioHandler?.updateNowPlaying(
-        word: word.word,
+        word: title,
         meaning: meaning,
         playing: playing,
         currentIndex: index,
@@ -925,14 +934,33 @@ class AppState extends ChangeNotifier {
     return usable[_exampleRandom.nextInt(usable.length)];
   }
 
+  String? _exampleWordId;
+  String? _exampleText;
+  SentenceTranslation? _exampleTranslation;
+
+  /// 首頁顯示：目前單字最近念過的例句（換字後自動不顯示）。
+  String? get currentExampleText =>
+      _exampleWordId != null && _exampleWordId == currentWord?.id
+          ? _exampleText
+          : null;
+  String? get currentExampleTranslation =>
+      currentExampleText == null ? null : _exampleTranslation?.text;
+  bool get currentExampleTranslationIsRtl =>
+      _exampleTranslation?.code.startsWith('ar') ?? false;
+
   Future<void> _speakExample(WordItem word, int gen) async {
     final sentence = await exampleSentenceFor(word);
     if (sentence == null || gen != _speakGen) return;
     await recordPeSentence(sentence.id);
+    final t = sentence.translationFor(BackgroundL10n.translationKey());
+    _exampleWordId = word.id;
+    _exampleText = sentence.sentenceText;
+    _exampleTranslation = t;
+    notifyListeners();
+    _updateNowPlaying();
     await _ttsService.speak(sentence.sentenceText,
         languageCode: sentence.targetLanguage);
     if (gen != _speakGen || !settings.speakExampleTranslation) return;
-    final t = sentence.translationFor(BackgroundL10n.translationKey());
     if (t == null) return;
     final lang = PeLanguages.lookup(t.code);
     await _ttsService.speak(t.text, languageCode: lang?.ttsCode ?? t.code);
