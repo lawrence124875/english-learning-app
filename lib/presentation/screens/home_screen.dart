@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import '../providers/app_state.dart';
 import '../widgets/settings_panel.dart';
+import '../widgets/lc_lab_apps_section.dart';
 import '../widgets/unlock_banner.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/fit_word_area.dart';
@@ -166,6 +167,9 @@ class HomeScreenState extends State<HomeScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (_) => const PracticalEnglishScreen()));
+              } else if (value == 'lcLabApps') {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const LcLabAppsScreen()));
               } else if (value == 'import') {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const ImportDatasetScreen()));
@@ -224,6 +228,13 @@ class HomeScreenState extends State<HomeScreen> {
                 child: ListTile(
                   leading: const Icon(Icons.share),
                   title: Text(AppLocalizations.of(context)!.menuShare),
+                ),
+              ),
+              PopupMenuItem(
+                value: 'lcLabApps',
+                child: ListTile(
+                  leading: const Icon(Icons.apps),
+                  title: Text(AppLocalizations.of(context)!.lcLabAppsTitle),
                 ),
               ),
               // 上架後：意見回饋從「關於」頁拉到選單第一層（原入口太深，找不到）。
