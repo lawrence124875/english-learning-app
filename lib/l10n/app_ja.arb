@@ -309,5 +309,8 @@
   "lcLabQianguaName": "謙卦 Qiangua",
   "lcLabQianguaDesc": "易経64卦カード：毎日一卦で自分を見つめるツール",
   "lcLabTarotName": "AuraSpica Tarot",
-  "lcLabTarotDesc": "タロット・ルノルマン・ルーン、入門講座つき"
+  "lcLabTarotDesc": "タロット・ルノルマン・ルーン、入門講座つき",
+  "speakExampleLabel": "単語の後に例文を読み上げる",
+  "speakExampleFreeHint": "その単語を含む実用英語の例文を1つ再生（無料版は1日5文まで）",
+  "speakExampleTranslationLabel": "例文の翻訳も読み上げる"
 }

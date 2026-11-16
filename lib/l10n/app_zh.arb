@@ -568,5 +568,8 @@
   "lcLabQianguaName": "謙卦 Qiangua",
   "lcLabQianguaDesc": "易經 64 卦牌，每日一卦的自我反思工具",
   "lcLabTarotName": "光穗塔羅 AuraSpica Tarot",
-  "lcLabTarotDesc": "塔羅、雷諾曼、符文，含入門課程"
+  "lcLabTarotDesc": "塔羅、雷諾曼、符文，含入門課程",
+  "speakExampleLabel": "單字念完朗讀例句",
+  "speakExampleFreeHint": "念一句含這個字的實用英文例句（免費版每天 5 句）",
+  "speakExampleTranslationLabel": "例句也朗讀翻譯"
 }

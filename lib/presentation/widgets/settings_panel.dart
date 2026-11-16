@@ -5,6 +5,7 @@ import '../providers/app_state.dart';
 import '../../l10n/app_localizations.dart';
 import '../app_theme.dart';
 import 'lc_lab_apps_section.dart';
+import '../../practical_english/practical_english_release.dart';
 
 /// 可收合的播放設定面板。
 /// 預設收合、記住上次展開狀態、收合時顯示目前設定摘要。
@@ -59,6 +60,24 @@ class SettingsPanel extends StatelessWidget {
             onChanged: (v) => appState.updateSettings(
                 settings.copyWith(speakOnManualNavigate: v)),
           ),
+          if (PracticalEnglishRelease.enabled) ...[
+            SwitchListTile(
+              key: const Key('settings_speak_example'),
+              title: Text(l.speakExampleLabel),
+              subtitle: appState.isPremium ? null : Text(l.speakExampleFreeHint),
+              value: settings.speakExample,
+              onChanged: (v) =>
+                  appState.updateSettings(settings.copyWith(speakExample: v)),
+            ),
+            if (settings.speakExample)
+              SwitchListTile(
+                key: const Key('settings_speak_example_translation'),
+                title: Text(l.speakExampleTranslationLabel),
+                value: settings.speakExampleTranslation,
+                onChanged: (v) => appState.updateSettings(
+                    settings.copyWith(speakExampleTranslation: v)),
+              ),
+          ],
           SwitchListTile(
             title: Text(l.showTranslationLabel),
             value: settings.showTranslation,

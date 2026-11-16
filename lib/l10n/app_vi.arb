@@ -309,5 +309,8 @@
   "lcLabQianguaName": "Qiangua",
   "lcLabQianguaDesc": "Thẻ 64 quẻ Kinh Dịch: mỗi ngày một quẻ để tự suy ngẫm",
   "lcLabTarotName": "AuraSpica Tarot",
-  "lcLabTarotDesc": "Tarot, Lenormand và rune, kèm khóa học nhập môn"
+  "lcLabTarotDesc": "Tarot, Lenormand và rune, kèm khóa học nhập môn",
+  "speakExampleLabel": "Đọc câu ví dụ sau mỗi từ",
+  "speakExampleFreeHint": "Đọc một câu Tiếng Anh thực dụng có từ đó (miễn phí: 5 câu/ngày)",
+  "speakExampleTranslationLabel": "Đọc cả bản dịch câu ví dụ"
 }
