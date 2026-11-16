@@ -4,6 +4,7 @@ import '../../domain/models/playback_settings.dart';
 import '../providers/app_state.dart';
 import '../../l10n/app_localizations.dart';
 import '../app_theme.dart';
+import 'lc_lab_apps_section.dart';
 
 /// 可收合的播放設定面板。
 /// 預設收合、記住上次展開狀態、收合時顯示目前設定摘要。
@@ -134,6 +135,7 @@ class SettingsPanel extends StatelessWidget {
                   .updateSettings(settings.copyWith(appearance: v.first)),
             ),
           ),
+          const LcLabAppsSection(),
           const SizedBox(height: 12),
         ],
       ),

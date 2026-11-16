@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "قائمة غير محدودة للكلمات غير المألوفة",
   "freeRangeDoneTitle": "لقد أنهيت الكلمات المجانية!",
   "freeRangeDoneBody": "شاهد إعلانًا لفتح 20 كلمة أخرى، أو اشترك في Premium لفتحها كلها.",
-  "introPlayHint": "اضغط ▶ بالأسفل لبدء الاستماع. يستمر التشغيل والشاشة مطفأة."
+  "introPlayHint": "اضغط ▶ بالأسفل لبدء الاستماع. يستمر التشغيل والشاشة مطفأة.",
+  "lcLabAppsTitle": "تطبيقات أخرى من LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "بطاقات السداسيات الـ64 في آي تشينغ: أداة يومية للتأمل الذاتي",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "تاروت ولينورماند ورونات، مع دروس للمبتدئين"
 }

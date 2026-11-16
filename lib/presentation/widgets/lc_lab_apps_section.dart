@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../../data/sources/ads_service.dart';
+import '../../l10n/app_localizations.dart';
+
+/// 設定面板最下方「LC Lab 其他 App」：兩列，點擊以外部應用程式開啟 Play 商店。
+/// 圖示內嵌於 assets，不連網抓取；不加任何追蹤。
+class LcLabAppsSection extends StatelessWidget {
+  const LcLabAppsSection({super.key});
+
+  static const qianguaUrl =
+      'https://play.google.com/store/apps/details?id=com.lclab.qiangua';
+  static const tarotUrl =
+      'https://play.google.com/store/apps/details?id=com.lclab.tarot';
+  static const qianguaIcon = 'assets/lclab/qiangua.png';
+  static const tarotIcon = 'assets/lclab/tarot.png';
+
+  static Future<void> _open(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      AdsService.skipNextAppOpenAd();
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Divider(height: 24),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+          child: Text(l.lcLabAppsTitle,
+              style: const TextStyle(fontWeight: FontWeight.w600)),
+        ),
+        _AppRow(
+          icon: qianguaIcon,
+          name: l.lcLabQianguaName,
+          desc: l.lcLabQianguaDesc,
+          onTap: () => _open(qianguaUrl),
+        ),
+        _AppRow(
+          icon: tarotIcon,
+          name: l.lcLabTarotName,
+          desc: l.lcLabTarotDesc,
+          onTap: () => _open(tarotUrl),
+        ),
+      ],
+    );
+  }
+}
+
+class _AppRow extends StatelessWidget {
+  final String icon;
+  final String name;
+  final String desc;
+  final VoidCallback onTap;
+  const _AppRow(
+      {required this.icon,
+      required this.name,
+      required this.desc,
+      required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Image.asset(icon,
+            width: 44,
+            height: 44,
+            fit: BoxFit.cover,
+            errorBuilder: (_, __, ___) =>
+                const SizedBox(width: 44, height: 44, child: Icon(Icons.apps))),
+      ),
+      title: Text(name),
+      subtitle: Text(desc),
+      trailing: const Icon(Icons.open_in_new, size: 18),
+      onTap: onTap,
+    );
+  }
+}

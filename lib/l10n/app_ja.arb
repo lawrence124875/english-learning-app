@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "苦手単語を無制限に保存",
   "freeRangeDoneTitle": "無料範囲を1周聞き終えました！",
   "freeRangeDoneBody": "広告を見てさらに20語解放、またはPremiumですべて解放できます。",
-  "introPlayHint": "下の ▶ を押すと再生が始まります。画面を消しても続きます。"
+  "introPlayHint": "下の ▶ を押すと再生が始まります。画面を消しても続きます。",
+  "lcLabAppsTitle": "LC Lab のほかのアプリ",
+  "lcLabQianguaName": "謙卦 Qiangua",
+  "lcLabQianguaDesc": "易経64卦カード：毎日一卦で自分を見つめるツール",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "タロット・ルノルマン・ルーン、入門講座つき"
 }

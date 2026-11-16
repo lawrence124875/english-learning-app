@@ -54,6 +54,8 @@ flutter:
     - assets/fonts/Nunito-OFL.txt
     - assets/cover/cover_plain.png
     - assets/cover/cover_logo.png
+    # 設定面板「LC Lab 其他 App」圖示（內嵌，不連網）
+    - assets/lclab/
   # 0.3.0：只內嵌英文單字用的 Nunito ExtraBold（SIL OFL 1.1，可商用）；
   # 其他語言一律用手機內建字體，不另外內嵌。
   fonts:

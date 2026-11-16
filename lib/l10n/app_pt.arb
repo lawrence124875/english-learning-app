@@ -304,5 +304,10 @@
   "paywallBenefitStarUnlimited": "Lista ilimitada de palavras difíceis",
   "freeRangeDoneTitle": "Você terminou as palavras grátis!",
   "freeRangeDoneBody": "Assista a um anúncio para desbloquear mais 20 ou assine o Premium para desbloquear todas.",
-  "introPlayHint": "Toque em ▶ abaixo para começar a ouvir. Continua tocando com a tela desligada."
+  "introPlayHint": "Toque em ▶ abaixo para começar a ouvir. Continua tocando com a tela desligada.",
+  "lcLabAppsTitle": "Mais apps da LC Lab",
+  "lcLabQianguaName": "Qiangua",
+  "lcLabQianguaDesc": "Cartas dos 64 hexagramas do I Ching: um hexagrama por dia para refletir",
+  "lcLabTarotName": "AuraSpica Tarot",
+  "lcLabTarotDesc": "Tarô, Lenormand e runas, com curso para iniciantes"
 }
