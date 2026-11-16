@@ -707,7 +707,16 @@ class AppState extends ChangeNotifier {
     if (word == null || _audioHandler == null) return;
     final gen = ++_nowPlayingGen;
     final state = currentPlaybackState;
-    final meaning = settings.showTranslation ? meaningOf(word) : '';
+    var title = word.word;
+    var meaning = settings.showTranslation ? meaningOf(word) : '';
+    // v30：念例句時鎖屏／通知列改顯示例句（＋翻譯），換字後回到單字。
+    final example = settings.speakExample ? currentExampleText : null;
+    if (example != null) {
+      title = example;
+      meaning = settings.showTranslation
+          ? (currentExampleTranslation ?? '')
+          : '';
+    }
     final index = state.playlist.isEmpty ? 0 : state.currentStep + 1;
     final total = state.playlist.length;
     final playing = isPlaying;
@@ -715,7 +724,7 @@ class AppState extends ChangeNotifier {
     void push(Uri? art) {
       if (gen != _nowPlayingGen) return;
       _audioHandler?.updateNowPlaying(
-        word: word.word,
+        word: title,
         meaning: meaning,
         playing: playing,
         currentIndex: index,
@@ -948,6 +957,7 @@ class AppState extends ChangeNotifier {
     _exampleText = sentence.sentenceText;
     _exampleTranslation = t;
     notifyListeners();
+    _updateNowPlaying();
     await _ttsService.speak(sentence.sentenceText,
         languageCode: sentence.targetLanguage);
     if (gen != _speakGen || !settings.speakExampleTranslation) return;
