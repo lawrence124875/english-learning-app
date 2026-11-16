@@ -925,14 +925,32 @@ class AppState extends ChangeNotifier {
     return usable[_exampleRandom.nextInt(usable.length)];
   }
 
+  String? _exampleWordId;
+  String? _exampleText;
+  SentenceTranslation? _exampleTranslation;
+
+  /// 首頁顯示：目前單字最近念過的例句（換字後自動不顯示）。
+  String? get currentExampleText =>
+      _exampleWordId != null && _exampleWordId == currentWord?.id
+          ? _exampleText
+          : null;
+  String? get currentExampleTranslation =>
+      currentExampleText == null ? null : _exampleTranslation?.text;
+  bool get currentExampleTranslationIsRtl =>
+      _exampleTranslation?.code.startsWith('ar') ?? false;
+
   Future<void> _speakExample(WordItem word, int gen) async {
     final sentence = await exampleSentenceFor(word);
     if (sentence == null || gen != _speakGen) return;
     await recordPeSentence(sentence.id);
+    final t = sentence.translationFor(BackgroundL10n.translationKey());
+    _exampleWordId = word.id;
+    _exampleText = sentence.sentenceText;
+    _exampleTranslation = t;
+    notifyListeners();
     await _ttsService.speak(sentence.sentenceText,
         languageCode: sentence.targetLanguage);
     if (gen != _speakGen || !settings.speakExampleTranslation) return;
-    final t = sentence.translationFor(BackgroundL10n.translationKey());
     if (t == null) return;
     final lang = PeLanguages.lookup(t.code);
     await _ttsService.speak(t.text, languageCode: lang?.ttsCode ?? t.code);

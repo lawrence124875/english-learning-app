@@ -571,6 +571,41 @@ class _WordCard extends StatelessWidget {
                 ),
               ),
             ),
+            if (settings.speakExample &&
+                appState.currentExampleText != null) ...[
+              Text(
+                appState.currentExampleText!,
+                key: const Key('home_example_text'),
+                textAlign: TextAlign.center,
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    color: palette.word,
+                    fontSize: 15 + settings.wordSize.index * 1.0,
+                    fontWeight: FontWeight.w600,
+                    height: 1.3),
+              ),
+              if (settings.showTranslation &&
+                  appState.currentExampleTranslation != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    appState.currentExampleTranslation!,
+                    key: const Key('home_example_translation'),
+                    textAlign: TextAlign.center,
+                    textDirection: appState.currentExampleTranslationIsRtl
+                        ? TextDirection.rtl
+                        : TextDirection.ltr,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: palette.translation,
+                        fontSize: 14 + settings.wordSize.index * 1.0,
+                        height: 1.3),
+                  ),
+                ),
+              const SizedBox(height: 10),
+            ],
             _Controls(appState: appState),
             const SizedBox(height: 4),
             Wrap(
