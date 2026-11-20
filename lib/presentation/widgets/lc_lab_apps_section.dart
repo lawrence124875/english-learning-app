@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../data/sources/ads_service.dart';
 import '../../l10n/app_localizations.dart';
 
-/// 設定面板最下方「LC Lab 其他 App」：兩列，點擊以外部應用程式開啟 Play 商店。
+/// 設定面板最下方「LC Lab 其他 App」：三列，點擊以外部應用程式開啟 Play 商店。
 /// 圖示內嵌於 assets，不連網抓取；不加任何追蹤。
 class LcLabAppsSection extends StatelessWidget {
   /// false：不顯示分隔線與標題（獨立頁面用，標題在 AppBar）。
@@ -14,8 +14,11 @@ class LcLabAppsSection extends StatelessWidget {
       'https://play.google.com/store/apps/details?id=com.lclab.qiangua';
   static const tarotUrl =
       'https://play.google.com/store/apps/details?id=com.lclab.tarot';
+  static const qimenUrl =
+      'https://play.google.com/store/apps/details?id=com.lclab.qimen';
   static const qianguaIcon = 'assets/lclab/qiangua.png';
   static const tarotIcon = 'assets/lclab/tarot.png';
+  static const qimenIcon = 'assets/lclab/qimen.png';
 
   static Future<void> _open(String url) async {
     final uri = Uri.parse(url);
@@ -50,6 +53,12 @@ class LcLabAppsSection extends StatelessWidget {
           name: l.lcLabTarotName,
           desc: l.lcLabTarotDesc,
           onTap: () => _open(tarotUrl),
+        ),
+        _AppRow(
+          icon: qimenIcon,
+          name: l.lcLabQimenName,
+          desc: l.lcLabQimenDesc,
+          onTap: () => _open(qimenUrl),
         ),
       ],
     );

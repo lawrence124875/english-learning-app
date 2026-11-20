@@ -310,6 +310,8 @@
   "lcLabQianguaDesc": "ไพ่ 64 ฉักกะแห่งอี้จิง เครื่องมือสะท้อนตัวเองวันละหนึ่งฉักกะ",
   "lcLabTarotName": "AuraSpica Tarot",
   "lcLabTarotDesc": "ไพ่ทาโรต์ เลอนอร์ม็อง และรูน พร้อมคอร์สเริ่มต้น",
+  "lcLabQimenName": "เข็มทิศฉีเหมิน Qimen Compass",
+  "lcLabQimenDesc": "เข็มทิศฉีเหมินตุ้นเจี่ย: ทิศมงคลตอนนี้ เลือกฤกษ์ ฮวงจุ้ยบ้าน",
   "speakExampleLabel": "อ่านประโยคตัวอย่างหลังคำศัพท์",
   "speakExampleFreeHint": "อ่านประโยคภาษาอังกฤษใช้จริงที่มีคำนั้น (ฟรี: วันละ 5 ประโยค)",
   "speakExampleTranslationLabel": "อ่านคำแปลของประโยคด้วย"
