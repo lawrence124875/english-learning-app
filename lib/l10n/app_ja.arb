@@ -310,6 +310,8 @@
   "lcLabQianguaDesc": "易経64卦カード：毎日一卦で自分を見つめるツール",
   "lcLabTarotName": "AuraSpica Tarot",
   "lcLabTarotDesc": "タロット・ルノルマン・ルーン、入門講座つき",
+  "lcLabQimenName": "奇門羅盤 Qimen Compass",
+  "lcLabQimenDesc": "奇門遁甲コンパス：今の吉方位、日時選び、住まいの風水",
   "speakExampleLabel": "単語の後に例文を読み上げる",
   "speakExampleFreeHint": "その単語を含む実用英語の例文を1つ再生（無料版は1日5文まで）",
   "speakExampleTranslationLabel": "例文の翻訳も読み上げる"

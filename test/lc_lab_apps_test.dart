@@ -11,6 +11,8 @@ void main() {
       'lcLabQianguaDesc',
       'lcLabTarotName',
       'lcLabTarotDesc',
+      'lcLabQimenName',
+      'lcLabQimenDesc',
     ];
     final arbs = Directory('lib/l10n')
         .listSync()
@@ -24,7 +26,7 @@ void main() {
         expect((map[k] as String?)?.isNotEmpty, true, reason: '${f.path} $k');
       }
     }
-    for (final p in ['assets/lclab/qiangua.png', 'assets/lclab/tarot.png']) {
+    for (final p in ['assets/lclab/qiangua.png', 'assets/lclab/tarot.png', 'assets/lclab/qimen.png']) {
       expect(File(p).existsSync(), true, reason: p);
     }
   });
