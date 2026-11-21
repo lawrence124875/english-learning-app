@@ -41,7 +41,7 @@ void main() {
       'zh',
       '',
       'en',
-      'fr',
+      'ru',
       'xx'
     ]) {
       expect(PeLanguages.canonicalize(raw), isNull, reason: raw);

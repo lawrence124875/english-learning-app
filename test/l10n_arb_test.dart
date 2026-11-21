@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-/// 11 種介面語言的 ARB key 必須一致，placeholder 也要對得上。
+/// 16 種介面語言的 ARB key 必須一致，placeholder 也要對得上。
 void main() {
   final files = Directory('lib/l10n')
       .listSync()
@@ -15,7 +15,7 @@ void main() {
   final template = read(File('lib/l10n/app_zh.arb'));
   final keys = template.keys.where((k) => !k.startsWith('@')).toSet();
 
-  test('11 ARB files', () => expect(files.length, 11));
+  test('16 ARB files', () => expect(files.length, 16));
 
   for (final f in files) {
     test('${f.path} has the same keys and placeholders as app_zh.arb', () {

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('LC Lab 其他 App：11 語都有字串、圖示已內嵌', () {
+  test('LC Lab 其他 App：16 語都有字串、圖示已內嵌', () {
     const keys = [
       'lcLabAppsTitle',
       'lcLabQianguaName',
@@ -19,7 +19,7 @@ void main() {
         .whereType<File>()
         .where((f) => f.path.endsWith('.arb'))
         .toList();
-    expect(arbs.length, 11);
+    expect(arbs.length, 16);
     for (final f in arbs) {
       final map = jsonDecode(f.readAsStringSync()) as Map<String, dynamic>;
       for (final k in keys) {
