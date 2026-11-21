@@ -14,6 +14,8 @@ MAP = {
     "ja": ["values-ja"], "ko": ["values-ko"], "vi": ["values-vi"],
     "id": ["values-in", "values-id"], "es": ["values-es"], "pt": ["values-pt"],
     "th": ["values-th"], "ar": ["values-ar"],
+    "fr": ["values-fr"], "it": ["values-it"], "de": ["values-de"],
+    "tr": ["values-tr"], "pl": ["values-pl"],
 }
 for key, dirs in MAP.items():
     arb = f"lib/l10n/app_{key}.arb"

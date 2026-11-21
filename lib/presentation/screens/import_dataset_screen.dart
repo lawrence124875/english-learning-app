@@ -55,6 +55,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     'fr-FR': 'Français',
     'de-DE': 'Deutsch',
     'it-IT': 'Italiano',
+    'tr-TR': 'Türkçe',
+    'pl-PL': 'Polski',
     'th-TH': 'ไทย',
     'ar-SA': 'العربية',
   };
@@ -82,7 +84,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
       final lang = locale.languageCode;
       _translationLocale = lang == 'zh'
           ? (locale.scriptCode == 'Hans' ? 'zh-CN' : 'zh-TW')
-          : const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'th': 'th', 'ar': 'ar', 'en': 'en'}[lang] ?? 'en';
+          : const {'ja': 'ja', 'ko': 'ko', 'vi': 'vi', 'id': 'id', 'es': 'es', 'pt': 'pt-BR', 'th': 'th', 'ar': 'ar', 'en': 'en', 'fr': 'fr', 'it': 'it', 'de': 'de', 'tr': 'tr', 'pl': 'pl'}[lang] ?? 'en';
       // 英文介面（含不支援語言）時，若手機語言是法/德/義，翻譯欄
       // 預設就用手機語言（他們的母語），不是英文。
       if (lang == 'en') {
@@ -99,7 +101,7 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
   }
 
   /// 翻譯欄（第二欄）語言選項，值為存進教材的翻譯語言代碼，也是朗讀
-  /// 翻譯用的 TTS 語言。第 10 版起擴充為與第一欄相同的 13 種，名稱一樣
+  /// 翻譯用的 TTS 語言。第 10 版起擴充為與第一欄相同的 13 種（第 31 版加土、波為 15 種），名稱一樣
   /// 用 endonym（原本 8 種用介面語言翻譯的 importLangXx 字串，已不使用）。
   static const _translationLocaleOptions = <String, String>{
     'zh-TW': '中文（繁體）',
@@ -114,6 +116,8 @@ class _ImportDatasetScreenState extends State<ImportDatasetScreen> {
     'fr': 'Français',
     'de': 'Deutsch',
     'it': 'Italiano',
+    'tr': 'Türkçe',
+    'pl': 'Polski',
     'th': 'ไทย',
     'ar': 'العربية',
   };

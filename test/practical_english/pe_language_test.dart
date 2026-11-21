@@ -2,12 +2,13 @@ import 'package:english_learning_app/practical_english/domain/models/pe_language
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('registry has the 10 translation languages, codes unique', () {
+  test('registry has the 15 translation languages, codes unique', () {
     final codes = PeLanguages.all.map((l) => l.code).toList();
     expect(codes, [
-      'zh-TW', 'zh-CN', 'ja', 'ko', 'vi', 'id', 'es', 'pt-BR', 'th', 'ar' //
+      'zh-TW', 'zh-CN', 'ja', 'ko', 'vi', 'id', 'es', 'pt-BR', 'th', 'ar', //
+      'fr', 'it', 'de', 'tr', 'pl'
     ]);
-    expect(codes.toSet().length, 10);
+    expect(codes.toSet().length, 15);
   });
 
   test('canonical codes and aliases normalize', () {

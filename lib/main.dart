@@ -173,6 +173,11 @@ class EnglishLearningApp extends StatelessWidget {
           Locale('pt'),
           Locale('th'),
           Locale('ar'),
+          Locale('fr'),
+          Locale('it'),
+          Locale('de'),
+          Locale('tr'),
+          Locale('pl'),
           Locale('en'),
         ],
         // 0.3.0：淺色「柔光卡片」＋深色「夜讀深綠」，外觀可在播放設定切換

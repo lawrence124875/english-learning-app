@@ -33,7 +33,7 @@ class PeLanguage {
 class PeLanguages {
   PeLanguages._();
 
-  /// V2.0 支援的 10 種翻譯語言。別名是本 App 的產品規則，不是通用標準；
+  /// 支援的翻譯語言（V2.0 10 種，第 31 版加法義德土波共 15 種）。別名是本 App 的產品規則，不是通用標準；
   /// `jp`、`cn`、`tw`、單獨的 `zh` 這類寫法一律無效，不猜測。
   static const List<PeLanguage> all = [
     PeLanguage(
@@ -75,6 +75,17 @@ class PeLanguages {
         endonym: 'العربية',
         ttsCode: 'ar-SA',
         isRtl: true),
+    // 第 31 版新增
+    PeLanguage(
+        code: 'fr', aliases: ['fr-FR'], endonym: 'Français', ttsCode: 'fr-FR'),
+    PeLanguage(
+        code: 'it', aliases: ['it-IT'], endonym: 'Italiano', ttsCode: 'it-IT'),
+    PeLanguage(
+        code: 'de', aliases: ['de-DE'], endonym: 'Deutsch', ttsCode: 'de-DE'),
+    PeLanguage(
+        code: 'tr', aliases: ['tr-TR'], endonym: 'Türkçe', ttsCode: 'tr-TR'),
+    PeLanguage(
+        code: 'pl', aliases: ['pl-PL'], endonym: 'Polski', ttsCode: 'pl-PL'),
   ];
 
   /// 句子原文（target language）在 V2.0 只接受英文（SPEC §8.1、D20）。

@@ -59,7 +59,7 @@ setp GADApplicationIdentifier string "${ADMOB_IOS_APP_ID:-ca-app-pub-39402560999
 $PB -c "Delete :CFBundleLocalizations" "$PLIST" 2>/dev/null || true
 $PB -c "Add :CFBundleLocalizations array" "$PLIST"
 i=0
-for l in zh-Hant zh-Hans en ja ko vi id es pt-BR th ar; do
+for l in zh-Hant zh-Hans en ja ko vi id es pt-BR th ar fr it de tr pl; do
   $PB -c "Add :CFBundleLocalizations:$i string $l" "$PLIST"; i=$((i+1))
 done
 setp ITSAppUsesNonExemptEncryption bool false
